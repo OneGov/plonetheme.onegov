@@ -1,0 +1,75 @@
+/* @group layout */
+
+body {
+  background-color: #e9e7df;
+  font-family: Arial;
+  font-size: 13px;
+}
+
+#page-wrapper {
+  background-color: #FFF;
+  border: 1px solid #cacabb;
+  box-shadow: 0 0 5px #cacabb;
+  -webkit-box-shadow: 0 0 5px #cacabb;
+  -moz-box-shadow: 0 0 5px #cacabb;
+}
+
+.fixedWidth {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* @end */
+
+/* @group header */
+
+#header {
+  border-bottom: 8px solid #00616c;
+}
+
+/* @end */
+
+/* @group footer */
+
+#footer {
+  background-color: #65655e;
+  background-image: -moz-linear-gradient(top, #5b5b54, #65655e);
+  background-image: -ms-linear-gradient(top, #5b5b54, #65655e);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%,from(#5b5b54), to(#65655e));
+  background-image: -webkit-linear-gradient(top, #5b5b54, #65655e);
+  background-image: -o-linear-gradient(top, #5b5b54, #65655e);
+  background-image: linear-gradient(top, #5b5b54, #65655e);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5b5b54', endColorstr='#65655e', GradientType=0);
+  color: #FFFFFF;
+}
+
+/* @end */
+
+/* @group Invisibles */
+
+.hiddenStructure {
+  display: block;
+  background: transparent;
+  background-image: none; /* safari bug */
+  border: none;
+  height: 0.1em;
+  overflow: hidden;
+  padding: 0;
+  margin: -0.1em 0 0 -0.1em;
+  width: 1px;
+}
+
+#content .visualNoMarker {
+  list-style:none;
+  margin-left: 0;
+}
+
+.visualClear {
+  clear: both;
+}
+
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; visibility: hidden; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+/* @end */
