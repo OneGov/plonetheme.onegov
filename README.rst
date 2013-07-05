@@ -27,8 +27,8 @@ Features
 Links
 -----
 
-- Github project repository: https://github.com/4teamwork/plonetheme.onegov
-- Issue tracker: https://github.com/4teamwork/plonetheme.onegov/issues
+- Github project repository: https://github.com/OneGov/plonetheme.onegov
+- Issue tracker: https://github.com/OneGov/plonetheme.onegov/issues
 - Continuous integration: https://jenkins.4teamwork.ch/search?q=plonetheme.onegov
 
 
