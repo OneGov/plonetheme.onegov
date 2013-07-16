@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width" />
 
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/columns.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
@@ -21,7 +20,7 @@
 
           <div class="row">
             <div class="cell position-0 width-12">
-              <a href="#"><img src="images/logo_onegov.png" /></a>
+              <a id="portal-logo" href="#"><img src="images/logo_onegov.png" /></a>
             </div>
             <div class="cell position-12 width-4">
               Kontakt | Login | usw
@@ -53,13 +52,23 @@
 
             </div>
             <div class="cell position-12 width-4">
-              <div id="navi-searchbox">suche</div>
+              <div id="portal-searchbox">
+
+                <form action="#search" id="livesearch0" name="searchform">
+                  <div class="LSBox">
+                    <input type="text" id="searchGadget" class="searchField inputLabel" />
+                    <input type="submit" value="Suche" class="searchButton" />
+                  </div>
+                </form>
+
+              </div>
             </div>
           </div>
-
+          <div class="row">
+            <div class="cell position-0 width-16" id="header-delimiter">&nbsp;</div>
+          </div>
           <!-- closes #header -->
         </div>
-
         <div id="columns" class="fixedWidth clearfix">
 
           <div class="row">
@@ -73,16 +82,45 @@
 
           <div class="row">
             <div class="cell position-0 width-3" id="column-navigation">
-              Navi
+
+              <div>
+                <dl class="portlet portletContextNavigation">
+                  <dt class="portletHeader hiddenStructure">
+                    <span class="portletTopLeft"></span>
+                    <a class="tile" href="#sitemap">Navigation</a>
+                    <span class="portletTopRight"></span>
+                  </dt>
+                  <dd class="portletItem lastItem">
+                    <ul>
+                      <li class="parent"><a href="#">Baudirektion</a></li>
+                      <li class="current">Baudirektion</li>
+                      <li><a href="#">Abfallwirtschaft</a></li>
+                      <li><a href="#">Abwasser</a></li>
+                      <li><a href="#">Altlasten</a></li>
+                      <li><a href="#">Musikveranstaltungen</a></li>
+                      <li><a href="#">Neophyten / Elektrosmog</a></li>
+                      <li><a href="#">Oberfl&auml;chengew&auml;sser</a></li>
+                    </ul>
+                    <span class="portletBottomLeft"></span>
+                    <span class="portletBottomRight"></span>
+                  </dd>
+                </dl>
+              </div>
+
 
               <!-- closes column-navigation -->
             </div>
             <div class="cell position-3 width-9" id="column-content">
-              <h1>This is a heading 1</h1>
+              <h1 class="documentFirstHeading">This is a heading 1</h1>
               <p>Some content in a paragraph</p>
-              <h2>This is a heading 1</h2>
+              <h2>This is a heading 2</h2>
               <p>Some content in a paragraph</p>
-              <h3>This is a heading 1</h3>
+              <div>
+                <input type="text" />
+                <input type="submit" name="submit" />
+                <a href="#" class="button">button</a>
+              </div>
+              <h3>This is a heading 3</h3>
               <p>Some content in a paragraph</p>
               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
               <p>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum. Defacto lingo est igpay atinlay. Marquee selectus non provisio incongruous feline nolo contendre. Gratuitous octopus niacin, sodium glutimate. Quote meon an estimate et non interruptus stadium. Sic tempus fugit esperanto hiccup estrogen. Glorious baklava ex librus hup hey ad infinitum. Non sequitur condominium facile et geranium incognito. Epsum factorial non deposit quid pro quo hic escorol. Marquee selectus non provisio incongruous feline nolo contendre Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum.</p>
@@ -99,12 +137,16 @@
               <!-- closes column-sidebar -->
             </div>
           </div>
-
-          <!-- closes #columns -->
         </div>
 
+        <div class="row belowContent">
+          <div class="cell position-0 width-16">
+            <div class="to_top" />
+          </div>
+        </div>
         <!-- closes #page-wrapper -->
       </div>
+
 
       <div id="footer" class="fixedWidth clearfix">
         <div class="row">
@@ -118,9 +160,13 @@
                 <span class="portletTopRight"></span>
               </dt>
               <dd class="portletItem odd">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-                </p>
+                <ul>
+                  <li><a href="#">Bildung</a></li>
+                  <li><a href="#">Gesundheit und Soziales</a></li>
+                  <li><a href="#">Kultur, Sport und Tour</a></li>
+                  <li><a href="#">Mobilit&auml;t</a></li>
+                  <li><a href="#">Pers&ouml;nliches</a></li>
+                </ul>
                 <span class="portletBottomLeft"></span>
                 <span class="portletBottomRight"></span>
               </dd>
@@ -137,9 +183,13 @@
                 <span class="portletTopRight"></span>
               </dt>
               <dd class="portletItem odd">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-                </p>
+                <ul>
+                  <li><a href="#">Bauen und Submissionen</a></li>
+                  <li><a href="#">Gründen, Umstrukturieren und Auflösen</a></li>
+                  <li><a href="#">Personal</a></li>
+                  <li><a href="#">Schutz und Sicherheit</a></li>
+                  <li><a href="#">Standort und Steuern</a></li>
+                </ul>
                 <span class="portletBottomLeft"></span>
                 <span class="portletBottomRight"></span>
               </dd>
@@ -156,9 +206,13 @@
                 <span class="portletTopRight"></span>
               </dt>
               <dd class="portletItem odd">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-                </p>
+                <ul>
+                  <li><a href="#">Kantonsrat</a></li>
+                  <li><a href="#">Regierungsrat</a></li>
+                  <li><a href="#">Verwaltungsrechtspflege</a></li>
+                  <li><a href="#">Zivil- und Strafrechtspflege</a></li>
+                  <li><a href="#">Baudirektion</a></li>
+                </ul>
                 <span class="portletBottomLeft"></span>
                 <span class="portletBottomRight"></span>
               </dd>
@@ -175,9 +229,13 @@
                 <span class="portletTopRight"></span>
               </dt>
               <dd class="portletItem odd">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-                </p>
+                <ul>
+                  <li><a href="#">Bildung</a></li>
+                  <li><a href="#">Gesundheit</a></li>
+                  <li><a href="#">Kultur</a></li>
+                  <li><a href="#">Leute</a></li>
+                  <li><a href="#">Natur und Freizeit</a></li>
+                </ul>
                 <span class="portletBottomLeft"></span>
                 <span class="portletBottomRight"></span>
               </dd>

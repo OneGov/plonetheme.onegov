@@ -54,15 +54,6 @@
               applyPrefix="True"
               />
 
-  <stylesheet id="++theme++plonetheme.onegov/css/columns.css"
-              title="" authenticated="False" cacheable="True"
-              compression="safe" conditionalcomment="" cookable="True" enabled="True"
-              expression="request/HTTP_X_THEME_ENABLED | nothing"
-              media="screen" rel="stylesheet"
-              rendering="link"
-              applyPrefix="True"
-              />
-
   <stylesheet id="++theme++plonetheme.onegov/css/main.css"
               title="" authenticated="False" cacheable="True"
               compression="safe" conditionalcomment="" cookable="True" enabled="True"

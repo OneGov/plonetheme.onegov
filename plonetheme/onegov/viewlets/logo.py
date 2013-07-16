@@ -1,9 +1,8 @@
-from BTrees.OOBTree import OOBTree
+#from BTrees.OOBTree import OOBTree
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.viewlets import common
-from plonetheme.onegov.browser.controlpanel import DEFAULT_STYLES
-from zope.annotation.interfaces import IAnnotations
+#from zope.annotation.interfaces import IAnnotations
 from borg.localrole.interfaces import IFactoryTempFolder
 from plone.app.layout.navigation.root import getNavigationRoot
 import pkg_resources
@@ -31,20 +30,16 @@ class LogoViewlet(common.LogoViewlet):
 
     def onegov_logo_behaviour(self):
         portal = getToolByName(self.context, 'portal_url').getPortalObject()
-        annotations = IAnnotations(portal)
-        customstyles = annotations.get('customstyles', OOBTree(DEFAULT_STYLES))
+#        annotations = IAnnotations(portal)
+#        customstyles = annotations.get('customstyles', OOBTree(DEFAULT_STYLES))
         url = "%s/++theme++plonetheme.onegov/images/logo_onegov.png" % \
             portal.absolute_url()
 
-        if 'css.logo' in customstyles:
-            url = "%s/customlogo" % portal.absolute_url()
+#        if 'css.logo' in customstyles:
+#            url = "%s/customlogo" % portal.absolute_url()
         self.logo_tag = "<img src='%s' alt='%s Logo' />" % (
             url,
             portal.Title())
-
-        self.logo_title = ''
-        if 'css.logo_title' in customstyles:
-            self.logo_title = customstyles['css.logo_title']
 
     def subsite_logo_behaviour(self):
         # Copy of ftw.subsite.viewlets.subsitelogoviewlet

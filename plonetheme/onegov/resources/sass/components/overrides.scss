@@ -1,0 +1,25 @@
+/* @group tags widget */
+
+#content .existingTagsHelp,
+#content .newTagsHelp {
+  float: none;
+  clear: both;
+}
+div.existingTagsSection,
+dl.newTagsSection {
+  margin-left: 0;
+}
+.existingTags > label,
+.newTagsSection > label {
+  line-height: 1.5em;
+}
+#content .newTagsSection {
+  margin-top: 1em;
+  margin-left: 0;
+  width: 100%;
+  & textarea {
+    width: 100%;
+  }
+}
+
+/* @end */

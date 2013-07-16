@@ -1,0 +1,44 @@
+/* @group status messages */
+
+dl.portalMessage {
+  margin: 1em 0;
+  border: 1px solid $lightgray;
+  @include borderradius();
+  background-color: $lightgray;
+  clear: both;
+}
+dl.portalMessage dt {
+  background-color: $message-color-info;
+  line-height: 1.25em;
+  float: left;
+  margin-right: 0.75em;
+  padding: 0.5em 0.75em;
+  color: $page-background;
+  @include borderradius($border-radius 0 0 $border-radius);
+}
+dl.portalMessage dd {
+  padding: 0.5em 0.5em;
+  margin: 0;
+  line-height: 1.25em;
+  color: $text-color-light;
+}
+dl.warning dt {
+  background-color: $message-color-warning;
+}
+dl.error dt {
+  background-color: $message-color-error;
+}
+
+/* Additional specificity for when status is shown inside #content */
+#content dl.portalMessage {
+  font-size: 100%;
+}
+#content dl.portalMessage dt {
+  margin: 0 0.5em 0 0;
+  padding: 0.5em 0.75em;
+}
+#content dl.portalMessage dd {
+  margin: 0;
+}
+
+/* @end */

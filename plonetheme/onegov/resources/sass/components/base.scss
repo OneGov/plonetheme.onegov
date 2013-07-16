@@ -1,0 +1,269 @@
+/* @group layout */
+
+body {
+  background: url(../images/bg.png) repeat-x 0 0 $body-background;
+  font-family: $body-font-family;
+  font-size: $font-size;
+  line-height: $body-line-height;
+  color: $text-color;
+}
+
+#page-wrapper {
+  background-color: $page-background;
+  border: 1px solid $page-bordercolor;
+  @include boxshadow(0 0 5px $page-bordercolor);
+  position: relative;
+}
+.belowContent {
+  margin-top: 3em;
+}
+
+.fixedWidth {
+  width: $page-fixed-width;
+  margin: 0 auto;
+}
+
+/* @end */
+
+/* @group headings */
+
+h1 {
+  font-size: $font-size-36;
+}
+h2 {
+  font-size: $font-size-18;
+}
+h1, h2, h3 {
+  margin: 1.5em 0 1em 0;
+  line-height: $body-line-height;
+  &.documentFirstHeading {
+    margin-top: 0;
+  }
+}
+
+/* @end */
+
+/* @group links */
+
+a {
+  color: $link-color;
+  text-decoration: $link-textdecoration;
+  &:hover {
+    color: $link-color-hover;
+    text-decoration: $link-textdecoration-hover;
+  }
+}
+
+/* @end */
+
+/* @group header */
+
+#header-delimiter {
+  margin-top: 1em;
+  border-top: 8px solid $global-navigation-color;
+}
+#portal-logo {
+  margin: 1.5em 0;
+  display: block;
+}
+
+/* @end */
+
+/* @group breadcrumbs */
+
+#portal-breadcrumbs {
+  margin-bottom: 1em;
+}
+
+/* @end */
+
+/* @group global navigation */
+
+#portal-globalnav {
+  @include ul($style: 'inline');
+  padding-top: 0.75em;
+  & li {
+    padding-left: 1em;
+    & a {
+      color: $global-navigation-color;
+      font-size: $font-size-18;
+      &:hover {
+        color: $global-navigation-color-hover;
+      }
+      &:active {}
+      &:focus {}
+    }
+  }
+  & li:first-child {
+    padding-left: 0;
+  }
+}
+
+/* @end */
+
+/* @group left navigation */
+
+#column-navigation .portletContextNavigation {
+  border: 1px solid #e5e5e0;
+  border-width: 1px 0;
+  & ul {
+    @include ul($style: 'plain');
+    & li {
+      padding: 0.5em 1em;
+      margin-bottom: 0;
+      display: block;
+    }
+  }
+  & .current {
+    border-bottom: 1px solid #e5e5e0;
+  }
+  & .parent {
+    border-bottom: 1px solid #e5e5e0;
+    & a {
+      margin-left: 0;
+      padding-right: 1.5em;
+      background: url(../images/to-parent.png) no-repeat center right; /* TODO: icon font?? */
+    }
+  }
+  & a {
+    margin-left: 1em;
+  }
+}
+
+/* @end */
+
+/* @group side portlets */
+
+#column-sidebar dl.portlet {
+  background-color: $lightgray;
+  padding: 1em;
+  margin-bottom: 1em;
+  &.simplelayoutDropZonePortlet {
+    /* background-color: $page-background; */
+    /*
+    todo: would be nice, but there is no empty marker on dt.portlet
+    (https://github.com/4teamwork/simplelayout.portlet.dropzone/issues/5)
+    */
+  }
+  & dt.portletHeader {
+    margin-bottom: 0.75em;
+  }
+}
+
+/* @end */
+
+/* @group portlets */
+
+dl.portlet {
+  & dt.portletHeader {
+    cursor: default;
+    font-size: $font-size-18;
+    margin-bottom: 1em;
+  }
+}
+
+/* @end */
+
+/* @group text / content */
+
+p {
+  margin-bottom: 1em;
+}
+ul {
+  @include ul();
+}
+
+/* @end */
+
+/* @group simplelayout */
+
+div.sl-controls {
+  padding-top: 0;
+}
+
+/* @end */
+
+/* @group to_top link */
+
+.to_top {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.25em 0.5em;
+  background-color: $lightgray;
+  @include borderradius($border-radius $border-radius 0 0);
+}
+.to_top a:after {
+  content: ' ^';
+}
+
+/* @end */
+
+/* @group footer */
+
+#footer {
+  @include gradient($footer-bg-start, $footer-bg-end);
+  color: $footer-color;
+  & a {
+    color: $footer-color;
+  }
+  & ul {
+    @include ul($style: 'plain');
+  }
+  & .portlet {
+    padding-left: 3em;
+    margin: 2em 0;
+    border-left: 1px solid #71716a;
+    & li {
+      display: block;
+      margin-bottom: 0.5em;
+    }
+  }
+  & .cell:first-child .portlet {
+    border-left: none;
+  }
+}
+
+/* @end */
+
+/* @group login */
+
+#login-form label {
+  min-width: 5em;
+  display: inline-block;
+}
+
+/* @end */
+
+
+
+
+
+
+
+
+/* @group Invisibles */
+
+.hiddenStructure {
+  display: block;
+  background: transparent;
+  background-image: none; /* safari bug */
+  border: none;
+  height: 0.1em;
+  overflow: hidden;
+  padding: 0;
+  margin: -0.1em 0 0 -0.1em !important;
+  width: 1px;
+}
+#content .visualNoMarker {
+  list-style:none;
+  margin-left: 0;
+}
+.visualClear {
+  clear: both;
+}
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; visibility: hidden; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+/* @end */

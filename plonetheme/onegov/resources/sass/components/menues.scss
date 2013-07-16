@@ -1,0 +1,145 @@
+/* @group Content pulldowns (edit-bar) */
+
+#edit-bar ul {
+  @include ul($style:'plain');
+  background-color: $lightgray;
+  &#contentActionMenus,
+  &.contentViews {
+    @include ul($style: 'inline');
+    padding-left: 0.25em;
+  }
+}
+#edit-bar {
+  background-color: $lightgray;
+  min-height: 2em;
+  margin-bottom: 0.5em;
+  padding-top: 0.25em;
+  display: block;
+  margin-left: 0;
+  position: relative;
+  z-index: 2;
+}
+#content-views {
+  float: left;
+}
+#content-views > li > a {
+  padding: 0.5em;
+}
+/* Tabs in tiny-popup */
+#content.dialog-wrapper fieldset.formPanel {
+  margin: 5px 1px;
+}
+/* fix shift on content views list under ie6 */
+/* .ie6 is set on <html> by Modernizr library */
+.ie6 ul#content-views{
+  margin: -2px -3px 0px -3px;
+}
+
+#edit-bar li dd.actionMenuContent a {
+  display: block;
+  @include borderradius(0);
+}
+#edit-bar a {
+  line-height: 2em;
+  padding: 0 0.5em;
+  border: none;
+  @include borderradius($border-radius $border-radius 0 0);
+  margin: 0;
+}
+#edit-bar .activated a,
+#edit-bar li.selected a,
+#edit-bar li a:hover {
+  background-color: $page-background;
+  color: #666;
+}
+/* TODO: Since plone's base.css also have an !important */
+#container #contentActionMenus .actionMenuContent a {
+  background-image: none;
+  background-color: $page-background;
+  padding: 0 0.5em !important;
+  display: block;
+}
+#container #contentActionMenus .actionMenuContent {
+  & .subMenuTitle {
+    padding: 0 0.5em;
+  }
+  a > .subMenuTitle {
+    padding: 0;
+  }
+}
+#contentActionMenus dl.actionMenu.activated dd {
+  z-index: 5;
+  right: -3px;
+}
+#portal-personaltools.activated dd a:hover,
+#container #contentActionMenus dl.actionMenu.activated dd a:hover,
+#container #contentActionMenus dl.actionMenu.activated dd .actionMenuSelected {
+  background-color: $lightgray;
+}
+#portal-personaltools,
+#contentActionMenus dl.actionMenu {
+  line-height: 2em;
+}
+#portal-personaltools dd {
+  background-color: $page-background
+}
+#portal-personaltools dd li a:hover {
+  background-color: $lightgray;
+}
+
+#folderHeader, #contextHeader {
+  border-bottom: 2px solid $page-background;
+}
+
+#contextHeader { margin-top: 5px; }
+
+#contentActionMenus {
+  float: right;
+  margin: 0;
+  position: relative;
+}
+
+.actionMenuContent {
+  background-color: $page-background;
+  border: 1px solid $page-bordercolor;
+  border-top-width: 0;
+  @include boxshadow(0.5em 0.5em 1em -1em $page-bordercolor);
+}
+
+dl.actionMenu {
+  float: right;
+  white-space: nowrap;
+  position: relative;
+  margin-left: 0.5em;
+}
+dl.actionMenu a,
+dl.actionMenu div {
+  display: block;
+  white-space: nowrap;
+}
+dl.actionMenu dt {
+  font-weight: normal;
+}
+#content dl.actionMenu ul {
+  margin-bottom: 0;
+}
+span.arrowDownAlternative {
+  font-size: 10px;
+  line-height: 2em;
+}
+dl.actionMenu.deactivated dd {
+  display: none;
+}
+dl.actionMenu.activated dd {
+  position: absolute;
+  width: auto;
+  min-width: 100%;
+}
+dl.actionMenu.activated dd a {
+  padding: 0 0.5em;
+}
+#edit-bar .actionSeparator a {
+  border-top: 1px solid $page-bordercolor;
+}
+
+/* @end */

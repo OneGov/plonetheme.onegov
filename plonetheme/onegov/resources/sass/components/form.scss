@@ -1,0 +1,211 @@
+@mixin inputfield($full-width:false) {
+  font-size: $font-size;
+  font-family: $body-font-family;
+  display: inline-block;
+  line-height: 2em;
+  padding: 0.5em;
+  width: 20em;
+  border: 1px solid $input-bordercolor;
+  @include borderradius();
+  @if $full-width == true {
+    padding: 0.5em 3%;
+    width: 94%;
+  }
+  @include boxshadow(0 0 0.5em $page-bordercolor inset);
+  background: $lightgray;
+  &:hover,
+  &:focus {
+    border-color: $global-navigation-color;
+  }
+}
+
+@mixin button() {
+  @include inputfield();
+  width: auto;
+  margin-right: 0.5em;
+  @include boxshadow(-1px 1px 0 $page-bordercolor);
+  &:hover,
+  &:focus {
+    @include boxshadow(-1px 1px 0 $footer-bg-start);
+  }
+  &:active {
+    @include boxshadow(-1px 1px 0 $footer-bg-start inset);
+  }
+}
+
+/* @group searchbox */
+
+#portal-searchbox {
+  & #searchGadget {
+    @include inputfield($full-width:true);
+    background: url(../images/searchbox-bg.png) no-repeat right center $lightgray;
+  }
+  & input.searchButton {
+    display: none;
+  }
+}
+
+/* @end */
+
+/* @group formTabs */
+
+ul.formTabs {
+  @include ul($style: 'inline');
+  border-bottom: 1px solid $page-bordercolor;
+  width: 100%;
+  &:after {
+    clear: both;
+  }
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+  & a {
+    @include borderradius($border-radius $border-radius 0 0);
+    border: 1px solid $page-bordercolor;
+    background-color: $lightgray;
+    padding: 0.25em 0.75em;
+    display: block;
+    float: left;
+    margin-bottom: -1px;
+    margin-left: -1px;
+    margin-right: 0.25em;
+    &.selected,
+    &:hover {
+      border-bottom-color: $page-background;
+      background-color: $page-background;
+    }
+  }
+}
+fieldset.formPanel {
+  border: none;
+}
+
+/* @end */
+
+/* @group input fields */
+
+input[type="text"],
+input[type="password"] {
+  @include inputfield();
+}
+
+/* @end */
+
+/* @group textarea */
+
+textarea {
+  @include inputfield();
+}
+
+/* @end */
+
+/* @group buttons */
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  @include button();
+}
+
+/* @end */
+
+/* @group labels */
+
+label,
+div.label {
+  font-weight:bold;
+}
+label .formHelp,
+div.label .formHelp {
+  color: $text-color-light;
+  display: block;
+  font-weight: normal;
+}
+#content optgroup {
+  font-style: normal;
+  font-weight: bold;
+  color: #999;
+  padding-left: 0.25em;
+}
+#content option {
+  color: black;
+}
+#content optgroup > option {
+  padding: 0 0.25em 0 1em;
+}
+dl.enableFormTabbing dd {
+  margin-left: 0;
+  padding-top: 2em;
+}
+.field {
+  clear: both;
+  margin-bottom: 1em;
+}
+.field input[type="text"][name$=".title"],
+input#title {
+  /* width: 100%; */
+  font-size: $font-size-18;
+}
+.field.error input[type="text"][name$=".title"],
+.error input#title {
+  /* width: 99%; */
+}
+.fieldRequired {
+  padding: 0 0 0 1em;
+  color: $page-background;
+}
+div.overlay .field label .required,
+#form .field label .required,
+.formQuestion .required {
+  visibility: hidden;
+  font-size: 1px;
+  color: transparent;
+}
+div.overlay .field label .required:after,
+#form .field label .required:after,
+#sendto_form .fieldRequired:before,
+.formQuestion .required:after {
+  font-size: $font-size;
+  visibility: visible;
+  content: "■";
+  color: #FF0000;
+}
+#content li.formTab a.required span:after {
+  content: " ■";
+  color: #FF0000;
+}
+/* no required mark for input fields */
+div.overlay .field label input.required,
+#form .field label input.required,
+.formQuestion input.required {
+  visibility: visible;
+  font-size: $font-size;
+}
+div.overlay .field label input.required:after,
+#form .field label input.required:after {
+  content: '';
+}
+.formHelp {
+  margin: 0 0 0.2em 0;
+}
+div.field.error {
+  background-color: #fdc;
+  border:  1px solid red;
+  padding: 0.5em;
+  margin:  1em 0;
+}
+.error .fieldRequired {
+  color: #d00;
+}
+div.error.warning {
+  background-color: transparent;
+  border: none;
+  margin-top: 0;
+  padding: 0;
+}
+div.error.warning input {
+  border: 2px solid red;
+}
+
+/* @end */

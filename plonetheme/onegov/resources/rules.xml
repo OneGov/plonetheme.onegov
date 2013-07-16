@@ -29,5 +29,25 @@
         theme-children="/html/head"
         />
 
+    <!-- <replace css:content="#portal-logo" css:theme="#portal-logo" /> -->
+    <replace css:content="#portal-globalnav" css:theme="#portal-globalnav" />
+    <replace css:content="#portal-searchbox" css:theme="#portal-searchbox" />
+
+    <replace css:content-children="#portal-breadcrumbs" css:theme-children="#portal-breadcrumbs" />
+    <drop css:content="#portal-breadcrumbs" />
+
+    <replace css:content-children="#portal-column-one" css:theme-children="#column-navigation" />
+    <replace css:content-children="#portal-column-content" css:theme-children="#column-content" />
+    <replace css:content-children="#portal-column-two" css:theme-children="#column-sidebar" />
+
+    <replace css:content="div.to_top" css:theme="div.to_top" method="raw" />
+    <drop css:content="div.to_top" />
+
+
+    <replace css:content="#viewlet-below-content" css:theme="#viewlet-below-content" />
+
+    <replace css:content="#egov-footer" css:theme-children="#footer" />
+
+
   </rules>
 </rules>

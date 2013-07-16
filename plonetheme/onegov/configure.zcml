@@ -11,6 +11,7 @@
 
   <include package="plone.resource" file="meta.zcml"/>
 
+  <include package=".portlets" />
   <include package=".viewlets" />
 
   <genericsetup:registerProfile

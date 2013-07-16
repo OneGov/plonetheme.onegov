@@ -1,0 +1,20 @@
+/*
+NEVER EDIT THIS (MAIN.CSS) FILE!!
+ALL CHANGES WILL BE OVERWRITTEN,
+DO CHANGES IN THE *.SCSS FILES!
+
+run:
+sass --watch sass/main.scss:css/main.css
+
+--------
+
+*/
+
+@import
+  "variables.scss",
+  "components/grid.scss",
+  "components/base.scss",
+  "components/form.scss",
+  "components/menues.scss",
+  "components/messages.scss",
+  "components/overrides.scss"
