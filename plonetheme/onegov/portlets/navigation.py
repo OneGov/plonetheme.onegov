@@ -5,12 +5,11 @@ from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.interfaces.siteroot import IPloneSiteRoot
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.portlets.portlets import base
+from plone.app.portlets.portlets.navigation import getRootPath
+from plone.memoize.instance import memoize
 from zope.component import getMultiAdapter
 
 
-# TODO:
-#  1. problem with portal title
-#  2. problem if there is an default_page set (example: arbeitsplatz)
 class Renderer(base.Renderer):
 
     render = ViewPageTemplateFile('navigation.pt')
@@ -43,4 +42,13 @@ class Renderer(base.Renderer):
 
     @property
     def available(self):
+        rootpath = self.getNavRootPath()
+
+        if rootpath is None:
+            return False
+
         return True
+
+    @memoize
+    def getNavRootPath(self):
+        return getRootPath(self.context, False, 1, None)
