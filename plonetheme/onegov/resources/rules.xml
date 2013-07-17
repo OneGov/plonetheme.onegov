@@ -43,6 +43,15 @@
     <replace css:content="div.to_top" css:theme="div.to_top" method="raw" />
     <drop css:content="div.to_top" />
 
+    <!-- make content bigger if there is no navigation column -->
+    <rules if-content="not(//*[@id='portal-column-one'])">
+      <drop css:theme="#column-navigation" />
+      <before css:theme-children="#column-content">
+        <xsl:attribute name="class">cell width-12 position-0</xsl:attribute>
+      </before>
+    </rules>
+
+
 
     <replace css:content="#viewlet-below-content" css:theme="#viewlet-below-content" />
 
