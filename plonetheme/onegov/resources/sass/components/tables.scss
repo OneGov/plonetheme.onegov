@@ -1,0 +1,138 @@
+/* @group Data tables */
+
+table.listing,
+table.plain {
+  max-width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+table.listing,
+table.grid {
+  border: 1px solid $table-bordercolor;
+  border-collapse: separate;
+  *border-collapse: collapsed;
+  @include borderradius();
+}
+table.listing th,
+table.listing td,
+table.grid th,
+table.grid td,
+table.plain th,
+table.plain td,
+table.invisible th,
+table.invisible td {
+  padding: 0.5em 0.75em;
+  text-align: left;
+  vertical-align: top;
+}
+table.grid th,
+table.grid td,
+table.plain th,
+table.plain td,
+table.vertical th,
+table.vertical td {
+  border-top: 1px solid $table-bordercolor;
+}
+table.listing thead th,
+table.listing tbody th {
+  border-bottom: 1px solid $table-bordercolor;
+}
+table.listing tfoot th {
+  border-top: 1px solid $table-bordercolor;
+}
+table.listing.grid th,
+table.listing.vertical th {
+  border-bottom: none;
+}
+
+table.listing thead th,
+table.grid thead th,
+table.plain thead th,
+table.invisible thead th {
+  vertical-align: bottom;
+}
+table.plain thead tr th,
+table.plain thead tr td {
+  border-top: 0;
+}
+table.listing th + th,
+table.listing td + td,
+table.listing th + td,
+table.listing td + th,
+table.grid th + th,
+table.grid td + td,
+table.grid th + td,
+table.grid td + th {
+  border-left: 1px solid $table-bordercolor;
+}
+table.listing thead tr:first-child th,
+table.listing tbody tr:first-child th,
+table.listing tbody tr:first-child td,
+table.grid thead tr:first-child th,
+table.grid tbody tr:first-child th,
+table.grid tbody tr:first-child td  {
+  border-top: 0;
+}
+table.listing thead tr:first-child th:first-child,
+table.listing tbody tr:first-child td:first-child,
+table.grid thead tr:first-child th:first-child,
+table.grid tbody tr:first-child td:first-child {
+  @include borderradius(4px 0 0 0);
+}
+table.listing thead tr:first-child th:last-child,
+table.listing tbody tr:first-child td:last-child,
+table.grid thead tr:first-child th:last-child,
+table.grid tbody tr:first-child td:last-child {
+  @include borderradius(0 4px 0 0);
+}
+table.listing thead:last-child tr:last-child th:first-child,
+table.listing tbody:last-child tr:last-child td:first-child,
+table.grid thead:last-child tr:last-child th:first-child,
+table.grid tbody:last-child tr:last-child td:first-child {
+  @include borderradius(0 0 0 4px);
+}
+table.listing thead:last-child tr:last-child th:last-child,
+table.listing tbody:last-child tr:last-child td:last-child,
+table.grid thead:last-child tr:last-child th:last-child,
+table.grid tbody:last-child tr:last-child td:last-child {
+  @include borderradius(0 0 4px 0);
+}
+
+table.listing th {
+  color: $table-heading-color;
+  background-color: $table-heading-background;
+}
+table.vertical th {
+  background-image: none;
+  text-align: right;
+}
+.dragindicator {
+  outline: 2px solid #FFD700;
+}
+
+#foldercontents-order-column {
+  padding: 0;
+}
+
+div.listingBar {
+  font-size: 91.6667%;
+  margin: 1em 0;
+}
+div.listingBar .next {
+  display: inline-block;
+  float: right;
+}
+div.listingBar .previous {
+  display: inline-block;
+}
+div.listingBar .current {
+  vertical-align: middle;
+  padding: 0 5px;
+}
+
+#listing-table {
+  margin-bottom: 1em;
+}
+
+/* @end */
