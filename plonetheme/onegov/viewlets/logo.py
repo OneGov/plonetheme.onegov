@@ -58,8 +58,6 @@ class LogoViewlet(common.LogoViewlet):
             self.logo_tag = scale.scale('logo', scale="mini").tag()
             self.title = self.context.restrictedTraverse(
                 getNavigationRoot(self.context)).Title()
-            # On subsites we do not have a customizable logo title
-            self.logo_title = ''
         else:
             # onegov default
             self.onegov_logo_behaviour()

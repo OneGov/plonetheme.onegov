@@ -8,7 +8,4 @@
    i18n:attributes="title">
   <img src="logo.jpg" alt=""
        tal:replace="structure view/logo_tag" />
-  <span id="logo-title" tal:condition="view/logo_title"
-        tal:content="structure view/logo_title">
-  </span>
 </a>
