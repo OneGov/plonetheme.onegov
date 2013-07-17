@@ -29,7 +29,7 @@
         theme-children="/html/head"
         />
 
-    <!-- <replace css:content="#portal-logo" css:theme="#portal-logo" /> -->
+    <replace css:content="#portal-logo" css:theme="#portal-logo" />
     <replace css:content="#portal-globalnav" css:theme="#portal-globalnav" />
     <replace css:content="#portal-searchbox" css:theme="#portal-searchbox" />
 
