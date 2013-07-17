@@ -809,6 +809,30 @@ dl.error dt {
   margin: 0; }
 
 /* @end */
+@media screen and (max-width: 767px) {
+  ul.mobileButtons {
+    list-style: disc;
+    padding-left: 2em;
+    padding-left: 0; }
+    ul.mobileButtons li {
+      display: list-item;
+      margin-bottom: 1em; }
+    ul.mobileButtons li {
+      display: inline; }
+
+  ul.mobileNavigation {
+    padding-left: 0; }
+    ul.mobileNavigation li {
+      /* todo: move this into ul-mixing */
+      margin-bottom: 0; }
+
+  .fixedWidth {
+    width: 96%; }
+
+  #footer .cell {
+    width: 99.6%;
+    margin-left: -99.6%;
+    clear: both; } }
 /* @group tags widget */
 #content .existingTagsHelp,
 #content .newTagsHelp {

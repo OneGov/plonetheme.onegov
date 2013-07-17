@@ -33,6 +33,8 @@
     <replace css:content="#portal-globalnav" css:theme="#portal-globalnav" />
     <replace css:content="#portal-searchbox" css:theme="#portal-searchbox" />
 
+    <replace css:content="ul.mobileButtons" css:theme="ul.mobileButtons" />
+
     <replace css:content-children="#portal-breadcrumbs" css:theme-children="#portal-breadcrumbs" />
     <drop css:content="#portal-breadcrumbs" />
 

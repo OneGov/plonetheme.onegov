@@ -3,6 +3,6 @@
   <version>1000</version>
   <dependencies>
     <dependency>profile-plone.app.theming:default</dependency>
-    <dependency>profile-ftw.mobilenavigation:default</dependency>
+    <dependency>profile-ftw.mobilenavigation:slide</dependency>
   </dependencies>
 </metadata>
