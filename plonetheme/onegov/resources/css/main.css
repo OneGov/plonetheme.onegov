@@ -169,7 +169,7 @@ a {
   color: #005d67;
   text-decoration: none; }
   a:hover {
-    color: #ff5d67;
+    color: #00a5b8;
     text-decoration: underline; }
 
 /* @end */
@@ -186,6 +186,25 @@ a {
 /* @group breadcrumbs */
 #portal-breadcrumbs {
   margin-bottom: 1em; }
+
+/* @end */
+/* @group document actions */
+#document-actions ul {
+  list-style: disc;
+  padding-left: 2em;
+  padding-left: 0;
+  float: right; }
+  #document-actions ul li {
+    display: list-item;
+    margin-bottom: 1em; }
+  #document-actions ul li {
+    display: inline; }
+  #document-actions ul li a {
+    font-family: 'icomoon';
+    font-size: 1.5em;
+    margin-left: 0.25em; }
+    #document-actions ul li a:hover {
+      text-decoration: none; }
 
 /* @end */
 /* @group global navigation */
@@ -229,7 +248,15 @@ a {
   #column-navigation .portletContextNavigation .current {
     border-bottom: 1px solid #e5e5e0; }
   #column-navigation .portletContextNavigation .parent {
-    border-bottom: 1px solid #e5e5e0; }
+    border-bottom: 1px solid #e5e5e0;
+    background-color: #f6f6f5;
+    background-image: -moz-linear-gradient(top, #fcfcfc, #f6f6f5);
+    background-image: -ms-linear-gradient(top, #fcfcfc, #f6f6f5);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fcfcfc), to(#f6f6f5));
+    background-image: -webkit-linear-gradient(top, #fcfcfc, #f6f6f5);
+    background-image: -o-linear-gradient(top, #fcfcfc, #f6f6f5);
+    background-image: linear-gradient(top, #fcfcfc, #f6f6f5);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$from', endColorstr='$to', GradientType=0); }
     #column-navigation .portletContextNavigation .parent a {
       margin-left: 0;
       padding-right: 1.5em;
@@ -271,6 +298,21 @@ ul {
   ul li {
     display: list-item;
     margin-bottom: 1em; }
+
+/* @end */
+/* @group subelements-listing */
+.subelements-listing {
+  list-style: disc;
+  padding-left: 2em;
+  padding-left: 0; }
+  .subelements-listing li {
+    display: list-item;
+    margin-bottom: 1em; }
+  .subelements-listing li {
+    display: inline; }
+  .subelements-listing .divider {
+    border-left: 1px solid #005d67;
+    margin-right: 0.35em; }
 
 /* @end */
 /* @group simplelayout */

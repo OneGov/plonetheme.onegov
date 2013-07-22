@@ -77,6 +77,23 @@ a {
 
 /* @end */
 
+/* @group document actions */
+
+#document-actions ul {
+  @include ul($style: 'inline');
+  float: right;
+  & li a {
+    font-family: 'icomoon';
+    font-size: 1.5em;
+    margin-left: 0.25em;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+/* @end */
+
 /* @group global navigation */
 
 #portal-globalnav {
@@ -104,7 +121,7 @@ a {
 /* @group left navigation */
 
 #column-navigation .portletContextNavigation {
-  border: 1px solid #e5e5e0;
+  border: 1px solid $lightgray2;
   border-width: 1px 0;
   & ul {
     @include ul($style: 'plain');
@@ -115,10 +132,11 @@ a {
     }
   }
   & .current {
-    border-bottom: 1px solid #e5e5e0;
+    border-bottom: 1px solid $lightgray2;
   }
   & .parent {
-    border-bottom: 1px solid #e5e5e0;
+    border-bottom: 1px solid $lightgray2;
+    @include gradient(#fcfcfc, #f6f6f5);
     & a {
       margin-left: 0;
       padding-right: 1.5em;
@@ -172,6 +190,19 @@ p {
 ul {
   @include ul();
 }
+
+/* @end */
+
+/* @group subelements-listing */
+
+.subelements-listing {
+  @include ul($style: 'inline');
+  & .divider {
+    border-left: 1px solid $link-color;
+    margin-right: 0.35em;
+  }
+}
+
 
 /* @end */
 
