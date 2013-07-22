@@ -949,23 +949,23 @@ div.listingBar .current {
   margin-bottom: 1em; }
 
 /* @end */
+/* mobile navi starts at (max-width: 767px) */
+/* @group tablet landscape */
+/* @end */
+/* @group tablet */
+@media screen and (max-width: 1000px) {
+  #column-content,
+  #column-sidebar {
+    width: 100%;
+    margin-left: 0;
+    position: static;
+    left: 0;
+    float: none; } }
+/* @end */
+/* @group mobile landscape */
+/* @end */
+/* @group mobile */
 @media screen and (max-width: 767px) {
-  ul.mobileButtons {
-    list-style: disc;
-    padding-left: 2em;
-    padding-left: 0; }
-    ul.mobileButtons li {
-      display: list-item;
-      margin-bottom: 1em; }
-    ul.mobileButtons li {
-      display: inline; }
-
-  ul.mobileNavigation {
-    padding-left: 0; }
-    ul.mobileNavigation li {
-      /* todo: move this into ul-mixing */
-      margin-bottom: 0; }
-
   .fixedWidth {
     width: 96%; }
 
@@ -973,6 +973,7 @@ div.listingBar .current {
     width: 99.6%;
     margin-left: -99.6%;
     clear: both; } }
+/* @end */
 /* @group tags widget */
 #content .existingTagsHelp,
 #content .newTagsHelp {
@@ -993,5 +994,23 @@ dl.newTagsSection {
   width: 100%; }
   #content .newTagsSection textarea {
     width: 100%; }
+
+/* @end */
+/* @group mobile buttons */
+ul.mobileButtons {
+  list-style: disc;
+  padding-left: 2em;
+  padding-left: 0; }
+  ul.mobileButtons li {
+    display: list-item;
+    margin-bottom: 1em; }
+  ul.mobileButtons li {
+    display: inline; }
+
+ul.mobileNavigation {
+  padding-left: 0; }
+  ul.mobileNavigation li {
+    /* todo: move this into ul-mixing */
+    margin-bottom: 0; }
 
 /* @end */

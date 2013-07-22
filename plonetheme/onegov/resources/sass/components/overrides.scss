@@ -23,3 +23,18 @@ dl.newTagsSection {
 }
 
 /* @end */
+
+/* @group mobile buttons */
+
+ul.mobileButtons {
+  @include ul($style: 'inline');
+}
+ul.mobileNavigation {
+  padding-left: 0;
+  & li {
+    /* todo: move this into ul-mixing */
+    margin-bottom: 0;
+  }
+}
+
+/* @end */

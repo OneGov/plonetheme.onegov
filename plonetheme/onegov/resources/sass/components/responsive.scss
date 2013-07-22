@@ -1,21 +1,35 @@
+/* mobile navi starts at (max-width: 767px) */
+
+
+/* @group tablet landscape */
+
+/* @end */
+
+/* @group tablet */
+
+@media screen and (max-width: 1000px) {
+  #column-content,
+  #column-sidebar {
+    width: 100%;
+    margin-left: 0;
+    position: static;
+    left: 0;
+    float: none;
+  }
+}
+
+/* @end */
+
+/* @group mobile landscape */
+
+/* @end */
+
+/* @group mobile */
+
 @media screen and (max-width: 767px) {
-
-  ul.mobileButtons {
-    @include ul($style: 'inline');
-  }
-  ul.mobileNavigation {
-    padding-left: 0;
-    & li {
-      /* todo: move this into ul-mixing */
-      margin-bottom: 0;
-    }
-  }
-
   .fixedWidth {
     width: 96%;
   }
-
-
   #footer .cell {
     width: 99.6%;
     margin-left: -99.6%;
@@ -23,3 +37,5 @@
   }
 
 }
+
+/* @end */
