@@ -1,5 +1,4 @@
 /* @group Content pulldowns (edit-bar) */
-
 #edit-bar ul {
   @include ul($style:'plain');
   background-color: $lightgray;
@@ -19,6 +18,7 @@
   position: relative;
   z-index: 2;
 }
+
 #content-views {
   float: left;
 }
@@ -34,7 +34,6 @@
 .ie6 ul#content-views{
   margin: -2px -3px 0px -3px;
 }
-
 #edit-bar li dd.actionMenuContent a {
   display: block;
   @include borderradius(0);
@@ -50,7 +49,6 @@
 #edit-bar li.selected a,
 #edit-bar li a:hover {
   background-color: $page-background;
-  color: #666;
 }
 /* TODO: Since plone's base.css also have an !important */
 #container #contentActionMenus .actionMenuContent a {
@@ -76,16 +74,45 @@
 #container #contentActionMenus dl.actionMenu.activated dd .actionMenuSelected {
   background-color: $lightgray;
 }
+#portal-personaltools dd ul {
+  @include ul($style: 'plain');
+  & li {
+    margin: 0;
+  }
+}
+#portal-personaltools dt {
+  background-color: $lightgray;
+  padding: 0.5em;
+}
+#portal-personaltools #anon-personalbar {
+  background-color: transparent;
+  padding: 0;
+}
 #portal-personaltools,
 #contentActionMenus dl.actionMenu {
   line-height: 2em;
 }
 #portal-personaltools dd {
-  background-color: $page-background
+  background-color: $page-background;
+  right: 0;
 }
 #portal-personaltools dd li a:hover {
   background-color: $lightgray;
 }
+
+#user-name,
+#personaltools-portrait {
+  float: left;
+  line-height: 26px;
+}
+#personaltools-portrait {
+  margin-right: 0.5em;
+}
+#user-name:after {
+  content: ' ▼';
+  font-size: 10px;
+}
+
 
 #folderHeader, #contextHeader {
   border-bottom: 2px solid $page-background;

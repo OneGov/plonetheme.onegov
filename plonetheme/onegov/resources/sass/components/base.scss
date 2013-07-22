@@ -226,6 +226,27 @@ div.sl-controls {
 
 /* @end */
 
+/* @group site-actions */
+
+#portal-siteactions {
+  @include ul($style: 'inline');
+  & a {
+    color: $darkgray;
+  }
+  & li {
+    border-left: 1px solid $darkgray;
+    padding-left: 0.5em;
+    margin-left: 0.5em;
+  }
+  & li:first-child {
+    border-left: none;
+    padding-left: 0;
+    margin-left: 0;
+  }
+}
+
+/* @end */
+
 /* @group login */
 
 #login-form label {

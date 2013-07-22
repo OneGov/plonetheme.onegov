@@ -325,6 +325,28 @@ div.sl-controls {
     border-left: none; }
 
 /* @end */
+/* @group site-actions */
+#portal-siteactions {
+  list-style: disc;
+  padding-left: 2em;
+  padding-left: 0; }
+  #portal-siteactions li {
+    display: list-item;
+    margin-bottom: 1em; }
+  #portal-siteactions li {
+    display: inline; }
+  #portal-siteactions a {
+    color: #5b5a54; }
+  #portal-siteactions li {
+    border-left: 1px solid #5b5a54;
+    padding-left: 0.5em;
+    margin-left: 0.5em; }
+  #portal-siteactions li:first-child {
+    border-left: none;
+    padding-left: 0;
+    margin-left: 0; }
+
+/* @end */
 /* @group login */
 #login-form label {
   min-width: 5em;
@@ -675,8 +697,7 @@ div.error.warning input {
 #edit-bar .activated a,
 #edit-bar li.selected a,
 #edit-bar li a:hover {
-  background-color: white;
-  color: #666; }
+  background-color: white; }
 
 /* TODO: Since plone's base.css also have an !important */
 #container #contentActionMenus .actionMenuContent a {
@@ -699,15 +720,47 @@ div.error.warning input {
 #container #contentActionMenus dl.actionMenu.activated dd .actionMenuSelected {
   background-color: #f4f4f1; }
 
+#portal-personaltools dd ul {
+  list-style: disc;
+  padding-left: 2em;
+  list-style: none;
+  padding-left: 0; }
+  #portal-personaltools dd ul li {
+    display: list-item;
+    margin-bottom: 1em; }
+  #portal-personaltools dd ul li {
+    margin: 0; }
+
+#portal-personaltools dt {
+  background-color: #f4f4f1;
+  padding: 0.5em; }
+
+#portal-personaltools #anon-personalbar {
+  background-color: transparent;
+  padding: 0; }
+
 #portal-personaltools,
 #contentActionMenus dl.actionMenu {
   line-height: 2em; }
 
 #portal-personaltools dd {
-  background-color: white; }
+  background-color: white;
+  right: 0; }
 
 #portal-personaltools dd li a:hover {
   background-color: #f4f4f1; }
+
+#user-name,
+#personaltools-portrait {
+  float: left;
+  line-height: 26px; }
+
+#personaltools-portrait {
+  margin-right: 0.5em; }
+
+#user-name:after {
+  content: ' ▼';
+  font-size: 10px; }
 
 #folderHeader, #contextHeader {
   border-bottom: 2px solid white; }
