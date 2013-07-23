@@ -4,6 +4,7 @@ from Acquisition import aq_inner, aq_parent
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.interfaces.siteroot import IPloneSiteRoot
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from borg.localrole.interfaces import IFactoryTempFolder
 from plone.app.portlets.portlets import base
 from plone.app.portlets.portlets.navigation import getRootPath
 from plone.memoize.instance import memoize
@@ -19,9 +20,12 @@ class Renderer(base.Renderer):
         self.request = request
         self.parent = aq_parent(aq_inner(context))
         plone = getMultiAdapter((context, request), name="plone")
-        if plone.isDefaultPageInFolder():
+        in_factory = IFactoryTempFolder.providedBy(
+            self.parent)
+        if in_factory:
+            self.parent = aq_parent(aq_parent(aq_inner(self.parent)))
+        elif plone.isDefaultPageInFolder():
             self.parent = aq_parent(aq_inner(self.parent))
-
 
     def show_parent(self):
         """ Do not show parent if you are on navigationroot.
