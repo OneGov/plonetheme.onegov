@@ -428,6 +428,161 @@ div.sl-controls {
   zoom: 1; }
 
 /* @end */
+.contenttype-blog:before,
+.contenttype-blogcategory:before {
+  font-family: 'icomoon';
+  font-size: 1.25em;
+  content: "<" " "; }
+
+.contenttype-book:before {
+  font-family: 'icomoon';
+  font-size: 1.25em;
+  content: "?" " "; }
+
+.contenttype-textblock:before,
+.contenttype-paragraph:before,
+.contenttype-htmlblock:before {
+  font-family: 'icomoon';
+  font-size: 1.25em;
+  content: "I" " "; }
+
+.contenttype-contact:before,
+.contenttype-ftw_contact:before,
+.contenttype-member:before {
+  font-family: 'icomoon';
+  font-size: 1.25em;
+  content: "\\" " "; }
+
+.contenttype-poodle:before {
+  font-family: 'icomoon';
+  font-size: 1.25em;
+  content: "a" " "; }
+
+.contenttype-document:before,
+.contenttype-contentpage:before {
+  font-family: 'icomoon';
+  font-size: 1.25em;
+  content: "_" " "; }
+
+.contenttype-meeting-item:before {
+  font-family: 'icomoon';
+  font-size: 1.25em;
+  content: "K" " "; }
+
+.contenttype-billboardcategory:before,
+.contenttype-newsfolder:before,
+.contenttype-eventfolder:before,
+.contenttype-homefolder:before,
+.contenttype-tabbedviewfolder:before,
+.contenttype-folder:before {
+  font-family: 'icomoon';
+  font-size: 1.25em;
+  content: "]" " "; }
+
+.contenttype-banner:before {
+  font-family: 'icomoon';
+  font-size: 1.25em;
+  content: "X" " "; }
+
+.contenttype-link {
+  /* MISSING */ }
+
+.contenttype-ftw_mail:before,
+.contenttype-mail:before {
+  font-family: 'icomoon';
+  font-size: 1.25em;
+  content: "." " "; }
+
+.contenttype-news:before {
+  font-family: 'icomoon';
+  font-size: 1.25em;
+  content: "a" " "; }
+
+.contenttype-news-item:before {
+  font-family: 'icomoon';
+  font-size: 1.25em;
+  content: "a" " "; }
+
+.contenttype-event:before,
+.contenttype-eventpage:before,
+.contenttype-meeting:before {
+  font-family: 'icomoon';
+  font-size: 1.25em;
+  content: "e" " "; }
+
+.contenttype-ticket:before,
+.contenttype-poiissue:before,
+.contenttype-task:before {
+  font-family: 'icomoon';
+  font-size: 1.25em;
+  content: "8" " "; }
+
+.contenttype-workspace:before {
+  font-family: 'icomoon';
+  font-size: 1.25em;
+  content: "%" " "; }
+
+.contenttype-billboardad:before {
+  font-family: 'icomoon';
+  font-size: 1.25em;
+  content: ":" " "; }
+
+span.link-external a {
+  /* MISSING */ }
+
+.contenttype-ticket-box:before {
+  font-family: 'icomoon';
+  font-size: 1.25em;
+  content: "F" " "; }
+
+.contenttype-chapter:before {
+  font-family: 'icomoon';
+  font-size: 1.25em;
+  content: "#" " "; }
+
+.contenttype-table:before {
+  font-family: 'icomoon';
+  font-size: 1.25em;
+  content: "L" " "; }
+
+.contenttype-classificationitem {
+  /* MISSING */ }
+
+.contenttype-blogentry:before {
+  font-family: 'icomoon';
+  font-size: 1.25em;
+  content: "N" " "; }
+
+.contenttype-formfolder {
+  /* MISSING */ }
+
+.contenttype-subsite {
+  /* MISSING */ }
+
+.contenttype-listingblock {
+  /* MISSING */ }
+
+.contenttype-addressblock {
+  /* MISSING */ }
+
+/* only show sprites in factory menu for file and image */
+body.template-create_from_template .contenttype-image:before,
+#plone-contentmenu-factories li a.contenttype-image span:before {
+  font-family: 'icomoon';
+  font-size: 1.25em;
+  content: "I" " "; }
+
+body.template-create_from_template .contenttype-file,
+#plone-contentmenu-factories li a.contenttype-file span {
+  /* MISSING */ }
+
+/* no images in navigation */
+dl.portletNavigationTree img {
+  display: none; }
+
+#column-navigation .portletNavigationTree a {
+  background-image: none; }
+
 /* @group searchbox */
 #portal-searchbox #searchGadget {
   font-size: 13px;

@@ -1,0 +1,123 @@
+@mixin icon($char){
+  &:before {
+    font-family: 'icomoon';
+    font-size: 1.25em;
+    content: $char' ';
+  }
+}
+
+.contenttype-blog,
+.contenttype-blogcategory {
+  @include icon('<');
+}
+.contenttype-book {
+  @include icon('?');
+}
+.contenttype-textblock,
+.contenttype-paragraph,
+.contenttype-htmlblock {
+  @include icon('I');
+}
+.contenttype-contact,
+.contenttype-ftw_contact,
+.contenttype-member {
+  @include icon('\\');
+}
+.contenttype-poodle {
+  @include icon('a');
+}
+.contenttype-document,
+.contenttype-contentpage {
+  @include icon('_');
+}
+.contenttype-meeting-item {
+  @include icon('K');
+}
+.contenttype-billboardcategory,
+.contenttype-newsfolder,
+.contenttype-eventfolder,
+.contenttype-homefolder,
+.contenttype-tabbedviewfolder,
+.contenttype-folder {
+  @include icon(']');
+}
+.contenttype-banner {
+  @include icon('X');
+}
+.contenttype-link {
+/* MISSING */
+}
+.contenttype-ftw_mail,
+.contenttype-mail {
+  @include icon('.');
+}
+.contenttype-news {
+  @include icon('a');
+}
+.contenttype-news-item {
+  @include icon('a');
+}
+.contenttype-event,
+.contenttype-eventpage,
+.contenttype-meeting {
+  @include icon('e');
+}
+.contenttype-ticket,
+.contenttype-poiissue,
+.contenttype-task {
+  @include icon('8');
+}
+.contenttype-workspace {
+  @include icon('%');
+}
+.contenttype-billboardad {
+  @include icon(':');
+}
+span.link-external a {
+/* MISSING */
+}
+.contenttype-ticket-box {
+  @include icon('F');
+}
+.contenttype-chapter {
+  @include icon('#');
+}
+.contenttype-table {
+  @include icon('L');
+}
+.contenttype-classificationitem {
+/* MISSING */
+}
+.contenttype-blogentry {
+  @include icon('N');
+}
+.contenttype-formfolder {
+/* MISSING */
+}
+.contenttype-subsite {
+/* MISSING */
+}
+.contenttype-listingblock {
+/* MISSING */
+}
+.contenttype-addressblock {
+/* MISSING */
+}
+
+/* only show sprites in factory menu for file and image */
+body.template-create_from_template .contenttype-image,
+#plone-contentmenu-factories li a.contenttype-image span {
+  @include icon('I');
+}
+body.template-create_from_template .contenttype-file,
+#plone-contentmenu-factories li a.contenttype-file span {
+/* MISSING */
+}
+
+/* no images in navigation */
+dl.portletNavigationTree img {
+  display: none;
+}
+#column-navigation .portletNavigationTree a {
+  background-image: none;
+}
