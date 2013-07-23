@@ -1470,7 +1470,12 @@ div.listingBar .current {
     margin-left: -98.5025%;
     width: 29.28453%; }
 
-  #column-content,
+  #column-content.position-3 {
+    margin-left: -67.72047%;
+    width: 66.22296%; }
+  #column-content.position-0 {
+    width: 97.00499%; }
+
   #column-sidebar {
     margin-left: -67.72047%;
     width: 66.22296%; }
@@ -1486,8 +1491,8 @@ div.listingBar .current {
   .fixedWidth {
     width: 96%; }
 
-  #column-content,
-  #column-sidebar {
+  #columns #column-content,
+  #columns #column-sidebar {
     margin-left: -98.5025%;
     width: 97.00499%;
     clear: both; }

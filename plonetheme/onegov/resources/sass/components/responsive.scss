@@ -13,7 +13,15 @@
     @include position0();
     @include width5();
   }
-  #column-content,
+  #column-content {
+    &.position-3 {
+      @include position5();
+      @include width11();
+    }
+    &.position-0 {
+      @include width16();
+    }
+  }
   #column-sidebar {
     @include position5();
     @include width11();
@@ -34,8 +42,8 @@
   .fixedWidth {
     width: 96%;
   }
-  #column-content,
-  #column-sidebar {
+  #columns #column-content,
+  #columns #column-sidebar {
     @include position0();
     @include width16();
     clear: both;
