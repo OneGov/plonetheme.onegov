@@ -47,6 +47,49 @@
 
 /* @end */
 
+/* @group livesearch */
+
+#LSResult {
+  width: 100%;
+  border: 1px solid $input-bordercolor;
+  border-top-width: 0;
+  background-color: $page-background;
+  z-index: 2;
+  @include boxshadow(0 0 0.5em $lightgray2);
+  position: absolute;
+  & label {
+    font-weight: normal;
+  }
+}
+div.searchSection {
+  padding: 1em;
+}
+fieldset.livesearchContainer {
+  border: none;
+  margin: 0;
+  padding: 0;
+  & legend {
+    display: none;
+  }
+  & ul {
+    @include ul($style: 'plain');
+    & li {
+      margin: 0;
+    }
+  }
+}
+#LSNothingFound,
+.LSRow {
+  padding: 1em;
+  border-top: 1px solid $input-bordercolor;
+  padding: 1em;
+}
+.LSHighlight {
+  background-color: $lightgray;
+}
+
+/* @end */
+
 /* @group formTabs */
 
 ul.formTabs {

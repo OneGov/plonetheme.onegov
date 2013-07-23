@@ -1,4 +1,3 @@
-from plone.app.layout.viewlets import common
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 import pkg_resources
 
@@ -12,7 +11,13 @@ else:
     HAS_FTW_SOLR = True
 
 
-class SearchBoxViewlet(common.SearchBoxViewlet):
+if HAS_FTW_SOLR:
+    from ftw.solr.browser.search import SearchBoxViewlet
+else:
+    from plone.app.layout.viewlets.common import SearchBoxViewlet
+
+
+class SearchBoxViewlet(SearchBoxViewlet):
     index = ViewPageTemplateFile('searchbox.pt')
 
     def has_solr(self):

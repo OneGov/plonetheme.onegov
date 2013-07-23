@@ -453,6 +453,50 @@ div.sl-controls {
   display: none; }
 
 /* @end */
+/* @group livesearch */
+#LSResult {
+  width: 100%;
+  border: 1px solid #c3c3be;
+  border-top-width: 0;
+  background-color: white;
+  z-index: 2;
+  box-shadow: 0 0 0.5em #e5e5e0;
+  -webkit-box-shadow: 0 0 0.5em #e5e5e0;
+  -moz-box-shadow: 0 0 0.5em #e5e5e0;
+  position: absolute; }
+  #LSResult label {
+    font-weight: normal; }
+
+div.searchSection {
+  padding: 1em; }
+
+fieldset.livesearchContainer {
+  border: none;
+  margin: 0;
+  padding: 0; }
+  fieldset.livesearchContainer legend {
+    display: none; }
+  fieldset.livesearchContainer ul {
+    list-style: disc;
+    padding-left: 2em;
+    list-style: none;
+    padding-left: 0; }
+    fieldset.livesearchContainer ul li {
+      display: list-item;
+      margin-bottom: 1em; }
+    fieldset.livesearchContainer ul li {
+      margin: 0; }
+
+#LSNothingFound,
+.LSRow {
+  padding: 1em;
+  border-top: 1px solid #c3c3be;
+  padding: 1em; }
+
+.LSHighlight {
+  background-color: #f4f4f1; }
+
+/* @end */
 /* @group formTabs */
 ul.formTabs {
   list-style: disc;
@@ -1068,6 +1112,12 @@ div.listingBar .current {
     width: 99.6%;
     margin-left: -99.6%;
     clear: both; } }
+/* @end */
+/* @group checkbox and radio */
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 0.25em; }
+
 /* @end */
 /* @group tags widget */
 #content .existingTagsHelp,
