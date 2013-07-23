@@ -431,42 +431,42 @@ div.sl-controls {
 .contenttype-blog:before,
 .contenttype-blogcategory:before {
   font-family: 'icomoon';
-  font-size: 1.25em;
+  font-size: 1em;
   content: "<" " "; }
 
 .contenttype-book:before {
   font-family: 'icomoon';
-  font-size: 1.25em;
+  font-size: 1em;
   content: "?" " "; }
 
 .contenttype-textblock:before,
 .contenttype-paragraph:before,
 .contenttype-htmlblock:before {
   font-family: 'icomoon';
-  font-size: 1.25em;
+  font-size: 1em;
   content: "I" " "; }
 
 .contenttype-contact:before,
 .contenttype-ftw_contact:before,
 .contenttype-member:before {
   font-family: 'icomoon';
-  font-size: 1.25em;
+  font-size: 1em;
   content: "\\" " "; }
 
 .contenttype-poodle:before {
   font-family: 'icomoon';
-  font-size: 1.25em;
+  font-size: 1em;
   content: "a" " "; }
 
 .contenttype-document:before,
 .contenttype-contentpage:before {
   font-family: 'icomoon';
-  font-size: 1.25em;
+  font-size: 1em;
   content: "_" " "; }
 
 .contenttype-meeting-item:before {
   font-family: 'icomoon';
-  font-size: 1.25em;
+  font-size: 1em;
   content: "K" " "; }
 
 .contenttype-billboardcategory:before,
@@ -476,55 +476,56 @@ div.sl-controls {
 .contenttype-tabbedviewfolder:before,
 .contenttype-folder:before {
   font-family: 'icomoon';
-  font-size: 1.25em;
+  font-size: 1em;
   content: "]" " "; }
 
 .contenttype-banner:before {
   font-family: 'icomoon';
-  font-size: 1.25em;
+  font-size: 1em;
   content: "X" " "; }
 
 .contenttype-link {
   /* MISSING */ }
 
+.link-mailto a:before,
 .contenttype-ftw_mail:before,
 .contenttype-mail:before {
   font-family: 'icomoon';
-  font-size: 1.25em;
+  font-size: 1em;
   content: "." " "; }
 
 .contenttype-news:before {
   font-family: 'icomoon';
-  font-size: 1.25em;
+  font-size: 1em;
   content: "a" " "; }
 
 .contenttype-news-item:before {
   font-family: 'icomoon';
-  font-size: 1.25em;
+  font-size: 1em;
   content: "a" " "; }
 
 .contenttype-event:before,
 .contenttype-eventpage:before,
 .contenttype-meeting:before {
   font-family: 'icomoon';
-  font-size: 1.25em;
+  font-size: 1em;
   content: "e" " "; }
 
 .contenttype-ticket:before,
 .contenttype-poiissue:before,
 .contenttype-task:before {
   font-family: 'icomoon';
-  font-size: 1.25em;
+  font-size: 1em;
   content: "8" " "; }
 
 .contenttype-workspace:before {
   font-family: 'icomoon';
-  font-size: 1.25em;
+  font-size: 1em;
   content: "%" " "; }
 
 .contenttype-billboardad:before {
   font-family: 'icomoon';
-  font-size: 1.25em;
+  font-size: 1em;
   content: ":" " "; }
 
 span.link-external a {
@@ -532,17 +533,17 @@ span.link-external a {
 
 .contenttype-ticket-box:before {
   font-family: 'icomoon';
-  font-size: 1.25em;
+  font-size: 1em;
   content: "F" " "; }
 
 .contenttype-chapter:before {
   font-family: 'icomoon';
-  font-size: 1.25em;
+  font-size: 1em;
   content: "#" " "; }
 
 .contenttype-table:before {
   font-family: 'icomoon';
-  font-size: 1.25em;
+  font-size: 1em;
   content: "L" " "; }
 
 .contenttype-classificationitem {
@@ -550,7 +551,7 @@ span.link-external a {
 
 .contenttype-blogentry:before {
   font-family: 'icomoon';
-  font-size: 1.25em;
+  font-size: 1em;
   content: "N" " "; }
 
 .contenttype-formfolder {
@@ -569,7 +570,7 @@ span.link-external a {
 body.template-create_from_template .contenttype-image:before,
 #plone-contentmenu-factories li a.contenttype-image span:before {
   font-family: 'icomoon';
-  font-size: 1.25em;
+  font-size: 1em;
   content: "I" " "; }
 
 body.template-create_from_template .contenttype-file,

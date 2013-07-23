@@ -1,7 +1,7 @@
 @mixin icon($char){
   &:before {
     font-family: 'icomoon';
-    font-size: 1.25em;
+    font-size: 1em;
     content: $char' ';
   }
 }
@@ -47,6 +47,7 @@
 .contenttype-link {
 /* MISSING */
 }
+.link-mailto a,
 .contenttype-ftw_mail,
 .contenttype-mail {
   @include icon('.');
