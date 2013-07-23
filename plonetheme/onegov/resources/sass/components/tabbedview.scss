@@ -1,0 +1,15 @@
+/* @group tabbedview */
+
+#tabbedview-body {
+  margin-top: 1em;
+}
+#tabbedview-searchbox {
+  float: right;
+  padding: 0.3em;
+  width: 10em;
+}
+#overview_overview .box ul {
+  @include ul($style: 'plain');
+}
+
+/* @end */

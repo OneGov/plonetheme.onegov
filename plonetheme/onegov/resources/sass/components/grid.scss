@@ -8,6 +8,40 @@
   total width: 1202px
   */
 
+@mixin width1() { width:4.6589%; }
+@mixin width2() { width:10.81531%; }
+@mixin width3() { width:16.97171%; }
+@mixin width4() { width:23.12812%; }
+@mixin width5() { width:29.28453%; }
+@mixin width6() { width:35.44093%; }
+@mixin width7() { width:41.59734%; }
+@mixin width8() { width:47.75374%; }
+@mixin width9() { width:53.91015%; }
+@mixin width10() { width:60.06656%; }
+@mixin width11() { width:66.22296%; }
+@mixin width12() { width:72.37937%; }
+@mixin width13() { width:78.53577%; }
+@mixin width14() { width:84.69218%; }
+@mixin width15() { width:90.84859%; }
+@mixin width16() { width:97.00499%; }
+
+@mixin position0()  { margin-left:-98.5025%; }
+@mixin position1()  { margin-left:-92.34609%; }
+@mixin position2()  { margin-left:-86.18968%; }
+@mixin position3()  { margin-left:-80.03328%; }
+@mixin position4()  { margin-left:-73.87687%; }
+@mixin position5()  { margin-left:-67.72047%; }
+@mixin position6()  { margin-left:-61.56406%; }
+@mixin position7()  { margin-left:-55.40765%; }
+@mixin position8()  { margin-left:-49.25125%; }
+@mixin position9()  { margin-left:-43.09484%; }
+@mixin position10()  { margin-left:-36.93844%; }
+@mixin position11()  { margin-left:-30.78203%; }
+@mixin position12()  { margin-left:-24.62562%; }
+@mixin position13()  { margin-left:-18.46922%; }
+@mixin position14()  { margin-left:-12.31281%; }
+@mixin position15()  { margin-left:-6.15641%; }
+
 div.row {
   float: left;
   width: 100%;
@@ -19,37 +53,38 @@ div.cell {
   float: left;
   left: 100%;
 }
-div.width-1 { width:4.6589%; }
-div.width-2 { width:10.81531%; }
-div.width-3 { width:16.97171%; }
-div.width-4 { width:23.12812%; }
-div.width-5 { width:29.28453%; }
-div.width-6 { width:35.44093%; }
-div.width-7 { width:41.59734%; }
-div.width-8 { width:47.75374%; }
-div.width-9 { width:53.91015%; }
-div.width-10 { width:60.06656%; }
-div.width-11 { width:66.22296%; }
-div.width-12 { width:72.37937%; }
-div.width-13 { width:78.53577%; }
-div.width-14 { width:84.69218%; }
-div.width-15 { width:90.84859%; }
-div.width-16 { width:97.00499%; }
-div.position-0  { margin-left:-98.5025%; }
-div.position-1  { margin-left:-92.34609%; }
-div.position-2  { margin-left:-86.18968%; }
-div.position-3  { margin-left:-80.03328%; }
-div.position-4  { margin-left:-73.87687%; }
-div.position-5  { margin-left:-67.72047%; }
-div.position-6  { margin-left:-61.56406%; }
-div.position-7  { margin-left:-55.40765%; }
-div.position-8  { margin-left:-49.25125%; }
-div.position-9  { margin-left:-43.09484%; }
-div.position-10  { margin-left:-36.93844%; }
-div.position-11  { margin-left:-30.78203%; }
-div.position-12  { margin-left:-24.62562%; }
-div.position-13  { margin-left:-18.46922%; }
-div.position-14  { margin-left:-12.31281%; }
-div.position-15  { margin-left:-6.15641%; }
+div.width-1 { @include width1(); }
+div.width-2 { @include width2(); }
+div.width-3 { @include width3(); }
+div.width-4 { @include width4(); }
+div.width-5 { @include width5(); }
+div.width-6 { @include width6(); }
+div.width-7 { @include width7(); }
+div.width-8 { @include width8(); }
+div.width-9 { @include width9(); }
+div.width-10 { @include width10(); }
+div.width-11 { @include width11(); }
+div.width-12 { @include width12(); }
+div.width-13 { @include width13(); }
+div.width-14 { @include width14(); }
+div.width-15 { @include width15(); }
+div.width-full, div.width-16 { @include width16(); }
+
+div.position-0  { @include position0(); }
+div.position-1  { @include position1(); }
+div.position-2  { @include position2(); }
+div.position-3  { @include position3(); }
+div.position-4  { @include position4(); }
+div.position-5  { @include position5(); }
+div.position-6  { @include position6(); }
+div.position-7  { @include position7(); }
+div.position-8  { @include position8(); }
+div.position-9  { @include position9(); }
+div.position-10  { @include position10(); }
+div.position-11  { @include position11(); }
+div.position-12  { @include position12(); }
+div.position-13  { @include position13(); }
+div.position-14  { @include position14(); }
+div.position-15  { @include position15(); }
 
 /* @end */

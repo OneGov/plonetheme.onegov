@@ -22,7 +22,7 @@
 @mixin button() {
   @include inputfield();
   width: auto;
-  margin-right: 0.5em;
+  margin: 0 0.5em;
   @include boxshadow(-1px 1px 0 $page-bordercolor);
   &:hover,
   &:focus {
@@ -32,63 +32,6 @@
     @include boxshadow(-1px 1px 0 $footer-bg-start inset);
   }
 }
-
-/* @group searchbox */
-
-#portal-searchbox {
-  & #searchGadget {
-    @include inputfield($full-width:true);
-    background: url(../images/searchbox-bg.png) no-repeat right center $lightgray;
-  }
-  & input.searchButton {
-    display: none;
-  }
-}
-
-/* @end */
-
-/* @group livesearch */
-
-#LSResult {
-  width: 100%;
-  border: 1px solid $input-bordercolor;
-  border-top-width: 0;
-  background-color: $page-background;
-  z-index: 2;
-  @include boxshadow(0 0 0.5em $lightgray2);
-  position: absolute;
-  & label {
-    font-weight: normal;
-  }
-}
-div.searchSection {
-  padding: 1em;
-}
-fieldset.livesearchContainer {
-  border: none;
-  margin: 0;
-  padding: 0;
-  & legend {
-    display: none;
-  }
-  & ul {
-    @include ul($style: 'plain');
-    & li {
-      margin: 0;
-    }
-  }
-}
-#LSNothingFound,
-.LSRow {
-  padding: 1em;
-  border-top: 1px solid $input-bordercolor;
-  padding: 1em;
-}
-.LSHighlight {
-  background-color: $lightgray;
-}
-
-/* @end */
 
 /* @group formTabs */
 
@@ -139,6 +82,10 @@ input[type="password"] {
 
 textarea {
   @include inputfield();
+}
+.field textarea {
+  width: 99%;
+  padding: 0.5%;
 }
 
 /* @end */
@@ -249,6 +196,27 @@ div.error.warning {
 }
 div.error.warning input {
   border: 2px solid red;
+}
+
+/* @end */
+
+/* @group listing bar */
+
+div.listingBar .next {
+  display: inline-block;
+  float: right;
+}
+div.listingBar .previous {
+  display: inline-block;
+}
+div.listingBar .current {
+  vertical-align: middle;
+}
+
+#content div.listingBar a,
+div.listingBar a {
+  @include button();
+  padding: 0 0.5em;
 }
 
 /* @end */

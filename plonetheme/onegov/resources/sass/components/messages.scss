@@ -22,6 +22,9 @@ dl.portalMessage dd {
   line-height: 1.25em;
   color: $text-color-light;
 }
+#content-core dl.portalMessage dd {
+  margin: 0;
+}
 dl.warning dt {
   background-color: $message-color-warning;
 }

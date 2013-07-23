@@ -1,4 +1,5 @@
 /* @group Content pulldowns (edit-bar) */
+
 #edit-bar ul {
   @include ul($style:'plain');
   background-color: $lightgray;
@@ -74,6 +75,12 @@
 #container #contentActionMenus dl.actionMenu.activated dd .actionMenuSelected {
   background-color: $lightgray;
 }
+#content .tabbedview-tab-menu .actionMenuContent a:hover {
+  background-color: $lightgray;
+  color: $link-color-hover !important;
+  /* TODO remove important in tabbedview.css */
+}
+.actionMenuContent ul,
 #portal-personaltools dd ul {
   @include ul($style: 'plain');
   & li {
@@ -87,6 +94,9 @@
 #portal-personaltools #anon-personalbar {
   background-color: transparent;
   padding: 0;
+}
+#portal-personaltools {
+  float: right;
 }
 #portal-personaltools,
 #contentActionMenus dl.actionMenu {
@@ -125,12 +135,17 @@
   margin: 0;
   position: relative;
 }
-
 .actionMenuContent {
   background-color: $page-background;
   border: 1px solid $page-bordercolor;
   border-top-width: 0;
   @include boxshadow(0.5em 0.5em 1em -1em $page-bordercolor);
+}
+#content .tabbedview-tab-menu .actionMenuContent {
+  background-color: $page-background;
+  padding: 0;
+  @include boxshadow(0.5em 0.5em 1em -1em $page-bordercolor);
+  border-top-width: 1px;
 }
 
 dl.actionMenu {
@@ -144,6 +159,7 @@ dl.actionMenu div {
   display: block;
   white-space: nowrap;
 }
+#column-content dl.actionMenu dt,
 dl.actionMenu dt {
   font-weight: normal;
 }

@@ -69,6 +69,14 @@ a {
 
 /* @end */
 
+/* @group header actions */
+
+#header-actions {
+  float: right;
+}
+
+/* @end */
+
 /* @group breadcrumbs */
 
 #portal-breadcrumbs {
@@ -190,6 +198,30 @@ p {
 ul {
   @include ul();
 }
+ol {
+  @include ul();
+  list-style: decimal;
+}
+#column-content dl {
+  & dt {
+    font-weight: bold;
+  }
+  & dd {
+    margin-bottom: 1em;
+  }
+}
+.discreet {
+  color: $text-color-light;
+}
+
+/* @end */
+
+/* @group fieldsets */
+
+fieldset {
+  margin: 1em 0;
+  border-width: 0 0 1px 0;
+}
 
 /* @end */
 
@@ -243,7 +275,7 @@ div.sl-controls {
   & .portlet {
     padding-left: 3em;
     margin: 2em 0;
-    border-left: 1px solid #71716a;
+    border-left: 1px solid $footer-border-color;
     & li {
       display: block;
       margin-bottom: 0.5em;

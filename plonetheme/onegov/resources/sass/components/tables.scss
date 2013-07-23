@@ -1,5 +1,8 @@
 /* @group Data tables */
 
+#column-content table {
+  margin-bottom: 1em;
+}
 table.listing,
 table.plain {
   max-width: 100%;
@@ -133,6 +136,14 @@ div.listingBar .current {
 
 #listing-table {
   margin-bottom: 1em;
+}
+
+/* @end */
+
+/* @group ext js */
+
+.x-menu-list {
+  padding-left: 0;
 }
 
 /* @end */

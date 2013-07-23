@@ -1,20 +1,68 @@
 /* mobile navi starts at (max-width: 767px) */
 
+@media screen and (max-width: $page-fixed-width) {
+  .fixedWidth {
+    width: 95%;
+  }
+}
 
 /* @group tablet landscape */
+
+@media screen and (max-width: 979px) {
+  #column-navigation {
+    @include position0();
+    @include width5();
+  }
+  #column-content,
+  #column-sidebar {
+    @include position5();
+    @include width11();
+  }
+  #column-sidebar {
+    clear: both;
+  }
+  #footer .portlet {
+    padding-left: 2em;
+  }
+}
 
 /* @end */
 
 /* @group tablet */
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 767px) {
+  .fixedWidth {
+    width: 96%;
+  }
   #column-content,
   #column-sidebar {
-    width: 100%;
-    margin-left: 0;
-    position: static;
-    left: 0;
-    float: none;
+    @include position0();
+    @include width16();
+    clear: both;
+  }
+  #column-navigation {
+    display: none;
+  }
+  #footer-column-1,
+  #footer-column-3 {
+    @include position0();
+    @include width8();
+  }
+  #footer-column-2,
+  #footer-column-4 {
+    @include position8();
+    @include width8();
+  }
+  #footer-column-3 {
+    clear: both;
+  }
+  #footer-column-3,
+  #footer-column-4 {
+    border-top: 1px solid $footer-border-color;
+  }
+  #footer .portlet {
+    border: none;
+    padding-left: 1em;
   }
 }
 
@@ -22,20 +70,23 @@
 
 /* @group mobile landscape */
 
+/* ??? */
+
 /* @end */
 
 /* @group mobile */
 
-@media screen and (max-width: 767px) {
-  .fixedWidth {
-    width: 96%;
-  }
+@media screen and (max-width: 480px) {
   #footer .cell {
-    width: 99.6%;
-    margin-left: -99.6%;
+    @include position0();
+    @include width16();
     clear: both;
+    & .portlet {
+      border: none;
+      border-top: 1px solid $footer-border-color;
+      padding-left: 1em;
+    }
   }
-
 }
 
 /* @end */

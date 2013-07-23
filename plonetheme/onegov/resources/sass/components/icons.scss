@@ -3,6 +3,8 @@
     font-family: 'icomoon';
     font-size: 1em;
     content: $char' ';
+    color: $text-color;
+    white-space: nowrap;
   }
 }
 
@@ -108,7 +110,7 @@ span.link-external a {
 /* only show sprites in factory menu for file and image */
 body.template-create_from_template .contenttype-image,
 #plone-contentmenu-factories li a.contenttype-image span {
-  @include icon('I');
+  @include icon('X');
 }
 body.template-create_from_template .contenttype-file,
 #plone-contentmenu-factories li a.contenttype-file span {
