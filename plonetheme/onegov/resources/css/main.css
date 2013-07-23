@@ -875,6 +875,38 @@ div.error.warning input {
   border: 2px solid red; }
 
 /* @end */
+/* @group overlay */
+.overlay {
+  display: none;
+  background-color: white;
+  padding: 2em;
+  box-shadow: 0 0 1em 0 #5b5a54;
+  -webkit-box-shadow: 0 0 1em 0 #5b5a54;
+  -moz-box-shadow: 0 0 1em 0 #5b5a54;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  min-width: 25%; }
+
+.overlay .formControls {
+  margin-top: 1em; }
+
+/* default close button positioned on upper-left corner */
+div.overlaybg div.close,
+div.overlay div.close {
+  background-image: url(../images/pb_close.png);
+  position: absolute;
+  left: -14px;
+  top: -14px;
+  cursor: pointer;
+  height: 30px;
+  width: 30px; }
+
+div.overlay div.close span {
+  text-indent: -8000px;
+  display: block; }
+
+/* @end */
 /* @group Content pulldowns (edit-bar) */
 #edit-bar ul {
   list-style: disc;
