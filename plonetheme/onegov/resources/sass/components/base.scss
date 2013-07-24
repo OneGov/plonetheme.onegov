@@ -255,9 +255,6 @@ div.sl-controls {
   background-color: $lightgray;
   @include borderradius($border-radius $border-radius 0 0);
 }
-.to_top a:after {
-  content: ' ^';
-}
 
 /* @end */
 
