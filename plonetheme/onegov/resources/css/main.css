@@ -656,8 +656,8 @@ span.link-external a:before {
   content: "";
   position: absolute;
   font-family: 'icomoon';
-  right: 0.3em;
-  top: 0.3em;
+  right: 0.4em;
+  top: 0.4em;
   color: #005d67; }
 
 /* @group formTabs */
