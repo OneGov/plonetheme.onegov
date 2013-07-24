@@ -149,3 +149,10 @@ span.link-external a {
 .portletContextNavigation .parent a {
   @include icon(' k', $style: 'after');
 }
+
+#portal-globalnav > li > a {
+  @include icon(' ', $style: 'after');
+  &:after {
+    font-size: 0.75em;
+  }
+}

@@ -644,6 +644,14 @@ span.link-external a:before {
   content: " k";
   white-space: nowrap; }
 
+#portal-globalnav > li > a:after {
+  font-family: 'icomoon';
+  font-size: 1em;
+  content: " ";
+  white-space: nowrap; }
+#portal-globalnav > li > a:after {
+  font-size: 0.75em; }
+
 /* @group formTabs */
 ul.formTabs {
   list-style: disc;
@@ -1451,10 +1459,11 @@ div.listingBar .current {
   padding-left: 0; }
 
 /* @end */
-/* mobile navi starts at (max-width: 767px) */
+/* @group smaller than fixedWidth */
 @media screen and (max-width: 1200px) {
   .fixedWidth {
     width: 95%; } }
+/* @end */
 /* @group tablet landscape */
 @media screen and (max-width: 979px) {
   #column-navigation {
@@ -1520,10 +1529,11 @@ div.listingBar .current {
     margin: 1em 0; } }
 /* @end */
 /* @group mobile landscape */
-/* ??? */
+@media screen and (max-width: 480px) {
+  /* ? */ }
 /* @end */
 /* @group mobile */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 320px) {
   #subsite-column-1,
   #subsite-column-2,
   #subsite-column-3,
