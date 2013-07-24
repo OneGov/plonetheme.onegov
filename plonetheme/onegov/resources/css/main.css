@@ -652,6 +652,14 @@ span.link-external a:before {
 #portal-globalnav > li > a:after {
   font-size: 0.75em; }
 
+.LSBox:before {
+  content: "";
+  position: absolute;
+  font-family: 'icomoon';
+  right: 0.3em;
+  top: 0.3em;
+  color: #005d67; }
+
 /* @group formTabs */
 ul.formTabs {
   list-style: disc;
@@ -945,8 +953,7 @@ div.listingBar a {
   box-shadow: 0 0 0.5em #cacabb inset;
   -webkit-box-shadow: 0 0 0.5em #cacabb inset;
   -moz-box-shadow: 0 0 0.5em #cacabb inset;
-  background: #f4f4f1;
-  background: url(../images/searchbox-bg.png) no-repeat right center #f4f4f1; }
+  background: #f4f4f1; }
   #portal-searchbox #searchGadget:hover, #portal-searchbox #searchGadget:focus {
     border-color: #00616c; }
 #portal-searchbox input.searchButton {

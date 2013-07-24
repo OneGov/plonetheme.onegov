@@ -3,7 +3,6 @@
 #portal-searchbox {
   & #searchGadget {
     @include inputfield($full-width:true);
-    background: url(../images/searchbox-bg.png) no-repeat right center $lightgray;
   }
   & input.searchButton {
     display: none;

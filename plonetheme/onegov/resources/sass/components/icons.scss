@@ -156,3 +156,12 @@ span.link-external a {
     font-size: 0.75em;
   }
 }
+
+.LSBox:before {
+  content: "";
+  position: absolute;
+  font-family: 'icomoon';
+  right: 0.3em;
+  top: 0.3em;
+  color: $link-color;
+}
