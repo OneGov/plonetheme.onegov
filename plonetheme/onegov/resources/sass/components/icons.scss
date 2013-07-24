@@ -5,46 +5,45 @@
   white-space: nowrap;
 
 }
-@mixin icon($char, $location: 'before'){
-  @if $location == 'before' {
+@mixin icon($char, $style:'before'){
+  @if $style == 'before' {
     &:before {
-      @include base_icon($char'');
-      color: $text-color;
+      @include base_icon($char);
     }
   }
-  @if $location == 'after' {
+  @if $style == 'after' {
     &:after {
-      @include base_icon(' '$char);
-  }
+      @include base_icon($char);
+    }
   }
 }
 
 .contenttype-blog,
 .contenttype-blogcategory {
-  @include icon('<');
+  @include icon('< ');
 }
 .contenttype-book {
-  @include icon('?');
+  @include icon('? ');
 }
 .contenttype-textblock,
 .contenttype-paragraph,
 .contenttype-htmlblock {
-  @include icon('I');
+  @include icon('I ');
 }
 .contenttype-contact,
 .contenttype-ftw_contact,
 .contenttype-member {
-  @include icon('\\');
+  @include icon('\\ ');
 }
 .contenttype-poodle {
-  @include icon('a');
+  @include icon('a ');
 }
 .contenttype-document,
 .contenttype-contentpage {
-  @include icon('_');
+  @include icon('_ ');
 }
 .contenttype-meeting-item {
-  @include icon('K');
+  @include icon('K ');
 }
 .contenttype-billboardcategory,
 .contenttype-newsfolder,
@@ -52,58 +51,55 @@
 .contenttype-homefolder,
 .contenttype-tabbedviewfolder,
 .contenttype-folder {
-  @include icon(']');
+  @include icon('] ');
 }
 .contenttype-banner {
-  @include icon('X');
+  @include icon('X ');
 }
 .contenttype-link {
-  @include icon('');
+  @include icon(' ');
 }
 .link-mailto a,
 .contenttype-ftw_mail,
 .contenttype-mail {
-  @include icon('.');
+  @include icon('. ');
 }
 .contenttype-news {
-  @include icon('a');
+  @include icon('a ');
 }
 .contenttype-news-item {
-  @include icon('a');
+  @include icon('a ');
 }
 .contenttype-event,
 .contenttype-eventpage,
 .contenttype-meeting {
-  @include icon('e');
+  @include icon('e ');
 }
 .contenttype-ticket,
 .contenttype-poiissue,
 .contenttype-task {
-  @include icon('8');
+  @include icon('8 ');
 }
 .contenttype-workspace {
-  @include icon('%');
+  @include icon('% ');
 }
 .contenttype-billboardad {
-  @include icon(':');
-}
-span.link-external a {
-  @include icon('j');
+  @include icon(': ');
 }
 .contenttype-ticket-box {
-  @include icon('F');
+  @include icon('F ');
 }
 .contenttype-chapter {
-  @include icon('#');
+  @include icon('# ');
 }
 .contenttype-table {
-  @include icon('L');
+  @include icon('L ');
 }
 .contenttype-classificationitem {
 /* MISSING */
 }
 .contenttype-blogentry {
-  @include icon('N');
+  @include icon('N ');
 }
 .contenttype-formfolder {
 /* MISSING */
@@ -121,7 +117,7 @@ span.link-external a {
 /* only show sprites in factory menu for file and image */
 body.template-create_from_template .contenttype-image,
 #plone-contentmenu-factories li a.contenttype-image span {
-  @include icon('X');
+  @include icon('X ');
 }
 body.template-create_from_template .contenttype-file,
 #plone-contentmenu-factories li a.contenttype-file span {
@@ -142,7 +138,14 @@ dl.portletNavigationTree img {
 
 
 
+span.link-external a {
+  @include icon('j');
+}
 
 .to_top a {
-  @include icon('', $location: 'after');
+  @include icon(' ', $style: 'after');
+}
+
+.portletContextNavigation .parent a {
+  @include icon(' k', $style: 'after');
 }

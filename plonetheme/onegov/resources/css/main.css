@@ -263,10 +263,7 @@ a {
     background-image: linear-gradient(top, #fcfcfc, #f6f6f5);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$from', endColorstr='$to', GradientType=0); }
     #column-navigation .portletContextNavigation .parent a {
-      margin-left: 0;
-      padding-right: 1.5em;
-      background: url(../images/to-parent.png) no-repeat center right;
-      /* TODO: icon font?? */ }
+      margin-left: 0; }
   #column-navigation .portletContextNavigation a {
     margin-left: 1em; }
 
@@ -456,56 +453,49 @@ div.sl-controls {
 .contenttype-blogcategory:before {
   font-family: 'icomoon';
   font-size: 1em;
-  content: "<" "";
-  white-space: nowrap;
-  color: #32444a; }
+  content: "< ";
+  white-space: nowrap; }
 
 .contenttype-book:before {
   font-family: 'icomoon';
   font-size: 1em;
-  content: "?" "";
-  white-space: nowrap;
-  color: #32444a; }
+  content: "? ";
+  white-space: nowrap; }
 
 .contenttype-textblock:before,
 .contenttype-paragraph:before,
 .contenttype-htmlblock:before {
   font-family: 'icomoon';
   font-size: 1em;
-  content: "I" "";
-  white-space: nowrap;
-  color: #32444a; }
+  content: "I ";
+  white-space: nowrap; }
 
 .contenttype-contact:before,
 .contenttype-ftw_contact:before,
 .contenttype-member:before {
   font-family: 'icomoon';
   font-size: 1em;
-  content: "\\" "";
-  white-space: nowrap;
-  color: #32444a; }
+  content: "\\ ";
+  white-space: nowrap; }
 
 .contenttype-poodle:before {
   font-family: 'icomoon';
   font-size: 1em;
-  content: "a" "";
-  white-space: nowrap;
-  color: #32444a; }
+  content: "a ";
+  white-space: nowrap; }
 
 .contenttype-document:before,
 .contenttype-contentpage:before {
   font-family: 'icomoon';
   font-size: 1em;
-  content: "_" "";
-  white-space: nowrap;
-  color: #32444a; }
+  content: "_ ";
+  white-space: nowrap; }
 
 .contenttype-meeting-item:before {
   font-family: 'icomoon';
   font-size: 1em;
-  content: "K" "";
-  white-space: nowrap;
-  color: #32444a; }
+  content: "K ";
+  white-space: nowrap; }
 
 .contenttype-billboardcategory:before,
 .contenttype-newsfolder:before,
@@ -515,106 +505,86 @@ div.sl-controls {
 .contenttype-folder:before {
   font-family: 'icomoon';
   font-size: 1em;
-  content: "]" "";
-  white-space: nowrap;
-  color: #32444a; }
+  content: "] ";
+  white-space: nowrap; }
 
 .contenttype-banner:before {
   font-family: 'icomoon';
   font-size: 1em;
-  content: "X" "";
-  white-space: nowrap;
-  color: #32444a; }
+  content: "X ";
+  white-space: nowrap; }
 
 .contenttype-link:before {
   font-family: 'icomoon';
   font-size: 1em;
-  content: "" "";
-  white-space: nowrap;
-  color: #32444a; }
+  content: " ";
+  white-space: nowrap; }
 
 .link-mailto a:before,
 .contenttype-ftw_mail:before,
 .contenttype-mail:before {
   font-family: 'icomoon';
   font-size: 1em;
-  content: "." "";
-  white-space: nowrap;
-  color: #32444a; }
+  content: ". ";
+  white-space: nowrap; }
 
 .contenttype-news:before {
   font-family: 'icomoon';
   font-size: 1em;
-  content: "a" "";
-  white-space: nowrap;
-  color: #32444a; }
+  content: "a ";
+  white-space: nowrap; }
 
 .contenttype-news-item:before {
   font-family: 'icomoon';
   font-size: 1em;
-  content: "a" "";
-  white-space: nowrap;
-  color: #32444a; }
+  content: "a ";
+  white-space: nowrap; }
 
 .contenttype-event:before,
 .contenttype-eventpage:before,
 .contenttype-meeting:before {
   font-family: 'icomoon';
   font-size: 1em;
-  content: "e" "";
-  white-space: nowrap;
-  color: #32444a; }
+  content: "e ";
+  white-space: nowrap; }
 
 .contenttype-ticket:before,
 .contenttype-poiissue:before,
 .contenttype-task:before {
   font-family: 'icomoon';
   font-size: 1em;
-  content: "8" "";
-  white-space: nowrap;
-  color: #32444a; }
+  content: "8 ";
+  white-space: nowrap; }
 
 .contenttype-workspace:before {
   font-family: 'icomoon';
   font-size: 1em;
-  content: "%" "";
-  white-space: nowrap;
-  color: #32444a; }
+  content: "% ";
+  white-space: nowrap; }
 
 .contenttype-billboardad:before {
   font-family: 'icomoon';
   font-size: 1em;
-  content: ":" "";
-  white-space: nowrap;
-  color: #32444a; }
-
-span.link-external a:before {
-  font-family: 'icomoon';
-  font-size: 1em;
-  content: "j" "";
-  white-space: nowrap;
-  color: #32444a; }
+  content: ": ";
+  white-space: nowrap; }
 
 .contenttype-ticket-box:before {
   font-family: 'icomoon';
   font-size: 1em;
-  content: "F" "";
-  white-space: nowrap;
-  color: #32444a; }
+  content: "F ";
+  white-space: nowrap; }
 
 .contenttype-chapter:before {
   font-family: 'icomoon';
   font-size: 1em;
-  content: "#" "";
-  white-space: nowrap;
-  color: #32444a; }
+  content: "# ";
+  white-space: nowrap; }
 
 .contenttype-table:before {
   font-family: 'icomoon';
   font-size: 1em;
-  content: "L" "";
-  white-space: nowrap;
-  color: #32444a; }
+  content: "L ";
+  white-space: nowrap; }
 
 .contenttype-classificationitem {
   /* MISSING */ }
@@ -622,9 +592,8 @@ span.link-external a:before {
 .contenttype-blogentry:before {
   font-family: 'icomoon';
   font-size: 1em;
-  content: "N" "";
-  white-space: nowrap;
-  color: #32444a; }
+  content: "N ";
+  white-space: nowrap; }
 
 .contenttype-formfolder {
   /* MISSING */ }
@@ -643,9 +612,8 @@ body.template-create_from_template .contenttype-image:before,
 #plone-contentmenu-factories li a.contenttype-image span:before {
   font-family: 'icomoon';
   font-size: 1em;
-  content: "X" "";
-  white-space: nowrap;
-  color: #32444a; }
+  content: "X ";
+  white-space: nowrap; }
 
 body.template-create_from_template .contenttype-file,
 #plone-contentmenu-factories li a.contenttype-file span {
@@ -658,10 +626,22 @@ dl.portletNavigationTree img {
 #column-navigation .portletNavigationTree a {
   background-image: none; }
 
+span.link-external a:before {
+  font-family: 'icomoon';
+  font-size: 1em;
+  content: "j";
+  white-space: nowrap; }
+
 .to_top a:after {
   font-family: 'icomoon';
   font-size: 1em;
-  content: " " "";
+  content: " ";
+  white-space: nowrap; }
+
+.portletContextNavigation .parent a:after {
+  font-family: 'icomoon';
+  font-size: 1em;
+  content: " k";
   white-space: nowrap; }
 
 /* @group formTabs */

@@ -147,8 +147,6 @@ a {
     @include gradient(#fcfcfc, #f6f6f5);
     & a {
       margin-left: 0;
-      padding-right: 1.5em;
-      background: url(../images/to-parent.png) no-repeat center right; /* TODO: icon font?? */
     }
   }
   & a {
