@@ -67,7 +67,7 @@
               title="" authenticated="False" cacheable="True"
               compression="safe" conditionalcomment="" cookable="True" enabled="True"
               expression="request/HTTP_X_THEME_ENABLED | nothing"
-              media="screen" rel="stylesheet"
+              media="" rel="stylesheet"
               rendering="link"
               applyPrefix="True"
               />
