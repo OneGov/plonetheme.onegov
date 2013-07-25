@@ -1,0 +1,33 @@
+<div class="slideNavi"
+     tal:define="parent nocall:view/parent;
+                 children view/children">
+  <ul class="mobileNavigation globalnav">
+    <tal:parent tal:condition="nocall:parent">
+      <li>
+        <a tal:attributes="href parent/absolute_url;
+                           title context/Title"
+           class="slideBack">
+          <span class="iconFont"></span>
+          <span tal:content="context/Title" />
+        </a>
+      </li>
+    </tal:parent>
+
+    <tal:children tal:repeat="child children">
+      <li tal:define="has_children python:view.sub_objects(child)"
+          tal:attributes="class python:not has_children and 'noChildren' or None">
+        <a tal:attributes="href child/absolute_url;
+                           title child/Title;">
+          <span tal:content="child/Title" />
+        </a>
+        <a tal:condition="has_children"
+           tal:attributes="href child/absolute_url"
+           class="slide iconFont">
+          
+        </a>
+
+      </li>
+    </tal:children>
+  </ul>
+
+</div>
