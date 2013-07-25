@@ -644,8 +644,11 @@ div.sl-controls {
   content: "L ";
   white-space: nowrap; }
 
-.contenttype-classificationitem {
-  /* MISSING */ }
+.contenttype-classificationitem:before {
+  font-family: 'icomoon';
+  font-size: 1em;
+  content: " ";
+  white-space: nowrap; }
 
 .contenttype-blogentry:before {
   font-family: 'icomoon';
@@ -653,8 +656,11 @@ div.sl-controls {
   content: "N ";
   white-space: nowrap; }
 
-.contenttype-formfolder {
-  /* MISSING */ }
+.contenttype-formfolder:before {
+  font-family: 'icomoon';
+  font-size: 1em;
+  content: " ";
+  white-space: nowrap; }
 
 .contenttype-subsite {
   /* MISSING */ }

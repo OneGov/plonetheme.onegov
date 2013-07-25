@@ -96,13 +96,13 @@
   @include icon('L ');
 }
 .contenttype-classificationitem {
-/* MISSING */
+  @include icon(' ');
 }
 .contenttype-blogentry {
   @include icon('N ');
 }
 .contenttype-formfolder {
-/* MISSING */
+  @include icon(' ');
 }
 .contenttype-subsite {
 /* MISSING */
