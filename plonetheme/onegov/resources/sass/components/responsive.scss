@@ -1,5 +1,13 @@
 // mobile navi starts at (max-width: 767px)
 
+/* @group general responsive */
+
+img {
+  max-width: 100%;
+}
+
+/* @end */
+
 /* @group smaller than fixedWidth */
 
 @media screen and (max-width: $page-fixed-width) {
@@ -57,6 +65,7 @@
     @include width16();
     clear: both;
   }
+  #header-actions,
   #column-navigation {
     display: none;
   }

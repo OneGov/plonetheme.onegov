@@ -1,37 +1,40 @@
 <?xml version="1.0"?>
 <object name="portal_actions" meta_type="Plone Actions Tool"
-   xmlns:i18n="http://xml.zope.org/namespaces/i18n">
- <action-provider name="portal_workflow"/>
- <action-provider name="portal_types"/>
- <action-provider name="portal_actions"/>
- <object name="document_actions" meta_type="CMF Action Category">
-  <property name="title"></property>
-  <object name="print" meta_type="CMF Action" i18n:domain="plone">
-   <property name="title">5</property>
-   <property name="description" i18n:translate="">Print this page</property>
-   <property name="visible">True</property>
+        xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+  <action-provider name="portal_workflow"/>
+  <action-provider name="portal_types"/>
+  <action-provider name="portal_actions"/>
+
+  <object name="document_actions" meta_type="CMF Action Category">
+    <property name="title"></property>
+    <object name="print" meta_type="CMF Action" i18n:domain="plone">
+      <property name="title">5</property>
+      <property name="description" i18n:translate="">Print this page</property>
+      <property name="visible">True</property>
+    </object>
+    <object name="watch" meta_type="CMF Action"
+            i18n:domain="ftw.dashboard.portlets.recentlymodified">
+      <property name="title">C</property>
+      <property name="visible">True</property>
+    </object>
+    <object name="addtofavourites" meta_type="CMF Action"
+            i18n:domain="ftw.dashboard.portlets.favourites">
+      <property name="title">*</property>
+      <property name="visible">True</property>
+    </object>
   </object>
-  <object name="watch" meta_type="CMF Action"
-     i18n:domain="ftw.dashboard.portlets.recentlymodified">
-   <property name="title">C</property>
-   <property name="visible">True</property>
+
+  <object name="site_actions" meta_type="CMF Action Category">
+    <property name="title"></property>
+    <object name="sitemap" meta_type="CMF Action" i18n:domain="plone">
+      <property name="visible">False</property>
+    </object>
+    <object name="accessibility" meta_type="CMF Action" i18n:domain="plone">
+      <property name="visible">True</property>
+    </object>
+    <object name="contact" meta_type="CMF Action" i18n:domain="plone">
+      <property name="visible">True</property>
+    </object>
+
   </object>
-  <object name="addtofavourites" meta_type="CMF Action"
-     i18n:domain="ftw.dashboard.portlets.favourites">
-   <property name="title">*</property>
-   <property name="visible">True</property>
-  </object>
- </object>
- <object name="site_actions" meta_type="CMF Action Category">
-  <property name="title"></property>
-  <object name="sitemap" meta_type="CMF Action" i18n:domain="plone">
-   <property name="visible">False</property>
-  </object>
-  <object name="accessibility" meta_type="CMF Action" i18n:domain="plone">
-   <property name="visible">True</property>
-  </object>
-  <object name="contact" meta_type="CMF Action" i18n:domain="plone">
-   <property name="visible">True</property>
-  </object>
- </object>
 </object>

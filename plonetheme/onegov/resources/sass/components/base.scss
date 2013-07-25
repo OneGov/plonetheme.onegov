@@ -158,6 +158,28 @@ a {
 
 /* @group mobile navigation */
 
+.mobileButtons,
+.mobileButtons a {
+  background: transparent;
+}
+.mobileButtons a {
+  border: 1px solid #a0babd; //TODO move to variables
+  padding: 0.25em 0.75em;
+  margin: 0.25em;
+  width: auto;
+  height: auto;
+  font-size: 1.25em;
+  &.selected {
+   background: $global-navigation-color;
+   border-color: $global-navigation-color;
+   color: $page-background;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+
 #slider-container .iconFont {
   font-family: 'icomoon';
   background-color: $lightgray;

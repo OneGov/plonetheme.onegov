@@ -269,6 +269,24 @@ a {
 
 /* @end */
 /* @group mobile navigation */
+.mobileButtons,
+.mobileButtons a {
+  background: transparent; }
+
+.mobileButtons a {
+  border: 1px solid #a0babd;
+  padding: 0.25em 0.75em;
+  margin: 0.25em;
+  width: auto;
+  height: auto;
+  font-size: 1.25em; }
+  .mobileButtons a.selected {
+    background: #00616c;
+    border-color: #00616c;
+    color: white; }
+  .mobileButtons a:hover {
+    text-decoration: none; }
+
 #slider-container .iconFont {
   font-family: 'icomoon';
   background-color: #f4f4f1;
@@ -723,6 +741,24 @@ span.link-external a:before {
   right: 0.4em;
   top: 0.4em;
   color: #005d67; }
+
+#toggle_slidenavi:before {
+  font-family: 'icomoon';
+  font-size: 1em;
+  content: "";
+  white-space: nowrap; }
+
+#toggle_usermenu:before {
+  font-family: 'icomoon';
+  font-size: 1em;
+  content: "";
+  white-space: nowrap; }
+
+#toggle_search:before {
+  font-family: 'icomoon';
+  font-size: 1em;
+  content: "";
+  white-space: nowrap; }
 
 /* @group formTabs */
 ul.formTabs {
@@ -1530,6 +1566,11 @@ div.listingBar .current {
   padding-left: 0; }
 
 /* @end */
+/* @group general responsive */
+img {
+  max-width: 100%; }
+
+/* @end */
 /* @group smaller than fixedWidth */
 @media screen and (max-width: 1200px) {
   .fixedWidth {
@@ -1568,6 +1609,7 @@ div.listingBar .current {
     width: 97.00499%;
     clear: both; }
 
+  #header-actions,
   #column-navigation {
     display: none; }
 
