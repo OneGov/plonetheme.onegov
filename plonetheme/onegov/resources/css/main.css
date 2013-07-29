@@ -803,21 +803,18 @@ input[type="password"] {
   font-size: 13px;
   font-family: Arial;
   display: inline-block;
-  line-height: 2em;
+  line-height: 1em;
   padding: 0.5em;
   width: 20em;
-  border: 1px solid #c3c3be;
+  border: 1px solid #cccccc;
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  box-shadow: 0 0 0.5em #cacabb inset;
-  -webkit-box-shadow: 0 0 0.5em #cacabb inset;
-  -moz-box-shadow: 0 0 0.5em #cacabb inset;
-  background: #f4f4f1; }
-  input[type="text"]:hover, input[type="text"]:focus,
-  input[type="password"]:hover,
+  background: #f7f7f7; }
+  input[type="text"]:focus,
   input[type="password"]:focus {
-    border-color: #00616c; }
+    outline: 1px dotted #00a5b8;
+    outline-offset: 1px; }
 
 /* @end */
 /* @group textarea */
@@ -825,19 +822,17 @@ textarea {
   font-size: 13px;
   font-family: Arial;
   display: inline-block;
-  line-height: 2em;
+  line-height: 1em;
   padding: 0.5em;
   width: 20em;
-  border: 1px solid #c3c3be;
+  border: 1px solid #cccccc;
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  box-shadow: 0 0 0.5em #cacabb inset;
-  -webkit-box-shadow: 0 0 0.5em #cacabb inset;
-  -moz-box-shadow: 0 0 0.5em #cacabb inset;
-  background: #f4f4f1; }
-  textarea:hover, textarea:focus {
-    border-color: #00616c; }
+  background: #f7f7f7; }
+  textarea:focus {
+    outline: 1px dotted #00a5b8;
+    outline-offset: 1px; }
 
 .field textarea {
   width: 99%;
@@ -851,28 +846,24 @@ input[type="button"] {
   font-size: 13px;
   font-family: Arial;
   display: inline-block;
-  line-height: 2em;
+  line-height: 1em;
   padding: 0.5em;
   width: 20em;
-  border: 1px solid #c3c3be;
+  border: 1px solid #cccccc;
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  box-shadow: 0 0 0.5em #cacabb inset;
-  -webkit-box-shadow: 0 0 0.5em #cacabb inset;
-  -moz-box-shadow: 0 0 0.5em #cacabb inset;
-  background: #f4f4f1;
+  background: #f7f7f7;
   width: auto;
   margin: 0 0.5em;
   box-shadow: -1px 1px 0 #cacabb;
   -webkit-box-shadow: -1px 1px 0 #cacabb;
   -moz-box-shadow: -1px 1px 0 #cacabb; }
-  input[type="submit"]:hover, input[type="submit"]:focus,
-  input[type="reset"]:hover,
+  input[type="submit"]:focus,
   input[type="reset"]:focus,
-  input[type="button"]:hover,
   input[type="button"]:focus {
-    border-color: #00616c; }
+    outline: 1px dotted #00a5b8;
+    outline-offset: 1px; }
   input[type="submit"]:hover, input[type="submit"]:focus,
   input[type="reset"]:hover,
   input[type="reset"]:focus,
@@ -986,6 +977,14 @@ div.error.warning input {
   border: 2px solid red; }
 
 /* @end */
+/* @group checkboxes and radio */
+input[type="checkbox"]:hover, input[type="checkbox"]:focus,
+input[type="radio"]:hover,
+input[type="radio"]:focus {
+  outline: 1px dotted #00a5b8;
+  outline-offset: -2px; }
+
+/* @end */
 /* @group listing bar */
 div.listingBar .next {
   display: inline-block;
@@ -1002,27 +1001,24 @@ div.listingBar a {
   font-size: 13px;
   font-family: Arial;
   display: inline-block;
-  line-height: 2em;
+  line-height: 1em;
   padding: 0.5em;
   width: 20em;
-  border: 1px solid #c3c3be;
+  border: 1px solid #cccccc;
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  box-shadow: 0 0 0.5em #cacabb inset;
-  -webkit-box-shadow: 0 0 0.5em #cacabb inset;
-  -moz-box-shadow: 0 0 0.5em #cacabb inset;
-  background: #f4f4f1;
+  background: #f7f7f7;
   width: auto;
   margin: 0 0.5em;
   box-shadow: -1px 1px 0 #cacabb;
   -webkit-box-shadow: -1px 1px 0 #cacabb;
   -moz-box-shadow: -1px 1px 0 #cacabb;
   padding: 0 0.5em; }
-  #content div.listingBar a:hover, #content div.listingBar a:focus,
-  div.listingBar a:hover,
+  #content div.listingBar a:focus,
   div.listingBar a:focus {
-    border-color: #00616c; }
+    outline: 1px dotted #00a5b8;
+    outline-offset: 1px; }
   #content div.listingBar a:hover, #content div.listingBar a:focus,
   div.listingBar a:hover,
   div.listingBar a:focus {
@@ -1041,21 +1037,22 @@ div.listingBar a {
   font-size: 13px;
   font-family: Arial;
   display: inline-block;
-  line-height: 2em;
+  line-height: 1em;
   padding: 0.5em;
   width: 20em;
-  border: 1px solid #c3c3be;
+  border: 1px solid #cccccc;
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   padding: 0.5em 3%;
   width: 94%;
+  background: #f7f7f7;
   box-shadow: 0 0 0.5em #cacabb inset;
   -webkit-box-shadow: 0 0 0.5em #cacabb inset;
-  -moz-box-shadow: 0 0 0.5em #cacabb inset;
-  background: #f4f4f1; }
-  #portal-searchbox #searchGadget:hover, #portal-searchbox #searchGadget:focus {
-    border-color: #00616c; }
+  -moz-box-shadow: 0 0 0.5em #cacabb inset; }
+  #portal-searchbox #searchGadget:focus {
+    outline: 1px dotted #00a5b8;
+    outline-offset: 1px; }
 #portal-searchbox input.searchButton {
   display: none; }
 
@@ -1063,7 +1060,7 @@ div.listingBar a {
 /* @group livesearch */
 #LSResult {
   width: 100%;
-  border: 1px solid #c3c3be;
+  border: 1px solid #cccccc;
   border-top-width: 0;
   background-color: white;
   z-index: 2;
@@ -1097,7 +1094,7 @@ fieldset.livesearchContainer {
 #LSNothingFound,
 .LSRow {
   padding: 1em;
-  border-top: 1px solid #c3c3be;
+  border-top: 1px solid #cccccc;
   padding: 1em; }
 
 .LSRow:hover,
@@ -1397,7 +1394,7 @@ dl.portalMessage dd {
   line-height: 1.25em;
   color: #7e7e7e; }
 
-#content-core dl.portalMessage dd {
+#column-content dl.portalMessage dd {
   margin: 0; }
 
 dl.warning dt {

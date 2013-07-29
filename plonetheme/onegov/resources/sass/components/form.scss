@@ -2,7 +2,7 @@
   font-size: $font-size;
   font-family: $body-font-family;
   display: inline-block;
-  line-height: 2em;
+  line-height: 1em;
   padding: 0.5em;
   width: 20em;
   border: 1px solid $input-bordercolor;
@@ -11,11 +11,12 @@
     padding: 0.5em 3%;
     width: 94%;
   }
-  @include boxshadow(0 0 0.5em $page-bordercolor inset);
-  background: $lightgray;
-  &:hover,
+  background: $input-background-color;
+  &:hover {
+
+  }
   &:focus {
-    border-color: $global-navigation-color;
+    @include outline();
   }
 }
 
@@ -31,6 +32,11 @@
   &:active {
     @include boxshadow(-1px 1px 0 $footer-bg-start inset);
   }
+}
+
+@mixin outline($offset: 1px) {
+  outline: 1px dotted $link-color-hover;
+  outline-offset: $offset;
 }
 
 /* @group formTabs */
@@ -196,6 +202,18 @@ div.error.warning {
 }
 div.error.warning input {
   border: 2px solid red;
+}
+
+/* @end */
+
+/* @group checkboxes and radio */
+
+input[type="checkbox"],
+input[type="radio"] {
+  &:hover,
+  &:focus {
+    @include outline($offset: -2px);
+  }
 }
 
 /* @end */

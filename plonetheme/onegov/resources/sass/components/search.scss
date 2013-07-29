@@ -3,6 +3,7 @@
 #portal-searchbox {
   & #searchGadget {
     @include inputfield($full-width:true);
+    @include boxshadow(0 0 0.5em $page-bordercolor inset);
   }
   & input.searchButton {
     display: none;
