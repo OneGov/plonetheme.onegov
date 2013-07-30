@@ -365,6 +365,10 @@ dl.portlet dt.portletHeader {
   font-size: 138.46%;
   margin-bottom: 1em; }
 
+dl.teaser_portlet .portletHeader img {
+  display: block;
+  margin-bottom: 0.5em; }
+
 /* @end */
 /* @group text / content */
 p {
