@@ -48,6 +48,7 @@ jQuery(function($) {
   $('#toggle_slidenavi').click(function(e){
     e.preventDefault();
     var me = $(this);
+    close_opened(me);
     me.toggleClass('selected');
     var container = $('#slider-container');
     if (container.length==0) {

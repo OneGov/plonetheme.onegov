@@ -67,6 +67,7 @@ img {
   #content-core #subsite-column-4 {
     padding-right: 0;
   }
+  #header .searchBoxWrapper,
   #columns #column-content,
   #columns #column-sidebar {
     @include position0();
@@ -104,6 +105,39 @@ img {
     padding-left: 1em;
     padding: 1em 0;
     margin: 1em 0;
+  }
+  /* searchbox */
+  #portal-searchbox {
+    border: 1px solid $mobile-navigation-bordercolor;
+    @include boxshadow(0 0 1em $darkgray);
+    background-color: $page-background;
+    width: 80%;
+    padding: 1.5em 5%;
+    margin: 0 auto;
+    position: absolute;
+    right: 5%;
+  }
+  .LSBox:before {
+    top: 1.8em;
+    right: 7%;
+  }
+  #LSResult {
+    left: 0;
+    top: 6em;
+    border-top: 1px solid $input-bordercolor;
+  }
+  /* user menu */
+  #portal-personaltools {
+    width: 100%;
+    & .actionMenuContent {
+      border: 1px solid $mobile-navigation-bordercolor;
+      @include boxshadow(0 0 1em $darkgray);
+      position: absolute;
+      z-index: 3;
+      & a {
+        padding: 0.5em;
+      }
+    }
   }
 
 }
