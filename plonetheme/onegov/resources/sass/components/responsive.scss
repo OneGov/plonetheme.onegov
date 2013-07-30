@@ -59,6 +59,14 @@ img {
   .fixedWidth {
     width: 96%;
   }
+  #content-core .subsiteColumns .column {
+    width: 49%;
+    margin: 0;
+  }
+  #content-core #subsite-column-2,
+  #content-core #subsite-column-4 {
+    padding-right: 0;
+  }
   #columns #column-content,
   #columns #column-sidebar {
     @include position0();
@@ -122,11 +130,16 @@ img {
     @include position0();
     @include width16();
     clear: both;
+    border-top: none;
   }
   #footer .portlet {
     border: none;
     border-top: 1px solid $footer-border-color;
     padding-left: 1em;
+  }
+  #content-core .subsiteColumns .column {
+    width: 100%;
+    padding: 0;
   }
 
 }

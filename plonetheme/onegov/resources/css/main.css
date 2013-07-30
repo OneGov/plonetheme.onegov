@@ -1600,6 +1600,14 @@ img {
   .fixedWidth {
     width: 96%; }
 
+  #content-core .subsiteColumns .column {
+    width: 49%;
+    margin: 0; }
+
+  #content-core #subsite-column-2,
+  #content-core #subsite-column-4 {
+    padding-right: 0; }
+
   #columns #column-content,
   #columns #column-sidebar {
     margin-left: -98.5025%;
@@ -1651,12 +1659,17 @@ img {
   #footer .cell {
     margin-left: -98.5025%;
     width: 97.00499%;
-    clear: both; }
+    clear: both;
+    border-top: none; }
 
   #footer .portlet {
     border: none;
     border-top: 1px solid #71716a;
-    padding-left: 1em; } }
+    padding-left: 1em; }
+
+  #content-core .subsiteColumns .column {
+    width: 100%;
+    padding: 0; } }
 /* @end */
 /* @group checkbox and radio */
 input[type="checkbox"],
