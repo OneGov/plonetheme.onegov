@@ -50,6 +50,9 @@
     <replace css:content-children="div.documentActions" css:theme-children="#document-actions" />
     <drop css:content="div.documentActions" />
 
+    <!-- move decoration image -->
+    <after css:content="div.decorationItem" css:theme-children="#column-decoration" />
+
     <replace css:content-children="#portal-column-one" css:theme-children="#column-navigation" />
     <replace css:content-children="#portal-column-content" css:theme-children="#column-content" />
     <replace css:content-children="#portal-column-two" css:theme-children="#column-sidebar" />

@@ -188,6 +188,11 @@ a {
   float: right; }
 
 /* @end */
+/* @group decoration column */
+#column-decoration .decorationItem {
+  margin-bottom: 1em; }
+
+/* @end */
 /* @group breadcrumbs */
 #portal-breadcrumbs {
   margin-bottom: 1em; }
