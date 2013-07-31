@@ -20,17 +20,36 @@
   }
 }
 
-@mixin button() {
-  @include inputfield();
-  width: auto;
-  margin: 0 0.5em;
-  @include boxshadow(-1px 1px 0 $page-bordercolor);
-  &:hover,
-  &:focus {
-    @include boxshadow(-1px 1px 0 $footer-bg-start);
+@mixin button_context() {
+  border: 1px solid $input-context-border;
+  @include borderradius();
+  @include gradient($input-context-bg-start, $input-context-bg-end);
+  color: $input-context-color;
+  padding: 0.5em 1em;
+  margin: 0 0 0.5em 0.5em;
+  display: inline-block;
+  @include boxshadow(0 0.1em 0.3em -0.1em $darkgray);
+
+  &:hover, &:focus, &:active {
+    border: 1px solid $input-context-hover-border;
+    @include gradient($input-context-hover-bg-start, $input-context-hover-bg-end);
+    color: $input-context-hover-color;
   }
-  &:active {
-    @include boxshadow(-1px 1px 0 $footer-bg-start inset);
+  &:focus {
+    @include outline();
+  }
+}
+
+@mixin button_standalone() {
+  @include button_context();
+  border: 1px solid $input-standalone-border;
+  @include gradient($input-standalone-bg-start, $input-standalone-bg-end);
+  color: $input-standalone-color;
+
+  &:hover, &:focus, &:active {
+    border: 1px solid $input-standalone-hover-border;
+    @include gradient($input-standalone-hover-bg-start, $input-standalone-hover-bg-end);
+    color: $input-standalone-hover-color;
   }
 }
 
@@ -101,8 +120,13 @@ textarea {
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  @include button();
+  @include button_context();
 }
+input.standalone {
+  @include button_standalone();
+}
+/* TODO: inactive buttons */
+/* TODO: destructive buttons */
 
 /* @end */
 
@@ -232,9 +256,14 @@ div.listingBar .current {
 }
 
 #content div.listingBar a,
+#content div.listingBar span.current,
 div.listingBar a {
-  @include button();
-  padding: 0 0.5em;
+  padding: 0.5em 0.75em;
+  vertical-align: middle;
+}
+#content div.listingBar span.current {
+  @include borderradius();
+  background-color: #e7eff0;
 }
 
 /* @end */

@@ -26,6 +26,26 @@ $border-radius: 3px;
 $input-bordercolor: #cccccc;
 $input-background-color: #f7f7f7;
 
+$input-context-border: #004047;
+$input-context-bg-start: #006c78;
+$input-context-bg-end: #005a64;
+$input-context-color: #ccdee1;
+
+$input-context-hover-border: #005761;
+$input-context-hover-bg-start: #008391;
+$input-context-hover-bg-end: #007380;
+$input-context-hover-color: #ccdee1;
+
+$input-standalone-border: #474747;
+$input-standalone-bg-start: #787878;
+$input-standalone-bg-end: #646464;
+$input-standalone-color: #e2e1e1;
+
+$input-standalone-hover-border: lighten($input-standalone-border, 10%);
+$input-standalone-hover-bg-start: lighten($input-standalone-bg-start, 10%);
+$input-standalone-hover-bg-end: lighten($input-standalone-bg-end, 10%);
+$input-standalone-hover-color: #e2e1e1;
+
 $global-navigation-color: #00616c;
 $global-navigation-color-hover: #000; // TODO change
 
