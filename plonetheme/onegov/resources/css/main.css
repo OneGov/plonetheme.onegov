@@ -414,6 +414,21 @@ ol {
   color: #7e7e7e; }
 
 /* @end */
+/* @group category tags */
+#category.documentByLine .separator {
+  display: none; }
+
+#category.documentByLine a {
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  background-color: #00616c;
+  color: white;
+  padding: 0.25em 0.5em; }
+  #category.documentByLine a:hover {
+    color: white; }
+
+/* @end */
 /* @group fieldsets */
 fieldset {
   margin: 1em 0;
