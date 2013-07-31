@@ -798,18 +798,16 @@ ul.formTabs {
     content: "";
     display: table; }
   ul.formTabs a {
-    border-radius: 3px 3px 0 0;
-    -webkit-border-radius: 3px 3px 0 0;
-    -moz-border-radius: 3px 3px 0 0;
     border: 1px solid #cacabb;
     background-color: #f4f4f1;
-    padding: 0.25em 0.75em;
+    padding: 0.5em 0.75em;
     display: block;
     float: left;
     margin-bottom: -1px;
-    margin-left: -1px;
-    margin-right: 0.25em; }
+    margin-left: -1px; }
     ul.formTabs a.selected, ul.formTabs a:hover {
+      color: #32444a;
+      text-decoration: none;
       border-bottom-color: white;
       background-color: white; }
 
