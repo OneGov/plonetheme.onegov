@@ -51,7 +51,8 @@
     <drop css:content="div.documentActions" />
 
     <!-- move decoration image -->
-    <after css:content="div.decorationItem" css:theme-children="#column-decoration" />
+    <after css:content="div.decorationItem" css:theme-children="#column-decoration" method="raw" />
+    <drop css:content="div.decorationItem" />
 
     <replace css:content-children="#portal-column-one" css:theme-children="#column-navigation" />
     <replace css:content-children="#portal-column-content" css:theme-children="#column-content" />
