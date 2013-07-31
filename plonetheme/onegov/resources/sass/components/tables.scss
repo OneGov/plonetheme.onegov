@@ -15,7 +15,7 @@ table.grid {
   border: 1px solid $table-bordercolor;
   border-collapse: separate;
   *border-collapse: collapsed;
-  @include borderradius();
+  background-color: $page-background;
 }
 table.listing th,
 table.listing td,
@@ -76,30 +76,6 @@ table.grid thead tr:first-child th,
 table.grid tbody tr:first-child th,
 table.grid tbody tr:first-child td  {
   border-top: 0;
-}
-table.listing thead tr:first-child th:first-child,
-table.listing tbody tr:first-child td:first-child,
-table.grid thead tr:first-child th:first-child,
-table.grid tbody tr:first-child td:first-child {
-  @include borderradius(4px 0 0 0);
-}
-table.listing thead tr:first-child th:last-child,
-table.listing tbody tr:first-child td:last-child,
-table.grid thead tr:first-child th:last-child,
-table.grid tbody tr:first-child td:last-child {
-  @include borderradius(0 4px 0 0);
-}
-table.listing thead:last-child tr:last-child th:first-child,
-table.listing tbody:last-child tr:last-child td:first-child,
-table.grid thead:last-child tr:last-child th:first-child,
-table.grid tbody:last-child tr:last-child td:first-child {
-  @include borderradius(0 0 0 4px);
-}
-table.listing thead:last-child tr:last-child th:last-child,
-table.listing tbody:last-child tr:last-child td:last-child,
-table.grid thead:last-child tr:last-child th:last-child,
-table.grid tbody:last-child tr:last-child td:last-child {
-  @include borderradius(0 0 4px 0);
 }
 
 table.listing th {
