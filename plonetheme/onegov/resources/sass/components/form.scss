@@ -234,7 +234,7 @@ div.error.warning input {
 
 input[type="checkbox"],
 input[type="radio"] {
-  &:hover,
+  &:hover {}
   &:focus {
     @include outline($offset: -2px);
   }

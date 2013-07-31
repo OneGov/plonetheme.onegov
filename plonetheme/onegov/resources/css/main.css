@@ -1075,8 +1075,7 @@ div.error.warning input {
 
 /* @end */
 /* @group checkboxes and radio */
-input[type="checkbox"]:hover, input[type="checkbox"]:focus,
-input[type="radio"]:hover,
+input[type="checkbox"]:focus,
 input[type="radio"]:focus {
   outline: 1px dotted #00a5b8;
   outline-offset: -2px; }
