@@ -312,6 +312,9 @@ a {
 #slider-container .globalnav a.slideBack {
   background: white; }
 
+#slider-container .globalnav a.current {
+  border-top: none; }
+
 #slider-container .globalnav a.slide {
   padding: 1em 0.75em;
   background-color: #f4f4f1; }

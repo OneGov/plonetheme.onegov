@@ -5,9 +5,13 @@
     <tal:parent tal:condition="nocall:parent">
       <li>
         <a tal:attributes="href parent/absolute_url;
-                           title context/Title"
+                           title parent/Title"
            class="slideBack">
           <span class="iconFont"></span>
+        </a>
+        <a tal:attributes="href context/absolute_url;
+                           title context/Title"
+           class="current">
           <span tal:content="context/Title" />
         </a>
       </li>
