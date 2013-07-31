@@ -293,6 +293,9 @@ p {
 }
 ul {
   @include ul();
+  &.listTypePlain {
+    @include ul($style:'plain');
+  }
 }
 ol {
   @include ul();
