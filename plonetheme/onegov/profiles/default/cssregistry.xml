@@ -15,6 +15,14 @@
       expression="not:request/HTTP_X_THEME_ENABLED | nothing"
       />
   <stylesheet
+      id="forms.css"
+      expression="not:request/HTTP_X_THEME_ENABLED | nothing"
+      />
+  <stylesheet
+      id="base.css"
+      expression="not:request/HTTP_X_THEME_ENABLED | nothing"
+      />
+  <stylesheet
       id="portlets.css"
       expression="not:request/HTTP_X_THEME_ENABLED | nothing"
       />
