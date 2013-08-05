@@ -29,6 +29,9 @@
         theme-children="/html/head"
         />
 
+    <!-- Copy body attributes -->
+    <copy attributes="class id dir" content="/html/body" theme="/html/body" />
+
     <replace content="/html/head/meta[@name='viewport']">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0" />
     </replace>
