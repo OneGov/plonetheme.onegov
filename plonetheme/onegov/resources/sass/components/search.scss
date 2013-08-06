@@ -6,7 +6,7 @@
     @include boxshadow(0 0 0.5em $page-bordercolor inset);
     &:focus {
       // TODO: should this be in a variable?
-      @include boxshadow(0 0 0.5em desaturate($global-navigation-color, 40%) inset);
+      @include boxshadow(0 0 0.5em desaturate(lighten($global-navigation-color, 60%), 80%) inset);
     }
   }
   & input.searchButton {

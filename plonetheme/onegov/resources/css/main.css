@@ -1128,9 +1128,9 @@ div.listingBar a {
   #portal-searchbox #searchGadget:focus {
     border-color: #00616c; }
   #portal-searchbox #searchGadget:focus {
-    box-shadow: 0 0 0.5em #165056 inset;
-    -webkit-box-shadow: 0 0 0.5em #165056 inset;
-    -moz-box-shadow: 0 0 0.5em #165056 inset; }
+    box-shadow: 0 0 0.5em #c5d7d9 inset;
+    -webkit-box-shadow: 0 0 0.5em #c5d7d9 inset;
+    -moz-box-shadow: 0 0 0.5em #c5d7d9 inset; }
 #portal-searchbox input.searchButton {
   display: none; }
 
