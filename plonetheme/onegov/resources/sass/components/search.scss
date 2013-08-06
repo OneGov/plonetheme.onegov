@@ -26,7 +26,7 @@
   border: 1px solid $input-bordercolor;
   border-top-width: 0;
   background-color: $page-background;
-  z-index: 2;
+  z-index: 3;
   @include boxshadow(0 0 0.5em $lightgray2);
   position: absolute;
   & label {

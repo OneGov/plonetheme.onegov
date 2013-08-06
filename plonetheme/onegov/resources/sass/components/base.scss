@@ -14,6 +14,9 @@ body {
   @include boxshadow(0 0 5px $page-bordercolor);
   position: relative;
 }
+#content {
+  clear: both;
+}
 .belowContent {
   margin-top: 3em;
 }

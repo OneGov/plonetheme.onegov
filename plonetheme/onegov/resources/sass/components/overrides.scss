@@ -45,12 +45,19 @@ dl.newTagsSection {
 
 ul.mobileButtons {
   @include ul($style: 'inline');
+  & a {
+    text-decoration: none;
+  }
 }
 ul.mobileNavigation {
   padding-left: 0;
   & li {
     /* todo: move this into ul-mixing */
     margin-bottom: 0;
+    & a,
+    & a:hover {
+      text-decoration: none;
+    }
   }
 }
 
