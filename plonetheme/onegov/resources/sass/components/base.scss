@@ -294,6 +294,39 @@ dl.teaser_portlet .portletHeader img {
   margin-bottom: 0.5em;
 }
 
+
+.managedPortlet {
+  border: 1px solid $darkgray;
+  background-color: $lightgray2;
+  margin: 1em 0;
+  @include borderradius();
+  overflow: hidden;
+}
+.portlet-action {
+  float: left;
+  padding: 0.5em;
+}
+.managedPortlet .portletHeader > a {
+  display: block;
+  clear: both;
+  padding: 0.5em;
+  background-color: $page-background;
+  border-top: 1px solid $darkgray;
+  &:hover {
+    background-color: $lightgray;
+  }
+}
+.portlet-action button {
+  border: none;
+  background: transparent;
+}
+.portlet-action.delete {
+  float: right;
+}
+.portlet-action.delete button {
+  color: #F00;
+}
+
 /* @end */
 
 /* @group byline */

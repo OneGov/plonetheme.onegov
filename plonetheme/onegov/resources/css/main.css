@@ -386,6 +386,38 @@ dl.teaser_portlet .portletHeader img {
   display: block;
   margin-bottom: 0.5em; }
 
+.managedPortlet {
+  border: 1px solid #5b5a54;
+  background-color: #e5e5e0;
+  margin: 1em 0;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  overflow: hidden; }
+
+.portlet-action {
+  float: left;
+  padding: 0.5em; }
+
+.managedPortlet .portletHeader > a {
+  display: block;
+  clear: both;
+  padding: 0.5em;
+  background-color: white;
+  border-top: 1px solid #5b5a54; }
+  .managedPortlet .portletHeader > a:hover {
+    background-color: #f4f4f1; }
+
+.portlet-action button {
+  border: none;
+  background: transparent; }
+
+.portlet-action.delete {
+  float: right; }
+
+.portlet-action.delete button {
+  color: #F00; }
+
 /* @end */
 /* @group byline */
 .documentByLine {
