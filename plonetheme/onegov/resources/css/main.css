@@ -387,8 +387,8 @@ dl.teaser_portlet .portletHeader img {
   margin-bottom: 0.5em; }
 
 .managedPortlet {
-  border: 1px solid #5b5a54;
-  background-color: #e5e5e0;
+  border: 1px solid #e5e5e0;
+  background-color: #f4f4f1;
   margin: 1em 0;
   border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -404,9 +404,7 @@ dl.teaser_portlet .portletHeader img {
   clear: both;
   padding: 0.5em;
   background-color: white;
-  border-top: 1px solid #5b5a54; }
-  .managedPortlet .portletHeader > a:hover {
-    background-color: #f4f4f1; }
+  border-top: 1px solid #e5e5e0; }
 
 .portlet-action button {
   border: none;

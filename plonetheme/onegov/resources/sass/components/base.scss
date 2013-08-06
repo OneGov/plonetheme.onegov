@@ -296,8 +296,8 @@ dl.teaser_portlet .portletHeader img {
 
 
 .managedPortlet {
-  border: 1px solid $darkgray;
-  background-color: $lightgray2;
+  border: 1px solid $lightgray2;
+  background-color: $lightgray;
   margin: 1em 0;
   @include borderradius();
   overflow: hidden;
@@ -311,10 +311,7 @@ dl.teaser_portlet .portletHeader img {
   clear: both;
   padding: 0.5em;
   background-color: $page-background;
-  border-top: 1px solid $darkgray;
-  &:hover {
-    background-color: $lightgray;
-  }
+  border-top: 1px solid $lightgray2;
 }
 .portlet-action button {
   border: none;
