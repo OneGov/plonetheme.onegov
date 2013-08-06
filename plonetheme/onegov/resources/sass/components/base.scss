@@ -45,7 +45,9 @@ h1, h2, h3 {
 
 /* @group links */
 
-a {
+a,
+:link,
+:visited {
   color: $link-color;
   text-decoration: $link-textdecoration;
   &:hover {
@@ -102,9 +104,7 @@ a {
     font-family: 'icomoon';
     font-size: 1.5em;
     margin-left: 0.25em;
-    &:hover {
-      text-decoration: none;
-    }
+    text-decoration: none;
   }
 }
 
@@ -120,6 +120,7 @@ a {
     & a {
       color: $global-navigation-color;
       font-size: $font-size-18;
+      text-decoration: none;
       &:hover {
         color: $global-navigation-color-hover;
       }
@@ -145,6 +146,9 @@ a {
       padding: 0.5em 1em;
       margin-bottom: 0;
       display: block;
+      & a {
+        text-decoration: none;
+      }
     }
   }
   & .current {
@@ -285,6 +289,15 @@ dl.portlet {
 dl.teaser_portlet .portletHeader img {
   display: block;
   margin-bottom: 0.5em;
+}
+
+/* @end */
+
+/* @group byline */
+
+.documentByLine {
+  color: $text-color-light;
+  margin-bottom: 1em;
 }
 
 /* @end */

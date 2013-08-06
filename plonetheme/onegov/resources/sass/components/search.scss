@@ -18,6 +18,9 @@
 
 /* @group livesearch */
 
+#LSResult a {
+  text-decoration: none;
+}
 #LSResult {
   width: 100%;
   border: 1px solid $input-bordercolor;

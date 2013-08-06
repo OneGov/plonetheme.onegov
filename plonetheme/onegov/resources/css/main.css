@@ -165,10 +165,14 @@ h1, h2, h3 {
 
 /* @end */
 /* @group links */
-a {
+a,
+:link,
+:visited {
   color: #005d67;
-  text-decoration: none; }
-  a:hover {
+  text-decoration: underline; }
+  a:hover,
+  :link:hover,
+  :visited:hover {
     color: #00a5b8;
     text-decoration: underline; }
 
@@ -212,9 +216,8 @@ a {
   #document-actions ul li a {
     font-family: 'icomoon';
     font-size: 1.5em;
-    margin-left: 0.25em; }
-    #document-actions ul li a:hover {
-      text-decoration: none; }
+    margin-left: 0.25em;
+    text-decoration: none; }
 
 /* @end */
 /* @group global navigation */
@@ -232,7 +235,8 @@ a {
     padding-left: 1em; }
     #portal-globalnav li a {
       color: #00616c;
-      font-size: 138.46%; }
+      font-size: 138.46%;
+      text-decoration: none; }
       #portal-globalnav li a:hover {
         color: black; }
   #portal-globalnav li:first-child {
@@ -255,6 +259,8 @@ a {
       padding: 0.5em 1em;
       margin-bottom: 0;
       display: block; }
+      #column-navigation .portletContextNavigation ul li a {
+        text-decoration: none; }
   #column-navigation .portletContextNavigation .current {
     border-bottom: 1px solid #e5e5e0; }
   #column-navigation .portletContextNavigation .parent {
@@ -376,6 +382,12 @@ dl.portlet dt.portletHeader {
 dl.teaser_portlet .portletHeader img {
   display: block;
   margin-bottom: 0.5em; }
+
+/* @end */
+/* @group byline */
+.documentByLine {
+  color: #7e7e7e;
+  margin-bottom: 1em; }
 
 /* @end */
 /* @group text / content */
@@ -819,6 +831,7 @@ ul.formTabs {
     border: 1px solid #cacabb;
     background-color: #f4f4f1;
     padding: 0.5em 0.75em;
+    text-decoration: none;
     display: block;
     float: left;
     margin-bottom: -1px;
@@ -1136,6 +1149,9 @@ div.listingBar a {
 
 /* @end */
 /* @group livesearch */
+#LSResult a {
+  text-decoration: none; }
+
 #LSResult {
   width: 100%;
   border: 1px solid #cccccc;
@@ -1242,6 +1258,11 @@ div.overlay div.close span {
 
 /* @end */
 /* @group Content pulldowns (edit-bar) */
+dl.actionMenu a,
+dl.actionMenu a:hover,
+#edit-bar a {
+  text-decoration: none; }
+
 #edit-bar ul {
   list-style: disc;
   padding-left: 2em;
@@ -1755,6 +1776,11 @@ img {
 input[type="checkbox"],
 input[type="radio"] {
   margin-right: 0.25em; }
+
+/* @end */
+/* @group plone control panel */
+ul.configlets {
+  padding: 0; }
 
 /* @end */
 /* @group tags widget */

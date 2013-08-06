@@ -1,5 +1,12 @@
 /* @group Content pulldowns (edit-bar) */
 
+dl.actionMenu a,
+dl.actionMenu a:hover,
+#edit-bar a {
+  text-decoration: none;
+}
+
+
 #edit-bar ul {
   @include ul($style:'plain');
   background-color: $lightgray;
