@@ -16,7 +16,7 @@
 
   }
   &:focus {
-    @include outline();
+    border-color: $global-navigation-color;
   }
 }
 
@@ -39,7 +39,6 @@
     @include boxshadow(0 0 0.25em $darkgray);
   }
   &:focus {
-    @include outline();
   }
 }
 
@@ -54,11 +53,6 @@
     @include gradient($input-standalone-hover-bg-start, $input-standalone-hover-bg-end);
     color: $input-standalone-hover-color;
   }
-}
-
-@mixin outline($offset: 1px) {
-  outline: 1px dotted $link-color-hover;
-  outline-offset: $offset;
 }
 
 /* @group formTabs */
@@ -239,7 +233,7 @@ input[type="checkbox"],
 input[type="radio"] {
   &:hover {}
   &:focus {
-    @include outline($offset: -2px);
+    border-color: $global-navigation-color;
   }
 }
 

@@ -443,6 +443,9 @@ div.sl-controls {
 
 /* @group Invisibles */
 
+* {
+  outline: none;
+}
 .hiddenStructure {
   display: block;
   background: transparent;

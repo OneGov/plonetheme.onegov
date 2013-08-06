@@ -528,6 +528,9 @@ div.sl-controls {
 
 /* @end */
 /* @group Invisibles */
+* {
+  outline: none; }
+
 .hiddenStructure {
   display: block;
   background: transparent;
@@ -846,8 +849,7 @@ input[type="password"] {
   background: #f7f7f7; }
   input[type="text"]:focus,
   input[type="password"]:focus {
-    outline: 1px dotted #00a5b8;
-    outline-offset: 1px; }
+    border-color: #00616c; }
 
 /* @end */
 /* @group textarea */
@@ -864,8 +866,7 @@ textarea {
   -moz-border-radius: 3px;
   background: #f7f7f7; }
   textarea:focus {
-    outline: 1px dotted #00a5b8;
-    outline-offset: 1px; }
+    border-color: #00616c; }
 
 .field textarea {
   width: 99%;
@@ -918,11 +919,6 @@ input[type="button"] {
     box-shadow: 0 0 0.25em #5b5a54;
     -webkit-box-shadow: 0 0 0.25em #5b5a54;
     -moz-box-shadow: 0 0 0.25em #5b5a54; }
-  input[type="submit"]:focus,
-  input[type="reset"]:focus,
-  input[type="button"]:focus {
-    outline: 1px dotted #00a5b8;
-    outline-offset: 1px; }
 
 input.standalone {
   border: 1px solid #004047;
@@ -969,9 +965,6 @@ input.standalone {
     box-shadow: 0 0 0.25em #5b5a54;
     -webkit-box-shadow: 0 0 0.25em #5b5a54;
     -moz-box-shadow: 0 0 0.25em #5b5a54; }
-  input.standalone:focus {
-    outline: 1px dotted #00a5b8;
-    outline-offset: 1px; }
   input.standalone:hover, input.standalone:focus, input.standalone:active {
     border: 1px solid #616161;
     background-color: #7e7e7e;
@@ -1087,8 +1080,7 @@ div.error.warning input {
 /* @group checkboxes and radio */
 input[type="checkbox"]:focus,
 input[type="radio"]:focus {
-  outline: 1px dotted #00a5b8;
-  outline-offset: -2px; }
+  border-color: #00616c; }
 
 /* @end */
 /* @group listing bar */
@@ -1134,8 +1126,11 @@ div.listingBar a {
   -webkit-box-shadow: 0 0 0.5em #cacabb inset;
   -moz-box-shadow: 0 0 0.5em #cacabb inset; }
   #portal-searchbox #searchGadget:focus {
-    outline: 1px dotted #00a5b8;
-    outline-offset: 1px; }
+    border-color: #00616c; }
+  #portal-searchbox #searchGadget:focus {
+    box-shadow: 0 0 0.5em #165056 inset;
+    -webkit-box-shadow: 0 0 0.5em #165056 inset;
+    -moz-box-shadow: 0 0 0.5em #165056 inset; }
 #portal-searchbox input.searchButton {
   display: none; }
 
