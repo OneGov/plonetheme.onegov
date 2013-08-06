@@ -15,6 +15,10 @@
       expression="not:request/HTTP_X_THEME_ENABLED | nothing"
       />
   <stylesheet
+      id="controlpanel.css"
+      expression="not:request/HTTP_X_THEME_ENABLED | nothing"
+      />
+  <stylesheet
       id="forms.css"
       expression="not:request/HTTP_X_THEME_ENABLED | nothing"
       />
