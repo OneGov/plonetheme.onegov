@@ -178,16 +178,17 @@ a,
   background: transparent;
 }
 .mobileButtons a {
-  border: 1px solid #a0babd; //TODO move to variables
+  //TODO move to variables
+  border: 1px solid #a0babd;
   padding: 0.25em 0.75em;
   margin: 0.25em;
   width: auto;
   height: auto;
   font-size: 1.25em;
   &.selected {
-   background: $global-navigation-color;
-   border-color: $global-navigation-color;
-   color: $page-background;
+    background: $global-navigation-color;
+    border-color: $global-navigation-color;
+    color: $page-background;
   }
   &:hover {
     text-decoration: none;
@@ -307,6 +308,9 @@ dl.teaser_portlet .portletHeader img {
   float: left;
   padding: 0.5em;
   text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
 }
 .managedPortlet .portletHeader > a {
   display: block;

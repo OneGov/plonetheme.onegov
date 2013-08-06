@@ -400,6 +400,9 @@ dl.teaser_portlet .portletHeader img {
   float: left;
   padding: 0.5em;
   text-decoration: none; }
+  .managedPortletActions > a:hover,
+  .portlet-action:hover {
+    text-decoration: none; }
 
 .managedPortlet .portletHeader > a {
   display: block;
