@@ -75,7 +75,7 @@
 
     <replace css:content="#viewlet-below-content" css:theme="#viewlet-below-content" />
 
-    <replace css:content="#egov-footer" css:theme-children="#footer" />
+    <replace css:content="#ftw-footer" css:theme-children="#footer" />
 
     <replace css:content="#portal-siteactions" css:theme-children="#portal-siteactions" />
 
