@@ -302,9 +302,11 @@ dl.teaser_portlet .portletHeader img {
   @include borderradius();
   overflow: hidden;
 }
+.managedPortletActions > a,
 .portlet-action {
   float: left;
   padding: 0.5em;
+  text-decoration: none;
 }
 .managedPortlet .portletHeader > a {
   display: block;
@@ -320,6 +322,10 @@ dl.teaser_portlet .portletHeader img {
 .portlet-action.delete {
   float: right;
 }
+.managedPortletActions > a.delete {
+  float: right;
+}
+.managedPortletActions > a.delete,
 .portlet-action.delete button {
   color: #F00;
 }
