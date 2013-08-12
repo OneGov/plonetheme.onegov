@@ -503,6 +503,11 @@ fieldset {
     display: inline; }
   .linkList:after {
     clear: both; }
+  .linkList:before, .linkList:after {
+    content: " ";
+    display: block;
+    height: 0;
+    visibility: hidden; }
   .linkList li a {
     border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -529,6 +534,11 @@ fieldset {
     display: inline; }
   .subelements-listing:after {
     clear: both; }
+  .subelements-listing:before, .subelements-listing:after {
+    content: " ";
+    display: block;
+    height: 0;
+    visibility: hidden; }
   .subelements-listing li a {
     border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -544,12 +554,6 @@ fieldset {
 
 /* @end */
 /* @group topic listing */
-.listing-block {
-  clear: both;
-  padding-top: 1.5em; }
-  .listing-block h2 {
-    margin-top: 0; }
-
 .topic_listing {
   list-style: disc;
   padding-left: 2em;
@@ -561,6 +565,11 @@ fieldset {
     display: inline; }
   .topic_listing:after {
     clear: both; }
+  .topic_listing:before, .topic_listing:after {
+    content: " ";
+    display: block;
+    height: 0;
+    visibility: hidden; }
   .topic_listing li a {
     border-radius: 3px;
     -webkit-border-radius: 3px;

@@ -115,6 +115,12 @@ $footer-border-color: #71716a;
   &:after {
     clear: both;
   }
+  &:before, &:after {
+    content: " ";
+    display: block;
+    height: 0;
+    visibility: hidden;
+  }
   & li a {
     @include borderradius();
     display: block;

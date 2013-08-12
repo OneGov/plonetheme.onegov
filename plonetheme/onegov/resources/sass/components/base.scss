@@ -420,13 +420,6 @@ fieldset {
 
 /* @group topic listing */
 
-.listing-block {
-  clear: both;
-  padding-top: 1.5em;
-  & h2 {
-    margin-top: 0;
-  }
-}
 .topic_listing {
   @include linklist();
 }
