@@ -1968,5 +1968,18 @@ ul.mobileNavigation {
       display: block; }
   #portal-globalnav > li.flyoutActive > a {
     color: black; }
+    #portal-globalnav > li.flyoutActive > a:after {
+      content: ' '; }
+
+/* @end */
+/* @group tinymce */
+.mceActionPanel input, .plonebutton {
+  color: #ccdee1 !important; }
+
+.mceActionPanel #cancel {
+  color: #32444a !important; }
+
+.col-row input {
+  width: auto; }
 
 /* @end */

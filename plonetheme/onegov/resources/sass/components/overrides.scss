@@ -84,7 +84,26 @@ ul.mobileNavigation {
   }
   &.flyoutActive > a {
     color: $global-navigation-color-hover;
+    &:after {
+      content: ' ';
+    }
   }
+}
+
+/* @end */
+
+
+/* @group tinymce */
+
+.mceActionPanel input, .plonebutton {
+  color: $input-context-color !important;
+}
+.mceActionPanel #cancel {
+  color: $text-color !important;
+}
+
+.col-row input {
+  width: auto;
 }
 
 /* @end */
