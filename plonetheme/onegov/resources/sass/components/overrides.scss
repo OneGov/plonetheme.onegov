@@ -67,7 +67,9 @@ ul.mobileNavigation {
 
 #portal-globalnav > li {
   position: relative;
+  z-index: 4;
   & > ul {
+    @include ul($style: 'plain');
     padding: 1em 1em 0 1em;
     margin: 0;
     position: absolute;
@@ -76,7 +78,6 @@ ul.mobileNavigation {
     width: 20em;
     background: $page-background;
     @include boxshadow(0 0 0.5em $darkgray);
-    z-index: 4;
     & > li,
     & > li a {
       display: block;
@@ -92,7 +93,6 @@ ul.mobileNavigation {
 
 /* @end */
 
-
 /* @group tinymce */
 
 .mceActionPanel input, .plonebutton {
@@ -104,6 +104,16 @@ ul.mobileNavigation {
 
 .col-row input {
   width: auto;
+}
+
+/* @end */
+
+/* @group overlays */
+
+#cboxOverlay,
+#exposeMask {
+  background: #000 !important;
+  opacity: 0.4;
 }
 
 /* @end */

@@ -76,7 +76,6 @@ $footer-border-color: #71716a;
   background-image: -webkit-linear-gradient(top, $from, $to);
   background-image: -o-linear-gradient(top, $from, $to);
   background-image: linear-gradient(top, $from, $to);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$from', endColorstr='$to', GradientType=0);
 }
 
 @mixin boxshadow($definition...) {
