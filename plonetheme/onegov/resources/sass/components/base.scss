@@ -405,11 +405,22 @@ fieldset {
 /* @group subelements-listing */
 
 .subelements-listing {
-  @include ul($style: 'inline');
-  & .divider {
-    border-left: 1px solid $link-color;
-    margin-right: 0.35em;
+  @include linklist();
+}
+
+/* @end */
+
+/* @group topic listing */
+
+.listing-block {
+  clear: both;
+  padding-top: 1.5em;
+  & h2 {
+    margin-top: 0;
   }
+}
+.topic_listing {
+  @include linklist();
 }
 
 /* @end */

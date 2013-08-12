@@ -109,3 +109,21 @@ $footer-border-color: #71716a;
     }
   }
 }
+
+@mixin linklist() {
+  @include ul($style: 'inline');
+  &:after {
+    clear: both;
+  }
+  & li a {
+    @include borderradius();
+    display: block;
+    float: left;
+    background: $lightgray;
+    border: 1px solid $lightgray2;
+    padding: 0 0.5em;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+    text-decoration: none;
+  }
+}
