@@ -491,6 +491,32 @@ fieldset {
   border-width: 0 0 1px 0; }
 
 /* @end */
+/* @group linkList */
+.linkList {
+  list-style: disc;
+  padding-left: 2em;
+  padding-left: 0; }
+  .linkList li {
+    display: list-item;
+    margin-bottom: 1em; }
+  .linkList li {
+    display: inline; }
+  .linkList:after {
+    clear: both; }
+  .linkList li a {
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    display: block;
+    float: left;
+    background: #f4f4f1;
+    border: 1px solid #e5e5e0;
+    padding: 0 0.5em;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+    text-decoration: none; }
+
+/* @end */
 /* @group subelements-listing */
 .subelements-listing {
   list-style: disc;
@@ -1918,7 +1944,7 @@ ul.mobileNavigation {
 #portal-globalnav > li {
   position: relative; }
   #portal-globalnav > li > ul {
-    padding: 1em;
+    padding: 1em 1em 0 1em;
     margin: 0;
     position: absolute;
     left: -1px;

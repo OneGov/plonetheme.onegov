@@ -402,6 +402,14 @@ fieldset {
 
 /* @end */
 
+/* @group linkList */
+
+.linkList {
+  @include linklist();
+}
+
+/* @end */
+
 /* @group subelements-listing */
 
 .subelements-listing {
