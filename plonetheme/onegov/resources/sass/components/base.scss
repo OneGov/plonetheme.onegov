@@ -118,9 +118,11 @@ a,
 #portal-globalnav {
   @include ul($style: 'inline');
   padding-top: 0.75em;
-  & li {
-    padding-left: 1em;
-    & a {
+  & > li {
+    float: left;
+    margin-left: 2em;
+    margin-bottom: 0;
+    & > a {
       color: $global-navigation-color;
       font-size: $font-size-18;
       text-decoration: none;
@@ -132,7 +134,7 @@ a,
     }
   }
   & li:first-child {
-    padding-left: 0;
+    margin-left: 0;
   }
 }
 

@@ -234,16 +234,18 @@ a,
     margin-bottom: 1em; }
   #portal-globalnav li {
     display: inline; }
-  #portal-globalnav li {
-    padding-left: 1em; }
-    #portal-globalnav li a {
+  #portal-globalnav > li {
+    float: left;
+    margin-left: 2em;
+    margin-bottom: 0; }
+    #portal-globalnav > li > a {
       color: #00616c;
       font-size: 138.46%;
       text-decoration: none; }
-      #portal-globalnav li a:hover {
+      #portal-globalnav > li > a:hover {
         color: black; }
   #portal-globalnav li:first-child {
-    padding-left: 0; }
+    margin-left: 0; }
 
 /* @end */
 /* @group left navigation */
@@ -1867,5 +1869,26 @@ ul.mobileNavigation {
     margin-bottom: 0; }
     ul.mobileNavigation li a, ul.mobileNavigation li a:hover {
       text-decoration: none; }
+
+/* @end */
+/* @group flyout navigation */
+#portal-globalnav > li {
+  position: relative; }
+  #portal-globalnav > li > ul {
+    padding: 1em;
+    margin: 0;
+    position: absolute;
+    left: -1px;
+    top: 2em;
+    width: 20em;
+    background: white;
+    box-shadow: 0 0 0.5em #5b5a54;
+    -webkit-box-shadow: 0 0 0.5em #5b5a54;
+    -moz-box-shadow: 0 0 0.5em #5b5a54;
+    z-index: 4; }
+    #portal-globalnav > li > ul > li, #portal-globalnav > li > ul > li a {
+      display: block; }
+  #portal-globalnav > li.flyoutActive > a {
+    color: black; }
 
 /* @end */

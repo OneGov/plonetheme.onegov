@@ -79,7 +79,7 @@ $footer-border-color: #71716a;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$from', endColorstr='$to', GradientType=0);
 }
 
-@mixin boxshadow($definition) {
+@mixin boxshadow($definition...) {
   box-shadow: $definition;
   -webkit-box-shadow: $definition;
   -moz-box-shadow: $definition;

@@ -62,3 +62,29 @@ ul.mobileNavigation {
 }
 
 /* @end */
+
+/* @group flyout navigation */
+
+#portal-globalnav > li {
+  position: relative;
+  & > ul {
+    padding: 1em;
+    margin: 0;
+    position: absolute;
+    left: -1px;
+    top: 2em;
+    width: 20em;
+    background: $page-background;
+    @include boxshadow(0 0 0.5em $darkgray);
+    z-index: 4;
+    & > li,
+    & > li a {
+      display: block;
+    }
+  }
+  &.flyoutActive > a {
+    color: $global-navigation-color-hover;
+  }
+}
+
+/* @end */
