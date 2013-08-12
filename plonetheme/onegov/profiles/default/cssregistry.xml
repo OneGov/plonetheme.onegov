@@ -35,10 +35,6 @@
       expression="not:request/HTTP_X_THEME_ENABLED | nothing"
       />
   <stylesheet
-      id="++resource++ftw.subsite-ressources/subsite.css"
-      expression="not:request/HTTP_X_THEME_ENABLED | nothing"
-      />
-  <stylesheet
       id="IEFixes.css"
       expression="not:request/HTTP_X_THEME_ENABLED | nothing"
       />
