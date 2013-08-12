@@ -501,9 +501,52 @@ fieldset {
     margin-bottom: 1em; }
   .subelements-listing li {
     display: inline; }
-  .subelements-listing .divider {
-    border-left: 1px solid #005d67;
-    margin-right: 0.35em; }
+  .subelements-listing:after {
+    clear: both; }
+  .subelements-listing li a {
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    display: block;
+    float: left;
+    background: #f4f4f1;
+    border: 1px solid #e5e5e0;
+    padding: 0 0.5em;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+    text-decoration: none; }
+
+/* @end */
+/* @group topic listing */
+.listing-block {
+  clear: both;
+  padding-top: 1.5em; }
+  .listing-block h2 {
+    margin-top: 0; }
+
+.topic_listing {
+  list-style: disc;
+  padding-left: 2em;
+  padding-left: 0; }
+  .topic_listing li {
+    display: list-item;
+    margin-bottom: 1em; }
+  .topic_listing li {
+    display: inline; }
+  .topic_listing:after {
+    clear: both; }
+  .topic_listing li a {
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    display: block;
+    float: left;
+    background: #f4f4f1;
+    border: 1px solid #e5e5e0;
+    padding: 0 0.5em;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+    text-decoration: none; }
 
 /* @end */
 /* @group simplelayout */
