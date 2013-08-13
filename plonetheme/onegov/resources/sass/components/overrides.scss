@@ -80,6 +80,7 @@ ul.mobileNavigation {
     @include boxshadow(0 0 0.5em $darkgray);
     & > li,
     & > li a {
+      text-decoration: none;
       display: block;
     }
   }

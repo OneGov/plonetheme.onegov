@@ -40,7 +40,7 @@ h1, h2, h3 {
   margin: 1.5em 0 1em 0;
   line-height: $body-line-height;
   &.documentFirstHeading {
-    margin-top: 0;
+    margin: 0;
   }
 }
 
@@ -418,7 +418,15 @@ fieldset {
 
 /* @end */
 
-/* @group topic listing */
+/* @group subsite */
+
+body.template-subsite_view h1.documentFirstHeading {
+  display: none;
+}
+
+/* @end */
+
+/* @group topic listing
 
 .topic_listing {
   @include linklist();

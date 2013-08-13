@@ -53,6 +53,9 @@
     <replace css:content-children="div.documentActions" css:theme-children="#document-actions" />
     <drop css:content="div.documentActions" />
 
+    <!-- copy missing accesskeys -->
+    <replace css:theme-children="#accesskeys" css:content="a[accesskey='2'], a[accesskey='6']" />
+
     <!-- banner image -->
     <replace css:content-children="#banner-image" css:theme-children="#banner-image" />
 
