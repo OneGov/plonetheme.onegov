@@ -49,7 +49,7 @@ $input-standalone-hover-bg-end: lighten($input-standalone-bg-end, 10%);
 $input-standalone-hover-color: #e2e1e1;
 
 $global-navigation-color: #00616c;
-$global-navigation-color-hover: #000; // TODO change
+$global-navigation-color-hover: $link-color-hover;
 
 $mobile-navigation-bordercolor: #b7b7b7;
 

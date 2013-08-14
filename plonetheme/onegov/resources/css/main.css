@@ -218,7 +218,6 @@ a,
 /* @end */
 /* @group header */
 #header-delimiter {
-  margin-top: 1em;
   border-top: 8px solid #00616c; }
 
 #portal-logo {
@@ -273,15 +272,22 @@ a,
   #portal-globalnav > li {
     float: left;
     margin-left: 2em;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    padding-bottom: 1em; }
     #portal-globalnav > li > a {
       color: #00616c;
       font-size: 138.46%;
       text-decoration: none; }
       #portal-globalnav > li > a:hover {
-        color: black; }
+        color: #00a5b8; }
   #portal-globalnav li:first-child {
     margin-left: 0; }
+
+#portal-globalnav li.selected {
+  border-bottom: 8px solid #00a5b8;
+  margin-bottom: -8px; }
+  #portal-globalnav li.selected a {
+    color: #00a5b8; }
 
 /* @end */
 /* @group left navigation */
@@ -1990,7 +1996,7 @@ ul.mobileNavigation {
       text-decoration: none;
       display: block; }
   #portal-globalnav > li.flyoutActive > a {
-    color: black; }
+    color: #00a5b8; }
     #portal-globalnav > li.flyoutActive > a:after {
       content: ' '; }
 
