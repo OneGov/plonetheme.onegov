@@ -32,6 +32,21 @@
     <object name="contact" meta_type="CMF Action" i18n:domain="plone">
       <property name="visible">True</property>
     </object>
-
   </object>
+
+  <object name="top_actions" meta_type="CMF Action Category">
+    <property name="title"></property>
+    <object name="onegov" meta_type="CMF Action" i18n:domain="plone">
+      <property name="visible">True</property>
+      <property name="title">www.onegov.ch</property>
+      <property name="description">OneGov</property>
+      <property name="url_expr">string:http://onegov.ch</property>
+      <property name="link_target">_blank</property>
+      <property name="icon_expr"></property>
+      <property name="permissions">
+        <element value="View"/>
+      </property>
+    </object>
+  </object>
+
 </object>

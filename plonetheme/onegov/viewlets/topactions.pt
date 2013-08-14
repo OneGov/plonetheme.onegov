@@ -1,0 +1,20 @@
+<div id="portal-topactions">
+  <ul
+      tal:condition="view/top_actions"
+      i18n:domain="plone"
+      >
+    <li tal:repeat="action view/top_actions"
+        tal:attributes="id string:topaction-${action/id};
+                        class python: repeat['action'].end and 'lastItem' or None"
+        ><a href=""
+            tal:define="title action/title;
+                        id action/id;"
+            i18n:attributes="title"
+            i18n:translate=""
+            tal:content="title"
+            tal:attributes="href action/url;
+                            target action/link_target|nothing;
+                            title title;"
+            >Top action</a></li>
+  </ul>
+</div>

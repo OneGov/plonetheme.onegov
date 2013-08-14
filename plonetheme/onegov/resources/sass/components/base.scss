@@ -61,6 +61,40 @@ a,
 
 /* @end */
 
+/* @group top actions */
+
+#portal-topactions ul {
+  @include ul($style: 'inline');
+  padding: 0.75em 0;
+}
+#portal-topactions li {
+  border-right: 1px solid $text-color;
+  padding-right: 0.5em;
+  margin-right: 0.5em;
+  &.lastItem {
+    border-right: none;
+    padding-right: 0;
+    margin-right: 0;
+  }
+}
+#portal-topactions ul a {
+  color: $text-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* @end */
+
+/* @group banner-image */
+
+#banner-image {
+  margin-bottom: 1em;
+}
+
+/* @end */
+
 /* @group header */
 
 #header-delimiter {

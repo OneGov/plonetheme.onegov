@@ -29,4 +29,12 @@
       layer="plonetheme.onegov.interfaces.IPlonethemeOneGovLayer"
       />
 
+  <!-- top links -->
+  <browser:viewlet
+      name="onegov.topactions"
+      manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+      class=".topactions.TopActionsViewlet"
+      permission="zope2.View"
+      />
+
 </configure>
