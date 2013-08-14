@@ -212,6 +212,9 @@ a,
 #banner-image {
   margin-bottom: 1em; }
 
+#banner-image img {
+  height: auto; }
+
 /* @end */
 /* @group header */
 #header-delimiter {
@@ -1877,7 +1880,11 @@ img {
       position: absolute;
       z-index: 3; }
       #portal-personaltools .actionMenuContent a {
-        padding: 0.5em; } }
+        padding: 0.5em; }
+
+  /* invisible banner */
+  #banner-image {
+    display: none; } }
 /* @end */
 /* @group mobile landscape */
 @media screen and (max-width: 480px) {
