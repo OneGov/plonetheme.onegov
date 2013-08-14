@@ -22,6 +22,8 @@ $link-textdecoration: underline;
 $link-color-hover: #00a5b8;
 $link-textdecoration-hover: underline;
 
+$highlight-color-light: #E7EFF0;
+
 $border-radius: 3px;
 $input-bordercolor: #cccccc;
 $input-background-color: #f7f7f7;
@@ -124,8 +126,7 @@ $footer-border-color: #71716a;
     @include borderradius();
     display: block;
     float: left;
-    background: $lightgray;
-    border: 1px solid $lightgray2;
+    background: $highlight-color-light;
     padding: 0 0.5em;
     margin-right: 0.5em;
     margin-bottom: 0.5em;
