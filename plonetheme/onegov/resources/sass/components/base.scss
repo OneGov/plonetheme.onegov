@@ -307,7 +307,7 @@ div.slideNavi .globalnav li a {
 
 /* @end */
 
-                              /* @group side portlets */
+/* @group side portlets */
 
 #column-sidebar dl.portlet {
   background-color: $lightgray;
@@ -327,7 +327,7 @@ div.slideNavi .globalnav li a {
 
 /* @end */
 
-                              /* @group portlets */
+/* @group portlets */
 
 dl.portlet {
   & dt.portletHeader {
@@ -382,7 +382,7 @@ dl.teaser_portlet .portletHeader img {
 
 /* @end */
 
-                              /* @group byline */
+/* @group byline */
 
 .documentByLine {
   color: $text-color-light;
@@ -391,7 +391,7 @@ dl.teaser_portlet .portletHeader img {
 
 /* @end */
 
-                              /* @group text / content */
+/* @group text / content */
 
 p {
   margin-bottom: 1em;
@@ -420,7 +420,7 @@ ol {
 
 /* @end */
 
-                              /* @group category tags */
+/* @group category tags */
 
 #category.documentByLine .separator {
   display: none;
@@ -437,7 +437,7 @@ ol {
 
 /* @end */
 
-                              /* @group fieldsets */
+/* @group fieldsets */
 
 fieldset {
   margin: 1em 0;
@@ -446,7 +446,7 @@ fieldset {
 
 /* @end */
 
-                              /* @group linkList */
+/* @group linkList */
 
 .linkList {
   @include linklist();
@@ -454,7 +454,7 @@ fieldset {
 
 /* @end */
 
-                              /* @group subelements-listing */
+/* @group subelements-listing */
 
 .subelements-listing {
   @include linklist();
@@ -462,7 +462,7 @@ fieldset {
 
 /* @end */
 
-                              /* @group subsite */
+/* @group subsite */
 
 body.template-subsite_view h1.documentFirstHeading {
   display: none;
@@ -470,7 +470,7 @@ body.template-subsite_view h1.documentFirstHeading {
 
 /* @end */
 
-                              /* @group topic listing
+/* @group topic listing
 
 .topic_listing {
   @include linklist();
@@ -478,7 +478,7 @@ body.template-subsite_view h1.documentFirstHeading {
 
 /* @end */
 
-                              /* @group simplelayout */
+/* @group simplelayout */
 
 div.sl-controls {
   padding-top: 0;
@@ -486,7 +486,7 @@ div.sl-controls {
 
 /* @end */
 
-                              /* @group to_top link */
+/* @group to_top link */
 
 .to_top {
   position: absolute;
@@ -499,7 +499,7 @@ div.sl-controls {
 
 /* @end */
 
-                              /* @group footer */
+/* @group footer */
 
 #footer {
   @include gradient($footer-bg-start, $footer-bg-end);
@@ -526,7 +526,7 @@ div.sl-controls {
 
 /* @end */
 
-                              /* @group site-actions */
+/* @group site-actions */
 
 #portal-siteactions {
   @include ul($style: 'inline');
@@ -547,7 +547,7 @@ div.sl-controls {
 
 /* @end */
 
-                              /* @group login */
+/* @group login */
 
 #login-form label {
   min-width: 5em;
@@ -563,7 +563,7 @@ div.sl-controls {
 
 
 
-                              /* @group Invisibles */
+/* @group Invisibles */
 
 * {
   outline: none;
