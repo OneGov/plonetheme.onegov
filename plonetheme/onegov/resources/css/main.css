@@ -230,11 +230,6 @@ a,
   float: right; }
 
 /* @end */
-/* @group decoration column */
-#column-decoration .decorationItem {
-  margin-bottom: 1em; }
-
-/* @end */
 /* @group breadcrumbs */
 #portal-breadcrumbs {
   margin-bottom: 1em; }
@@ -509,6 +504,11 @@ ol {
 
 .discreet {
   color: #7e7e7e; }
+
+/* @end */
+/* @group below-content viewlet */
+#viewlet-below-content {
+  margin-top: 2em; }
 
 /* @end */
 /* @group category tags */
