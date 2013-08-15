@@ -1,8 +1,9 @@
 jQuery(function($) {
-  $('#portal-globalnav > li > a').click(function(e){
+  $('#portal-globalnav > li > .wrapper a').click(function(e){
     e.preventDefault();
     var me = $(this);
-    var parent = me.parent('li');
+    var parent = me.parent('.wrapper').parent('li');
+    console.info(parent);
 
     // hide all but this children
     var others = $('#portal-globalnav li').not('#'+parent.attr('id'));
@@ -13,7 +14,7 @@ jQuery(function($) {
     if (children.length == 0) {
       $.ajax({
         type : 'POST',
-        url : me.attr('href') + '/load_children',
+        url : me.attr('href') + '/load_flyout_children',
         success : function(data, textStatus, XMLHttpRequest) {
           if (textStatus == 'success') {
             var result = $(data);

@@ -67,28 +67,48 @@ ul.mobileNavigation {
 
 #portal-globalnav > li {
   position: relative;
-  z-index: 4;
-  & > ul {
-    @include ul($style: 'plain');
-    padding: 1em 1em 0 1em;
-    margin: 0;
-    position: absolute;
-    left: -1px;
-    top: 2em;
-    width: 20em;
-    background: $page-background;
-    @include boxshadow(0 0 0.5em $darkgray);
-    & > li,
-    & > li a {
-      text-decoration: none;
-      display: block;
-    }
+  z-index: 3;
+  &.flyoutActive {
+    z-index: 4;
   }
-  &.flyoutActive > a {
-    color: $global-navigation-color-hover;
-    &:after {
-      content: ' ';
-    }
+  &.flyoutActive > .wrapper {
+    margin: 0;
+    background-color: $page-background;
+    position: relative;
+    z-index: 5;
+    border: 1px solid $global-navigation-flyout-border;
+    border-bottom-width: 0;
+    @include borderradius($border-radius $border-radius 0 0);
+  }
+  &.flyoutActive > ul.flyoutActive {
+    z-index: 4;
+  }
+}
+#portal-globalnav ul.flyoutChildren {
+  @include ul($style: 'plain');
+  @include borderradius(0 $border-radius $border-radius $border-radius);
+  position: relative;
+  z-index: 3;
+  border: 1px solid $global-navigation-flyout-border;
+  padding: 1em 1em 0 1em;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 2em;
+  width: 20em;
+  background: $page-background;
+  @include boxshadow(0.5em 0.5em 0.5em -0.5em $darkgray);
+  & li {
+    display: block;
+    padding: 0.5em 0;
+    margin: 0;
+  }
+  & li.directLink {
+    border-bottom: 1px solid $global-navigation-flyout-border;
+  }
+  & a {
+    text-decoration: none;
+    display: block;
   }
 }
 

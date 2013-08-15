@@ -222,7 +222,8 @@ a,
 
 #portal-logo {
   margin: 1.5em 0;
-  display: block; }
+  display: block;
+  float: left; }
 
 /* @end */
 /* @group header actions */
@@ -265,20 +266,22 @@ a,
   #portal-globalnav li {
     display: inline; }
   #portal-globalnav > li {
-    float: left;
-    margin-left: 2em;
-    margin-bottom: 0;
-    padding-bottom: 1em; }
-    #portal-globalnav > li > a {
+    float: left; }
+    #portal-globalnav > li .wrapper {
+      padding: 1em 1em 0.6em 1em;
+      margin: 1px;
+      margin-bottom: 0; }
+    #portal-globalnav > li > .wrapper a {
       color: #00616c;
       font-size: 138.46%;
       text-decoration: none; }
-      #portal-globalnav > li > a:hover {
+      #portal-globalnav > li > .wrapper a:hover {
         color: #00a5b8; }
   #portal-globalnav li:first-child {
     margin-left: 0; }
 
 #portal-globalnav li.selected {
+  padding-bottom: 1em;
   border-bottom: 8px solid #00a5b8;
   margin-bottom: -8px; }
 
@@ -906,12 +909,12 @@ span.link-external a:before {
   content: " k";
   white-space: nowrap; }
 
-#portal-globalnav > li > a:after {
+#portal-globalnav > li > .wrapper a:after {
   font-family: 'icomoon';
   font-size: 1em;
   content: " ";
   white-space: nowrap; }
-#portal-globalnav > li > a:after {
+#portal-globalnav > li > .wrapper a:after {
   font-size: 0.75em; }
 
 .LSBox:before {
@@ -1958,32 +1961,55 @@ ul.mobileNavigation {
 /* @group flyout navigation */
 #portal-globalnav > li {
   position: relative;
-  z-index: 4; }
-  #portal-globalnav > li > ul {
-    list-style: disc;
-    padding-left: 2em;
-    list-style: none;
-    padding-left: 0;
-    padding: 1em 1em 0 1em;
+  z-index: 3; }
+  #portal-globalnav > li.flyoutActive {
+    z-index: 4; }
+  #portal-globalnav > li.flyoutActive > .wrapper {
     margin: 0;
-    position: absolute;
-    left: -1px;
-    top: 2em;
-    width: 20em;
-    background: #fcfcfc;
-    box-shadow: 0 0 0.5em #5b5a54;
-    -webkit-box-shadow: 0 0 0.5em #5b5a54;
-    -moz-box-shadow: 0 0 0.5em #5b5a54; }
-    #portal-globalnav > li > ul li {
-      display: list-item;
-      margin-bottom: 1em; }
-    #portal-globalnav > li > ul > li, #portal-globalnav > li > ul > li a {
-      text-decoration: none;
-      display: block; }
-  #portal-globalnav > li.flyoutActive > a {
-    color: #00a5b8; }
-    #portal-globalnav > li.flyoutActive > a:after {
-      content: ' '; }
+    background-color: #fcfcfc;
+    position: relative;
+    z-index: 5;
+    border: 1px solid #d1d1d1;
+    border-bottom-width: 0;
+    border-radius: 3px 3px 0 0;
+    -webkit-border-radius: 3px 3px 0 0;
+    -moz-border-radius: 3px 3px 0 0; }
+  #portal-globalnav > li.flyoutActive > ul.flyoutActive {
+    z-index: 4; }
+
+#portal-globalnav ul.flyoutChildren {
+  list-style: disc;
+  padding-left: 2em;
+  list-style: none;
+  padding-left: 0;
+  border-radius: 0 3px 3px 3px;
+  -webkit-border-radius: 0 3px 3px 3px;
+  -moz-border-radius: 0 3px 3px 3px;
+  position: relative;
+  z-index: 3;
+  border: 1px solid #d1d1d1;
+  padding: 1em 1em 0 1em;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 2em;
+  width: 20em;
+  background: #fcfcfc;
+  box-shadow: 0.5em 0.5em 0.5em -0.5em #5b5a54;
+  -webkit-box-shadow: 0.5em 0.5em 0.5em -0.5em #5b5a54;
+  -moz-box-shadow: 0.5em 0.5em 0.5em -0.5em #5b5a54; }
+  #portal-globalnav ul.flyoutChildren li {
+    display: list-item;
+    margin-bottom: 1em; }
+  #portal-globalnav ul.flyoutChildren li {
+    display: block;
+    padding: 0.5em 0;
+    margin: 0; }
+  #portal-globalnav ul.flyoutChildren li.directLink {
+    border-bottom: 1px solid #d1d1d1; }
+  #portal-globalnav ul.flyoutChildren a {
+    text-decoration: none;
+    display: block; }
 
 /* @end */
 /* @group tinymce */

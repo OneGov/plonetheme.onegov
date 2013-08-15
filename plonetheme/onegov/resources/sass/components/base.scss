@@ -106,6 +106,7 @@ a,
 #portal-logo {
   margin: 1.5em 0;
   display: block;
+  float: left;
 }
 
 /* @end */
@@ -148,10 +149,12 @@ a,
   padding-top: 0.75em;
   & > li {
     float: left;
-    margin-left: 2em;
-    margin-bottom: 0;
-    padding-bottom: 1em;
-    & > a {
+    & .wrapper {
+      padding: 1em 1em 0.6em 1em;
+      margin: 1px;
+      margin-bottom: 0;
+    }
+    & > .wrapper a {
       color: $global-navigation-color;
       font-size: $font-size-18;
       text-decoration: none;
@@ -167,6 +170,7 @@ a,
   }
 }
 #portal-globalnav li.selected {
+  padding-bottom: 1em;
   border-bottom: 8px solid $global-navigation-color-hover;
   margin-bottom: -8px;
 }

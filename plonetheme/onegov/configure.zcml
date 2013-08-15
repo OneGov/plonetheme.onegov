@@ -15,6 +15,8 @@
   <include package=".portlets" />
   <include package=".viewlets" />
 
+  <i18n:registerTranslations directory="locales" />
+
   <genericsetup:registerProfile
       name="default"
       title="plonetheme.onegov"
