@@ -281,8 +281,6 @@ a,
 #portal-globalnav li.selected {
   border-bottom: 8px solid #00a5b8;
   margin-bottom: -8px; }
-  #portal-globalnav li.selected a {
-    color: #00a5b8; }
 
 /* @end */
 /* @group left navigation */

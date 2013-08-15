@@ -169,9 +169,6 @@ a,
 #portal-globalnav li.selected {
   border-bottom: 8px solid $global-navigation-color-hover;
   margin-bottom: -8px;
-  & a {
-    color: $global-navigation-color-hover;
-  }
 }
 
 /* @end */
