@@ -543,8 +543,12 @@ div.sl-controls {
 
 /* @group login */
 
+#login-form {
+  margin: 2em 0;
+}
+
 #login-form label {
-  min-width: 5em;
+  min-width: 8em;
   display: inline-block;
 }
 

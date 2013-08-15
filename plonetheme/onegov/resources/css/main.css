@@ -659,8 +659,11 @@ div.sl-controls {
 
 /* @end */
 /* @group login */
+#login-form {
+  margin: 2em 0; }
+
 #login-form label {
-  min-width: 5em;
+  min-width: 8em;
   display: inline-block; }
 
 /* @end */
@@ -1032,7 +1035,7 @@ input[type="button"] {
   background-image: linear-gradient(top, #006c78, #005a64);
   color: #ccdee1;
   padding: 0.5em 1em;
-  margin: 0 0 0.5em 0.5em;
+  margin: 0.5em 0.5em 0 0;
   display: inline-block;
   box-shadow: 0 0.1em 0.3em -0.1em #5b5a54;
   -webkit-box-shadow: 0 0.1em 0.3em -0.1em #5b5a54;
@@ -1074,7 +1077,7 @@ input.standalone {
   background-image: linear-gradient(top, #006c78, #005a64);
   color: #ccdee1;
   padding: 0.5em 1em;
-  margin: 0 0 0.5em 0.5em;
+  margin: 0.5em 0.5em 0 0;
   display: inline-block;
   box-shadow: 0 0.1em 0.3em -0.1em #5b5a54;
   -webkit-box-shadow: 0 0.1em 0.3em -0.1em #5b5a54;
