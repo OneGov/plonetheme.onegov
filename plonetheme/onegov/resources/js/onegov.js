@@ -3,7 +3,6 @@ jQuery(function($) {
     e.preventDefault();
     var me = $(this);
     var parent = me.parent('.wrapper').parent('li');
-    console.info(parent);
 
     // hide all but this children
     var others = $('#portal-globalnav li').not('#'+parent.attr('id'));
