@@ -917,6 +917,7 @@ span.link-external a:before {
   content: " ";
   white-space: nowrap; }
 #portal-globalnav > li > .wrapper a:after {
+  color: #5b696e;
   font-size: 0.75em; }
 
 .LSBox:before {

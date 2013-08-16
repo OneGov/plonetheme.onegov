@@ -156,6 +156,7 @@ span.link-external a {
 #portal-globalnav > li > .wrapper a {
   @include icon(' ', $style: 'after');
   &:after {
+    color: $global-navigation-color-arrow;
     font-size: 0.75em;
   }
 }
