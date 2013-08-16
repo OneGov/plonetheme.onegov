@@ -268,6 +268,7 @@ a,
   #portal-globalnav > li {
     float: left; }
     #portal-globalnav > li .wrapper {
+      white-space: nowrap;
       padding: 1em 1em 0.6em 1em;
       margin: 1px;
       margin-bottom: 0; }
@@ -327,6 +328,7 @@ a,
   background: transparent; }
 
 .mobileButtons a {
+  /* TODO move to variables */
   border: 1px solid #a0babd;
   padding: 0.25em 0.75em;
   margin: 0.25em;

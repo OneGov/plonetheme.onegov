@@ -150,6 +150,7 @@ a,
   & > li {
     float: left;
     & .wrapper {
+      white-space: nowrap;
       padding: 1em 1em 0.6em 1em;
       margin: 1px;
       margin-bottom: 0;
@@ -217,7 +218,7 @@ a,
   background: transparent;
 }
 .mobileButtons a {
-  //TODO move to variables
+  /* TODO move to variables */
   border: 1px solid #a0babd;
   padding: 0.25em 0.75em;
   margin: 0.25em;
@@ -261,7 +262,6 @@ a,
 #slider-container .globalnav a.slide {
   padding: 1em 0.75em;
   background-color: $lightgray;
-  //border-left: 1px solid $lightgray2;
 }
 #slider-container .globalnav a.slideBack {
   padding: 0;
@@ -269,9 +269,6 @@ a,
     padding: 1em 0.75em;
     display: block;
     float: left;
-    //&.iconFont {
-    //  border-right: 1px solid $lightgray2;
-    //}
   }
 }
 #slider-container .slideNavi {
