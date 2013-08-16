@@ -126,6 +126,10 @@ ul.mobileNavigation {
     color: $slider-color;
   }
 }
+.sliderPane .prev,
+.sliderPane .next {
+  display: none;
+}
 
 /* @end */
 

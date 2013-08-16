@@ -2045,6 +2045,10 @@ ul.mobileNavigation {
   #slider-wrapper .sliderText a {
     color: #e4e4dd; }
 
+.sliderPane .prev,
+.sliderPane .next {
+  display: none; }
+
 /* @end */
 /* @group tinymce */
 .mceActionPanel input, .plonebutton {
