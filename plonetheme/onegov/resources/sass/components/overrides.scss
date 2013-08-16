@@ -114,6 +114,21 @@ ul.mobileNavigation {
 
 /* @end */
 
+/* @group slider */
+
+#slider-navi a.active {
+  background: $global-navigation-color;
+}
+#slider-wrapper .sliderText {
+  @include gradient($slider-bg-start, $slider-bg-end);
+  color: $slider-color;
+  & a {
+    color: $slider-color;
+  }
+}
+
+/* @end */
+
 /* @group tinymce */
 
 .mceActionPanel input, .plonebutton {
