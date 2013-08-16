@@ -10,7 +10,7 @@ input[type="radio"] {
 /* @group plone control panel */
 
 ul.configlets {
-  padding: 0;
+  @include ul($style:'plain');
 }
 
 /* @end */

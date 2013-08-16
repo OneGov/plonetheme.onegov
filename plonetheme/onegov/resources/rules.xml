@@ -76,6 +76,15 @@
       </before>
     </rules>
 
+    <!-- make content bigger if there is no side column -->
+    <rules if-content="not(//*[@id='portal-column-two'])">
+      <drop css:theme="#column-sidebar" />
+      <before css:theme-children="#column-content">
+        <xsl:attribute name="class">cell width-12 position-4</xsl:attribute>
+      </before>
+    </rules>
+
+
 
     <replace css:content="#viewlet-below-content" css:theme="#viewlet-below-content" />
 

@@ -25,6 +25,13 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:importStep
+      name="plonehteme.onegov"
+      title="plonehteme.onegov special import handlers"
+      description=""
+      handler=".setuphandlers.import_various"
+      />
+
   <plone:static type="theme" directory="resources" />
 
 </configure>

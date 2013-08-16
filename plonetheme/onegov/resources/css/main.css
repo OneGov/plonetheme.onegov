@@ -594,6 +594,10 @@ body.template-subsite_view h1.documentFirstHeading {
 div.sl-controls {
   padding-top: 0; }
 
+/* padding changes slot-width */
+.simplelayout-content div[id*="slot"] {
+  padding: 0; }
+
 /* @end */
 /* @group to_top link */
 .to_top {
@@ -1913,7 +1917,13 @@ input[type="radio"] {
 /* @end */
 /* @group plone control panel */
 ul.configlets {
-  padding: 0; }
+  list-style: disc;
+  padding-left: 2em;
+  list-style: none;
+  padding-left: 0; }
+  ul.configlets li {
+    display: list-item;
+    margin-bottom: 1em; }
 
 /* @end */
 /* @group tags widget */

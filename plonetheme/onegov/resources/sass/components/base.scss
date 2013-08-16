@@ -472,6 +472,10 @@ body.template-subsite_view h1.documentFirstHeading {
 div.sl-controls {
   padding-top: 0;
 }
+/* padding changes slot-width */
+.simplelayout-content div[id*="slot"] {
+  padding: 0;
+}
 
 /* @end */
 
