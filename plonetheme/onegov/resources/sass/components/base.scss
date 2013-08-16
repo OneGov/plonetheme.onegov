@@ -189,6 +189,7 @@ a,
       padding: 0.5em 1em;
       margin-bottom: 0;
       display: block;
+      padding-left: 1.5em;
       & a {
         text-decoration: none;
       }
@@ -196,16 +197,12 @@ a,
   }
   & .current {
     border-bottom: 1px solid $lightgray2;
+    padding-left: 0.5em;
   }
   & .parent {
     border-bottom: 1px solid $lightgray2;
     @include gradient(#fcfcfc, #f6f6f5);
-    & a {
-      margin-left: 0;
-    }
-  }
-  & a {
-    margin-left: 1em;
+    padding-left: 0.5em;
   }
 }
 

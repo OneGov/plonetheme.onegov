@@ -302,11 +302,13 @@ a,
     #column-navigation .portletContextNavigation ul li {
       padding: 0.5em 1em;
       margin-bottom: 0;
-      display: block; }
+      display: block;
+      padding-left: 1.5em; }
       #column-navigation .portletContextNavigation ul li a {
         text-decoration: none; }
   #column-navigation .portletContextNavigation .current {
-    border-bottom: 1px solid #e5e5e0; }
+    border-bottom: 1px solid #e5e5e0;
+    padding-left: 0.5em; }
   #column-navigation .portletContextNavigation .parent {
     border-bottom: 1px solid #e5e5e0;
     background-color: #f6f6f5;
@@ -315,11 +317,8 @@ a,
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fcfcfc), to(#f6f6f5));
     background-image: -webkit-linear-gradient(top, #fcfcfc, #f6f6f5);
     background-image: -o-linear-gradient(top, #fcfcfc, #f6f6f5);
-    background-image: linear-gradient(top, #fcfcfc, #f6f6f5); }
-    #column-navigation .portletContextNavigation .parent a {
-      margin-left: 0; }
-  #column-navigation .portletContextNavigation a {
-    margin-left: 1em; }
+    background-image: linear-gradient(top, #fcfcfc, #f6f6f5);
+    padding-left: 0.5em; }
 
 /* @end */
 /* @group mobile navigation */
