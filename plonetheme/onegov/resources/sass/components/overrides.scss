@@ -126,8 +126,8 @@ ul.mobileNavigation {
     color: $slider-color;
   }
 }
-.sliderPane .prev,
-.sliderPane .next {
+#slider-panes .sliderPane .prev,
+#slider-panes .sliderPane .next {
   display: none;
 }
 

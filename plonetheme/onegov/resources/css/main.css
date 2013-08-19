@@ -2045,8 +2045,8 @@ ul.mobileNavigation {
   #slider-wrapper .sliderText a {
     color: #e4e4dd; }
 
-.sliderPane .prev,
-.sliderPane .next {
+#slider-panes .sliderPane .prev,
+#slider-panes .sliderPane .next {
   display: none; }
 
 /* @end */
