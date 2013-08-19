@@ -2070,3 +2070,9 @@ ul.mobileNavigation {
   opacity: 0.4; }
 
 /* @end */
+/* @group hacks */
+/* adjust flyout navi height for webkit */
+body.ext-webkit #portal-globalnav > li .wrapper {
+  padding-bottom: 0.7em; }
+
+/* @end */
