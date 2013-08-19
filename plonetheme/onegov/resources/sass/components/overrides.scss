@@ -122,6 +122,8 @@ ul.mobileNavigation {
 #slider-wrapper .sliderText {
   @include gradient($slider-bg-start, $slider-bg-end);
   color: $slider-color;
+  height: 100px;
+  overflow: hidden;
   & a {
     color: $slider-color;
   }

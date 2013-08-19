@@ -2041,7 +2041,9 @@ ul.mobileNavigation {
   background-image: -webkit-linear-gradient(top, #00616c, #003136);
   background-image: -o-linear-gradient(top, #00616c, #003136);
   background-image: linear-gradient(top, #00616c, #003136);
-  color: #e4e4dd; }
+  color: #e4e4dd;
+  height: 100px;
+  overflow: hidden; }
   #slider-wrapper .sliderText a {
     color: #e4e4dd; }
 
