@@ -5,3 +5,11 @@
 }
 
 /* @end */
+
+/* @group subsite */
+
+.template-subsite_view .column .portletStaticText .portletItem ul {
+  @include linklist();
+}
+
+/* @end */

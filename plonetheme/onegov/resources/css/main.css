@@ -2081,3 +2081,33 @@ body.ext-webkit #portal-globalnav > li .wrapper {
   width: 100%; }
 
 /* @end */
+/* @group subsite */
+.template-subsite_view .column .portletStaticText .portletItem ul {
+  list-style: disc;
+  padding-left: 2em;
+  padding-left: 0; }
+  .template-subsite_view .column .portletStaticText .portletItem ul li {
+    display: list-item;
+    margin-bottom: 1em; }
+  .template-subsite_view .column .portletStaticText .portletItem ul li {
+    display: inline; }
+  .template-subsite_view .column .portletStaticText .portletItem ul:after {
+    clear: both; }
+  .template-subsite_view .column .portletStaticText .portletItem ul:before, .template-subsite_view .column .portletStaticText .portletItem ul:after {
+    content: " ";
+    display: block;
+    height: 0;
+    visibility: hidden; }
+  .template-subsite_view .column .portletStaticText .portletItem ul li a {
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    display: block;
+    float: left;
+    background: #e7eff0;
+    padding: 0 0.5em;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+    text-decoration: none; }
+
+/* @end */
