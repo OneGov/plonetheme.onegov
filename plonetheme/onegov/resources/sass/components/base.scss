@@ -314,6 +314,14 @@ div.slideNavi .globalnav li a {
 
 /* @end */
 
+/* @group address block */
+
+.AddressBlock ul {
+  @include ul($style: 'plain');
+}
+
+/* @end */
+
 /* @group portlets */
 
 dl.portlet {

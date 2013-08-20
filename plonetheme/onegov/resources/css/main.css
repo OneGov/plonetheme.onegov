@@ -416,6 +416,17 @@ div.slideNavi .globalnav li a {
     margin-bottom: 0.75em; }
 
 /* @end */
+/* @group address block */
+.AddressBlock ul {
+  list-style: disc;
+  padding-left: 2em;
+  list-style: none;
+  padding-left: 0; }
+  .AddressBlock ul li {
+    display: list-item;
+    margin-bottom: 1em; }
+
+/* @end */
 /* @group portlets */
 dl.portlet dt.portletHeader {
   cursor: default;
