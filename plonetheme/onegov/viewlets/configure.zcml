@@ -21,9 +21,11 @@
       />
 
   <!-- searchbox viewlet -->
+  <!-- XXX: registered for IItem to overwrite ftw.solr searchbox -->
   <browser:viewlet
       name="plone.searchbox"
       manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      for="OFS.interfaces.IItem"
       class=".searchbox.SearchBoxViewlet"
       permission="zope2.View"
       layer="plonetheme.onegov.interfaces.IPlonethemeOneGovLayer"
