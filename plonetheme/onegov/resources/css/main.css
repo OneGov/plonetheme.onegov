@@ -1911,12 +1911,7 @@ img {
 
   /* invisible banner */
   #banner-image {
-    display: none; }
-
-  /* slider */
-  #slider-wrapper .sliderText {
-    position: static;
-    width: 100%; } }
+    display: none; } }
 /* @end */
 /* @group mobile landscape */
 @media screen and (max-width: 480px) {
