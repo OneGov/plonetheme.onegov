@@ -114,7 +114,7 @@ ul.mobileNavigation {
 
 /* @end */
 
-/* @group slider */
+/* @group ftw.slider */
 
 #slider-navi a.active {
   background: $global-navigation-color;
@@ -128,9 +128,9 @@ ul.mobileNavigation {
     color: $slider-color;
   }
 }
-#slider-panes .sliderPane .prev,
-#slider-panes .sliderPane .next {
-  display: none;
+#slider-wrapper a.prev,
+#slider-wrapper a.next {
+  text-decoration: none;
 }
 
 /* @end */

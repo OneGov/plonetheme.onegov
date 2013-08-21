@@ -179,3 +179,18 @@ span.link-external a {
 #toggle_search {
   @include icon('');
 }
+
+#slider-panes .sliderPane .prev {
+  @include icon('');
+  &:before {
+    font-size: 1.75em;
+    vertical-align: middle;
+  }
+}
+#slider-panes .sliderPane .next {
+  @include icon('', $style: 'after');
+  &:after {
+    font-size: 1.75em;
+    vertical-align: middle;
+  }
+}
