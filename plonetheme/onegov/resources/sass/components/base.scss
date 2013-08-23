@@ -121,13 +121,13 @@ a,
 
 /* @group personal tools */
 
-#portal-personaltools .anon-personalbar > a {
+#anon-personalbar > a {
   display: inline;
   border-left: 1px solid $text-color;
   margin-left: 0.25em;
   padding-left: 0.25em;
 }
-#portal-personaltools .anon-personalbar > a:first-child {
+#anon-personalbar > a:first-child {
   margin-left: 0;
   padding-left: 0;
   border-left: none;
