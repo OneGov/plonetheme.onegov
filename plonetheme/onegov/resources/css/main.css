@@ -226,11 +226,6 @@ a,
   float: left; }
 
 /* @end */
-/* @group header actions */
-#header-actions {
-  float: right; }
-
-/* @end */
 /* @group personal tools */
 #anon-personalbar > a {
   display: inline;
@@ -243,7 +238,7 @@ a,
   padding-left: 0;
   border-left: none; }
 
-/* @group */
+/* @end */
 /* @group breadcrumbs */
 #portal-breadcrumbs {
   margin-bottom: 1em; }
