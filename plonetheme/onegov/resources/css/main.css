@@ -269,7 +269,7 @@ a,
     float: left; }
     #portal-globalnav > li .wrapper {
       white-space: nowrap;
-      padding: 1em 1em 0.6em 1em;
+      padding: 1em 1em 0.7em 1em;
       margin: 1px;
       margin-bottom: 0; }
     #portal-globalnav > li > .wrapper a {
@@ -2092,12 +2092,6 @@ ul.mobileNavigation {
 #exposeMask {
   background: #000 !important;
   opacity: 0.4; }
-
-/* @end */
-/* @group hacks */
-/* adjust flyout navi height for webkit */
-body.ext-webkit #portal-globalnav > li .wrapper {
-  padding-bottom: 0.7em; }
 
 /* @end */
 /* @group banner */
