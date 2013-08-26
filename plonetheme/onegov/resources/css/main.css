@@ -171,12 +171,12 @@ h1, h2, h3 {
 a,
 :link,
 :visited {
-  color: #005d67;
+  color: #003559;
   text-decoration: underline; }
   a:hover,
   :link:hover,
   :visited:hover {
-    color: #00a5b8;
+    color: #006fba;
     text-decoration: underline; }
 
 /* @end */
@@ -218,7 +218,7 @@ a,
 /* @end */
 /* @group header */
 #header-delimiter {
-  border-top: 8px solid #00616c; }
+  border-top: 8px solid #003559; }
 
 #portal-logo {
   margin: 1.5em 0;
@@ -281,17 +281,17 @@ a,
       margin: 1px;
       margin-bottom: 0; }
     #portal-globalnav > li > .wrapper a {
-      color: #00616c;
+      color: #003559;
       font-size: 138.46%;
       text-decoration: none; }
       #portal-globalnav > li > .wrapper a:hover {
-        color: #00a5b8; }
+        color: #006fba; }
   #portal-globalnav li:first-child {
     margin-left: 0; }
 
 #portal-globalnav li.selected {
   padding-bottom: 1em;
-  border-bottom: 8px solid #00a5b8;
+  border-bottom: 8px solid #006fba;
   margin-bottom: -8px; }
 
 /* @end */
@@ -343,8 +343,8 @@ a,
   height: auto;
   font-size: 1.25em; }
   .mobileButtons a.selected {
-    background: #00616c;
-    border-color: #00616c;
+    background: #003559;
+    border-color: #003559;
     color: #fcfcfc; }
   .mobileButtons a:hover {
     text-decoration: none; }
@@ -406,7 +406,7 @@ div.slideNavi .globalnav li a {
   border: none; }
 
 .globalnav a:hover {
-  color: #00a5b8; }
+  color: #006fba; }
 
 /* @end */
 /* @group side portlets */
@@ -540,7 +540,7 @@ ol {
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  background-color: #00616c;
+  background-color: #003559;
   color: #fcfcfc;
   padding: 0.25em 0.5em; }
   #category.documentByLine a:hover {
@@ -919,7 +919,7 @@ span.link-external a:before {
   white-space: nowrap; }
 
 #portal-topactions ul a[target="_blank"]:before {
-  color: #005d67; }
+  color: #003559; }
 
 .to_top a:after {
   font-family: 'icomoon';
@@ -939,7 +939,7 @@ span.link-external a:before {
   content: " ";
   white-space: nowrap; }
 #portal-globalnav > li > .wrapper a:after {
-  color: #5b696e;
+  color: #003559;
   font-size: 0.75em; }
 
 .LSBox:before {
@@ -948,7 +948,7 @@ span.link-external a:before {
   font-family: 'icomoon';
   right: 0.4em;
   top: 0.4em;
-  color: #005d67; }
+  color: #003559; }
 
 #toggle_slidenavi:before {
   font-family: 'icomoon';
@@ -1038,7 +1038,7 @@ input[type="password"] {
   background: #f7f7f7; }
   input[type="text"]:focus,
   input[type="password"]:focus {
-    border-color: #00616c; }
+    border-color: #003559; }
 
 /* @end */
 /* @group textarea */
@@ -1055,7 +1055,7 @@ textarea {
   -moz-border-radius: 3px;
   background: #f7f7f7; }
   textarea:focus {
-    border-color: #00616c; }
+    border-color: #003559; }
 
 .field textarea {
   width: 99%;
@@ -1263,7 +1263,7 @@ div.error.warning input {
 /* @group checkboxes and radio */
 input[type="checkbox"]:focus,
 input[type="radio"]:focus {
-  border-color: #00616c; }
+  border-color: #003559; }
 
 /* @end */
 /* @group listing bar */
@@ -1309,11 +1309,11 @@ div.listingBar a {
   -webkit-box-shadow: 0 0 0.5em #cacabb inset;
   -moz-box-shadow: 0 0 0.5em #cacabb inset; }
   #portal-searchbox #searchGadget:focus {
-    border-color: #00616c; }
+    border-color: #003559; }
   #portal-searchbox #searchGadget:focus {
-    box-shadow: 0 0 0.5em #c5d7d9 inset;
-    -webkit-box-shadow: 0 0 0.5em #c5d7d9 inset;
-    -moz-box-shadow: 0 0 0.5em #c5d7d9 inset; }
+    box-shadow: 0 0 0.5em #bac8d1 inset;
+    -webkit-box-shadow: 0 0 0.5em #bac8d1 inset;
+    -moz-box-shadow: 0 0 0.5em #bac8d1 inset; }
 #portal-searchbox input.searchButton {
   display: none; }
 
@@ -1521,7 +1521,7 @@ dl.actionMenu a:hover,
 
 #content .tabbedview-tab-menu .actionMenuContent a:hover {
   background-color: #f4f4f1;
-  color: #00a5b8 !important;
+  color: #006fba !important;
   /* TODO remove important in tabbedview.css */ }
 
 .actionMenuContent ul,
@@ -2063,7 +2063,7 @@ ul.mobileNavigation {
 /* @end */
 /* @group ftw.slider */
 #slider-navi a.active {
-  background: #00616c; }
+  background: #003559; }
 
 #slider-wrapper .sliderText {
   background-color: #003136;
