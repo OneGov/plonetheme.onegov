@@ -135,7 +135,7 @@ body {
   color: #32444a; }
 
 #page-wrapper {
-  background-color: #fcfcfc;
+  background-color: white;
   border: 1px solid #cacabb;
   box-shadow: 0 0 5px #cacabb;
   -webkit-box-shadow: 0 0 5px #cacabb;
@@ -345,7 +345,7 @@ a,
   .mobileButtons a.selected {
     background: #003559;
     border-color: #003559;
-    color: #fcfcfc; }
+    color: white; }
   .mobileButtons a:hover {
     text-decoration: none; }
 
@@ -355,7 +355,7 @@ a,
   padding: 1em; }
 
 #slider-container .mobileNavigation li a {
-  background-color: #fcfcfc;
+  background-color: white;
   padding: 1em;
   margin: 0; }
 
@@ -367,7 +367,7 @@ a,
   min-width: 0; }
 
 #slider-container .globalnav a.slideBack {
-  background: #fcfcfc; }
+  background: white; }
 
 #slider-container .globalnav a.current {
   border-top: none; }
@@ -390,7 +390,7 @@ a,
   top: 1em; }
 
 div.slideNavi.loading {
-  background-color: #fcfcfc; }
+  background-color: white; }
 
 div.slideNavi .globalnav {
   border: 1px solid #b7b7b7;
@@ -467,7 +467,7 @@ dl.teaser_portlet .portletHeader img {
   display: block;
   clear: both;
   padding: 0.5em;
-  background-color: #fcfcfc;
+  background-color: white;
   border-top: 1px solid #e5e5e0; }
 
 .portlet-action button {
@@ -541,10 +541,10 @@ ol {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   background-color: #003559;
-  color: #fcfcfc;
+  color: white;
   padding: 0.25em 0.5em; }
   #category.documentByLine a:hover {
-    color: #fcfcfc; }
+    color: white; }
 
 /* @end */
 /* @group fieldsets */
@@ -1015,8 +1015,8 @@ ul.formTabs {
     ul.formTabs a.selected, ul.formTabs a:hover {
       color: #32444a;
       text-decoration: none;
-      border-bottom-color: #fcfcfc;
-      background-color: #fcfcfc; }
+      border-bottom-color: white;
+      background-color: white; }
 
 fieldset.formPanel {
   border: none; }
@@ -1066,18 +1066,18 @@ textarea {
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  border: 1px solid #004047;
+  border: 1px solid #003559;
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  background-color: #005a64;
-  background-image: -moz-linear-gradient(top, #006c78, #005a64);
-  background-image: -ms-linear-gradient(top, #006c78, #005a64);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#006c78), to(#005a64));
-  background-image: -webkit-linear-gradient(top, #006c78, #005a64);
-  background-image: -o-linear-gradient(top, #006c78, #005a64);
-  background-image: linear-gradient(top, #006c78, #005a64);
-  color: #ccdee1;
+  background-color: #003559;
+  background-image: -moz-linear-gradient(top, #00538c, #003559);
+  background-image: -ms-linear-gradient(top, #00538c, #003559);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#00538c), to(#003559));
+  background-image: -webkit-linear-gradient(top, #00538c, #003559);
+  background-image: -o-linear-gradient(top, #00538c, #003559);
+  background-image: linear-gradient(top, #00538c, #003559);
+  color: white;
   padding: 0.5em 1em;
   margin: 0.5em 0.5em 0 0;
   display: inline-block;
@@ -1091,15 +1091,15 @@ input[type="button"] {
   input[type="button"]:hover,
   input[type="button"]:focus,
   input[type="button"]:active {
-    border: 1px solid #005761;
-    background-color: #007380;
-    background-image: -moz-linear-gradient(top, #008391, #007380);
-    background-image: -ms-linear-gradient(top, #008391, #007380);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#008391), to(#007380));
-    background-image: -webkit-linear-gradient(top, #008391, #007380);
-    background-image: -o-linear-gradient(top, #008391, #007380);
-    background-image: linear-gradient(top, #008391, #007380);
-    color: #ccdee1; }
+    border: 1px solid #991601;
+    background-color: #991601;
+    background-image: -moz-linear-gradient(top, #c91e00, #991601);
+    background-image: -ms-linear-gradient(top, #c91e00, #991601);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#c91e00), to(#991601));
+    background-image: -webkit-linear-gradient(top, #c91e00, #991601);
+    background-image: -o-linear-gradient(top, #c91e00, #991601);
+    background-image: linear-gradient(top, #c91e00, #991601);
+    color: white; }
   input[type="submit"]:active,
   input[type="reset"]:active,
   input[type="button"]:active {
@@ -1108,18 +1108,18 @@ input[type="button"] {
     -moz-box-shadow: 0 0 0.25em #5b5a54; }
 
 input.standalone {
-  border: 1px solid #004047;
+  border: 1px solid #003559;
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  background-color: #005a64;
-  background-image: -moz-linear-gradient(top, #006c78, #005a64);
-  background-image: -ms-linear-gradient(top, #006c78, #005a64);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#006c78), to(#005a64));
-  background-image: -webkit-linear-gradient(top, #006c78, #005a64);
-  background-image: -o-linear-gradient(top, #006c78, #005a64);
-  background-image: linear-gradient(top, #006c78, #005a64);
-  color: #ccdee1;
+  background-color: #003559;
+  background-image: -moz-linear-gradient(top, #00538c, #003559);
+  background-image: -ms-linear-gradient(top, #00538c, #003559);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#00538c), to(#003559));
+  background-image: -webkit-linear-gradient(top, #00538c, #003559);
+  background-image: -o-linear-gradient(top, #00538c, #003559);
+  background-image: linear-gradient(top, #00538c, #003559);
+  color: white;
   padding: 0.5em 1em;
   margin: 0.5em 0.5em 0 0;
   display: inline-block;
@@ -1136,15 +1136,15 @@ input.standalone {
   background-image: linear-gradient(top, #787878, #646464);
   color: #e2e1e1; }
   input.standalone:hover, input.standalone:focus, input.standalone:active {
-    border: 1px solid #005761;
-    background-color: #007380;
-    background-image: -moz-linear-gradient(top, #008391, #007380);
-    background-image: -ms-linear-gradient(top, #008391, #007380);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#008391), to(#007380));
-    background-image: -webkit-linear-gradient(top, #008391, #007380);
-    background-image: -o-linear-gradient(top, #008391, #007380);
-    background-image: linear-gradient(top, #008391, #007380);
-    color: #ccdee1; }
+    border: 1px solid #991601;
+    background-color: #991601;
+    background-image: -moz-linear-gradient(top, #c91e00, #991601);
+    background-image: -ms-linear-gradient(top, #c91e00, #991601);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#c91e00), to(#991601));
+    background-image: -webkit-linear-gradient(top, #c91e00, #991601);
+    background-image: -o-linear-gradient(top, #c91e00, #991601);
+    background-image: linear-gradient(top, #c91e00, #991601);
+    color: white; }
   input.standalone:active {
     box-shadow: 0 0 0.25em #5b5a54;
     -webkit-box-shadow: 0 0 0.25em #5b5a54;
@@ -1205,7 +1205,7 @@ input#title {
 
 .fieldRequired {
   padding: 0 0 0 1em;
-  color: #fcfcfc; }
+  color: white; }
 
 div.overlay .field label .required,
 #form .field label .required,
@@ -1326,7 +1326,7 @@ div.listingBar a {
   width: 100%;
   border: 1px solid #cccccc;
   border-top-width: 0;
-  background-color: #fcfcfc;
+  background-color: white;
   z-index: 3;
   box-shadow: 0 0 0.5em #e5e5e0;
   -webkit-box-shadow: 0 0 0.5em #e5e5e0;
@@ -1398,7 +1398,7 @@ fieldset.livesearchContainer {
 /* @group overlay */
 .overlay {
   display: none;
-  background-color: #fcfcfc;
+  background-color: white;
   padding: 2em;
   box-shadow: 0 0 1em 0 #5b5a54;
   -webkit-box-shadow: 0 0 1em 0 #5b5a54;
@@ -1496,12 +1496,12 @@ dl.actionMenu a:hover,
 #edit-bar .activated a,
 #edit-bar li.selected a,
 #edit-bar li a:hover {
-  background-color: #fcfcfc; }
+  background-color: white; }
 
 /* TODO: Since plone's base.css also have an !important */
 #container #contentActionMenus .actionMenuContent a {
   background-image: none;
-  background-color: #fcfcfc;
+  background-color: white;
   padding: 0 0.5em !important;
   display: block; }
 
@@ -1554,7 +1554,7 @@ dl.actionMenu a:hover,
   line-height: 2em; }
 
 #portal-personaltools dd {
-  background-color: #fcfcfc;
+  background-color: white;
   right: 0; }
 
 #portal-personaltools dd li a:hover {
@@ -1573,7 +1573,7 @@ dl.actionMenu a:hover,
   font-size: 10px; }
 
 #folderHeader, #contextHeader {
-  border-bottom: 2px solid #fcfcfc; }
+  border-bottom: 2px solid white; }
 
 #contextHeader {
   margin-top: 5px; }
@@ -1584,7 +1584,7 @@ dl.actionMenu a:hover,
   position: relative; }
 
 .actionMenuContent {
-  background-color: #fcfcfc;
+  background-color: white;
   border: 1px solid #cacabb;
   border-top-width: 0;
   box-shadow: 0.5em 0.5em 1em -1em #cacabb;
@@ -1592,7 +1592,7 @@ dl.actionMenu a:hover,
   -moz-box-shadow: 0.5em 0.5em 1em -1em #cacabb; }
 
 #content .tabbedview-tab-menu .actionMenuContent {
-  background-color: #fcfcfc;
+  background-color: white;
   padding: 0;
   box-shadow: 0.5em 0.5em 1em -1em #cacabb;
   -webkit-box-shadow: 0.5em 0.5em 1em -1em #cacabb;
@@ -1652,7 +1652,7 @@ dl.portalMessage dt {
   float: left;
   margin-right: 0.75em;
   padding: 0.5em 0.75em;
-  color: #fcfcfc;
+  color: white;
   border-radius: 3px 0 0 3px;
   -webkit-border-radius: 3px 0 0 3px;
   -moz-border-radius: 3px 0 0 3px; }
@@ -1699,7 +1699,7 @@ table.grid {
   border: 1px solid #d9d9d9;
   border-collapse: separate;
   *border-collapse: collapsed;
-  background-color: #fcfcfc; }
+  background-color: white; }
 
 table.listing th,
 table.listing td,
@@ -1888,7 +1888,7 @@ img {
     box-shadow: 0 0 1em #5b5a54;
     -webkit-box-shadow: 0 0 1em #5b5a54;
     -moz-box-shadow: 0 0 1em #5b5a54;
-    background-color: #fcfcfc;
+    background-color: white;
     width: 80%;
     padding: 1.5em 5%;
     margin: 0 auto;
@@ -2015,7 +2015,7 @@ ul.mobileNavigation {
     z-index: 4; }
   #portal-globalnav > li.flyoutActive > .wrapper {
     margin: 0;
-    background-color: #fcfcfc;
+    background-color: white;
     position: relative;
     z-index: 5;
     border: 1px solid #d1d1d1;
@@ -2043,7 +2043,7 @@ ul.mobileNavigation {
   left: 0;
   top: 2em;
   width: 20em;
-  background: #fcfcfc;
+  background: white;
   box-shadow: 0.5em 0.5em 0.5em -0.5em #5b5a54;
   -webkit-box-shadow: 0.5em 0.5em 0.5em -0.5em #5b5a54;
   -moz-box-shadow: 0.5em 0.5em 0.5em -0.5em #5b5a54; }
@@ -2086,7 +2086,7 @@ ul.mobileNavigation {
 /* @end */
 /* @group tinymce */
 .mceActionPanel input, .plonebutton {
-  color: #ccdee1 !important; }
+  color: white !important; }
 
 .mceActionPanel #cancel {
   color: #32444a !important; }
