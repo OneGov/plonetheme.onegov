@@ -2066,18 +2066,18 @@ ul.mobileNavigation {
   background: #003559; }
 
 #slider-wrapper .sliderText {
-  background-color: #003136;
-  background-image: -moz-linear-gradient(top, #00616c, #003136);
-  background-image: -ms-linear-gradient(top, #00616c, #003136);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#00616c), to(#003136));
-  background-image: -webkit-linear-gradient(top, #00616c, #003136);
-  background-image: -o-linear-gradient(top, #00616c, #003136);
-  background-image: linear-gradient(top, #00616c, #003136);
-  color: #e4e4dd;
+  background-color: #003559;
+  background-image: -moz-linear-gradient(top, #00538c, #003559);
+  background-image: -ms-linear-gradient(top, #00538c, #003559);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#00538c), to(#003559));
+  background-image: -webkit-linear-gradient(top, #00538c, #003559);
+  background-image: -o-linear-gradient(top, #00538c, #003559);
+  background-image: linear-gradient(top, #00538c, #003559);
+  color: white;
   height: 100px;
   overflow: hidden; }
   #slider-wrapper .sliderText a {
-    color: #e4e4dd; }
+    color: white; }
 
 #slider-wrapper a.prev,
 #slider-wrapper a.next {
