@@ -4,10 +4,13 @@
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
     i18n_domain="plonetheme.onegov">
 
   <include package="z3c.autoinclude" file="meta.zcml" />
   <includeDependencies package="." />
+
+  <cmf:registerDirectory name="plonetheme_onegov"/>
 
   <include package="plone.resource" file="meta.zcml"/>
 
