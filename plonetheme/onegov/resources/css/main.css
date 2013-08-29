@@ -1947,6 +1947,269 @@ img {
     width: 100%;
     padding: 0; } }
 /* @end */
+/* 
+
+
+    Onegove Theme Styles for seantis.dir.* directories
+
+
+*/
+/* search box styles */
+#directorySearch {
+  background-color: #f4f4f1;
+  padding: 1em; }
+
+/* intro styles */
+#landingPageIntro {
+  margin-top: -2em; }
+
+#landingPageText {
+  width: 62.8%; }
+
+#landingPageImage {
+  float: right;
+  margin: 2.5em 0 1em 1em; }
+
+/* 
+    hide kml download in the events directory,
+    until we can change the output of it to use the icon font
+*/
+#document-action-kml_download {
+  display: none !important;
+  background-color: red; }
+
+/* 
+
+
+    Onegove Theme Styles for seantis.dir.events 
+
+
+*/
+/* event directory columns */
+.portaltype-seantis-dir-events-directory .event-navigation, .portaltype-seantis-dir-events-directory #directoryResultList, .portaltype-seantis-dir-events-directory .event-sidebar, .portaltype-seantis-dir-events-directory .event-view {
+  float: left;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box; }
+.portaltype-seantis-dir-events-directory .event-navigation, .portaltype-seantis-dir-events-directory #directoryResultList {
+  padding-right: 25px; }
+.portaltype-seantis-dir-events-directory .event-navigation {
+  width: 20%; }
+.portaltype-seantis-dir-events-directory #directoryResultList {
+  width: 45%; }
+.portaltype-seantis-dir-events-directory .event-sidebar {
+  width: 35%; }
+.portaltype-seantis-dir-events-directory .event-view {
+  width: 65%; }
+
+/* responsive event directory columns */
+@media screen and (max-width: 979px) {
+  .portaltype-seantis-dir-events-directory #directoryResultList, .portaltype-seantis-dir-events-directory .event-navigation, .portaltype-seantis-dir-events-directory .event-sidebar, .portaltype-seantis-dir-events-directory .event-view {
+    float: none;
+    width: 100%;
+    padding: 0;
+    clear: both; } }
+/* event navigation headers */
+.event-navigation h2 {
+  background-color: #f6f6f5;
+  background-image: -moz-linear-gradient(top, #fcfcfc, #f6f6f5);
+  background-image: -ms-linear-gradient(top, #fcfcfc, #f6f6f5);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fcfcfc), to(#f6f6f5));
+  background-image: -webkit-linear-gradient(top, #fcfcfc, #f6f6f5);
+  background-image: -o-linear-gradient(top, #fcfcfc, #f6f6f5);
+  background-image: linear-gradient(top, #fcfcfc, #f6f6f5);
+  border: 1px solid #e5e5e0;
+  border-width: 1px 0 1px 0;
+  padding: 0.5em 1em;
+  font-weight: normal;
+  font-size: 1em; }
+
+/* event navigation */
+.event-navigation {
+  margin-top: 2px; }
+
+.event-navigation ul {
+  margin: 0 0 5px 0; }
+  .event-navigation ul li {
+    margin: 0;
+    list-style: none; }
+    .event-navigation ul li a {
+      display: block;
+      padding: 2px 4px;
+      border-radius: 3px;
+      text-decoration: none;
+      color: #7e7e7e; }
+    .event-navigation ul li a:hover, .event-navigation ul li a.selected {
+      color: #32444a;
+      text-decoration: none; }
+      .event-navigation ul li a:hover:before, .event-navigation ul li a.selected:before {
+        content: "▸ ";
+        position: absolute;
+        left: 10px; }
+
+/* event results */
+.directoryMarker {
+  left: -4px !important;
+  top: -2px; }
+
+.directoryResult {
+  border-top: none;
+  border-bottom: 1px solid #e5e5e0; }
+  .directoryResult:last-child {
+    border-bottom: none; }
+
+/* single result */
+.eventgroup-title {
+  text-align: right;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #e5e5e0; }
+
+.event-image {
+  float: right;
+  padding: 0 0 15px 15px; }
+
+.event-text {
+  padding-bottom: 1.5em; }
+
+.directoryInfoText {
+  padding-left: 2em !important; }
+
+/* admin controls */
+.event-workflow {
+  float: left;
+  margin-top: 5px; }
+
+.event-state {
+  color: #7e7e7e;
+  float: left; }
+
+.event-actions {
+  float: left; }
+  .event-actions a {
+    margin-left: 0.5em; }
+
+/* directory map */
+#directoryResultMap {
+  margin-top: 26px; }
+
+#default-cgmap {
+  height: 300px; }
+
+/* tags */
+.eventtag {
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  display: block;
+  float: left;
+  background: #e7eff0;
+  padding: 0 0.5em;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  text-decoration: none; }
+
+/* event time */
+.timerange, .event-date {
+  float: right;
+  text-align: right;
+  display: inline-block;
+  clear: both;
+  font-weight: bold; }
+
+/* submit event */
+.your-event {
+  background-color: #f4f4f1;
+  font-size: 138.46%;
+  padding: 1em;
+  margin: 1em 0 1em 0; }
+
+/* event detail head */
+.event-date {
+  font-size: 1.2em;
+  font-weight: bold;
+  float: none;
+  margin-top: 5px;
+  margin-bottom: 5px; }
+
+.descriptions {
+  max-width: 700px;
+  margin-right: 50px; }
+  .descriptions .short {
+    font-weight: bold;
+    margin: 5px 0 10px 0; }
+  .descriptions .long {
+    color: #333;
+    margin: 0 0 25px 0; }
+
+/* adjust map on event item view */
+#directoryDetails .event-sidebar {
+  margin-top: 14px; }
+
+/* same with tags */
+#directoryDetails .eventtags {
+  margin-bottom: 25px; }
+
+/* event detail blocks */
+.event-details > div {
+  margin-bottom: 25px;
+  margin-right: 50px; }
+
+.event-details h3 {
+  font-weight: normal;
+  font-size: 1.2em;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 10px;
+  color: black; }
+
+.event-details ul {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  list-style: none !important; }
+
+@media screen and (max-width: 979px) {
+  .event-details > div, .descriptions {
+    margin-right: 0 !important; } }
+/* submit form */
+#formfield-form-widgets-cat1,
+#formfield-form-widgets-cat2 {
+  width: 50%;
+  float: left;
+  clear: none; }
+
+#formfield-form-widgets-cat1 > span,
+#formfield-form-widgets-cat2 > span {
+  display: block; }
+
+#formfield-form-widgets-long_description textarea {
+  height: 200px; }
+
+input.required[type="radio"] {
+  visibility: visible !important;
+  position: relative;
+  top: -2px;
+  margin-right: 8px; }
+
+input.required[type="radio"]:after {
+  display: none !important; }
+
+#formfield-form-widgets-submission_start_time input,
+#formfield-form-widgets-submission_end_time input,
+#formfield-form-widgets-submission_range_start_time input,
+#formfield-form-widgets-submission_range_end_time input {
+  width: 200px; }
+
+#formfield-form-widgets-submission_days .option {
+  float: left;
+  margin-right: 0.75em; }
+
+#formfield-form-widgets-submission_days .option input {
+  margin-right: 0; }
+
+/* event preview form */
+.event-preview-form {
+  margin-top: 10px; }
+
 /* @group checkbox and radio */
 input[type="checkbox"],
 input[type="radio"] {
