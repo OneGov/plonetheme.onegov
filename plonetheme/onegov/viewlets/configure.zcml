@@ -48,4 +48,11 @@
       permission="zope2.View"
       />
 
+  <browser:viewlet
+      name="onegov.customstyles"
+      manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+      class=".customstyles.CustomStyles"
+      permission="zope2.View"
+      />
+
 </configure>

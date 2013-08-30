@@ -1,17 +1,17 @@
 @mixin base_icon($char) {
-  font-family: 'icomoon';
+  font-family: "icomoon";
   font-size: 1em;
   content: $char;
   white-space: nowrap;
 
 }
-@mixin icon($char, $style:'before'){
-  @if $style == 'before' {
+@mixin icon($char:"", $style:"before"){
+  @if $style == "before" {
     &:before {
       @include base_icon($char);
     }
   }
-  @if $style == 'after' {
+  @if $style == "after" {
     &:after {
       @include base_icon($char);
     }
@@ -20,30 +20,30 @@
 
 .contenttype-blog,
 .contenttype-blogcategory {
-  @include icon('< ');
+  @include icon($char: "< ");
 }
 .contenttype-book {
-  @include icon('? ');
+  @include icon($char: "? ");
 }
 .contenttype-textblock,
 .contenttype-paragraph,
 .contenttype-htmlblock {
-  @include icon('I ');
+  @include icon($char: "I ");
 }
 .contenttype-contact,
 .contenttype-ftw_contact,
 .contenttype-member {
-  @include icon('\\ ');
+  @include icon($char: "\\ ");
 }
 .contenttype-poodle {
-  @include icon('a ');
+  @include icon($char: "a ");
 }
 .contenttype-document,
 .contenttype-contentpage {
-  @include icon('_ ');
+  @include icon($char: "_ ");
 }
 .contenttype-meeting-item {
-  @include icon('K ');
+  @include icon($char: "K ");
 }
 .contenttype-billboardcategory,
 .contenttype-newsfolder,
@@ -51,58 +51,58 @@
 .contenttype-homefolder,
 .contenttype-tabbedviewfolder,
 .contenttype-folder {
-  @include icon('] ');
+  @include icon($char: "] ");
 }
 .contenttype-banner {
-  @include icon('X ');
+  @include icon($char: "X ");
 }
 .contenttype-link {
-  @include icon(' ');
+  @include icon($char: " ");
 }
 .link-mailto a,
 .contenttype-ftw_mail,
 .contenttype-mail {
-  @include icon('. ');
+  @include icon($char: ". ");
 }
 .contenttype-news {
-  @include icon('a ');
+  @include icon($char: "a ");
 }
 .contenttype-news-item {
-  @include icon('a ');
+  @include icon($char: "a ");
 }
 .contenttype-event,
 .contenttype-eventpage,
 .contenttype-meeting {
-  @include icon('e ');
+  @include icon($char: "e ");
 }
 .contenttype-ticket,
 .contenttype-poiissue,
 .contenttype-task {
-  @include icon('8 ');
+  @include icon($char: "8 ");
 }
 .contenttype-workspace {
-  @include icon('% ');
+  @include icon($char: "% ");
 }
 .contenttype-billboardad {
-  @include icon(': ');
+  @include icon($char: ": ");
 }
 .contenttype-ticket-box {
-  @include icon('F ');
+  @include icon($char: "F ");
 }
 .contenttype-chapter {
-  @include icon('# ');
+  @include icon($char: "# ");
 }
 .contenttype-table {
-  @include icon('L ');
+  @include icon($char: "L ");
 }
 .contenttype-classificationitem {
-  @include icon(' ');
+  @include icon($char: " ");
 }
 .contenttype-blogentry {
-  @include icon('N ');
+  @include icon($char: "N ");
 }
 .contenttype-formfolder {
-  @include icon(' ');
+  @include icon($char: " ");
 }
 .contenttype-subsite {
 /* MISSING */
@@ -117,7 +117,7 @@
 /* only show sprites in factory menu for file and image */
 body.template-create_from_template .contenttype-image,
 #plone-contentmenu-factories li a.contenttype-image span {
-  @include icon('X ');
+  @include icon($char: "X ");
 }
 body.template-create_from_template .contenttype-file,
 #plone-contentmenu-factories li a.contenttype-file span {
@@ -139,22 +139,22 @@ dl.portletNavigationTree img {
 
 #portal-topactions ul a[target="_blank"],
 span.link-external a {
-  @include icon('j ');
+  @include icon($char: "j ");
 }
 #portal-topactions ul a[target="_blank"]:before {
   color: $link-color;
 }
 
 .to_top a {
-  @include icon(' ', $style: 'after');
+  @include icon($char: " ", $style: "after");
 }
 
 .portletContextNavigation .parent a {
-  @include icon(' k', $style: 'after');
+  @include icon($char: " k", $style: "after");
 }
 
 #portal-globalnav > li > .wrapper a {
-  @include icon(' ', $style: 'after');
+  @include icon($char: " ", $style: "after");
   &:after {
     color: $global-navigation-color-arrow;
     font-size: 0.75em;
@@ -164,31 +164,31 @@ span.link-external a {
 .LSBox:before {
   content: "";
   position: absolute;
-  font-family: 'icomoon';
+  font-family: "icomoon";
   right: 0.4em;
   top: 0.4em;
   color: $link-color;
 }
 
 #toggle_slidenavi {
-  @include icon('');
+  @include icon($char: "");
 }
 #toggle_usermenu {
-  @include icon('');
+  @include icon($char: "");
 }
 #toggle_search {
-  @include icon('');
+  @include icon($char: "");
 }
 
 #slider-panes .sliderPane .prev {
-  @include icon('');
+  @include icon($char: "");
   &:before {
     font-size: 1.75em;
     vertical-align: middle;
   }
 }
 #slider-panes .sliderPane .next {
-  @include icon('', $style: 'after');
+  @include icon($char: "", $style: "after");
   &:after {
     font-size: 1.75em;
     vertical-align: middle;

@@ -1,4 +1,6 @@
 jQuery(function($) {
+
+  // flyout navigation
   $('#portal-globalnav > li > .wrapper a').click(function(e){
     e.preventDefault();
     var me = $(this);
@@ -26,4 +28,15 @@ jQuery(function($) {
     parent.toggleClass('flyoutActive');
     children.toggle();
   });
+
+  // customstyle helper
+  $("#customstyles-form input[type='text']").focus(function(){
+    $('#style-preview').css(
+      'background',
+      'url(/++theme++plonetheme.onegov/customstyle_images/'+$(this).attr('id')+'.png) no-repeat');
+  });
+  $("#customstyles-form input[type='text']").blur(function(){
+    $('#style-preview').css('background', '#eee');
+  });
+
 });

@@ -55,6 +55,19 @@
   }
 }
 
+@mixin button_destructive() {
+  @include button_context();
+  border: 1px solid $input-destructive-border;
+  @include gradient($input-destructive-bg-start, $input-destructive-bg-end);
+  color: $input-destructive-color;
+
+  &:hover, &:focus, &:active {
+    border: 1px solid $input-destructive-hover-border;
+    @include gradient($input-destructive-hover-bg-start, $input-destructive-hover-bg-end);
+    color: $input-destructive-hover-color;
+  }
+}
+
 /* @group formTabs */
 
 ul.formTabs {
@@ -123,8 +136,10 @@ input[type="button"] {
 input.standalone {
   @include button_standalone();
 }
+input.destructive {
+  @include button_destructive();
+}
 /* TODO: inactive buttons */
-/* TODO: destructive buttons */
 
 /* @end */
 

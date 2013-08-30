@@ -48,6 +48,16 @@ $input-standalone-hover-bg-start: lighten($input-standalone-bg-start, 10%);
 $input-standalone-hover-bg-end: lighten($input-standalone-bg-end, 10%);
 $input-standalone-hover-color: #e2e1e1;
 
+$input-destructive-border: #983531;
+$input-destructive-bg-start: #EE5F5B;
+$input-destructive-bg-end: #BD362F;
+$input-destructive-color: #FFFFFF;
+
+$input-destructive-hover-border: lighten($input-destructive-border, 10%);
+$input-destructive-hover-bg-start: lighten($input-destructive-bg-start, 10%);
+$input-destructive-hover-bg-end: lighten($input-destructive-bg-end, 10%);
+$input-destructive-hover-color: $input-destructive-color;
+
 $global-navigation-color: #00616c;
 $global-navigation-color-hover: $link-color-hover;
 $global-navigation-color-arrow: #5b696e;
@@ -72,70 +82,3 @@ $footer-color: #e4e4dd;
 $footer-bg-start: #5b5b54;
 $footer-bg-end: #65655e;
 $footer-border-color: #71716a;
-
-
-/* mixins */
-
-@mixin gradient($from, $to) {
-  background-color: $to;
-  background-image: -moz-linear-gradient(top, $from, $to);
-  background-image: -ms-linear-gradient(top, $from, $to);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%,from($from), to($to));
-  background-image: -webkit-linear-gradient(top, $from, $to);
-  background-image: -o-linear-gradient(top, $from, $to);
-  background-image: linear-gradient(top, $from, $to);
-}
-
-@mixin boxshadow($definition...) {
-  box-shadow: $definition;
-  -webkit-box-shadow: $definition;
-  -moz-box-shadow: $definition;
-}
-
-@mixin borderradius($radius: $border-radius) {
-  border-radius: $radius;
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-}
-
-@mixin ul($style: 'default') {
-  list-style: disc;
-  padding-left: 2em;
-  & li {
-    display: list-item;
-    margin-bottom: 1em;
-  }
-  @if $style == 'plain' {
-    list-style: none;
-    padding-left: 0;
-  }
-  @if $style == 'inline' {
-    padding-left: 0;
-    & li {
-      display: inline;
-    }
-  }
-}
-
-@mixin linklist() {
-  @include ul($style: 'inline');
-  &:after {
-    clear: both;
-  }
-  &:before, &:after {
-    content: " ";
-    display: block;
-    height: 0;
-    visibility: hidden;
-  }
-  & li a {
-    @include borderradius();
-    display: block;
-    float: left;
-    background: $highlight-color-light;
-    padding: 0 0.5em;
-    margin-right: 0.5em;
-    margin-bottom: 0.5em;
-    text-decoration: none;
-  }
-}

@@ -12,6 +12,7 @@ sass --watch sass/main.scss:css/main.css
 
 @import
   "variables.scss",
+  "mixins.scss",
   "components/zug_variables.scss",
   "components/grid.scss",
   "components/base.scss",

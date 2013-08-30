@@ -20,4 +20,12 @@
       layer="plonetheme.onegov.interfaces.IPlonethemeOneGovLayer"
       />
 
+  <browser:page
+      for="*"
+      name="customstyles_form"
+      class=".customstyles.CustomStylesForm"
+      permission="zope2.View"
+      />
+
+
 </configure>

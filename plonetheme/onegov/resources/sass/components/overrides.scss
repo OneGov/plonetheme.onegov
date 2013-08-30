@@ -159,3 +159,25 @@ ul.mobileNavigation {
 }
 
 /* @end */
+
+/* @group customstyles */
+
+body.template-customstyles_form #slider-wrapper,
+body.template-customstyles_form #banner-image {
+  display: none;
+}
+body.template-customstyles_form label {
+  display: block;
+}
+#style-preview {
+  @include boxshadow(0.5em 0.5em 0.5em $darkgray);
+  height: 100px;
+  width: 300px;
+  border: 1px solid #eee;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #eee no-repeat center center;
+}
+
+/* @end */
