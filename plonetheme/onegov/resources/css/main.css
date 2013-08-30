@@ -1981,7 +1981,7 @@ ul li#document-action-kml_download {
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box; }
 .portaltype-seantis-dir-events-directory .event-navigation, .portaltype-seantis-dir-events-directory #directoryResultList {
-  padding-right: 25px; }
+  padding-right: 1em; }
 .portaltype-seantis-dir-events-directory .event-navigation {
   width: 20%; }
 .portaltype-seantis-dir-events-directory #directoryResultList {
@@ -2014,18 +2014,14 @@ ul li#document-action-kml_download {
   font-size: 1em; }
 
 /* event navigation */
-.event-navigation {
-  margin-top: 2px; }
-
 .event-navigation ul {
-  margin: 0 0 5px 0; }
+  margin: 0 0 0.5em 0; }
   .event-navigation ul li {
     margin: 0;
     list-style: none; }
     .event-navigation ul li a {
       display: block;
-      padding: 2px 4px;
-      border-radius: 3px;
+      padding: .25em 0.5em;
       text-decoration: none;
       color: #7e7e7e; }
     .event-navigation ul li a:hover, .event-navigation ul li a.selected {
@@ -2034,17 +2030,18 @@ ul li#document-action-kml_download {
       .event-navigation ul li a:hover:before, .event-navigation ul li a.selected:before {
         content: "▸ ";
         position: absolute;
-        left: 10px; }
+        left: 1em; }
 
 /* event results */
 .event .directoryMarker {
-  left: -4px;
-  top: -2px;
+  left: -0.25em;
+  top: -0.25em;
   position: absolute; }
 
 .event.directoryResult {
   border-top: none;
   border-bottom: 1px solid #e5e5e0;
+  padding-bottom: 2em;
   position: relative; }
   .event.directoryResult:last-child {
     border-bottom: none; }
@@ -2052,12 +2049,11 @@ ul li#document-action-kml_download {
 /* single result */
 .eventgroup-title {
   text-align: right;
-  padding-bottom: 2px;
   border-bottom: 1px solid #e5e5e0; }
 
 .event-image {
   float: right;
-  padding: 0 0 15px 15px; }
+  padding: 0 0 1em 1em; }
 
 .event-text {
   padding-bottom: 1.5em; }
@@ -2068,7 +2064,7 @@ ul li#document-action-kml_download {
 /* admin controls */
 .event-workflow {
   float: left;
-  margin-top: 5px; }
+  margin-top: 1em; }
 
 .event-state {
   color: #7e7e7e;
@@ -2081,7 +2077,7 @@ ul li#document-action-kml_download {
 
 /* directory map */
 #directoryResultMap {
-  margin-top: 26px; }
+  margin-top: 2em; }
 
 #default-cgmap {
   height: 300px; }
@@ -2119,31 +2115,31 @@ ul li#document-action-kml_download {
   font-size: 1.2em;
   font-weight: bold;
   float: none;
-  margin-top: 5px;
-  margin-bottom: 5px; }
+  margin-top: 0.5em;
+  margin-bottom: 0.5em; }
 
 .descriptions {
   max-width: 700px;
-  margin-right: 50px; }
+  margin-right: 3em; }
   .descriptions .short {
     font-weight: bold;
-    margin: 5px 0 10px 0; }
+    margin: 0.5em 0 1em 0; }
   .descriptions .long {
     color: #333;
-    margin: 0 0 25px 0; }
+    margin: 0 0 2em 0; }
 
 /* adjust map on event item view */
 #directoryDetails .event-sidebar {
-  margin-top: 14px; }
+  margin-top: 1em; }
 
 /* same with tags */
 #directoryDetails .eventtags {
-  margin-bottom: 25px; }
+  margin-bottom: 2em; }
 
 /* event detail blocks */
 .event-details > div {
-  margin-bottom: 25px;
-  margin-right: 50px; }
+  margin-bottom: 2em;
+  margin-right: 4em; }
 
 .event-details h3 {
   font-weight: normal;
@@ -2177,8 +2173,8 @@ ul li#document-action-kml_download {
 input.required[type="radio"] {
   visibility: visible;
   position: relative;
-  top: -2px;
-  margin-right: 8px; }
+  top: -0.1em;
+  margin-right: 1em; }
 
 input.required[type="radio"]:after {
   display: none; }
@@ -2198,7 +2194,7 @@ input.required[type="radio"]:after {
 
 /* event preview form */
 .event-preview-form {
-  margin-top: 10px; }
+  margin-top: 1em; }
 
 /* @end */
 /* @group checkbox and radio */

@@ -8,7 +8,7 @@
     }
 
     .event-navigation, #directoryResultList {
-        padding-right: 25px;
+        padding-right: 1em;
     }
 
     .event-navigation {
@@ -50,11 +50,8 @@
 }
 
 /* event navigation */
-.event-navigation {
-    margin-top: 2px;
-}
 .event-navigation ul {
-    margin: 0 0 5px 0;
+    margin: 0 0 0.5em 0;
     
     & li {
         margin: 0;
@@ -62,8 +59,7 @@
 
         & a {
             display: block;
-            padding: 2px 4px;
-            border-radius: 3px;
+            padding: .25em 0.5em;
             text-decoration: none;
             color: $text-color-light;
         }
@@ -76,7 +72,7 @@
             &:before {
                 content: "▸ ";
                 position: absolute;
-                left: 10px;
+                left: 1em;
             }
         }
     }
@@ -84,14 +80,16 @@
 
 /* event results */
 .event .directoryMarker {
-    left: -4px;
-    top: -2px;
+    left: -0.25em;
+    top: -0.25em;
     position: absolute;
 }
 
 .event.directoryResult {
     border-top: none;
     border-bottom: 1px solid $lightgray2;
+
+    padding-bottom: 2em;
 
     position: relative;
 
@@ -103,13 +101,12 @@
 /* single result */
 .eventgroup-title {
     text-align: right;
-    padding-bottom: 2px;
     border-bottom: 1px solid $lightgray2;
 }
 
 .event-image {
     float: right;
-    padding: 0 0 15px 15px;
+    padding: 0 0 1em 1em;
 }
 
 .event-text {
@@ -123,7 +120,7 @@
 /* admin controls */
 .event-workflow {
     float: left;
-    margin-top: 5px;
+    margin-top: 1em;
 }
 
 .event-state {
@@ -140,7 +137,7 @@
 
 /* directory map */
 #directoryResultMap {
-    margin-top: 26px;
+    margin-top: 2em;
 }
 
 #default-cgmap {
@@ -174,39 +171,39 @@
     font-size: 1.2em;
     font-weight: bold;
     float: none;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 .descriptions {
     max-width: 700px;
-    margin-right: 50px;
+    margin-right: 3em;
 
     .short {
         font-weight: bold;
-        margin: 5px 0 10px 0;       
+        margin: 0.5em 0 1em 0;       
     }
 
     .long {
         color: #333;
-        margin: 0 0 25px 0;   
+        margin: 0 0 2em 0;   
     }
 }
 
 /* adjust map on event item view */
 #directoryDetails .event-sidebar {
-    margin-top: 14px;   
+    margin-top: 1em;   
 }
 
 /* same with tags */
 #directoryDetails .eventtags {
-    margin-bottom: 25px;    
+    margin-bottom: 2em;    
 }
 
 /* event detail blocks */
 .event-details > div {
-    margin-bottom: 25px;
-    margin-right: 50px;      
+    margin-bottom: 2em;
+    margin-right: 4em;      
 }
 
 .event-details h3 {
@@ -248,8 +245,8 @@
 input.required[type="radio"] {
     visibility: visible;
     position: relative;
-    top: -2px;
-    margin-right: 8px; 
+    top: -0.1em;
+    margin-right: 1em; 
 }
 
 input.required[type="radio"]:after {
@@ -274,7 +271,7 @@ input.required[type="radio"]:after {
 
 /* event preview form */
 .event-preview-form {
-    margin-top: 10px;
+    margin-top: 1em;
 }
 
 /* @end */
