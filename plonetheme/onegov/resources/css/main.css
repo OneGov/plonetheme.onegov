@@ -1967,9 +1967,8 @@ img {
     hide kml download in the events directory,
     until we can change the output of it to use the icon font
 */
-#document-action-kml_download {
-  display: none !important;
-  background-color: red; }
+ul li#document-action-kml_download {
+  display: none; }
 
 /* @end */
 /* @group seantis.dir.events */
