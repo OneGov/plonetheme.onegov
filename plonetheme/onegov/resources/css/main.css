@@ -1947,13 +1947,7 @@ img {
     width: 100%;
     padding: 0; } }
 /* @end */
-/* 
-
-
-    Onegove Theme Styles for seantis.dir.* directories
-
-
-*/
+/* @group seantis.dir.* directories */
 /* search box styles */
 #directorySearch {
   background-color: #f4f4f1;
@@ -1978,13 +1972,8 @@ img {
   display: none !important;
   background-color: red; }
 
-/* 
-
-
-    Onegove Theme Styles for seantis.dir.events 
-
-
-*/
+/* @end */
+/* @group seantis.dir.events */
 /* event directory columns */
 .portaltype-seantis-dir-events-directory .event-navigation, .portaltype-seantis-dir-events-directory #directoryResultList, .portaltype-seantis-dir-events-directory .event-sidebar, .portaltype-seantis-dir-events-directory .event-view {
   float: left;
@@ -2210,6 +2199,7 @@ input.required[type="radio"]:after {
 .event-preview-form {
   margin-top: 10px; }
 
+/* @end */
 /* @group checkbox and radio */
 input[type="checkbox"],
 input[type="radio"] {
