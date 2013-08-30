@@ -7,6 +7,7 @@ from zope.publisher.browser import BrowserView
 CUSTOM_STYLE_OPTIONS = [
     "global-navigation-color",
     "global-navigation-color-hover",
+    "global-navigation-color-arrow",
     "link-color",
     "link-color-hover",
     ]
