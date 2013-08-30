@@ -1972,7 +1972,7 @@ ul li#document-action-kml_download {
 
 /* @end */
 /* @group seantis.dir.events */
-/* event directory columns */
+/* @group event directory columns */
 .portaltype-seantis-dir-events-directory .event-navigation, .portaltype-seantis-dir-events-directory #directoryResultList, .portaltype-seantis-dir-events-directory .event-sidebar, .portaltype-seantis-dir-events-directory .event-view {
   float: left;
   box-sizing: border-box;
@@ -1990,14 +1990,16 @@ ul li#document-action-kml_download {
 .portaltype-seantis-dir-events-directory .event-view {
   width: 65%; }
 
-/* responsive event directory columns */
+/* @end */
+/* @group responsive event directory columns */
 @media screen and (max-width: 979px) {
   .portaltype-seantis-dir-events-directory #directoryResultList, .portaltype-seantis-dir-events-directory .event-navigation, .portaltype-seantis-dir-events-directory .event-sidebar, .portaltype-seantis-dir-events-directory .event-view {
     float: none;
     width: 100%;
     padding: 0;
     clear: both; } }
-/* event navigation headers */
+/* @end */
+/* @group event navigation headers */
 .event-navigation h2 {
   background-color: #f6f6f5;
   background-image: -moz-linear-gradient(top, #fcfcfc, #f6f6f5);
@@ -2012,7 +2014,8 @@ ul li#document-action-kml_download {
   font-weight: normal;
   font-size: 1em; }
 
-/* event navigation */
+/* @end */
+/* @group event navigation */
 .event-navigation ul {
   margin: 0 0 0.5em 0; }
   .event-navigation ul li {
@@ -2031,7 +2034,8 @@ ul li#document-action-kml_download {
         position: absolute;
         left: 1em; }
 
-/* event results */
+/* @end */
+/* @group event results */
 .event .directoryMarker {
   left: -0.25em;
   top: -0.25em;
@@ -2045,7 +2049,8 @@ ul li#document-action-kml_download {
   .event.directoryResult:last-child {
     border-bottom: none; }
 
-/* single result */
+/* @end */
+/* @group single result */
 .eventgroup-title {
   text-align: right;
   border-bottom: 1px solid #e5e5e0; }
@@ -2060,7 +2065,8 @@ ul li#document-action-kml_download {
 .directoryInfoText {
   padding-left: 2em; }
 
-/* admin controls */
+/* @end */
+/* @group admin controls */
 .event-workflow {
   float: left;
   margin-top: 1em; }
@@ -2074,14 +2080,16 @@ ul li#document-action-kml_download {
   .event-actions a {
     margin-left: 0.5em; }
 
-/* directory map */
+/* @end */
+/* @group directory map */
 #directoryResultMap {
   margin-top: 2em; }
 
 #default-cgmap {
   height: 300px; }
 
-/* tags */
+/* @end */
+/* @group tags */
 .eventtag {
   border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -2094,7 +2102,8 @@ ul li#document-action-kml_download {
   margin-bottom: 0.5em;
   text-decoration: none; }
 
-/* event time */
+/* @end */
+/* @group event time */
 .timerange, .event-date {
   float: right;
   text-align: right;
@@ -2102,14 +2111,16 @@ ul li#document-action-kml_download {
   clear: both;
   font-weight: bold; }
 
-/* submit event */
+/* @end */
+/* @group submit event */
 .your-event {
   background-color: #f4f4f1;
   font-size: 138.46%;
   padding: 1em;
   margin: 1em 0 1em 0; }
 
-/* event detail head */
+/* @end */
+/* @group event detail head */
 .event-date {
   font-size: 1.2em;
   font-weight: bold;
@@ -2127,6 +2138,8 @@ ul li#document-action-kml_download {
     color: #333;
     margin: 0 0 2em 0; }
 
+/* @end */
+/* @group item view adjustments */
 /* adjust map on event item view */
 #directoryDetails .event-sidebar {
   margin-top: 1em; }
@@ -2135,7 +2148,8 @@ ul li#document-action-kml_download {
 #directoryDetails .eventtags {
   margin-bottom: 2em; }
 
-/* event detail blocks */
+/* @end */
+/* @gorup event detail blocks */
 .event-details > div {
   margin-bottom: 2em;
   margin-right: 4em; }
@@ -2155,7 +2169,8 @@ ul li#document-action-kml_download {
 @media screen and (max-width: 979px) {
   .event-details > div, .descriptions {
     margin-right: 0; } }
-/* submit form */
+/* @end */
+/* @group submit form */
 #formfield-form-widgets-cat1,
 #formfield-form-widgets-cat2 {
   width: 50%;
@@ -2165,18 +2180,6 @@ ul li#document-action-kml_download {
 #formfield-form-widgets-cat1 > span,
 #formfield-form-widgets-cat2 > span {
   display: block; }
-
-#formfield-form-widgets-long_description textarea {
-  height: 200px; }
-
-input.required[type="radio"] {
-  visibility: visible;
-  position: relative;
-  top: -0.1em;
-  margin-right: 1em; }
-
-input.required[type="radio"]:after {
-  display: none; }
 
 #formfield-form-widgets-submission_start_time input,
 #formfield-form-widgets-submission_end_time input,
@@ -2191,10 +2194,12 @@ input.required[type="radio"]:after {
 #formfield-form-widgets-submission_days .option input {
   margin-right: 0; }
 
-/* event preview form */
+/* @end */
+/* @group event preview form */
 .event-preview-form {
   margin-top: 1em; }
 
+/* @end */
 /* @end */
 /* @group checkbox and radio */
 input[type="checkbox"],

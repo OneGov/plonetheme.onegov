@@ -1,6 +1,6 @@
 /* @group seantis.dir.events */
 
-/* event directory columns */
+/* @group event directory columns */
 .portaltype-seantis-dir-events-directory {
     .event-navigation, #directoryResultList, .event-sidebar, .event-view {
         float: left;
@@ -26,8 +26,9 @@
         width: 65%;
     }
 }
+/* @end */
 
-/* responsive event directory columns */
+/* @group responsive event directory columns */
 @media screen and (max-width: 979px) {
     .portaltype-seantis-dir-events-directory {
         #directoryResultList, .event-navigation, .event-sidebar, .event-view {
@@ -38,8 +39,9 @@
         }
     }
 }
+/* @end */
 
-/* event navigation headers */
+/* @group event navigation headers */
 .event-navigation h2 {
     @include gradient($navigation-gradient-from, $navigation-gradient-to);
     border: 1px solid $lightgray2;
@@ -48,8 +50,9 @@
     font-weight: normal;
     font-size: 1em;
 }
+/* @end */
 
-/* event navigation */
+/* @group event navigation */
 .event-navigation ul {
     margin: 0 0 0.5em 0;
     
@@ -77,8 +80,9 @@
         }
     }
 }
+/* @end */
 
-/* event results */
+/* @group event results */
 .event .directoryMarker {
     left: -0.25em;
     top: -0.25em;
@@ -97,8 +101,9 @@
         border-bottom: none;
     }
 }
+/* @end */
 
-/* single result */
+/* @group single result */
 .eventgroup-title {
     text-align: right;
     border-bottom: 1px solid $lightgray2;
@@ -116,8 +121,9 @@
 .directoryInfoText {
     padding-left: 2em;
 }
+/* @end */
 
-/* admin controls */
+/* @group admin controls */
 .event-workflow {
     float: left;
     margin-top: 1em;
@@ -134,8 +140,9 @@
         margin-left: 0.5em;
     }
 }
+/* @end */
 
-/* directory map */
+/* @group directory map */
 #directoryResultMap {
     margin-top: 2em;
 }
@@ -143,13 +150,15 @@
 #default-cgmap {
     height: 300px;      
 }
+/* @end */
 
-/* tags */
+/* @group tags */
 .eventtag {
     @include tag();  
 }
+/* @end */
 
-/* event time */
+/* @group event time */
 .timerange, .event-date {
     float: right;
     text-align: right;
@@ -157,16 +166,18 @@
     clear: both;
     font-weight: bold;
 }
+/* @end */
 
-/* submit event */
+/* @group submit event */
 .your-event {
     background-color: $lightgray;
     font-size: $font-size-18;
     padding: 1em;
     margin: 1em 0 1em 0;
 }
+/* @end */
 
-/* event detail head */
+/* @group event detail head */
 .event-date {
     font-size: 1.2em;
     font-weight: bold;
@@ -189,6 +200,9 @@
         margin: 0 0 2em 0;   
     }
 }
+/* @end */
+
+/* @group item view adjustments */
 
 /* adjust map on event item view */
 #directoryDetails .event-sidebar {
@@ -200,7 +214,9 @@
     margin-bottom: 2em;    
 }
 
-/* event detail blocks */
+/* @end */
+
+/* @gorup event detail blocks */
 .event-details > div {
     margin-bottom: 2em;
     margin-right: 4em;      
@@ -225,8 +241,9 @@
         margin-right: 0;
     }
 }
+/* @end */
 
-/* submit form */
+/* @group submit form */
 #formfield-form-widgets-cat1,
 #formfield-form-widgets-cat2 {
     width: 50%;
@@ -236,21 +253,6 @@
 #formfield-form-widgets-cat1 > span,
 #formfield-form-widgets-cat2 > span {
     display: block;   
-}
-
-#formfield-form-widgets-long_description textarea {
-    height: 200px;
-}
-
-input.required[type="radio"] {
-    visibility: visible;
-    position: relative;
-    top: -0.1em;
-    margin-right: 1em; 
-}
-
-input.required[type="radio"]:after {
-    display: none;   
 }
 
 #formfield-form-widgets-submission_start_time input,
@@ -268,10 +270,12 @@ input.required[type="radio"]:after {
 #formfield-form-widgets-submission_days .option input {
     margin-right: 0;   
 }
+/* @end */
 
-/* event preview form */
+/* @group event preview form */
 .event-preview-form {
     margin-top: 1em;
 }
+/* @end */
 
 /* @end */
