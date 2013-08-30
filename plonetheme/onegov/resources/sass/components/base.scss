@@ -209,7 +209,7 @@ a,
   }
   & .parent {
     border-bottom: 1px solid $lightgray2;
-    @include gradient(#fcfcfc, #f6f6f5);
+    @include gradient($navigation-gradient-from, $navigation-gradient-to);
     padding-left: 0.5em;
   }
 }
