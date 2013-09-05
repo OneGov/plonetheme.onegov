@@ -52,6 +52,8 @@ $global-navigation-color: #00616c;
 $global-navigation-color-hover: $link-color-hover;
 $global-navigation-color-arrow: #5b696e;
 $global-navigation-flyout-border: #d1d1d1;
+$global-navigation-border-color-active: $global-navigation-color-hover;
+$global-navigation-border-color: $global-navigation-color;
 
 $slider-bg-start: $global-navigation-color;
 $slider-bg-end: #003136;

@@ -101,7 +101,7 @@ a,
 /* @group header */
 
 #header-delimiter {
-  border-top: 8px solid $global-navigation-color;
+  border-top: 8px solid $global-navigation-border-color;
 }
 #portal-logo {
   margin: 1.5em 0;
@@ -180,7 +180,7 @@ a,
 }
 #portal-globalnav li.selected {
   padding-bottom: 1em;
-  border-bottom: 8px solid $global-navigation-color-hover;
+  border-bottom: 8px solid $global-navigation-border-color-active;
   margin-bottom: -8px;
 }
 
