@@ -155,6 +155,7 @@ a,
 #portal-globalnav {
   @include ul($style: 'inline');
   padding-top: 0.75em;
+  margin-left: -1em;
   & > li {
     float: left;
     & .wrapper {
