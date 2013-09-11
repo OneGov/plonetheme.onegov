@@ -129,7 +129,7 @@ div.position-15 {
 /* @end */
 /* @group layout */
 body {
-  background: url(../images/bg.png) repeat-x 0 0 #ebe8e1;
+  background: url(../images/bg.png) repeat-x 0 0 #efefef;
   font-family: Arial;
   font-size: 13px;
   line-height: 1.5em;
@@ -137,10 +137,10 @@ body {
 
 #page-wrapper {
   background-color: white;
-  border: 1px solid #cacabb;
-  box-shadow: 0 0 5px #cacabb;
-  -webkit-box-shadow: 0 0 5px #cacabb;
-  -moz-box-shadow: 0 0 5px #cacabb;
+  border: 1px solid #cccccc;
+  box-shadow: 0 0 5px #cccccc;
+  -webkit-box-shadow: 0 0 5px #cccccc;
+  -moz-box-shadow: 0 0 5px #cccccc;
   position: relative; }
 
 #content {
@@ -996,7 +996,7 @@ ul.formTabs {
   list-style: disc;
   padding-left: 2em;
   padding-left: 0;
-  border-bottom: 1px solid #cacabb;
+  border-bottom: 1px solid #cccccc;
   width: 100%; }
   ul.formTabs li {
     display: list-item;
@@ -1009,7 +1009,7 @@ ul.formTabs {
     content: "";
     display: table; }
   ul.formTabs a {
-    border: 1px solid #cacabb;
+    border: 1px solid #cccccc;
     background-color: #f4f4f1;
     padding: 0.5em 0.75em;
     text-decoration: none;
@@ -1310,9 +1310,9 @@ div.listingBar a {
   padding: 0.5em 3%;
   width: 94%;
   background: #f7f7f7;
-  box-shadow: 0 0 0.5em #cacabb inset;
-  -webkit-box-shadow: 0 0 0.5em #cacabb inset;
-  -moz-box-shadow: 0 0 0.5em #cacabb inset; }
+  box-shadow: 0 0 0.5em #cccccc inset;
+  -webkit-box-shadow: 0 0 0.5em #cccccc inset;
+  -moz-box-shadow: 0 0 0.5em #cccccc inset; }
   #portal-searchbox #searchGadget:focus {
     border-color: #00538c; }
   #portal-searchbox #searchGadget:focus {
@@ -1590,18 +1590,18 @@ dl.actionMenu a:hover,
 
 .actionMenuContent {
   background-color: white;
-  border: 1px solid #cacabb;
+  border: 1px solid #cccccc;
   border-top-width: 0;
-  box-shadow: 0.5em 0.5em 1em -1em #cacabb;
-  -webkit-box-shadow: 0.5em 0.5em 1em -1em #cacabb;
-  -moz-box-shadow: 0.5em 0.5em 1em -1em #cacabb; }
+  box-shadow: 0.5em 0.5em 1em -1em #cccccc;
+  -webkit-box-shadow: 0.5em 0.5em 1em -1em #cccccc;
+  -moz-box-shadow: 0.5em 0.5em 1em -1em #cccccc; }
 
 #content .tabbedview-tab-menu .actionMenuContent {
   background-color: white;
   padding: 0;
-  box-shadow: 0.5em 0.5em 1em -1em #cacabb;
-  -webkit-box-shadow: 0.5em 0.5em 1em -1em #cacabb;
-  -moz-box-shadow: 0.5em 0.5em 1em -1em #cacabb;
+  box-shadow: 0.5em 0.5em 1em -1em #cccccc;
+  -webkit-box-shadow: 0.5em 0.5em 1em -1em #cccccc;
+  -moz-box-shadow: 0.5em 0.5em 1em -1em #cccccc;
   border-top-width: 1px; }
 
 dl.actionMenu {
@@ -1638,7 +1638,7 @@ dl.actionMenu.activated dd a {
   padding: 0 0.5em; }
 
 #edit-bar .actionSeparator a {
-  border-top: 1px solid #cacabb; }
+  border-top: 1px solid #cccccc; }
 
 /* @end */
 /* @group status messages */
@@ -2108,6 +2108,9 @@ ul.mobileNavigation {
 
 /* @end */
 /* @group banner */
+body {
+  background: #efefef; }
+
 #banner-image img {
   width: 100%; }
 

@@ -1,5 +1,9 @@
 /* @group banner */
 
+body {
+  background: $body-background;
+}
+
 #banner-image img {
   width: 100%;
 }
