@@ -12,7 +12,7 @@ body {
 
 /* @group subsite */
 
-.template-subsite_view .column .portletStaticText .portletItem ul {
+.template-subsite_view #page-wrapper .column .portletStaticText .portletItem ul {
   @include linklist();
 }
 
