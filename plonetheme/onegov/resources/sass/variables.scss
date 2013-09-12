@@ -57,6 +57,9 @@ $slider-bg-start: $global-navigation-color;
 $slider-bg-end: #003136;
 $slider-color: #e4e4dd;
 
+$navigation-gradient-from: #fcfcfc;
+$navigation-gradient-to: #f6f6f5;
+
 $mobile-navigation-bordercolor: #b7b7b7;
 
 // TODO update table styles
@@ -98,6 +101,13 @@ $footer-border-color: #71716a;
   -moz-border-radius: $radius;
 }
 
+@mixin boxsizing($value) {
+  box-sizing: $value;
+  -webkit-box-sizing: $value;
+  -moz-box-sizing: $value;
+  -o-box-sizing: $value;
+}
+
 @mixin ul($style: 'default') {
   list-style: disc;
   padding-left: 2em;
@@ -129,13 +139,17 @@ $footer-border-color: #71716a;
     visibility: hidden;
   }
   & li a {
-    @include borderradius();
-    display: block;
-    float: left;
-    background: $highlight-color-light;
-    padding: 0 0.5em;
-    margin-right: 0.5em;
-    margin-bottom: 0.5em;
-    text-decoration: none;
+    @include tag();
   }
+}
+
+@mixin tag() {
+  @include borderradius();
+  display: block;
+  float: left;
+  background: $highlight-color-light;
+  padding: 0 0.5em;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  text-decoration: none;
 }
