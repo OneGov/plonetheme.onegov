@@ -195,23 +195,27 @@ a,
   & ul {
     @include ul($style: 'plain');
     & li {
-      padding: 0.5em 1em;
       margin-bottom: 0;
+      padding: 0;
       display: block;
-      padding-left: 1.5em;
       & a {
+        padding: 0.5em 1em;
+        display: block;
         text-decoration: none;
+        padding-left: 1.5em;
       }
     }
   }
   & .current {
     border-bottom: 1px solid $lightgray2;
-    padding-left: 0.5em;
+    padding: 0.5em 0.5em;
   }
   & .parent {
     border-bottom: 1px solid $lightgray2;
     @include gradient(#fcfcfc, #f6f6f5);
-    padding-left: 0.5em;
+    & a {
+      padding-left: 0.5em;
+    }
   }
 }
 
