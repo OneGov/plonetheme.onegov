@@ -70,6 +70,12 @@
     <replace css:content-children="#document-action-addtofavorites a">
         <xsl:attribute name="title"><xsl:value-of select="text()" /></xsl:attribute>*
     </replace>
+    <replace css:content-children="#document-action-pdf a">
+        <xsl:attribute name="title"><xsl:value-of select="text()" /></xsl:attribute>&#x22;
+    </replace>
+    <replace css:content-children="#document-action-reader a">
+        <xsl:attribute name="title"><xsl:value-of select="text()" /></xsl:attribute>&#x60;
+    </replace>
 
 
 
