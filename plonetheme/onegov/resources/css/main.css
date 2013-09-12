@@ -700,6 +700,18 @@ div.sl-controls {
   display: inline-block; }
 
 /* @end */
+/* @group sitemap */
+.template-sitemap #content {
+  padding-left: 2em; }
+  .template-sitemap #content ul#portal-sitemap li {
+    display: list-item;
+    list-style: disc;
+    margin-bottom: 0em; }
+    .template-sitemap #content ul#portal-sitemap li a:before {
+      /* no content type icons */
+      display: none; }
+
+/* @end */
 /* @group Invisibles */
 * {
   outline: none; }
