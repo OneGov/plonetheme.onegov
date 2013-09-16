@@ -1947,29 +1947,101 @@ img {
     padding: 0; } }
 /* @end */
 /* @group seantis.dir.* directories */
-/* search box styles */
-#directorySearch {
-  background-color: #f4f4f1;
-  padding: 1em; }
+/* @group all directory views */
+.seantis-directory-all {
+  /* search box styles */
+  /* directory result columns */
+  /* 
+  hide kml download in the events directory,
+  until we can change the output of it to use the icon font
+  */ }
+  .seantis-directory-all #directorySearch {
+    background-color: #f4f4f1;
+    padding: 1em; }
+  .seantis-directory-all #directoryResultList,
+  .seantis-directory-all #directoryResultMap {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    float: left;
+    width: 50%; }
+  @media screen and (max-width: 979px) {
+    .seantis-directory-all #directoryResultList,
+    .seantis-directory-all #directoryResultMap {
+      float: none;
+      width: 100%; } }
+  .seantis-directory-all ul li#document-action-kml_download {
+    display: none; }
 
-/* intro styles */
-#landingPageIntro {
-  margin-top: -2em; }
+/* @group all directory result views */
+.seantis-directory-results {
+  /* intro styles */
+  /* directory results */
+  /* map markers */ }
+  .seantis-directory-results #landingPageIntro {
+    margin-top: -1em; }
+  .seantis-directory-results #landingPageText {
+    width: 62.8%; }
+  .seantis-directory-results #landingPageImage {
+    float: right;
+    margin: 2.5em 0 1em 1em; }
+  .seantis-directory-results #directoryResultList .directoryInfoText {
+    padding-left: 2em; }
+  .seantis-directory-results .directoryResult {
+    position: relative; }
+  .seantis-directory-results .directoryMarker {
+    position: absolute; }
 
-#landingPageText {
-  width: 62.8%; }
+/* @end */
+/* @group all directory item views */
+.seantis-directory-items #directoryResultList .directoryInfoText {
+  padding-left: 0; }
 
-#landingPageImage {
-  float: right;
-  margin: 2.5em 0 1em 1em; }
+/* @end */
+/* @group roadworks directory */
+.portaltype-seantis-dir-roadworks-directory #directoryInfo,
+.portaltype-seantis-dir-roadworks-item #directoryInfo {
+  margin-top: 1em; }
+.portaltype-seantis-dir-roadworks-directory .directoryResult,
+.portaltype-seantis-dir-roadworks-item .directoryResult {
+  margin-bottom: 1.5em; }
 
-/* 
-    hide kml download in the events directory,
-    until we can change the output of it to use the icon font
-*/
-ul li#document-action-kml_download {
-  display: none; }
+/* @end */
+/* @group contacts directory */
+.portaltype-seantis-dir-contacts-directory #directoryInfo,
+.portaltype-seantis-dir-contacts-item #directoryInfo {
+  margin-top: 1em; }
+.portaltype-seantis-dir-contacts-directory .directoryResult,
+.portaltype-seantis-dir-contacts-item .directoryResult {
+  margin-bottom: 1.5em; }
+.portaltype-seantis-dir-contacts-directory .directoryTypes,
+.portaltype-seantis-dir-contacts-item .directoryTypes {
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  display: block;
+  float: left;
+  background: #e7eff0;
+  padding: 0 0.5em;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  text-decoration: none;
+  float: none;
+  display: inline-block; }
+.portaltype-seantis-dir-contacts-directory .directoryDates ul,
+.portaltype-seantis-dir-contacts-item .directoryDates ul {
+  padding-left: 0; }
+.portaltype-seantis-dir-contacts-directory #directoryInfoPage ul,
+.portaltype-seantis-dir-contacts-item #directoryInfoPage ul {
+  padding-left: 0; }
+.portaltype-seantis-dir-contacts-directory .directoryDates ul li,
+.portaltype-seantis-dir-contacts-directory #directoryInfoPage ul li,
+.portaltype-seantis-dir-contacts-item .directoryDates ul li,
+.portaltype-seantis-dir-contacts-item #directoryInfoPage ul li {
+  margin-bottom: 0; }
 
+/* @end */
 /* @end */
 /* @group seantis.dir.events */
 /* @group event directory columns */
@@ -2062,9 +2134,6 @@ ul li#document-action-kml_download {
 .event-text {
   padding-bottom: 1.5em; }
 
-.directoryInfoText {
-  padding-left: 2em; }
-
 /* @end */
 /* @group admin controls */
 .event-workflow {
@@ -2082,10 +2151,11 @@ ul li#document-action-kml_download {
 
 /* @end */
 /* @group directory map */
-#directoryResultMap {
+.portaltype-seantis-dir-events-directory #directoryResultMap,
+.portaltype-seantis-dir-events-item #directoryResultMap {
   margin-top: 2em; }
-
-#default-cgmap {
+.portaltype-seantis-dir-events-directory #default-cgmap,
+.portaltype-seantis-dir-events-item #default-cgmap {
   height: 300px; }
 
 /* @end */
@@ -2141,12 +2211,12 @@ ul li#document-action-kml_download {
 /* @end */
 /* @group item view adjustments */
 /* adjust map on event item view */
-#directoryDetails .event-sidebar {
-  margin-top: 1em; }
-
-/* same with tags */
-#directoryDetails .eventtags {
-  margin-bottom: 2em; }
+.portaltype-seantis-dir-events-item {
+  /* same with tags */ }
+  .portaltype-seantis-dir-events-item #directoryDetails .event-sidebar {
+    margin-top: 1em; }
+  .portaltype-seantis-dir-events-item #directoryDetails .eventtags {
+    margin-bottom: 2em; }
 
 /* @end */
 /* @gorup event detail blocks */
