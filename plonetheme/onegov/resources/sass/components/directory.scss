@@ -121,4 +121,130 @@
 }
 /* @end */
 
+/* @group council directory & item */
+.portaltype-seantis-dir-council-item,
+.portaltype-seantis-dir-council-directory {
+    
+    /* council tags */
+    .council-tags h3 {
+        margin-bottom: 0.5em;
+        font-size: $font-size;
+        font-weight: normal;
+        color: $text-color-light;
+        border-bottom: 1px solid $lightgray2;
+    }
+
+    .council-tag-value {
+        font-weight: bold;
+    }
+
+    .council-tag-pointer {
+        display: none;
+    }
+
+}
+
+/* @group council directory */
+.portaltype-seantis-dir-council-directory {
+    /* result list columns */
+    .council-tags {
+        float: right;
+        width: 40%;
+    }
+
+    @media screen and (max-width: 979px) {
+        .council-tags {
+            float: none;
+            width: 100%;
+        }
+    }
+
+    /* results list display */
+    .directoryResult {
+        padding-top: 1.5em;
+        padding-left: 1em;
+        clear: both;
+    }
+
+    #directoryResultList .directoryInfoText {
+        padding-left: 0;
+    }
+
+    /* emphasize the council members' names */
+    .directoryInfoText > a {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 0.5em;
+    }
+
+    /* create some space between address and tags */
+    .item-address {
+        margin-bottom: 0.5em;
+    }
+
+    .directory-tags a {
+        @include tag();
+        font-size: 90%;
+    }
+
+    /* position the image differently */
+    #landingPageImage {
+        margin: 0 0 1em 1em;
+    }
+}
+/* @end */
+
+/* @group council item */
+.portaltype-seantis-dir-council-item {
+
+    /* item view columns */
+    .directoryInfoImage,
+    .council-address {
+        float: left;
+    }
+
+    .council-tags {
+        float: right;
+        width: 40%;
+        margin-top: -1.5em;
+    }
+
+    @media screen and (max-width: 979px) {
+        .directoryInfoImage,
+        .council-address,
+        .council-tags {
+            float: none;
+        }
+    }
+
+    .directoryInfoImage {
+        margin-right: 2em;
+    }
+
+    .council-address {
+        max-width: 50%;
+    }
+
+    /* the address should look normal */
+    .council-address ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .council-address ul li {
+        margin-bottom: 0;
+    }
+
+    .council-information {
+        margin-top: 1em;
+    }
+
+    .full-resolution-portrait {
+        margin-top: 1em;
+    }
+
+}
+
+/* @end */
+
 /* @end */
