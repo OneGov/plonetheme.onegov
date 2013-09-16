@@ -1,0 +1,47 @@
+/* @group jquery.recurrenceinput.js */
+
+/*
+    jquery.recurrenceinput.js has it's own css which does not play well with
+    sunburst. It needs quite the fix-up to be usable.
+*/
+
+/* the headers are too big and prominent */
+div.riform h1,
+#rirtemplate h2 {
+    color: $text-color;
+    font-size: $font-size-18;
+}
+
+/* the lower headers have different distances to their borders */
+div.riform h1,
+#rirtemplate div.rioccurancesheader {
+    padding-bottom: 0.25em;
+    border-color: $lightgray2;
+}
+
+/* the font is too small */
+#rirtemplate,
+div.riform,
+#rirtemplate .batching,
+#rirtemplate .start .rlabel {
+    font-size: $font-size;
+}
+
+/* the small 'beginning of recurrence'-label is unreadable and positioned awfully*/
+#rirtemplate .start .rlabel {
+    color: $text-color-light;   
+    font-weight: normal !important;
+    float: right;
+    position: relative;
+}
+
+/* the fields are smashed too close together */
+#riformfields .label, #riformfields .field {
+    margin-top: 1em;
+}
+
+#rirangeoptions div {
+    margin-bottom: 1em;   
+}
+
+/* @end */
