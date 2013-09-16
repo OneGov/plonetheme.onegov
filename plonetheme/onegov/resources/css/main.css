@@ -2042,6 +2042,97 @@ img {
   margin-bottom: 0; }
 
 /* @end */
+/* @group council directory & item */
+.portaltype-seantis-dir-council-item,
+.portaltype-seantis-dir-council-directory {
+  /* council tags */ }
+  .portaltype-seantis-dir-council-item .council-tags h3,
+  .portaltype-seantis-dir-council-directory .council-tags h3 {
+    margin-bottom: 0.5em;
+    font-size: 13px;
+    font-weight: normal;
+    color: #7e7e7e;
+    border-bottom: 1px solid #e5e5e0; }
+  .portaltype-seantis-dir-council-item .council-tag-value,
+  .portaltype-seantis-dir-council-directory .council-tag-value {
+    font-weight: bold; }
+  .portaltype-seantis-dir-council-item .council-tag-pointer,
+  .portaltype-seantis-dir-council-directory .council-tag-pointer {
+    display: none; }
+
+/* @group council directory */
+.portaltype-seantis-dir-council-directory {
+  /* result list columns */
+  /* results list display */
+  /* emphasize the council members' names */
+  /* create some space between address and tags */
+  /* position the image differently */ }
+  .portaltype-seantis-dir-council-directory .council-tags {
+    float: right;
+    width: 40%; }
+  @media screen and (max-width: 979px) {
+    .portaltype-seantis-dir-council-directory .council-tags {
+      float: none;
+      width: 100%; } }
+  .portaltype-seantis-dir-council-directory .directoryResult {
+    padding-top: 1.5em;
+    padding-left: 1em;
+    clear: both; }
+  .portaltype-seantis-dir-council-directory #directoryResultList .directoryInfoText {
+    padding-left: 0; }
+  .portaltype-seantis-dir-council-directory .directoryInfoText > a {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5em; }
+  .portaltype-seantis-dir-council-directory .item-address {
+    margin-bottom: 0.5em; }
+  .portaltype-seantis-dir-council-directory .directory-tags a {
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    display: block;
+    float: left;
+    background: #e7eff0;
+    padding: 0 0.5em;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+    text-decoration: none;
+    font-size: 90%; }
+  .portaltype-seantis-dir-council-directory #landingPageImage {
+    margin: 0 0 1em 1em; }
+
+/* @end */
+/* @group council item */
+.portaltype-seantis-dir-council-item {
+  /* item view columns */
+  /* the address should look normal */ }
+  .portaltype-seantis-dir-council-item .directoryInfoImage,
+  .portaltype-seantis-dir-council-item .council-address {
+    float: left; }
+  .portaltype-seantis-dir-council-item .council-tags {
+    float: right;
+    width: 40%;
+    margin-top: -1.5em; }
+  @media screen and (max-width: 979px) {
+    .portaltype-seantis-dir-council-item .directoryInfoImage,
+    .portaltype-seantis-dir-council-item .council-address,
+    .portaltype-seantis-dir-council-item .council-tags {
+      float: none; } }
+  .portaltype-seantis-dir-council-item .directoryInfoImage {
+    margin-right: 2em; }
+  .portaltype-seantis-dir-council-item .council-address {
+    max-width: 50%; }
+  .portaltype-seantis-dir-council-item .council-address ul {
+    list-style: none;
+    padding-left: 0; }
+  .portaltype-seantis-dir-council-item .council-address ul li {
+    margin-bottom: 0; }
+  .portaltype-seantis-dir-council-item .council-information {
+    margin-top: 1em; }
+  .portaltype-seantis-dir-council-item .full-resolution-portrait {
+    margin-top: 1em; }
+
+/* @end */
 /* @end */
 /* @group seantis.dir.events */
 /* @group event directory columns */
