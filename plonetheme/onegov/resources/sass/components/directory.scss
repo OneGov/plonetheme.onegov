@@ -1,31 +1,124 @@
 /* @group seantis.dir.* directories */
 
-/* search box styles */
-#directorySearch {
-    background-color: $lightgray;
-    padding: 1em;
-}
+/* @group all directory views */
+.seantis-directory-all {
 
-/* intro styles */
-#landingPageIntro {
-    margin-top: -2em;
-}
+    /* search box styles */
+    #directorySearch {
+        background-color: $lightgray;
+        padding: 1em;
+    }
 
-#landingPageText {
-    width: 62.8%;
-}
+     /* directory result columns */
+    #directoryResultList,
+    #directoryResultMap {
+        @include boxsizing(border-box);
+        float: left;
+        width: 50%;
+    }
 
-#landingPageImage {
-    float: right;
-    margin: 2.5em 0 1em 1em;
-}
-
-/* 
+    @media screen and (max-width: 979px) {
+        #directoryResultList,
+        #directoryResultMap {
+            float: none;
+            width: 100%;
+        }
+    }
+    
+    /* 
     hide kml download in the events directory,
     until we can change the output of it to use the icon font
-*/
-ul li#document-action-kml_download {
-    display: none;
+    */
+    ul li#document-action-kml_download {
+        display: none;
+    }
 }
+
+/* @group all directory result views */
+.seantis-directory-results
+{
+    /* intro styles */
+    #landingPageIntro {
+        margin-top: -1em;
+    }
+
+    #landingPageText {
+        width: 62.8%;
+    }
+
+    #landingPageImage {
+        float: right;
+        margin: 2.5em 0 1em 1em;
+    }
+
+    /* directory results */
+    #directoryResultList .directoryInfoText {
+        padding-left: 2em;
+    }
+
+    /* map markers */
+    .directoryResult {
+        position: relative;
+    }
+
+    .directoryMarker {
+        position: absolute;
+    }
+}
+/* @end */
+
+/* @group all directory item views */
+.seantis-directory-items
+{
+    #directoryResultList .directoryInfoText {
+        padding-left: 0;
+    }
+}
+/* @end */
+
+/* @group roadworks directory */
+.portaltype-seantis-dir-roadworks-directory,
+.portaltype-seantis-dir-roadworks-item {
+    #directoryInfo {
+        margin-top: 1em;
+    }
+
+    .directoryResult {
+        margin-bottom: 1.5em;
+    }
+}
+/* @end */
+
+/* @group contacts directory */
+.portaltype-seantis-dir-contacts-directory,
+.portaltype-seantis-dir-contacts-item {
+    #directoryInfo {
+        margin-top: 1em;
+    }
+
+    .directoryResult {
+        margin-bottom: 1.5em;
+    }
+
+    .directoryTypes {
+        @include tag(); 
+        float: none;
+        display: inline-block;
+    }
+
+    .directoryDates ul {
+        padding-left: 0;
+    }
+
+    #directoryInfoPage ul {
+        padding-left: 0;
+    }
+
+    .directoryDates ul li,
+    #directoryInfoPage ul li {
+        margin-bottom: 0;
+    }
+}
+/* @end */
 
 /* @end */
