@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
 NEVER EDIT THIS (MAIN.CSS) FILE!!
 ALL CHANGES WILL BE OVERWRITTEN,
@@ -219,7 +218,11 @@ a,
 /* @end */
 /* @group header */
 #header-delimiter {
+  padding-right: 1em;
   border-top: 5px solid #006fba; }
+
+.row.headerDelimiterWrapper {
+  margin-left: -1em; }
 
 #portal-logo {
   margin: 1.5em 0;
@@ -294,7 +297,7 @@ a,
 #portal-globalnav li.selected {
   padding-bottom: 1em;
   border-bottom: 5px solid #00538c;
-  margin-bottom: -8px; }
+  margin-bottom: -5px; }
 
 /* @end */
 /* @group left navigation */

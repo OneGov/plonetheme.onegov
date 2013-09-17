@@ -101,7 +101,11 @@ a,
 /* @group header */
 
 #header-delimiter {
+  padding-right: 1em;
   border-top: 5px solid $global-navigation-border-color;
+}
+.row.headerDelimiterWrapper {
+  margin-left: -1em;
 }
 #portal-logo {
   margin: 1.5em 0;
@@ -182,7 +186,7 @@ a,
 #portal-globalnav li.selected {
   padding-bottom: 1em;
   border-bottom: 5px solid $global-navigation-border-color-active;
-  margin-bottom: -8px;
+  margin-bottom: -5px;
 }
 
 /* @end */
