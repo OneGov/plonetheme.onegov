@@ -101,11 +101,7 @@ a,
 /* @group header */
 
 #header-delimiter {
-  padding-right: 1em;
   border-top: 5px solid $global-navigation-border-color;
-}
-.row.headerDelimiterWrapper {
-  margin-left: -1em;
 }
 #portal-logo {
   margin: 1.5em 0;
@@ -159,7 +155,6 @@ a,
 #portal-globalnav {
   @include ul($style: 'inline');
   padding-top: 0.75em;
-  margin-left: -1em;
   & > li {
     float: left;
     & .wrapper {
@@ -181,6 +176,15 @@ a,
   }
   & li:first-child {
     margin-left: 0;
+    & .wrapper {
+      padding-left: 0;
+    }
+    &.flyoutActive {
+      margin-left: -1em;
+      & .wrapper {
+        padding-left: 1em;
+      }
+    }
   }
 }
 #portal-globalnav li.selected {
