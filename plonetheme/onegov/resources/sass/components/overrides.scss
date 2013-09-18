@@ -150,6 +150,19 @@ ul.mobileNavigation {
 
 /* @end */
 
+/* @group dialog */
+
+body#plonebrowser #content.dialog-wrapper {
+  font-size: 100%;
+}
+
+body #internallinkcontainer .list.item span,
+body #internallinkcontainer .list.item a {
+  position: static;
+}
+
+/* @end */
+
 /* @group overlays */
 
 #cboxOverlay,
