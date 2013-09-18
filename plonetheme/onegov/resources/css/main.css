@@ -1742,14 +1742,9 @@ table.grid td,
 table.plain th,
 table.plain td,
 table.vertical th,
-table.vertical td {
-  border-top: 1px solid #d9d9d9; }
-
-table.listing thead th,
-table.listing tbody th {
-  border-bottom: 1px solid #d9d9d9; }
-
-table.listing tfoot th {
+table.vertical td,
+table.listing th,
+table.listing td {
   border-top: 1px solid #d9d9d9; }
 
 table.listing.grid th,
