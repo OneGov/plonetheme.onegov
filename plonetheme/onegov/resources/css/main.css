@@ -1089,7 +1089,8 @@ textarea {
 /* @group buttons */
 input[type="submit"],
 input[type="reset"],
-input[type="button"] {
+input[type="button"],
+button.context {
   border: 1px solid #003559;
   border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -1114,7 +1115,10 @@ input[type="button"] {
   input[type="reset"]:active,
   input[type="button"]:hover,
   input[type="button"]:focus,
-  input[type="button"]:active {
+  input[type="button"]:active,
+  button.context:hover,
+  button.context:focus,
+  button.context:active {
     border: 1px solid #991601;
     background-color: #991601;
     background-image: -moz-linear-gradient(top, #c91e00, #991601);
@@ -1126,7 +1130,8 @@ input[type="button"] {
     color: white; }
   input[type="submit"]:active,
   input[type="reset"]:active,
-  input[type="button"]:active {
+  input[type="button"]:active,
+  button.context:active {
     box-shadow: 0 0 0.25em #5b5a54;
     -webkit-box-shadow: 0 0 0.25em #5b5a54;
     -moz-box-shadow: 0 0 0.25em #5b5a54; }
@@ -1897,6 +1902,66 @@ div.listingBar .current {
 /* @group ext js */
 .x-menu-list {
   padding-left: 0; }
+
+/* @end */
+/* @group blog */
+div.blogByLine,
+.discussion .documentByLine {
+  background-color: #f4f4f1;
+  border: 1px solid #e5e5e0;
+  padding: 0.5em;
+  color: #333333;
+  margin-bottom: 0; }
+
+.blogText {
+  padding: 1em 0; }
+
+.discussion .comment {
+  clear: right; }
+.discussion .commentImage {
+  float: left;
+  padding: 0.5em; }
+.discussion .commentBody {
+  border: 1px solid #e5e5e0;
+  border-top-width: 0;
+  padding: 1em; }
+.discussion button.reply-to-comment-button {
+  float: right;
+  margin-top: 0.5em;
+  margin-bottom: 1.5em; }
+.discussion .replyTreeLevel1 {
+  margin-left: 3em; }
+.discussion .replyTreeLevel2 {
+  margin-left: 6em; }
+.discussion .replyTreeLevel3 {
+  margin-left: 9em; }
+.discussion .replyTreeLevel4 {
+  margin-left: 12em; }
+.discussion .replyTreeLevel5,
+.discussion .replyTreeLevel6,
+.discussion .replyTreeLevel7,
+.discussion .replyTreeLevel8,
+.discussion .replyTreeLevel9 {
+  margin-left: 15em; }
+
+.reply {
+  clear: both;
+  border: 1px solid #e5e5e0;
+  margin-top: 0.5em;
+  margin-bottom: 1.5em; }
+  .reply fieldset {
+    padding: 0;
+    margin: 0;
+    padding-bottom: 1em;
+    border-bottom: 0; }
+  .reply fieldset > * {
+    padding: 0 2%; }
+  .reply legend {
+    width: 96%;
+    padding: 2%;
+    margin-bottom: 1em;
+    border-bottom: 1px solid #e5e5e0;
+    background-color: #f4f4f1; }
 
 /* @end */
 /* @group general responsive */

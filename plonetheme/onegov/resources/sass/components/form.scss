@@ -130,7 +130,8 @@ textarea {
 
 input[type="submit"],
 input[type="reset"],
-input[type="button"] {
+input[type="button"],
+button.context {
   @include button_context();
 }
 input.standalone {
