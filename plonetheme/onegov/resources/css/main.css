@@ -1954,7 +1954,8 @@ img {
   /* 
   hide kml download in the events directory,
   until we can change the output of it to use the icon font
-  */ }
+  */
+  /* collective geo map */ }
   .seantis-directory-all #directorySearch {
     background-color: #f4f4f1;
     padding: 1em; }
@@ -1973,6 +1974,8 @@ img {
       width: 100%; } }
   .seantis-directory-all ul li#document-action-kml_download {
     display: none; }
+  .seantis-directory-all #directoryResultMap, .seantis-directory-all #default-cgmap {
+    height: 300px; }
 
 /* @group all directory result views */
 .seantis-directory-results {
@@ -2245,9 +2248,6 @@ img {
 .portaltype-seantis-dir-events-directory #directoryResultMap,
 .portaltype-seantis-dir-events-item #directoryResultMap {
   margin-top: 2em; }
-.portaltype-seantis-dir-events-directory #default-cgmap,
-.portaltype-seantis-dir-events-item #default-cgmap {
-  height: 300px; }
 
 /* @end */
 /* @group tags */
@@ -2359,6 +2359,71 @@ img {
 /* @group event preview form */
 .event-preview-form {
   margin-top: 1em; }
+
+/* @end */
+/* @end */
+/* @group seantis.dir.facility */
+/* @group facility directory columns */
+.facilityInfo {
+  float: left;
+  width: 60%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box; }
+
+.facilityOverview {
+  float: right;
+  width: 40%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box; }
+
+.portaltype-seantis-dir-facility-directory #directoryResultList {
+  width: 100%;
+  padding-right: 1em; }
+
+/* @end */
+/* @group facility overview */
+.facilityOverview {
+  background-color: #f4f4f1;
+  padding: 1.5em; }
+  .facilityOverview #directoryResultMap {
+    width: 100%;
+    margin-bottom: 1em; }
+  .facilityOverview h2 {
+    font-weight: normal; }
+
+/* @end */
+/* @group facility results */
+.portaltype-seantis-dir-facility-directory .directoryResult,
+.portaltype-seantis-dir-facility-item .directoryResult {
+  padding: 1em; }
+.portaltype-seantis-dir-facility-directory .directoryResult h2,
+.portaltype-seantis-dir-facility-item .directoryResult h2 {
+  margin-top: 0; }
+.portaltype-seantis-dir-facility-directory .directoryMarker,
+.portaltype-seantis-dir-facility-item .directoryMarker {
+  top: 1em;
+  right: 1em; }
+.portaltype-seantis-dir-facility-directory .directoryImage,
+.portaltype-seantis-dir-facility-item .directoryImage {
+  padding: 0;
+  margin: 0 25px 5px 0;
+  float: left; }
+.portaltype-seantis-dir-facility-directory .directoryDescription,
+.portaltype-seantis-dir-facility-item .directoryDescription {
+  float: left;
+  width: 70%; }
+.portaltype-seantis-dir-facility-directory .directoryResult.groupSelection,
+.portaltype-seantis-dir-facility-directory .resourceItem.groupSelection,
+.portaltype-seantis-dir-facility-item .directoryResult.groupSelection,
+.portaltype-seantis-dir-facility-item .resourceItem.groupSelection {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  background-color: #f4f4f1 !important; }
 
 /* @end */
 /* @end */

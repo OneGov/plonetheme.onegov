@@ -32,6 +32,11 @@
     ul li#document-action-kml_download {
         display: none;
     }
+
+    /* collective geo map */
+    #directoryResultMap, #default-cgmap {
+        height: $map-height;      
+    }    
 }
 
 /* @group all directory result views */
