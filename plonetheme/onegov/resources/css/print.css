@@ -1,18 +1,32 @@
 /* @group general */
 
+body {
+  font-size: 20px !important;
+}
+
 #header-wrapper,
+#portal-topactions,
 #portal-breadcrumbs,
 #document-actions,
 #column-navigation,
 #column-sidebar,
+#header-delimiter,
 #edit-bar,
 .sl-controls,
 .managePortletsLink,
 #mobile-navbuttons,
 #mobile-navi-wrapper,
+#plone-document-byline,
 #footer,
 #viewlet-below-content
 { display: none !important; }
+
+#page-wrapper {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  border: none;
+}
 
 #content .blockHighlight,
 a {border: none;}
@@ -25,11 +39,45 @@ a {border: none;}
 
 /* @end */
 
+/* @group grid */
+
+#column-content {
+  left: 0;
+  margin-left: 0;
+  width: 100%;
+}
+
+/* @end */
+
 /* @group simplelayout */
 
 .sl-img-small .sl-img-wrapper,
 .sl-img-middle .sl-img-wrapper {
   float: left;
+  margin-bottom: 1em;
+  margin-right: 1em;
+}
+
+/* @end */
+
+/* @group linklists */
+
+#content .linkList,
+#content .subelements-listing,
+#content .topic_listing {
+  list-style none;
+}
+#content .linkList li,
+#content .subelements-listing li,
+#content .topic_listing li {
+  display: inline;
+}
+
+#content .linkList li a,
+#content .subelements-listing li a,
+#content .topic_listing li a {
+  border: 1px solid #aaa;
+  padding: 0.5em 1em;
 }
 
 /* @end */
