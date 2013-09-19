@@ -43,6 +43,7 @@
     <replace css:content="#portal-logo" css:theme="#portal-logo" />
     <replace css:content="#portal-globalnav" css:theme="#portal-globalnav" />
     <replace css:content="#portal-searchbox" css:theme="#portal-searchbox" />
+    <replace css:content="#portal-languageselector-wrapper" css:theme="#portal-languageselector-wrapper" />
     <replace css:content="#portal-personaltools-wrapper" css:theme="#portal-personaltools-wrapper" />
 
     <replace css:content-children="#portal-topactions" css:theme-children="#portal-topactions" />
