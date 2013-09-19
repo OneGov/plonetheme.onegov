@@ -1657,6 +1657,27 @@ dl.actionMenu a:hover,
   content: ' ▼';
   font-size: 10px; }
 
+#portal-languageselector dt {
+  border: 1px solid #e5e5e0;
+  padding: 0.25em 0.5em;
+  margin-top: 0.5em; }
+
+#portal-languageselector dt a:after {
+  font-size: 10px; }
+
+#portal-languageselector.activated dt {
+  background: #f4f4f1; }
+
+#portal-languageselector dd {
+  right: -1px;
+  background: white;
+  border: 1px solid #cccccc;
+  border-top-width: 0; }
+
+#portal-languageselector dd a:hover {
+  background-color: #f4f4f1;
+  color: #ae1e00; }
+
 #folderHeader, #contextHeader {
   border-bottom: 2px solid white; }
 
