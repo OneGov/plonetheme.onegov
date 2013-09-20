@@ -2261,6 +2261,11 @@ ul.mobileNavigation {
   text-decoration: none; }
 
 /* @end */
+/* @group book */
+.portletGoToParent {
+  display: none; }
+
+/* @end */
 /* @group tinymce */
 .mceActionPanel input, .plonebutton {
   color: white !important; }
