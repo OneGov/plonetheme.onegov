@@ -92,8 +92,6 @@ $reservation-available-color: #339933;
 $reservation-partly-available-color: #ff9933;
 $reservation-unavailable-color: #cc3333;
 
-$reservation-unavailable-color-light: lighten($reservation-unavailable-color, 25%);
-
 /* mixins */
 
 @mixin gradient($from, $to) {
