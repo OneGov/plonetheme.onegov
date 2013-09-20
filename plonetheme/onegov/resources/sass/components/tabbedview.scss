@@ -6,7 +6,20 @@
 #tabbedview-searchbox {
   float: right;
   padding: 0.3em;
+  margin-top: 3em;
   width: 10em;
+}
+#tabbedview-header .tabbedview-tabs {
+  margin-right: 12em;
+  ul.formTabs {
+    padding-right: 12em;
+  }
+}
+#tabbedview-header.disabledSearchBox .tabbedview-tabs {
+  margin-right: 0;
+  ul.formTabs {
+    padding-right: 0;
+  }
 }
 #tabbedview-searchbox[disabled] {
   display: none;
