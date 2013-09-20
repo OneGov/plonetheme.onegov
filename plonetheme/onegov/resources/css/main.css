@@ -1189,8 +1189,9 @@ input.standalone {
     background-image: linear-gradient(top, #929292, #7e7e7e);
     color: #e2e1e1; }
 
-input[disabled],
-#plonebrowser input[disabled] {
+input[type="button"][disabled],
+input[type="submit"][disabled],
+button[disabled] {
   border: 1px solid #003559;
   border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -1218,10 +1219,13 @@ input[disabled],
   background-image: -o-linear-gradient(top, rgba(0, 83, 140, 0.3), rgba(0, 53, 89, 0.3));
   background-image: linear-gradient(top, rgba(0, 83, 140, 0.3), rgba(0, 53, 89, 0.3));
   color: rgba(255, 255, 255, 0.3); }
-  input[disabled]:hover, input[disabled]:focus, input[disabled]:active,
-  #plonebrowser input[disabled]:hover,
-  #plonebrowser input[disabled]:focus,
-  #plonebrowser input[disabled]:active {
+  input[type="button"][disabled]:hover, input[type="button"][disabled]:focus, input[type="button"][disabled]:active,
+  input[type="submit"][disabled]:hover,
+  input[type="submit"][disabled]:focus,
+  input[type="submit"][disabled]:active,
+  button[disabled]:hover,
+  button[disabled]:focus,
+  button[disabled]:active {
     border: 1px solid #991601;
     background-color: #991601;
     background-image: -moz-linear-gradient(top, #c91e00, #991601);
@@ -1231,15 +1235,19 @@ input[disabled],
     background-image: -o-linear-gradient(top, #c91e00, #991601);
     background-image: linear-gradient(top, #c91e00, #991601);
     color: white; }
-  input[disabled]:active,
-  #plonebrowser input[disabled]:active {
+  input[type="button"][disabled]:active,
+  input[type="submit"][disabled]:active,
+  button[disabled]:active {
     box-shadow: 0 0 0.25em #5b5a54;
     -webkit-box-shadow: 0 0 0.25em #5b5a54;
     -moz-box-shadow: 0 0 0.25em #5b5a54; }
-  input[disabled]:hover, input[disabled]:focus, input[disabled]:active,
-  #plonebrowser input[disabled]:hover,
-  #plonebrowser input[disabled]:focus,
-  #plonebrowser input[disabled]:active {
+  input[type="button"][disabled]:hover, input[type="button"][disabled]:focus, input[type="button"][disabled]:active,
+  input[type="submit"][disabled]:hover,
+  input[type="submit"][disabled]:focus,
+  input[type="submit"][disabled]:active,
+  button[disabled]:hover,
+  button[disabled]:focus,
+  button[disabled]:active {
     border: 1px solid rgba(0, 53, 89, 0.3);
     background-color: rgba(0, 53, 89, 0.3);
     background-image: -moz-linear-gradient(top, rgba(0, 83, 140, 0.3), rgba(0, 53, 89, 0.3));
