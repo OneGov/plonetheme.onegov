@@ -907,14 +907,35 @@ div.sl-controls {
   content: " ";
   white-space: nowrap; }
 
-.contenttype-subsite {
-  /* MISSING */ }
+.contenttype-subsite:before {
+  font-family: 'icomoon';
+  font-size: 1em;
+  content: "Y ";
+  white-space: nowrap; }
 
-.contenttype-listingblock {
-  /* MISSING */ }
+.contenttype-listingblock:before {
+  font-family: 'icomoon';
+  font-size: 1em;
+  content: "I ";
+  white-space: nowrap; }
 
-.contenttype-addressblock {
-  /* MISSING */ }
+.contenttype-addressblock:before {
+  font-family: 'icomoon';
+  font-size: 1em;
+  content: "I ";
+  white-space: nowrap; }
+
+.contenttype-refegovservice:before {
+  font-family: 'icomoon';
+  font-size: 1em;
+  content: " ";
+  white-space: nowrap; }
+
+.contenttype-shopitemblock:before {
+  font-family: 'icomoon';
+  font-size: 1em;
+  content: "H ";
+  white-space: nowrap; }
 
 /* only show sprites in factory menu for file and image */
 body.template-create_from_template .contenttype-image:before,

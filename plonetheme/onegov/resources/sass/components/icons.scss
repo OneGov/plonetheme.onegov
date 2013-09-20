@@ -105,13 +105,19 @@
   @include icon(' ');
 }
 .contenttype-subsite {
-/* MISSING */
+  @include icon('Y ');
 }
 .contenttype-listingblock {
-/* MISSING */
+  @include icon('I ');
 }
 .contenttype-addressblock {
-/* MISSING */
+  @include icon('I ');
+}
+.contenttype-refegovservice {
+  @include icon(' ');
+}
+.contenttype-shopitemblock {
+  @include icon('H ');
 }
 
 /* only show sprites in factory menu for file and image */
