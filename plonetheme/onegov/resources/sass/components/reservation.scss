@@ -1,0 +1,378 @@
+/* @group seantis.reservation */
+
+/* @group fullcalendar */
+#content {
+    .event-available {
+        background-color: $reservation-available-color !important;
+        border-color: $reservation-available-color  !important;
+
+        .fc-event-time {
+            background-color: $reservation-available-color !important;
+        }
+    }
+
+    .event-partly-available {
+        background-color: $reservation-partly-available-color !important;
+        border-color: $reservation-partly-available-color  !important;
+
+        .fc-event-time {
+            background-color: $reservation-partly-available-color !important;
+        }
+    }
+
+    .event-unavailable {
+        background-color: $reservation-unavailable-color !important;
+        border-color: $reservation-unavailable-color  !important;
+
+        .fc-event-time {
+            background-color: $reservation-unavailable-color !important;
+        }
+    }
+
+    #seantis-overview-calendar .event-available, 
+    #seantis-overview-calendar .event-available .fc-event-skin, 
+    #seantis-overview-calendar .event-available .fc-event-head {
+        background-color: $reservation-available-color !important;
+    }
+
+    #seantis-overview-calendar .event-partly-available, 
+    #seantis-overview-calendar .event-partly-available .fc-event-skin, 
+    #seantis-overview-calendar .event-partly-available .fc-event-head {
+        background-color: $reservation-partly-available-color !important;
+    }
+
+    #seantis-overview-calendar .event-unavailable, 
+    #seantis-overview-calendar .event-unavailable .fc-event-skin, 
+    #seantis-overview-calendar .event-unavailable .fc-event-head {
+        background-color: $reservation-unavailable-color !important;
+    }
+
+    #seantis-overview-calendar {
+        td.groupSelection {
+            color: white;
+        }
+    }
+}
+
+/* @end */
+
+/* @group calendar context-menu */
+.portaltype-seantis-reservation-resource {
+    #miniTip {
+        border: 2px solid $lightgray2;
+        background-color: white;
+    }
+    #miniTip_c {
+        padding: 0;
+        a {
+            display: block;
+            padding: 0 0.5em;
+        }
+        > div {
+            color: black;
+            padding: 0.25em 0.5em;
+            background-color: $lightgray;
+        }
+    }
+}
+/* @end */
+
+/* @group calendar legend */
+.portaltype-seantis-reservation-resource .legend {
+    margin-top: -1em;
+    position: relative;
+    left: -1px;
+    padding-top: 0.25em;
+    padding: 0.25em 0.5em;
+}
+/* @end */
+
+/* @group your reservations */
+.your-reservations, .your-reservations-view {
+    background-color: $lightgray2;
+    padding: 1em;
+    margin-bottom: 1em;
+
+    h1, h2 {
+        margin-top: 0;
+        margin-bottom: 0.5em;
+        font-weight: normal;
+        font-size: $font-size-18;
+    }
+
+    a, span {
+        display: block;
+    }
+
+    .remove-url {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    br {
+        display: none;
+    }
+}
+/* @end */
+
+/* @group manage reservations inline */
+#inline-page {
+    margin-top: 1em;
+    border: 1px solid $lightgray2;
+    padding: 0.5em 1em;
+    position: relative;
+
+    .hint {
+        text-align: center;
+    }
+
+    #inlineClose {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 10;
+    }
+}
+.inline-reservations {
+    background-color: white;
+    position: relative;
+
+}
+/* @end */
+
+/* @group reservations */
+.portaltype-seantis-reservation-resource,
+.monthly-report {
+    .reservation {
+        margin-top: 1em;
+
+        .reservation-title {
+            background-color: $lightgray2;
+            margin-bottom: 0.25em;
+            padding: 0.25em 0.5em;
+        }
+
+        .reservation-title h3 {
+            display: inline;
+            font-weight: normal;
+        }    
+
+        .reservation-delete {
+            float: right;
+            margin-left: 0.5em;
+        }
+
+        .reservation-data,
+        .reservation-timespans {
+            @include boxsizing(border-box);
+        }
+
+        .reservation-data {
+            float: left;
+            width: 50%;
+
+            span {
+                font-weight: bold;
+            }
+
+            span.label {
+                font-weight: normal;
+                margin-right: 0.5em;
+            }
+        }
+
+        .reservation-timespans {
+            float: left;
+            width: 50%;
+        }
+
+        .block-title {
+            font-weight: bold;
+        }
+
+        .reservation-data-update {
+            margin-top: 1em;
+        }
+    }
+}
+/* @end */
+
+/* @group reservation listing side-by-side (as defined in reservation base.css */
+@media screen and (max-width: 979px) {
+    .splitscreen {
+        float: none;
+        clear: both;
+        width: 100%;
+        margin-bottom: $body-line-height;
+    }
+}
+/* @end */
+
+/* @group resource listing */
+.template-resource_listing {
+    .resource-listing,
+    .resource-listing-overview {
+        @include boxsizing(border-box);
+        float: left;
+        margin-bottom: 1em;
+    }
+
+    .resource-listing {
+        width: 60%;
+    }
+
+    .resource-listing-overview {
+        width: 40%;
+    }
+
+    @media screen and (max-width: 979px) {
+        .resource-listing,
+        .resource-listing-overview {
+            float: none;
+            width: 100%;
+        }
+    }
+
+    .resource-listing-entry {
+        margin-right: 1em;
+        padding: 1em;
+
+        h3 {
+            margin-top: 0;
+        }
+    }
+
+    .resource-listing-entry.groupSelection {
+        @include boxshadow(none !important);
+        background-color: $lightgray !important;
+    }
+}
+/* @end */
+
+/* @group resource listing overview */
+.template-resource_listing {
+    .resource-listing-overview {
+        background-color: $lightgray;
+        padding: 1em;
+
+        h2 {
+            font-weight: normal;
+        }
+
+        #seantis-overview-calendar .fc-content {
+            thead th {
+                $background-color: $table-heading-background;
+                font-weight: normal;
+            }
+            tbody {
+                td {
+                    background-color: $page-background;
+                }
+
+                .fc-sat,
+                .fc-sun {
+                    background-color: $lightgray2;
+                }
+            }
+        }
+    }
+}
+
+/* @end */
+
+/* @group overviewlets */
+.overviewlet {
+    .resourceItem {
+        margin-bottom: 1em;
+    }
+}
+
+.overview-utils {
+    ul {
+        @include ul('plain');
+    }
+}
+/* @end */
+
+/* @group monthly report */
+.monthly-report-navigation {
+    background-color: $lightgray;
+    padding: 1.5em;
+
+    h2 {
+        margin: 0;
+        font-weight: normal;
+    }
+
+    .nav-block {
+        float: left;
+        margin: 0 2em 1em 0;
+    }
+
+    .nav-block label {
+        font-weight: normal;
+        display: block;
+    }
+}
+
+.monthly-report {
+    .leftcolumn, .rightcolumn {
+        @include boxsizing(border-box);
+    }
+
+    .leftcolumn {
+        float: left;
+        width: 25%;
+    }
+
+    .rightcolumn {
+        float: left;
+        width: 75%;
+    }
+
+    h3 a {
+        font-size: $font-size-18;
+    }
+
+    .reservation-detail {
+        display: none;
+        background-color: $lightgray;
+        padding: $body-line-height;
+    }
+
+    .reservation-summary {
+        cursor: pointer;
+    }
+
+    .show-details .reservation-detail {
+        display: block;
+    }
+
+    .reservation {
+        margin-top: 0;
+    }
+
+    .reservation-type {
+        margin-bottom: $body-line-height;
+    }
+
+    .reservation-data {
+        clear: both;
+        float: none;
+        width: 100%;
+    }
+}
+
+#content .monthly-report table.timetable {
+    margin-bottom: -1px; /* overlapping borders */
+    min-height: $body-line-height * 2;
+}
+
+table.timetable div.timespan div.occupied {
+    background-color: $reservation-unavailable-color;
+}
+
+/* @end */
+
+/* @end */
