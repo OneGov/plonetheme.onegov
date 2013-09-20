@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 NEVER EDIT THIS (MAIN.CSS) FILE!!
 ALL CHANGES WILL BE OVERWRITTEN,
@@ -1386,6 +1387,28 @@ div.listingBar a {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   background-color: #e7eff0; }
+
+/* @end */
+/* @group onegovBatching */
+div.onegovBatching a, div.onegovBatching span.current {
+  padding: 0.25em 0.5em;
+  vertical-align: middle;
+  text-decoration: none; }
+div.onegovBatching span.current {
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  background-color: #e7eff0; }
+div.onegovBatching .previous:before {
+  font-family: 'icomoon';
+  font-size: 1em;
+  content: " ";
+  white-space: nowrap; }
+div.onegovBatching .next:after {
+  font-family: 'icomoon';
+  font-size: 1em;
+  content: " ";
+  white-space: nowrap; }
 
 /* @end */
 /* @group searchbox */
