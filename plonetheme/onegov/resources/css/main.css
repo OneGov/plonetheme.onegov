@@ -1431,6 +1431,7 @@ div.onegovBatching .next:after {
   #portal-searchbox #searchGadget:focus {
     border-color: #00538c; }
   #portal-searchbox #searchGadget:focus {
+    /* TODO: should this be in a variable? */
     box-shadow: 0 0 0.5em #d9e0e5 inset;
     -webkit-box-shadow: 0 0 0.5em #d9e0e5 inset;
     -moz-box-shadow: 0 0 0.5em #d9e0e5 inset; }
@@ -1494,6 +1495,50 @@ fieldset.livesearchContainer {
 #search-results-bar {
   background-color: #f4f4f1;
   padding: 0.5em; }
+
+/* @end */
+/* @group solr search results */
+#search-results {
+  float: left;
+  width: 72%;
+  margin-left: 3%; }
+
+#portal-searchfacets {
+  float: left;
+  width: 25%; }
+
+#portal-searchfacets h4,
+#available-facets dt {
+  font-size: 138.46%;
+  margin-bottom: 0.5em; }
+
+#selected-facets,
+#available-facets ul {
+  /* padding-left: 0; */
+  list-style: disc;
+  padding-left: 2em;
+  list-style: none;
+  padding-left: 0; }
+  #selected-facets li,
+  #available-facets ul li {
+    display: list-item;
+    margin-bottom: 1em; }
+  #selected-facets li,
+  #available-facets ul li {
+    margin-bottom: 0; }
+
+#selected-facets {
+  margin-bottom: 1em; }
+
+.facetItemTitle {
+  font-weight: bold; }
+
+a.facetRemoveItem,
+a.facetRemoveItem:hover {
+  text-decoration: none; }
+
+#search-results .searchResults {
+  margin-top: 1em; }
 
 /* @end */
 /* @group tabbedview */

@@ -5,7 +5,7 @@
     @include inputfield($full-width:true);
     @include boxshadow(0 0 0.5em $page-bordercolor inset);
     &:focus {
-      // TODO: should this be in a variable?
+      /* TODO: should this be in a variable? */
       @include boxshadow(0 0 0.5em desaturate(lighten($global-navigation-color, 60%), 80%) inset);
     }
   }
@@ -72,6 +72,47 @@ fieldset.livesearchContainer {
 #search-results-bar {
   background-color: $lightgray;
   padding: 0.5em;
+}
+
+/* @end */
+
+/* @group solr search results */
+
+#search-results {
+  float: left;
+  width: 72%;
+  margin-left: 3%;
+}
+#portal-searchfacets {
+  float: left;
+  width: 25%;
+}
+#portal-searchfacets h4,
+#available-facets dt {
+  font-size: $font-size-18;
+  margin-bottom: 0.5em;
+}
+
+#selected-facets,
+#available-facets ul {
+  /* padding-left: 0; */
+  @include ul($style:'plain');
+  li {
+    margin-bottom: 0;
+  }
+}
+#selected-facets {
+  margin-bottom: 1em;
+}
+.facetItemTitle {
+  font-weight: bold;
+}
+a.facetRemoveItem,
+a.facetRemoveItem:hover{
+  text-decoration: none;
+}
+#search-results .searchResults {
+  margin-top: 1em;
 }
 
 /* @end */
