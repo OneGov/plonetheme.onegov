@@ -8,6 +8,9 @@
   padding: 0.3em;
   width: 10em;
 }
+#tabbedview-searchbox[disabled] {
+  display: none;
+}
 #overview_overview .box ul {
   @include ul($style: 'plain');
 }
