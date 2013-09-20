@@ -2174,7 +2174,14 @@ img {
 
   /* invisible banner */
   #banner-image {
-    display: none; } }
+    display: none; }
+
+  /* search facets */
+  #search-results,
+  #portal-searchfacets {
+    margin: 0;
+    float: none;
+    width: auto; } }
 /* @end */
 /* @group mobile landscape */
 @media screen and (max-width: 480px) {
