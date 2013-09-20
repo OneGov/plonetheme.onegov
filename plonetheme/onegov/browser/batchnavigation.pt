@@ -1,0 +1,62 @@
+<!-- Navigation -->
+<tal:batchnavigation
+    define="batch view/batch|nothing;"
+    condition="batch"
+    metal:define-macro="navigation">
+
+    <div class="onegovBatching"
+         i18n:domain="plonetheme.onegov"
+         tal:condition="batch/multiple_pages">
+
+        <a class="previous"
+           tal:condition="batch/has_previous"
+           tal:attributes="href python:view.make_link(batch.previouspage)"
+           i18n:translate="batch_previous_page">Previous Page</a>
+
+        <!-- Link to first -->
+        <span tal:condition="batch/show_link_to_first"
+              class="first">
+            <a class="page"
+               tal:attributes="href python:view.make_link(1)">1</a>
+            <span tal:condition="batch/second_page_not_in_navlist"
+                  tal:omit-tag="">
+                ...
+            </span>
+        </span>
+
+        <!-- Pagelist with links to previous pages for quick navigation -->
+        <a tal:repeat="pagenumber batch/previous_pages"
+           tal:content="pagenumber"
+           tal:attributes="href python:view.make_link(pagenumber)"
+           class="page" />
+
+        <!-- Current page -->
+        <span tal:condition="batch/navlist"
+              tal:content="batch/pagenumber"
+              class="current" />
+
+        <!-- Pagelist with links to next pages for quick navigation -->
+        <a tal:repeat="pagenumber batch/next_pages"
+           tal:content="pagenumber"
+           tal:attributes="href python:view.make_link(pagenumber)"
+           class="page" />
+
+        <!-- Link to last -->
+        <span tal:condition="batch/show_link_to_last"
+              class="last">
+            <span tal:condition="batch/before_last_page_not_in_navlist"
+                  tal:omit-tag="">
+                ...
+            </span>
+            <a class="page"
+               tal:attributes="href python:view.make_link(batch.lastpage)"
+               tal:content="batch/lastpage">3457</a>
+        </span>
+
+        <a class="next"
+           tal:condition="batch/has_next"
+           tal:attributes="href python:view.make_link(batch.nextpage)"
+           i18n:translate="batch_next_page">Next Page</a>
+
+    </div>
+</tal:batchnavigation>
