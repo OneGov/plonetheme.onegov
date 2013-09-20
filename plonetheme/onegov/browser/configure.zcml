@@ -19,4 +19,12 @@
       permission="zope2.View"
       />
 
+  <browser:page
+      name="batchnavigation"
+      for="*"
+      permission="zope.Public"
+      class=".batching.BatchView"
+      layer="plonetheme.onegov.interfaces.IPlonethemeOneGovLayer"
+      />
+
 </configure>
