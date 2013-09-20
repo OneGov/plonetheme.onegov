@@ -14,6 +14,14 @@
     @include boxsizing(border-box);
 }
 
+@media screen and (max-width: 979px) {
+    .facilityInfo, .facilityOverview {
+        float: none;
+        width: 100%;
+    }
+}
+
+
 .portaltype-seantis-dir-facility-directory #directoryResultList {
     width: 100%;
     padding-right: 1em;
@@ -73,5 +81,30 @@
 
 }
 /* @end */
+
+/* @group facility info viewlet */
+.multicalendar .directoryResult {
+    display: none;
+}
+
+.singlecalendar {
+    .directoryResult {
+        padding: 1em;
+        margin-bottom: $body-line-height;
+        background-color: $lightgray;
+
+        h2 {
+            font-weight: normal;
+        }
+
+        .directoryImage,
+        .directoryInfo > div {
+            float: left;
+            margin: 0 2em 1em 0;
+            max-width: 50%;
+        }
+    }
+}
+/* @group */
 
 /* @end */

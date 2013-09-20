@@ -88,6 +88,11 @@ $footer-bg-start: #5b5b54;
 $footer-bg-end: #65655e;
 $footer-border-color: #71716a;
 
+$reservation-available-color: #339933;
+$reservation-partly-available-color: #ff9933;
+$reservation-unavailable-color: #cc3333;
+
+$reservation-unavailable-color-light: lighten($reservation-unavailable-color, 25%);
 
 /* mixins */
 
