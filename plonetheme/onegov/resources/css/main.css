@@ -2501,7 +2501,7 @@ img {
 
 /* @end */
 /* @group calendar legend */
-.legend {
+.portaltype-seantis-reservation-resource .legend {
   margin-top: -1em;
   position: relative;
   left: -1px;
@@ -2549,38 +2549,50 @@ img {
 
 /* @end */
 /* @group reservations */
-.reservation {
+.portaltype-seantis-reservation-resource .reservation,
+.monthly-report .reservation {
   margin-top: 1em; }
-  .reservation .reservation-title {
+  .portaltype-seantis-reservation-resource .reservation .reservation-title,
+  .monthly-report .reservation .reservation-title {
     background-color: #e5e5e0;
     margin-bottom: 0.25em;
     padding: 0.25em 0.5em; }
-  .reservation .reservation-title h3 {
+  .portaltype-seantis-reservation-resource .reservation .reservation-title h3,
+  .monthly-report .reservation .reservation-title h3 {
     display: inline;
     font-weight: normal; }
-  .reservation .reservation-delete {
+  .portaltype-seantis-reservation-resource .reservation .reservation-delete,
+  .monthly-report .reservation .reservation-delete {
     float: right;
     margin-left: 0.5em; }
-  .reservation .reservation-data,
-  .reservation .reservation-timespans {
+  .portaltype-seantis-reservation-resource .reservation .reservation-data,
+  .portaltype-seantis-reservation-resource .reservation .reservation-timespans,
+  .monthly-report .reservation .reservation-data,
+  .monthly-report .reservation .reservation-timespans {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box; }
-  .reservation .reservation-data {
+  .portaltype-seantis-reservation-resource .reservation .reservation-data,
+  .monthly-report .reservation .reservation-data {
     float: left;
     width: 50%; }
-    .reservation .reservation-data span {
+    .portaltype-seantis-reservation-resource .reservation .reservation-data span,
+    .monthly-report .reservation .reservation-data span {
       font-weight: bold; }
-    .reservation .reservation-data span.label {
+    .portaltype-seantis-reservation-resource .reservation .reservation-data span.label,
+    .monthly-report .reservation .reservation-data span.label {
       font-weight: normal;
       margin-right: 0.5em; }
-  .reservation .reservation-timespans {
+  .portaltype-seantis-reservation-resource .reservation .reservation-timespans,
+  .monthly-report .reservation .reservation-timespans {
     float: left;
     width: 50%; }
-  .reservation .block-title {
+  .portaltype-seantis-reservation-resource .reservation .block-title,
+  .monthly-report .reservation .block-title {
     font-weight: bold; }
-  .reservation .reservation-data-update {
+  .portaltype-seantis-reservation-resource .reservation .reservation-data-update,
+  .monthly-report .reservation .reservation-data-update {
     margin-top: 1em; }
 
 /* @end */
@@ -2593,33 +2605,29 @@ img {
     margin-bottom: 1.5em; } }
 /* @end */
 /* @group resource listing */
-.resource-listing,
-.resource-listing-overview {
+.template-resource_listing .resource-listing,
+.template-resource_listing .resource-listing-overview {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   float: left;
   margin-bottom: 1em; }
-
-.resource-listing {
+.template-resource_listing .resource-listing {
   width: 60%; }
-
-.resource-listing-overview {
+.template-resource_listing .resource-listing-overview {
   width: 40%; }
-
 @media screen and (max-width: 979px) {
-  .resource-listing,
-  .resource-listing-overview {
+  .template-resource_listing .resource-listing,
+  .template-resource_listing .resource-listing-overview {
     float: none;
     width: 100%; } }
-.resource-listing-entry {
+.template-resource_listing .resource-listing-entry {
   margin-right: 1em;
   padding: 1em; }
-  .resource-listing-entry h3 {
+  .template-resource_listing .resource-listing-entry h3 {
     margin-top: 0; }
-
-.resource-listing-entry.groupSelection {
+.template-resource_listing .resource-listing-entry.groupSelection {
   box-shadow: none !important;
   -webkit-box-shadow: none !important;
   -moz-box-shadow: none !important;
@@ -2627,17 +2635,17 @@ img {
 
 /* @end */
 /* @group resource listing overview */
-.resource-listing-overview {
+.template-resource_listing .resource-listing-overview {
   background-color: #f4f4f1;
   padding: 1em; }
-  .resource-listing-overview h2 {
+  .template-resource_listing .resource-listing-overview h2 {
     font-weight: normal; }
-  .resource-listing-overview #seantis-overview-calendar .fc-content thead th {
+  .template-resource_listing .resource-listing-overview #seantis-overview-calendar .fc-content thead th {
     font-weight: normal; }
-  .resource-listing-overview #seantis-overview-calendar .fc-content tbody td {
+  .template-resource_listing .resource-listing-overview #seantis-overview-calendar .fc-content tbody td {
     background-color: white; }
-  .resource-listing-overview #seantis-overview-calendar .fc-content tbody .fc-sat,
-  .resource-listing-overview #seantis-overview-calendar .fc-content tbody .fc-sun {
+  .template-resource_listing .resource-listing-overview #seantis-overview-calendar .fc-content tbody .fc-sat,
+  .template-resource_listing .resource-listing-overview #seantis-overview-calendar .fc-content tbody .fc-sun {
     background-color: #e5e5e0; }
 
 /* @end */
