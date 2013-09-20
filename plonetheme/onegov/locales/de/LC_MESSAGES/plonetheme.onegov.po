@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-09-20 09:49+0000\n"
+"POT-Creation-Date: 2013-09-20 15:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,3 +24,10 @@ msgstr "Vorherige Seite"
 
 msgid "direct to"
 msgstr "Direkt zu"
+
+#. Default: "To Top"
+#: ./plonetheme/onegov/viewlets/totop.pt:3
+msgid "label_to_top"
+msgstr "zum Seitenanfang"
+
+

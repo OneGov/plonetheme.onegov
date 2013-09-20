@@ -26,4 +26,9 @@ jQuery(function($) {
     parent.toggleClass('flyoutActive');
     children.toggle();
   });
+
+  $('div.to_top a').click(function(e) {
+    e.preventDefault();
+    $('body').scrollTop(0);
+  });
 });

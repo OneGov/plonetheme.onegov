@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-09-20 15:43+0000\n"
+"POT-Creation-Date: 2013-09-20 15:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -9,26 +9,19 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"Language-Code: en\n"
-"Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: plonetheme.onegov\n"
 
 #. Default: "Next Page"
 #: ./plonetheme/onegov/browser/batchnavigation.pt:56
 msgid "batch_next_page"
-msgstr ""
+msgstr "pagina successiva"
 
 #. Default: "Previous Page"
 #: ./plonetheme/onegov/browser/batchnavigation.pt:11
 msgid "batch_previous_page"
-msgstr ""
-
-msgid "direct to"
-msgstr ""
+msgstr "pagina precedente"
 
 #. Default: "To Top"
 #: ./plonetheme/onegov/viewlets/totop.pt:3
 msgid "label_to_top"
-msgstr ""
-
+msgstr "vai all'inizio pagina"
