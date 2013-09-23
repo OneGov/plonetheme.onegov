@@ -144,7 +144,8 @@ dl.portletNavigationTree img {
 
 
 #portal-topactions ul a[target="_blank"],
-span.link-external a {
+span.link-external a,
+a.external-link {
   @include icon('j ');
 }
 #portal-topactions ul a[target="_blank"]:before {

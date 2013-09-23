@@ -963,7 +963,8 @@ dl.portletNavigationTree img {
   background-image: none; }
 
 #portal-topactions ul a[target="_blank"]:before,
-span.link-external a:before {
+span.link-external a:before,
+a.external-link:before {
   font-family: 'icomoon';
   font-size: 1em;
   content: "j ";
