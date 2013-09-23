@@ -1,0 +1,5 @@
+<div class="to_top" i18n:domain="plonetheme.onegov">
+
+    <a href="#" i18n:translate="label_to_top">To Top</a>
+
+</div>
