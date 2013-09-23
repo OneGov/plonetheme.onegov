@@ -2165,6 +2165,10 @@ img {
     padding: 1em 0;
     margin: 1em 0; }
 
+  /* header */
+  .headerDelimiterWrapper {
+    margin-top: 1em; }
+
   /* searchbox */
   #portal-searchbox {
     border: 1px solid #b7b7b7;
@@ -2191,6 +2195,13 @@ img {
   #portal-languageselector-wrapper,
   #portal-personaltools-wrapper {
     float: none; }
+
+  #portal-personaltools #anon-personalbar {
+    margin-top: 0;
+    position: absolute;
+    right: 0; }
+    #portal-personaltools #anon-personalbar a {
+      font-size: 100%; }
 
   #portal-languageselector,
   #portal-personaltools {
