@@ -13,7 +13,7 @@ msgstr ""
 "Domain: DOMAIN\n"
 
 msgid "Direct to"
-msgstr ""
+msgstr "Diretto"
 
 #. Default: "Next Page"
 #: ./plonetheme/onegov/browser/batchnavigation.pt:56
@@ -34,5 +34,3 @@ msgstr "vai all'inizio pagina"
 #: ./plonetheme/onegov/profiles/default/actions.xml
 msgid "subsite_current_language"
 msgstr "it"
-
-
