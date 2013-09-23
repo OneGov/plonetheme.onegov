@@ -457,6 +457,9 @@ dl.teaser_portlet .portletHeader img {
   display: block;
   margin-bottom: 0.5em; }
 
+.simplelayoutDropZonePortlet h2 {
+  font-weight: normal; }
+
 .managedPortlet {
   border: 1px solid #e5e5e0;
   background-color: #f4f4f1;
