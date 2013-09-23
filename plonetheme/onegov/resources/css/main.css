@@ -1527,6 +1527,9 @@ fieldset.livesearchContainer {
   background-color: #f4f4f1;
   padding: 0.5em; }
 
+.highlightedSearchTerm {
+  background-color: #e7eff0; }
+
 /* @end */
 /* @group solr search results */
 #search-results {

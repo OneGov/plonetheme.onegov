@@ -73,6 +73,9 @@ fieldset.livesearchContainer {
   background-color: $lightgray;
   padding: 0.5em;
 }
+.highlightedSearchTerm {
+  background-color: $search-highlight-background;
+}
 
 /* @end */
 
