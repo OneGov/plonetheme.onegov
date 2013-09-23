@@ -616,6 +616,9 @@ fieldset {
 body.template-subsite_view h1.documentFirstHeading {
   display: none; }
 
+#content-core .subsiteColumns .column {
+  min-height: 1px; }
+
 /* @end */
 /* @group topic listing
 
@@ -2199,7 +2202,7 @@ img {
   #portal-personaltools #anon-personalbar {
     margin-top: 0;
     position: absolute;
-    right: 0; }
+    right: 0.5em; }
     #portal-personaltools #anon-personalbar a {
       font-size: 100%; }
 

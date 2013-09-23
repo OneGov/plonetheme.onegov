@@ -491,6 +491,9 @@ fieldset {
 body.template-subsite_view h1.documentFirstHeading {
   display: none;
 }
+#content-core .subsiteColumns .column {
+  min-height: 1px;
+}
 
 /* @end */
 
