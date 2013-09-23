@@ -27,8 +27,19 @@ jQuery(function($) {
     children.toggle();
   });
 
+  // To top link
   $('div.to_top a').click(function(e) {
     e.preventDefault();
     $('body').scrollTop(0);
   });
+
+  // Toggle languageselector menu
+  $('#toggle_subsitelangs').click(function(e){
+    e.preventDefault();
+    var me = $(this)
+    close_opened(me);
+    me.toggleClass('selected');
+    $('#portal-languageselector dd.actionMenuContent').toggle();
+  });
+
 });

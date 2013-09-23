@@ -17,4 +17,19 @@
     </object>
   </object>
 
+  <object name="mobile_buttons" meta_type="CMF Action Category">
+    <object name="toggle_subsitelangs" meta_type="CMF Action"
+            i18n:domain="plonetheme.onegov">
+      <property name="title" i18n:translate="">subsite_current_language</property>
+      <property name="description" i18n:translate=""></property>
+      <property name="url_expr">string:#</property>
+      <property name="icon_expr"></property>
+      <property name="available_expr">python:context.restrictedTraverse('subsite-languages').available()</property>
+      <property name="permissions">
+        <element value="View"/>
+      </property>
+      <property name="visible">True</property>
+    </object>
+  </object>
+
 </object>

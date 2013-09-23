@@ -2188,17 +2188,33 @@ img {
     border-top: 1px solid #757575; }
 
   /* user menu */
+  #portal-languageselector-wrapper,
+  #portal-personaltools-wrapper {
+    float: none; }
+
+  #portal-languageselector,
   #portal-personaltools {
     width: 100%; }
+    #portal-languageselector .actionMenuContent,
     #portal-personaltools .actionMenuContent {
       border: 1px solid #b7b7b7;
       box-shadow: 0 0 1em #5b5a54;
       -webkit-box-shadow: 0 0 1em #5b5a54;
       -moz-box-shadow: 0 0 1em #5b5a54;
       position: absolute;
-      z-index: 3; }
+      z-index: 3;
+      width: 100%; }
+      #portal-languageselector .actionMenuContent a,
       #portal-personaltools .actionMenuContent a {
+        font-size: 150%;
         padding: 0.5em; }
+
+  #portal-languageselector dt {
+    display: none; }
+
+  #portal-languageselector dd {
+    position: absolute;
+    margin-top: 52px; }
 
   /* invisible banner */
   #banner-image {

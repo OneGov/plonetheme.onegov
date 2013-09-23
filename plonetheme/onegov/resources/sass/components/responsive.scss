@@ -127,6 +127,11 @@ img {
     border-top: 1px solid $input-bordercolor;
   }
   /* user menu */
+  #portal-languageselector-wrapper,
+  #portal-personaltools-wrapper {
+    float: none;
+  }
+  #portal-languageselector,
   #portal-personaltools {
     width: 100%;
     & .actionMenuContent {
@@ -134,11 +139,21 @@ img {
       @include boxshadow(0 0 1em $darkgray);
       position: absolute;
       z-index: 3;
+      width: 100%;
       & a {
+        font-size: 150%;
         padding: 0.5em;
       }
     }
   }
+  #portal-languageselector dt {
+    display: none;
+  }
+  #portal-languageselector dd {
+    position: absolute;
+    margin-top: 52px;
+  }
+
 
   /* invisible banner */
   #banner-image {

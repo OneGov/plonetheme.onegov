@@ -18,21 +18,19 @@ msgstr ""
 #. Default: "Next Page"
 #: ./plonetheme/onegov/browser/batchnavigation.pt:56
 msgid "batch_next_page"
-msgstr "pagina successiva"
+msgstr ""
 
 #. Default: "Previous Page"
 #: ./plonetheme/onegov/browser/batchnavigation.pt:11
 msgid "batch_previous_page"
-msgstr "pagina precedente"
+msgstr ""
 
 #. Default: "To Top"
 #: ./plonetheme/onegov/viewlets/totop.pt:3
 msgid "label_to_top"
-msgstr "vai all'inizio pagina"
+msgstr ""
 
 #. Default: "en"
 #: ./plonetheme/onegov/profiles/default/actions.xml
 msgid "subsite_current_language"
-msgstr "it"
-
-
+msgstr "en"
