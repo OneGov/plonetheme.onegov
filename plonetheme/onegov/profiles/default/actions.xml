@@ -24,7 +24,7 @@
       <property name="description" i18n:translate=""></property>
       <property name="url_expr">string:#</property>
       <property name="icon_expr"></property>
-      <property name="available_expr">python:context.restrictedTraverse('subsite-languages').available()</property>
+      <property name="available_expr">context/subsite-languages/available|nothing</property>
       <property name="permissions">
         <element value="View"/>
       </property>
