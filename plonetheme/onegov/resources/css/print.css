@@ -21,6 +21,7 @@ body {
 #mobile-navi-wrapper,
 #plone-document-byline,
 #footer,
+.to_top,
 .bottom-actions
 { display: none !important; }
 
@@ -143,6 +144,19 @@ h3 {
 
 /* @group comments */
 
+.showAll {
+display: none;
+}
+#viewlet-below-content .discussion {
+  display: block;
+}
+.discussion button,
+.discussion input[type="submit"] {
+  display: none !important;
+}
+.discussion .comment {
+  margin-top: 0.25em;
+}
 #commenting,
 .reply-to-comment-button,
 .commentActions {
