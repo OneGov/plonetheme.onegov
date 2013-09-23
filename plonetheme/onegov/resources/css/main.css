@@ -227,6 +227,9 @@ a,
 
 /* @end */
 /* @group personal tools */
+#portal-personaltools-wrapper {
+  float: right; }
+
 #anon-personalbar > a {
   display: inline;
   border-left: 1px solid #333333;
@@ -1771,6 +1774,9 @@ dl.actionMenu a:hover,
 #user-name:after {
   content: ' ▼';
   font-size: 10px; }
+
+#portal-languageselector-wrapper {
+  float: right; }
 
 #portal-languageselector dt {
   border: 1px solid #e5e5e0;

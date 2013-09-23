@@ -131,6 +131,9 @@ dl.actionMenu a:hover,
 }
 
 //language selector
+#portal-languageselector-wrapper {
+  float: right;
+}
 #portal-languageselector dt {
   border: 1px solid $lightgray2;
   padding: 0.25em 0.5em;

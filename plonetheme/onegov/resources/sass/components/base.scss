@@ -113,6 +113,9 @@ a,
 
 /* @group personal tools */
 
+#portal-personaltools-wrapper {
+  float: right;
+}
 #anon-personalbar > a {
   display: inline;
   border-left: 1px solid $text-color;
