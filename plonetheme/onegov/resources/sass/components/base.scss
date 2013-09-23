@@ -100,6 +100,10 @@ a,
 
 /* @group header */
 
+#header {
+  position: relative;
+  z-index: 2;
+}
 #header-delimiter {
   border-top: 5px solid $global-navigation-border-color;
 }
