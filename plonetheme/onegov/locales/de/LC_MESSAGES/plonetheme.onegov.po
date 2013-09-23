@@ -12,6 +12,9 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
+msgid "Direct to"
+msgstr "Direkt zu"
+
 #. Default: "Next Page"
 #: ./plonetheme/onegov/browser/batchnavigation.pt:56
 msgid "batch_next_page"
@@ -21,9 +24,6 @@ msgstr "Nächste Seite"
 #: ./plonetheme/onegov/browser/batchnavigation.pt:11
 msgid "batch_previous_page"
 msgstr "Vorherige Seite"
-
-msgid "direct to"
-msgstr "Direkt zu"
 
 #. Default: "To Top"
 #: ./plonetheme/onegov/viewlets/totop.pt:3
