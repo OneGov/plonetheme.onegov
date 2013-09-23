@@ -1,7 +1,10 @@
 /* @group general */
 
 body {
-  font-size: 20px !important;
+  /* font-size: 20px !important; */
+}
+.fixedWidth {
+  width: 100%;
 }
 
 #header-wrapper,
@@ -62,17 +65,19 @@ a {border: none;}
 
 /* @group linklists */
 
+.template-subsite_view #page-wrapper .column .portletStaticText .portletItem ul,
 #content .linkList,
 #content .subelements-listing,
 #content .topic_listing {
   list-style none;
 }
+.template-subsite_view #page-wrapper .column .portletStaticText .portletItem ul li,
 #content .linkList li,
 #content .subelements-listing li,
 #content .topic_listing li {
   display: inline;
 }
-
+.template-subsite_view #page-wrapper .column .portletStaticText .portletItem ul li a,
 #content .linkList li a,
 #content .subelements-listing li a,
 #content .topic_listing li a {
