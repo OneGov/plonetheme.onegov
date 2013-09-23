@@ -95,8 +95,12 @@ dl.actionMenu a:hover,
   }
 }
 #portal-personaltools dt {
-  background-color: $lightgray;
-  padding: 0.5em;
+  border: 1px solid $lightgray2;
+  padding: 0 0.5em 0 0.25em;
+  margin-top: 0.5em;
+}
+#portal-personaltools.activated dt {
+  background: $lightgray;
 }
 #portal-personaltools #anon-personalbar {
   background-color: transparent;

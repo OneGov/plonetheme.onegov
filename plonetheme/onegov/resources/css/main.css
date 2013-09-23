@@ -1749,8 +1749,12 @@ dl.actionMenu a:hover,
     margin: 0; }
 
 #portal-personaltools dt {
-  background-color: #f4f4f1;
-  padding: 0.5em; }
+  border: 1px solid #e5e5e0;
+  padding: 0 0.5em 0 0.25em;
+  margin-top: 0.5em; }
+
+#portal-personaltools.activated dt {
+  background: #f4f4f1; }
 
 #portal-personaltools #anon-personalbar {
   background-color: transparent;
