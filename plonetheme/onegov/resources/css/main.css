@@ -1759,8 +1759,8 @@ dl.actionMenu a:hover,
 #portal-personaltools.activated dt {
   background: #f4f4f1; }
 
-#portal-personaltools #anon-personalbar {
-  background-color: transparent;
+#portal-personaltools dt#anon-personalbar {
+  border: none;
   padding: 0;
   margin-top: 0.55em; }
 
