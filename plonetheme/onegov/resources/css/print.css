@@ -184,14 +184,14 @@ div.olButton {
   display: none;
 }
 div.olMapViewport {
-  /* position: absolute !important; */
   display: block;
-  height: 400px !important;
-  width: 400px !important;
 }
 .sl-text-wrapper .addressText,
 .sl-text-wrapper .addressMap {
   float: none;
+}
+#default-cgmap img {
+  max-width: none;
 }
 
 /* @end */
