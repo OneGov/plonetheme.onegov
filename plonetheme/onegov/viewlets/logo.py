@@ -32,7 +32,7 @@ class LogoViewlet(common.LogoViewlet):
         portal = getToolByName(self.context, 'portal_url').getPortalObject()
 #        annotations = IAnnotations(portal)
 #        customstyles = annotations.get('customstyles', OOBTree(DEFAULT_STYLES))
-        url = "%s/++theme++plonetheme.onegov/images/logo_zug.png" % \
+        url = "%s/logo.gif" % \
             portal.absolute_url()
 
 #        if 'css.logo' in customstyles:
