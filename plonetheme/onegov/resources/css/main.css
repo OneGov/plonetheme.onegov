@@ -1014,6 +1014,7 @@ dl.portletNavigationTree img {
 #column-navigation .portletNavigationTree a {
   background-image: none; }
 
+a[target="_blank"]:before,
 #portal-topactions ul a[target="_blank"]:before,
 span.link-external a:before,
 a.external-link:before {
