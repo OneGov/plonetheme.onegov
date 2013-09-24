@@ -697,6 +697,10 @@ div.sl-controls {
   #footer .cell:first-child .portlet {
     border-left: none; }
 
+#bottom-actions {
+  margin-bottom: 0.5em;
+  margin-top: 0.5em; }
+
 /* @end */
 /* @group site-actions */
 #portal-siteactions {
