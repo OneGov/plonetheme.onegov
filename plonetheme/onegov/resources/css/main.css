@@ -1627,10 +1627,14 @@ a.facetRemoveItem:hover {
   margin-top: 1em; }
 
 #tabbedview-searchbox {
-  float: right;
   padding: 0.3em;
-  margin-top: 3em;
+  position: absolute;
+  right: 0;
+  bottom: 0.25em;
   width: 10em; }
+
+#tabbedview-header {
+  position: relative; }
 
 #tabbedview-header .tabbedview-tabs {
   margin-right: 12em; }
