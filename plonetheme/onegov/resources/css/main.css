@@ -637,6 +637,15 @@ body.template-subsite_view h1.documentFirstHeading {
 }
 
 /* @end */
+/* @group news listing */
+.newsListing .tileItem {
+  border-bottom: 1px solid #f4f4f1; }
+
+.newsListing .documentByLine .dtstart {
+  color: #333333;
+  font-weight: bold; }
+
+/* @end */
 /* @group simplelayout */
 div.sl-controls {
   padding-top: 0; }
@@ -2504,6 +2513,15 @@ body {
 
 #banner-image img {
   width: 100%; }
+
+/* @end */
+/* @group izug listing view */
+.template-izug_listing_view .itemDate {
+  font-weight: bold; }
+
+.template-izug_listing_view .itemDate .CustomlistingItem {
+  margin-bottom: 2em;
+  border-bottom: 1px solid #f4f4f1; }
 
 /* @end */
 /* @group subsite */

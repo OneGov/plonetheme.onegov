@@ -514,6 +514,18 @@ body.template-subsite_view h1.documentFirstHeading {
 
 /* @end */
 
+/* @group news listing */
+
+.newsListing .tileItem {
+  border-bottom: 1px solid $lightgray;
+}
+.newsListing .documentByLine .dtstart {
+  color: $text-color;
+  font-weight: bold;
+}
+
+/* @end */
+
 /* @group simplelayout */
 
 div.sl-controls {
