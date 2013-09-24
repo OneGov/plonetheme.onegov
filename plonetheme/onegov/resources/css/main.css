@@ -1577,6 +1577,9 @@ fieldset.livesearchContainer {
 .LSHighlight {
   background-color: #f4f4f1; }
 
+.LSRow.advancedSearch {
+  display: none; }
+
 /* @end */
 /* @group search results */
 .searchResults dt {

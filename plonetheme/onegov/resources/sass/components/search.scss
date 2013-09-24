@@ -60,6 +60,9 @@ fieldset.livesearchContainer {
 .LSHighlight {
   background-color: $lightgray;
 }
+.LSRow.advancedSearch {
+  display: none;
+}
 
 /* @end */
 
