@@ -219,7 +219,7 @@ a,
 /* @group header */
 #header {
   position: relative;
-  z-index: 2; }
+  z-index: 3; }
 
 .logoRow {
   min-height: 6em; }
