@@ -770,13 +770,15 @@ div.sl-controls {
   font-family: 'icomoon';
   font-size: 1em;
   content: "< ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 .contenttype-book:before {
   font-family: 'icomoon';
   font-size: 1em;
   content: "? ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 .contenttype-textblock:before,
 .contenttype-paragraph:before,
@@ -784,7 +786,8 @@ div.sl-controls {
   font-family: 'icomoon';
   font-size: 1em;
   content: "I ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 .contenttype-contact:before,
 .contenttype-ftw_contact:before,
@@ -792,26 +795,30 @@ div.sl-controls {
   font-family: 'icomoon';
   font-size: 1em;
   content: "\\ ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 .contenttype-poodle:before {
   font-family: 'icomoon';
   font-size: 1em;
   content: "a ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 .contenttype-document:before,
 .contenttype-contentpage:before {
   font-family: 'icomoon';
   font-size: 1em;
   content: "_ ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 .contenttype-meeting-item:before {
   font-family: 'icomoon';
   font-size: 1em;
   content: "K ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 .contenttype-billboardcategory:before,
 .contenttype-newsfolder:before,
@@ -822,19 +829,22 @@ div.sl-controls {
   font-family: 'icomoon';
   font-size: 1em;
   content: "] ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 .contenttype-banner:before {
   font-family: 'icomoon';
   font-size: 1em;
   content: "X ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 .contenttype-link:before {
   font-family: 'icomoon';
   font-size: 1em;
   content: " ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 .link-mailto a:before,
 .contenttype-ftw_mail:before,
@@ -842,19 +852,22 @@ div.sl-controls {
   font-family: 'icomoon';
   font-size: 1em;
   content: ". ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 .contenttype-news:before {
   font-family: 'icomoon';
   font-size: 1em;
   content: "a ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 .contenttype-news-item:before {
   font-family: 'icomoon';
   font-size: 1em;
   content: "a ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 .contenttype-event:before,
 .contenttype-eventpage:before,
@@ -862,7 +875,8 @@ div.sl-controls {
   font-family: 'icomoon';
   font-size: 1em;
   content: "e ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 .contenttype-ticket:before,
 .contenttype-poiissue:before,
@@ -870,85 +884,99 @@ div.sl-controls {
   font-family: 'icomoon';
   font-size: 1em;
   content: "8 ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 .contenttype-workspace:before {
   font-family: 'icomoon';
   font-size: 1em;
   content: "% ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 .contenttype-billboardad:before {
   font-family: 'icomoon';
   font-size: 1em;
   content: ": ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 .contenttype-ticket-box:before {
   font-family: 'icomoon';
   font-size: 1em;
   content: "F ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 .contenttype-chapter:before {
   font-family: 'icomoon';
   font-size: 1em;
   content: "# ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 .contenttype-table:before {
   font-family: 'icomoon';
   font-size: 1em;
   content: "L ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 .contenttype-classificationitem:before {
   font-family: 'icomoon';
   font-size: 1em;
   content: " ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 .contenttype-blogentry:before {
   font-family: 'icomoon';
   font-size: 1em;
   content: "N ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 .contenttype-formfolder:before {
   font-family: 'icomoon';
   font-size: 1em;
   content: " ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 .contenttype-subsite:before {
   font-family: 'icomoon';
   font-size: 1em;
   content: "Y ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 .contenttype-listingblock:before {
   font-family: 'icomoon';
   font-size: 1em;
   content: "I ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 .contenttype-addressblock:before {
   font-family: 'icomoon';
   font-size: 1em;
   content: "I ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 .contenttype-refegovservice:before {
   font-family: 'icomoon';
   font-size: 1em;
   content: " ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 .contenttype-shopitemblock:before {
   font-family: 'icomoon';
   font-size: 1em;
   content: "H ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 /* only show sprites in factory menu for file and image */
 body.template-create_from_template .contenttype-image:before,
@@ -956,7 +984,8 @@ body.template-create_from_template .contenttype-image:before,
   font-family: 'icomoon';
   font-size: 1em;
   content: "X ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 body.template-create_from_template .contenttype-file,
 #plone-contentmenu-factories li a.contenttype-file span {
@@ -975,7 +1004,8 @@ a.external-link:before {
   font-family: 'icomoon';
   font-size: 1em;
   content: "j ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 #portal-topactions ul a[target="_blank"]:before {
   color: #00538c; }
@@ -984,19 +1014,22 @@ a.external-link:before {
   font-family: 'icomoon';
   font-size: 1em;
   content: " ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 .portletContextNavigation .parent a:after {
   font-family: 'icomoon';
   font-size: 1em;
   content: " k";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 #portal-globalnav > li > .wrapper a:after {
   font-family: 'icomoon';
   font-size: 1em;
   content: " ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 #portal-globalnav > li > .wrapper a:after {
   color: #00538c;
   font-size: 0.75em; }
@@ -1013,25 +1046,29 @@ a.external-link:before {
   font-family: 'icomoon';
   font-size: 1em;
   content: "";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 #toggle_usermenu:before {
   font-family: 'icomoon';
   font-size: 1em;
   content: "";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 #toggle_search:before {
   font-family: 'icomoon';
   font-size: 1em;
   content: "";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 #slider-panes .sliderPane .prev:before {
   font-family: 'icomoon';
   font-size: 1em;
   content: "";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 #slider-panes .sliderPane .prev:before {
   font-size: 1.75em;
   vertical-align: middle; }
@@ -1040,7 +1077,8 @@ a.external-link:before {
   font-family: 'icomoon';
   font-size: 1em;
   content: "";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 #slider-panes .sliderPane .next:after {
   font-size: 1.75em;
   vertical-align: middle; }
@@ -1437,12 +1475,14 @@ div.onegovBatching .previous:before {
   font-family: 'icomoon';
   font-size: 1em;
   content: " ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 div.onegovBatching .next:after {
   font-family: 'icomoon';
   font-size: 1em;
   content: " ";
-  white-space: nowrap; }
+  white-space: nowrap;
+  line-height: 1em; }
 
 /* @end */
 /* @group searchbox */

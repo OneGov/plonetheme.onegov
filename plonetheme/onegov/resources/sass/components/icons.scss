@@ -3,7 +3,7 @@
   font-size: 1em;
   content: $char;
   white-space: nowrap;
-
+  line-height: 1em;
 }
 @mixin icon($char, $style:'before'){
   @if $style == 'before' {
