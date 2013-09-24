@@ -221,6 +221,9 @@ a,
   position: relative;
   z-index: 2; }
 
+.logoRow {
+  min-height: 6em; }
+
 #header-delimiter {
   border-top: 5px solid #006fba; }
 
