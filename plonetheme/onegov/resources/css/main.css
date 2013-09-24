@@ -2354,6 +2354,11 @@ ul.configlets {
     margin-bottom: 1em; }
 
 /* @end */
+/* @group placeholder portlet */
+dl.portlet.portlet-static-hidden-placeholder {
+  display: none; }
+
+/* @end */
 /* @group tags widget */
 #content .existingTagsHelp,
 #content .newTagsHelp {
