@@ -55,6 +55,7 @@ ul.mobileButtons {
   @include ul($style: 'inline');
   & a {
     text-decoration: none;
+    line-height: 1em;
   }
 }
 ul.mobileNavigation {

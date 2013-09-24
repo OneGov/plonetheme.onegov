@@ -2401,7 +2401,8 @@ ul.mobileButtons {
   ul.mobileButtons li {
     display: inline; }
   ul.mobileButtons a {
-    text-decoration: none; }
+    text-decoration: none;
+    line-height: 1em; }
 
 ul.mobileNavigation {
   padding-left: 0; }
