@@ -97,7 +97,7 @@
     <rules if-content="not(//*[@id='portal-column-one'])">
       <drop css:theme="#column-navigation" />
       <before css:theme-children="#column-content">
-        <xsl:attribute name="class">cell width-13 position-0</xsl:attribute>
+        <xsl:attribute name="class">cell width-12 position-0</xsl:attribute>
       </before>
     </rules>
 
