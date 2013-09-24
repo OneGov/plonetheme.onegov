@@ -2172,7 +2172,10 @@ img {
 /* @group smaller than fixedWidth */
 @media screen and (max-width: 1200px) {
   .fixedWidth {
-    width: 95%; } }
+    width: 95%; }
+
+  .sl-img-wrapper img {
+    height: auto !important; } }
 /* @end */
 /* @group tablet landscape */
 @media screen and (max-width: 979px) {

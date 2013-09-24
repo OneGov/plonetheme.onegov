@@ -16,6 +16,9 @@ img {
   .fixedWidth {
     width: 95%;
   }
+  .sl-img-wrapper img {
+    height: auto !important;
+  }
 
 }
 
