@@ -2,7 +2,7 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:browser="http://namespaces.zope.org/browser"
-    i18n_domain="ftw.mobilenavigation">
+    i18n_domain="plonetheme.onegov">
 
   <browser:page
       for="*"
