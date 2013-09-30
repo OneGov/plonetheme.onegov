@@ -1995,6 +1995,9 @@ dl.error dt {
 
 /* @end */
 /* @group Data tables */
+caption {
+  text-align: left; }
+
 #column-content table {
   margin-bottom: 1em; }
 
