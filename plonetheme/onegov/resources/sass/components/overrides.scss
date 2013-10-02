@@ -15,6 +15,14 @@ ul.configlets {
 
 /* @end */
 
+/* @group placeholder portlet */
+
+dl.portlet.portlet-static-hidden-placeholder {
+  display: none;
+}
+
+/* @end */
+
 /* @group tags widget */
 
 #content .existingTagsHelp,
@@ -47,6 +55,7 @@ ul.mobileButtons {
   @include ul($style: 'inline');
   & a {
     text-decoration: none;
+    line-height: 1em;
   }
 }
 ul.mobileNavigation {
@@ -135,6 +144,14 @@ ul.mobileNavigation {
 
 /* @end */
 
+/* @group book */
+
+.portletGoToParent {
+  display: none;
+}
+
+/* @end */
+
 /* @group tinymce */
 
 .mceActionPanel input, .plonebutton {
@@ -146,6 +163,19 @@ ul.mobileNavigation {
 
 .col-row input {
   width: auto;
+}
+
+/* @end */
+
+/* @group dialog */
+
+body#plonebrowser #content.dialog-wrapper {
+  font-size: 100%;
+}
+
+body #internallinkcontainer .list.item span,
+body #internallinkcontainer .list.item a {
+  position: static;
 }
 
 /* @end */

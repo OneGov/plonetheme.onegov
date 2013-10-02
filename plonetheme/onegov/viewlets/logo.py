@@ -32,7 +32,7 @@ class LogoViewlet(common.LogoViewlet):
         portal = getToolByName(self.context, 'portal_url').getPortalObject()
 #        annotations = IAnnotations(portal)
 #        customstyles = annotations.get('customstyles', OOBTree(DEFAULT_STYLES))
-        url = "%s/++theme++plonetheme.onegov/images/logo_zug.png" % \
+        url = "%s/logo.gif" % \
             portal.absolute_url()
 
 #        if 'css.logo' in customstyles:
@@ -43,7 +43,6 @@ class LogoViewlet(common.LogoViewlet):
 
     def subsite_logo_behaviour(self):
         # Copy of ftw.subsite.viewlets.subsitelogoviewlet
-        portal = self.portal_state.portal()
         self.navigation_root_url = self.portal_state.navigation_root_url()
 
         subsite_logo = getattr(self.context, 'getLogo', None)
@@ -53,11 +52,14 @@ class LogoViewlet(common.LogoViewlet):
         if subsite_logo and subsite_logo() and not in_factory:
             # we are in a subsite
             navigation_root_path = self.portal_state.navigation_root_path()
-            scale = portal.restrictedTraverse(
-                navigation_root_path + '/@@images')
-            self.logo_tag = scale.scale('logo', scale="mini").tag()
+
             self.title = self.context.restrictedTraverse(
                 getNavigationRoot(self.context)).Title()
+
+            self.logo_tag = "<img src='%s/logo' alt='%s Logo' />" % (
+                navigation_root_path,
+                self.title)
+
         else:
             # onegov default
             self.onegov_logo_behaviour()

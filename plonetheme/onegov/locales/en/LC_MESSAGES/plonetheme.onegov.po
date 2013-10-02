@@ -9,10 +9,8 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"Language-Code: en\n"
-"Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: plonetheme.onegov\n"
+"Domain: DOMAIN\n"
 
 msgid "Direct to"
 msgstr ""
@@ -35,5 +33,4 @@ msgstr ""
 #. Default: "en"
 #: ./plonetheme/onegov/profiles/default/actions.xml
 msgid "subsite_current_language"
-msgstr ""
-
+msgstr "en"

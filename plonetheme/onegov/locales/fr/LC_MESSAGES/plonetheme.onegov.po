@@ -9,31 +9,28 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"Language-Code: en\n"
-"Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: plonetheme.onegov\n"
+"Domain: DOMAIN\n"
 
 msgid "Direct to"
-msgstr ""
+msgstr "Lien direct"
 
 #. Default: "Next Page"
 #: ./plonetheme/onegov/browser/batchnavigation.pt:56
 msgid "batch_next_page"
-msgstr ""
+msgstr "page suivante"
 
 #. Default: "Previous Page"
 #: ./plonetheme/onegov/browser/batchnavigation.pt:11
 msgid "batch_previous_page"
-msgstr ""
+msgstr "page précédente"
 
 #. Default: "To Top"
 #: ./plonetheme/onegov/viewlets/totop.pt:3
 msgid "label_to_top"
-msgstr ""
+msgstr "Vers le début de page"
 
 #. Default: "en"
 #: ./plonetheme/onegov/profiles/default/actions.xml
 msgid "subsite_current_language"
-msgstr ""
-
+msgstr "fr"

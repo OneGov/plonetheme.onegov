@@ -44,6 +44,7 @@
     <replace css:content="#portal-globalnav" css:theme="#portal-globalnav" />
     <replace css:content="#portal-searchbox" css:theme="#portal-searchbox" />
     <replace css:content="#portal-personaltools-wrapper" css:theme="#portal-personaltools-wrapper" />
+    <replace css:content="#portal-languageselector-wrapper" css:theme="#portal-languageselector-wrapper" />
 
     <replace css:content-children="#portal-topactions" css:theme-children="#portal-topactions" />
 
@@ -54,6 +55,30 @@
 
     <replace css:content-children="div.documentActions" css:theme-children="#document-actions" />
     <drop css:content="div.documentActions" />
+
+    <!-- document actions: use icon font:
+         - move the text-content to the title attribute
+         - replace the text-content with the one-charactor icon code for the icon font -->
+    <replace css:content-children="#document-action-print a">
+        <xsl:attribute name="title"><xsl:value-of select="text()" /></xsl:attribute>5
+    </replace>
+    <replace css:content-children="#document-action-watch a">
+        <xsl:attribute name="title"><xsl:value-of select="text()" /></xsl:attribute>C
+    </replace>
+    <replace css:content-children="#document-action-addtofavourites a">
+        <xsl:attribute name="title"><xsl:value-of select="text()" /></xsl:attribute>*
+    </replace>
+    <replace css:content-children="#document-action-addtofavorites a">
+        <xsl:attribute name="title"><xsl:value-of select="text()" /></xsl:attribute>*
+    </replace>
+    <replace css:content-children="#document-action-pdf a">
+        <xsl:attribute name="title"><xsl:value-of select="text()" /></xsl:attribute>&#x22;
+    </replace>
+    <replace css:content-children="#document-action-reader a">
+        <xsl:attribute name="title"><xsl:value-of select="text()" /></xsl:attribute>&#x60;
+    </replace>
+
+
 
     <!-- copy missing accesskeys -->
     <replace css:theme-children="#accesskeys" css:content="a[accesskey='2'], a[accesskey='6']" />
@@ -80,7 +105,7 @@
     <rules if-content="not(//*[@id='portal-column-two'])">
       <drop css:theme="#column-sidebar" />
       <before css:theme-children="#column-content">
-        <xsl:attribute name="class">cell width-12 position-4</xsl:attribute>
+        <xsl:attribute name="class">cell width-13 position-3</xsl:attribute>
       </before>
       <!-- even bigger if neither navigation nor sidebar are here -->
       <rules if-content="not(//*[@id='portal-column-one'])">

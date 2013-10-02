@@ -2,6 +2,7 @@
 
 /* @group general responsive */
 
+.sl-img-wrapper,
 img {
   max-width: 100%;
 }
@@ -14,6 +15,9 @@ img {
 
   .fixedWidth {
     width: 95%;
+  }
+  .sl-img-wrapper img {
+    height: auto !important;
   }
 
 }
@@ -106,6 +110,10 @@ img {
     padding: 1em 0;
     margin: 1em 0;
   }
+  /* header */
+  .headerDelimiterWrapper {
+    margin-top: 1em;
+  }
   /* searchbox */
   #portal-searchbox {
     border: 1px solid $mobile-navigation-bordercolor;
@@ -127,6 +135,19 @@ img {
     border-top: 1px solid $input-bordercolor;
   }
   /* user menu */
+  #portal-languageselector-wrapper,
+  #portal-personaltools-wrapper {
+    float: none;
+  }
+  #portal-personaltools #anon-personalbar {
+    margin-top: 0;
+    position: absolute;
+    right: 0.5em;
+    a {
+      font-size: 100%;
+    }
+  }
+  #portal-languageselector,
   #portal-personaltools {
     width: 100%;
     & .actionMenuContent {
@@ -134,15 +155,33 @@ img {
       @include boxshadow(0 0 1em $darkgray);
       position: absolute;
       z-index: 3;
+      width: 100%;
       & a {
+        font-size: 150%;
         padding: 0.5em;
       }
     }
   }
+  #portal-languageselector dt {
+    display: none;
+  }
+  #portal-languageselector dd {
+    position: absolute;
+    margin-top: 52px;
+  }
+
 
   /* invisible banner */
   #banner-image {
     display: none;
+  }
+
+  /* search facets */
+  #search-results,
+  #portal-searchfacets {
+    margin: 0;
+    float: none;
+    width: auto;
   }
 
 }

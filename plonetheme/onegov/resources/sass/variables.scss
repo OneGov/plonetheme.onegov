@@ -24,8 +24,10 @@ $link-textdecoration-hover: underline;
 
 $highlight-color-light: #E7EFF0;
 
+$search-highlight-background: $highlight-color-light;
+
 $border-radius: 3px;
-$input-bordercolor: #cccccc;
+$input-bordercolor: #757575;
 $input-background-color: #f7f7f7;
 
 $input-context-border: #004047;
@@ -62,6 +64,8 @@ $global-navigation-color: #00616c;
 $global-navigation-color-hover: $link-color-hover;
 $global-navigation-color-arrow: #5b696e;
 $global-navigation-flyout-border: #d1d1d1;
+$global-navigation-border-color-active: $global-navigation-color-hover;
+$global-navigation-border-color: $global-navigation-color;
 
 $slider-bg-start: $global-navigation-color;
 $slider-bg-end: #003136;

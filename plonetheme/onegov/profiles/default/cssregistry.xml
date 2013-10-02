@@ -84,17 +84,6 @@
               applyPrefix="True"
               />
 
-  <!--
-      <stylesheet id="++theme++plonetheme.onegov/css/sprites.css"
-      title="" authenticated="False" cacheable="True"
-      compression="safe" conditionalcomment="" cookable="True" enabled="True"
-      expression="request/HTTP_X_THEME_ENABLED | nothing"
-      media="screen" rel="stylesheet"
-      rendering="link"
-      applyPrefix="True"
-      />
-  -->
-
   <stylesheet id="++theme++plonetheme.onegov/css/iefixes.css"
               title="" authenticated="False" cacheable="True"
               compression="safe" conditionalcomment="IE" cookable="True" enabled="True"
@@ -103,17 +92,6 @@
               rendering="link"
               applyPrefix="True"
               />
-
-  <!--
-      <stylesheet id="customstyles.css"
-      title="" authenticated="False" cacheable="True"
-      compression="safe" conditionalcomment="" cookable="True" enabled="True"
-      expression="request/HTTP_X_THEME_ENABLED | nothing"
-      media="" rel="stylesheet"
-      rendering="link"
-      applyPrefix="True"
-      />
-  -->
 
   <stylesheet id="++theme++plonetheme.onegov/css/print.css"
               title="" authenticated="False" cacheable="True"

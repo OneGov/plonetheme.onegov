@@ -100,8 +100,15 @@ a,
 
 /* @group header */
 
+#header {
+  position: relative;
+  z-index: 3;
+}
+.logoRow {
+  min-height: 6em;
+}
 #header-delimiter {
-  border-top: 8px solid $global-navigation-color;
+  border-top: 5px solid $global-navigation-border-color;
 }
 #portal-logo {
   margin: 1.5em 0;
@@ -113,11 +120,14 @@ a,
 
 /* @group personal tools */
 
+#portal-personaltools-wrapper {
+  float: right;
+}
 #anon-personalbar > a {
   display: inline;
   border-left: 1px solid $text-color;
   margin-left: 0.25em;
-  padding-left: 0.25em;
+  padding-left: 0.5em;
 }
 #anon-personalbar > a:first-child {
   margin-left: 0;
@@ -176,12 +186,21 @@ a,
   }
   & li:first-child {
     margin-left: 0;
+    & .wrapper {
+      padding-left: 0;
+    }
+    &.flyoutActive {
+      margin-left: -1em;
+      & .wrapper {
+        padding-left: 1em;
+      }
+    }
   }
 }
 #portal-globalnav li.selected {
   padding-bottom: 1em;
-  border-bottom: 8px solid $global-navigation-color-hover;
-  margin-bottom: -8px;
+  border-bottom: 5px solid $global-navigation-border-color-active;
+  margin-bottom: -5px;
 }
 
 /* @end */
@@ -194,23 +213,27 @@ a,
   & ul {
     @include ul($style: 'plain');
     & li {
-      padding: 0.5em 1em;
       margin-bottom: 0;
+      padding: 0;
       display: block;
-      padding-left: 1.5em;
       & a {
+        padding: 0.5em 1em;
+        display: block;
         text-decoration: none;
+        padding-left: 1.5em;
       }
     }
   }
   & .current {
     border-bottom: 1px solid $lightgray2;
-    padding-left: 0.5em;
+    padding: 0.5em 0.5em;
   }
   & .parent {
     border-bottom: 1px solid $lightgray2;
     @include gradient($navigation-gradient-from, $navigation-gradient-to);
-    padding-left: 0.5em;
+    & a {
+      padding-left: 0.5em;
+    }
   }
 }
 
@@ -343,7 +366,9 @@ dl.teaser_portlet .portletHeader img {
   display: block;
   margin-bottom: 0.5em;
 }
-
+.simplelayoutDropZonePortlet h2 {
+  font-weight: normal;
+}
 
 .managedPortlet {
   border: 1px solid $lightgray2;
@@ -420,6 +445,9 @@ ol {
 .discreet {
   color: $text-color-light;
 }
+.documentDescription {
+  display: none;
+}
 
 /* @end */
 
@@ -472,6 +500,9 @@ fieldset {
 body.template-subsite_view h1.documentFirstHeading {
   display: none;
 }
+#content-core .subsiteColumns .column {
+  min-height: 1px;
+}
 
 /* @end */
 
@@ -479,6 +510,18 @@ body.template-subsite_view h1.documentFirstHeading {
 
 .topic_listing {
   @include linklist();
+}
+
+/* @end */
+
+/* @group news listing */
+
+.newsListing .tileItem {
+  border-bottom: 1px solid $lightgray;
+}
+.newsListing .documentByLine .dtstart {
+  color: $text-color;
+  font-weight: bold;
 }
 
 /* @end */
@@ -532,6 +575,10 @@ div.sl-controls {
     border-left: none;
   }
 }
+#bottom-actions {
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+}
 
 /* @end */
 
@@ -565,6 +612,26 @@ div.sl-controls {
 #login-form label {
   min-width: 8em;
   display: inline-block;
+}
+
+/* @end */
+
+
+/* @group sitemap */
+
+.template-sitemap #content {
+  padding-left: 2em;
+  ul#portal-sitemap {
+    & li {
+      display: list-item;
+      list-style: disc;
+      margin-bottom: 0em;
+      & a:before {
+        /* no content type icons */
+        display: none;
+      }
+    }
+  }
 }
 
 /* @end */

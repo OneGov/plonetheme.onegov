@@ -4,6 +4,9 @@ import os
 version = '1.0.dev0'
 
 tests_require = [
+    'ftw.builder',
+    'ftw.solr',
+    'ftw.testing [splinter]',
     'plone.app.testing',
     'plone.resource',
     'unittest2',

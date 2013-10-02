@@ -29,14 +29,19 @@ jQuery(function($) {
     children.toggle();
   });
 
-  // customstyle helper
-  $("#customstyles-form input[type='text']").focus(function(){
-    $('#style-preview').css(
-      'background',
-      'url(/++theme++plonetheme.onegov/customstyle_images/'+$(this).attr('id')+'.png) no-repeat');
+  // To top link
+  $('div.to_top a').click(function(e) {
+    e.preventDefault();
+    $('html, body').scrollTop(0);
   });
-  $("#customstyles-form input[type='text']").blur(function(){
-    $('#style-preview').css('background', '#eee');
+
+  // Toggle languageselector menu
+  $('#toggle_subsitelangs').click(function(e){
+    e.preventDefault();
+    var me = $(this)
+    close_opened(me);
+    me.toggleClass('selected');
+    $('#portal-languageselector dd.actionMenuContent').toggle();
   });
 
 });

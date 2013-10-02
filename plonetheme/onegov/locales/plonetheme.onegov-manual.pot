@@ -14,5 +14,5 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: plonetheme.onegov"
 
-msgid "direct to"
+msgid "Direct to"
 msgstr ""

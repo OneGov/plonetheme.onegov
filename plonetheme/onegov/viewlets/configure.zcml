@@ -55,4 +55,13 @@
       permission="zope2.View"
       />
 
+  <!-- to top link -->
+  <browser:viewlet
+      name="onegov.totop"
+      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+      class=".totop.ToTopViewlet"
+      permission="zope.Public"
+      layer="plonetheme.onegov.interfaces.IPlonethemeOneGovLayer"
+      />
+
 </configure>
