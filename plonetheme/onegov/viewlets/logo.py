@@ -1,8 +1,9 @@
-#from BTrees.OOBTree import OOBTree
+from BTrees.OOBTree import OOBTree
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.viewlets import common
-#from zope.annotation.interfaces import IAnnotations
+from plonetheme.onegov.browser.customstyles import replace_custom_keywords
+from zope.annotation.interfaces import IAnnotations
 from borg.localrole.interfaces import IFactoryTempFolder
 from plone.app.layout.navigation.root import getNavigationRoot
 import pkg_resources
@@ -30,13 +31,16 @@ class LogoViewlet(common.LogoViewlet):
 
     def onegov_logo_behaviour(self):
         portal = getToolByName(self.context, 'portal_url').getPortalObject()
-#        annotations = IAnnotations(portal)
-#        customstyles = annotations.get('customstyles', OOBTree(DEFAULT_STYLES))
         url = "%s/logo.gif" % \
             portal.absolute_url()
 
-#        if 'css.logo' in customstyles:
-#            url = "%s/customlogo" % portal.absolute_url()
+        annotations = IAnnotations(portal)
+        customstyles = annotations.get('customstyles', OOBTree({}))
+
+        if 'img.logo' in customstyles and len(customstyles['img.logo']):
+            url = replace_custom_keywords(customstyles['img.logo'],
+                                          self.context)
+
         self.logo_tag = "<img src='%s' alt='%s Logo' />" % (
             url,
             portal.Title())

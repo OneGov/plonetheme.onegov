@@ -1,9 +1,11 @@
 import os
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from plone.app.layout.viewlets.common import ViewletBase
+from plonetheme.onegov.browser.customstyles import replace_custom_keywords
 from scss import Scss
 from zope.annotation.interfaces import IAnnotations
-from plone.app.layout.viewlets.common import ViewletBase
+
 
 SCSS_FILES = [
     # "components/zug_variables.scss",
@@ -45,17 +47,19 @@ class CustomStyles(ViewletBase):
 
         # add overwritten component files
         # for now its not possible to add custom styles
-
         self.customstyles = css.compile('\n'.join(scss_input))
+        self.customstyles = replace_custom_keywords(self.customstyles, self.context)
 
     def get_options(self):
         portal = getToolByName(self.context, 'portal_url').getPortalObject()
         options = IAnnotations(portal).get('customstyles', {})
         styles = []
         for key, value in options.items():
-            styles.append('$%s: %s;' % (key.replace('css.',''),
-                                        value))
-        print '\n'.join(styles)
+            if value:
+                styles.append('$%s: %s;' % (key.replace('css.',''),
+                                            value))
+        if self.request.form.get('print_styles', None):
+            print '\n'.join(styles)
         return '\n'.join(styles)
 
     def read_file(self, file_path):

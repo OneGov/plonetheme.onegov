@@ -199,14 +199,11 @@ body.template-customstyles_form #banner-image {
 body.template-customstyles_form label {
   display: block;
 }
-#style-preview {
+#customform-help {
+  margin-top: 1em;
+  padding: 1em;
   @include boxshadow(0.5em 0.5em 0.5em $darkgray);
-  height: 100px;
-  width: 300px;
-  border: 1px solid #eee;
-  position: absolute;
-  top: 0;
-  right: 0;
+  border: 1px solid #aaa;
   background: #eee no-repeat center center;
 }
 

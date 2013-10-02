@@ -1,7 +1,7 @@
 /* @group layout */
 
 body {
-  background: url(../images/bg.png) repeat-x 0 0 $body-background;
+  background: $body-background;
   font-family: $body-font-family;
   font-size: $font-size;
   line-height: $body-line-height;

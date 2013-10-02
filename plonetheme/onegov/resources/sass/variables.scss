@@ -1,6 +1,6 @@
 $body-line-height: 1.5em;
 $body-font-family: Arial;
-$body-background: #ebe8e1;
+$body-background: url(%THEME_URL%/images/bg.png) repeat-x 0 0 #ebe8e1;
 
 $text-color: #32444a;
 $text-color-light: desaturate(lighten($text-color, 25%), 100%);

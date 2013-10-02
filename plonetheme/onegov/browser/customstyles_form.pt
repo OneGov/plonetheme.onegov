@@ -8,12 +8,18 @@
 
   <body>
     <metal:content-core fill-slot="content-core">
-      <metal:content-core define-macro="content-core">
+      <metal:content-core define-macro="content-core"
+                          tal:define="portal context/@@plone_portal_state/portal">
 
         <form action="" method="post" id="customstyles-form"
+              class="enableFormTabbing"
               tal:define="options view/options">
 
-          <tal:field repeat="field view/fields">
+          <fieldset id="fieldset-css" class="formPanel">
+            <legend id="fieldsetlegend-css" i18n:translate="label_custom_css">Custom CSS</legend>
+
+
+          <tal:field repeat="field view/css_fields">
             <div tal:define="field_id field;
                              field_name string:css.${field};
                              field_value python:options.get(field_name, '')"
@@ -26,6 +32,27 @@
             </div>
           </tal:field>
 
+          </fieldset>
+
+        <fieldset id="fieldset-images" class="formPanel">
+          <legend id="fieldsetlegend-images" i18n:translate="label_custom_images">Custom Images</legend>
+<tal:field repeat="field view/img_fields">
+            <div tal:define="field_id field;
+                             field_name string:img.${field};
+                             field_value python:options.get(field_name, '')"
+                 class="field">
+              <label tal:attributes="for field_id" tal:content="field_id" />
+              <input tal:attributes="id field_id;
+                                     name field_name;
+                                     value field_value"
+                     type="text" />
+            </div>
+          </tal:field>
+
+
+        </fieldset>
+
+
           <input type="submit" class="context"
                  name="form.submit" value="Save" />
 
@@ -33,7 +60,11 @@
                  name="form.reset" value="Reset" />
         </form>
 
-        <div id="style-preview">&nbsp;</div>
+        <div id="customform-help">
+            <pre><b>Variables</b></pre>
+            <pre>%PORTAL_URL% = <span tal:content="python:'/'.join(portal.getPhysicalPath())" /></pre>
+            <pre>%THEME_URL%  = <span tal:content="python:'/'.join(portal.getPhysicalPath())" />/++theme++plonetheme.onegov</pre>
+        </div>
 
       </metal:content-core>
     </metal:content-core>
