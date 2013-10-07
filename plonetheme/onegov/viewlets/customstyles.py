@@ -1,7 +1,9 @@
 import os
-from Products.CMFCore.utils import getToolByName
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from plone.app.layout.navigation.root import getNavigationRoot
 from plone.app.layout.viewlets.common import ViewletBase
+from plone.memoize import ram
+from plone.uuid.interfaces import IUUID
 from plonetheme.onegov.browser.customstyles import replace_custom_keywords
 from scss import Scss
 from zope.annotation.interfaces import IAnnotations
@@ -26,14 +28,23 @@ SCSS_FILES = [
     ]
 
 
+
+def cache_key(method, self):
+    uid = IUUID(self.context, str(id(self.context)))
+    return 'customstyles-%s' % uid
+
+
 class CustomStyles(ViewletBase):
 
     index = ViewPageTemplateFile('customstyles.pt')
 
     def update(self):
-        css = Scss()
         self.base_path = os.path.split(__file__)[0]
+        self.customstyles = self.generate_css()
 
+    @ram.cache(cache_key)
+    def generate_css(self):
+        css = Scss()
         scss_input = ['@option compress:no;']
         # add variables
         scss_input.append(self.read_file('variables.scss'))
@@ -47,12 +58,14 @@ class CustomStyles(ViewletBase):
 
         # add overwritten component files
         # for now its not possible to add custom styles
-        self.customstyles = css.compile('\n'.join(scss_input))
-        self.customstyles = replace_custom_keywords(self.customstyles, self.context)
+        styles = css.compile('\n'.join(scss_input))
+        styles = replace_custom_keywords(styles, self.context)
+        return styles
 
     def get_options(self):
-        portal = getToolByName(self.context, 'portal_url').getPortalObject()
-        options = IAnnotations(portal).get('customstyles', {})
+        nav_root = self.context.restrictedTraverse(getNavigationRoot(self.context))
+        print "nav_root: %s" % nav_root
+        options = IAnnotations(nav_root).get('customstyles', {})
         styles = []
         for key, value in options.items():
             if value:

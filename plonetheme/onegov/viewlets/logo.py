@@ -34,7 +34,8 @@ class LogoViewlet(common.LogoViewlet):
         url = "%s/logo.gif" % \
             portal.absolute_url()
 
-        annotations = IAnnotations(portal)
+        annotations = IAnnotations(self.context.restrictedTraverse(
+                getNavigationRoot(self.context)))
         customstyles = annotations.get('customstyles', OOBTree({}))
 
         if 'img.logo' in customstyles and len(customstyles['img.logo']):

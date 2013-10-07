@@ -1,11 +1,16 @@
 from BTrees.OOBTree import OOBTree
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from plone.memoize.interfaces import ICacheChooser
 from zope.annotation.interfaces import IAnnotations
+from zope.component import queryUtility
 from zope.publisher.browser import BrowserView
 
 CUSTOM_STYLE_OPTIONS = [
     "body-background",
+    "body-font-family",
+    "body-line-height",
+    "font-size",
     "global-navigation-color",
     "global-navigation-color-hover",
     "global-navigation-border-color",
@@ -17,7 +22,12 @@ CUSTOM_STYLE_OPTIONS = [
 
 CUSTOM_IMAGE_PATHS = [
     "logo",
-    "favico",
+    "favicon",
+    "startup",
+    "touch_iphone",
+    "touch_iphone_76",
+    "touch_iphone_120",
+    "touch_iphone_152",
     ]
 
 
@@ -38,10 +48,10 @@ class CustomStylesForm(BrowserView):
     template = ViewPageTemplateFile('customstyles_form.pt')
 
     def __call__(self):
-        portal = getToolByName(self.context, 'portal_url').getPortalObject()
+        self.is_subsite = self.context.portal_type == 'Subsite'
         self.css_fields = CUSTOM_STYLE_OPTIONS
         self.img_fields = CUSTOM_IMAGE_PATHS
-        self.annotations = IAnnotations(portal)
+        self.annotations = IAnnotations(self.context)
 
         if self.request.form.get('form.submit', None):
             self.save_values(self.request.form)
@@ -51,12 +61,18 @@ class CustomStylesForm(BrowserView):
 
         return self.template()
 
+
     def save_values(self, items):
         styles = {}
         for key, value in items.items():
             if key.startswith('css.') or key.startswith('img.'):
                 styles[key] = value
         self.annotations['customstyles'] = OOBTree(styles)
+        #invalidate cache
+        func_name = 'plonetheme.onegov.viewlets.customstyles.CustomStyles.generate_css'
+        cache = queryUtility(ICacheChooser)(func_name)
+        cache.ramcache.invalidateAll()
+
 
 
     def options(self):

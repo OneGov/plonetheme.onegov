@@ -20,6 +20,15 @@
       layer="plonetheme.onegov.interfaces.IPlonethemeOneGovLayer"
       />
 
+  <!-- meta viewlet -->
+  <browser:viewlet
+      name="onegov.meta"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      class=".meta.MetaViewlet"
+      permission="zope2.View"
+      layer="plonetheme.onegov.interfaces.IPlonethemeOneGovLayer"
+      />
+
   <!-- searchbox viewlet -->
   <!-- XXX: registered for IItem to overwrite ftw.solr searchbox -->
   <browser:viewlet

@@ -28,7 +28,7 @@
       />
 
   <browser:page
-      for="*"
+      for="plone.app.layout.navigation.interfaces.INavigationRoot"
       name="customstyles_form"
       class=".customstyles.CustomStylesForm"
       permission="zope2.View"
