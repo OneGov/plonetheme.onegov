@@ -95,12 +95,17 @@ dl.actionMenu a:hover,
   }
 }
 #portal-personaltools dt {
-  background-color: $lightgray;
-  padding: 0.5em;
+  border: 1px solid $lightgray2;
+  padding: 0 0.5em 0 0.25em;
+  margin-top: 0.5em;
 }
-#portal-personaltools #anon-personalbar {
-  background-color: transparent;
+#portal-personaltools.activated dt {
+  background: $lightgray;
+}
+#portal-personaltools dt#anon-personalbar {
+  border: none;
   padding: 0;
+  margin-top: 0.55em;
 }
 #portal-personaltools {
   float: right;
@@ -130,6 +135,31 @@ dl.actionMenu a:hover,
   font-size: 10px;
 }
 
+//language selector
+#portal-languageselector-wrapper {
+  float: right;
+}
+#portal-languageselector dt {
+  border: 1px solid $lightgray2;
+  padding: 0.25em 0.5em;
+  margin-top: 0.5em;
+}
+#portal-languageselector dt a:after {
+  font-size: 10px;
+}
+#portal-languageselector.activated dt {
+  background: $lightgray;
+}
+#portal-languageselector dd {
+  right: -1px;
+  background: $page-background;
+  border: 1px solid $page-bordercolor;
+  border-top-width: 0;
+}
+#portal-languageselector dd a:hover {
+  background-color: $lightgray;
+  color: $link-color-hover;
+}
 
 #folderHeader, #contextHeader {
   border-bottom: 2px solid $page-background;

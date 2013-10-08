@@ -55,6 +55,33 @@
   }
 }
 
+@mixin button_destructive() {
+  @include button_context();
+  border: 1px solid $input-destructive-border;
+  @include gradient($input-destructive-bg-start, $input-destructive-bg-end);
+  color: $input-destructive-color;
+
+  &:hover, &:focus, &:active {
+    border: 1px solid $input-destructive-hover-border;
+    @include gradient($input-destructive-hover-bg-start, $input-destructive-hover-bg-end);
+    color: $input-destructive-hover-color;
+  }
+}
+
+@mixin button_disabled() {
+  @include button_context();
+
+  border: 1px solid transparentize($input-context-border, 0.7);
+  @include gradient(transparentize($input-context-bg-start, 0.7), transparentize($input-context-bg-end, 0.7));
+  color: transparentize($input-context-color, 0.7);
+
+  &:hover, &:focus, &:active {
+    border: 1px solid transparentize($input-context-border, 0.7);
+    @include gradient(transparentize($input-context-bg-start, 0.7), transparentize($input-context-bg-end, 0.7));
+    color: transparentize($input-context-color, 0.7);
+  }
+}
+
 /* @group formTabs */
 
 ul.formTabs {
@@ -117,14 +144,22 @@ textarea {
 
 input[type="submit"],
 input[type="reset"],
-input[type="button"] {
+input[type="button"],
+button.context {
   @include button_context();
 }
 input.standalone {
   @include button_standalone();
 }
+input.destructive {
+  @include button_destructive();
+}
+input[type="button"][disabled],
+input[type="submit"][disabled],
+button[disabled] {
+  @include button_disabled();
+}
 /* TODO: inactive buttons */
-/* TODO: destructive buttons */
 
 /* @end */
 

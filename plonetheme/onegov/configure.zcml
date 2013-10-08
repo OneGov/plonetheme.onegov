@@ -10,6 +10,8 @@
   <include package="z3c.autoinclude" file="meta.zcml" />
   <includeDependencies package="." />
 
+  <include file="permissions.zcml" />
+
   <cmf:registerDirectory name="plonetheme_onegov"/>
 
   <include package="plone.resource" file="meta.zcml"/>

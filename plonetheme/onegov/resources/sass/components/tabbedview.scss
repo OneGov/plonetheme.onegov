@@ -4,9 +4,29 @@
   margin-top: 1em;
 }
 #tabbedview-searchbox {
-  float: right;
   padding: 0.3em;
+  position: absolute;
+  right: 0;
+  bottom: 0.25em;
   width: 10em;
+}
+#tabbedview-header {
+  position: relative;
+}
+#tabbedview-header .tabbedview-tabs {
+  margin-right: 12em;
+  ul.formTabs {
+    padding-right: 12em;
+  }
+}
+#tabbedview-header.disabledSearchBox .tabbedview-tabs {
+  margin-right: 0;
+  ul.formTabs {
+    padding-right: 0;
+  }
+}
+#tabbedview-searchbox[disabled] {
+  display: none;
 }
 #overview_overview .box ul {
   @include ul($style: 'plain');

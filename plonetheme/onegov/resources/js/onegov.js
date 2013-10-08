@@ -1,4 +1,6 @@
 jQuery(function($) {
+
+  // flyout navigation
   $('#portal-globalnav > li > .wrapper a').click(function(e){
     e.preventDefault();
     var me = $(this);
@@ -26,4 +28,20 @@ jQuery(function($) {
     parent.toggleClass('flyoutActive');
     children.toggle();
   });
+
+  // To top link
+  $('div.to_top a').click(function(e) {
+    e.preventDefault();
+    $('html, body').scrollTop(0);
+  });
+
+  // Toggle languageselector menu
+  $('#toggle_subsitelangs').click(function(e){
+    e.preventDefault();
+    var me = $(this)
+    close_opened(me);
+    me.toggleClass('selected');
+    $('#portal-languageselector dd.actionMenuContent').toggle();
+  });
+
 });

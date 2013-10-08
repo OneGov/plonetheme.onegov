@@ -13,7 +13,7 @@ class LoadFlyoutChildren(navigation.UpdateMobileNavigation):
         self.request.response.setHeader('X-Theme-Disabled', 'True')
 
         direct_title = '%s %s' % (
-            translate('direct to', domain="plonetheme.onegov", context=self.request).encode('utf8'),
+            translate('Direct to', domain="plonetheme.onegov", context=self.request).encode('utf8'),
             self.context.Title())
 
         subnavi = '<ul class="flyoutChildren">'

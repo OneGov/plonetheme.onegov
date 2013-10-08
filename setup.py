@@ -4,6 +4,9 @@ import os
 version = '1.0.dev0'
 
 tests_require = [
+    'ftw.builder',
+    'ftw.solr',
+    'ftw.testing [splinter]',
     'plone.app.testing',
     'plone.resource',
     'unittest2',
@@ -38,6 +41,7 @@ setup(name='plonetheme.onegov',
         'ftw.slider',
         'setuptools',
         'Missing',
+        'PyScss',
         ],
       tests_require=tests_require,
       extras_require=dict(tests=tests_require),

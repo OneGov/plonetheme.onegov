@@ -1,0 +1,28 @@
+
+/* @group onegovBatching */
+
+div.onegovBatching {
+
+  a, span.current {
+    padding: 0.25em 0.5em;
+    vertical-align: middle;
+    text-decoration: none;
+  }
+
+  span.current {
+    @include borderradius();
+    background-color: #e7eff0;
+  }
+
+  .previous {
+    @include icon(' ');
+  }
+
+  .next {
+    @include icon(' ', $style: 'after');
+  }
+
+}
+
+
+/* @end */
