@@ -1,7 +1,9 @@
+from AccessControl import getSecurityManager
 from BTrees.OOBTree import OOBTree
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.memoize.interfaces import ICacheChooser
+from zExceptions import Unauthorized
 from zope.annotation.interfaces import IAnnotations
 from zope.component import queryUtility
 from zope.publisher.browser import BrowserView
@@ -48,6 +50,8 @@ class CustomStylesForm(BrowserView):
     template = ViewPageTemplateFile('customstyles_form.pt')
 
     def __call__(self):
+        if not self.can_manage_styles():
+            raise Unauthorized
         self.is_subsite = self.context.portal_type == 'Subsite'
         self.css_fields = CUSTOM_STYLE_OPTIONS
         self.img_fields = CUSTOM_IMAGE_PATHS
@@ -60,6 +64,11 @@ class CustomStylesForm(BrowserView):
             self.save_values({})
 
         return self.template()
+
+    def can_manage_styles(self):
+        sm = getSecurityManager()
+        return bool(sm.checkPermission('plonetheme.onegov: Manage Styles',
+                                       self.context))
 
 
     def save_values(self, items):
