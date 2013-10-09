@@ -1,14 +1,16 @@
 <div id="portal-searchbox"
      i18n:domain="plone"
      tal:define="navigation_root_url view/navigation_root_url;
-                 search_input_id view/search_input_id;">
+                 search_input_id view/search_input_id;
+                 has_solr view/has_solr;">
   <a tal:attributes="href view/search_action"
      accesskey="5"
      class="hiddenStructure">Suche</a>
   <form name="searchform" id="searchGadget_form"
         action="@@search"
-        tal:attributes="action string:${view/search_action};
-                        id string:${search_input_id}_form">
+        tal:attributes="action view/search_action;
+                        id string:${search_input_id}_form;
+                        class python: has_solr and 'has-solr' or 'no-solr'">
 
     <div class="LSBox">
       <label class="hiddenStructure"
@@ -20,12 +22,11 @@
              size="18"
              value=""
              title="Search Site"
-             placeholder="Search Site"
              accesskey="4"
-             i18n:attributes="title title_search_site;
-                              placeholder title_search_site;"
+             i18n:attributes="title title_search_site"
              tal:attributes="value request/form/SearchableText|nothing;
-                             id search_input_id"
+                             id search_input_id;
+                             placeholder view/placeholder"
              class="searchField inputLabel" />
 
       <input class="searchButton"
@@ -53,7 +54,7 @@
     </div>
 
   <!-- hidden fields for collective.solr - needed for default facets -->
-  <div tal:condition="view/has_solr" tal:replace="structure view/hiddenfields" />
+  <div tal:condition="has_solr" tal:replace="structure view/hiddenfields" />
 
   </form>
 </div>

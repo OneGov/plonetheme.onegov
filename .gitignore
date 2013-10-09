@@ -14,3 +14,4 @@ parts/
 src/
 var/
 .sass-cache
+/.ruby-version

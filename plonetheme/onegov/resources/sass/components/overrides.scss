@@ -15,6 +15,14 @@ ul.configlets {
 
 /* @end */
 
+/* @group placeholder portlet */
+
+dl.portlet.portlet-static-hidden-placeholder {
+  display: none;
+}
+
+/* @end */
+
 /* @group tags widget */
 
 #content .existingTagsHelp,
@@ -47,6 +55,7 @@ ul.mobileButtons {
   @include ul($style: 'inline');
   & a {
     text-decoration: none;
+    line-height: 1em;
   }
 }
 ul.mobileNavigation {
@@ -135,6 +144,14 @@ ul.mobileNavigation {
 
 /* @end */
 
+/* @group book */
+
+.portletGoToParent {
+  display: none;
+}
+
+/* @end */
+
 /* @group tinymce */
 
 .mceActionPanel input, .plonebutton {
@@ -150,12 +167,44 @@ ul.mobileNavigation {
 
 /* @end */
 
+/* @group dialog */
+
+body#plonebrowser #content.dialog-wrapper {
+  font-size: 100%;
+}
+
+body #internallinkcontainer .list.item span,
+body #internallinkcontainer .list.item a {
+  position: static;
+}
+
+/* @end */
+
 /* @group overlays */
 
 #cboxOverlay,
 #exposeMask {
   background: #000 !important;
   opacity: 0.4;
+}
+
+/* @end */
+
+/* @group customstyles */
+
+body.template-customstyles_form #slider-wrapper,
+body.template-customstyles_form #banner-image {
+  display: none;
+}
+body.template-customstyles_form label {
+  display: block;
+}
+#customform-help {
+  margin-top: 1em;
+  padding: 1em;
+  @include boxshadow(0.5em 0.5em 0.5em $darkgray);
+  border: 1px solid #aaa;
+  background: #eee no-repeat center center;
 }
 
 /* @end */

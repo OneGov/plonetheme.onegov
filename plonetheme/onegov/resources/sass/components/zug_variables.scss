@@ -1,11 +1,16 @@
-$link-color: #003559;
-$link-color-hover: #006FBA;
+$link-color: #00538C;
+$link-color-hover: #AE1E00;
+$text-color: #333333;
 
 $page-background: #FFF;
+$body-background: #EFEFEF;
+$page-bordercolor: #CCC;
 
 $global-navigation-color: $link-color;
 $global-navigation-color-hover: $link-color-hover;
 $global-navigation-color-arrow: $link-color;
+$global-navigation-border-color-active: #00538C;
+$global-navigation-border-color: #006FBA;
 
 $input-context-border: #003559;
 $input-context-bg-start: #00538C;

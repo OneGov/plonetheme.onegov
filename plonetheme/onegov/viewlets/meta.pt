@@ -1,0 +1,26 @@
+<link
+    tal:condition="view/favicon"
+    tal:attributes="href view/favicon"
+    type="image/x-icon" rel="shortcut icon"
+    />
+
+<link tal:condition="view/startup"
+      tal:attributes="href view/startup"
+      rel="apple-touch-startup-image"
+      />
+
+<link tal:attributes="href view/touch_iphone"
+      rel="apple-touch-icon"
+      />
+
+<link tal:attributes="href view/touch_iphone_76"
+      rel="apple-touch-icon" sizes="76x76"
+      />
+
+<link tal:attributes="href view/touch_iphone_120"
+      rel="apple-touch-icon" sizes="120x120"
+      />
+
+<link tal:attributes="href view/touch_iphone_152"
+      rel="apple-touch-icon" sizes="152x152"
+      />

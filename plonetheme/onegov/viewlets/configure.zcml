@@ -20,6 +20,15 @@
       layer="plonetheme.onegov.interfaces.IPlonethemeOneGovLayer"
       />
 
+  <!-- meta viewlet -->
+  <browser:viewlet
+      name="onegov.meta"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      class=".meta.MetaViewlet"
+      permission="zope2.View"
+      layer="plonetheme.onegov.interfaces.IPlonethemeOneGovLayer"
+      />
+
   <!-- searchbox viewlet -->
   <!-- XXX: registered for IItem to overwrite ftw.solr searchbox -->
   <browser:viewlet
@@ -46,6 +55,22 @@
       manager="plone.app.layout.viewlets.interfaces.IPortalTop"
       class=".topactions.TopActionsViewlet"
       permission="zope2.View"
+      />
+
+  <browser:viewlet
+      name="onegov.customstyles"
+      manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+      class=".customstyles.CustomStyles"
+      permission="zope2.View"
+      />
+
+  <!-- to top link -->
+  <browser:viewlet
+      name="onegov.totop"
+      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+      class=".totop.ToTopViewlet"
+      permission="zope.Public"
+      layer="plonetheme.onegov.interfaces.IPlonethemeOneGovLayer"
       />
 
 </configure>

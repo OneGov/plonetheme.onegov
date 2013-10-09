@@ -1,4 +1,5 @@
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from zope.i18n import translate
 import pkg_resources
 
 
@@ -28,3 +29,10 @@ class SearchBoxViewlet(SearchBoxViewlet):
             return "%s/@@search" % self.navigation_root_url
         else:
             return "%s/search" % self.navigation_root_url
+
+    def placeholder(self):
+        default_placeholder = translate('title_search_site',
+                                        domain='plone',
+                                        context=self.request)
+
+        return getattr(self.context, 'search_label', default_placeholder)
