@@ -64,7 +64,6 @@ class CustomStyles(ViewletBase):
 
     def get_options(self):
         nav_root = self.context.restrictedTraverse(getNavigationRoot(self.context))
-        print "nav_root: %s" % nav_root
         options = IAnnotations(nav_root).get('customstyles', {})
         styles = []
         for key, value in options.items():

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-09-23 09:59+0000\n"
+"POT-Creation-Date: 2013-10-11 08:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,12 +25,101 @@ msgstr "Nächste Seite"
 msgid "batch_previous_page"
 msgstr "Vorherige Seite"
 
+msgid "body-background"
+msgstr "Hintergrundfarbe"
+
+msgid "body-font-family"
+msgstr "Schriftart"
+
+msgid "body-line-height"
+msgstr "Zeilenhöhe"
+
+msgid "favicon"
+msgstr "Favicon"
+
+msgid "font-size"
+msgstr "Schriftgrösse"
+
+msgid "global-navigation-border-color"
+msgstr "Farbe Rahmen unter Navigation"
+
+msgid "global-navigation-border-color-active"
+msgstr "Farbe Rahmen unter Navigation, aktives Element"
+
+msgid "global-navigation-color"
+msgstr "Farbe in der Navigation"
+
+msgid "global-navigation-color-hover"
+msgstr "Hover Farbe in der Navigation"
+
+#. Default: "Change the subsite's logo by editing the subsite."
+#: ./plonetheme/onegov/browser/customstyles_form.pt:47
+msgid "help_subsite_custom_logo"
+msgstr "Das Logo kann direkt in der Subsite angepasst werden."
+
+msgid "highlight-color-light"
+msgstr "Farbe für Highlight (bsp: Linklisten)"
+
+#. Default: "Custom CSS"
+#: ./plonetheme/onegov/browser/customstyles_form.pt:20
+msgid "label_custom_css"
+msgstr "Design anpassen"
+
+#. Default: "Custom Images"
+#: ./plonetheme/onegov/browser/customstyles_form.pt:42
+msgid "label_custom_images"
+msgstr "Bilder anpassen"
+
+#. Default: "export styles"
+#: ./plonetheme/onegov/browser/customstyles_form.pt:102
+msgid "label_export_styles"
+msgstr "Exportieren"
+
+#. Default: "import styles"
+#: ./plonetheme/onegov/browser/customstyles_form.pt:97
+msgid "label_import_styles"
+msgstr "Importieren"
+
+#. Default: "Import / Export"
+#: ./plonetheme/onegov/browser/customstyles_form.pt:87
+msgid "label_importexport"
+msgstr "Anpassungen exportieren / importieren"
+
+#. Default: "Reset to OneGov Default"
+#: ./plonetheme/onegov/browser/customstyles_form.pt:115
+msgid "label_reset_styles"
+msgstr "Auf OneGov Standard zurücksetzen"
+
 #. Default: "To Top"
 #: ./plonetheme/onegov/viewlets/totop.pt:3
 msgid "label_to_top"
 msgstr "zum Seitenanfang"
 
+msgid "link-color"
+msgstr "Farbe der Links"
+
+msgid "link-color-hover"
+msgstr "Hover Farbe der Links"
+
+msgid "logo"
+msgstr "Logo"
+
+msgid "startup"
+msgstr "Startup Icon für's iPhone"
+
 #. Default: "en"
 #: ./plonetheme/onegov/profiles/default/actions.xml
 msgid "subsite_current_language"
 msgstr "de"
+
+msgid "touch_iphone"
+msgstr "Touch Icon für's iPhone"
+
+msgid "touch_iphone_120"
+msgstr "Touch Icon für's iPhone (120px)"
+
+msgid "touch_iphone_152"
+msgstr "Touch Icon für's iPhone (152px)"
+
+msgid "touch_iphone_76"
+msgstr "Touch Icon für's iPhone (76px)"

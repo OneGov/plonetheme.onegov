@@ -25,7 +25,10 @@
                                field_name string:css.${field};
                                field_value python:options.get(field_name, '')"
                    class="field">
-                <label tal:attributes="for field_id" tal:content="field_id" />
+                <label tal:attributes="for field_id;
+                                       title field_id"
+                       i18n:translate=""
+                       tal:content="field_id" />
                 <input tal:attributes="id field_id;
                                        name field_name;
                                        value field_value"
@@ -52,7 +55,10 @@
                                    field_name string:img.${field};
                                    field_value python:options.get(field_name, '')"
                        class="field">
-                    <label tal:attributes="for field_id" tal:content="field_id" />
+                    <label tal:attributes="for field_id;
+                                           title field_id"
+                           i18n:translate=""
+                           tal:content="field_id" />
                     <input tal:attributes="id field_id;
                                            name field_name;
                                            value field_value"
@@ -65,7 +71,10 @@
                                  field_name string:img.${field};
                                  field_value python:options.get(field_name, '')"
                      class="field">
-                  <label tal:attributes="for field_id" tal:content="field_id" />
+                  <label tal:attributes="for field_id;
+                                         title field_id"
+                         i18n:translate=""
+                         tal:content="field_id" />
                   <input tal:attributes="id field_id;
                                          name field_name;
                                          value field_value"
@@ -103,9 +112,11 @@
 
 
           <input type="submit" class="context"
+                 i18n:domain="plone" i18n:attributes="value label_save"
                  name="form.submit" value="Save" />
 
           <input type="submit" class="destructive"
+                 i18n:attributes="value label_reset_styles"
                  name="form.reset" value="Reset to OneGov Default" />
         </form>
 

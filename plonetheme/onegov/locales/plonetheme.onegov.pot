@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-09-23 09:59+0000\n"
+"POT-Creation-Date: 2013-10-11 08:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,13 +27,101 @@ msgstr ""
 msgid "batch_previous_page"
 msgstr ""
 
+msgid "body-background"
+msgstr ""
+
+msgid "body-font-family"
+msgstr ""
+
+msgid "body-line-height"
+msgstr ""
+
+msgid "favicon"
+msgstr ""
+
+msgid "font-size"
+msgstr ""
+
+msgid "global-navigation-border-color"
+msgstr ""
+
+msgid "global-navigation-border-color-active"
+msgstr ""
+
+msgid "global-navigation-color"
+msgstr ""
+
+msgid "global-navigation-color-hover"
+msgstr ""
+
+#. Default: "Change the subsite's logo by editing the subsite."
+#: ./plonetheme/onegov/browser/customstyles_form.pt:47
+msgid "help_subsite_custom_logo"
+msgstr ""
+
+msgid "highlight-color-light"
+msgstr ""
+
+#. Default: "Custom CSS"
+#: ./plonetheme/onegov/browser/customstyles_form.pt:20
+msgid "label_custom_css"
+msgstr ""
+
+#. Default: "Custom Images"
+#: ./plonetheme/onegov/browser/customstyles_form.pt:42
+msgid "label_custom_images"
+msgstr ""
+
+#. Default: "export styles"
+#: ./plonetheme/onegov/browser/customstyles_form.pt:102
+msgid "label_export_styles"
+msgstr ""
+
+#. Default: "import styles"
+#: ./plonetheme/onegov/browser/customstyles_form.pt:97
+msgid "label_import_styles"
+msgstr ""
+
+#. Default: "Import / Export"
+#: ./plonetheme/onegov/browser/customstyles_form.pt:87
+msgid "label_importexport"
+msgstr ""
+
+#. Default: "Reset to OneGov Default"
+#: ./plonetheme/onegov/browser/customstyles_form.pt:115
+msgid "label_reset_styles"
+msgstr ""
+
 #. Default: "To Top"
 #: ./plonetheme/onegov/viewlets/totop.pt:3
 msgid "label_to_top"
 msgstr ""
 
-#. Default: "en"
+msgid "link-color"
+msgstr ""
+
+msgid "link-color-hover"
+msgstr ""
+
+msgid "logo"
+msgstr ""
+
+msgid "startup"
+msgstr ""
+
 #: ./plonetheme/onegov/profiles/default/actions.xml
 msgid "subsite_current_language"
+msgstr ""
+
+msgid "touch_iphone"
+msgstr ""
+
+msgid "touch_iphone_120"
+msgstr ""
+
+msgid "touch_iphone_152"
+msgstr ""
+
+msgid "touch_iphone_76"
 msgstr ""
 

@@ -16,3 +16,57 @@ msgstr ""
 
 msgid "Direct to"
 msgstr ""
+
+msgid "body-background"
+msgstr ""
+
+msgid "body-font-family"
+msgstr ""
+
+msgid "body-line-height"
+msgstr ""
+
+msgid "font-size"
+msgstr ""
+
+msgid "global-navigation-color"
+msgstr ""
+
+msgid "global-navigation-color-hover"
+msgstr ""
+
+msgid "global-navigation-border-color"
+msgstr ""
+
+msgid "global-navigation-border-color-active"
+msgstr ""
+
+msgid "highlight-color-light"
+msgstr ""
+
+msgid "link-color"
+msgstr ""
+
+msgid "link-color-hover"
+msgstr ""
+
+msgid "logo"
+msgstr ""
+
+msgid "favicon"
+msgstr ""
+
+msgid "startup"
+msgstr ""
+
+msgid "touch_iphone"
+msgstr ""
+
+msgid "touch_iphone_76"
+msgstr ""
+
+msgid "touch_iphone_120"
+msgstr ""
+
+msgid "touch_iphone_152"
+msgstr ""
