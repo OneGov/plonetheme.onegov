@@ -1,3 +1,8 @@
+import copy
+import json
+
+from zope.component import getUtility
+from plone.i18n.normalizer.interfaces import IIDNormalizer
 from AccessControl import getSecurityManager
 from BTrees.OOBTree import OOBTree
 from Products.CMFCore.utils import getToolByName
@@ -60,6 +65,15 @@ class CustomStylesForm(BrowserView):
         if self.request.form.get('form.submit', None):
             self.save_values(self.request.form)
 
+        if self.request.form.get('form.export', None):
+            return self.export_styles(download=True)
+
+        if self.request.form.get('form.import', None):
+            upload = self.request.form.get('import_styles', None)
+            if upload:
+                self.import_styles(json.loads(upload.read()))
+
+
         if self.request.form.get('form.reset', None):
             self.save_values({})
 
@@ -69,7 +83,6 @@ class CustomStylesForm(BrowserView):
         sm = getSecurityManager()
         return bool(sm.checkPermission('plonetheme.onegov: Manage Styles',
                                        self.context))
-
 
     def save_values(self, items):
         styles = {}
@@ -82,7 +95,26 @@ class CustomStylesForm(BrowserView):
         cache = queryUtility(ICacheChooser)(func_name)
         cache.ramcache.invalidateAll()
 
+    def export_styles(self, download=False):
+        """Returns a json file containing the styles.
+        """
+        if download:
+            normalizer = getUtility(IIDNormalizer)
+            normalized_title = normalizer.normalize(self.context.Title())
+            self.context.REQUEST.RESPONSE.setHeader(
+                'Content-Type',
+                'text/json; charset=utf-8')
+            self.context.REQUEST.RESPONSE.setHeader(
+                'Content-disposition',
+                'attachment; filename=customstyles_%s.json' % normalized_title)
 
+        styles = copy.deepcopy(self.annotations['customstyles'])
+        return json.dumps(dict(styles))
+
+    def import_styles(self, styles):
+        """Imports styles to annotations.
+        """
+        self.save_values(items=styles)
 
     def options(self):
         return self.annotations.get('customstyles', {})

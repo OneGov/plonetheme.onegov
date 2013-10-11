@@ -12,6 +12,7 @@
                           tal:define="portal context/@@plone_portal_state/portal">
 
         <form action="" method="post" id="customstyles-form"
+              enctype="multipart/form-data"
               class="enableFormTabbing"
               tal:define="options view/options">
 
@@ -47,16 +48,16 @@
                   </a>
                 </tal:subsite>
                 <tal:nosubsite condition="not:view/is_subsite">
-                <div tal:define="field_id field;
-                                 field_name string:img.${field};
-                                 field_value python:options.get(field_name, '')"
-                     class="field">
-                  <label tal:attributes="for field_id" tal:content="field_id" />
-                  <input tal:attributes="id field_id;
-                                         name field_name;
-                                         value field_value"
-                         type="text" />
-                </div>
+                  <div tal:define="field_id field;
+                                   field_name string:img.${field};
+                                   field_value python:options.get(field_name, '')"
+                       class="field">
+                    <label tal:attributes="for field_id" tal:content="field_id" />
+                    <input tal:attributes="id field_id;
+                                           name field_name;
+                                           value field_value"
+                           type="text" />
+                  </div>
                 </tal:nosubsite>
               </tal:logo>
               <tal:others condition="python: field != 'logo'">
@@ -74,6 +75,30 @@
             </tal:field>
 
 
+          </fieldset>
+
+          <fieldset id="fieldset-importexport">
+            <legend id="fieldsetlegend-importexport" i18n:translate="label_importexport">Import / Export</legend>
+            <div class="field">
+              <input type="file" name="import_styles" />
+            </div>
+            <div class="field">
+              <!-- hidden action button for hitting the enter key :-) -->
+              <input type="submit" class="context"
+                     style="display: none"
+                     name="form.submit" value="Save" />
+
+              <input type="submit"
+                     class="context"
+                     name="form.import"
+                     i18n:attributes="value label_import_styles"
+                     value="import styles" />
+              <input type="submit"
+                     class="context"
+                     name="form.export"
+                     i18n:attributes="value label_export_styles"
+                     value="export styles" />
+            </div>
           </fieldset>
 
 

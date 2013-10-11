@@ -50,7 +50,7 @@ class CustomStyles(ViewletBase):
         scss_input.append(self.read_file('variables.scss'))
 
         # add overwritten variables
-        scss_input.append(self.get_options())
+        scss_input.append(self.get_options().encode('utf8'))
 
         # add component files
         for scss_file in SCSS_FILES:
