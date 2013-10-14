@@ -89,7 +89,7 @@ class CustomStylesForm(BrowserView):
         for key, value in items.items():
             if key.startswith('css.') or key.startswith('img.'):
                 styles[key] = value
-        self.annotations['customstyles'] = OOBTree(styles)
+        self.annotations['onegov.customstyles'] = OOBTree(styles)
         #invalidate cache
         func_name = 'plonetheme.onegov.viewlets.customstyles.CustomStyles.generate_css'
         cache = queryUtility(ICacheChooser)(func_name)
@@ -108,7 +108,7 @@ class CustomStylesForm(BrowserView):
                 'Content-disposition',
                 'attachment; filename=customstyles_%s.json' % normalized_title)
 
-        styles = copy.deepcopy(self.annotations['customstyles'])
+        styles = copy.deepcopy(self.annotations['onegov.customstyles'])
         return json.dumps(dict(styles))
 
     def import_styles(self, styles):
@@ -117,4 +117,4 @@ class CustomStylesForm(BrowserView):
         self.save_values(items=styles)
 
     def options(self):
-        return self.annotations.get('customstyles', {})
+        return self.annotations.get('onegov.customstyles', {})

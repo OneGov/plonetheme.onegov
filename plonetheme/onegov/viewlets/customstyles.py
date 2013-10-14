@@ -64,7 +64,7 @@ class CustomStyles(ViewletBase):
 
     def get_options(self):
         nav_root = self.context.restrictedTraverse(getNavigationRoot(self.context))
-        options = IAnnotations(nav_root).get('customstyles', {})
+        options = IAnnotations(nav_root).get('onegov.customstyles', {})
         styles = []
         for key, value in options.items():
             if value:
