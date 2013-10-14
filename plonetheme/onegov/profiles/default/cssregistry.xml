@@ -75,15 +75,6 @@
               applyPrefix="True"
               />
 
-  <stylesheet id="++theme++plonetheme.onegov/css/main.css"
-              title="" authenticated="False" cacheable="True"
-              compression="safe" conditionalcomment="" cookable="True" enabled="True"
-              expression="request/HTTP_X_THEME_ENABLED | nothing"
-              media="" rel="stylesheet"
-              rendering="link"
-              applyPrefix="True"
-              />
-
   <stylesheet id="++theme++plonetheme.onegov/css/iefixes.css"
               title="" authenticated="False" cacheable="True"
               compression="safe" conditionalcomment="IE" cookable="True" enabled="True"

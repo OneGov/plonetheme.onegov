@@ -190,6 +190,18 @@ body #internallinkcontainer .list.item a {
 
 /* @end */
 
+/* @group izug listing view */
+
+.template-izug_listing_view .itemDate {
+  font-weight: bold;
+}
+.template-izug_listing_view .CustomlistingItem {
+  margin-bottom: 2em;
+  border-bottom: 1px solid $lightgray;
+}
+
+/* @end */
+
 /* @group customstyles */
 
 body.template-customstyles_form #slider-wrapper,
