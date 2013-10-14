@@ -87,7 +87,9 @@ class CustomStylesForm(BrowserView):
     def save_values(self, items):
         styles = {}
         for key, value in items.items():
-            if key.startswith('css.') or key.startswith('img.'):
+            if key.startswith('css.') or \
+                    key.startswith('img.') or \
+                    key == 'custom_scss':
                 styles[key] = value
         self.annotations['onegov.customstyles'] = OOBTree(styles)
         #invalidate cache

@@ -1,3 +1,5 @@
+var c=0;
+
 jQuery(function($) {
 
   // flyout navigation
@@ -42,6 +44,13 @@ jQuery(function($) {
     close_opened(me);
     me.toggleClass('selected');
     $('#portal-languageselector dd.actionMenuContent').toggle();
+  });
+
+  // customstyles :-)
+  $('#fieldsetlegend-importexport').click(function(e){
+    if (c==0) setTimeout("c=0;", 2000);
+    c += 1;
+    if (c==10) $('#custom-scss-field').fadeIn('slow');
   });
 
 });

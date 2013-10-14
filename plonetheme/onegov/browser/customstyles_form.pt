@@ -108,6 +108,12 @@
                      i18n:attributes="value label_export_styles"
                      value="export styles" />
             </div>
+
+            <div class="field" style="display:none" id="custom-scss-field">
+              <label for="custom-scss" i18n:translate="label_custom_scss">Custom SCSS - be careful</label>
+              <textarea id="custom-scss" name="custom_scss" rows="20"
+                        tal:content="python:options.get('custom_scss','')"></textarea>
+            </div>
           </fieldset>
 
 

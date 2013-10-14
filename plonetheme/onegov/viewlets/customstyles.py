@@ -67,11 +67,11 @@ class CustomStyles(ViewletBase):
         options = IAnnotations(nav_root).get('onegov.customstyles', {})
         styles = []
         for key, value in options.items():
-            if value:
+            if value and key.startswith('css.'):
                 styles.append('$%s: %s;' % (key.replace('css.',''),
                                             value))
-        if self.request.form.get('print_styles', None):
-            print '\n'.join(styles)
+            if value and key == 'custom_scss':
+                styles.append(value)
         return '\n'.join(styles)
 
     def read_file(self, file_path):
