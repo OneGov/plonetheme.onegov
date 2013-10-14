@@ -24,6 +24,7 @@
   border: 1px solid $input-context-border;
   @include borderradius();
   @include gradient($input-context-bg-start, $input-context-bg-end);
+  font-family: $body-font-family;
   color: $input-context-color;
   padding: 0.5em 1em;
   margin: 0.5em 0.5em 0 0;
