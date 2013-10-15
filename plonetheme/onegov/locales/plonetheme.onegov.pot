@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-10-11 08:09+0000\n"
+"POT-Creation-Date: 2013-10-15 06:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,6 +15,10 @@ msgstr ""
 "Domain: plonetheme.onegov\n"
 
 msgid "Direct to"
+msgstr ""
+
+#: ./plonetheme/onegov/profiles/default/actions.xml
+msgid "Manage styles"
 msgstr ""
 
 #. Default: "Next Page"
@@ -72,23 +76,28 @@ msgstr ""
 msgid "label_custom_images"
 msgstr ""
 
+#. Default: "Custom SCSS - be careful"
+#: ./plonetheme/onegov/browser/customstyles_form.pt:113
+msgid "label_custom_scss"
+msgstr ""
+
 #. Default: "export styles"
-#: ./plonetheme/onegov/browser/customstyles_form.pt:102
+#: ./plonetheme/onegov/browser/customstyles_form.pt:105
 msgid "label_export_styles"
 msgstr ""
 
 #. Default: "import styles"
-#: ./plonetheme/onegov/browser/customstyles_form.pt:97
+#: ./plonetheme/onegov/browser/customstyles_form.pt:100
 msgid "label_import_styles"
 msgstr ""
 
 #. Default: "Import / Export"
-#: ./plonetheme/onegov/browser/customstyles_form.pt:87
+#: ./plonetheme/onegov/browser/customstyles_form.pt:90
 msgid "label_importexport"
 msgstr ""
 
 #. Default: "Reset to OneGov Default"
-#: ./plonetheme/onegov/browser/customstyles_form.pt:115
+#: ./plonetheme/onegov/browser/customstyles_form.pt:124
 msgid "label_reset_styles"
 msgstr ""
 

@@ -221,5 +221,9 @@ body.template-customstyles_form label {
 textarea#custom-scss {
   font-family: Courier New;
 }
+#portal-siteactions li#siteaction-manage_styles {
+  border-left: none;
+  float: right;
+}
 
 /* @end */

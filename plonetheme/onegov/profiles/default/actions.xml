@@ -32,4 +32,22 @@
     </object>
   </object>
 
+  <object name="site_actions" meta_type="CMF Action Category">
+    <object name="manage_styles" meta_type="CMF Action"
+            i18n:domain="plonetheme.onegov">
+      <property name="title" i18n:translate="">Manage styles</property>
+      <property name="description" i18n:translate=""></property>
+      <property
+          name="url_expr">string:${object/absolute_url}/customstyles_form</property>
+      <property name="link_target"></property>
+      <property name="icon_expr"></property>
+      <property
+          name="available_expr">python:context.portal_type in ['Plone Site', 'Subsite']</property>
+      <property name="permissions">
+        <element value="plonetheme.onegov: Manage Styles"/>
+      </property>
+      <property name="visible">True</property>
+    </object>
+  </object>
+
 </object>
