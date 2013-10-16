@@ -38,7 +38,8 @@ h2 {
 }
 h1, h2, h3 {
   margin: 1.5em 0 1em 0;
-  line-height: $body-line-height;
+  font-family: $heading-font-family;
+  line-height: $heading-line-height;
   &.documentFirstHeading {
     margin: 0;
   }
@@ -176,7 +177,7 @@ a,
     }
     & > .wrapper a {
       color: $global-navigation-color;
-      font-size: $font-size-18;
+      font-size: $global-navigation-fontsize;
       text-decoration: none;
       &:hover {
         color: $global-navigation-color-hover;

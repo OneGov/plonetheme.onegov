@@ -14,8 +14,10 @@ $lightgray2: #e5e5e0;
 $darkgray: #5b5a54;
 
 $font-size: 13px;
-$font-size-36: 276.92%;
-$font-size-18: 138.46%;
+
+$heading-font-family: $body-font-family;
+$heading-line-height: $body-line-height;
+$heading-font-size: 32px;
 
 $page-fixed-width: 1200px;
 $page-background: #fcfcfc;
@@ -34,6 +36,7 @@ $border-radius: 3px;
 $input-bordercolor: #757575;
 $input-background-color: #f7f7f7;
 
+$global-navigation-fontsize: 18px;
 $global-navigation-color: #00616c;
 $global-navigation-color-hover: $link-color-hover;
 $global-navigation-color-arrow: #5b696e;

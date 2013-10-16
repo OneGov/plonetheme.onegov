@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-10-15 06:13+0000\n"
+"POT-Creation-Date: 2013-10-16 10:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,17 +32,8 @@ msgstr "Vorherige Seite"
 msgid "body-background"
 msgstr "Hintergrundfarbe"
 
-msgid "body-font-family"
-msgstr "Schriftart"
-
-msgid "body-line-height"
-msgstr "Zeilenhöhe"
-
 msgid "favicon"
 msgstr "Favicon"
-
-msgid "font-size"
-msgstr "Schriftgrösse"
 
 msgid "global-navigation-border-color"
 msgstr "Farbe Rahmen unter Navigation"
@@ -55,6 +46,15 @@ msgstr "Farbe in der Navigation"
 
 msgid "global-navigation-color-hover"
 msgstr "Hover Farbe in der Navigation"
+
+msgid "heading-font-family"
+msgstr "Schriftart Überschriften"
+
+msgid "heading-font-size"
+msgstr "Schriftgrösse Überschriften (basis)"
+
+msgid "heading-line-height"
+msgstr "Zeilenhöhe Überschriften"
 
 #. Default: "Change the subsite's logo by editing the subsite."
 #: ./plonetheme/onegov/browser/customstyles_form.pt:47

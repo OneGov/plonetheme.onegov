@@ -20,13 +20,13 @@ msgstr ""
 msgid "body-background"
 msgstr ""
 
-msgid "body-font-family"
+msgid "heading-font-family"
 msgstr ""
 
-msgid "body-line-height"
+msgid "heading-line-height"
 msgstr ""
 
-msgid "font-size"
+msgid "heading-font-size"
 msgstr ""
 
 msgid "global-navigation-color"

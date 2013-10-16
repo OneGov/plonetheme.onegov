@@ -15,9 +15,9 @@ from zope.publisher.browser import BrowserView
 
 CUSTOM_STYLE_OPTIONS = [
     "body-background",
-    "body-font-family",
-    "body-line-height",
-    "font-size",
+    "heading-font-family",
+    "heading-line-height",
+    "heading-font-size",
     "global-navigation-color",
     "global-navigation-color-hover",
     "global-navigation-border-color",
