@@ -1,5 +1,5 @@
-@function contrast($bg, $light, $dark, $lightness:70%) {
-    @return if(lightness($bg) < $lightness, $light, $dark);
+@function contrast($bg, $light, $dark, $lightness:50%) {
+    @return if(lightness($bg) >= $lightness, $dark, $light);
 }
 
 $body-line-height: 1.5em;
@@ -41,15 +41,11 @@ $global-navigation-flyout-border: #d1d1d1;
 $global-navigation-border-color-active: $global-navigation-color-hover;
 $global-navigation-border-color: $global-navigation-color;
 
-$slider-bg-start: $global-navigation-color;
-$slider-bg-end: #003136;
-$slider-color: #e4e4dd;
-
 $button-color-light: #FFF;
 $button-color-dark: #000;
 
-$input-standalone-base: #929292;
-$input-destructive-base: #f07672;
+$input-standalone-base: #7f7f7f;
+$input-destructive-base: #e61f18;
 
 $navigation-gradient-from: #fcfcfc;
 $navigation-gradient-to: #f6f6f5;

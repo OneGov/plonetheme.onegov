@@ -1,1 +1,5 @@
 $input-context-base: $global-navigation-border-color;
+
+$slider-bg-start: $global-navigation-border-color;
+$slider-bg-end: darken($slider-bg-start, 10%);
+$slider-color: contrast($slider-bg-start, #FFF, #000);
