@@ -1,0 +1,13 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:lawgiver="http://namespaces.zope.org/lawgiver"
+    i18n_domain="plonetheme.onegov">
+
+    <include package="ftw.lawgiver" file="meta.zcml" />
+
+    <lawgiver:map_permissions
+        action_group="manage styles"
+        permissions="plonetheme.onegov: Manage Styles"
+        />
+
+</configure>
