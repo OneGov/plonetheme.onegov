@@ -214,12 +214,13 @@ a,
   border-width: 1px 0;
   & ul {
     @include ul($style: 'plain');
+    line-height: 1.25em;
     & li {
       margin-bottom: 0;
       padding: 0;
       display: block;
       & a {
-        padding: 0.5em 1em;
+        padding: 0.4em 1em;
         display: block;
         text-decoration: none;
         padding-left: 1.5em;
@@ -229,10 +230,11 @@ a,
   & .current {
     border-bottom: 1px solid $lightgray2;
     padding: 0.5em 0.5em;
+    @include gradient($navigation-gradient-from, $navigation-gradient-to);
+    font-weight: bold;
   }
   & .parent {
     border-bottom: 1px solid $lightgray2;
-    @include gradient($navigation-gradient-from, $navigation-gradient-to);
     & a {
       padding-left: 0.5em;
     }
@@ -334,11 +336,9 @@ div.slideNavi .globalnav li a {
   padding: 1em;
   margin-bottom: 1em;
   &.simplelayoutDropZonePortlet {
-    /* background-color: $page-background; */
-    /*
-    todo: would be nice, but there is no empty marker on dt.portlet
-    (https://github.com/4teamwork/simplelayout.portlet.dropzone/issues/5)
-    */
+    h1,h2,h3 {
+      margin-top: 0;
+    }
   }
   & dt.portletHeader {
     margin-bottom: 0.75em;
