@@ -5,6 +5,7 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:plone="http://namespaces.plone.org/plone"
     xmlns:cmf="http://namespaces.zope.org/cmf"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="plonetheme.onegov">
 
   <include package="z3c.autoinclude" file="meta.zcml" />
@@ -19,6 +20,7 @@
   <include package=".browser" />
   <include package=".portlets" />
   <include package=".viewlets" />
+  <include zcml:condition="installed ftw.lawgiver" file="lawgiver.zcml" />
 
   <i18n:registerTranslations directory="locales" />
 
