@@ -10,7 +10,7 @@ from zope.annotation.interfaces import IAnnotations
 
 
 SCSS_FILES = [
-    # "components/zug_variables.scss",
+    "post_variables.scss",
     "mixins.scss",
     "components/grid.scss",
     "components/base.scss",

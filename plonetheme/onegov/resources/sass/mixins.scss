@@ -10,7 +10,7 @@
   background-image: linear-gradient(top, $from, $to);
 }
 
-@mixin boxshadow($definition...) {
+@mixin boxshadow($definition) {
   box-shadow: $definition;
   -webkit-box-shadow: $definition;
   -moz-box-shadow: $definition;
