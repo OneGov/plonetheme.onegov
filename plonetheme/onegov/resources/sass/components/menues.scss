@@ -176,6 +176,7 @@ dl.actionMenu a:hover,
   background-color: $page-background;
   border: 1px solid $page-bordercolor;
   border-top-width: 0;
+  z-index: 1;
   @include boxshadow(0.5em 0.5em 1em -1em $page-bordercolor);
 }
 #content .tabbedview-tab-menu .actionMenuContent {
