@@ -202,6 +202,23 @@ body #internallinkcontainer .list.item a {
 
 /* @end */
 
+/* @group ajax spinner */
+
+#ajax-spinner {
+  display: none;
+  z-index: 9;
+  width: 20px;
+  height: 20px;
+  position: fixed;
+  background-position: center center;
+  top: 50%;
+  left: 50%;
+  margin-top: -10px;
+  margin-left: -10px;
+}
+
+/* @end */
+
 /* @group customstyles */
 
 body.template-customstyles_form #slider-wrapper,
