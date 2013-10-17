@@ -505,7 +505,7 @@ body.template-subsite_view h1.documentFirstHeading {
 #content-core .subsiteColumns .column {
   min-height: 1px;
 }
-.template-subsite_view #page-wrapper .column .portletStaticText .portletItem ul {
+.template-subsite_view #page-wrapper #columns .column .portletStaticText .portletItem ul {
   @include linklist();
 }
 
