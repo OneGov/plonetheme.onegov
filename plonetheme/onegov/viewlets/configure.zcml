@@ -55,6 +55,7 @@
       manager="plone.app.layout.viewlets.interfaces.IPortalTop"
       class=".topactions.TopActionsViewlet"
       permission="zope2.View"
+      layer="plonetheme.onegov.interfaces.IPlonethemeOneGovLayer"
       />
 
   <browser:viewlet
@@ -62,6 +63,7 @@
       manager="plone.app.layout.viewlets.interfaces.IPortalTop"
       class=".customstyles.CustomStyles"
       permission="zope2.View"
+      layer="plonetheme.onegov.interfaces.IPlonethemeOneGovLayer"
       />
 
   <!-- to top link -->
