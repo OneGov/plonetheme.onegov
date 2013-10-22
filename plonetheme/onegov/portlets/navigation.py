@@ -30,7 +30,11 @@ class Renderer(base.Renderer):
     def show_parent(self):
         """ Do not show parent if you are on navigationroot.
         """
-        if IPloneSiteRoot.providedBy(self.context):
+        context = self.context
+        if context.isDefaultPageInFolder():
+            context = aq_parent(aq_inner(context))
+
+        if IPloneSiteRoot.providedBy(context):
             return False
         return True
 
