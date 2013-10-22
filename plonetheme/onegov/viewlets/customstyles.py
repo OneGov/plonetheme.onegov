@@ -1,4 +1,4 @@
-import os
+from Products.CMFCore.utils import getToolByName
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.navigation.root import getNavigationRoot
 from plone.app.layout.viewlets.common import ViewletBase
@@ -7,6 +7,9 @@ from plone.uuid.interfaces import IUUID
 from plonetheme.onegov.browser.customstyles import replace_custom_keywords
 from scss import Scss
 from zope.annotation.interfaces import IAnnotations
+
+import os
+import time
 
 
 SCSS_FILES = [
@@ -28,11 +31,16 @@ SCSS_FILES = [
     ]
 
 
-
 def cache_key(method, self):
-    uid = IUUID(self.context, str(id(self.context)))
-    return 'customstyles-%s' % uid
-
+    cachekey_prefix = '{}.{}'.format(self.__name__, method.__name__)
+    # Do not cache if the css debug mode is on
+    cssregistry = getToolByName(self.context, 'portal_css')
+    if cssregistry.getDebugMode():
+        return "{}.{}".format(cachekey_prefix, str(time.time()))
+    # Otherwise return the navigation roots uuid
+    nav_root = self.context.restrictedTraverse(getNavigationRoot(self.context))
+    uuid = IUUID(nav_root, '/'.join(nav_root.getPhysicalPath()))
+    return "{}.{}".format(cachekey_prefix, uuid)
 
 class CustomStyles(ViewletBase):
 
