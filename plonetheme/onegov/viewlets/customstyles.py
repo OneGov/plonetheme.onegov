@@ -53,7 +53,7 @@ class CustomStyles(ViewletBase):
     @ram.cache(cache_key)
     def generate_css(self):
         css = Scss()
-        scss_input = ['@option compress:no;']
+        scss_input = ['@option style:compressed;']
         # add variables
         scss_input.append(self.read_file('variables.scss'))
 
