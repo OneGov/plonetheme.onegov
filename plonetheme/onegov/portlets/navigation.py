@@ -33,7 +33,8 @@ class Renderer(base.Renderer):
         """
         if IPloneSiteRoot.providedBy(self.context):
             return False
-        elif self.is_default_page:
+        elif self.is_default_page and \
+                IPloneSiteRoot.providedBy(aq_parent(aq_inner(self.context))):
             return False
         return True
 
