@@ -20,21 +20,20 @@ class Renderer(base.Renderer):
         self.request = request
         self.parent = aq_parent(aq_inner(context))
         plone = getMultiAdapter((context, request), name="plone")
+        self.is_default_page = plone.isDefaultPageInFolder()
         in_factory = IFactoryTempFolder.providedBy(
             self.parent)
         if in_factory:
             self.parent = aq_parent(aq_parent(aq_inner(self.parent)))
-        elif plone.isDefaultPageInFolder():
+        elif self.is_default_page:
             self.parent = aq_parent(aq_inner(self.parent))
 
     def show_parent(self):
         """ Do not show parent if you are on navigationroot.
         """
-        context = self.context
-        if context.isDefaultPageInFolder():
-            context = aq_parent(aq_inner(context))
-
-        if IPloneSiteRoot.providedBy(context):
+        if IPloneSiteRoot.providedBy(self.context):
+            return False
+        elif self.is_default_page:
             return False
         return True
 
