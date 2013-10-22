@@ -30,6 +30,12 @@ jQuery(function($) {
     parent.toggleClass('flyoutActive');
     children.toggle();
   });
+  // close flyout onclick on body
+  $('body').click(function(e){
+    if (!$(e.target).closest( "#portal-globalnav" ).length) {
+      $('#portal-globalnav li').removeClass('flyoutActive').find('ul').hide();
+    }
+  });
 
   // To top link
   $('div.to_top a').click(function(e) {
