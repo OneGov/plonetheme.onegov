@@ -27,6 +27,7 @@ SCSS_FILES = [
     "components/messages.scss",
     "components/tables.scss",
     "components/responsive.scss",
+    "components/people.scss",
     "components/overrides.scss",
     # "components/overrides_zug.scss",
     ]

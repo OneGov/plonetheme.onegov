@@ -1,0 +1,33 @@
+/* @group seantis.people */
+
+/* @group list filter */
+.portaltype-seantis-people-list {
+    .people-letters {
+        a {
+            @include tag();
+            display: inline-block;
+            float: none;    
+        }
+
+        a.selected-letter,
+        a:hover {
+            @include boxshadow(0 0 .2em darken($highlight-color-light, 50%));
+        }
+    }
+
+    .filter-tag {
+        font-weight: bold;
+    }
+
+    .filter-reset {
+        margin-bottom: 0.5em;
+        display: block;
+    }
+
+    .filter-reset:before {
+        content: '»';
+    }
+}
+/* @end */
+
+/* @end */
