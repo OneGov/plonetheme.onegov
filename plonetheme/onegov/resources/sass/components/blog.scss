@@ -77,3 +77,11 @@ div.blogByLine,
 }
 
 /* @end */
+
+/* @group tags portlet */
+
+.portletTagcloud ul {
+  @include ul($style: 'inline');
+}
+
+/* @end */

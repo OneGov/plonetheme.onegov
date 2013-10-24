@@ -20,6 +20,7 @@ SCSS_FILES = [
     "components/icons.scss",
     "components/form.scss",
     "components/search.scss",
+    "components/blog.scss",
     "components/tabbedview.scss",
     "components/overlays.scss",
     "components/menues.scss",
