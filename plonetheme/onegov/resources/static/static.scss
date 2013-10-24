@@ -1,0 +1,20 @@
+/*
+Create static css file using:
+sass --watch plonetheme/onegov/resources/static/static.scss:plonetheme/onegov/resources/static/static.css
+ */
+@import
+  "../sass/variables.scss",
+  "../sass/post_variables.scss",
+  "../sass/mixins.scss",
+  "../sass/components/grid.scss",
+  "../sass/components/base.scss",
+  "../sass/components/icons.scss",
+  "../sass/components/form.scss",
+  "../sass/components/search.scss",
+  "../sass/components/tabbedview.scss",
+  "../sass/components/overlays.scss",
+  "../sass/components/menues.scss",
+  "../sass/components/messages.scss",
+  "../sass/components/tables.scss",
+  "../sass/components/responsive.scss",
+  "../sass/components/overrides.scss"
