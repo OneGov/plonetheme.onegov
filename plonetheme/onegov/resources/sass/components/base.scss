@@ -64,6 +64,9 @@ a,
 
 /* @group top actions */
 
+#portal-topactions {
+  min-height: 2em;
+}
 #portal-topactions ul {
   @include ul($style: 'inline');
   padding: 0.75em 0;
