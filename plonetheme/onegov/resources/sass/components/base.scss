@@ -540,6 +540,10 @@ div.sl-controls {
 .simplelayout-content div[id*="slot"] {
   padding: 0;
 }
+.sl-img-small .sl-img-wrapper,
+.sl-img-middle .sl-img-wrapper {
+  margin-right: 2em;
+}
 
 /* @end */
 
