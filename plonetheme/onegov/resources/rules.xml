@@ -127,6 +127,9 @@
 
     <replace css:content="#portal-siteactions" css:theme="#portal-siteactions" />
 
+    <!-- Insert analytics js -->
+    <after content="//*[@id='portal-footer-wrapper']/div/script" css:theme="#container" />
+    <after content="//*[@id='portal-footer-wrapper']/div/noscript" css:theme="#container" />
 
   </rules>
 </rules>
