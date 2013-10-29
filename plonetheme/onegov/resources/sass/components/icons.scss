@@ -197,3 +197,52 @@ a.external-link {
     vertical-align: middle;
   }
 }
+
+
+/* @group document actions */
+
+#document-action-print a {
+  @include icon($char: "5 ");
+}
+#document-action-watch a {
+  @include icon($char: "C ");
+}
+#document-action-addtofavourites a {
+  @include icon($char: "* ");
+}
+#document-action-addtofavorites a {
+  @include icon($char: "* ");
+}
+#document-actions #document-action-pdf a {
+  @include icon($char: "` ");
+}
+#document-actions #document-action-reader a {
+  @include icon($char: '" ');
+}
+
+#document-actions #document-action-print a,
+#document-actions #document-action-watch a,
+#document-actions #document-action-addtofavourites a,
+#document-actions #document-action-addtofavorites a,
+#document-actions #document-action-pdf a,
+#document-actions #document-action-reader a {
+  font-size: 1px;
+  color: transparent;
+  width: 20px;
+  margin: 0 3px;
+  height: 20px;
+  overflow: hidden;
+  display: block;
+  float: left;
+  &:before {
+    font-size: 20px;
+    color: $link-color;
+  }
+  &:hover {
+    &:before {
+      color: $link-color-hover;
+    }
+  }
+}
+
+/* @end */
