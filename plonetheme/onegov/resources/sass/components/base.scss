@@ -117,8 +117,12 @@ a,
 }
 #portal-logo {
   margin: 1.5em 0;
+  height: $logo-height;
   display: block;
   float: left;
+  img {
+    max-height: 100%;
+  }
 }
 
 /* @end */
