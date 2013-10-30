@@ -353,6 +353,27 @@ div.slideNavi .globalnav li a {
 
 /* @end */
 
+/* @group news portlet */
+
+.portlet.portletCollection.newsTemplate {
+  .portletItemTitle {
+    font-size: $font-size-18;
+    margin: 0.25em 0 0.25em 0;
+  }
+  .portletFooter,
+  .portletItem {
+    border-top: 1px solid $lightgray2;
+    padding-top: 1em;
+    margin-top: 1em;
+  }
+  .portletItemMore {
+    margin-top: 0.25em;
+    display: block;
+  }
+}
+
+/* @end */
+
 /* @group address block */
 
 .AddressBlock ul {
