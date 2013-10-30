@@ -31,7 +31,7 @@ class LogoViewlet(common.LogoViewlet):
 
     def onegov_logo_behaviour(self):
         portal = getToolByName(self.context, 'portal_url').getPortalObject()
-        url = "%s/logo.gif" % \
+        url = "%s/++theme++plonetheme.onegov/images/logo_onegov.png" % \
             portal.absolute_url()
 
         annotations = IAnnotations(self.context.restrictedTraverse(
