@@ -34,5 +34,12 @@
       permission="zope2.View"
       />
 
+  <browser:page
+      for="*"
+      name="customstyles_css"
+      class=".customstyles.CustomStylesCSS"
+      permission="zope2.View"
+      />
+
 
 </configure>

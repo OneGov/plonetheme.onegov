@@ -4,7 +4,7 @@ from plone.app.layout.navigation.root import getNavigationRoot
 from plone.app.layout.viewlets.common import ViewletBase
 from plone.memoize import ram
 from plone.uuid.interfaces import IUUID
-from plonetheme.onegov.browser.customstyles import replace_custom_keywords
+from plonetheme.onegov.utils import replace_custom_keywords
 from scss import Scss
 from zope.annotation.interfaces import IAnnotations
 

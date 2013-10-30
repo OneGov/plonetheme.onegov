@@ -1,15 +1,15 @@
 import copy
 import json
 
-from zope.component import getUtility
-from plone.i18n.normalizer.interfaces import IIDNormalizer
 from AccessControl import getSecurityManager
 from BTrees.OOBTree import OOBTree
-from Products.CMFCore.utils import getToolByName
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from plone.i18n.normalizer.interfaces import IIDNormalizer
 from plone.memoize.interfaces import ICacheChooser
+from plonetheme.onegov.viewlets.customstyles import CustomStyles
 from zExceptions import Unauthorized
 from zope.annotation.interfaces import IAnnotations
+from zope.component import getUtility
 from zope.component import queryUtility
 from zope.publisher.browser import BrowserView
 
@@ -36,18 +36,6 @@ CUSTOM_IMAGE_PATHS = [
     "touch_iphone_120",
     "touch_iphone_152",
     ]
-
-
-def replace_custom_keywords(config, context):
-    #replace keywords in css output
-    portal = getToolByName(context, 'portal_url').getPortalObject()
-    css_keywords = {
-        '%PORTAL_URL%': '/'.join(portal.getPhysicalPath()),
-        '%THEME_URL%': '%s/++theme++plonetheme.onegov' % '/'.join(portal.getPhysicalPath())}
-
-    for search, replace in css_keywords.items():
-        config = config.replace(search, replace)
-    return config
 
 
 class CustomStylesForm(BrowserView):
@@ -120,3 +108,11 @@ class CustomStylesForm(BrowserView):
 
     def options(self):
         return self.annotations.get('onegov.customstyles', {})
+
+
+class CustomStylesCSS(BrowserView):
+
+    def __call__(self):
+        css_viewlet = CustomStyles(self.context, self.request, self)
+        css_viewlet.update()
+        return css_viewlet.customstyles

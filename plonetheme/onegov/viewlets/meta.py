@@ -2,7 +2,7 @@ from BTrees.OOBTree import OOBTree
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.navigation.root import getNavigationRoot
 from plone.app.layout.viewlets import common
-from plonetheme.onegov.browser.customstyles import replace_custom_keywords
+from plonetheme.onegov.utils import replace_custom_keywords
 from zope.annotation.interfaces import IAnnotations
 
 
