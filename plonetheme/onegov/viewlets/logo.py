@@ -36,7 +36,7 @@ class LogoViewlet(common.LogoViewlet):
 
         annotations = IAnnotations(self.context.restrictedTraverse(
                 getNavigationRoot(self.context)))
-        customstyles = annotations.get('customstyles', OOBTree({}))
+        customstyles = annotations.get('onegov.customstyles', OOBTree({}))
 
         if 'img.logo' in customstyles and len(customstyles['img.logo']):
             url = replace_custom_keywords(customstyles['img.logo'],
