@@ -6,7 +6,7 @@
         a {
             @include tag();
             display: inline-block;
-            float: none;    
+            float: none;
         }
 
         a.selected-letter,
@@ -27,6 +27,31 @@
     .filter-reset:before {
         content: '»';
     }
+}
+/* @end */
+
+/* @group list person details */
+.person-details {
+
+    .person-detail h2 {
+        font-size: 1em;
+        margin: 0;
+    }
+
+    .person-detail {
+        margin-bottom: 1em;
+    }
+
+}
+
+.person-details-left.splitscreen {
+    float: left;   
+    padding-right: 2em;
+    max-width: 50%;
+}
+.person-details-right.splitscreen {
+    float: left;
+    clear: right;
 }
 /* @end */
 
