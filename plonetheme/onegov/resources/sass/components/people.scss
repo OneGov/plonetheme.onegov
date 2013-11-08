@@ -2,6 +2,15 @@
 
 /* @group list filter */
 .portaltype-seantis-people-list {
+
+    .people-list th span:after {
+        content: ' / '
+    }
+
+    .people-list th span:last-child:after {
+        content: ''
+    }
+
     .people-letters {
         a {
             @include tag();
