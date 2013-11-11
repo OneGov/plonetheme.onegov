@@ -1,5 +1,14 @@
 /* @group seantis.people */
 
+/* @group field rendering */
+.portaltype-seantis-people-list table,
+.person-details {
+    ul li {
+        margin-bottom: 0;
+    }
+}
+/* @end*/
+
 /* @group list filter */
 .portaltype-seantis-people-list {
 
