@@ -1,0 +1,19 @@
+/* helper style classes */
+
+/* @group tags */
+.tag {
+    @include tag();
+}
+
+.inline-tag {
+    @include tag();
+    display: inline-block;
+    float: none;
+}
+/* @end */
+
+/* @group dense lists */
+.dense li {
+    margin-bottom: 0;
+}
+/* @end */

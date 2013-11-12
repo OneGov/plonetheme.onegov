@@ -1,14 +1,5 @@
 /* @group seantis.people */
 
-/* @group field rendering */
-.portaltype-seantis-people-list table,
-.person-details {
-    ul li {
-        margin-bottom: 0;
-    }
-}
-/* @end*/
-
 /* @group list filter */
 .portaltype-seantis-people-list {
 
@@ -21,12 +12,6 @@
     }
 
     .people-letters {
-        a {
-            @include tag();
-            display: inline-block;
-            float: none;
-        }
-
         a.selected-letter,
         a:hover {
             @include boxshadow(0 0 .2em darken($highlight-color-light, 50%));
