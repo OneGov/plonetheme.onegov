@@ -58,4 +58,75 @@
 }
 /* @end */
 
+/* @group people list responsive table */
+@media only screen and (max-width: 979px) {
+    
+    /* Force table to not be like tables anymore */
+    table.people-list,
+    .people-list thead,
+    .people-list tbody,
+    .people-list th,
+    .people-list td,
+    .people-list tr {
+        display: block;
+        word-wrap: break-word;
+        line-height: 1em;
+    }
+
+    table.people-list {
+        border: none;
+    }
+     
+    /* Hide table headers (but not display: none;, for accessibility) */
+    .people-list thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    /* Have spaces between the rows which look like business cards */
+    .people-list tbody tr:first-child {
+        margin-top: 0.5em;
+    }
+
+    .people-list tbody tr {
+        margin-bottom: 2em;
+    }
+     
+    /* Behave like a "row" */
+    .people-list tbody tr td {
+        position: relative;
+        padding-left: 45%;
+        white-space: normal;
+        text-align: left;
+        border: 1px solid $lightgray2;
+        border-width: 0 1px 0 1px;
+        min-height: 1em;
+    }
+
+    table.people-list tbody tr td:first-child {
+        border-top: 1px solid $lightgray2;
+    }
+
+    table.people-list tbody tr td:last-child {
+        border-bottom: 1px solid $lightgray2;
+    }
+     
+    /* Table header as label */
+    .people-list td:before {
+        position: absolute;
+        color: $darkgray;
+        
+        top: 0.5em;
+        left: 0.5em;
+        width: 40%;
+        padding-right: 1em;
+        text-align:left;
+
+        content: attr(data-title);
+    }     
+}
+
+/* @end */
+
 /* @end */
