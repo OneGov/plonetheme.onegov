@@ -1,7 +1,8 @@
 
 /* @group onegovBatching */
 
-div.onegovBatching {
+#content div.listingBar.onegovBatching,
+div.listingBar.onegovBatching {
 
   a, span.current {
     padding: 0.25em 0.5em;
@@ -15,11 +16,20 @@ div.onegovBatching {
   }
 
   .previous {
+    display: inline;
     @include icon(' ');
+    &:before {
+      font-size: 0.8em;
+    }
   }
 
   .next {
+    display: inline;
+    float: none;
     @include icon(' ', $style: 'after');
+    &:after {
+      font-size: 0.8em;
+    }
   }
 
 }
