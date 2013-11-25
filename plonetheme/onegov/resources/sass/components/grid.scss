@@ -88,3 +88,20 @@ div.position-14  { @include position14(); }
 div.position-15  { @include position15(); }
 
 /* @end */
+
+/* @group grid in content */
+
+#column-content {
+  @for $i from 1 through 16 {
+    div.width-#{$i} {
+      width: percentage((100 / 16) * $i)/100;
+    }
+  }
+  @for $i from 0 through 15 {
+    div.position-#{$i} {
+      margin-left: percentage((100 / 16) * $i)/100 - 100;
+    }
+  }
+}
+
+/* @end */
