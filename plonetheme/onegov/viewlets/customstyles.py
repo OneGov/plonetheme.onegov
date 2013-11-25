@@ -27,6 +27,7 @@ SCSS_FILES = [
     "components/menues.scss",
     "components/messages.scss",
     "components/tables.scss",
+    "components/batching.scss",
     "components/responsive.scss",
     "components/people.scss",
     "components/overrides.scss",

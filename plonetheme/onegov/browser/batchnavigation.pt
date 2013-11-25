@@ -4,7 +4,7 @@
     condition="batch"
     metal:define-macro="navigation">
 
-    <div class="onegovBatching"
+    <div class="onegovBatching listingBar"
          i18n:domain="plonetheme.onegov"
          tal:condition="batch/multiple_pages">
 

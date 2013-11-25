@@ -129,6 +129,8 @@ dl.actionMenu a:hover,
 }
 #personaltools-portrait {
   margin-right: 0.5em;
+  max-height: 26px;
+  width: auto;
 }
 #user-name:after {
   content: ' ▼';
