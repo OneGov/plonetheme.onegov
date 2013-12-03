@@ -22,7 +22,7 @@ CUSTOM_STYLE_OPTIONS = [
     "global-navigation-color-hover",
     "global-navigation-color-selected",
     "global-navigation-border-color",
-    "global-navigation-border-color-active",
+#    "global-navigation-border-color-active",
     "highlight-color-light",
     "link-color",
     "link-color-hover",
