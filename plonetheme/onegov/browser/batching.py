@@ -4,4 +4,4 @@ from plone.batching import browser
 
 class BatchView(browser.PloneBatchView):
 
-    template = ViewPageTemplateFile('batchnavigation.pt')
+    index = template = ViewPageTemplateFile('batchnavigation.pt')
