@@ -10,6 +10,7 @@ tests_require = [
     'plone.app.testing',
     'plone.resource',
     'unittest2',
+    'pyquery',
     ]
 
 setup(name='plonetheme.onegov',
