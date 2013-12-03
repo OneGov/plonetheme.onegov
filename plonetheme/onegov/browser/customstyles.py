@@ -20,6 +20,7 @@ CUSTOM_STYLE_OPTIONS = [
     "heading-font-size",
     "global-navigation-color",
     "global-navigation-color-hover",
+    "global-navigation-color-selected",
     "global-navigation-border-color",
     "global-navigation-border-color-active",
     "highlight-color-light",
