@@ -118,11 +118,11 @@ div.listingBar .current {
 #tabbedview_form table.listing th.sortable {
   cursor: pointer;
   &.sort-selected:after {
-    content: ' ▼';
+    content: ' ▲';
     font-size: 10px;
   }
   &.sort-reverse:after {
-    content: ' ▲';
+    content: ' ▼';
     font-size: 10px;
   }
 }
