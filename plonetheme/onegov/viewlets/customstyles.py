@@ -16,7 +16,6 @@ SCSS_FILES = [
     "post_variables.scss",
     "mixins.scss",
     "helper.scss",
-    "tables.scss",
     "components/grid.scss",
     "components/base.scss",
     "components/icons.scss",
