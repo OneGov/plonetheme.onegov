@@ -113,6 +113,22 @@ div.listingBar .current {
 
 /* @end */
 
+/* @group directories_view sorting */
+
+#tabbedview_form table.listing th.sortable {
+  cursor: pointer;
+  &.sort-selected:after {
+    content: ' ▼';
+    font-size: 10px;
+  }
+  &.sort-reverse:after {
+    content: ' ▲';
+    font-size: 10px;
+  }
+}
+
+/* @end */
+
 /* @group ext js */
 
 .x-menu-list {
