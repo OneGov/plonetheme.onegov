@@ -597,7 +597,7 @@ div.sl-controls {
 /* @group footer */
 
 #footer {
-  @include gradient($footer-bg-start, $footer-bg-end);
+  background-color: $footer-background;
   color: $footer-color;
   & a {
     color: $footer-color;
