@@ -159,7 +159,6 @@ a.external-link {
 #portal-globalnav > li > .wrapper a {
   @include icon($char: " ", $style: "after");
   &:after {
-    color: $global-navigation-color-arrow;
     font-size: 0.75em;
   }
 }
