@@ -132,7 +132,7 @@ body.template-create_from_template .contenttype-image,
 }
 body.template-create_from_template .contenttype-file,
 #plone-contentmenu-factories li a.contenttype-file span {
-/* MISSING */
+  @include icon($char: "_ ");
 }
 
 /* no images in navigation */
