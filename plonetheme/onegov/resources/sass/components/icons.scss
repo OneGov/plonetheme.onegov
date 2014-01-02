@@ -39,8 +39,9 @@
   @include icon($char: "a ");
 }
 .contenttype-document,
-.contenttype-contentpage {
-  @include icon($char: "_ ");
+.contenttype-contentpage,
+.contenttype-page {
+  @include icon($char: " ");
 }
 .contenttype-meeting-item {
   @include icon($char: "K ");
