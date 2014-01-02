@@ -125,6 +125,18 @@
   @include icon($char: "F ");
 }
 
+/* ftw.shop */
+.contenttype-supplier {
+  @include icon($char: "8 ");
+}
+.contenttype-shopcategory {
+  @include icon($char: "7 ");
+}
+.contenttype-shopitem {
+  @include icon($char: "H ");
+}
+
+
 /* only show sprites in factory menu for file and image */
 body.template-create_from_template .contenttype-image,
 #plone-contentmenu-factories li a.contenttype-image span {
