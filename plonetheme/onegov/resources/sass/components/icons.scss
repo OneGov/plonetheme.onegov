@@ -121,6 +121,9 @@
 .contenttype-shopitemblock {
   @include icon('H ');
 }
+.contenttype-collection {
+  @include icon($char: "F ");
+}
 
 /* only show sprites in factory menu for file and image */
 body.template-create_from_template .contenttype-image,
