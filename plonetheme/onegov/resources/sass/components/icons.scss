@@ -39,8 +39,9 @@
   @include icon($char: "a ");
 }
 .contenttype-document,
-.contenttype-contentpage {
-  @include icon($char: "_ ");
+.contenttype-contentpage,
+.contenttype-page {
+  @include icon($char: " ");
 }
 .contenttype-meeting-item {
   @include icon($char: "K ");
@@ -71,6 +72,7 @@
   @include icon($char: "a ");
 }
 .contenttype-event,
+.contenttype-plone-app-event-dx-event,
 .contenttype-eventpage,
 .contenttype-meeting {
   @include icon($char: "e ");
@@ -119,6 +121,21 @@
 .contenttype-shopitemblock {
   @include icon('H ');
 }
+.contenttype-collection {
+  @include icon($char: "F ");
+}
+
+/* ftw.shop */
+.contenttype-supplier {
+  @include icon($char: "8 ");
+}
+.contenttype-shopcategory {
+  @include icon($char: "7 ");
+}
+.contenttype-shopitem {
+  @include icon($char: "H ");
+}
+
 
 /* only show sprites in factory menu for file and image */
 body.template-create_from_template .contenttype-image,
@@ -127,7 +144,7 @@ body.template-create_from_template .contenttype-image,
 }
 body.template-create_from_template .contenttype-file,
 #plone-contentmenu-factories li a.contenttype-file span {
-/* MISSING */
+  @include icon($char: "_ ");
 }
 
 /* no images in navigation */
