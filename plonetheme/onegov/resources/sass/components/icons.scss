@@ -72,6 +72,7 @@
   @include icon($char: "a ");
 }
 .contenttype-event,
+.contenttype-plone-app-event-dx-event,
 .contenttype-eventpage,
 .contenttype-meeting {
   @include icon($char: "e ");
