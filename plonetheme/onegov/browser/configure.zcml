@@ -31,7 +31,7 @@
       for="plone.app.layout.navigation.interfaces.INavigationRoot"
       name="customstyles_form"
       class=".customstyles.CustomStylesForm"
-      permission="zope2.View"
+      permission="plonetheme.onegov.ManageStyles"
       />
 
   <browser:page

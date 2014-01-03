@@ -7,10 +7,10 @@ from plone.app.testing import TEST_USER_ID
 from plone.app.testing import TEST_USER_NAME
 from plone.app.testing import login
 from plone.app.testing import setRoles
-from plonetheme.onegov.interfaces import CUSTOMSTYLES_ANNOTATION_KEY
+from plonetheme.onegov.interfaces import ICustomStyles
 from plonetheme.onegov.testing import THEME_FUNCTIONAL_TESTING
 from unittest2 import TestCase
-from zope.annotation.interfaces import IAnnotations
+from zExceptions import Unauthorized
 from zope.interface import alsoProvides
 import transaction
 
@@ -30,6 +30,28 @@ class TestCustomstylesForm(TestCase):
         browser.login().open()
         browser.find('Manage styles').click()
         self.assertEquals('customstyles_form', plone.view())
+
+    @browsing
+    def test_customstyles_link_is_protected_by_permission(self, browser):
+        portal = self.layer['portal']
+        portal.manage_permission('plonetheme.onegov: Manage Styles',
+                                 roles=[], acquire=False)
+        transaction.commit()
+
+        browser.login().open()
+        self.assertFalse(browser.find('Manage styles'),
+                         '"Manage styles" view should not be visible when'
+                         ' the user does not have the necessary permission.')
+
+    @browsing
+    def test_form_is_available_protected_by_permission(self, browser):
+        portal = self.layer['portal']
+        portal.manage_permission('plonetheme.onegov: Manage Styles',
+                                 roles=[], acquire=False)
+        transaction.commit()
+
+        with self.assertRaises(Unauthorized):
+            browser.login().visit(view='customstyles_form')
 
     @browsing
     def test_setting_customstyles_is_persistent(self, browser):
@@ -142,11 +164,8 @@ class TestCustomstylesForm(TestCase):
                           'Original subsite was modified on import')
 
     def get_style(self, style, of=None):
-        transaction.begin()
         context = of or self.layer['portal']
-        annotations = IAnnotations(context)
-        styles = annotations.get(CUSTOMSTYLES_ANNOTATION_KEY, {})
-        return styles.get(style, None)
+        return ICustomStyles(context).get(style)
 
     def create_subsite(self):
         subsite = create(Builder('folder'))
