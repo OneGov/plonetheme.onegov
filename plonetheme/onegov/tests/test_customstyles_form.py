@@ -12,6 +12,8 @@ from plonetheme.onegov.testing import THEME_FUNCTIONAL_TESTING
 from unittest2 import TestCase
 from zExceptions import Unauthorized
 from zope.interface import alsoProvides
+import plonetheme.onegov.viewlets.customstyles
+import re
 import transaction
 
 
@@ -162,6 +164,32 @@ class TestCustomstylesForm(TestCase):
                           'Styles were not imported properly on second subsite')
         self.assertEquals('green', self.get_style('css.body-background', of=foo),
                           'Original subsite was modified on import')
+
+    @browsing
+    def test_updating_styles_invalidates_cache(self, browser):
+        browser.login().visit(view='customstyles_form')
+        browser.fill({'Background': 'red'}).submit()
+        self.assertEquals('red', self.get_viewlet_css_body_background())
+
+        browser.fill({'Background': 'green'}).submit()
+        self.assertEquals('green', self.get_viewlet_css_body_background())
+
+    def get_viewlet_css_body_background(self):
+        css = self.get_viewlet_css()
+        xpr = re.compile(r'body\{[^\}]*background:([^;]*);[^\}]*\}')
+        matches = xpr.findall(css)
+        if len(matches) > 0:
+            return matches[0]
+        else:
+            return None
+
+    def get_viewlet_css(self):
+        viewlet_klass = plonetheme.onegov.viewlets.customstyles.CustomStyles
+        context = self.layer['portal']
+        request = self.layer['request']
+        viewlet = viewlet_klass(context, request, None)
+        viewlet.update()
+        return viewlet.customstyles
 
     def get_style(self, style, of=None):
         context = of or self.layer['portal']

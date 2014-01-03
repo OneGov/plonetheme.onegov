@@ -2,6 +2,7 @@ from BTrees.OOBTree import OOBTree
 from plone.app.layout.navigation.interfaces import INavigationRoot
 from plonetheme.onegov.interfaces import CUSTOMSTYLES_ANNOTATION_KEY
 from plonetheme.onegov.interfaces import ICustomStyles
+from plonetheme.onegov.viewlets.customstyles import invalidate_cache
 from zope.annotation import IAnnotations
 from zope.component import adapts
 from zope.interface import implements
@@ -21,10 +22,12 @@ class CustomStyles(object):
     def set_styles(self, styles):
         styles = OOBTree(styles)
         self.annotations[CUSTOMSTYLES_ANNOTATION_KEY] = styles
+        invalidate_cache()
 
     def set(self, style, value):
         if not self.annotations.get(CUSTOMSTYLES_ANNOTATION_KEY):
             self.set_styles({style: value})
+            invalidate_cache()
         else:
             self.annotations[CUSTOMSTYLES_ANNOTATION_KEY][style] = value
 

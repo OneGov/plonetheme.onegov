@@ -1,10 +1,8 @@
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.i18n.normalizer.interfaces import IIDNormalizer
-from plone.memoize.interfaces import ICacheChooser
 from plonetheme.onegov.interfaces import ICustomStyles
 from plonetheme.onegov.viewlets.customstyles import CustomStyles
 from zope.component import getUtility
-from zope.component import queryUtility
 from zope.publisher.browser import BrowserView
 import json
 
@@ -76,13 +74,6 @@ class CustomStylesForm(BrowserView):
 
         styles = dict(filter(include, items.items()))
         ICustomStyles(self.context).set_styles(styles)
-        self._invalidate_cache()
-
-    def _invalidate_cache(self):
-        func_name = 'plonetheme.onegov.viewlets.customstyles' + \
-            '.CustomStyles.generate_css'
-        cache = queryUtility(ICacheChooser)(func_name)
-        cache.ramcache.invalidateAll()
 
     def export_styles(self, download=False):
         """Returns a json file containing the styles.
