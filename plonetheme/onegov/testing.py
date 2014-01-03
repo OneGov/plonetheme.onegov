@@ -34,6 +34,10 @@ class ThemeLayer(PloneSandboxLayer):
             '</configure>',
             context=configurationContext)
 
+        import plonetheme.onegov.tests
+        xmlconfig.file('configure.zcml', plonetheme.onegov.tests,
+                       context=configurationContext)
+
     def setUpPloneSite(self, portal):
         applyProfile(portal, 'plonetheme.onegov:default')
 

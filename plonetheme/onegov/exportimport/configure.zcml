@@ -1,0 +1,13 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="plonetheme.onegov">
+
+    <genericsetup:importStep
+        name="plonetheme.onegov.customstyles"
+        title="plonetheme.onegov: custom styles"
+        description="Imports customstyles for plonetheme.onegov"
+        handler=".customstyles.importCustomstyles"
+        />
+
+</configure>
