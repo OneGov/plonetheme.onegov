@@ -46,6 +46,7 @@ def cache_key(method, self):
     uuid = IUUID(nav_root, '/'.join(nav_root.getPhysicalPath()))
     return "{}.{}".format(cachekey_prefix, uuid)
 
+
 class CustomStyles(ViewletBase):
 
     index = ViewPageTemplateFile('customstyles.pt')
@@ -75,12 +76,13 @@ class CustomStyles(ViewletBase):
         return styles
 
     def get_options(self):
-        nav_root = self.context.restrictedTraverse(getNavigationRoot(self.context))
+        nav_root = self.context.restrictedTraverse(
+            getNavigationRoot(self.context))
         options = IAnnotations(nav_root).get('onegov.customstyles', {})
         styles = []
         for key, value in options.items():
             if value and key.startswith('css.'):
-                styles.append('$%s: %s;' % (key.replace('css.',''),
+                styles.append('$%s: %s;' % (key.replace('css.', ''),
                                             value))
             if value and key == 'custom_scss':
                 styles.append(value)

@@ -44,7 +44,8 @@ class Renderer(base.Renderer):
         hidden_types = properties.navtree_properties.metaTypesNotToList
         for brain in self.context.getFolderContents():
             if brain.portal_type not in hidden_types:
-                if getattr(brain, 'exclude_from_nav', False) in [Missing.Value, False]:
+                if getattr(brain, 'exclude_from_nav', False) in \
+                        [Missing.Value, False]:
                     brains.append(brain)
         return brains
 

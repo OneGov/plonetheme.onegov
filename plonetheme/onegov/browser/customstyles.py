@@ -62,7 +62,6 @@ class CustomStylesForm(BrowserView):
             if upload:
                 self.import_styles(json.loads(upload.read()))
 
-
         if self.request.form.get('form.reset', None):
             self.save_values({})
 
@@ -82,7 +81,8 @@ class CustomStylesForm(BrowserView):
                 styles[key] = value
         self.annotations['onegov.customstyles'] = OOBTree(styles)
         #invalidate cache
-        func_name = 'plonetheme.onegov.viewlets.customstyles.CustomStyles.generate_css'
+        func_name = 'plonetheme.onegov.viewlets.customstyles' + \
+            '.CustomStyles.generate_css'
         cache = queryUtility(ICacheChooser)(func_name)
         cache.ramcache.invalidateAll()
 

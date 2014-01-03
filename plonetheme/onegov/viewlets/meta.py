@@ -23,8 +23,8 @@ class MetaViewlet(common.LogoViewlet):
         self.touch_iphone_120 = self.customstyle_value('img.touch_iphone_120')
         self.touch_iphone_152 = self.customstyle_value('img.touch_iphone_152')
 
-
     def customstyle_value(self, name):
         if name in self.customstyles and len(self.customstyles[name]):
-            return replace_custom_keywords(self.customstyles[name], self.context)
+            return replace_custom_keywords(self.customstyles[name],
+                                           self.context)
         return None
