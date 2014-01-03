@@ -27,6 +27,8 @@
 
   <i18n:registerTranslations directory="locales" />
 
+  <adapter factory=".customstyles.CustomStyles" />
+
   <genericsetup:registerProfile
       name="default"
       title="plonetheme.onegov"
