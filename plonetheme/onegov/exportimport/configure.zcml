@@ -10,4 +10,11 @@
         handler=".customstyles.importCustomstyles"
         />
 
+    <genericsetup:exportStep
+        name="plonetheme.onegov.customstyles"
+        title="plonetheme.onegov: custom styles"
+        description="Export customstyles of site root for plonetheme.onegov"
+        handler=".customstyles.exportCustomstyles"
+        />
+
 </configure>

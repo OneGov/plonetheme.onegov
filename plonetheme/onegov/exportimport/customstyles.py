@@ -1,6 +1,8 @@
 from plonetheme.onegov.interfaces import ICustomStyles
 import json
 
+FILENAME = 'customstyles.json'
+
 
 def importCustomstyles(import_context):
     """Import custom styles defined as a json file named "customstyles.json"
@@ -12,7 +14,7 @@ def importCustomstyles(import_context):
     root.
     """
 
-    filedata = import_context.readDataFile('customstyles.json')
+    filedata = import_context.readDataFile(FILENAME)
 
     if filedata is None:
         return
@@ -26,3 +28,13 @@ def importCustomstyles(import_context):
         context = site
 
     ICustomStyles(context).set_styles(styles)
+
+
+def exportCustomstyles(export_context):
+    """Export custom styles defined on the site root.
+    """
+
+    site = export_context.getSite()
+    styles = ICustomStyles(site).get_styles()
+    data = json.dumps(styles, sort_keys=True, indent=4)
+    export_context.writeDataFile(FILENAME, data, 'application/json')
