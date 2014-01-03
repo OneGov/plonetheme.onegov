@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-09-23 09:59+0000\n"
+"POT-Creation-Date: 2014-01-03 08:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,24 +13,125 @@ msgstr ""
 "Domain: DOMAIN\n"
 
 msgid "Direct to"
-msgstr ""
+msgstr "Direct to"
+
+#: ./plonetheme/onegov/profiles/default/actions.xml
+msgid "Manage styles"
+msgstr "Manage styles"
 
 #. Default: "Next Page"
 #: ./plonetheme/onegov/browser/batchnavigation.pt:56
 msgid "batch_next_page"
-msgstr ""
+msgstr "Next page"
 
 #. Default: "Previous Page"
 #: ./plonetheme/onegov/browser/batchnavigation.pt:11
 msgid "batch_previous_page"
-msgstr ""
+msgstr "Previous page"
+
+msgid "body-background"
+msgstr "Background"
+
+msgid "favicon"
+msgstr "Favicon"
+
+msgid "global-navigation-border-color"
+msgstr "Top navigation: color of the border below the navigation"
+
+msgid "global-navigation-border-color-active"
+msgstr "Top navigation: border color of the active element"
+
+msgid "global-navigation-color"
+msgstr "Top navigation: text color"
+
+msgid "global-navigation-color-hover"
+msgstr "Top navigation: hover text color"
+
+msgid "global-navigation-color-selected"
+msgstr "Top navigation: active element text color"
+
+msgid "heading-font-family"
+msgstr "Heading font familiy"
+
+msgid "heading-font-size"
+msgstr "Heading font size"
+
+msgid "heading-line-height"
+msgstr "Heading line height"
+
+#. Default: "Change the subsite's logo by editing the subsite."
+#: ./plonetheme/onegov/browser/customstyles_form.pt:47
+msgid "help_subsite_custom_logo"
+msgstr "Change the subsite's logo by editing the subsite."
+
+msgid "highlight-color-light"
+msgstr "Highlight color (e.g. link lists)"
+
+#. Default: "Custom CSS"
+#: ./plonetheme/onegov/browser/customstyles_form.pt:20
+msgid "label_custom_css"
+msgstr "Custom CSS"
+
+#. Default: "Custom Images"
+#: ./plonetheme/onegov/browser/customstyles_form.pt:42
+msgid "label_custom_images"
+msgstr "Custom Images"
+
+#. Default: "Custom SCSS - be careful"
+#: ./plonetheme/onegov/browser/customstyles_form.pt:113
+msgid "label_custom_scss"
+msgstr "Custom SCSS - be careful"
+
+#. Default: "export styles"
+#: ./plonetheme/onegov/browser/customstyles_form.pt:105
+msgid "label_export_styles"
+msgstr "Export styles"
+
+#. Default: "import styles"
+#: ./plonetheme/onegov/browser/customstyles_form.pt:100
+msgid "label_import_styles"
+msgstr "Import styles"
+
+#. Default: "Import / Export"
+#: ./plonetheme/onegov/browser/customstyles_form.pt:90
+msgid "label_importexport"
+msgstr "Import / Export"
+
+#. Default: "Reset to OneGov Default"
+#: ./plonetheme/onegov/browser/customstyles_form.pt:124
+msgid "label_reset_styles"
+msgstr "Reset to OneGov defaults"
 
 #. Default: "To Top"
 #: ./plonetheme/onegov/viewlets/totop.pt:3
 msgid "label_to_top"
-msgstr ""
+msgstr "To top"
+
+msgid "link-color"
+msgstr "Link color"
+
+msgid "link-color-hover"
+msgstr "Hover link color"
+
+msgid "logo"
+msgstr "Logo"
+
+msgid "startup"
+msgstr "iPhone startup icon"
 
 #. Default: "en"
 #: ./plonetheme/onegov/profiles/default/actions.xml
 msgid "subsite_current_language"
 msgstr "en"
+
+msgid "touch_iphone"
+msgstr "iPhone touch icon"
+
+msgid "touch_iphone_120"
+msgstr "iPhone touch icon (120px)"
+
+msgid "touch_iphone_152"
+msgstr "iPhone touch icon (152px)"
+
+msgid "touch_iphone_76"
+msgstr "iPhone touch icon (76px)"
