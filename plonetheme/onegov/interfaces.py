@@ -1,6 +1,8 @@
 from zope.interface import Interface
 
 
+CUSTOMSTYLES_ANNOTATION_KEY = 'onegov.customstyles'
+
 class IPlonethemeOneGovLayer(Interface):
     """Browser layer for plonetheme.onegov
     """
