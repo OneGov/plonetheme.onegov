@@ -25,6 +25,8 @@
 
   <i18n:registerTranslations directory="locales" />
 
+  <utility factory=".registry.SCSSRegistry" />
+
   <genericsetup:registerProfile
       name="default"
       title="plonetheme.onegov"
