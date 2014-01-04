@@ -1,0 +1,19 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:meta="http://namespaces.zope.org/meta">
+
+    <meta:directive
+        namespace="http://namespaces.zope.org/plonetheme.onegov"
+        name="add_scss"
+        schema=".meta.IAddSCSSDirective"
+        handler=".meta.add_scss"
+        />
+
+    <meta:directive
+        namespace="http://namespaces.zope.org/plonetheme.onegov"
+        name="remove_scss"
+        schema=".meta.IRemoveSCSSDirective"
+        handler=".meta.remove_scss"
+        />
+
+</configure>
