@@ -24,6 +24,48 @@ Features
 - Responsive design for tablets and smartphones
 
 
+Layout customizations
+---------------------
+
+Theme is SCSS based and styles most things with variables which can easily be customized
+in a control panel.
+
+Just visit the customization view: http://localhost:8080/Plone/customstyles_form
+
+Additional SCSS
+---------------
+
+You can easily register custom SCSS files in your addon package using ZCML, if you need to customize
+more than available through the web:
+
+.. code:: xml
+
+    <configure
+        xmlns:theme="http://namespaces.zope.org/plonetheme.onegov">
+
+        <include package="plonetheme.onegov" />
+        <theme:add_scss path="resources/custom.scss" />
+
+    </configure>
+
+The SCSS files can also be restricted to a specific context interface or a specific request layer.
+Be aware that the context interface applies to the context the styles are rendered on, which is either
+the Plone site root or an `INavigationRoot` object.
+
+.. code:: xml
+
+    <configure
+        xmlns:theme="http://namespaces.zope.org/plonetheme.onegov">
+
+        <include package="plonetheme.onegov" />
+        <theme:add_scss 
+            path="resources/custom.scss"
+            for="my.package.interfaces.ISubsite"
+            layer="my.package.interfaces.IMyPackageLayer" />
+
+    </configure>
+
+
 Links
 -----
 
