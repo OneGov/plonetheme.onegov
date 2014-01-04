@@ -6,6 +6,7 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     xmlns:cmf="http://namespaces.zope.org/cmf"
     xmlns:zcml="http://namespaces.zope.org/zcml"
+    xmlns:theme="http://namespaces.zope.org/plonetheme.onegov"
     i18n_domain="plonetheme.onegov">
 
   <include package="z3c.autoinclude" file="meta.zcml" />
@@ -16,6 +17,7 @@
   <cmf:registerDirectory name="plonetheme_onegov"/>
 
   <include package="plone.resource" file="meta.zcml"/>
+  <include file="meta.zcml" />
 
   <include package=".browser" />
   <include package=".portlets" />
@@ -34,5 +36,24 @@
       />
 
   <plone:static type="theme" directory="resources" />
+
+  <theme:add_scss path="resources/sass/post_variables.scss" />
+  <theme:add_scss path="resources/sass/mixins.scss" />
+  <theme:add_scss path="resources/sass/helper.scss" />
+  <theme:add_scss path="resources/sass/components/grid.scss" />
+  <theme:add_scss path="resources/sass/components/base.scss" />
+  <theme:add_scss path="resources/sass/components/icons.scss" />
+  <theme:add_scss path="resources/sass/components/form.scss" />
+  <theme:add_scss path="resources/sass/components/search.scss" />
+  <theme:add_scss path="resources/sass/components/blog.scss" />
+  <theme:add_scss path="resources/sass/components/tabbedview.scss" />
+  <theme:add_scss path="resources/sass/components/overlays.scss" />
+  <theme:add_scss path="resources/sass/components/menues.scss" />
+  <theme:add_scss path="resources/sass/components/messages.scss" />
+  <theme:add_scss path="resources/sass/components/tables.scss" />
+  <theme:add_scss path="resources/sass/components/batching.scss" />
+  <theme:add_scss path="resources/sass/components/responsive.scss" />
+  <theme:add_scss path="resources/sass/components/people.scss" />
+  <theme:add_scss path="resources/sass/components/overrides.scss" />
 
 </configure>
