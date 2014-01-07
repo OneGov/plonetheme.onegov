@@ -1,7 +1,9 @@
 from plonetheme.onegov.interfaces import ICustomStyles
 import json
+import re
 
-FILENAME = 'customstyles.json'
+
+FILENAME_PATTERN = re.compile(r'^customstyles.*\.json$')
 
 
 def importCustomstyles(import_context):
@@ -14,20 +16,22 @@ def importCustomstyles(import_context):
     root.
     """
 
-    filedata = import_context.readDataFile(FILENAME)
+    filenames = filter(FILENAME_PATTERN.match, import_context.listDirectory('.'))
 
-    if filedata is None:
-        return
+    for filename in filenames:
+        filedata = import_context.readDataFile(filename)
+        if filedata is None:
+            continue
 
-    styles = json.loads(filedata)
-    site = import_context.getSite()
-    if 'path' in styles:
-        context = site.restrictedTraverse(styles['path'].encode('utf-8'))
-        del styles['path']
-    else:
-        context = site
+        styles = json.loads(filedata)
+        site = import_context.getSite()
+        if 'path' in styles:
+            context = site.restrictedTraverse(styles['path'].encode('utf-8'))
+            del styles['path']
+        else:
+            context = site
 
-    ICustomStyles(context).set_styles(styles)
+        ICustomStyles(context).set_styles(styles)
 
 
 def exportCustomstyles(export_context):
@@ -37,4 +41,4 @@ def exportCustomstyles(export_context):
     site = export_context.getSite()
     styles = ICustomStyles(site).get_styles()
     data = json.dumps(styles, sort_keys=True, indent=4)
-    export_context.writeDataFile(FILENAME, data, 'application/json')
+    export_context.writeDataFile('customstyles.json', data, 'application/json')
