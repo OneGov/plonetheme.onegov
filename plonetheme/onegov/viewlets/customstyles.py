@@ -4,35 +4,13 @@ from plone.app.layout.navigation.root import getNavigationRoot
 from plone.app.layout.viewlets.common import ViewletBase
 from plone.memoize import ram
 from plone.uuid.interfaces import IUUID
+from plonetheme.onegov.interfaces import ISCSSRegistry
 from plonetheme.onegov.utils import replace_custom_keywords
 from scss import Scss
 from zope.annotation.interfaces import IAnnotations
-
+from zope.component import getUtility
 import os
 import time
-
-
-SCSS_FILES = [
-    "post_variables.scss",
-    "mixins.scss",
-    "helper.scss",
-    "components/grid.scss",
-    "components/base.scss",
-    "components/icons.scss",
-    "components/form.scss",
-    "components/search.scss",
-    "components/blog.scss",
-    "components/tabbedview.scss",
-    "components/overlays.scss",
-    "components/menues.scss",
-    "components/messages.scss",
-    "components/tables.scss",
-    "components/batching.scss",
-    "components/responsive.scss",
-    "components/people.scss",
-    "components/overrides.scss",
-    # "components/overrides_zug.scss",
-    ]
 
 
 def cache_key(method, self):
@@ -66,8 +44,10 @@ class CustomStyles(ViewletBase):
         scss_input.append(self.get_options().encode('utf8'))
 
         # add component files
-        for scss_file in SCSS_FILES:
-            scss_input.append(self.read_file(scss_file))
+        registry = getUtility(ISCSSRegistry)
+        for path in registry.get_files(self.context, self.request):
+            with open(path, 'r') as file_:
+                scss_input.append(file_.read())
 
         # add overwritten component files
         # for now its not possible to add custom styles
