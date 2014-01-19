@@ -76,3 +76,49 @@ class TestNavigationPortlet(TestCase):
 
         browser.visit(folder)
         self.assertEquals([], portlet().css('.child').text)
+
+    @browsing
+    def test_lists_siblings_when_configured(self, browser):
+        create(Builder('navigation portlet').having(currentFolderOnly=False))
+        create(Builder('folder').titled('Foo'))
+        bar = create(Builder('folder').titled('Bar'))
+        create(Builder('folder').titled('Baz'))
+
+        browser.visit(bar)
+        self.assertEquals(['Plone site', 'Foo', 'Bar', 'Baz'],
+                          portlet().css('li').text)
+
+    @browsing
+    def test_disable_listing_siblings_with_current_folder_only(self, browser):
+        create(Builder('navigation portlet').having(currentFolderOnly=True))
+        create(Builder('folder').titled('Foo'))
+        bar = create(Builder('folder').titled('Bar'))
+        create(Builder('folder').titled('Baz'))
+
+        browser.visit(bar)
+        self.assertEquals(['Plone site', 'Bar'],
+                          portlet().css('li').text)
+
+    @browsing
+    def test_siblings_not_shown_when_excluded_from_navigation(self, browser):
+        create(Builder('navigation portlet').having(currentFolderOnly=False))
+        folder = create(Builder('folder').titled('The Folder'))
+        create(Builder('folder').titled('excluded').having(excludeFromNav=True))
+
+        browser.visit(folder)
+        self.assertEquals(['Plone site', 'The Folder'],
+                          portlet().css('li').text)
+
+    @browsing
+    def test_siblings_not_shown_when_type_excluded_from_navigation(self, browser):
+        properties = getToolByName(self.layer['portal'], 'portal_properties')
+        navtree_properties = properties.navtree_properties
+        navtree_properties.metaTypesNotToList += ('Document', )
+
+        create(Builder('navigation portlet').having(currentFolderOnly=False))
+        folder = create(Builder('folder').titled('The Folder'))
+        create(Builder('page').titled('excluded').having(excludeFromNav=True))
+
+        browser.visit(folder)
+        self.assertEquals(['Plone site', 'The Folder'],
+                          portlet().css('li').text)

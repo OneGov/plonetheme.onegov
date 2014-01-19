@@ -246,10 +246,13 @@ a,
     @include gradient($navigation-gradient-from, $navigation-gradient-to);
     font-weight: bold;
   }
-  & .parent {
+  & .parent, & .sibling {
     border-bottom: 1px solid $lightgray2;
     & a {
       padding-left: 0.5em;
+    }
+    &.sibling {
+      @include gradient($navigation-gradient-from, $navigation-gradient-to);
     }
   }
 }

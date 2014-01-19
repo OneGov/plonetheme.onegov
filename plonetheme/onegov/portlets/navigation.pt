@@ -1,7 +1,8 @@
 <dl class="portlet portletContextNavigation"
     i18n:domain="plonetheme.onegov"
     tal:define="parent nocall:view/parent;
-                children view/children">
+                children view/children;
+                siblings view/siblings">
 
   <dt class="portletHeader hiddenStructure">
     <span class="portletTopLeft"></span>
@@ -20,6 +21,12 @@
         </li>
       </tal:parent>
 
+      <li class="sibling" tal:repeat="sibling siblings/before_context|nothing">
+          <a tal:attributes="href sibling/getURL;
+                             title sibling/Title"
+             tal:content="sibling/Title"/>
+      </li>
+
       <li class="current" tal:content="context/Title" />
 
       <tal:children repeat="child children">
@@ -30,6 +37,13 @@
              />
         </li>
       </tal:children>
+
+      <li class="sibling" tal:repeat="sibling siblings/after_context|nothing">
+          <a tal:attributes="href sibling/getURL;
+                             title sibling/Title"
+             tal:content="sibling/Title"/>
+      </li>
+
     </ul>
   </dd>
 
