@@ -23,7 +23,7 @@
       <li class="current" tal:content="context/Title" />
 
       <tal:children repeat="child children">
-        <li>
+        <li class="child">
           <a tal:attributes="href child/getURL;
                              title child/Title"
              tal:content="child/Title"
