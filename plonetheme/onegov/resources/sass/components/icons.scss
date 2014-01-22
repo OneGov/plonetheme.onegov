@@ -1,3 +1,23 @@
+@mixin invisible_text($icon-size: $font-size) {
+  font-size: 1px;
+  color: transparent;
+  width: 20px;
+  margin: 0 3px;
+  height: 20px;
+  overflow: hidden;
+  display: block;
+  float: left;
+  &:before {
+    font-size: $icon-size;
+    color: $link-color;
+  }
+  &:hover {
+    &:before {
+      color: $link-color-hover;
+    }
+  }
+}
+
 @mixin base_icon($char) {
   font-family: "icomoon";
   font-size: 1em;
@@ -213,6 +233,11 @@ a.external-link {
     vertical-align: middle;
   }
 }
+.portlet.portletCollection.newsTemplate a.RssLink {
+  @include icon($char:'G');
+  @include invisible_text($icon-size: 16px);
+  float: right;
+}
 
 
 /* @group document actions */
@@ -242,23 +267,7 @@ a.external-link {
 #document-actions #document-action-addtofavorites a,
 #document-actions #document-action-pdf a,
 #document-actions #document-action-reader a {
-  font-size: 1px;
-  color: transparent;
-  width: 20px;
-  margin: 0 3px;
-  height: 20px;
-  overflow: hidden;
-  display: block;
-  float: left;
-  &:before {
-    font-size: 20px;
-    color: $link-color;
-  }
-  &:hover {
-    &:before {
-      color: $link-color-hover;
-    }
-  }
+  @include invisible_text($icon-size: 20px);
 }
 
 /* @end */
