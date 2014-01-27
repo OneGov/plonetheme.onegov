@@ -35,6 +35,9 @@ msgstr ""
 msgid "global-navigation-color-hover"
 msgstr ""
 
+msgid "global-navigation-color-selected"
+msgstr ""
+
 msgid "global-navigation-border-color"
 msgstr ""
 

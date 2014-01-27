@@ -1,17 +1,11 @@
-import copy
-import json
-
-from AccessControl import getSecurityManager
-from BTrees.OOBTree import OOBTree
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.i18n.normalizer.interfaces import IIDNormalizer
-from plone.memoize.interfaces import ICacheChooser
+from plonetheme.onegov.interfaces import ICustomStyles
 from plonetheme.onegov.viewlets.customstyles import CustomStyles
-from zExceptions import Unauthorized
-from zope.annotation.interfaces import IAnnotations
 from zope.component import getUtility
-from zope.component import queryUtility
 from zope.publisher.browser import BrowserView
+import json
+
 
 CUSTOM_STYLE_OPTIONS = [
     "body-background",
@@ -27,6 +21,7 @@ CUSTOM_STYLE_OPTIONS = [
     "link-color",
     "link-color-hover",
     ]
+
 
 CUSTOM_IMAGE_PATHS = [
     "logo",
@@ -44,13 +39,6 @@ class CustomStylesForm(BrowserView):
     template = ViewPageTemplateFile('customstyles_form.pt')
 
     def __call__(self):
-        if not self.can_manage_styles():
-            raise Unauthorized
-        self.is_subsite = self.context.portal_type == 'Subsite'
-        self.css_fields = CUSTOM_STYLE_OPTIONS
-        self.img_fields = CUSTOM_IMAGE_PATHS
-        self.annotations = IAnnotations(self.context)
-
         if self.request.form.get('form.submit', None):
             self.save_values(self.request.form)
 
@@ -65,26 +53,27 @@ class CustomStylesForm(BrowserView):
         if self.request.form.get('form.reset', None):
             self.save_values({})
 
+        return self.render()
+
+    def render(self):
+        self.is_subsite = self.context.portal_type == 'Subsite'
+        self.css_fields = CUSTOM_STYLE_OPTIONS
+        self.img_fields = CUSTOM_IMAGE_PATHS
         return self.template()
 
-    def can_manage_styles(self):
-        sm = getSecurityManager()
-        return bool(sm.checkPermission('plonetheme.onegov: Manage Styles',
-                                       self.context))
-
     def save_values(self, items):
-        styles = {}
-        for key, value in items.items():
-            if key.startswith('css.') or \
-                    key.startswith('img.') or \
-                    key == 'custom_scss':
-                styles[key] = value
-        self.annotations['onegov.customstyles'] = OOBTree(styles)
-        #invalidate cache
-        func_name = 'plonetheme.onegov.viewlets.customstyles' + \
-            '.CustomStyles.generate_css'
-        cache = queryUtility(ICacheChooser)(func_name)
-        cache.ramcache.invalidateAll()
+        def include(item):
+            name, _value = item
+            if name.startswith('css.'):
+                return True
+            if name.startswith('img.'):
+                return True
+            if name == 'custom_scss':
+                return True
+            return False
+
+        styles = dict(filter(include, items.items()))
+        ICustomStyles(self.context).set_styles(styles)
 
     def export_styles(self, download=False):
         """Returns a json file containing the styles.
@@ -99,8 +88,7 @@ class CustomStylesForm(BrowserView):
                 'Content-disposition',
                 'attachment; filename=customstyles_%s.json' % normalized_title)
 
-        styles = copy.deepcopy(self.annotations['onegov.customstyles'])
-        return json.dumps(dict(styles))
+        return json.dumps(ICustomStyles(self.context).get_styles())
 
     def import_styles(self, styles):
         """Imports styles to annotations.
@@ -108,7 +96,7 @@ class CustomStylesForm(BrowserView):
         self.save_values(items=styles)
 
     def options(self):
-        return self.annotations.get('onegov.customstyles', {})
+        return ICustomStyles(self.context).get_styles()
 
 
 class CustomStylesCSS(BrowserView):

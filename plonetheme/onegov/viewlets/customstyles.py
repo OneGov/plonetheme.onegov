@@ -3,6 +3,7 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.navigation.root import getNavigationRoot
 from plone.app.layout.viewlets.common import ViewletBase
 from plone.memoize import ram
+from plone.memoize.interfaces import ICacheChooser
 from plone.uuid.interfaces import IUUID
 from plonetheme.onegov.interfaces import ISCSSRegistry
 from plonetheme.onegov.utils import replace_custom_keywords
@@ -23,6 +24,13 @@ def cache_key(method, self):
     nav_root = self.context.restrictedTraverse(getNavigationRoot(self.context))
     uuid = IUUID(nav_root, '/'.join(nav_root.getPhysicalPath()))
     return "{}.{}".format(cachekey_prefix, uuid)
+
+
+def invalidate_cache():
+    func_name = 'plonetheme.onegov.viewlets.customstyles' + \
+        '.CustomStyles.generate_css'
+    cache = getUtility(ICacheChooser)(func_name)
+    cache.ramcache.invalidateAll()
 
 
 class CustomStyles(ViewletBase):

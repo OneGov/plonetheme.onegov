@@ -6,11 +6,12 @@ version = '1.0.dev0'
 tests_require = [
     'ftw.builder',
     'ftw.solr',
+    'ftw.testbrowser',
     'ftw.testing [splinter]',
     'plone.app.testing',
     'plone.resource',
-    'unittest2',
     'pyquery',
+    'unittest2',
     ]
 
 setup(name='plonetheme.onegov',

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-10-16 10:57+0000\n"
+"POT-Creation-Date: 2014-01-03 08:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,7 +30,7 @@ msgid "batch_previous_page"
 msgstr "Vorherige Seite"
 
 msgid "body-background"
-msgstr "Hintergrundfarbe"
+msgstr "Hintergrund"
 
 msgid "favicon"
 msgstr "Favicon"
@@ -46,6 +46,9 @@ msgstr "Farbe in der Navigation"
 
 msgid "global-navigation-color-hover"
 msgstr "Hover Farbe in der Navigation"
+
+msgid "global-navigation-color-selected"
+msgstr "Farbe für aktives Element in der Navigation"
 
 msgid "heading-font-family"
 msgstr "Schriftart Überschriften"
@@ -132,5 +135,3 @@ msgstr "Touch Icon für's iPhone (152px)"
 
 msgid "touch_iphone_76"
 msgstr "Touch Icon für's iPhone (76px)"
-
-
