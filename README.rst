@@ -3,7 +3,7 @@ plonetheme.onegov
 
 This is the default theme for OneGov.
 
-.. image:: https://github.com/4teamwork/ftw.mobilenavigation/raw/master/docs/screenshot_onegov.png
+.. image:: https://raw.github.com/OneGov/plonetheme.onegov/master/docs/screenshot_onegov.png
 
 
 Usage
