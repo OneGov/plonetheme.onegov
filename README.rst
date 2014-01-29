@@ -35,11 +35,11 @@ Just visit the customization view: http://localhost:8080/Plone/customstyles_form
 
 Here are some examples how the Layout can be customized:
 
-.. image:: https://raw.github.com/OneGov/plonetheme.onegov/master/docs/screenshot_custom.png
+.. image:: https://raw.github.com/OneGov/plonetheme.onegov/master/docs/screenshot_zg_ch.png
 
 .. image:: https://raw.github.com/OneGov/plonetheme.onegov/master/docs/screenshot_menzingen.png
 
-.. image:: https://raw.github.com/OneGov/plonetheme.onegov/master/docs/screenshot_zg_ch.png
+.. image:: https://raw.github.com/OneGov/plonetheme.onegov/master/docs/screenshot_custom.png
 
 
 Additional SCSS
