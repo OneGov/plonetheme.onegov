@@ -3,6 +3,7 @@ plonetheme.onegov
 
 This is the default theme for OneGov.
 
+.. image:: https://github.com/4teamwork/ftw.mobilenavigation/raw/master/docs/screenshot_onegov.png
 
 
 Usage
@@ -58,7 +59,7 @@ the Plone site root or an `INavigationRoot` object.
         xmlns:theme="http://namespaces.zope.org/plonetheme.onegov">
 
         <include package="plonetheme.onegov" />
-        <theme:add_scss 
+        <theme:add_scss
             path="resources/custom.scss"
             for="my.package.interfaces.ISubsite"
             layer="my.package.interfaces.IMyPackageLayer" />
