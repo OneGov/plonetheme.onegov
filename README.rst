@@ -1,7 +1,7 @@
 plonetheme.onegov
 =================
 
-This is the default theme for OneGov.
+This is the default theme for all OneGov Plone modules (http://onegov.ch).
 
 .. image:: https://raw.github.com/OneGov/plonetheme.onegov/master/docs/screenshot_onegov.png
 
@@ -32,6 +32,15 @@ Theme is SCSS based and styles most things with variables which can easily be cu
 in a control panel.
 
 Just visit the customization view: http://localhost:8080/Plone/customstyles_form
+
+Here are some examples how the Layout can be customized:
+
+.. image:: https://raw.github.com/OneGov/plonetheme.onegov/master/docs/screenshot_custom.png
+
+.. image:: https://raw.github.com/OneGov/plonetheme.onegov/master/docs/screenshot_menzingen.png
+
+.. image:: https://raw.github.com/OneGov/plonetheme.onegov/master/docs/screenshot_zg_ch.png
+
 
 Additional SCSS
 ---------------
