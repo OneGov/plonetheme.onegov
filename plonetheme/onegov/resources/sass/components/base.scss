@@ -252,7 +252,18 @@ a,
       padding-left: 0.5em;
     }
     &.sibling {
-      @include gradient($navigation-gradient-from, $navigation-gradient-to);
+      background-color: $navigation-sibling-background;
+      &.beforeContext {
+        border-top: none;
+        border-bottom: 1px solid $lightgray2;
+      }
+      &.afterContext {
+        border-top: 1px solid $lightgray2;
+        border-bottom: none;
+      }
+      &:hover {
+        @include gradient($navigation-gradient-from, $navigation-gradient-to);
+      }
     }
   }
 }
