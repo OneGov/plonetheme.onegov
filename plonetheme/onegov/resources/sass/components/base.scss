@@ -246,10 +246,24 @@ a,
     @include gradient($navigation-gradient-from, $navigation-gradient-to);
     font-weight: bold;
   }
-  & .parent {
+  & .parent, & .sibling {
     border-bottom: 1px solid $lightgray2;
     & a {
       padding-left: 0.5em;
+    }
+    &.sibling {
+      background-color: $navigation-sibling-background;
+      &.beforeContext {
+        border-top: none;
+        border-bottom: 1px solid $lightgray2;
+      }
+      &.afterContext {
+        border-top: 1px solid $lightgray2;
+        border-bottom: none;
+      }
+      &:hover {
+        @include gradient($navigation-gradient-from, $navigation-gradient-to);
+      }
     }
   }
 }
