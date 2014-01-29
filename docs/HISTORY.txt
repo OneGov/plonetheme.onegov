@@ -1,7 +1,15 @@
 Changelog
 =========
 
-1.0 (unreleased)
-----------------
+1.0.1 (unreleased)
+------------------
+
+- Change the navigation behavior to respect the "currentFolderOnly" portlet option.
+  For the old behavior, the "currentFolderOnly" needs to be activated on the portlet.
+  [jone]
+
+
+1.0.0 (2014-01-29)
+------------------
 
 - Initial release

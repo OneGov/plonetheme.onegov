@@ -1,0 +1,21 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="plonetheme.onegov.tests">
+
+    <genericsetup:registerProfile
+        name="portal-customstyles"
+        title="plonetheme.onegov.tests: portal-customstyles"
+        directory="profiles/portal-customstyles"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+
+    <genericsetup:registerProfile
+        name="foo-customstyles"
+        title="plonetheme.onegov.tests: foo-customstyles"
+        directory="profiles/foo-customstyles"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+
+</configure>
