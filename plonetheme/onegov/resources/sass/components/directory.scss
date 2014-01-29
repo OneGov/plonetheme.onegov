@@ -1,5 +1,14 @@
 /* @group seantis.dir.* directories */
 
+/* @group token input (categories) */
+@for $i from 1 through 4 {
+    #formfield-form-widgets-IDirectoryCategorized-cat$i {
+        width: 100%;
+    }
+}
+
+/* @end */
+
 /* @group all directory views */
 .seantis-directory-all {
 
