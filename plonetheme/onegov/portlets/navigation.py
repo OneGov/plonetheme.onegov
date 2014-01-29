@@ -1,5 +1,3 @@
-import Missing
-
 from Acquisition import aq_inner, aq_parent
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.interfaces.siteroot import IPloneSiteRoot
@@ -19,6 +17,7 @@ class Renderer(base.Renderer):
         self.context = context
         self.request = request
         self.parent = aq_parent(aq_inner(context))
+        self.data = data
         plone = getMultiAdapter((context, request), name="plone")
         self.is_default_page = plone.isDefaultPageInFolder()
         in_factory = IFactoryTempFolder.providedBy(
@@ -27,6 +26,9 @@ class Renderer(base.Renderer):
             self.parent = aq_parent(aq_parent(aq_inner(self.parent)))
         elif self.is_default_page:
             self.parent = aq_parent(aq_inner(self.parent))
+
+        properties = getToolByName(self.context, 'portal_properties')
+        self.hidden_types = properties.navtree_properties.metaTypesNotToList
 
     def show_parent(self):
         """ Do not show parent if you are on navigationroot.
@@ -38,16 +40,43 @@ class Renderer(base.Renderer):
             return False
         return True
 
+    def siblings(self):
+        if self.data.currentFolderOnly:
+            return None
+
+        parent = aq_parent(aq_inner(self.context))
+        before = []
+        after = []
+        context_path = '/'.join((self.context.getPhysicalPath()))
+        context_reached = False
+
+        for brain in parent.getFolderContents():
+            if brain.getPath() == context_path:
+                context_reached = True
+                continue
+            if not context_reached:
+                before.append(brain)
+            else:
+                after.append(brain)
+
+        return {'before_context': self.filter_brains(before),
+                'after_context': self.filter_brains(after)}
+
     def children(self):
-        brains = []
-        properties = getToolByName(self.context, 'portal_properties')
-        hidden_types = properties.navtree_properties.metaTypesNotToList
-        for brain in self.context.getFolderContents():
-            if brain.portal_type not in hidden_types:
-                if getattr(brain, 'exclude_from_nav', False) in \
-                        [Missing.Value, False]:
-                    brains.append(brain)
-        return brains
+        return self.filter_brains(self.context.getFolderContents())
+
+    def filter_brains(self, brains):
+        """Filters brains, removing ignored types and content excluded from
+        navigation explictly.
+        """
+        for brain in brains:
+            if brain.portal_type in self.hidden_types:
+                continue
+
+            if getattr(brain, 'exclude_from_nav', False) == True:
+                continue
+
+            yield brain
 
     @property
     def available(self):
