@@ -8,6 +8,9 @@ Changelog
   seantis.dir.events and seantis.reservation.
   [href]
 
+- Added default plone collapsible style.
+  [Julian Infanger]
+
 
 1.1.0 (2014-01-29)
 ------------------

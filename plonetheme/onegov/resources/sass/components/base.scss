@@ -673,6 +673,21 @@ div.sl-controls {
 
 /* @end */
 
+/* @group collapsible */
+
+dl.collapsible {
+  dt {
+    cursor: pointer;
+  }
+  dd {
+    display: none;
+  }
+  &.expandedBlockCollapsible dd {
+    display: block;
+  }
+}
+
+/* @end */
 
 /* @group sitemap */
 
