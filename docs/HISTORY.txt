@@ -4,6 +4,9 @@ Changelog
 1.1.1 (unreleased)
 ------------------
 
+- Fix customstyles caching reset bug when modifying existing configurations.
+  [jone]
+
 - Adds styles for a number of Seantis products, including seantis.dir.contacts,
   seantis.dir.events and seantis.reservation.
   [href]

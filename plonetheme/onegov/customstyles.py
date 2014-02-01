@@ -27,9 +27,9 @@ class CustomStyles(object):
     def set(self, style, value):
         if not self.annotations.get(CUSTOMSTYLES_ANNOTATION_KEY):
             self.set_styles({style: value})
-            invalidate_cache()
         else:
             self.annotations[CUSTOMSTYLES_ANNOTATION_KEY][style] = value
+            invalidate_cache()
 
     def get(self, style):
         return self.annotations.get(CUSTOMSTYLES_ANNOTATION_KEY, {}).get(
