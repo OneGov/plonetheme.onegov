@@ -4,6 +4,9 @@ Changelog
 1.1.1 (unreleased)
 ------------------
 
+- Customstyles: fix meta image inclusion (favicons, apple touch icons).
+  [jone]
+
 - Fix customstyles caching reset bug when modifying existing configurations.
   [jone]
 
