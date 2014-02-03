@@ -4,6 +4,10 @@ Changelog
 1.1.1 (unreleased)
 ------------------
 
+- Adds styles for a number of Seantis products, including seantis.dir.contacts,
+  seantis.dir.events and seantis.reservation.
+  [href]
+
 - Added default plone collapsible style.
   [Julian Infanger]
 

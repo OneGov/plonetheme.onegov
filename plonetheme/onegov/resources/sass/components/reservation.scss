@@ -87,6 +87,12 @@
 }
 /* @end */
 
+/* @group reservations management */
+.reservation-urls {
+    float: right;
+}
+/* @end */
+
 /* @group your reservations */
 .your-reservations, .your-reservations-view {
     background-color: $lightgray2;

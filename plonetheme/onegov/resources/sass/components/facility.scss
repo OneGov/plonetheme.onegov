@@ -52,6 +52,14 @@
         padding: 1em;
     }
 
+    #directoryResultList a:hover * {
+        background-color: $lightgray;
+    }
+
+    #directoryResultList a:hover .directoryDescription {
+        color: $text-color;
+    }
+
     .directoryResult h2 {
         margin-top: 0;
     }
@@ -79,6 +87,15 @@
         background-color: $lightgray !important;
     }
 
+}
+.portaltype-seantis-dir-facility-item {
+    .directoryResult {
+        padding-bottom: 0;
+    }
+
+    .directoryChildren {
+        margin-left: 1em;
+    }
 }
 /* @end */
 

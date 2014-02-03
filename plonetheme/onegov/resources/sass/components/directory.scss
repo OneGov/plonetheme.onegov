@@ -1,5 +1,14 @@
 /* @group seantis.dir.* directories */
 
+/* @group token input (categories) */
+@for $i from 1 through 4 {
+    #formfield-form-widgets-IDirectoryCategorized-cat$i {
+        width: 100%;
+    }
+}
+
+/* @end */
+
 /* @group all directory views */
 .seantis-directory-all {
 
@@ -7,6 +16,7 @@
     #directorySearch {
         background-color: $lightgray;
         padding: 1em;
+        margin-bottom: 1em;
     }
 
      /* directory result columns */
@@ -43,17 +53,23 @@
 .seantis-directory-results
 {
     /* intro styles */
-    #landingPageIntro {
-        margin-top: -1em;
-    }
-
     #landingPageText {
         width: 62.8%;
-    }
 
-    #landingPageImage {
-        float: right;
-        margin: 2.5em 0 1em 1em;
+        h2 {
+            padding-left: 1.6em;
+        }
+
+        div {
+            padding-left: 2em;
+            padding-bottom: 1em;
+        }
+
+        #landingPageImage {
+            float: left;
+            margin-bottom: 1em;
+            margin-right: 1em;
+        }
     }
 
     /* directory results */
@@ -73,10 +89,20 @@
 /* @end */
 
 /* @group all directory item views */
-.seantis-directory-items
+.seantis-directory-item
 {
     #directoryResultList .directoryInfoText {
         padding-left: 0;
+    }
+
+    ul {
+        margin-left: 1em;
+        margin-bottom: 1em;
+    }
+
+    .no-bullets {
+        list-style: none;
+        margin-left: 0;
     }
 }
 /* @end */
@@ -103,6 +129,7 @@
 
     .directoryResult {
         margin-bottom: 1.5em;
+        padding: 0;
     }
 
     .directoryTypes {
