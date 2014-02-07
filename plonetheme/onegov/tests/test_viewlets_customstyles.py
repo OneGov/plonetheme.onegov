@@ -1,10 +1,11 @@
-from BTrees.OOBTree import OOBTree
-from plone.memoize.interfaces import ICacheChooser
+from mocker import Mocker
+from mocker import expect
+from plonetheme.onegov.interfaces import ICustomStyles
 from plonetheme.onegov.interfaces import ISCSSRegistry
 from plonetheme.onegov.testing import THEME_FUNCTIONAL_TESTING
 from plonetheme.onegov.viewlets.customstyles import CustomStyles
+from plonetheme.onegov.viewlets.customstyles import invalidate_cache
 from unittest2 import TestCase
-from zope.annotation.interfaces import IAnnotations
 from zope.component import getUtility
 
 
@@ -23,11 +24,22 @@ class TestCustomstylesViewlet(TestCase):
         self.assertNotIn('purple', viewlet.generate_css(),
                          'Unexpectedly found "purple" in the CSS')
 
-        self.set_style('css.body-background', 'purple')
+        # Setting a custom style automatically invalidates the cache.
+        # For testing that things are cached, we stub the cache invalidation,
+        # so that the cache persists.
+        mocker = Mocker()
+        invalidate_cache_mock = mocker.replace(invalidate_cache)
+        expect(invalidate_cache_mock()).count(1, None)
+        mocker.replay()
+
+        ICustomStyles(self.layer['portal']).set('css.body-background', 'purple')
         self.assertNotIn('purple', viewlet.generate_css(),
                          'The result was not cached.')
 
-        self.invalidate_cache()
+        # Removing the stub and invalidating the cache should update the result.
+        mocker.restore()
+        mocker.verify()
+        invalidate_cache()
         self.assertIn('purple', viewlet.generate_css(),
                       'Expected "purple" in CSS - does the style'
                       ' css.body-background no longer work?')
@@ -50,25 +62,6 @@ class TestCustomstylesViewlet(TestCase):
         for name in expected:
             self.assertTrue(registry.is_registered(name),
                             'Expected the scss file "%s" to be registered' % name)
-
-    def set_style(self, name, value):
-        # XXX refactor this to use the new customstyles adapter when
-        # https://github.com/OneGov/plonetheme.onegov/pull/47 is merged
-        context = self.layer['portal']
-        annotations = IAnnotations(context)
-        key = 'onegov.customstyles'
-        if key not in annotations:
-            annotations[key] = OOBTree({name: value})
-        else:
-            annotations[key][name] = value
-
-    def invalidate_cache(self):
-        # XXX refactor this to use pt.onegov.viewlets.customstyles.invalidate_cache
-        # when https://github.com/OneGov/plonetheme.onegov/pull/47 is merged
-        func_name = 'plonetheme.onegov.viewlets.customstyles' + \
-            '.CustomStyles.generate_css'
-        cache = getUtility(ICacheChooser)(func_name)
-        cache.ramcache.invalidateAll()
 
     def get_viewlet(self):
         context = self.layer['portal']

@@ -1,18 +1,19 @@
 from BTrees.OOBTree import OOBTree
+from ftw.testing import MockTestCase
 from plonetheme.onegov.customstyles import CustomStyles
 from plonetheme.onegov.interfaces import CUSTOMSTYLES_ANNOTATION_KEY
 from plonetheme.onegov.interfaces import ICustomStyles
 from plonetheme.onegov.testing import THEME_INTEGRATION_TESTING
-from unittest2 import TestCase
 from zope.annotation import IAnnotations
 from zope.interface.verify import verifyClass
 
 
-class TestICustomStylesAdapter(TestCase):
+class TestICustomStylesAdapter(MockTestCase):
 
     layer = THEME_INTEGRATION_TESTING
 
     def setUp(self):
+        super(TestICustomStylesAdapter, self).setUp()
         self.portal = self.layer['portal']
 
     def test_implements_interface(self):
@@ -52,3 +53,25 @@ class TestICustomStylesAdapter(TestCase):
 
         annotations = IAnnotations(self.portal)
         self.assertEquals(OOBTree, type(annotations.get(CUSTOMSTYLES_ANNOTATION_KEY)))
+
+    def test_caches_are_invalidated_when_setting_NEW_values(self):
+        adapter = ICustomStyles(self.portal)
+        self.assertEquals({}, adapter.get_styles())
+
+        invalidate_cache_mock = self.mocker.replace(
+            'plonetheme.onegov.viewlets.customstyles.invalidate_cache')
+        self.expect(invalidate_cache_mock())
+        self.replay()
+
+        adapter.set('css.body-background', 'blue')
+
+    def test_caches_are_invalidated_when_resetting_EXISTING_values(self):
+        adapter = ICustomStyles(self.portal)
+        adapter.set('css.body-background', 'red')
+
+        invalidate_cache_mock = self.mocker.replace(
+            'plonetheme.onegov.viewlets.customstyles.invalidate_cache')
+        self.expect(invalidate_cache_mock())
+        self.replay()
+
+        adapter.set('css.body-background', 'blue')

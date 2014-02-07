@@ -5,10 +5,10 @@ from plone.app.layout.viewlets.common import ViewletBase
 from plone.memoize import ram
 from plone.memoize.interfaces import ICacheChooser
 from plone.uuid.interfaces import IUUID
+from plonetheme.onegov.interfaces import ICustomStyles
 from plonetheme.onegov.interfaces import ISCSSRegistry
 from plonetheme.onegov.utils import replace_custom_keywords
 from scss import Scss
-from zope.annotation.interfaces import IAnnotations
 from zope.component import getUtility
 import os
 import time
@@ -66,7 +66,7 @@ class CustomStyles(ViewletBase):
     def get_options(self):
         nav_root = self.context.restrictedTraverse(
             getNavigationRoot(self.context))
-        options = IAnnotations(nav_root).get('onegov.customstyles', {})
+        options = ICustomStyles(nav_root).get_styles()
         styles = []
         for key, value in options.items():
             if value and key.startswith('css.'):
