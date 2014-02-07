@@ -20,10 +20,9 @@
       layer="plonetheme.onegov.interfaces.IPlonethemeOneGovLayer"
       />
 
-  <!-- meta viewlet -->
   <browser:viewlet
-      name="onegov.meta"
-      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      name="plone.links.favicon"
+      manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
       class=".meta.MetaViewlet"
       permission="zope2.View"
       layer="plonetheme.onegov.interfaces.IPlonethemeOneGovLayer"

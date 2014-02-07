@@ -1,9 +1,8 @@
-from BTrees.OOBTree import OOBTree
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.navigation.root import getNavigationRoot
 from plone.app.layout.viewlets import common
+from plonetheme.onegov.interfaces import ICustomStyles
 from plonetheme.onegov.utils import replace_custom_keywords
-from zope.annotation.interfaces import IAnnotations
 
 
 class MetaViewlet(common.LogoViewlet):
@@ -12,11 +11,12 @@ class MetaViewlet(common.LogoViewlet):
 
     def update(self):
         super(MetaViewlet, self).update()
-        annotations = IAnnotations(self.context.restrictedTraverse(
-                getNavigationRoot(self.context)))
-        self.customstyles = annotations.get('customstyles', OOBTree({}))
+        navroot = self.context.restrictedTraverse(
+            getNavigationRoot(self.context))
+        self.customstyles = ICustomStyles(navroot).get_styles()
 
-        self.favicon = self.customstyle_value('img.favicon')
+        self.favicon = self.customstyle_value('img.favicon') or \
+            '/'.join((navroot.absolute_url(), 'favicon.ico'))
         self.startup = self.customstyle_value('img.startup')
         self.touch_iphone = self.customstyle_value('img.touch_iphone')
         self.touch_iphone_76 = self.customstyle_value('img.touch_iphone_76')
