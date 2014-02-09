@@ -90,3 +90,9 @@ class Renderer(base.Renderer):
     @memoize
     def getNavRootPath(self):
         return getRootPath(self.context, False, 1, None)
+
+    def cssclasses(self, brain):
+        classes = []
+        if brain.review_state:
+            classes.append('state-%s' % brain.review_state)
+        return ' '.join(classes)

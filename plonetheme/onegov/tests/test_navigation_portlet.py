@@ -24,9 +24,9 @@ class TestNavigationPortlet(TestCase):
     layer = THEME_FUNCTIONAL_TESTING
 
     def setUp(self):
-        portal = self.layer['portal']
-        setRoles(portal, TEST_USER_ID, ['Manager'])
-        login(portal, TEST_USER_NAME)
+        self.portal = self.layer['portal']
+        setRoles(self.portal, TEST_USER_ID, ['Manager'])
+        login(self.portal, TEST_USER_NAME)
 
     @browsing
     def test_has_parent_link(self, browser):
@@ -122,3 +122,21 @@ class TestNavigationPortlet(TestCase):
         browser.visit(folder)
         self.assertEquals(['Plone site', 'The Folder'],
                           portlet().css('li').text)
+
+    @browsing
+    def test_workflow_status_class_on_node(self, browser):
+        wftool = getToolByName(self.portal, 'portal_workflow')
+        wftool.setChainForPortalTypes(['Document', 'Folder'],
+                                      'simple_publication_workflow')
+
+        create(Builder('navigation portlet'))
+        create(Builder('folder').titled('Top Sibling'))
+        folder = create(Builder('folder').titled('The Folder').in_state('published'))
+        create(Builder('page').titled('The Page').within(folder))
+        create(Builder('folder').titled('Bottom Sibling').in_state('pending'))
+
+        browser.login().visit(folder)
+        self.assertIn('state-private', portlet().css('.sibling')[0].classes)
+        self.assertIn('state-published', portlet().css('.current').first.classes)
+        self.assertIn('state-private', portlet().css('.child').first.classes)
+        self.assertIn('state-pending', portlet().css('.sibling')[1].classes)
