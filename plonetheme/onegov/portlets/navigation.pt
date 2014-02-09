@@ -31,8 +31,12 @@
       </tal:top_siblings>
 
       <li tal:content="context/Title"
-          tal:define="workflow_state context/plone_context_state/workflow_state"
-          tal:attributes="class string:current state-${workflow_state}" />
+          tal:define="is_expired context/expires/isPast|nothing;
+                      classes python: is_expired and 'content-expired' or '';
+                      workflow_state context/plone_context_state/workflow_state;
+                      classes string:state-${workflow_state} ${classes};
+                      classes python:view.cssclasses(context)"
+          tal:attributes="class string:current ${classes}" />
 
       <tal:children repeat="child children">
         <li tal:define="classes python:view.cssclasses(child)"

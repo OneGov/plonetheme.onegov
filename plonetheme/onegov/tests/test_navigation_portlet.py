@@ -1,8 +1,10 @@
 from Products.CMFCore.utils import getToolByName
+from datetime import datetime
 from ftw.builder import Builder
 from ftw.builder import create
 from ftw.testbrowser import browser
 from ftw.testbrowser import browsing
+from ftw.testing import freeze
 from plone.app.testing import TEST_USER_ID
 from plone.app.testing import TEST_USER_NAME
 from plone.app.testing import login
@@ -140,3 +142,34 @@ class TestNavigationPortlet(TestCase):
         self.assertIn('state-published', portlet().css('.current').first.classes)
         self.assertIn('state-private', portlet().css('.child').first.classes)
         self.assertIn('state-pending', portlet().css('.sibling')[1].classes)
+
+    @browsing
+    def test_content_expired_class_for_expired_content(self, browser):
+        before_expiration = datetime(2010, 1, 1)
+        expiration_date = datetime(2010, 2, 2)
+        after_expiration = datetime(2010, 3, 3)
+
+        create(Builder('navigation portlet'))
+        create(Builder('folder').titled('Top Sibling')
+               .having(expirationDate=expiration_date))
+        folder = create(Builder('folder').titled('The Folder')
+                        .having(expirationDate=expiration_date))
+        create(Builder('page').titled('The Page').within(folder)
+               .having(expirationDate=expiration_date))
+        create(Builder('folder').titled('Bottom Sibling')
+               .having(expirationDate=expiration_date))
+
+        with freeze(after_expiration):
+            browser.login().visit(folder)
+            self.assertIn('content-expired', portlet().css('.sibling')[0].classes)
+            self.assertIn('content-expired', portlet().css('.current').first.classes)
+            self.assertIn('content-expired', portlet().css('.child').first.classes)
+            self.assertIn('content-expired', portlet().css('.sibling')[1].classes)
+
+        with freeze(before_expiration):
+            browser.login().visit(folder)
+            self.assertNotIn('content-expired', portlet().css('.sibling')[0].classes)
+            self.assertNotIn('content-expired',
+                             portlet().css('.current').first.classes)
+            self.assertNotIn('content-expired', portlet().css('.child').first.classes)
+            self.assertNotIn('content-expired', portlet().css('.sibling')[1].classes)

@@ -1,6 +1,7 @@
 from Acquisition import aq_inner, aq_parent
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.interfaces.siteroot import IPloneSiteRoot
+from Products.CMFPlone.utils import base_hasattr
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from borg.localrole.interfaces import IFactoryTempFolder
 from plone.app.portlets.portlets import base
@@ -91,8 +92,25 @@ class Renderer(base.Renderer):
     def getNavRootPath(self):
         return getRootPath(self.context, False, 1, None)
 
-    def cssclasses(self, brain):
+    def cssclasses(self, brain_or_obj):
         classes = []
-        if brain.review_state:
-            classes.append('state-%s' % brain.review_state)
+        if base_hasattr(brain_or_obj, 'getURL'):
+            brain = brain_or_obj
+            if brain.review_state:
+                classes.append('state-%s' % brain.review_state)
+
+            if brain.expires and brain.expires.isPast():
+                classes.append('content-expired')
+
+        else:
+            obj = brain_or_obj
+            context_state = getMultiAdapter((obj, obj.REQUEST),
+                                            name='plone_context_state')
+
+            if context_state.workflow_state():
+                classes.append('state-%s' % context_state.workflow_state())
+
+            if base_hasattr(obj, 'expires') and obj.expires().isPast():
+                classes.append('content-expired')
+
         return ' '.join(classes)
