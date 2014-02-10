@@ -4,6 +4,12 @@ Changelog
 1.1.1 (unreleased)
 ------------------
 
+- Navigation portlet: add "content-expired" class on expired items.
+  [jone]
+
+- Navigation portlet: add css class with item workflow state.
+  [jone]
+
 - Customstyles: fix meta image inclusion (favicons, apple touch icons).
   [jone]
 

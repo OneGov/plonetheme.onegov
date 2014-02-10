@@ -21,16 +21,26 @@
         </li>
       </tal:parent>
 
-      <li class="sibling beforeContext" tal:repeat="sibling siblings/before_context|nothing">
-          <a tal:attributes="href sibling/getURL;
-                             title sibling/Title"
-             tal:content="sibling/Title"/>
-      </li>
+      <tal:top_siblings tal:repeat="sibling siblings/before_context|nothing">
+          <li tal:define="classes python:view.cssclasses(sibling)"
+              tal:attributes="class string:sibling beforeContext ${classes}">
+              <a tal:attributes="href sibling/getURL;
+                                 title sibling/Title"
+                 tal:content="sibling/Title"/>
+          </li>
+      </tal:top_siblings>
 
-      <li class="current" tal:content="context/Title" />
+      <li tal:content="context/Title"
+          tal:define="is_expired context/expires/isPast|nothing;
+                      classes python: is_expired and 'content-expired' or '';
+                      workflow_state context/plone_context_state/workflow_state;
+                      classes string:state-${workflow_state} ${classes};
+                      classes python:view.cssclasses(context)"
+          tal:attributes="class string:current ${classes}" />
 
       <tal:children repeat="child children">
-        <li class="child">
+        <li tal:define="classes python:view.cssclasses(child)"
+            tal:attributes="class string:child ${classes}">
           <a tal:attributes="href child/getURL;
                              title child/Title"
              tal:content="child/Title"
@@ -38,11 +48,14 @@
         </li>
       </tal:children>
 
-      <li class="sibling afterContext" tal:repeat="sibling siblings/after_context|nothing">
-          <a tal:attributes="href sibling/getURL;
-                             title sibling/Title"
-             tal:content="sibling/Title"/>
-      </li>
+      <tal:bottom_siblings tal:repeat="sibling siblings/after_context|nothing">
+          <li tal:define="classes python:view.cssclasses(sibling)"
+              tal:attributes="class string:sibling afterContext ${classes}">
+              <a tal:attributes="href sibling/getURL;
+                                 title sibling/Title"
+                 tal:content="sibling/Title"/>
+          </li>
+      </tal:bottom_siblings>
 
     </ul>
   </dd>
