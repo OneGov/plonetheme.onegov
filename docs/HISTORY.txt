@@ -4,7 +4,8 @@ Changelog
 1.1.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Added margin in simplelayoutDropZonePortlet blocks.
+  [Julian Infanger]
 
 
 1.1.1 (2014-02-10)

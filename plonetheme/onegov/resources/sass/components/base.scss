@@ -363,8 +363,22 @@ div.slideNavi .globalnav li a {
   padding: 1em;
   margin-bottom: 1em;
   &.simplelayoutDropZonePortlet {
+    padding: 0;
+    background-color: transparent;
     h1,h2,h3 {
       margin-top: 0;
+    }
+    dd.portletItem {
+      padding: 0;
+      .BlockOverallWrapper {
+        padding: 1em;
+        margin-bottom: 1em;
+        background-color: $lightgray;
+        &.blockHighlight {
+          border-bottom: 0;
+          background: #dde7ec;
+        }
+      }
     }
   }
   & dt.portletHeader {
