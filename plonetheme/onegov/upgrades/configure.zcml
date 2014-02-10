@@ -16,5 +16,13 @@
       directory="profiles/1001"
       />
 
+  <!-- 1001 -> 1110 -->
+  <upgrade-step:importProfile
+      title="Add tinymce popup css"
+      profile="plonetheme.onegov:default"
+      source="1001"
+      destination="1110"
+      directory="profiles/1110"
+      />
 
 </configure>

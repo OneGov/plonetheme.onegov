@@ -93,4 +93,6 @@
               applyPrefix="True"
               />
 
+  <stylesheet id="++theme++plonetheme.onegov/css/tinymce_popups.css" />
+
 </object>

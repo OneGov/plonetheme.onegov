@@ -4,6 +4,9 @@ Changelog
 1.1.1 (unreleased)
 ------------------
 
+- Fixed tinymce popup styles.
+  [Julian Infanger]
+
 - Navigation portlet: add "content-expired" class on expired items.
   [jone]
 

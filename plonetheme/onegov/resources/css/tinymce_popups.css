@@ -1,0 +1,35 @@
+/* @group tinymce popups */
+
+#plonebrowser .formHelp,
+.dialog-wrapper#content {
+  font-size: 13px !important;
+  font-family: Arial;
+}
+.dialog-wrapper#content .formHelp {
+  clear: both;
+}
+#plonebrowser #content {
+  padding: 0;
+}
+.dialog-wrapper#content input[type="radio"],
+.dialog-wrapper#content input[type="checkbox"] {
+  margin: 0.5em 0 !important;
+}
+.dialog-wrapper #details-fields input[type="text"] {
+  padding: 0.25em 0;
+}
+.dialog-wrapper #footer {
+  height: auto;
+}
+.dialog-wrapper label {
+  font-weight: bold;
+}
+.dialog-wrapper a {
+  color: #000;
+}
+.dialog-wrapper a:hover {
+  text-decoration: underline;
+  color: #444;
+}
+
+/* @end */
