@@ -1,0 +1,142 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Plonetheme.Onegov\n"
+"POT-Creation-Date: 2014-01-03 08:12+0000\n"
+"PO-Revision-Date: 2014-02-17 16:55+0100\n"
+"Last-Translator: Espen Moe-Nilssen <espen@medialog.no>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+"X-Generator: Poedit 1.5.5\n"
+"Language: Norsk\n"
+"Language-Code: no\n"
+"Language-Name: Norsk\n"
+"X-Is-Fallback-For: nb nb-no no-bok\n"
+
+msgid "Direct to"
+msgstr "Direkte til"
+
+#: plonetheme/onegov/profiles/default/actions.xml
+msgid "Manage styles"
+msgstr "Rediger design"
+
+#. Default: "Next Page"
+#: plonetheme/onegov/browser/batchnavigation.pt:56
+msgid "batch_next_page"
+msgstr "Neste side"
+
+#. Default: "Previous Page"
+#: plonetheme/onegov/browser/batchnavigation.pt:11
+msgid "batch_previous_page"
+msgstr "Forige side"
+
+msgid "body-background"
+msgstr "Bakgrunn"
+
+msgid "favicon"
+msgstr "Favikon"
+
+msgid "global-navigation-border-color"
+msgstr "Strekfarge under Navigasjon"
+
+msgid "global-navigation-border-color-active"
+msgstr "Strekfarge under Navigasjon – aktivt element"
+
+msgid "global-navigation-color"
+msgstr "Farge på navigasjon"
+
+msgid "global-navigation-color-hover"
+msgstr "Farge Navigasjon, mus over"
+
+msgid "global-navigation-color-selected"
+msgstr "Farge på aktivt element i Navigasjon"
+
+msgid "heading-font-family"
+msgstr "Skriftfamile(r) på titler"
+
+msgid "heading-font-size"
+msgstr "Skriftstørrelse på Overskrift (basis)"
+
+msgid "heading-line-height"
+msgstr "Tittelens linjehøyde"
+
+#. Default: "Change the subsite's logo by editing the subsite."
+#: plonetheme/onegov/browser/customstyles_form.pt:47
+msgid "help_subsite_custom_logo"
+msgstr "Logoen kan tilpasses direkte i delområdet."
+
+msgid "highlight-color-light"
+msgstr "Farge på \"highlighet\" tekst"
+
+#. Default: "Custom CSS"
+#: plonetheme/onegov/browser/customstyles_form.pt:20
+msgid "label_custom_css"
+msgstr "Tilpass design"
+
+#. Default: "Custom Images"
+#: plonetheme/onegov/browser/customstyles_form.pt:42
+msgid "label_custom_images"
+msgstr "Tilpass bilder"
+
+#. Default: "Custom SCSS - be careful"
+#: plonetheme/onegov/browser/customstyles_form.pt:113
+msgid "label_custom_scss"
+msgstr "Avansert SCSS justeringer - vær forsiktig!"
+
+#. Default: "export styles"
+#: plonetheme/onegov/browser/customstyles_form.pt:105
+msgid "label_export_styles"
+msgstr "Eksporter"
+
+#. Default: "import styles"
+#: plonetheme/onegov/browser/customstyles_form.pt:100
+msgid "label_import_styles"
+msgstr "Importer"
+
+#. Default: "Import / Export"
+#: plonetheme/onegov/browser/customstyles_form.pt:90
+msgid "label_importexport"
+msgstr "Eksport / import tilpasninger"
+
+#. Default: "Reset to OneGov Default"
+#: plonetheme/onegov/browser/customstyles_form.pt:124
+msgid "label_reset_styles"
+msgstr "Tilbakestill til standard"
+
+#. Default: "To Top"
+#: plonetheme/onegov/viewlets/totop.pt:3
+msgid "label_to_top"
+msgstr "tilbake til toppen"
+
+msgid "link-color"
+msgstr "Lenkefarge"
+
+msgid "link-color-hover"
+msgstr "«Hover» fargen på linkene"
+
+msgid "logo"
+msgstr "Logo"
+
+msgid "startup"
+msgstr "OppstartIkon for iPhone"
+
+#. Default: "en"
+#: plonetheme/onegov/profiles/default/actions.xml
+msgid "subsite_current_language"
+msgstr "no"
+
+msgid "touch_iphone"
+msgstr "Touchikon for iPhone"
+
+msgid "touch_iphone_120"
+msgstr "Touchikon for iPhone (120px)"
+
+msgid "touch_iphone_152"
+msgstr "Touchikon for iPhone (152px)"
+
+msgid "touch_iphone_76"
+msgstr "Touchikon for iPhone (76px)"
