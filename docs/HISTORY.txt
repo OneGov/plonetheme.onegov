@@ -6,6 +6,8 @@ Changelog
 
 - Added margin in simplelayoutDropZonePortlet blocks.
   [Julian Infanger]
+- Added Norwegian translation.
+  [espenmn]
 
 
 1.1.1 (2014-02-10)
