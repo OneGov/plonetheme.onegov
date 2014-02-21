@@ -4,8 +4,12 @@ Changelog
 1.1.2 (unreleased)
 ------------------
 
+- Added style for calendar portlet.
+  [Julian Infanger]
+
 - Added margin in simplelayoutDropZonePortlet blocks.
   [Julian Infanger]
+
 - Added Norwegian translation.
   [espenmn]
 

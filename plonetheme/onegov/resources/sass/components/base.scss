@@ -576,7 +576,7 @@ body.template-subsite_view h1.documentFirstHeading {
 /* @group topic listing
 
 .topic_listing {
-  @include linklist();
+@include linklist();
 }
 
 /* @end */
@@ -722,8 +722,90 @@ dl.collapsible {
 
 /* @end */
 
+/* @group calendar portlet */
 
+$calendar-portlet-background: #EEEEEE;
 
+.portletCalendar {
+  width: auto;
+  margin: 1px 0 1em 0;
+  dt {
+    background-color: $calendar-portlet-background;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.6em;
+    border-bottom: none;
+    #calendar-previous {
+      float: left;
+      padding: 0 1em;
+      margin: 0 -.5em;
+    }
+    #calendar-next {
+      float: right;
+      padding: 0 1em;
+      margin: 0 -.5em;
+    }
+  }
+  dd {
+    margin: 0;
+    padding: 0;
+  }
+  a,
+  a:focus,
+  a:hover,
+  .ploneCalendar a {
+    text-decoration: none;
+  }
+  .ploneCalendar {
+    border-spacing: 0;
+    width:100%;
+    td {
+      background-color: transparent;
+      width: 14%;
+      text-align: center;
+      padding: 2px;
+      border: 2px solid $calendar-portlet-background;
+      background-color: $calendar-portlet-background;
+    }
+    .weekdays th {
+      background-color: $calendar-portlet-background;
+      text-align: center;
+      padding: 2px;
+    }
+    .event {
+      background-color: $calendar-portlet-background;
+    }
+    .todayevent {
+      background-color: $calendar-portlet-background;
+      border: 2px solid $text-color;
+    }
+    .todaynoevent {
+      border: 2px solid $text-color;
+    }
+    /* additional to sunburst */
+    td.today,
+    td.todaynoevent{
+      background-color: #FFF;
+      border-color: $text-color;
+    }
+    td:hover { background-color: #FFF; }
+    td a {
+      display:inline-block;
+      width: 100%;
+      height: 100%;
+    }
+    /* grey out prev/next month incl. links and background */
+    td:empty,
+    td.cal_prev_month,
+    td.cal_next_month {
+      opacity:0.4;
+    }
+    td:empty:hover { background-color:transparent; }
+  }
+
+}
+
+/* @end */
 
 
 
