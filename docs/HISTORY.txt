@@ -4,6 +4,9 @@ Changelog
 1.1.2 (unreleased)
 ------------------
 
+- Fix ftw.book icons: interchange "PDF" and "Read" icons.
+  [jone]
+
 - Added style for calendar portlet.
   [Julian Infanger]
 
