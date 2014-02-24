@@ -255,10 +255,10 @@ a.external-link {
   @include icon($char: "* ");
 }
 #document-actions #document-action-pdf a {
-  @include icon($char: "` ");
+  @include icon($char: '" ');
 }
 #document-actions #document-action-reader a {
-  @include icon($char: '" ');
+  @include icon($char: "` ");
 }
 
 #document-actions #document-action-print a,
