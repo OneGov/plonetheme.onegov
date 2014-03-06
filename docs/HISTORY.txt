@@ -4,6 +4,10 @@ Changelog
 1.1.2 (unreleased)
 ------------------
 
+- Update style for newsportlet.
+  Do not use a bigger font for news title.
+  [Julian Infanger]
+
 - Fix ftw.book icons: interchange "PDF" and "Read" icons.
   [jone]
 
