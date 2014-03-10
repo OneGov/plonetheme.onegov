@@ -74,4 +74,13 @@
       layer="plonetheme.onegov.interfaces.IPlonethemeOneGovLayer"
       />
 
+  <!-- The breadcrumbs -->
+  <browser:viewlet
+      name="plone.path_bar"
+      manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+      class=".pathbar.PathBarViewlet"
+      permission="zope2.View"
+      layer="plonetheme.onegov.interfaces.IPlonethemeOneGovLayer"
+      />
+
 </configure>

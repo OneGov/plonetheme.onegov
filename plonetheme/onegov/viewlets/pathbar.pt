@@ -1,0 +1,29 @@
+<div id="portal-breadcrumbs"
+     i18n:domain="plone"
+     tal:define="breadcrumbs view/breadcrumbs;
+                 is_rtl view/is_rtl">
+
+  <span id="breadcrumbs-home"
+        tal:attributes="class python:len(breadcrumbs)==0 and 'crumb last' or 'crumb'">
+    <a i18n:translate="tabs_home"
+       tal:attributes="href view/navigation_root_url">Home</a>
+  </span>
+  <span tal:repeat="crumb breadcrumbs"
+        tal:attributes="dir python:is_rtl and 'rtl' or 'ltr';
+                        id string:breadcrumbs-${repeat/crumb/number}">
+    <tal:item tal:define="is_last repeat/crumb/end;
+                          url crumb/absolute_url;
+                          title crumb/Title">
+      <span tal:attributes="class python: is_last and 'crumb parent last' or 'crumb parent'">
+        <a href="#"
+           tal:omit-tag="not: url"
+           tal:attributes="href string:${url}"
+           tal:content="title">
+          crumb
+        </a>
+      </span>
+
+    </tal:item>
+  </span>
+
+</div>

@@ -150,6 +150,51 @@ a,
 
 #portal-breadcrumbs {
   margin-bottom: 1em;
+  .crumb {
+    display: block;
+    float: left;
+    position: relative;
+    > a {
+      border: 1px solid $breadcrumbs-border;
+      background: $breadcrumbs-background;
+      padding: 0.25em 0.5em;
+      float: left;
+      border-right-width: 0;
+      &.loadChildren {
+        border-left-width: 0;
+      }
+    }
+    &.last a:last-child {
+      border-right-width: 1px;
+    }
+    &.active {
+      > a {
+        position: relative;
+        z-index: 6;
+        border-bottom-color: $breadcrumbs-background;
+      }
+    }
+    > ul {
+      display: none;
+      border: 1px solid $breadcrumbs-border;
+      background: $breadcrumbs-background;
+      position: absolute;
+      left: 0;
+      top: 2em;
+      min-width: 100%;
+      z-index: 5;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        margin: 0em;
+        a {
+          padding: 0.5em;
+          display: block;
+        }
+      }
+    }
+  }
 }
 
 /* @end */
