@@ -1,0 +1,31 @@
+/* @group book reader */
+
+body.template-book_reader_view {
+
+  /* Hide footer for more space */
+  #ftw-footer {
+    display: none;
+  }
+
+  /* Hide banner image (even when empty it takes some height) */
+  #banner-image {
+    display: none;
+  }
+
+  /* Hide belowContent: it usually contains the "to top" link,
+     which does not make any sense on the reader view because it
+     takes care that there is no scrollbar */
+  div.row.belowContent {
+    display: none;
+  }
+
+  /* Hide the #viewlet-below-content viewlet: it takes space but is
+     usually empty on the reader view.
+     */
+  div#viewlet-below-content {
+    display: none;
+  }
+
+}
+
+/* @end */
