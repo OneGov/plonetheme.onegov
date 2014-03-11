@@ -4,6 +4,9 @@ Changelog
 1.1.2 (unreleased)
 ------------------
 
+- Added special styles for batching in tabbedview.
+  [Julian Infanger]
+
 - Hide some components on ftw.book's reader view.
   By removing some unnecessary components we gain height and improve
   the reading experience.
