@@ -4,6 +4,11 @@ Changelog
 1.1.2 (unreleased)
 ------------------
 
+- Hide some components on ftw.book's reader view.
+  By removing some unnecessary components we gain height and improve
+  the reading experience.
+  [jone]
+
 - Update style for newsportlet.
   Do not use a bigger font for news title.
   [Julian Infanger]
