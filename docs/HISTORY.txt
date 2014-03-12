@@ -7,10 +7,9 @@ Changelog
 - Added special styles for batching in tabbedview.
   [Julian Infanger]
 
-- Hide some components on ftw.book's reader view.
-  By removing some unnecessary components we gain height and improve
-  the reading experience.
-  [jone]
+- Improve the reading experience by a complete new styled
+  ftw.book's reader view.
+  [jone, Julian Infanger]
 
 - Update style for newsportlet.
   Do not use a bigger font for news title.

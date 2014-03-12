@@ -33,9 +33,10 @@ body.template-book_reader_view {
 
   .book-reader {
     max-width: 1000px;
+    width: 94%;
     margin: 0 auto;
-    padding: 1em;
-    padding-left: 0;
+    padding: 1em 2%;
+    /* padding-left: 0; */
     background: $reader-bg;
     border: 1px solid $reader-border;
     @include boxshadow(0 0 1em #aaa);
@@ -45,7 +46,6 @@ body.template-book_reader_view {
   }
   .book-reader-navigation {
     width: 15em;
-    margin: 0 1em;
     a {
       color: #000;
       font-size: 90%;
@@ -85,13 +85,38 @@ body.template-book_reader_view {
 
 }
 
+/* @end */
+
+/* @group responsive book reader */
+
 @media screen and (max-width: 769px) {
-  .book-reader-navigation {
-    display: none;
-  }
-  .book-reader-content {
-    margin-left: 1em;
+  body.template-book_reader_view {
+    #page-wrapper {
+      margin-top: 0.5em;
+    }
+    .book-reader {
+      background: none;
+      border: none;
+      @include boxshadow(none);
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+    .book-reader-navigation {
+      display: none;
+    }
+    #content #close-book-reader {
+      right: 0;
+      top: 0;
+      background: none;
+      text-indent: 0;
+      width: auto;
+      height: auto;
+      position: relative;
+      text-align: center;
+    }
   }
 }
+
 
 /* @end */
