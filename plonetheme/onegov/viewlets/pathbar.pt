@@ -4,8 +4,9 @@
                  is_rtl view/is_rtl">
 
   <span id="breadcrumbs-home"
-        tal:attributes="class python:len(breadcrumbs)==0 and 'crumb last' or 'crumb'">
+        tal:attributes="class python:len(breadcrumbs)==0 and 'crumb first last' or 'crumb first'">
     <a i18n:translate="tabs_home"
+       class="crumbLink"
        tal:attributes="href view/navigation_root_url">Home</a>
   </span>
   <span tal:repeat="crumb breadcrumbs"
@@ -18,6 +19,7 @@
         <a href="#"
            tal:omit-tag="not: url"
            tal:attributes="href string:${url}"
+           class="crumbLink"
            tal:content="title">
           crumb
         </a>
@@ -25,5 +27,6 @@
 
     </tal:item>
   </span>
+  <span class="lastCrumbSeparator">&nbsp;</span>
 
 </div>

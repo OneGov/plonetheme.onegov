@@ -154,34 +154,73 @@ a,
     display: block;
     float: left;
     position: relative;
-    > a {
+    a.crumbLink {
       border: 1px solid $breadcrumbs-border;
-      background: $breadcrumbs-background;
-      padding: 0.25em 0.5em;
+      border-width: 1px 0;
+      background: url(%THEME_URL%/images/breadcrumb-separator.png) no-repeat right -1px $breadcrumbs-background;
+      font-size: 12px;
+      height: 21px;
+      line-height: 21px;
+      padding: 0 0.5em;
+      padding-right: 36px;
       float: left;
-      border-right-width: 0;
-      &.loadChildren {
-        border-left-width: 0;
+      &.noChildren {
+        padding-right: 20px;
       }
     }
-    &.last a:last-child {
-      border-right-width: 1px;
+    &.first a.crumbLink {
+      border-left-width: 1px;
+    }
+    &.last a.crumbLink,
+    &.last.active a.crumbLink {
+      background-image: none;
+      padding-right: 21px;
+      border-right-width: 0;
+      &.noChildren {
+        padding-right: 6px;
+      }
+    }
+    &.last a.loadChildren {
+      margin-left: -19px;
+    }
+    a.loadChildren {
+      display: block;
+      height: 15px;
+      width: 15px;
+      line-height: 16px;
+      font-size: 9px;
+      float: left;
+      border: 1px solid $breadcrumbs-border;
+      margin-left: -31px;
+      margin-top: 3px;
+      text-align: center;
+      background: $page-background;
+      &:hover {text-decoration: none;}
     }
     &.active {
-      > a {
+      a.crumbLink {
         position: relative;
+        /* background-color: #/\* FFF *\/; */
         z-index: 6;
         border-bottom-color: $breadcrumbs-background;
+        border-right-width: 1px;
+        padding-right: 35px;
+        background-image: none;
+      }
+      a.loadChildren {
+        position: relative;
+        z-index: 6;
       }
     }
     > ul {
+      min-width: 150%;
       display: none;
       border: 1px solid $breadcrumbs-border;
       background: $breadcrumbs-background;
+      @include boxshadow(0 0.25em 0.5em -0.25em $darkgray);
       position: absolute;
       left: 0;
-      top: 2em;
-      min-width: 100%;
+      top: 22px;
       z-index: 5;
       list-style: none;
       margin: 0;
@@ -189,12 +228,20 @@ a,
       li {
         margin: 0em;
         a {
+          font-size: 12px;
           padding: 0.5em;
           display: block;
         }
       }
     }
   }
+}
+#portal-breadcrumbs .lastCrumbSeparator {
+  background: url(%THEME_URL%/images/breadcrumb-separator.png) no-repeat right -46px $breadcrumbs-background;
+  display: block;
+  float: left;
+  height: 23px;
+  width: 12px;
 }
 
 /* @end */

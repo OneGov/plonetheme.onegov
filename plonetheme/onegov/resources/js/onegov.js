@@ -76,8 +76,11 @@ jQuery(function($) {
       success : function(data, textStatus, XMLHttpRequest) {
         if (textStatus == 'success') {
           if (data.length > 0) {
-            obj.after('<a href="#" class="loadChildren">▼</a>');
+            obj.after('<a href="'+obj.attr('href')+'" class="loadChildren">▼</a>');
             obj.after(data);
+          }
+          else {
+            obj.addClass('noChildren');
           }
         }
       }
