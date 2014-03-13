@@ -36,13 +36,18 @@
 /* @group list person details */
 .person-details {
 
-    .person-detail h2 {
-        font-size: 1em;
-        margin: 0;
-    }
-
     .person-detail {
         margin-bottom: 1em;
+
+        h2 {
+            font-size: 1em;
+            margin: 0;
+        }
+
+        div {
+            max-width: $page-fixed-width / 2;
+        }
+
     }
 
     .person-memberships ul {
@@ -53,7 +58,7 @@
 }
 
 .person-details-left.splitscreen {
-    float: left;   
+    float: left;
     padding-right: 2em;
     max-width: 50%;
 }
@@ -63,4 +68,42 @@
 }
 /* @end */
 
+/* @end */
+
+/* @group seantis.kantonsrat (builds on seantis.people) */
+.kantonsrat-memberships {
+    ul {
+        list-style: none;
+        padding-left: 0;
+
+        li {
+            margin-bottom: 0.5em;
+        }
+    }
+
+    .kantonsrat-url,
+    .kantonsrat-role,
+    .kantonsrat-state,
+    .kantonsrat-actions {
+        float: left;
+        margin-right: 0.25em;
+    }
+
+    .kantonsrat-timespan,
+    .kantonsrat-replacement_for,
+    .kantonsrat-note {
+        color: $darkgray;
+    }
+
+    .kantonsrat-state:before {
+        content: "↳";
+    }
+
+    .kantonsrat-actions a {
+        display: inline-block;
+        border-left: 1px solid $darkgray;
+        padding-left: 0.25em;
+        line-height: 1em;
+    }
+}
 /* @end */
