@@ -1,7 +1,7 @@
 var c=0;
 
 function close_opened_breadcrumbs(element) {
-  $('#portal-breadcrumbs .crumb.active > ul').each(function(a,b){
+  $('#portal-breadcrumbs .flyoutBreadcrumbs .crumb.active > ul').each(function(a,b){
     var object = $(b);
     if (object.parent().find('a.loadChildren').attr('href') != element.attr('href')) {
       object.hide();
@@ -46,7 +46,7 @@ jQuery(function($) {
       $('#portal-globalnav li').removeClass('flyoutActive').find('ul').hide();
     }
     if (!$(e.target).closest( "#portal-breadcrumbs .crumb" ).length) {
-      $('#portal-breadcrumbs .crumb.active').removeClass('active').find('ul').hide();
+      $('#portal-breadcrumbs .flyoutBreadcrumbs .crumb.active').removeClass('active').find('ul').hide();
     }
   });
 
@@ -67,7 +67,7 @@ jQuery(function($) {
 
   // breadcrumbs
 
-  $('#portal-breadcrumbs .crumb > a').each(function(a,b){
+  $('#portal-breadcrumbs .flyoutBreadcrumbs .crumb > a').each(function(a,b){
     var obj = $(b);
     $.ajax({
       type : 'POST',
@@ -87,7 +87,7 @@ jQuery(function($) {
     });
   });
 
-  $('#portal-breadcrumbs a.loadChildren').live('click', function(e){
+  $('#portal-breadcrumbs .flyoutBreadcrumbs a.loadChildren').live('click', function(e){
     e.preventDefault();
     var me = $(this);
     var parent = me.parent();

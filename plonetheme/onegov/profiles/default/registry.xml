@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<registry>
+  <record name="plonetheme.onegov.flyout_breadcrumbs">
+    <field type="plone.registry.field.Bool">
+      <title>Show children as flyout in breadcrumbs.</title>
+      <value_type type="plone.registry.field.Bool" />
+    </field>
+    <value>True</value>
+  </record>
+</registry>

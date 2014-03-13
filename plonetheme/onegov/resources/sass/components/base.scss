@@ -146,9 +146,9 @@ a,
 
 /* @end */
 
-/* @group breadcrumbs */
+/* @group flyout breadcrumbs */
 
-#portal-breadcrumbs {
+#portal-breadcrumbs .flyoutBreadcrumbs {
   margin-bottom: 1em;
   .crumb {
     display: block;
@@ -236,12 +236,20 @@ a,
     }
   }
 }
-#portal-breadcrumbs .lastCrumbSeparator {
+#portal-breadcrumbs .flyoutBreadcrumbs .lastCrumbSeparator {
   background: url(%THEME_URL%/images/breadcrumb-separator.png) no-repeat right -46px $breadcrumbs-background;
   display: block;
   float: left;
   height: 23px;
   width: 12px;
+}
+
+/* @end */
+
+/* @group breadcrumbs  */
+
+#portal-breadcrumbs {
+  margin-bottom: 1em;
 }
 
 /* @end */
