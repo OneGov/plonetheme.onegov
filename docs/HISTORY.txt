@@ -4,6 +4,9 @@ Changelog
 1.1.2 (unreleased)
 ------------------
 
+- Adds styles for seantis.kantonsrat.
+  [href]
+
 - Added special styles for batching in tabbedview.
   [Julian Infanger]
 
