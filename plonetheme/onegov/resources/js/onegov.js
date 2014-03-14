@@ -1,5 +1,15 @@
 var c=0;
 
+function close_opened_breadcrumbs(element) {
+  $('#portal-breadcrumbs .flyoutBreadcrumbs .crumb.active > ul').each(function(a,b){
+    var object = $(b);
+    if (object.parent().find('a.loadChildren').attr('href') != element.attr('href')) {
+      object.hide();
+      object.parent().removeClass('active');
+    }
+  });
+}
+
 jQuery(function($) {
 
   // flyout navigation
@@ -30,10 +40,13 @@ jQuery(function($) {
     parent.toggleClass('flyoutActive');
     children.toggle();
   });
-  // close flyout onclick on body
+  // close flyout and breadcrumb children onclick on body
   $('body').click(function(e){
     if (!$(e.target).closest( "#portal-globalnav" ).length) {
       $('#portal-globalnav li').removeClass('flyoutActive').find('ul').hide();
+    }
+    if (!$(e.target).closest( "#portal-breadcrumbs .crumb" ).length) {
+      $('#portal-breadcrumbs .flyoutBreadcrumbs .crumb.active').removeClass('active').find('ul').hide();
     }
   });
 
@@ -50,6 +63,38 @@ jQuery(function($) {
     close_opened(me);
     me.toggleClass('selected');
     $('#portal-languageselector dd.actionMenuContent').toggle();
+  });
+
+  // breadcrumbs
+
+  $('#portal-breadcrumbs .flyoutBreadcrumbs .crumb > a').each(function(a,b){
+    var obj = $(b);
+    $.ajax({
+      type : 'POST',
+      url : obj.attr('href') + '/load_flyout_children',
+      data: {breadcrumbs: true},
+      success : function(data, textStatus, XMLHttpRequest) {
+        if (textStatus == 'success') {
+          if (data.length > 0) {
+            obj.after('<a href="'+obj.attr('href')+'" class="loadChildren">▼</a>');
+            obj.after(data);
+          }
+          else {
+            obj.addClass('noChildren');
+          }
+        }
+      }
+    });
+  });
+
+  $('#portal-breadcrumbs .flyoutBreadcrumbs a.loadChildren').live('click', function(e){
+    e.preventDefault();
+    var me = $(this);
+    var parent = me.parent();
+    var children = parent.find('ul.children');
+    close_opened_breadcrumbs(me);
+    children.toggle();
+    parent.toggleClass('active');
   });
 
   // customstyles :-)

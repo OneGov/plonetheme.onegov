@@ -12,18 +12,25 @@ class LoadFlyoutChildren(navigation.UpdateMobileNavigation):
         # Disable theming for ajax requests
         self.request.response.setHeader('X-Theme-Disabled', 'True')
 
-        direct_title = '%s %s' % (
-            translate('Direct to', domain="plonetheme.onegov",
-                      context=self.request).encode('utf8'),
-            self.context.Title())
+        breadcrumbs = self.request.form.get('breadcrumbs', None)
+        sub_objects = self.sub_objects(self.context, level=0)
+        if breadcrumbs:
+            if not sub_objects:
+                return ''
+            subnavi = '<ul class="children">'
+        else:
+            direct_title = '%s %s' % (
+                translate('Direct to', domain="plonetheme.onegov",
+                          context=self.request).encode('utf8'),
+                self.context.Title())
+            subnavi = '<ul class="flyoutChildren">'
+            subnavi += '<li class="%s"><a href="%s">%s</a></li>' % (
+                'directLink',
+                self.context.absolute_url(),
+                direct_title
+                )
 
-        subnavi = '<ul class="flyoutChildren">'
-        subnavi += '<li class="%s"><a href="%s">%s</a></li>' % (
-            'directLink',
-            self.context.absolute_url(),
-            direct_title
-            )
-        for obj in self.sub_objects(self.context, level=1):
+        for obj in sub_objects:
             subnavi += '<li class="%s"><a href="%s">%s</a></li>' % (
                 self.get_css_classes(obj),
                 obj.absolute_url(),

@@ -146,10 +146,110 @@ a,
 
 /* @end */
 
-/* @group breadcrumbs */
+/* @group flyout breadcrumbs */
 
-#portal-breadcrumbs {
-  margin-bottom: 1em;
+#portal-breadcrumbs .flyoutBreadcrumbs {
+  .crumb {
+    display: block;
+    float: left;
+    margin-bottom: 0.25em;
+    position: relative;
+    a.crumbLink {
+      border: 1px solid $breadcrumbs-border;
+      border-width: 1px 0;
+      background: url(%THEME_URL%/images/breadcrumb-separator.png) no-repeat right -1px $breadcrumbs-background;
+      font-size: 12px;
+      height: 21px;
+      line-height: 21px;
+      padding: 0 0.5em;
+      padding-right: 36px;
+      float: left;
+      &.noChildren {
+        padding-right: 20px;
+      }
+    }
+    &.first a.crumbLink {
+      border-left-width: 1px;
+    }
+    &.last a.crumbLink,
+    &.last.active a.crumbLink {
+      background-image: none;
+      padding-right: 21px;
+      border-right-width: 0;
+      &.noChildren {
+        padding-right: 6px;
+      }
+    }
+    &.last a.loadChildren {
+      margin-left: -21px;
+    }
+    a.loadChildren {
+      display: block;
+      height: 21px;
+      width: 21px;
+      line-height: 21px;
+      font-size: 9px;
+      float: left;
+      margin-left: -33px;
+      margin-top: 1px;
+      text-align: center;
+      background: $page-background;
+      &:hover {text-decoration: none;}
+    }
+    &.active {
+      a.crumbLink {
+        position: relative;
+        /* background-color: #/\* FFF *\/; */
+        z-index: 6;
+        border-bottom-color: $breadcrumbs-background;
+        border-right-width: 1px;
+        padding-right: 35px;
+        background-image: none;
+      }
+      a.loadChildren {
+        position: relative;
+        z-index: 6;
+      }
+    }
+    > ul {
+      width: 200px;
+      min-width: 100%;
+      display: none;
+      border: 1px solid $breadcrumbs-border;
+      background: $breadcrumbs-background;
+      @include boxshadow(0 0.25em 0.5em -0.25em $darkgray);
+      position: absolute;
+      left: 0;
+      top: 22px;
+      z-index: 5;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        margin: 0em;
+        a {
+          font-size: 12px;
+          padding: 0.5em;
+          display: block;
+        }
+      }
+    }
+  }
+}
+#portal-breadcrumbs .flyoutBreadcrumbs .lastCrumbSeparator {
+  background: url(%THEME_URL%/images/breadcrumb-separator.png) no-repeat right -46px $breadcrumbs-background;
+  display: block;
+  float: left;
+  height: 23px;
+  width: 12px;
+}
+
+/* @end */
+
+/* @group breadcrumbs  */
+
+#breadcrumbs-wrapper {
+  margin-bottom: 0.5em;
 }
 
 /* @end */
