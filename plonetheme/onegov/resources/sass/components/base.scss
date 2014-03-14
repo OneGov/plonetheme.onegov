@@ -149,10 +149,10 @@ a,
 /* @group flyout breadcrumbs */
 
 #portal-breadcrumbs .flyoutBreadcrumbs {
-  margin-bottom: 1em;
   .crumb {
     display: block;
     float: left;
+    margin-bottom: 0.25em;
     position: relative;
     a.crumbLink {
       border: 1px solid $breadcrumbs-border;
@@ -181,18 +181,17 @@ a,
       }
     }
     &.last a.loadChildren {
-      margin-left: -19px;
+      margin-left: -21px;
     }
     a.loadChildren {
       display: block;
-      height: 15px;
-      width: 15px;
-      line-height: 16px;
+      height: 21px;
+      width: 21px;
+      line-height: 21px;
       font-size: 9px;
       float: left;
-      border: 1px solid $breadcrumbs-border;
-      margin-left: -31px;
-      margin-top: 3px;
+      margin-left: -33px;
+      margin-top: 1px;
       text-align: center;
       background: $page-background;
       &:hover {text-decoration: none;}
@@ -213,7 +212,8 @@ a,
       }
     }
     > ul {
-      min-width: 150%;
+      width: 200px;
+      min-width: 100%;
       display: none;
       border: 1px solid $breadcrumbs-border;
       background: $breadcrumbs-background;
@@ -248,8 +248,8 @@ a,
 
 /* @group breadcrumbs  */
 
-#portal-breadcrumbs {
-  margin-bottom: 1em;
+#breadcrumbs-wrapper {
+  margin-bottom: 0.5em;
 }
 
 /* @end */
