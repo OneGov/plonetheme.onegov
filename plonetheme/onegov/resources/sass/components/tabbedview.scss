@@ -1,7 +1,13 @@
 /* @group tabbedview */
 
+#tabbedview-spinner {display: none !important;}
+
+div.overview-left-column,
+div.overview-right-column { @include width8(); }
+
 #tabbedview-body {
   margin-top: 1em;
+  overflow: hidden;
 }
 #tabbedview-searchbox {
   padding: 0.3em;
@@ -30,6 +36,25 @@
 }
 #overview_overview .box ul {
   @include ul($style: 'plain');
+}
+
+
+/* @end */
+
+/* @group tabbedview preview */
+
+.previewContainer {
+  .previewTitle {
+  @include borderradius(0);
+  }
+  .colorboxLink {
+    @include boxshadow(0.25em 0.25em 0.5em $lightgray2);
+    &:hover {
+      @include boxshadow(0.25em 0.25em 0.5em $lightgray3);
+      border-color: $link-color-hover;
+      color: $link-color;
+    }
+  }
 }
 
 /* @end */
