@@ -584,6 +584,9 @@ dl.teaser_portlet .portletHeader img {
 
 /* @group dashboard */
 
+$dashboard-bg: $global-navigation-border-color;
+$dashboard-color: contrast($dashboard-bg, $page-background, $text-color);
+
 #dashboard {
   div.portletwrapper {
     margin: 0.5em;
@@ -593,10 +596,15 @@ dl.teaser_portlet .portletHeader img {
 
   dl.portlet {
     border: 1px solid $darkgray;
+    @include boxshadow(0.1em 0.1em 0.25em $lightgray3);
     dt {
-      background: $lightgray2;
+      background: $dashboard-bg;
+      color: $dashboard-color;
       border-bottom: 1px solid $darkgray;
       overflow: hidden;
+      a {
+        color: $dashboard-color;
+      }
     }
     dd {
       background-color: $page-background;
@@ -607,11 +615,13 @@ dl.teaser_portlet .portletHeader img {
     }
     .portletActionsWrapper {
       padding: 0.5em;
-      background: $lightgray;
+      background: lighten(desaturate($dashboard-bg, 20%), 20%);
       border-left: 1px solid $darkgray;
       a:hover { text-decoration: none; }
     }
   }
+
+  .folded dl.portlet { border-bottom-width: 0; }
 }
 
 #page-wrapper #dashboard #dashboard-add-portlet {
@@ -623,7 +633,7 @@ dl.teaser_portlet .portletHeader img {
 
 #dashboard .portletPostIt {
   dt.portletHeader {
-    background: $lightgray2;
+    background: $dashboard-bg;
     border-bottom: 1px solid $darkgray;
   }
   dd.portletItem {
