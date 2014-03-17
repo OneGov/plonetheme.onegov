@@ -582,6 +582,68 @@ dl.teaser_portlet .portletHeader img {
 
 /* @end */
 
+/* @group dashboard */
+
+#dashboard {
+  div.portletwrapper {
+    margin: 0.5em;
+    padding: 0;
+    background: transparent;
+  }
+
+  dl.portlet {
+    border: 1px solid $darkgray;
+    dt {
+      background: $lightgray2;
+      border-bottom: 1px solid $darkgray;
+      overflow: hidden;
+    }
+    dd {
+      background-color: $page-background;
+    }
+    dt, dd {
+      margin-bottom: 0;
+      padding: 0.5em;
+    }
+    .portletActionsWrapper {
+      padding: 0.5em;
+      background: $lightgray;
+      border-left: 1px solid $darkgray;
+      a:hover { text-decoration: none; }
+    }
+  }
+}
+
+#page-wrapper #dashboard #dashboard-add-portlet {
+  padding-top: 0;
+  form {
+    margin-bottom: 1em;
+  }
+}
+
+#dashboard .portletPostIt {
+  dt.portletHeader {
+    background: $lightgray2;
+    border-bottom: 1px solid $darkgray;
+  }
+  dd.portletItem {
+    border: none;
+  }
+  form input.text {
+    width: 55%;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  form.postIt_addNote_form input.submit {
+    margin: 0;
+  }
+  dd.portletItem.postIt_addNote {
+    background: $lightgray;
+  }
+}
+
+/* @end */
+
 /* @group byline */
 
 .documentByLine {
