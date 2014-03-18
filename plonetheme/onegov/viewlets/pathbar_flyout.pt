@@ -1,7 +1,8 @@
 <div id="portal-breadcrumbs"
      i18n:domain="plone"
      tal:define="breadcrumbs view/breadcrumbs;
-                 is_rtl view/is_rtl">
+                 is_rtl view/is_rtl;
+                 is_factory view/is_factory">
   <div class="flyoutBreadcrumbs">
 
     <span id="breadcrumbs-home"
@@ -19,8 +20,8 @@
         <span tal:attributes="class python: is_last and 'crumb parent last' or 'crumb parent'">
           <a href="#"
              tal:omit-tag="not: url"
-             tal:attributes="href string:${url}"
-             class="crumbLink"
+             tal:attributes="href string:${url};
+                             class python: is_last and is_factory and 'factory crumbLink' or 'crumbLink'"
              tal:content="title">
             crumb
           </a>

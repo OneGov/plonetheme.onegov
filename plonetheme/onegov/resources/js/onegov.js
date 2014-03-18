@@ -69,22 +69,23 @@ jQuery(function($) {
 
   $('#portal-breadcrumbs .flyoutBreadcrumbs .crumb > a').each(function(a,b){
     var obj = $(b);
-    $.ajax({
-      type : 'POST',
-      url : obj.attr('href') + '/load_flyout_children',
-      data: {breadcrumbs: true},
-      success : function(data, textStatus, XMLHttpRequest) {
-        if (textStatus == 'success') {
-          if (data.length > 0) {
-            obj.after('<a href="'+obj.attr('href')+'" class="loadChildren">▼</a>');
-            obj.after(data);
-          }
-          else {
-            obj.addClass('noChildren');
+    obj.addClass('noChildren');
+    if (!obj.hasClass('factory')) {
+      $.ajax({
+        type : 'POST',
+        url : obj.attr('href') + '/load_flyout_children',
+        data: {breadcrumbs: true},
+        success : function(data, textStatus, XMLHttpRequest) {
+          if (textStatus == 'success') {
+            if (data.length > 0) {
+              obj.after('<a href="'+obj.attr('href')+'" class="loadChildren">▼</a>');
+              obj.after(data);
+              obj.removeClass('noChildren');
+            }
           }
         }
-      }
-    });
+      });
+    }
   });
 
   $('#portal-breadcrumbs .flyoutBreadcrumbs a.loadChildren').live('click', function(e){
