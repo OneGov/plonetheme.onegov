@@ -27,8 +27,8 @@
   $input-context-color: contrast($base-color, $button-color-light, $button-color-dark);
 
   $input-context-hover-border: $input-context-border;
-  $input-context-hover-bg-start: $input-context-bg-end;
-  $input-context-hover-bg-end: $input-context-bg-start;
+  $input-context-hover-bg-start: darken($input-context-bg-start, 10%);
+  $input-context-hover-bg-end: darken($input-context-bg-end, 10%);
   $input-context-hover-color: $input-context-color;
 
 
@@ -134,7 +134,8 @@ textarea {
 input[type="submit"],
 input[type="reset"],
 input[type="button"],
-button.context {
+button.context,
+.button {
   @include button_context();
 }
 input.standalone {

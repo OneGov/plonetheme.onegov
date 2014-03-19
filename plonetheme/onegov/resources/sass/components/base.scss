@@ -998,6 +998,38 @@ $calendar-portlet-background: #EEEEEE;
 
 /* @end */
 
+/* @group ticketbox */
+
+table.ticketbox-overview {
+  h2 {
+    margin-top: 0;
+  }
+  ul {
+    @include ul($style:'plain');
+    li {
+      margin-bottom: 0.5em;
+    }
+  }
+}
+#addResponse.expandedBlockCollapsible {
+  dd {
+    border: 1px solid $lightgray3;
+    @include boxshadow(0 0 0.25em $lightgray2 inset);
+    padding: 1em;
+  }
+}
+div.add_response.button{
+  &:after {
+    content:' ▼';
+  }
+}
+.expandedBlockCollapsible div.add_response.button{
+  &:after {
+    content:' ▲';
+  }
+}
+
+/* @end */
 
 /* @group Invisibles */
 
