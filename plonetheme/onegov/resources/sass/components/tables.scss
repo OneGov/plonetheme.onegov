@@ -137,6 +137,29 @@ div.listingBar .current {
 
 /* @end */
 
+/* @group tree table */
+
+table.treeTable {
+  border: 1px solid $table-bordercolor;
+  border-collapse: collapse;
+  td, th {
+    border: none;
+    border-bottom: 1px solid $lightgray;
+  }
+  th {
+    border-bottom: 1px solid $table-bordercolor;
+    background: $table-heading-background;
+  }
+  tr.odd {
+    background: $page-background;
+  }
+  tr:last-child td {
+    border-bottom-color: $table-bordercolor;
+  }
+}
+
+/* @end */
+
 /* @group responsive table */
 /*
     Force tables to not be like tables anymore. Borrowed from this example:
