@@ -1031,6 +1031,46 @@ div.add_response.button{
 
 /* @end */
 
+/* @group colorbox view */
+
+.template-colorbox_view {
+  div.photoAlbumEntry {
+    a.colorboxLink {
+      display: block;
+      position: relative;
+      width: 100px;
+      height: 100px;
+      background-color: $lightgray;
+      border: 1px solid $lightgray3;
+      text-align: center;
+      float: left;
+      padding: 1em;
+      margin: 1em;
+      @include boxshadow(0.25em 0.25em 0.5em $lightgray2);
+      &:hover {
+        border-color: $link-color-hover;
+        @include boxshadow(0.25em 0.25em 0.5em $lightgray3);
+      }
+      .photoAlbumEntryWrapper {
+        height: 100px;
+        display: block;
+        overflow: hidden;
+        > img { max-width: none; }
+      }
+      .photoAlbumEntryTitle {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #FFF;
+        background: rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
+}
+
+/* @end */
+
 /* @group Invisibles */
 
 * {
