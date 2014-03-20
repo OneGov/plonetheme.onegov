@@ -1071,6 +1071,23 @@ div.add_response.button{
 
 /* @end */
 
+/* @group ftw.billboard */
+
+div.billboardCategoryListing,
+dl.portletBillboardActions {
+  ul {
+    @include ul($style: 'plain');
+    li {
+      margin-bottom: 0.5em;
+    }
+  }
+}
+div.billboardAdDetail {
+  margin-top: 1em;
+}
+
+/* @end */
+
 /* @group Invisibles */
 
 * {
