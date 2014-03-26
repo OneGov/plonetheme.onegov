@@ -34,4 +34,13 @@
       directory="profiles/1111"
       />
 
+  <!-- 1111 -> 1112 -->
+  <upgrade-step:importProfile
+      title="Fix theme doctype"
+      profile="plonetheme.onegov:default"
+      source="1111"
+      destination="1112"
+      directory="profiles/1112"
+      />
+
 </configure>
