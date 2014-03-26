@@ -38,9 +38,8 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0" />
     </replace>
 
-    <!-- copy styles and javascripts in portal-top -->
-    <replace css:content="#portal-top style, #portal-top script"
-             css:theme-children="#portal-top" />
+    <after theme-children="/html/head" css:content="#portal-top script"/>
+    <after theme-children="/html/head" css:content="#portal-top style"/>
 
     <replace css:content="#portal-logo" css:theme="#portal-logo" />
     <replace css:content="#portal-globalnav" css:theme="#portal-globalnav" />
