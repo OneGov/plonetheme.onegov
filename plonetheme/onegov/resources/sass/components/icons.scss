@@ -47,6 +47,7 @@
 }
 .contenttype-textblock,
 .contenttype-paragraph,
+.contenttype-graphicblock,
 .contenttype-htmlblock {
   @include icon($char: "I ");
 }
@@ -104,6 +105,9 @@
 }
 .contenttype-workspace {
   @include icon($char: "% ");
+}
+.contenttype-remark {
+  @include icon($char: "E ");
 }
 .contenttype-billboardad {
   @include icon($char: ": ");

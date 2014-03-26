@@ -78,9 +78,11 @@ jQuery(function($) {
         success : function(data, textStatus, XMLHttpRequest) {
           if (textStatus == 'success') {
             if (data.length > 0) {
-              obj.after('<a href="'+obj.attr('href')+'" class="loadChildren">▼</a>');
-              obj.after(data);
-              obj.removeClass('noChildren');
+              if (data.search('<ul class="children">')!=-1) {
+                obj.after('<a href="'+obj.attr('href')+'" class="loadChildren">▼</a>');
+                obj.after(data);
+                obj.removeClass('noChildren');
+              }
             }
           }
         }

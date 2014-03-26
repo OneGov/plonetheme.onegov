@@ -582,6 +582,78 @@ dl.teaser_portlet .portletHeader img {
 
 /* @end */
 
+/* @group dashboard */
+
+$dashboard-bg: $global-navigation-border-color;
+$dashboard-color: contrast($dashboard-bg, $page-background, $text-color);
+
+#dashboard {
+  div.portletwrapper {
+    margin: 0.5em;
+    padding: 0;
+    background: transparent;
+  }
+
+  dl.portlet {
+    border: 1px solid $darkgray;
+    @include boxshadow(0.1em 0.1em 0.25em $lightgray3);
+    dt {
+      background: $dashboard-bg;
+      color: $dashboard-color;
+      border-bottom: 1px solid $darkgray;
+      overflow: hidden;
+      a {
+        color: $dashboard-color;
+      }
+    }
+    dd {
+      background-color: $page-background;
+    }
+    dt, dd {
+      margin-bottom: 0;
+      padding: 0.5em;
+    }
+    .portletActionsWrapper {
+      padding: 0.5em;
+      background: lighten(desaturate($dashboard-bg, 20%), 20%);
+      border-left: 1px solid $darkgray;
+      a:hover { text-decoration: none; }
+    }
+  }
+
+  .folded dl.portlet { border-bottom-width: 0; }
+}
+
+#page-wrapper #dashboard #dashboard-add-portlet {
+  padding-top: 0;
+  form {
+    margin-bottom: 1em;
+  }
+}
+
+#dashboard .portletPostIt {
+  dt.portletHeader {
+    background: $dashboard-bg;
+    border-bottom: 1px solid $darkgray;
+  }
+  dd.portletItem {
+    border: none;
+  }
+  form input.text {
+    width: 55%;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  form.postIt_addNote_form input.submit {
+    margin: 0;
+  }
+  dd.portletItem.postIt_addNote {
+    background: $lightgray;
+  }
+}
+
+/* @end */
+
 /* @group byline */
 
 .documentByLine {
@@ -915,9 +987,134 @@ $calendar-portlet-background: #EEEEEE;
 
 /* @end */
 
+/* @group tooltips */
 
+.tooltip {
+  background-color: $page-background;
+  border-color: $darkgray;
+  @include boxshadow(0 0 1em $darkgray);
+  color: $text-color;
+}
 
+/* @end */
 
+/* @group ticketbox */
+
+table.ticketbox-overview {
+  h2 {
+    margin-top: 0;
+  }
+  ul {
+    @include ul($style:'plain');
+    li {
+      margin-bottom: 0.5em;
+    }
+  }
+}
+#addResponse.expandedBlockCollapsible {
+  dd {
+    border: 1px solid $lightgray3;
+    @include boxshadow(0 0 0.25em $lightgray2 inset);
+    padding: 1em;
+  }
+}
+div.add_response.button{
+  &:after {
+    content:' ▼';
+  }
+}
+.expandedBlockCollapsible div.add_response.button{
+  &:after {
+    content:' ▲';
+  }
+}
+
+/* @end */
+
+/* @group colorbox / album view */
+
+  .photoAlbumEntry {
+    float: left;
+    position: relative;
+    overflow: hidden;
+    height: 185px;
+    width: 143px;
+    margin: 0.25em;
+    padding: 0px 6px 0px 9px;
+    text-align: center;
+    background-image: url('polaroid-single.png');
+    background-repeat: no-repeat;
+  }
+  .photoAlbumEntry img {
+    border: 1px solid #ccc;
+    display: block;
+    margin: 0 auto;
+  }
+  .photoAlbumEntryWrapper {
+    height: 130px;
+    width: 128px;
+    margin-bottom: 7px;
+  }
+  .photoAlbumEntry a {
+    display: block;
+    text-decoration: none;
+    font-size: 90%;
+    height: 169px;
+    width: 130px;
+    margin: 16px auto 0px;
+    &:hover {
+      color: $link-color-hover;
+    }
+  }
+  .photoAlbumFolder {
+    background-image: url('polaroid-multi.png');
+    background-repeat: no-repeat;
+  }
+  .photoAlbumEntryTitle {
+    display: block;
+    width: 128px;
+    height: 3.6em;
+  }
+
+/* @end */
+
+/* @group ftw.billboard */
+
+div.billboardCategoryListing,
+dl.portletBillboardActions {
+  ul {
+    @include ul($style: 'plain');
+    li {
+      margin-bottom: 0.5em;
+    }
+  }
+}
+div.billboardAdDetail {
+  margin-top: 1em;
+}
+
+/* @end */
+
+/* @group permission manager */
+
+.template-import_export_permissions hr {
+  margin: 1em 0;
+}
+
+/* @end */
+
+/* @group notification form */
+
+.template-notification_form {
+  #sendto_form > label {
+    display: block;
+  }
+  fieldset {
+    padding: 0;
+  }
+}
+
+/* @end */
 
 /* @group Invisibles */
 
