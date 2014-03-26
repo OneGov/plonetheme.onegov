@@ -4,6 +4,9 @@ Changelog
 1.1.2 (unreleased)
 ------------------
 
+- Added path_bar with flyout children.
+  [Julian Infanger]
+
 - Added styles for workspaces and other onegov modules.
   [Julian Infanger]
 
