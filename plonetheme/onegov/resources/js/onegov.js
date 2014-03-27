@@ -69,7 +69,6 @@ jQuery(function($) {
 
   $('#portal-breadcrumbs .flyoutBreadcrumbs .crumb > a').each(function(a,b){
     var obj = $(b);
-    obj.addClass('noChildren');
     if (!obj.hasClass('factory')) {
       $.ajax({
         type : 'POST',
@@ -81,8 +80,13 @@ jQuery(function($) {
               if (data.search('<ul class="children">')!=-1) {
                 obj.after('<a href="'+obj.attr('href')+'" class="loadChildren">▼</a>');
                 obj.after(data);
-                obj.removeClass('noChildren');
               }
+              else {
+                obj.addClass('noChildren');
+              }
+            }
+            else {
+              obj.addClass('noChildren');
             }
           }
         }
