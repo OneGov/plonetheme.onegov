@@ -2,7 +2,7 @@ from BTrees.OOBTree import OOBTree
 from plone.app.layout.navigation.interfaces import INavigationRoot
 from plonetheme.onegov.interfaces import CUSTOMSTYLES_ANNOTATION_KEY
 from plonetheme.onegov.interfaces import ICustomStyles
-from plonetheme.onegov.viewlets.customstyles import invalidate_cache
+from plonetheme.onegov.browser.customstyles import invalidate_cache
 from zope.annotation import IAnnotations
 from zope.component import adapts
 from zope.interface import implements
