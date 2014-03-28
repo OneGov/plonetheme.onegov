@@ -657,6 +657,10 @@ $dashboard-color: contrast($dashboard-bg, $page-background, $text-color);
   }
 }
 
+#dashboard .portletWatcher ul {
+  @include ul($style: 'plain');
+}
+
 /* @end */
 
 /* @group byline */
