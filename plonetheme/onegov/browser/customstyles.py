@@ -1,3 +1,5 @@
+from App.Common import rfc1123_date
+from DateTime import DateTime
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.navigation.root import getNavigationRoot
@@ -26,11 +28,11 @@ CUSTOM_STYLE_OPTIONS = [
     "global-navigation-color-hover",
     "global-navigation-color-selected",
     "global-navigation-border-color",
-#    "global-navigation-border-color-active",
+    #    "global-navigation-border-color-active",
     "highlight-color-light",
     "link-color",
     "link-color-hover",
-    ]
+]
 
 
 CUSTOM_IMAGE_PATHS = [
@@ -41,7 +43,7 @@ CUSTOM_IMAGE_PATHS = [
     "touch_iphone_76",
     "touch_iphone_120",
     "touch_iphone_152",
-    ]
+]
 
 
 def cache_key(method, self):
@@ -58,7 +60,7 @@ def cache_key(method, self):
 
 def invalidate_cache():
     func_name = 'plonetheme.onegov.viewlets.customstyles' + \
-        '.CustomStyles.generate_css'
+                '.CustomStyles.generate_css'
     cache = getUtility(ICacheChooser)(func_name)
     cache.ramcache.invalidateAll()
 
@@ -102,7 +104,8 @@ class CustomStylesForm(BrowserView):
             return False
 
         styles = dict(filter(include, items.items()))
-        ICustomStyles(self.context).set_styles(styles)
+        adapter = ICustomStyles(self.context)
+        adapter.set_styles(styles)
 
     def export_styles(self, download=False):
         """Returns a json file containing the styles.
@@ -133,9 +136,15 @@ class CustomStylesCSS(BrowserView):
     base_path = os.path.split(__file__)[0]
 
     def __call__(self):
-        self.request.response.setHeader("Content-type",
-                                        "text/css")
-        self.request.response.setHeader('X-Theme-Disabled', 'True')
+        response = self.request.response
+        response.setHeader("Content-type", "text/css")
+        response.setHeader('X-Theme-Disabled', 'True')
+        duration = 7.0
+        seconds = duration * 24.0 * 3600.0  # 1 day cache duration
+        response.setHeader('Expires',
+                           rfc1123_date((DateTime() + duration).timeTime()))
+        response.setHeader('Cache-Control', 'max-age=%d' % int(seconds))
+
         return self.generate_css()
 
     @ram.cache(cache_key)
@@ -175,8 +184,8 @@ class CustomStylesCSS(BrowserView):
 
     def read_file(self, file_path):
         handler = open(os.path.join(
-                self.base_path,
-                '../resources/sass/%s' % file_path), 'r')
+            self.base_path,
+            '../resources/sass/%s' % file_path), 'r')
         file_content = handler.read()
         handler.close()
         return file_content

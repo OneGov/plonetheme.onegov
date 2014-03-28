@@ -1,5 +1,7 @@
 from Products.CMFCore.utils import getToolByName
 
+TIMESTAMP_ANNOTATION_KEY = 'customstyles_url_timestamp'
+
 
 def replace_custom_keywords(config, context):
     #replace keywords in css output
