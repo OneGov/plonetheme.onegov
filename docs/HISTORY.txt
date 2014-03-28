@@ -4,6 +4,9 @@ Changelog
 1.1.2 (unreleased)
 ------------------
 
+- Added information that this package requires >= python2.7
+  [Julian Infanger]
+
 - Added path_bar with flyout children.
   [Julian Infanger]
 

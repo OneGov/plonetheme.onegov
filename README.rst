@@ -5,6 +5,7 @@ This is the default theme for all OneGov Plone modules (http://onegov.ch).
 
 .. image:: https://raw.github.com/OneGov/plonetheme.onegov/master/docs/screenshot_onegov.png
 
+**Important** this package doesn't work with python 2.6, it requires at least python 2.7
 
 Usage
 -----
