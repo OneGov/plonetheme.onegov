@@ -10,8 +10,10 @@ class CustomStyles(ViewletBase):
     index = ViewPageTemplateFile('customstyles.pt')
 
     def update(self):
+        nav_root = self.context.restrictedTraverse(
+            getNavigationRoot(self.context))
         self.css_href = '{}/customstyles_css?ts={}'.format(
-            getNavigationRoot(self.context),
+            nav_root.absolute_url(),
             self.timestamp())
 
     def timestamp(self):

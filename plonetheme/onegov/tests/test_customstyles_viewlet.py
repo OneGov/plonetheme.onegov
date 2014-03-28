@@ -58,7 +58,7 @@ class TestCustomstylesViewlet(TestCase):
     def test_portal_customcss_path(self, browser):
         browser.login().visit(self.portal)
         self.assertIn(
-            '{}/customstyles_css'.format('/'.join(self.portal.getPhysicalPath())),
+            '{}/customstyles_css'.format(self.portal.absolute_url()),
             browser.css('head').first.outerHTML)
 
     @browsing
@@ -66,7 +66,7 @@ class TestCustomstylesViewlet(TestCase):
         subsite = self.create_subsite()
         browser.login().visit(subsite)
         self.assertIn(
-            '{}/customstyles_css'.format('/'.join(subsite.getPhysicalPath())),
+            '{}/customstyles_css'.format(subsite.absolute_url()),
             browser.css('head').first.outerHTML)
 
     def create_subsite(self):
