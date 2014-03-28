@@ -602,6 +602,7 @@ $dashboard-color: contrast($dashboard-bg, $page-background, $text-color);
       color: $dashboard-color;
       border-bottom: 1px solid $darkgray;
       overflow: hidden;
+      font-size: $font-size;
       a {
         color: $dashboard-color;
       }
@@ -638,6 +639,10 @@ $dashboard-color: contrast($dashboard-bg, $page-background, $text-color);
   }
   dd.portletItem {
     border: none;
+    span {
+      line-height: $body-line-height;
+      padding: 0;
+    }
   }
   form input.text {
     width: 55%;
