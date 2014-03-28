@@ -17,8 +17,4 @@ class CustomStyles(ViewletBase):
     def timestamp(self):
         nav_root = self.context.restrictedTraverse(
             getNavigationRoot(self.context))
-        adapter = ICustomStyles(nav_root)
-        timestamp = adapter.get(TIMESTAMP_ANNOTATION_KEY)
-        if timestamp:
-            return timestamp
-        return ''
+        return ICustomStyles(nav_root).get(TIMESTAMP_ANNOTATION_KEY, '')
