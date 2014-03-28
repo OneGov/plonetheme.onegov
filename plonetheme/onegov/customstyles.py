@@ -31,9 +31,9 @@ class CustomStyles(object):
             self.annotations[CUSTOMSTYLES_ANNOTATION_KEY][style] = value
             invalidate_cache()
 
-    def get(self, style):
+    def get(self, style, fallback=None):
         return self.annotations.get(CUSTOMSTYLES_ANNOTATION_KEY, {}).get(
-            style, None)
+            style, fallback)
 
     @property
     def annotations(self):
