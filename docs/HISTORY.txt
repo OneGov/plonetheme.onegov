@@ -4,6 +4,10 @@ Changelog
 1.1.2 (unreleased)
 ------------------
 
+- Replaced inline css with a browserview returning the theme css.
+  This allows to cache the CSS efficient.
+  [Julian Infanger]
+
 - Optimized accessibility:
   - lang attribute in HTML
   - use right doctype

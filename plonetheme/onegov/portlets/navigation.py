@@ -74,7 +74,7 @@ class Renderer(base.Renderer):
             if brain.portal_type in self.hidden_types:
                 continue
 
-            if getattr(brain, 'exclude_from_nav', False) == True:
+            if getattr(brain, 'exclude_from_nav', False):
                 continue
 
             yield brain

@@ -3,25 +3,23 @@ from mocker import expect
 from plonetheme.onegov.interfaces import ICustomStyles
 from plonetheme.onegov.interfaces import ISCSSRegistry
 from plonetheme.onegov.testing import THEME_FUNCTIONAL_TESTING
-from plonetheme.onegov.viewlets.customstyles import CustomStyles
-from plonetheme.onegov.viewlets.customstyles import invalidate_cache
+from plonetheme.onegov.browser.customstyles import CustomStylesCSS
+from plonetheme.onegov.browser.customstyles import invalidate_cache
 from unittest2 import TestCase
 from zope.component import getUtility
 
 
-class TestCustomstylesViewlet(TestCase):
+class TestCustomstylesView(TestCase):
 
     layer = THEME_FUNCTIONAL_TESTING
 
     def test_generates_css_without_error(self):
-        viewlet = self.get_viewlet()
-        viewlet.update()
-        self.assertTrue(viewlet.generate_css())
+        view = self.get_view()
+        self.assertTrue(view.generate_css())
 
     def test_result_is_cached(self):
-        viewlet = self.get_viewlet()
-        viewlet.update()
-        self.assertNotIn('purple', viewlet.generate_css(),
+        view = self.get_view()
+        self.assertNotIn('purple', view.generate_css(),
                          'Unexpectedly found "purple" in the CSS')
 
         # Setting a custom style automatically invalidates the cache.
@@ -33,22 +31,21 @@ class TestCustomstylesViewlet(TestCase):
         mocker.replay()
 
         ICustomStyles(self.layer['portal']).set('css.body-background', 'purple')
-        self.assertNotIn('purple', viewlet.generate_css(),
+        self.assertNotIn('purple', view.generate_css(),
                          'The result was not cached.')
 
         # Removing the stub and invalidating the cache should update the result.
         mocker.restore()
         mocker.verify()
         invalidate_cache()
-        self.assertIn('purple', viewlet.generate_css(),
+        self.assertIn('purple', view.generate_css(),
                       'Expected "purple" in CSS - does the style'
                       ' css.body-background no longer work?')
 
     def test_css_includes_icon_font(self):
         # REMOVE THIS TEST as soon as it fails!
-        viewlet = self.get_viewlet()
-        viewlet.update()
-        self.assertIn("font-family:'icomoon';", viewlet.generate_css())
+        view = self.get_view()
+        self.assertIn("font-family:'icomoon';", view.generate_css())
 
     def test_scss_files_registered(self):
         # This is a control sample check that *some* scss files are registered.
@@ -63,8 +60,7 @@ class TestCustomstylesViewlet(TestCase):
             self.assertTrue(registry.is_registered(name),
                             'Expected the scss file "%s" to be registered' % name)
 
-    def get_viewlet(self):
+    def get_view(self):
         context = self.layer['portal']
         request = self.layer['request']
-        view = None
-        return CustomStyles(context, request, view)
+        return CustomStylesCSS(context, request)

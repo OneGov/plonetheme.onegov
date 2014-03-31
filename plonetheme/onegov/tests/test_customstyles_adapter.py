@@ -59,7 +59,7 @@ class TestICustomStylesAdapter(MockTestCase):
         self.assertEquals({}, adapter.get_styles())
 
         invalidate_cache_mock = self.mocker.replace(
-            'plonetheme.onegov.viewlets.customstyles.invalidate_cache')
+            'plonetheme.onegov.browser.customstyles.invalidate_cache')
         self.expect(invalidate_cache_mock())
         self.replay()
 
@@ -70,7 +70,7 @@ class TestICustomStylesAdapter(MockTestCase):
         adapter.set('css.body-background', 'red')
 
         invalidate_cache_mock = self.mocker.replace(
-            'plonetheme.onegov.viewlets.customstyles.invalidate_cache')
+            'plonetheme.onegov.browser.customstyles.invalidate_cache')
         self.expect(invalidate_cache_mock())
         self.replay()
 
