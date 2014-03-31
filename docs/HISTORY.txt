@@ -4,6 +4,9 @@ Changelog
 1.1.2 (unreleased)
 ------------------
 
+- Always hide ajax spinner.
+  [Julian Infanger]
+
 - Replaced inline css with a browserview returning the theme css.
   This allows to cache the CSS efficient.
   [Julian Infanger]
