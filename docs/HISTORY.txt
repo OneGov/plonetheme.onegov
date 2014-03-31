@@ -4,6 +4,12 @@ Changelog
 1.1.2 (unreleased)
 ------------------
 
+- Optimized accessibility:
+  - lang attribute in HTML
+  - use right doctype
+  - move styles and script tags from body to head
+  [Julian Infanger]
+
 - Added information that this package requires >= python2.7
   [Julian Infanger]
 

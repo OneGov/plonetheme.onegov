@@ -78,7 +78,7 @@ jQuery(function($) {
           if (textStatus == 'success') {
             if (data.length > 0) {
               if (data.search('<ul class="children">')!=-1) {
-                obj.after('<a href="'+obj.attr('href')+'" class="loadChildren">▼</a>');
+                obj.after('<a href="'+obj.attr('href')+'" class="loadChildren" tabindex="-1">▼</a>');
                 obj.after(data);
               }
               else {
