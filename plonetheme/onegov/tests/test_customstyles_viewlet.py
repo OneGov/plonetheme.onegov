@@ -32,6 +32,10 @@ class TestCustomstylesTimestamp(TestCase):
             timestamp,
             self.get_viewlet(self.portal).timestamp())
 
+    def test_timestamp_not_empty_after_save_styles(self):
+        CustomStylesForm(self.portal, self.request).save_values({})
+        self.assertNotEquals('', self.get_viewlet(self.portal).timestamp())
+
     def test_new_timestamp_after_save_styles(self):
         timestamp = 'a random timestamp'
         ICustomStyles(self.portal).set(TIMESTAMP_ANNOTATION_KEY,
@@ -39,6 +43,13 @@ class TestCustomstylesTimestamp(TestCase):
         CustomStylesForm(self.portal, self.request).save_values({})
         self.assertNotEquals(
             timestamp,
+            self.get_viewlet(self.portal).timestamp())
+
+    def test_timestamp_after_import_styles(self):
+        CustomStylesForm(self.portal, self.request).import_styles(
+            {TIMESTAMP_ANNOTATION_KEY: 'old timestamp'})
+        self.assertNotEquals(
+            'old timestamp',
             self.get_viewlet(self.portal).timestamp())
 
     def get_viewlet(self, context):

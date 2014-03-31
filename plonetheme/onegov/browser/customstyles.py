@@ -9,6 +9,7 @@ from plone.memoize.interfaces import ICacheChooser
 from plone.uuid.interfaces import IUUID
 from plonetheme.onegov.interfaces import ICustomStyles
 from plonetheme.onegov.interfaces import ISCSSRegistry
+from plonetheme.onegov.utils import TIMESTAMP_ANNOTATION_KEY
 from plonetheme.onegov.utils import replace_custom_keywords
 from scss import Scss
 from zope.component import getUtility
@@ -105,6 +106,7 @@ class CustomStylesForm(BrowserView):
 
         styles = dict(filter(include, items.items()))
         adapter = ICustomStyles(self.context)
+        styles[TIMESTAMP_ANNOTATION_KEY] = str(time.time()).replace('.','')
         adapter.set_styles(styles)
 
     def export_styles(self, download=False):
