@@ -24,6 +24,7 @@ Features
 --------
 - Customize styles in control panel.
 - Responsive design for tablets and smartphones
+- Special path bar with children
 
 
 Layout customizations
@@ -75,6 +76,13 @@ the Plone site root or an `INavigationRoot` object.
             layer="my.package.interfaces.IMyPackageLayer" />
 
     </configure>
+
+Special path bar
+----------------
+For another fast way to navigate between content, this theme includes a special path bar, which shows the breadcrumb's children.
+This behavior can be disabled in the plone.app.registry, using the setting ``plonetheme.onegov.flyout_breadcrumbs``.
+
+.. image:: https://raw.github.com/OneGov/plonetheme.onegov/master/docs/screenshot_flyout_breadcrumbs.png
 
 
 Links
