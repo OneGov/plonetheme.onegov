@@ -244,3 +244,33 @@ textarea#custom-scss {
 }
 
 /* @end */
+
+/* @group theming controlpanel */
+
+body.template-theming-controlpanel {
+
+  #visual-portal-wrapper {
+    @include clearfix();
+    width: $page-fixed-width;
+    margin: 0 auto;
+    background: #FFF;
+  }
+
+  #portal-column-one {
+    @include position0();
+    @include width4();
+  }
+  #portal-column-content {
+    @include position4();
+    @include width12();
+  }
+  #portal-logo { clear: both; }
+
+  #portal-topactions,
+  #portal-searchbox,
+  #portal-footer-wrapper {
+    display: none;
+  }
+}
+
+/* @end */
