@@ -73,3 +73,14 @@
   margin-right: 0.5em;
   margin-bottom: 0.5em;
 }
+
+@mixin clearfix() {
+  zoom: 1;
+  &:before, &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    visibility: hidden;
+  }
+  &:after { clear: both; }
+}
