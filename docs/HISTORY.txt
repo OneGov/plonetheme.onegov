@@ -4,6 +4,9 @@ Changelog
 1.2.1 (unreleased)
 ------------------
 
+- Added missing dependency to setup.py.
+  [Julian Infanger]
+
 - Fixed styles of theming controlpanel.
   [Julian Infanger]
 
