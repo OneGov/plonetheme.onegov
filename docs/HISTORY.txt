@@ -4,7 +4,8 @@ Changelog
 1.2.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fixed styles of theming controlpanel.
+  [Julian Infanger]
 
 
 1.2.0 (2014-03-31)
