@@ -83,6 +83,7 @@
     & input {
       max-width: 100%;
       @include boxsizing(border-box);
+      margin-bottom: 0.5em;
     }
 }
 /* @end */
@@ -123,7 +124,7 @@
 
 .event-text h3 {
     margin-bottom: 0.5em;
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
 
 .event-text .locality {
