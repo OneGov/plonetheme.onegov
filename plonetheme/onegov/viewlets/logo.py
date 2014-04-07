@@ -1,12 +1,13 @@
+from borg.localrole.interfaces import IFactoryTempFolder
 from BTrees.OOBTree import OOBTree
-from Products.CMFCore.utils import getToolByName
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from plone.app.layout.navigation.root import getNavigationRoot
 from plone.app.layout.viewlets import common
 from plonetheme.onegov.utils import replace_custom_keywords
+from Products.CMFCore.utils import getToolByName
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from zope.annotation.interfaces import IAnnotations
-from borg.localrole.interfaces import IFactoryTempFolder
-from plone.app.layout.navigation.root import getNavigationRoot
 import pkg_resources
+
 
 try:
     pkg_resources.get_distribution('ftw.subsite')
@@ -35,7 +36,7 @@ class LogoViewlet(common.LogoViewlet):
             portal.absolute_url()
 
         annotations = IAnnotations(self.context.restrictedTraverse(
-                getNavigationRoot(self.context)))
+            getNavigationRoot(self.context)))
         customstyles = annotations.get('onegov.customstyles', OOBTree({}))
 
         if 'img.logo' in customstyles and len(customstyles['img.logo']):
@@ -49,6 +50,7 @@ class LogoViewlet(common.LogoViewlet):
     def subsite_logo_behaviour(self):
         # Copy of ftw.subsite.viewlets.subsitelogoviewlet
         self.navigation_root_url = self.portal_state.navigation_root_url()
+        portal = self.portal_state.portal()
 
         subsite_logo = getattr(self.context, 'getLogo', None)
         in_factory = IFactoryTempFolder.providedBy(
@@ -61,10 +63,16 @@ class LogoViewlet(common.LogoViewlet):
             self.title = self.context.restrictedTraverse(
                 getNavigationRoot(self.context)).Title()
 
-            self.logo_tag = "<img src='%s/logo' alt='%s Logo' />" % (
-                navigation_root_path,
-                self.title)
-
+            scales = portal.restrictedTraverse(
+                navigation_root_path + '/@@images')
+            # Create our own tag, because we want to prune the title attr
+            scale = scales.scale('logo', scale="logo")
+            self.logo_tag = ('<img src="{url}" width="{width}" '
+                             'height="{height}" alt="{alt}" />'.format(
+                                 **dict(url=scale.url,
+                                        width=scale.width,
+                                        height=scale.height,
+                                        alt=self.navigation_root_title)))
         else:
             # onegov default
             self.onegov_logo_behaviour()
