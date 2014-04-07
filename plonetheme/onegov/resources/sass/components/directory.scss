@@ -34,8 +34,8 @@
             width: 100%;
         }
     }
-    
-    /* 
+
+    /*
     hide kml download in the events directory,
     until we can change the output of it to use the icon font
     */
@@ -45,8 +45,8 @@
 
     /* collective geo map */
     #directoryResultMap, #default-cgmap {
-        height: $map-height;      
-    }    
+        height: $map-height;
+    }
 }
 
 /* @group all directory result views */
@@ -54,8 +54,6 @@
 {
     /* intro styles */
     #landingPageText {
-        width: 62.8%;
-
         h2 {
             padding-left: 1.6em;
         }
@@ -133,7 +131,7 @@
     }
 
     .directoryTypes {
-        @include tag(); 
+        @include tag();
         float: none;
         display: inline-block;
     }
@@ -156,7 +154,7 @@
 /* @group council directory & item */
 .portaltype-seantis-dir-council-item,
 .portaltype-seantis-dir-council-directory {
-    
+
     /* council tags */
     .council-tags h3 {
         margin-bottom: 0.5em;

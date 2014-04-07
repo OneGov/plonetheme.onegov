@@ -14,7 +14,10 @@ Changelog
 - Fixed styles of theming controlpanel.
   [Julian Infanger]
 
-- Update styles for seantis.dir.events release 1.1.
+- Updated styles for seantis.dir.events release 1.1.
+  [Marc Sommerhalder]
+
+- Fixed seantis.dir.events styling.
   [Marc Sommerhalder]
 
 
