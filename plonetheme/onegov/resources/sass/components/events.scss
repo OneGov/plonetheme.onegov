@@ -20,7 +20,7 @@
     }
 
     .event-sidebar {
-        width: 35%;   
+        width: 35%;
     }
     .event-view {
         width: 65%;
@@ -35,7 +35,7 @@
             float: none;
             width: 100%;
             padding: 0;
-            clear: both;  
+            clear: both;
         }
     }
 }
@@ -55,7 +55,7 @@
 /* @group event navigation */
 .event-navigation ul {
     margin: 0 0 0.5em 0;
-    
+
     & li {
         margin: 0;
         list-style: none;
@@ -71,13 +71,18 @@
         & a.selected {
             color: $text-color;
             text-decoration: none;
-            
+
             &:before {
                 content: "▸ ";
                 position: absolute;
                 left: 1em;
             }
         }
+    }
+
+    & input {
+      max-width: 100%;
+      @include boxsizing(border-box);
     }
 }
 /* @end */
@@ -121,6 +126,17 @@
     font-size: 1.1em;
 }
 
+.event-text .locality {
+    font-weight: bold;
+}
+
+.event-view .event-details a {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 /* @end */
 
 /* @group admin controls */
@@ -156,7 +172,7 @@
 
 /* @group tags */
 .eventtag {
-    @include tag();  
+    @include tag();
 }
 .eventtags {
     float: left;
@@ -200,12 +216,12 @@
 
     .short {
         font-weight: bold;
-        margin: 0.5em 0 1em 0;       
+        margin: 0.5em 0 1em 0;
     }
 
     .long {
         color: #333;
-        margin: 0 0 2em 0;   
+        margin: 0 0 2em 0;
     }
 }
 /* @end */
@@ -215,12 +231,12 @@
 /* adjust map on event item view */
 .portaltype-seantis-dir-events-item {
     #directoryDetails .event-sidebar {
-        margin-top: 1em;   
+        margin-top: 1em;
     }
 
     /* same with tags */
     #directoryDetails .eventtags {
-        margin-bottom: 2em;    
+        margin-bottom: 2em;
     }
 }
 
@@ -229,7 +245,7 @@
 /* @gorup event detail blocks */
 .event-details > div {
     margin-bottom: 2em;
-    margin-right: 4em;      
+    margin-right: 4em;
 }
 
 .event-details h3 {
@@ -258,18 +274,18 @@
 #formfield-form-widgets-cat2 {
     width: 50%;
     float: left;
-    clear: none;  
+    clear: none;
 }
 #formfield-form-widgets-cat1 > span,
 #formfield-form-widgets-cat2 > span {
-    display: block;   
+    display: block;
 }
 
 #formfield-form-widgets-submission_start_time input,
 #formfield-form-widgets-submission_end_time input,
 #formfield-form-widgets-submission_range_start_time input,
 #formfield-form-widgets-submission_range_end_time input {
-    width: 200px;   
+    width: 200px;
 }
 
 #formfield-form-widgets-submission_days .option {
@@ -278,7 +294,7 @@
 }
 
 #formfield-form-widgets-submission_days .option input {
-    margin-right: 0;   
+    margin-right: 0;
 }
 /* @end */
 
