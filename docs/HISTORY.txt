@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.2.1 (unreleased)
+1.2.1 (2014-04-08)
 ------------------
 
 - BugFix: ftw.subsite logo integration use plone.scaling to create the logo
