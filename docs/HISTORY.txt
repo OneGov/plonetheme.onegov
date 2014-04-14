@@ -10,15 +10,13 @@ Changelog
 1.2.3 (2014-04-14)
 ------------------
 
-- Nothing changed yet.
+- Append "/view" to objects in left navigation if they are in the
+  'typesUseViewActionInListings' property.
+  [Julian Infanger]
 
 
 1.2.2 (2014-04-14)
 ------------------
-
-- Append "/view" to objects in left navigation if they are in the
-  'typesUseViewActionInListings' property.
-  [Julian Infanger]
 
 - Added styles for news archive portlet.
   [Julian Infanger]
