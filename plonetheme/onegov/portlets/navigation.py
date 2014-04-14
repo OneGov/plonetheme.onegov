@@ -30,6 +30,8 @@ class Renderer(base.Renderer):
 
         properties = getToolByName(self.context, 'portal_properties')
         self.hidden_types = properties.navtree_properties.metaTypesNotToList
+        self.view_action_types = properties.site_properties.getProperty(
+            'typesUseViewActionInListings', ())
 
     def show_parent(self):
         """ Do not show parent if you are on navigationroot.
@@ -65,6 +67,11 @@ class Renderer(base.Renderer):
 
     def children(self):
         return self.filter_brains(self.context.getFolderContents())
+
+    def url(self, brain):
+        if brain.portal_type in self.view_action_types:
+            return brain.getURL() + '/view'
+        return brain.getURL()
 
     def filter_brains(self, brains):
         """Filters brains, removing ignored types and content excluded from

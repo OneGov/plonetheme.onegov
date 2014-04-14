@@ -45,6 +45,33 @@ class TestNavigationPortlet(TestCase):
         self.assertEquals('The Folder', portlet().css('.current').first.text)
 
     @browsing
+    def test_append_view_to_link_if_type_in_property(self, browser):
+        create(Builder('navigation portlet'))
+        folder = create(Builder('folder').titled('The Folder'))
+
+        properties = getToolByName(self.portal, 'portal_properties')
+        properties.site_properties.typesUseViewActionInListings=('Image')
+
+        create(Builder('image').titled('my-image').within(folder))
+        browser.visit(folder)
+        self.assertEqual('http://nohost/plone/the-folder/my-image/view',
+                         portlet().css('li.child > a').first.attrib.get('href'))
+
+    @browsing
+    def test_dont_append_view_to_link_if_type_in_property(self, browser):
+        create(Builder('navigation portlet'))
+        folder = create(Builder('folder').titled('The Folder'))
+
+        properties = getToolByName(self.portal, 'portal_properties')
+        properties.site_properties.typesUseViewActionInListings=()
+
+        create(Builder('image').titled('my-image').within(folder))
+        browser.visit(folder)
+
+        self.assertEqual('http://nohost/plone/the-folder/my-image',
+                         portlet().css('li.child > a').first.attrib.get('href'))
+
+    @browsing
     def test_lists_children(self, browser):
         create(Builder('navigation portlet'))
         folder = create(Builder('folder').titled('The Folder'))
