@@ -17,31 +17,34 @@ class LoadFlyoutChildren(navigation.UpdateMobileNavigation):
         self.view_action_types = properties.site_properties.getProperty(
             'typesUseViewActionInListings', ())
 
-        breadcrumbs = self.request.form.get('breadcrumbs', None)
-        sub_objects = self.sub_objects(self.context, level=0)
-        if breadcrumbs:
-            if not sub_objects:
-                return ''
-            subnavi = '<ul class="children">'
-        else:
-            direct_title = '%s %s' % (
-                translate('Direct to', domain="plonetheme.onegov",
-                          context=self.request).encode('utf8'),
-                self.context.Title())
-            subnavi = '<ul class="flyoutChildren">'
-            subnavi += '<li class="%s"><a href="%s">%s</a></li>' % (
-                'directLink',
-                self.url(self.context),
-                direct_title
-                )
-
-        for obj in sub_objects:
-            subnavi += '<li class="%s"><a href="%s">%s</a></li>' % (
+        self.sub_objs = self.sub_objects(self.context, level=0)
+        children = []
+        for obj in self.sub_objs:
+            children.append('<li class="%s"><a href="%s">%s</a></li>' % (
                 self.get_css_classes(obj),
                 self.url(obj),
-                obj.Title())
-        subnavi += '</ul>'
-        return subnavi
+                obj.Title()))
+
+        return self.children_markup().format(**dict(
+            direct_to = self.direct_to_link(),
+            children = ''.join(children)))
+
+    def direct_to_link(self):
+        direct_title = '%s %s' % (
+            translate('Direct to', domain="plonetheme.onegov",
+                      context=self.request).encode('utf8'),
+            self.context.Title())
+        return '<li class="directLink"><a href="{}">{}</a></li>'.format(
+            self.url(self.context),
+            direct_title)
+
+    def children_markup(self):
+        breadcrumbs = self.request.form.get('breadcrumbs', None)
+        if breadcrumbs:
+            if not self.sub_objs:
+                return ''
+            return '<ul class="children">{children}</ul>'
+        return '<ul class="flyoutChildren">{direct_to}{children}</ul>'
 
     def url(self, obj):
         if obj.portal_type in self.view_action_types:
