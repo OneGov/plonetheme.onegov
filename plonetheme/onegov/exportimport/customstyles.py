@@ -16,8 +16,8 @@ def importCustomstyles(import_context):
     root.
     """
 
-    filenames = filter(FILENAME_PATTERN.match,
-                       import_context.listDirectory('.'))
+    files = import_context.listDirectory('.') or []
+    filenames = filter(FILENAME_PATTERN.match, files)
 
     for filename in filenames:
         filedata = import_context.readDataFile(filename)
