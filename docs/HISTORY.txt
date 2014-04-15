@@ -4,6 +4,9 @@ Changelog
 1.2.4 (unreleased)
 ------------------
 
+- Added some tests for load_flyout_children view.
+  [Julian Infanger]
+
 - Append "/view" to objects in breadcrumbs if they are in the
   'typesUseViewActionInListings' property.
   [Julian Infanger]
