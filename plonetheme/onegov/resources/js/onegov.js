@@ -13,7 +13,7 @@ function close_opened_breadcrumbs(element) {
 jQuery(function($) {
 
   // flyout navigation
-  $('#portal-globalnav > li > .wrapper a').click(function(e){
+  $('#portal-globalnav.flyoutEnabled > li > .wrapper a').click(function(e){
     e.preventDefault();
     var me = $(this);
     var parent = me.parent('.wrapper').parent('li');

@@ -4,6 +4,9 @@ Changelog
 1.2.4 (unreleased)
 ------------------
 
+- Add possibility to disable the flyout navigation in globalnav.
+  [Julian Infanger]
+
 - Fallback in import customstyles if listDirectory is None.
   [Julian Infanger]
 

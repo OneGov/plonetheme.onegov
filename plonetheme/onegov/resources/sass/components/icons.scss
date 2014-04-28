@@ -197,7 +197,7 @@ a.external-link {
   @include icon($char: " k", $style: "after");
 }
 
-#portal-globalnav > li > .wrapper a {
+#portal-globalnav.flyoutEnabled > li > .wrapper a {
   @include icon($char: " ", $style: "after");
   &:after {
     font-size: 0.75em;
