@@ -77,6 +77,14 @@ the Plone site root or an `INavigationRoot` object.
 
     </configure>
 
+Flyout navigation
+-----------------
+This theme comes with a flyout navigation. If you click on an element in the global navigation you get the children as a flyout navigation and also a link to go 'direct to' the element you clicked on.
+This behavior can be disabled in the plone.app.registry, using the setting ``plonetheme.onegov.flyout_navigation``.
+
+.. image:: https://raw.github.com/OneGov/plonetheme.onegov/master/docs/screenshot_flyout_navigation.png
+
+
 Special path bar
 ----------------
 For another fast way to navigate between content, this theme includes a special path bar, which shows the breadcrumb's children.
