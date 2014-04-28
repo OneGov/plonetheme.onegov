@@ -4,6 +4,9 @@ Changelog
 1.2.4 (unreleased)
 ------------------
 
+- Fallback in import customstyles if listDirectory is None.
+  [Julian Infanger]
+
 - Added some tests for load_flyout_children view.
   [Julian Infanger]
 
