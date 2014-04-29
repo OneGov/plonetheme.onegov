@@ -4,6 +4,9 @@ Changelog
 1.2.4 (unreleased)
 ------------------
 
+- Escape HTML chars in navigation and breadcrumbs.
+  [Julian Infanger]
+
 - Add possibility to disable the flyout navigation in globalnav.
   [Julian Infanger]
 

@@ -71,3 +71,16 @@ class TestFyloutView(TestCase):
                          '<a href="http://nohost/plone">Direct to Plone site</a>' \
                          '</li>',
                          view.direct_to_link())
+
+    def test_html_chars_are_escaped(self):
+        create(Builder('folder').titled('<b>SubFolder</b>'))
+        self.request.form.update({'breadcrumbs': '1'})
+        self.assertEqual(
+            '<ul class="children"><li class="noChildren level1"><a href="http://nohost/plone/b-subfolder-b">&lt;b&gt;SubFolder&lt;/b&gt;</a></li></ul>',
+            self.portal.unrestrictedTraverse('load_flyout_children')())
+
+    def test_html_chars_are_escaped_in_direct_link(self):
+        folder = create(Builder('folder').titled('<b>SubFolder</b>'))
+        self.assertEqual(
+            '<ul class="flyoutChildren"><li class="directLink"><a href="http://nohost/plone/b-subfolder-b">Direct to &lt;b&gt;SubFolder&lt;/b&gt;</a></li></ul>',
+            folder.unrestrictedTraverse('load_flyout_children')())

@@ -1,5 +1,6 @@
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from ftw.mobilenavigation.browser.navigation import escape_html
 from ftw.mobilenavigation.browser import navigation
 from zope.i18n import translate
 
@@ -23,7 +24,7 @@ class LoadFlyoutChildren(navigation.UpdateMobileNavigation):
             children.append('<li class="%s"><a href="%s">%s</a></li>' % (
                 self.get_css_classes(obj),
                 self.url(obj),
-                obj.Title()))
+                escape_html(obj.Title())))
 
         return self.children_markup().format(**dict(
             direct_to = self.direct_to_link(),
@@ -33,7 +34,7 @@ class LoadFlyoutChildren(navigation.UpdateMobileNavigation):
         direct_title = '%s %s' % (
             translate('Direct to', domain="plonetheme.onegov",
                       context=self.request).encode('utf8'),
-            self.context.Title())
+            escape_html(self.context.Title()))
         return '<li class="directLink"><a href="{}">{}</a></li>'.format(
             self.url(self.context),
             direct_title)
