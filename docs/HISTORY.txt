@@ -4,6 +4,9 @@ Changelog
 1.2.4 (unreleased)
 ------------------
 
+- Do not hide tabbedview spinner.
+  [Julian Infanger]
+
 - Escape HTML chars in navigation and breadcrumbs.
   [Julian Infanger]
 
