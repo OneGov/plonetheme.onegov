@@ -4,6 +4,9 @@ Changelog
 1.2.4 (unreleased)
 ------------------
 
+- Added styles for new tabbedview action buttons.
+  [Julian Infanger]
+
 - Do not hide tabbedview spinner.
   [Julian Infanger]
 

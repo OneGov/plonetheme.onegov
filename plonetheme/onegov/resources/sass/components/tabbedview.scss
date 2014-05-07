@@ -36,6 +36,11 @@ div.overview-right-column { @include width8(); }
   @include ul($style: 'plain');
 }
 
+ul.tabbedview-action-list {
+  @include ul($style:'plain');
+  margin-top: 0.5em;
+  li { float: left; }
+}
 
 /* @end */
 

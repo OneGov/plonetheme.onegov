@@ -47,6 +47,7 @@
       border: 1px solid $input-context-hover-border;
       @include gradient($input-context-hover-bg-start, $input-context-hover-bg-end);
       color: $input-context-hover-color;
+      text-decoration: none;
     }
     &:active {
       @include boxshadow(0 0 0.25em $darkgray);
