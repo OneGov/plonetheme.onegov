@@ -4,6 +4,9 @@ Changelog
 1.2.4 (unreleased)
 ------------------
 
+- Added outline style for :focus, to ensure better accessibility.
+  [Julian Infanger]
+
 - Added styles for new tabbedview action buttons.
   [Julian Infanger]
 

@@ -53,7 +53,7 @@ jQuery(function($) {
   // To top link
   $('div.to_top a').click(function(e) {
     e.preventDefault();
-    $('html, body').scrollTop(0);
+    $('html, body').scrollTop(0).focus().blur();
   });
 
   // Toggle languageselector menu

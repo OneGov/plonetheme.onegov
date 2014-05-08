@@ -63,6 +63,7 @@
   <theme:add_scss path="resources/sass/components/events.scss" />
   <theme:add_scss path="resources/sass/components/facility.scss" />
   <theme:add_scss path="resources/sass/components/reservation.scss" />
+  <theme:add_scss path="resources/sass/components/accessibility.scss" />
   <theme:add_scss path="resources/sass/components/overrides.scss" />
 
 </configure>

@@ -1,0 +1,43 @@
+/* @group accessibility focus */
+
+@mixin focus() {
+  outline: 1px $focus_outline_color dotted;
+}
+@mixin no_focus() {
+  outline: none;
+}
+
+a:focus,
+input:focus,
+textarea:focus {
+  @include focus();
+}
+a:hover,
+input:hover,
+textarea:hover {
+  @include no_focus();
+}
+#portal-breadcrumbs:hover a,
+#portal-globalnav:hover a {
+  @include no_focus();
+}
+
+/* @end */
+
+/* @group accessibility accesskeys */
+
+#accesskeys > a:focus {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  color: #FFF;
+  font-size: 15px;
+  height: auto;
+  width: auto;
+  padding: 0.5em;
+  text-decoration: underline;
+  z-index: 999;
+}
+
+/* @end */
