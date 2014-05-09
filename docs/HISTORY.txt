@@ -4,6 +4,9 @@ Changelog
 1.2.4 (unreleased)
 ------------------
 
+- Fixed listing block gallery styles.
+  [Julian Infanger]
+
 - Added outline style for :focus, to ensure better accessibility.
   [Julian Infanger]
 
