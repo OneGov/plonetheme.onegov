@@ -52,4 +52,13 @@
       directory="profiles/1113"
       />
 
+  <!-- 1113 -> 1114 -->
+  <upgrade-step:importProfile
+      title="Fix skins settings"
+      profile="plonetheme.onegov:default"
+      source="1113"
+      destination="1114"
+      directory="profiles/1114"
+      />
+
 </configure>
