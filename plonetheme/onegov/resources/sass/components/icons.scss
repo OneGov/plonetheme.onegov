@@ -261,6 +261,9 @@ a.external-link {
 #document-actions #document-action-pdf a {
   @include icon($char: '" ');
 }
+#document-actions #document-action-pdf_export a {
+  @include icon($char: '" ');
+}
 #document-actions #document-action-reader a {
   @include icon($char: "` ");
 }
@@ -270,6 +273,7 @@ a.external-link {
 #document-actions #document-action-addtofavourites a,
 #document-actions #document-action-addtofavorites a,
 #document-actions #document-action-pdf a,
+#document-actions #document-action-pdf_export a,
 #document-actions #document-action-reader a {
   @include invisible_text($icon-size: 20px);
 }
