@@ -4,6 +4,9 @@ Changelog
 1.2.5 (unreleased)
 ------------------
 
+- Only style button links as button.
+  [Julian Infanger]
+
 - Use pdf icon for export pdf document action.
   [Julian Infanger]
 

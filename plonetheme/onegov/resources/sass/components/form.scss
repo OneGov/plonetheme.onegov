@@ -136,7 +136,7 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"],
 button.context,
-.button {
+a.button {
   @include button_context();
 }
 input.standalone {
