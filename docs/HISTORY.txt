@@ -4,6 +4,9 @@ Changelog
 1.2.5 (unreleased)
 ------------------
 
+- Use 100% for table in meeting item body.
+  [Julian Infanger]
+
 - Only style button links as button.
   [Julian Infanger]
 
