@@ -1,7 +1,6 @@
 <dl class="portlet portletContextNavigation"
     i18n:domain="plonetheme.onegov"
-    tal:define="parent nocall:view/parent;
-                children view/children;
+    tal:define="children view/children;
                 siblings view/siblings">
 
   <dt class="portletHeader hiddenStructure">
@@ -13,10 +12,10 @@
   <dd class="portletItem">
     <ul>
       <tal:parent condition="view/show_parent">
-        <li class="parent">
-          <a tal:attributes="href parent/absolute_url;
-                             title parent/Title"
-             tal:content="parent/Title"
+        <li class="parent" tal:define="link view/parent_link">
+          <a tal:attributes="href link/url;
+                             title link/title"
+             tal:content="link/title"
              />
         </li>
       </tal:parent>

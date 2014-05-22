@@ -4,6 +4,8 @@ from Products.CMFPlone.interfaces.siteroot import IPloneSiteRoot
 from Products.CMFPlone.utils import base_hasattr
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from borg.localrole.interfaces import IFactoryTempFolder
+from plone.app.layout.navigation.defaultpage import getDefaultPage
+from plone.app.layout.navigation.defaultpage import isDefaultPage
 from plone.app.portlets.portlets import base
 from plone.app.portlets.portlets.navigation import getRootPath
 from plone.memoize.instance import memoize
@@ -43,6 +45,17 @@ class Renderer(base.Renderer):
             return False
         return True
 
+    def parent_link(self):
+        if getDefaultPage(self.parent):
+            page = self.parent.unrestrictedTraverse(
+                getDefaultPage(self.parent))
+            return {'title': page.Title(),
+                    'url': self.parent.absolute_url()}
+
+        else:
+            return {'title': self.parent.Title(),
+                    'url': self.parent.absolute_url()}
+
     def siblings(self):
         if self.data.currentFolderOnly:
             return None
@@ -56,6 +69,9 @@ class Renderer(base.Renderer):
         for brain in parent.getFolderContents():
             if brain.getPath() == context_path:
                 context_reached = True
+                continue
+            obj = brain.getObject()
+            if isDefaultPage(aq_parent(aq_inner(obj)), obj):
                 continue
             if not context_reached:
                 before.append(brain)

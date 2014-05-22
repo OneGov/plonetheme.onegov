@@ -200,3 +200,26 @@ class TestNavigationPortlet(TestCase):
                              portlet().css('.current').first.classes)
             self.assertNotIn('content-expired', portlet().css('.child').first.classes)
             self.assertNotIn('content-expired', portlet().css('.sibling')[1].classes)
+
+    @browsing
+    def test_default_pages_are_not_listed(self, browser):
+        create(Builder('navigation portlet'))
+        homepage = create(Builder('page').titled('Homepage'))
+        self.portal._setProperty('default_page', homepage.getId(), 'string')
+        homepage.reindexObject()
+        other = create(Builder('page').titled('Other page'))
+
+        browser.open(self.portal)
+        self.assertFalse(portlet().css('.parent'))
+        self.assertEquals('Homepage', portlet().css('.current').first.text)
+        self.assertEquals(['Other page'], portlet().css('.sibling').text)
+
+        browser.open(homepage)
+        self.assertFalse(portlet().css('.parent'))
+        self.assertEquals('Homepage', portlet().css('.current').first.text)
+        self.assertEquals(['Other page'], portlet().css('.sibling').text)
+
+        browser.open(other)
+        self.assertEquals('Homepage', portlet().css('.parent').first.text)
+        self.assertEquals('Other page', portlet().css('.current').first.text)
+        self.assertEquals([], portlet().css('.sibling').text)

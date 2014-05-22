@@ -4,6 +4,10 @@ Changelog
 1.2.5 (unreleased)
 ------------------
 
+- Do not show default pages in navigation.
+  If the parent is a default page, show the default page title.
+  [jone]
+
 - Fixed skins properties.
   Do not longer inject skin layer into all skins.
   [Julian Infanger]
