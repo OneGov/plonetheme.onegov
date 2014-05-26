@@ -4,6 +4,9 @@ Changelog
 1.2.5 (unreleased)
 ------------------
 
+- Updated margin of tabbedview headings.
+  [Julian Infanger]
+
 - Use 100% for table in meeting item body.
   [Julian Infanger]
 
