@@ -80,6 +80,28 @@
         width: 70%;      
     }
 
+    .resourceDescription {
+        color: $darkgray;
+        max-width: 400px;
+        margin-bottom: 1em;
+    }
+    .directoryChildren h2 {
+        margin-top: 1em;
+    }
+    .directoryChildren p {
+        margin-bottom: 1.2em;
+    }
+    .directoryChildren .resourceTitle {
+        font-size: 1.1em;
+        font-weight: bold;
+    }
+    .directoryChildren .resourceDescription {
+        display: inline-block;
+    }
+    .directoryChildren .resourceDescription:hover {
+        text-decoration: none;
+    }
+
     /* not nice, but seantis.reservation currently needs this */
     .directoryResult.groupSelection, 
     .resourceItem.groupSelection {
