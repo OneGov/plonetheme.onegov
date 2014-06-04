@@ -2,6 +2,22 @@
 
 /* @group fullcalendar */
 #content {
+    .fc-event-title {
+        font-size: 1.1em;
+    }
+    .fc-event-time {
+        font-size: 1.1em;
+        display: block;
+    }
+    .fc-view-agendaWeek .fc-event {
+        margin-left: 2px;
+    }
+    .fc-event-time,
+    .fc-event-title {
+        padding: 1px 0 0 2px;
+        display: block;
+    }
+
     .event-available {
         background-color: $reservation-available-color !important;
         border-color: $reservation-available-color  !important;
