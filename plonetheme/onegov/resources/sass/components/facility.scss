@@ -5,7 +5,6 @@
     float: left;
     width: 60%;
     @include boxsizing(border-box);
-
 }
 
 .facilityOverview {
@@ -20,7 +19,6 @@
         width: 100%;
     }
 }
-
 
 .portaltype-seantis-dir-facility-directory #directoryResultList {
     width: 100%;

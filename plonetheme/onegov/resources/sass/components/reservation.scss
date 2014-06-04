@@ -194,13 +194,10 @@
             float: left;
             width: 50%;
 
-            span {
-                font-weight: bold;
-            }
-
             span.label {
                 font-weight: normal;
                 margin-right: 0.5em;
+                color: $darkgray;
             }
         }
 
@@ -209,12 +206,23 @@
             width: 50%;
         }
 
-        .block-title {
-            font-weight: bold;
-        }
-
         .reservation-data-update {
             margin-top: 1em;
+        }
+
+        .block-title {
+            font-weight: bold;
+            margin-top: 1em;
+            margin-bottom: 0.5em;
+            border-bottom: 1px solid #efefef;
+        }
+
+        .reservation-data > div {
+            margin-bottom: 0.5em;
+        }
+
+        .reservation-data .label {
+            display: block;
         }
     }
 }
