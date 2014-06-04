@@ -115,6 +115,10 @@
 .reservation-urls .reservation-action:last-child:after {
     content:"";
 }
+.reservation-data .reservation-urls:last-child {
+    float: none;
+    font-weight: bold;
+}
 /* @end */
 
 /* @group your reservations */
