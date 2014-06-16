@@ -4,6 +4,9 @@ Changelog
 1.2.6 (unreleased)
 ------------------
 
+- Fixes seantis.reservation form choices being rendered without line breaks.
+  [href]
+
 - Removes superfluous scrollbars in fullcalendar instances.
   [href]
 
