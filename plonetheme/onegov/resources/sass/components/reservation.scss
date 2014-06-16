@@ -69,7 +69,6 @@
         }
     }
 }
-
 /* @end */
 
 /* @group calendar context-menu */
@@ -98,6 +97,14 @@
     position: relative;
     padding-top: 0.25em;
     padding: 0.25em 0.5em;
+}
+/* @end */
+
+/* @group reservation form */
+.seantis-reservation-form {
+    span.option {
+        display: block;
+    }
 }
 /* @end */
 
