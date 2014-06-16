@@ -4,7 +4,8 @@ Changelog
 1.2.6 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Removes superfluous scrollbars in fullcalendar instances.
+  [href]
 
 
 1.2.5 (2014-06-12)

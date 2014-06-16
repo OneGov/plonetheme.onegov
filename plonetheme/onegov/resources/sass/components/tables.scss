@@ -5,6 +5,10 @@ caption {
 #column-content table {
   margin-bottom: 1em;
 }
+// excempt the fullcalendar table from this
+#column-content .fc-content table {
+    margin-bottom: 0;
+}
 table.listing,
 table.plain {
   max-width: 100%;
