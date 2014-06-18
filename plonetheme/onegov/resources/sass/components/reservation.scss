@@ -328,6 +328,31 @@
 
 /* @end */
 
+/* @group limited list */
+
+.limitedList {
+    width: auto;
+    max-width: 600px;
+    max-height: 500px;
+
+    .fc-event {
+        padding: 2px 6px 1px 6px;
+        display: inline-block;
+        border-radius: 2px;
+        margin-bottom: 0.5em;
+    }
+
+    .fc-event-time,
+    .fc-event-title {
+        font-size: 1.1em;
+    }
+
+    .fc-event-inner {
+        width: auto;
+    }
+}
+/* @end */
+
 /* @group overviewlets */
 .overviewlet {
     .resourceItem {
@@ -419,7 +444,6 @@
 table.timetable div.timespan div.occupied {
     background-color: $reservation-unavailable-color;
 }
-
 /* @end */
 
 /* @end */
