@@ -57,6 +57,7 @@ class TestSeachBoxViewlet(TestCase):
     def test_default_plone_placeholder_is_used_by_deafult(self):
         Plone().visit_portal()
         default_placeholder = translate('title_search_site',
+                                        default='Search this site',
                                         domain='plone',
                                         context=self.request)
         self.assertEquals(default_placeholder,
