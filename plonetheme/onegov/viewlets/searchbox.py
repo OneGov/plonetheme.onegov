@@ -32,6 +32,7 @@ class SearchBoxViewlet(SearchBoxViewlet):
 
     def placeholder(self):
         default_placeholder = translate('title_search_site',
+                                        default='Search this site',
                                         domain='plone',
                                         context=self.request)
 
