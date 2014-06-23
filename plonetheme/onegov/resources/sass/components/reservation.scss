@@ -112,17 +112,19 @@
 .reservation-urls {
     float: right;
 }
-.reservation-urls .reservation-action:after {
-    content: " / ";
+.reservation-urls .reservation-action {
+    @include tag();
     display: inline-block;
-    padding-left: 5px;
-}
-.reservation-urls .reservation-action:last-child:after {
-    content:"";
-}
-.reservation-data .reservation-urls:last-child {
     float: none;
-    font-weight: bold;
+    margin-right: 0;
+}
+.reservation-urls .reservation-action-approve {
+    background: #e7f0e7;
+}
+.reservation-urls .reservation-action-deny,
+.reservation-urls .reservation-action-revoke {
+    background: #f0e7e7;
+    border: 1px solid #f0e7e7;
 }
 /* @end */
 
@@ -189,7 +191,7 @@
         .reservation-title {
             background-color: $lightgray2;
             margin-bottom: 0.25em;
-            padding: 0.25em 0.5em;
+            padding: 0.25em 0.4em 0.4em 0.4em;
         }
 
         .reservation-title h3 {
