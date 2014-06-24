@@ -63,8 +63,38 @@
     max-width: 50%;
 }
 .person-details-right.splitscreen {
-    float: left;
-    clear: right;
+    float: right;
+}
+
+#content .person-wrapper {
+    display: table;
+    margin-top: 1em;
+
+    .person-navigation {
+        height: 2.3em;
+        min-width: 250px;
+        //border-top: 1px solid $lightgray2;
+        border-bottom: 1px solid $lightgray2;
+    }
+
+    .person-navigation .previous {
+        float: left;
+        background: none;
+        margin-top: 2px;
+    }
+
+    .person-navigation a.next {
+        float: right;
+        background: none;
+        margin-top: 2px;
+    }
+}
+
+@media screen and (max-width: 797px) {
+    #content .person-wrapper {
+        display: block;
+        width: 100%;
+    }
 }
 /* @end */
 

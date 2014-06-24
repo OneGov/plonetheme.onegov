@@ -4,6 +4,9 @@ Changelog
 1.2.6 (unreleased)
 ------------------
 
+- Adds styles for new navigation introduced in seantis.people 0.19
+  [href]
+
 - Various seantis.reservation improvements.
   [href]
 
