@@ -2,10 +2,10 @@
 
 body.template-book_reader_view {
 
-  $reader-bg: $body-background;
-  $reader-border: #555;
+  $reader-bg: #fafafa;
+  $reader-border: #777;
 
-  background: $lightgray2;
+  background: $body-background;
 
   /* Hide unused elements */
   #header,
@@ -81,6 +81,19 @@ body.template-book_reader_view {
     background: url(%THEME_URL%/images/pb_close.png) no-repeat center center;
     width: 2em;
     height: 2em;
+  }
+
+  #content {
+    ul.book-reader-navigation-0 > li > a {
+      font-weight: bold;
+      font-size: 1.25em;
+    }
+    ul.book-reader-navigation-1 {
+      margin-left: 0;
+    }
+    .book-reader-navigation a {
+      font-weight: normal;
+    }
   }
 
 }
