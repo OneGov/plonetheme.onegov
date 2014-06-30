@@ -12,6 +12,11 @@
 /* @group all directory views */
 .seantis-directory-all {
 
+    /* hidden by default in plonetheme.onegov */
+    .documentDescription {
+        display: block;
+    }
+
     /* search box styles */
     #directorySearch {
         background-color: $lightgray;

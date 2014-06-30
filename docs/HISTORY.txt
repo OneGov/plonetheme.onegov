@@ -4,6 +4,9 @@ Changelog
 1.2.7 (unreleased)
 ------------------
 
+- Show document description blocks in seantis directories.
+  [href]
+
 - Updated styles for book reader view.
   [Julian Infanger]
 
