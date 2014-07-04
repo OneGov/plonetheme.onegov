@@ -291,3 +291,14 @@ div.listingBar a {
 }
 
 /* @end */
+
+/* @group notification form */
+.template-notification_form #content form {
+    padding-right: 2px;
+}
+
+.template-notification_form #content form textarea{
+    width: 98%;
+    padding:1%;
+}
+/* @end */
