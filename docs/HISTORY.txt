@@ -4,6 +4,9 @@ Changelog
 1.2.7 (unreleased)
 ------------------
 
+- Make Textarea wider on notification_form.
+  [tschanzt]
+
 - Updated styles for book reader view.
   [Julian Infanger]
 
