@@ -125,8 +125,11 @@ ul.mobileNavigation {
 
 /* @group ftw.slider */
 
-#slider-navi a.active {
-  background: $slider-bg-start;
+.slick-dots li button:before {
+  color: transparent;
+}
+#content ul.slick-dots li.slick-active {
+  background-color: $slider-bg-start;
 }
 #slider-wrapper .sliderText {
   @include gradient($slider-bg-start, $slider-bg-end);
@@ -136,10 +139,6 @@ ul.mobileNavigation {
   & a {
     color: $slider-color;
   }
-}
-#slider-wrapper a.prev,
-#slider-wrapper a.next {
-  text-decoration: none;
 }
 
 /* @end */
