@@ -24,7 +24,7 @@ class TestMetaViewlet(TestCase):
         transaction.commit()
         browser.open()
         tag = browser.css('link[type="image/x-icon"]').first
-        self.assertEquals('/plone/my-fav.ico',
+        self.assertEquals('http://nohost/plone/my-fav.ico',
                           tag.attrib.get('href'))
 
     @browsing
@@ -33,7 +33,7 @@ class TestMetaViewlet(TestCase):
         transaction.commit()
         browser.open()
         tag = browser.css('link[rel="apple-touch-startup-image"]').first
-        self.assertEquals('/plone/s.png',
+        self.assertEquals('http://nohost/plone/s.png',
                           tag.attrib.get('href'))
 
     @browsing
@@ -42,7 +42,7 @@ class TestMetaViewlet(TestCase):
         transaction.commit()
         browser.open()
         tag = browser.css('link[rel="apple-touch-icon"]').first
-        self.assertEquals('/plone/t.png',
+        self.assertEquals('http://nohost/plone/t.png',
                           tag.attrib.get('href'))
 
     @browsing
@@ -52,7 +52,7 @@ class TestMetaViewlet(TestCase):
         transaction.commit()
         browser.open()
         tag = browser.css('link[rel="apple-touch-icon"][sizes="76x76"]').first
-        self.assertEquals('/plone/t76.png',
+        self.assertEquals('http://nohost/plone/t76.png',
                           tag.attrib.get('href'))
 
     @browsing
@@ -62,7 +62,7 @@ class TestMetaViewlet(TestCase):
         transaction.commit()
         browser.open()
         tag = browser.css('link[rel="apple-touch-icon"][sizes="120x120"]').first
-        self.assertEquals('/plone/t120.png',
+        self.assertEquals('http://nohost/plone/t120.png',
                           tag.attrib.get('href'))
 
     @browsing
@@ -72,5 +72,5 @@ class TestMetaViewlet(TestCase):
         transaction.commit()
         browser.open()
         tag = browser.css('link[rel="apple-touch-icon"][sizes="152x152"]').first
-        self.assertEquals('/plone/t152.png',
+        self.assertEquals('http://nohost/plone/t152.png',
                           tag.attrib.get('href'))

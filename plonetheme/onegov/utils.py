@@ -5,11 +5,11 @@ TIMESTAMP_ANNOTATION_KEY = 'customstyles_url_timestamp'
 
 def replace_custom_keywords(config, context):
     # replace keywords in css output
-    portal = getToolByName(context, 'portal_url').getPortalObject()
+    portal_url = getToolByName(context, 'portal_url')()
     css_keywords = {
-        '%PORTAL_URL%': '/'.join(portal.getPhysicalPath()),
-        '%THEME_URL%': '%s/++theme++plonetheme.onegov' % '/'.join(
-            portal.getPhysicalPath())}
+        '%PORTAL_URL%': portal_url,
+        '%THEME_URL%': '%s/++theme++plonetheme.onegov' % portal_url
+        }
 
     for search, replace in css_keywords.items():
         config = config.replace(search, replace)

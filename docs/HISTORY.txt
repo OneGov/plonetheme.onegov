@@ -4,8 +4,8 @@ Changelog
 1.2.8 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Use portal_url for portal and theme url also added the portalurl to the csscachekey so we don't get problems with image.
+  [tschanzt]
 
 1.2.7 (2014-07-11)
 ------------------
