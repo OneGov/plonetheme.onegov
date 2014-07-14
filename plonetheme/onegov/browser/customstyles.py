@@ -54,9 +54,11 @@ def cache_key(method, self):
     if cssregistry.getDebugMode():
         return "{}.{}".format(cachekey_prefix, str(time.time()))
     # Otherwise return the navigation roots uuid
+    portal_url = getToolByName(self.context, 'portal_url')()
     nav_root = self.context.restrictedTraverse(getNavigationRoot(self.context))
     uuid = IUUID(nav_root, '/'.join(nav_root.getPhysicalPath()))
-    return "{}.{}".format(cachekey_prefix, uuid)
+    
+    return "{}.{}.{}".format(cachekey_prefix, uuid, portal_url)
 
 
 def invalidate_cache():

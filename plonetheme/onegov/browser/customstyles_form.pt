@@ -129,8 +129,8 @@
 
         <div id="customform-help">
           <pre><b>Variables</b></pre>
-          <pre>%PORTAL_URL% = <span tal:content="python:'/'.join(portal.getPhysicalPath())" /></pre>
-          <pre>%THEME_URL%  = <span tal:content="python:'/'.join(portal.getPhysicalPath())" />/++theme++plonetheme.onegov</pre>
+          <pre>%PORTAL_URL% = <span tal:content="python:portal.portal_url()" /></pre>
+          <pre>%THEME_URL%  = <span tal:content="python:portal.portal_url()" />/++theme++plonetheme.onegov</pre>
         </div>
 
       </metal:content-core>
