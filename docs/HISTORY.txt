@@ -4,6 +4,12 @@ Changelog
 1.2.8 (unreleased)
 ------------------
 
+- Improves positioning of "edit formdata" link in seantis.reservation.
+  [href]
+
+- Adds styles for new 'broken-data' view in seantis.reservation.
+  [href]
+
 - Fixed path of pb_close image.
   [Julian Infanger]
 

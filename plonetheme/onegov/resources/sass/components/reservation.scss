@@ -243,6 +243,12 @@
         .reservation-data .label {
             display: block;
         }
+
+        .reservation-data .reservation-urls {
+            float: none;
+            margin-top: 1em;
+            display: inline-block
+        }
     }
 }
 /* @end */
@@ -445,6 +451,37 @@
 
 table.timetable div.timespan div.occupied {
     background-color: $reservation-unavailable-color;
+}
+/* @end */
+
+/* @group broken data */
+#broken-data {
+    background-color: $lightgray;
+    padding: 1em;
+    margin-bottom: 1em;
+    
+    h2 {
+        margin: 0 0 0.5em 0;
+    }
+    .short-message, 
+    .long-message {
+        margin-bottom: 1em;
+    }
+    .long-message {
+        color: $darkgray;
+        max-width: 500px;
+    }
+    .reservation-data {
+        color: $darkgray;
+        margin-top: -1em;
+    }
+    .reservation-data {
+        .block-title,
+        .label {
+            border-bottom-color: $message-color-error;    
+            color: $message-color-error;    
+        }
+    }
 }
 /* @end */
 
