@@ -243,6 +243,12 @@
         .reservation-data .label {
             display: block;
         }
+
+        .reservation-data .reservation-urls {
+            float: none;
+            margin-top: 1em;
+            display: inline-block
+        }
     }
 }
 /* @end */
