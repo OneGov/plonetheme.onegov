@@ -4,6 +4,9 @@ Changelog
 1.2.8 (unreleased)
 ------------------
 
+- Fixed path of pb_close image.
+  [Julian Infanger]
+
 - Use portal_url for portal and theme url also added the portalurl to the csscachekey so we don't get problems with image.
   [tschanzt]
 
