@@ -1,6 +1,13 @@
 Changelog
 =========
 
+1.2.8 (unreleased)
+------------------
+
+- Make Onegov Theme default Skin
+  [tschanzt]
+
+
 1.2.7 (2014-07-11)
 ------------------
 

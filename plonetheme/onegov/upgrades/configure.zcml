@@ -61,4 +61,13 @@
       directory="profiles/1114"
       />
 
+  <!-- 1114 -> 1115 -->
+  <upgrade-step:importProfile
+      title="Make OnegovTheme default skin"
+      profile="plonetheme.onegov:default"
+      source="1114"
+      destination="1115"
+      directory="profiles/1115"
+      />
+
 </configure>
