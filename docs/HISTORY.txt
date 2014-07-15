@@ -4,6 +4,9 @@ Changelog
 1.2.8 (unreleased)
 ------------------
 
+- Adds styles for new 'broken-data' view in seantis.reservation.
+  [href]
+
 - Fixed path of pb_close image.
   [Julian Infanger]
 
