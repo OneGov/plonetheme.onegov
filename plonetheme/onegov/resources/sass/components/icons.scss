@@ -223,18 +223,21 @@ a.external-link {
   @include icon($char: "");
 }
 
-#slider-panes .sliderPane .prev {
+#slider-panes .slick-prev {
   @include icon($char: "");
-  &:before {
-    font-size: 1.75em;
-    vertical-align: middle;
-  }
 }
-#slider-panes .sliderPane .next {
-  @include icon($char: "", $style: "after");
-  &:after {
-    font-size: 1.75em;
+#slider-panes .slick-next {
+  @include icon($char: "");
+}
+#slider-panes .slick-prev,
+#slider-panes .slick-next {
+  &:before {
+    font-size: 1.75*($font-size);
     vertical-align: middle;
+    color: $link-color;
+  }
+  &:hover:before {
+    color: $link-color-hover;
   }
 }
 .portlet.portletCollection.newsTemplate a.RssLink {

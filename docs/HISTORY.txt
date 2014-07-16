@@ -22,6 +22,10 @@ Changelog
 1.2.7 (2014-07-11)
 ------------------
 
+- Updated styles for new ftw.slider implementation.
+  Requires ftw.slider >= 2.0.0
+  [Julian Infanger]
+
 - Make Textarea wider on notification_form.
   [tschanzt]
 
