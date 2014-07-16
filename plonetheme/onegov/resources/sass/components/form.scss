@@ -24,7 +24,7 @@
   $input-context-bg-start: $base-color;
   $input-context-bg-end: darken($input-context-bg-start, 10%);
   $input-context-border: darken($input-context-bg-end, 5%);
-  $input-context-color: contrast($base-color, $button-color-light, $button-color-dark) !global;
+  $input-context-color: contrast($base-color, $button-color-light, $button-color-dark);
 
   $input-context-hover-border: $input-context-border;
   $input-context-hover-bg-start: darken($input-context-bg-start, 10%);

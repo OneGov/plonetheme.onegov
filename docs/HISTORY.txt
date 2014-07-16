@@ -4,7 +4,8 @@ Changelog
 1.2.9 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Removed !global variable, this caused problems.
+  [Julian Infanger]
 
 
 1.2.8 (2014-07-16)
