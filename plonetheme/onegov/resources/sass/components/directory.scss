@@ -2,7 +2,7 @@
 
 /* @group token input (categories) */
 @for $i from 1 through 4 {
-    #formfield-form-widgets-IDirectoryCategorized-cat$i {
+    #formfield-form-widgets-IDirectoryCategorized-cat#{$i} {
         width: 100%;
     }
 }
