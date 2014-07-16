@@ -4,6 +4,9 @@ Changelog
 1.2.8 (unreleased)
 ------------------
 
+- Do not hide .documentDescription globally.
+  [Julian Infanger]
+
 - Improves positioning of "edit formdata" link in seantis.reservation.
   [href]
 
