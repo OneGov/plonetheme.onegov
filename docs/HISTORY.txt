@@ -4,6 +4,9 @@ Changelog
 1.2.10 (unreleased)
 -------------------
 
+- Added icon for kml download document action.
+  [Julian Infanger]
+
 - Added styles for ftw.bridge watcher portlet.
   [Julian Infanger]
 
