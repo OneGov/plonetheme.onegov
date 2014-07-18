@@ -124,7 +124,8 @@
     display: none;
 }
 
-.singlecalendar {
+.singlecalendar,
+.reservation-search {
     .directoryResult {
         padding: 1em;
         margin-bottom: $body-line-height;
@@ -140,6 +141,10 @@
             margin: 0 2em 1em 0;
             max-width: 50%;
         }
+    }
+
+    .formTabs {
+        margin-bottom: 1em;
     }
 }
 /* @group */

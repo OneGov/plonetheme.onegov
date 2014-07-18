@@ -45,20 +45,20 @@
         }
     }
 
-    #seantis-overview-calendar .event-available, 
-    #seantis-overview-calendar .event-available .fc-event-skin, 
+    #seantis-overview-calendar .event-available,
+    #seantis-overview-calendar .event-available .fc-event-skin,
     #seantis-overview-calendar .event-available .fc-event-head {
         background-color: $reservation-available-color !important;
     }
 
-    #seantis-overview-calendar .event-partly-available, 
-    #seantis-overview-calendar .event-partly-available .fc-event-skin, 
+    #seantis-overview-calendar .event-partly-available,
+    #seantis-overview-calendar .event-partly-available .fc-event-skin,
     #seantis-overview-calendar .event-partly-available .fc-event-head {
         background-color: $reservation-partly-available-color !important;
     }
 
-    #seantis-overview-calendar .event-unavailable, 
-    #seantis-overview-calendar .event-unavailable .fc-event-skin, 
+    #seantis-overview-calendar .event-unavailable,
+    #seantis-overview-calendar .event-unavailable .fc-event-skin,
     #seantis-overview-calendar .event-unavailable .fc-event-head {
         background-color: $reservation-unavailable-color !important;
     }
@@ -197,7 +197,7 @@
         .reservation-title h3 {
             display: inline;
             font-weight: normal;
-        }    
+        }
 
         .reservation-delete {
             float: right;
@@ -459,11 +459,11 @@ table.timetable div.timespan div.occupied {
     background-color: $lightgray;
     padding: 1em;
     margin-bottom: 1em;
-    
+
     h2 {
         margin: 0 0 0.5em 0;
     }
-    .short-message, 
+    .short-message,
     .long-message {
         margin-bottom: 1em;
     }
@@ -478,11 +478,105 @@ table.timetable div.timespan div.occupied {
     .reservation-data {
         .block-title,
         .label {
-            border-bottom-color: $message-color-error;    
-            color: $message-color-error;    
+            border-bottom-color: $message-color-error;
+            color: $message-color-error;
         }
     }
 }
+/* @end */
+
+/* @group timeframes trigger */
+.timeframes-trigger {
+    background: url('htmlfilter_icon.png') no-repeat 0 0;
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    border-bottom: none !important;
+    vertical-align: middle;
+    position: relative;
+    left: -9px;
+}
+/* @end */
+
+/* @group search and reserve view */
+
+.reservation-search {
+    #formfield-form-widgets-timeframes {
+        // this field is hidden, but it still has a small height without this:
+        display: none;
+    }
+
+    .searchbox {
+        float: left;
+
+        padding: 1em;
+        background-color: #f4f4f1;
+    }    
+
+    .resultinfo {
+        margin: 1em 0;
+        color: $darkgray;
+    }
+
+    .searchhelp {
+        float: left;
+        padding: 1em 1em 1em 2em;
+        color: $darkgray;
+    }
+
+    .searchresults {
+        float: left;
+        padding-left: 2em;
+
+        .result-text {
+            color: $darkgray;
+        }
+
+        .result-time {
+            border-radius: 2px;
+            color: white;
+            padding: 2px 8px;
+        }
+
+        td {
+            padding: 0 0.5em 0.5em 0;
+        }
+
+        td .result-time {
+            margin-left: 2em;
+        }
+
+        td .result-day {
+            margin-top: 2em;
+            margin-bottom: 0.5em;
+            color: $text-color;
+            padding: 0 0.5em 0 2em;
+            display: inline-block;
+            background-color: $lightgray;
+            border-radius: 3px;
+        }
+
+        tr:first-child .result-day {
+            margin-top: 0;
+        }
+    }
+
+    @media screen and (max-width: 769px) {
+        .searchbox,
+        .searchhelp,
+        .searchresults,
+        #formfield-form-widgets-start_time,
+        #formfield-form-widgets-end_time {
+            float: none !important;
+            clear: both !important;
+        }
+
+        .searchbox {
+            padding-top: 1px;
+        }
+    }
+}
+
 /* @end */
 
 /* @end */
