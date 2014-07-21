@@ -7,6 +7,9 @@ Changelog
 - Add z3c form "required" styles (Copy from plone authoting.css).
   [mathias.leimgruber]
 
+- Added styles for ftw.bridge watcher portlet.
+  [Julian Infanger]
+
 
 1.2.7.1 (2014-07-18)
 --------------------
