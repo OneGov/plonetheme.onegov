@@ -270,6 +270,9 @@ a.external-link {
 #document-actions #document-action-reader a {
   @include icon($char: "` ");
 }
+#document-actions #document-action-kml_download a {
+  @include icon($char: 'Y ');
+}
 
 #document-actions #document-action-print a,
 #document-actions #document-action-watch a,
@@ -277,7 +280,8 @@ a.external-link {
 #document-actions #document-action-addtofavorites a,
 #document-actions #document-action-pdf a,
 #document-actions #document-action-pdf_export a,
-#document-actions #document-action-reader a {
+#document-actions #document-action-reader a,
+#document-actions #document-action-kml_download a {
   @include invisible_text($icon-size: 20px);
 }
 
