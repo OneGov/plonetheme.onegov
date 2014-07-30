@@ -4,6 +4,9 @@ Changelog
 1.2.10 (unreleased)
 -------------------
 
+- Add z3c form "required" styles (Copy from plone authoting.css).
+  [mathias.leimgruber]
+
 - Added icon for kml download document action.
   [Julian Infanger]
 
