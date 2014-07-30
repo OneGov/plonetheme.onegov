@@ -4,7 +4,8 @@ Changelog
 1.2.7.2 (unreleased)
 --------------------
 
-- Nothing changed yet.
+- Add z3c form "required" styles (Copy from plone authoting.css).
+  [mathias.leimgruber]
 
 
 1.2.7.1 (2014-07-18)
