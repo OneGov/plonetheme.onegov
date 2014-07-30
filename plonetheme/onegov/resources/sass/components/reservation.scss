@@ -514,7 +514,7 @@ table.timetable div.timespan div.occupied {
     }    
 
     .resultinfo {
-        margin: 1em 0;
+        margin: 1em 0 0 0;
         color: $darkgray;
     }
 
@@ -542,23 +542,20 @@ table.timetable div.timespan div.occupied {
             padding: 0 0.5em 0.5em 0;
         }
 
-        td .result-time {
-            margin-left: 2em;
-        }
-
         td .result-day {
-            margin-top: 2em;
-            margin-bottom: 0.5em;
             color: $text-color;
-            padding: 0 0.5em 0 2em;
-            display: inline-block;
-            background-color: $lightgray;
-            border-radius: 3px;
+            @include tag();
+            float: none;
+            min-width: 100px;
+            text-align: center;
+            line-height: 1.75em;
+            margin-top: 0.5em;
         }
 
-        tr:first-child .result-day {
-            margin-top: 0;
+        .new-day td {
+            padding-top: 1em !important;
         }
+
     }
 
     @media screen and (max-width: 769px) {
