@@ -219,6 +219,16 @@ div.overlay .field label .required:after,
   content: " ■";
   color: #FF0000;
 }
+
+/* z3cform required implementation */
+#content li.formTab a.required span:after,
+#content-core li.formTab a.required span:after,
+  div.field span.required:after {
+  content: "■";
+  color: red;
+  padding-left: 0.2em;
+}
+
 /* no required mark for input fields */
 div.overlay .field label input.required,
 #form .field label input.required,
