@@ -574,6 +574,13 @@ table.timetable div.timespan div.occupied {
     }
 }
 
+// display the searchresults differently if within a limited list
+// like on the reservation-selection form
+.limitedList .searchresults {
+    float: none;
+    padding-left: 0;
+}
+
 /* @end */
 
 /* @end */
