@@ -527,35 +527,10 @@ table.timetable div.timespan div.occupied {
     .searchresults {
         float: left;
         padding-left: 2em;
+    }
 
-        .result-text {
-            color: $darkgray;
-        }
-
-        .result-time {
-            border-radius: 2px;
-            color: white;
-            padding: 2px 8px;
-        }
-
-        td {
-            padding: 0 0.5em 0.5em 0;
-        }
-
-        td .result-day {
-            color: $text-color;
-            @include tag();
-            float: none;
-            min-width: 100px;
-            text-align: center;
-            line-height: 1.75em;
-            margin-top: 0.5em;
-        }
-
-        .new-day td {
-            padding-top: 1em !important;
-        }
-
+    .new-day td {
+        padding-top: 1em;
     }
 
     @media screen and (max-width: 769px) {
@@ -579,6 +554,36 @@ table.timetable div.timespan div.occupied {
 .limitedList .searchresults {
     float: none;
     padding-left: 0;
+}
+/* @end */
+
+/* @group allocations table macro */
+.allocations-table {
+    margin-bottom: 1.5em;
+
+    .result-text {
+        color: $darkgray;
+    }
+
+    .result-time {
+        border-radius: 2px;
+        color: white;
+        padding: 2px 8px;
+    }
+
+    td {
+        padding: 0 0.5em 0 0;
+    }
+
+    td .result-day {
+        color: $text-color;
+        @include tag();
+        float: none;
+        min-width: 100px;
+        text-align: center;
+        line-height: 1.81em;
+        margin-top: 6px;
+    }
 }
 
 /* @end */
