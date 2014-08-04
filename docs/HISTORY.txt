@@ -4,6 +4,9 @@ Changelog
 1.2.10 (unreleased)
 -------------------
 
+- Changed PostIt portlet color to yellow.
+  [Julian Infanger]
+
 - Use bigger font for print.
   [Julian Infanger]
 
