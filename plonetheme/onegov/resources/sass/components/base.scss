@@ -608,13 +608,13 @@ dl.teaser_portlet .portletHeader img {
     background-color: $postit-bg;
     color: #000;
     .portletActionsWrapper {
-      background: lighten(desaturate($postit-bg, 20%), 10%);
+      background: lighten(desaturate($postit-bg, 20%), 20%);
     }
   }
   dd {
-    background: lighten($postit-bg, 10%);
+    background: lighten($postit-bg, 40%);
     &.even {
-      background: lighten($postit-bg, 12%);
+      background: lighten($postit-bg, 35%);
     }
   }
 }
