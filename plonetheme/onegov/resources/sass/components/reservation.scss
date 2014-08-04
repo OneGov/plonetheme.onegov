@@ -501,6 +501,40 @@ table.timetable div.timespan div.occupied {
 /* @group search and reserve view */
 
 .reservation-search {
+    .searchresults-header {
+        border-bottom: 1px solid $page-bordercolor;
+        padding-bottom: 0;
+        background-color: $lightgray;
+        padding: 0 0 5px 0;
+
+        .resultinfo {
+            float: left;
+            line-height: 0.5em;
+        }
+
+        .resultactions div {   
+            float: right;
+            line-height: 0.5em;
+            margin: 1em 0.6em;
+            position: relative;
+            top: 1px;
+            color: $darkgray;
+        }
+
+        .button {   
+            float: right;
+            line-height: 0.5em;
+            background: white;
+            color: $darkgray;
+            border-color: $page-bordercolor;
+            cursor: pointer;
+        }
+        .button:hover {
+            color: $text-color;
+            border-color: $input-bordercolor;
+        }
+    }
+
     #formfield-form-widgets-timeframes {
         // this field is hidden, but it still has a small height without this:
         display: none;
@@ -510,12 +544,12 @@ table.timetable div.timespan div.occupied {
         float: left;
 
         padding: 1em;
-        background-color: #f4f4f1;
+        background-color: $lightgray;
     }    
 
     .resultinfo {
-        margin: 1em 0 0 0;
         color: $darkgray;
+        margin: 1.1em 0 0 1em;
     }
 
     .searchhelp {
