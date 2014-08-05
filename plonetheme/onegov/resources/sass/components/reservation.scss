@@ -45,20 +45,20 @@
         }
     }
 
-    #seantis-overview-calendar .event-available, 
-    #seantis-overview-calendar .event-available .fc-event-skin, 
+    #seantis-overview-calendar .event-available,
+    #seantis-overview-calendar .event-available .fc-event-skin,
     #seantis-overview-calendar .event-available .fc-event-head {
         background-color: $reservation-available-color !important;
     }
 
-    #seantis-overview-calendar .event-partly-available, 
-    #seantis-overview-calendar .event-partly-available .fc-event-skin, 
+    #seantis-overview-calendar .event-partly-available,
+    #seantis-overview-calendar .event-partly-available .fc-event-skin,
     #seantis-overview-calendar .event-partly-available .fc-event-head {
         background-color: $reservation-partly-available-color !important;
     }
 
-    #seantis-overview-calendar .event-unavailable, 
-    #seantis-overview-calendar .event-unavailable .fc-event-skin, 
+    #seantis-overview-calendar .event-unavailable,
+    #seantis-overview-calendar .event-unavailable .fc-event-skin,
     #seantis-overview-calendar .event-unavailable .fc-event-head {
         background-color: $reservation-unavailable-color !important;
     }
@@ -197,7 +197,7 @@
         .reservation-title h3 {
             display: inline;
             font-weight: normal;
-        }    
+        }
 
         .reservation-delete {
             float: right;
@@ -459,11 +459,11 @@ table.timetable div.timespan div.occupied {
     background-color: $lightgray;
     padding: 1em;
     margin-bottom: 1em;
-    
+
     h2 {
         margin: 0 0 0.5em 0;
     }
-    .short-message, 
+    .short-message,
     .long-message {
         margin-bottom: 1em;
     }
@@ -478,11 +478,159 @@ table.timetable div.timespan div.occupied {
     .reservation-data {
         .block-title,
         .label {
-            border-bottom-color: $message-color-error;    
-            color: $message-color-error;    
+            border-bottom-color: $message-color-error;
+            color: $message-color-error;
         }
     }
 }
+/* @end */
+
+/* @group timeframes trigger */
+.timeframes-trigger {
+    background: url('htmlfilter_icon.png') no-repeat 0 0;
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    border-bottom: none !important;
+    vertical-align: middle;
+    position: relative;
+    left: -9px;
+}
+/* @end */
+
+/* @group search and reserve view */
+
+.reservation-search {
+
+    .searchresults-header {
+        border-bottom: 1px solid $page-bordercolor;
+        padding-bottom: 0;
+        background-color: $lightgray;
+        padding: 0 0 5px 0;
+
+        .resultinfo {
+            float: left;
+            line-height: 0.5em;
+        }
+
+        .resultactions div {
+            float: right;
+            line-height: 0.5em;
+
+            margin: 1em 0.6em;
+            color: $darkgray;
+
+            position: relative;
+            top: 1px;
+        }
+
+        .button {
+            float: right;
+            line-height: 0.5em;
+
+            background: white;
+            color: $darkgray;
+
+            border-color: $page-bordercolor;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            color: $text-color;
+            border-color: $input-bordercolor;
+        }
+    }
+
+    // this field is hidden, but it still has a small height when displayed
+    #formfield-form-widgets-timeframes {
+        display: none;
+    }
+
+    .searchbox {
+        float: left;
+
+        padding: 1em;
+        background-color: $lightgray;
+    }
+
+    .resultinfo {
+        color: $darkgray;
+        margin: 1.1em 0 0 1em;
+    }
+
+    .searchhelp {
+        float: left;
+        padding: 1em 1em 1em 2em;
+        color: $darkgray;
+    }
+
+    .searchresults {
+        float: left;
+        padding-left: 2em;
+    }
+
+    .new-day td {
+        padding-top: 1em;
+    }
+
+    @media screen and (max-width: 769px) {
+        .searchbox,
+        .searchhelp,
+        .searchresults,
+        #formfield-form-widgets-start_time,
+        #formfield-form-widgets-end_time {
+            float: none !important;
+            clear: both !important;
+        }
+
+        .searchresults {
+            padding-left: 0;
+        }
+
+        .searchbox {
+            padding-top: 1px;
+        }
+    }
+}
+
+// display the searchresults differently if within a limited list
+// like on the reservation-selection form
+.limitedList .searchresults {
+    float: none;
+    padding-left: 0;
+}
+/* @end */
+
+/* @group allocations table macro */
+.allocations-table {
+    margin-bottom: 1.5em;
+
+    .result-text {
+        color: $darkgray;
+    }
+
+    .result-time {
+        border-radius: 2px;
+        color: white;
+        padding: 2px 8px;
+    }
+
+    td {
+        padding: 0 0.5em 0 0;
+    }
+
+    td .result-day {
+        @include tag();
+
+        color: $text-color;
+        float: none;
+        min-width: 100px;
+        text-align: center;
+        line-height: 1.81em;
+        margin-top: 6px;
+    }
+}
+
 /* @end */
 
 /* @end */

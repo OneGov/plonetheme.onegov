@@ -4,6 +4,9 @@ Changelog
 1.2.10 (unreleased)
 -------------------
 
+- Added new styles for the upcoming seantis.reservation 1.1 release.
+  [href]
+
 - Changed PostIt portlet color to yellow.
   [Julian Infanger]
 
