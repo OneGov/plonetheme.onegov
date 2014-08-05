@@ -501,6 +501,7 @@ table.timetable div.timespan div.occupied {
 /* @group search and reserve view */
 
 .reservation-search {
+
     .searchresults-header {
         border-bottom: 1px solid $page-bordercolor;
         padding-bottom: 0;
@@ -512,31 +513,36 @@ table.timetable div.timespan div.occupied {
             line-height: 0.5em;
         }
 
-        .resultactions div {   
+        .resultactions div {
             float: right;
             line-height: 0.5em;
+
             margin: 1em 0.6em;
+            color: $darkgray;
+
             position: relative;
             top: 1px;
-            color: $darkgray;
         }
 
-        .button {   
+        .button {
             float: right;
             line-height: 0.5em;
+
             background: white;
             color: $darkgray;
+
             border-color: $page-bordercolor;
             cursor: pointer;
         }
+
         .button:hover {
             color: $text-color;
             border-color: $input-bordercolor;
         }
     }
 
+    // this field is hidden, but it still has a small height when displayed
     #formfield-form-widgets-timeframes {
-        // this field is hidden, but it still has a small height without this:
         display: none;
     }
 
@@ -545,7 +551,7 @@ table.timetable div.timespan div.occupied {
 
         padding: 1em;
         background-color: $lightgray;
-    }    
+    }
 
     .resultinfo {
         color: $darkgray;
@@ -610,8 +616,9 @@ table.timetable div.timespan div.occupied {
     }
 
     td .result-day {
-        color: $text-color;
         @include tag();
+
+        color: $text-color;
         float: none;
         min-width: 100px;
         text-align: center;
