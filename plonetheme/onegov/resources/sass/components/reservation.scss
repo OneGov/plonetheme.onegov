@@ -129,32 +129,43 @@
 /* @end */
 
 /* @group your reservations */
-.your-reservations, .your-reservations-view {
+
+div.your-reservations, div.your-reservations-view {
     background-color: $lightgray2;
-    padding: 1em;
-    margin-bottom: 1em;
+    padding: .75em;
+    margin: 0 0 1em 0;
 
     h1, h2 {
-        margin-top: 0;
-        margin-bottom: 0.5em;
+        margin: 0;
         font-weight: normal;
-        font-size: $font-size-18;
+        font-size: 1.4em;
     }
 
-    a, span {
-        display: block;
+    ul {
+        list-style: none;
+        padding: 0;
+        margin-left: 1em;
+        margin-bottom: 0;
     }
 
-    .remove-url {
-        position: absolute;
-        right: 0;
-        top: 0;
+    .your-reservation-title {
+        float: left !important;
+        margin: 0 .3em .25em 0;  
     }
 
-    br {
-        display: none;
+    .your-reservation-title {
+        font-weight: bold;
+    }
+
+    .your-reservation-header {
+        margin-top: .5em;
+    }
+
+    .confirm-reservations, .formControls {
+        margin-top: .5em;
     }
 }
+
 /* @end */
 
 /* @group manage reservations inline */
