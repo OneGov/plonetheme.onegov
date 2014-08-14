@@ -4,6 +4,9 @@ Changelog
 1.3.1 (unreleased)
 ------------------
 
+- Added test which generates the css file, to make sure there is no syntax error.
+  [Julian Infanger]
+
 - Added styles for new ftw.slider release.
   [Julian Infanger]
 
