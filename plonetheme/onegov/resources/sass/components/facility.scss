@@ -13,7 +13,7 @@
     @include boxsizing(border-box);
 }
 
-@media screen and (max-width: 979px) {
+@media screen and (max-width: $screen-tablet-landscape) {
     .facilityInfo, .facilityOverview {
         float: none;
         width: 100%;

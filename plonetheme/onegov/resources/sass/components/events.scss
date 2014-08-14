@@ -29,7 +29,7 @@
 /* @end */
 
 /* @group responsive event directory columns */
-@media screen and (max-width: 979px) {
+@media screen and (max-width: $screen-tablet-landscape) {
     .portaltype-seantis-dir-events-directory {
         #directoryResultList, .event-navigation, .event-sidebar, .event-view {
             float: none;
@@ -263,7 +263,7 @@
     list-style: none;
 }
 
-@media screen and (max-width: 979px) {
+@media screen and (max-width: $screen-tablet-landscape) {
     .event-details > div, .descriptions {
         margin-right: 0;
     }

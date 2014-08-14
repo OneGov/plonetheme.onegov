@@ -27,7 +27,7 @@ img {
 
 /* @group tablet landscape */
 
-@media screen and (max-width: 979px) {
+@media screen and (max-width: $screen-tablet-landscape) {
 
   #column-navigation {
     @include position0();
@@ -63,7 +63,7 @@ img {
 
 /* @group tablet */
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: $screen-tablet) {
 
   .fixedWidth {
     width: 96%;
@@ -212,7 +212,7 @@ img {
 
 /* @group mobile landscape */
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: $screen-mobile-landscape) {
 /* ? */
 }
 
@@ -220,7 +220,7 @@ img {
 
 /* @group mobile */
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: $screen-mobile) {
 
   #subsite-column-1,
   #subsite-column-2,

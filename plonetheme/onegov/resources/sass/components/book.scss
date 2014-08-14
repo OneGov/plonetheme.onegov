@@ -102,7 +102,7 @@ body.template-book_reader_view {
 
 /* @group responsive book reader */
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: $screen-tablet) {
   body.template-book_reader_view {
     #page-wrapper {
       margin-top: 0.5em;

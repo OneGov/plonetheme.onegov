@@ -81,5 +81,11 @@ $reservation-available-color: #339933;
 $reservation-partly-available-color: #ff9933;
 $reservation-unavailable-color: #cc3333;
 
+// responsive
+$screen-mobile: 320px;
+$screen-mobile-landscape: 480px;
+$screen-tablet: 769px;
+$screen-tablet-landscape: 979px;
+
 // Accessibility
 $focus_outline_color: $text-color;
