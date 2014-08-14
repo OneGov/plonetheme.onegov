@@ -75,3 +75,7 @@ class TestICustomStylesAdapter(MockTestCase):
         self.replay()
 
         adapter.set('css.body-background', 'blue')
+
+    def test_scss_generation_doesnt_fail(self):
+        view = self.portal.unrestrictedTraverse('customstyles_css')
+        self.assertTrue(len(view.generate_css()) > 0)
