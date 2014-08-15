@@ -123,32 +123,6 @@ ul.mobileNavigation {
 
 /* @end */
 
-/* @group ftw.slider */
-
-.slick-dots li button:before {
-  color: transparent;
-}
-#content ul.slick-dots li.slick-active {
-  background-color: $slider-bg-start;
-}
-#slider-wrapper .sliderText {
-  @include gradient($slider-bg-start, $slider-bg-end);
-  color: $slider-color;
-  height: 100px;
-  width: 50%;
-  position: absolute;
-  right:0;
-  bottom: 0;
-  padding: 1em;
-  margin-bottom: 2em;
-  overflow: hidden;
-  & a {
-    color: $slider-color;
-  }
-}
-
-/* @end */
-
 /* @group book */
 
 .portletGoToParent {

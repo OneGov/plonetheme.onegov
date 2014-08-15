@@ -223,23 +223,6 @@ a.external-link {
   @include icon($char: "");
 }
 
-#slider-panes .slick-prev {
-  @include icon($char: "");
-}
-#slider-panes .slick-next {
-  @include icon($char: "");
-}
-#slider-panes .slick-prev,
-#slider-panes .slick-next {
-  &:before {
-    font-size: 1.75*($font-size);
-    vertical-align: middle;
-    color: $link-color;
-  }
-  &:hover:before {
-    color: $link-color-hover;
-  }
-}
 .portlet.portletCollection.newsTemplate a.RssLink {
   @include icon($char:'G');
   @include invisible_text($icon-size: 16px);

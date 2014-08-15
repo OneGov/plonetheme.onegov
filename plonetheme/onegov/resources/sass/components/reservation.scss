@@ -265,7 +265,7 @@ div.your-reservations, div.your-reservations-view {
 /* @end */
 
 /* @group reservation listing side-by-side (as defined in reservation base.css */
-@media screen and (max-width: 979px) {
+@media screen and (max-width: $screen-tablet-landscape) {
     .splitscreen {
         float: none;
         clear: both;
@@ -292,7 +292,7 @@ div.your-reservations, div.your-reservations-view {
         width: 40%;
     }
 
-    @media screen and (max-width: 979px) {
+    @media screen and (max-width: $screen-tablet-landscape) {
         .resource-listing,
         .resource-listing-overview {
             float: none;
@@ -593,7 +593,7 @@ table.timetable div.timespan div.occupied {
         }
     }
 
-    @media screen and (max-width: 769px) {
+    @media screen and (max-width: $screen-tablet) {
         .searchbox,
         .searchhelp,
         .searchresults,

@@ -3,7 +3,3 @@ $font-size-18: ($heading-font-size/2);
 
 $input-context-base: $global-navigation-border-color;
 $input-context-color: contrast($input-context-base, $button-color-light, $button-color-dark);
-
-$slider-bg-start: $global-navigation-border-color;
-$slider-bg-end: darken($slider-bg-start, 10%);
-$slider-color: contrast($slider-bg-start, #FFF, #000);

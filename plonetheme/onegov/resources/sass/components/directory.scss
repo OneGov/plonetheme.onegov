@@ -27,7 +27,7 @@
         width: 50%;
     }
 
-    @media screen and (max-width: 979px) {
+    @media screen and (max-width: $screen-tablet-landscape) {
         #directoryResultList,
         #directoryResultMap {
             float: none;
@@ -182,7 +182,7 @@
         width: 40%;
     }
 
-    @media screen and (max-width: 979px) {
+    @media screen and (max-width: $screen-tablet-landscape) {
         .council-tags {
             float: none;
             width: 100%;
@@ -239,7 +239,7 @@
         margin-top: -1.5em;
     }
 
-    @media screen and (max-width: 979px) {
+    @media screen and (max-width: $screen-tablet-landscape) {
         .directoryInfoImage,
         .council-address,
         .council-tags {

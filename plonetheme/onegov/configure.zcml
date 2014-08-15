@@ -9,9 +9,6 @@
     xmlns:theme="http://namespaces.zope.org/plonetheme.onegov"
     i18n_domain="plonetheme.onegov">
 
-  <include package="z3c.autoinclude" file="meta.zcml" />
-  <includeDependencies package="." />
-
   <include file="permissions.zcml" />
 
   <cmf:registerDirectory name="plonetheme_onegov"/>
