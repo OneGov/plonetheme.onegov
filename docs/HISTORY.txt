@@ -4,6 +4,9 @@ Changelog
 1.3.2 (unreleased)
 ------------------
 
+- Fixed flyout navigation styles.
+  [Julian Infanger]
+
 - Fix double border in navigation without children.
   [Julian Infanger]
 
