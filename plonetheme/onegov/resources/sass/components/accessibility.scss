@@ -26,8 +26,9 @@ textarea:hover {
 
 /* @group accessibility accesskeys */
 
-#accesskeys > a:focus {
-  position: absolute;
+#accesskeys > a:focus,
+#portal-searchbox > a[accesskey]:focus {
+  position: fixed;
   top: 0;
   left: 0;
   background-color: #000;
