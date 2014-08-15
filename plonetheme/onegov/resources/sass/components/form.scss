@@ -139,12 +139,15 @@ button.context,
 a.button {
   @include button_context();
 }
+a.button.standalone,
 input.standalone {
   @include button_standalone();
 }
+a.button.destructive,
 input.destructive {
   @include button_destructive();
 }
+a.button.disabled,
 input[type="button"][disabled],
 input[type="submit"][disabled],
 button[disabled] {
