@@ -4,6 +4,9 @@ Changelog
 1.3.2 (unreleased)
 ------------------
 
+- Fix double border in navigation without children.
+  [Julian Infanger]
+
 - Remove ftw.slider styles.
   This is now defined in the ftw.slider package.
   [Julian Infanger]
