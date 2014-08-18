@@ -99,7 +99,7 @@ ul.mobileNavigation {
   position: relative;
   z-index: 3;
   border: 1px solid $global-navigation-flyout-border;
-  padding: 1em 1em 0 1em;
+  padding: 0.25em 1em 0 1em;
   margin: 0;
   position: absolute;
   left: 0;
@@ -113,7 +113,10 @@ ul.mobileNavigation {
     margin: 0;
   }
   & li.directLink {
-    border-bottom: 1px solid $global-navigation-flyout-border;
+    font-weight: bold;
+    + li {
+      border-top: 1px solid $lightgray2;
+    }
   }
   & a {
     text-decoration: none;
