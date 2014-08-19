@@ -73,3 +73,6 @@ msgstr ""
 
 msgid "touch_iphone_152"
 msgstr ""
+
+msgid "footer-background"
+msgstr ""

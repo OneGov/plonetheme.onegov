@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-01-03 08:12+0000\n"
+"POT-Creation-Date: 2014-08-15 12:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,6 +35,9 @@ msgstr "Hintergrund"
 msgid "favicon"
 msgstr "Favicon"
 
+msgid "footer-background"
+msgstr "Hintergrundfarbe Footer"
+
 msgid "global-navigation-border-color"
 msgstr "Farbe Rahmen unter Navigation"
 
@@ -60,7 +63,7 @@ msgid "heading-line-height"
 msgstr "Zeilenhöhe Überschriften"
 
 #. Default: "Change the subsite's logo by editing the subsite."
-#: ./plonetheme/onegov/browser/customstyles_form.pt:47
+#: ./plonetheme/onegov/browser/customstyles_form.pt:48
 msgid "help_subsite_custom_logo"
 msgstr "Das Logo kann direkt in der Subsite angepasst werden."
 
@@ -68,37 +71,37 @@ msgid "highlight-color-light"
 msgstr "Farbe für Highlight (bsp: Linklisten)"
 
 #. Default: "Custom CSS"
-#: ./plonetheme/onegov/browser/customstyles_form.pt:20
+#: ./plonetheme/onegov/browser/customstyles_form.pt:21
 msgid "label_custom_css"
 msgstr "Design anpassen"
 
 #. Default: "Custom Images"
-#: ./plonetheme/onegov/browser/customstyles_form.pt:42
+#: ./plonetheme/onegov/browser/customstyles_form.pt:43
 msgid "label_custom_images"
 msgstr "Bilder anpassen"
 
 #. Default: "Custom SCSS - be careful"
-#: ./plonetheme/onegov/browser/customstyles_form.pt:113
+#: ./plonetheme/onegov/browser/customstyles_form.pt:114
 msgid "label_custom_scss"
 msgstr "Erweiterte SCSS Anpassungen – bitte vorsichtig sein!"
 
 #. Default: "export styles"
-#: ./plonetheme/onegov/browser/customstyles_form.pt:105
+#: ./plonetheme/onegov/browser/customstyles_form.pt:106
 msgid "label_export_styles"
 msgstr "Exportieren"
 
 #. Default: "import styles"
-#: ./plonetheme/onegov/browser/customstyles_form.pt:100
+#: ./plonetheme/onegov/browser/customstyles_form.pt:101
 msgid "label_import_styles"
 msgstr "Importieren"
 
 #. Default: "Import / Export"
-#: ./plonetheme/onegov/browser/customstyles_form.pt:90
+#: ./plonetheme/onegov/browser/customstyles_form.pt:91
 msgid "label_importexport"
 msgstr "Anpassungen exportieren / importieren"
 
 #. Default: "Reset to OneGov Default"
-#: ./plonetheme/onegov/browser/customstyles_form.pt:124
+#: ./plonetheme/onegov/browser/customstyles_form.pt:125
 msgid "label_reset_styles"
 msgstr "Auf OneGov Standard zurücksetzen"
 
