@@ -4,6 +4,9 @@ Changelog
 1.3.2 (unreleased)
 ------------------
 
+- Highlight accessibility link for search correctly.
+  [Julian Infanger]
+
 - Allow to customize footer background.
   [Julian Infanger]
 
