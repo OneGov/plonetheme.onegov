@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.2.7.3 (unreleased)
+1.2.7.3 (2014-09-10)
 --------------------
 
 - Added icon for kml download document action.
