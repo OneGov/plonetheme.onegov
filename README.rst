@@ -92,6 +92,10 @@ This behavior can be disabled in the plone.app.registry, using the setting ``plo
 
 .. image:: https://raw.github.com/OneGov/plonetheme.onegov/master/docs/screenshot_flyout_breadcrumbs.png
 
+Print
+-----
+Known issue page-break in WebKit
+https://bugs.webkit.org/show_bug.cgi?id=5097
 
 Links
 -----
