@@ -1,258 +1,94 @@
-/* @group general */
+/*Prevent big elements from bleeding over the edge*/
 
-body, * {
-  font-size: 20px !important;
+img, h1, h2, h3, h4 {
+    max-width: 100% !important;
+    page-break-before: avoid;
 }
-.fixedWidth {
-  width: 100% !important;
-  padding: 0;
+/*Force the printer to render the colors as seen*/
+
+@media print and (color) {
+    * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
 }
+/*Print Links more visible*/
 
-#header-wrapper,
-#portal-topactions,
-#portal-breadcrumbs,
-#document-actions,
-#column-navigation,
-#column-sidebar,
-#header-delimiter,
-#edit-bar,
-.sl-controls,
-.managePortletsLink,
-#mobile-navbuttons,
-#mobile-navi-wrapper,
-#plone-document-byline,
-#footer,
-.to_top,
-.bottom-actions
-{ display: none !important; }
-
-#page-wrapper {
-  box-shadow: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  border: none;
+a {
+    font-weight: bolder;
 }
+/*Elements to hide*/
 
-#content .blockHighlight,
-a {border: none;}
+#portal-topactions {
+    display: none;
+}
+#portal-languageselector-wrapper {
+    display: none;
+}
+#portal-personaltools-wrapper {
+    display: none;
+}
+#portal-globalnav {
+    display: none;
+}
+#portal-searchbox {
+    display: none;
+}
+#breadcrumbs-wrapper {
+    display: none;
+}
+#column-navigation {
+    display: none;
+}
+#column-sidebar {
+    display: none;
+}
+#footer {
+    display: none;
+}
+#banner-image {
+    display: none;
+}
+.documentEditable #edit-bar {
+    display: none;
+}
+#slider-wrapper {
+    display: none;
+}
+.to_top {
+    display: none;
+}
+#bottom-actions {
+  display: none;
+}
+.portalMessage {
+  display: none;
+}
+/*Other settings*/
 
-
-#columns-wrapper { box-shadow: none; }
-
-.leftFloatable { float: left; }
-.blockClear { clear: both; }
-
-/* @end */
-
-/* @group grid */
-
+#container #page-wrapper {
+    margin: 0;
+    border: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+html, html body {
+    background-color: #FFFFFF;
+}
 #column-content {
-  left: 0;
-  margin-left: 0;
-  width: 100%;
+    margin-left: -98%;
+    width: 94%;
+    text-align: justify;
 }
+#container #page-wrapper {
+    background-color: #FFFFFF;
+}
+/*Set page properties*/
 
-/* @end */
-
-/* @group simplelayout */
-
-.sl-img-small .sl-img-wrapper,
-.sl-img-middle .sl-img-wrapper {
-  float: left;
-  margin-bottom: 1em;
-  margin-right: 1em;
+@page {
+    size: 22cm 28in portrait;
+    margin: 20px 20px 20px 0;
+    orphans: 8;
+    widows: 4;
 }
-
-/* @end */
-
-/* @group linklists */
-
-.template-subsite_view #page-wrapper .column .portletStaticText .portletItem ul,
-#content .linkList,
-#content .subelements-listing,
-#content .topic_listing {
-  list-style none;
-}
-.template-subsite_view #page-wrapper .column .portletStaticText .portletItem ul li,
-#content .linkList li,
-#content .subelements-listing li,
-#content .topic_listing li {
-  display: inline;
-}
-.template-subsite_view #page-wrapper .column .portletStaticText .portletItem ul li a,
-#content .linkList li a,
-#content .subelements-listing li a,
-#content .topic_listing li a {
-  border: 1px solid #aaa;
-  padding: 0.5em 1em;
-}
-
-/* @end */
-
-/* @group fonts */
-
-body {
-  font-size: 14px;
-}
-h1, h2, h3 {
-  margin: 1.15em 0 0.5em 0;
-  line-height: 1.15em;
-  font-weight: normal;
-  letter-spacing: 0;
-}
-h1 {
-  clear: both;
-  font-size: 215%;
-}
-h2 {
-  font-size: 185%;
-}
-h3 {
-  font-size: 135%;
-}
-#content h1.documentFirstHeading {
-  margin: 1em 0 0.5em 0;
-}
-.portletItem .documentFirstHeading {
-  margin-top: 0;
-}
-#content p {
-  margin-bottom: 1em;
-}
-#content ul {
-  list-style-type: disc;
-  margin-left: 2em;
-  margin-bottom: 1em;
-}
-#content ol {
-  list-style-type: decimal;
-  margin-left: 2em;
-  margin-bottom: 1em;
-}
-#content li {
-  margin-bottom: 0.25em;
-  line-height: 1.5em;
-  display: list-item;
-}
-
-.documentDescription {
-  font-weight: normal;
-  font-size: 17px;
-  line-height: 25px;
-}
-
-/* @end */
-
-/* @group comments */
-
-.showAll {
-display: none;
-}
-#viewlet-below-content .discussion {
-  display: block;
-}
-.discussion button,
-.discussion input[type="submit"] {
-  display: none !important;
-}
-.discussion .comment {
-  margin-top: 0.25em;
-}
-#commenting,
-.reply-to-comment-button,
-.commentActions {
-  display: none;
-}
-
-/* @end */
-
-/* @group tables */
-#content table.listing {
-  border-collapse: collapse;
-}
-#content table.listing th,
-#content table.listing td {
-  border: 1px solid #ddd;
-}
-/* @end */
-
-/* @group maps */
-
-div.olLayerGoogleCopyright,
-div.olControlMousePosition,
-div.olControlLayerSwitcher,
-div.olButton {
-  display: none;
-}
-div.olMapViewport {
-  display: block;
-}
-.sl-text-wrapper .addressText,
-.sl-text-wrapper .addressMap {
-  float: none;
-}
-#default-cgmap img {
-  max-width: none;
-}
-
-/* @end */
-
-/* @group calendar */
-.fc table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-.tabbedview-tabs,
-.tabbedview_search,
-.tabbedview-tab-menu,
-.tabbdview-tab-menu-template,
-.ViewChooser,
-.fc table .fc-header-left,
-.fc table .fc-header-right {
-  display: none;
-}
-.fc table.fc-header,
-.fc table.fc-header td {
-  border: none;
-}
-.fc table td {
-  border: 1px solid #000;
-  width: 14%;
-}
-.fc td, .fc th {
-  padding: 0;
-  vertical-align: top;
-}
-.fc-grid .fc-day-number {
-  float: right;
-  padding: 0 2px;
-}
-.fc-grid .fc-day-content {
-  clear: both;
-  padding: 2px 2px 0;
-}
-.fc-grid .fc-event-time {
-  font-weight: bold;
-}
-.fc-event-time, .fc-event-title {
-  padding: 0 1px;
-}
-.fc-content .fc-corner-right {
-  margin-right: 5px;
-}
-.fc-content .fc-corner-left {
-  margin-left: 5px;
-}
-.fc-event a {
-  display: block;
-  height: 100%;
-  position: relative;
-  width: 100%;
-}
-.fc-event a {
-  cursor: pointer;
-  font-size: 0.85em;
-  overflow: hidden;
-  text-decoration: none;
-}
-/* @end */
