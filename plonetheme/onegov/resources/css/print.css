@@ -59,10 +59,31 @@ a {
     display: none;
 }
 #bottom-actions {
-  display: none;
+    display: none;
 }
 .portalMessage {
-  display: none;
+    display: none;
+}
+.sl-actions-wrapper {
+    display: none;
+}
+.formTab:not(.selected) {
+    display: none;
+}
+/*Just works for non webkit Browsers*/
+
+table {
+    page-break-inside: auto;
+}
+tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+}
+thead {
+    display: table-header-group;
+}
+tfoot {
+    display: table-footer-group;
 }
 /*Other settings*/
 
