@@ -1,19 +1,25 @@
 /*Prevent big elements from bleeding over the edge*/
-
 img, h1, h2, h3, h4 {
     max-width: 100% !important;
     page-break-before: avoid;
 }
 /*Force the printer to render the colors as seen*/
-
 @media print and (color) {
     * {
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
     }
 }
-/*Print Links more visible*/
-
+/*General styling*/
+html, html body {
+    background-color: #FFFFFF;
+}
+#column-content {
+  left: 0;
+  margin-left: 0;
+  width: 100%;
+  text-align: justify;
+}
 a {
     font-weight: bolder;
 }
@@ -70,8 +76,6 @@ a {
 .formTab:not(.selected) {
     display: none;
 }
-/*Just works for non webkit Browsers*/
-
 table {
     page-break-inside: auto;
 }
@@ -85,8 +89,14 @@ thead {
 tfoot {
     display: table-footer-group;
 }
-/*Other settings*/
-
+.logoRow .cell {
+  left: 0;
+  margin-left: 0;
+}
+#header-delimiter {
+  left: 0;
+  margin-left: 0;
+}
 #container #page-wrapper {
     margin: 0;
     border: none;
@@ -94,22 +104,14 @@ tfoot {
     -webkit-box-shadow: none;
     box-shadow: none;
 }
-html, html body {
-    background-color: #FFFFFF;
-}
-#column-content {
-    margin-left: -98%;
-    width: 94%;
-    text-align: justify;
-}
 #container #page-wrapper {
     background-color: #FFFFFF;
 }
-/*Set page properties*/
 
+/*Set page properties*/
 @page {
     size: 22cm 28in portrait;
-    margin: 20px 20px 20px 0;
+    margin: 60px 40px;
     orphans: 8;
     widows: 4;
 }
