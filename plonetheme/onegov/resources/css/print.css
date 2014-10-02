@@ -1,9 +1,18 @@
 /*Prevent big elements from bleeding over the edge*/
+
 img, h1, h2, h3, h4 {
     max-width: 100% !important;
     page-break-before: avoid;
+    font-family: Arial !important;
+}
+h1 {
+    font-size: 26pt !important;
+}
+h2 {
+    font-size: 18pt !important;
 }
 /*Force the printer to render the colors as seen*/
+
 @media print and (color) {
     * {
         -webkit-print-color-adjust: exact;
@@ -11,17 +20,21 @@ img, h1, h2, h3, h4 {
     }
 }
 /*General styling*/
+
 html, html body {
-    background-color: #FFFFFF;
+    background-color: #FFFFFF !important;
+    font-size: 14pt;
 }
 #column-content {
-  left: 0;
-  margin-left: 0;
-  width: 100%;
-  text-align: justify;
+    left: 0;
+    margin-left: 0;
+    width: 100%;
+    text-align: justify;
 }
-a {
+a, a:hover, a:visited, a:active {
     font-weight: bolder;
+    color: #00538c !important;
+    text-decoration: none !important;
 }
 /*Elements to hide*/
 
@@ -77,25 +90,38 @@ a {
     display: none;
 }
 table {
+    background-color: #FFFFFF !important;
     page-break-inside: auto;
 }
 tr {
     page-break-inside: avoid;
     page-break-after: auto;
+    background-color: #FFFFFF !important;
+}
+td {
+    background-color: #FFFFFF !important;
 }
 thead {
     display: table-header-group;
+}
+th {
+    vertical-align: top !important;
+    background-color: #FFFFFF !important;
+    border-bottom: 1px solid #d9d9d9 !important;
 }
 tfoot {
     display: table-footer-group;
 }
 .logoRow .cell {
-  left: 0;
-  margin-left: 0;
+    left: 0;
+    margin-left: 0;
 }
 #header-delimiter {
-  left: 0;
-  margin-left: 0;
+    left: 0;
+    margin-left: 0;
+}
+#page-wrapper {
+    width: 21cm;
 }
 #container #page-wrapper {
     margin: 0;
@@ -107,11 +133,21 @@ tfoot {
 #container #page-wrapper {
     background-color: #FFFFFF;
 }
-
+.row {
+    position: static !important;
+    float: none !important;
+}
+.cell {
+    position: static !important;
+    float: none !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+}
 /*Set page properties*/
+
 @page {
     size: 22cm 28in portrait;
-    margin: 60px 40px;
+    margin: 2.5cm 2.5cm 2cm 2.5cm;
     orphans: 8;
     widows: 4;
 }
