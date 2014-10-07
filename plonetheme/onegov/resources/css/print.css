@@ -23,6 +23,11 @@ h2 {
 }
 /*General styling*/
 
+* {
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
 html, html body {
     background-color: #FFFFFF !important;
     font-size: 14pt;
@@ -40,25 +45,9 @@ a, a:hover, a:visited, a:active {
 }
 /*Elements to hide*/
 
-#portal-topactions,
-#portal-languageselector-wrapper,
-#portal-personaltools-wrapper,
-#portal-globalnav,
-#portal-searchbox,
-#breadcrumbs-wrapper,
-#column-navigation,
-#column-sidebar,
-#footer,
-#banner-image,
-.documentEditable #edit-bar,
-#addResponse,
-.portletActionsWrapper,
-#dashboard-add-portlet {
+#portal-topactions, #portal-languageselector-wrapper, #portal-personaltools-wrapper, #portal-globalnav, #portal-searchbox, #breadcrumbs-wrapper, #column-navigation, #column-sidebar, #footer, #banner-image, .documentEditable #edit-bar, #addResponse, .portletActionsWrapper, #dashboard-add-portlet, form {
     display: none !important;
 }
-
-
-
 .sliderText {
     background-color: #FFFFFF !important;
     background-image: none !important;
@@ -67,10 +56,10 @@ a, a:hover, a:visited, a:active {
     margin: 0 !important;
     padding: 0 !important;
 }
-.slick-slide[style*="opacity: 0;"]{
+.slick-slide[style*="opacity: 0;"] {
     display: none !important;
 }
-.slick-slide[style*="opacity: 1;"]{
+.slick-slide[style*="opacity: 1;"] {
     left: 0 !important;
 }
 .slick-dots {
@@ -105,7 +94,6 @@ tr {
     page-break-inside: avoid;
     page-break-after: auto;
     background-color: #FFFFFF !important;
-
 }
 td {
     background-color: #FFFFFF !important;
@@ -134,9 +122,6 @@ tfoot {
 #container #page-wrapper {
     margin: 0;
     border: none;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
 }
 #container #page-wrapper {
     background-color: #FFFFFF;
@@ -151,18 +136,14 @@ tfoot {
     width: 100% !important;
     margin-left: 0 !important;
 }
- /*Map print settings*/
-div.olLayerGoogleCopyright,
-div.olControlMousePosition,
-div.olControlLayerSwitcher,
-div.olButton {
-  display: none;
-}
-.sl-text-wrapper .addressText,
-.sl-text-wrapper .addressMap {
-  float: none;
-}
+/*Map print settings*/
 
+div.olLayerGoogleCopyright, div.olControlMousePosition, div.olControlLayerSwitcher, div.olButton {
+    display: none;
+}
+.sl-text-wrapper .addressText, .sl-text-wrapper .addressMap {
+    float: none;
+}
 /*Set page properties*/
 
 @page {
