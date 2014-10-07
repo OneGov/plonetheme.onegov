@@ -1,9 +1,11 @@
 /*Prevent big elements from bleeding over the edge*/
 
 img, h1, h2, h3, h4 {
-    max-width: 100% !important;
     page-break-before: avoid;
     font-family: Arial !important;
+}
+.olLayerDiv img {
+    max-width: none;
 }
 h1 {
     font-size: 26pt !important;
@@ -163,6 +165,18 @@ tfoot {
     width: 100% !important;
     margin-left: 0 !important;
 }
+ /*Map print settings*/
+div.olLayerGoogleCopyright,
+div.olControlMousePosition,
+div.olControlLayerSwitcher,
+div.olButton {
+  display: none;
+}
+.sl-text-wrapper .addressText,
+.sl-text-wrapper .addressMap {
+  float: none;
+}
+
 /*Set page properties*/
 
 @page {
