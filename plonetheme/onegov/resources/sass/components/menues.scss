@@ -1,17 +1,12 @@
 /* @group Content pulldowns (edit-bar) */
 
-dl.actionMenu a,
-dl.actionMenu a:hover,
-#edit-bar a {
+dl.actionMenu a, dl.actionMenu a:hover, #edit-bar a {
   text-decoration: none;
 }
-
-
 #edit-bar ul {
-  @include ul($style:'plain');
+  @include ul($style: 'plain');
   background-color: $lightgray;
-  &#contentActionMenus,
-  &.contentViews {
+  &#contentActionMenus, &.contentViews {
     @include ul($style: 'inline');
     padding-left: 0.25em;
   }
@@ -26,7 +21,6 @@ dl.actionMenu a:hover,
   position: relative;
   z-index: 2;
 }
-
 #content-views {
   float: left;
 }
@@ -34,12 +28,14 @@ dl.actionMenu a:hover,
   padding: 0.5em;
 }
 /* Tabs in tiny-popup */
+
 #content.dialog-wrapper fieldset.formPanel {
   margin: 5px 1px;
 }
 /* fix shift on content views list under ie6 */
 /* .ie6 is set on <html> by Modernizr library */
-.ie6 ul#content-views{
+
+.ie6 ul#content-views {
   margin: -2px -3px 0px -3px;
 }
 #edit-bar li dd.actionMenuContent a {
@@ -53,12 +49,11 @@ dl.actionMenu a:hover,
   @include borderradius($border-radius $border-radius 0 0);
   margin: 0;
 }
-#edit-bar .activated a,
-#edit-bar li.selected a,
-#edit-bar li a:hover {
+#edit-bar .activated a, #edit-bar li.selected a, #edit-bar li a:hover {
   background-color: $page-background;
 }
 /* TODO: Since plone's base.css also have an !important */
+
 #container #contentActionMenus .actionMenuContent a {
   background-image: none;
   background-color: $page-background;
@@ -77,9 +72,7 @@ dl.actionMenu a:hover,
   z-index: 5;
   right: -3px;
 }
-#portal-personaltools.activated dd a:hover,
-#container #contentActionMenus dl.actionMenu.activated dd a:hover,
-#container #contentActionMenus dl.actionMenu.activated dd .actionMenuSelected {
+#portal-personaltools.activated dd a:hover, #container #contentActionMenus dl.actionMenu.activated dd a:hover, #container #contentActionMenus dl.actionMenu.activated dd .actionMenuSelected {
   background-color: $lightgray;
 }
 #content .tabbedview-tab-menu .actionMenuContent a:hover {
@@ -87,8 +80,7 @@ dl.actionMenu a:hover,
   color: $link-color-hover !important;
   /* TODO remove important in tabbedview.css */
 }
-.actionMenuContent ul,
-#portal-personaltools dd ul {
+.actionMenuContent ul, #portal-personaltools dd ul {
   @include ul($style: 'plain');
   & li {
     margin: 0;
@@ -109,9 +101,25 @@ dl.actionMenu a:hover,
 }
 #portal-personaltools {
   float: right;
+  list-style-type: none;
+  margin-top: 0.55em;
+  li {
+    float: left;
+    a {
+      border-left: 1px solid #32444a;
+      padding: 0 5px;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    &:first-child {
+      a {
+        border-left: none;
+      }
+    }
+  }
 }
-#portal-personaltools,
-#contentActionMenus dl.actionMenu {
+#portal-personaltools, #contentActionMenus dl.actionMenu {
   line-height: 2em;
 }
 #portal-personaltools dd {
@@ -121,9 +129,7 @@ dl.actionMenu a:hover,
 #portal-personaltools dd li a:hover {
   background-color: $lightgray;
 }
-
-#user-name,
-#personaltools-portrait {
+#user-name, #personaltools-portrait {
   float: left;
   line-height: 26px;
 }
@@ -136,7 +142,6 @@ dl.actionMenu a:hover,
   content: ' ▼';
   font-size: 10px;
 }
-
 //language selector
 #portal-languageselector-wrapper {
   float: right;
@@ -162,13 +167,12 @@ dl.actionMenu a:hover,
   background-color: $lightgray;
   color: $link-color-hover;
 }
-
 #folderHeader, #contextHeader {
   border-bottom: 2px solid $page-background;
 }
-
-#contextHeader { margin-top: 5px; }
-
+#contextHeader {
+  margin-top: 5px;
+}
 #contentActionMenus {
   float: right;
   margin: 0;
@@ -187,20 +191,17 @@ dl.actionMenu a:hover,
   @include boxshadow(0.5em 0.5em 1em -1em $page-bordercolor);
   border-top-width: 1px;
 }
-
 dl.actionMenu {
   float: right;
   white-space: nowrap;
   position: relative;
   margin-left: 0.5em;
 }
-dl.actionMenu a,
-dl.actionMenu div {
+dl.actionMenu a, dl.actionMenu div {
   display: block;
   white-space: nowrap;
 }
-#column-content dl.actionMenu dt,
-dl.actionMenu dt {
+#column-content dl.actionMenu dt, dl.actionMenu dt {
   font-weight: normal;
 }
 #content dl.actionMenu ul {
@@ -224,5 +225,4 @@ dl.actionMenu.activated dd a {
 #edit-bar .actionSeparator a {
   border-top: 1px solid $page-bordercolor;
 }
-
 /* @end */
