@@ -1,8 +1,6 @@
 <div id="portal-personaltools-wrapper"
      i18n:domain="plone">
 
-  <h5 class="hiddenStructure" i18n:translate="heading_personal_tools">Personal tools</h5>
-
   <dl class="actionMenu deactivated" id="portal-personaltools"
       tal:condition="python:view.user_actions and not view.anonymous">
     <tal:block condition="not: view/anonymous">
