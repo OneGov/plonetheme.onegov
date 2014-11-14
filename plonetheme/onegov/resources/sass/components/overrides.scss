@@ -97,6 +97,7 @@ ul.mobileNavigation {
   @include ul($style: 'plain');
   @include borderradius(0 $border-radius $border-radius $border-radius);
   position: relative;
+  display: none;
   z-index: 3;
   border: 1px solid $global-navigation-flyout-border;
   padding: 0.25em 1em 0 1em;
