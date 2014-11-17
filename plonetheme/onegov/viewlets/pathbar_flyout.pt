@@ -9,7 +9,6 @@
           tal:attributes="class python:len(breadcrumbs)==0 and 'crumb first last' or 'crumb first'">
       <a i18n:translate="tabs_home"
          class="crumbLink"
-         tabindex="-1"
          tal:attributes="href view/navigation_root_url">Home</a>
     </span>
     <span tal:repeat="crumb breadcrumbs"
@@ -21,7 +20,6 @@
         <span tal:attributes="class python: is_last and 'crumb parent last' or 'crumb parent'">
           <a href="#"
              tal:omit-tag="not: url"
-             tabindex="-1"
              tal:attributes="href string:${url};
                              class python: is_last and is_factory and 'factory crumbLink' or 'crumbLink'"
              tal:content="title">
