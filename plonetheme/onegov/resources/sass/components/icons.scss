@@ -149,6 +149,19 @@
   @include icon($char: "F ");
 }
 
+/* seantis.dir.base and seantis.dir.contacts */
+.contenttype-seantis-dir-contacts-directory {
+  @include icon($char: "F ");
+}
+
+.contenttype-seantis-dir-contacts-item {
+  @include icon($char: "_ ");
+}
+
+.contenttype-seantis-dir-contacts-contact {
+  @include icon($char: "");
+}
+
 /* ftw.shop */
 .contenttype-supplier {
   @include icon($char: "8 ");
