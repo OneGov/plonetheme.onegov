@@ -4,6 +4,9 @@ Changelog
 1.3.4 (unreleased)
 ------------------
 
+- Use some default icons for seantis.dirbase/contacts content types.
+  [mathias.leimgruber]
+
 - Use pyScss 1.2.0 - the latest release breaks the build.
   [mathias.leimgruber]
 
