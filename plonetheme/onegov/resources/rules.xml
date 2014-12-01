@@ -43,7 +43,7 @@
     <after theme-children="/html/head" css:content="#portal-top link"/>
 
     <replace css:content="#portal-logo" css:theme="#portal-logo" />
-    <replace css:content="#portal-globalnav" css:theme="#portal-globalnav" />
+    <replace css:content="#portal-globalnav-wrapper" css:theme="#portal-globalnav" />
     <replace css:content="#portal-searchbox" css:theme="#portal-searchbox" />
     <replace css:content="#portal-personaltools-wrapper" css:theme="#portal-personaltools-wrapper" />
     <replace css:content="#portal-languageselector" css:theme="#portal-languageselector" />
