@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<object name="portal_javascripts">
+    <javascript id="++theme++plonetheme.onegov/js/slide_navigation.js"
+                remove="True" />
+    <javascript id="++resource++ftw.mobilenavigation/slide_navigation.js"
+                enabled="True" />
+</object>
