@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.4.1 (unreleased)
+1.4.1 (2014-12-11)
 ------------------
 
 - Add zip-download icon.
