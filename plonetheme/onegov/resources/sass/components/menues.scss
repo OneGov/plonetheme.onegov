@@ -98,12 +98,16 @@ dl.actionMenu a, dl.actionMenu a:hover, #edit-bar a {
   padding: 0;
   margin-top: 0.55em;
 }
+
+// Personaltools for anonymous users - displayed as list.
 #portal-personaltools {
   float: right;
   list-style-type: none;
   margin-top: 0.55em;
   li {
+    float: left;
     a {
+      border-left: 1px solid #32444a;
       padding: 0 5px;
       &:hover {
         text-decoration: none;
@@ -116,6 +120,18 @@ dl.actionMenu a, dl.actionMenu a:hover, #edit-bar a {
     }
   }
 }
+
+// Personaltools for authenticated users - displayed as dropdown.
+.userrole-authenticated #portal-personaltools {
+  li {
+    float: none;
+    a {
+      border-left: none;
+    }
+  }
+}
+
+
 #portal-personaltools, #contentActionMenus dl.actionMenu {
   line-height: 2em;
 }
