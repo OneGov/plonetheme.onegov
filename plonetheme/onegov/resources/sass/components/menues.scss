@@ -139,6 +139,17 @@ dl.actionMenu a, dl.actionMenu a:hover, #edit-bar a {
   content: ' ▼';
   font-size: 10px;
 }
+
+// Special styling for subsite language switch - since there is no icomoon we need to show the label.
+#toggle_subsitelangs > span.hiddenStructure {
+    text-indent: 0em;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    margin: 0 !important;
+    margin-bottom: 0.1em !important;
+}
+
 //language selector
 #portal-languageselector-wrapper {
   float: right;
