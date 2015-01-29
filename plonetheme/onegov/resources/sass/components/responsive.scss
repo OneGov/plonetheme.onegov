@@ -170,7 +170,8 @@ img {
   #portal-languageselector dt {
     display: none;
   }
-  #portal-languageselector dd {
+  #portal-languageselector dd,
+  #portal-personaltools-wrapper dd {
     position: absolute;
     margin-top: 52px;
   }
