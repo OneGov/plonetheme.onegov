@@ -82,13 +82,13 @@ jQuery(function($) {
     var obj = $(b);
     if (!obj.hasClass('factory')) {
       $.ajax({
-        type : 'POST',
+        type : 'GET',
         url : obj.attr('href') + '/load_flyout_children',
         data: {breadcrumbs: true},
         success : function(data, textStatus, XMLHttpRequest) {
-          if (textStatus == 'success') {
+          if (textStatus === 'success') {
             if (data.length > 0) {
-              if (data.search('<ul class="children">')!=-1) {
+              if ($(data).hasClass('children') && $(data).is('ul')) {
                 obj.after('<a href="'+obj.attr('href')+'" class="loadChildren" tabindex="-1">▼</a>');
                 obj.after(data);
               }
