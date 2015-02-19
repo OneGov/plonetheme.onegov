@@ -65,6 +65,9 @@
 .person-details-right.splitscreen {
     float: right;
 }
+.person-details-bottom.splitscreen {
+    clear: both;
+}
 
 #content .person-wrapper {
     display: table;
