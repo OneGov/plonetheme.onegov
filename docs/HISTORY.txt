@@ -10,6 +10,20 @@ Changelog
 - Use the javascript from ftw.mobilenavigation instead of the custom one.
   [mbaechtold]
 
+- Changed invalid HTML structure. Adapted css styles for new elements.
+  [Kevin Bieri]
+
+- Fixed invalid newsTemplate portlet HTML structure.
+  [Kevin Bieri]
+
+- Load flyout initially.
+  [Kevin Bieri]
+
+- Fixed HTML structure for accessibility.
+  [Kevin Bieri]
+
+- Remove tabindex -1.
+  [KevinKevin Bieri
 
 1.4.1 (2014-12-11)
 ------------------
