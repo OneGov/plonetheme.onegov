@@ -3,7 +3,6 @@
         autogroup="False">
 
   <javascript id="livesearch.js" enabled="false" />
-  <javascript id="++resource++ftw.mobilenavigation/slide_navigation.js" enabled="false" />
 
   <javascript cacheable="True" compression="safe" cookable="True" enabled="on"
               expression="" id="++theme++plonetheme.onegov/js/onegov.js"
@@ -11,10 +10,6 @@
 
   <javascript cacheable="True" compression="safe" cookable="True" enabled="on"
               expression="" id="++theme++plonetheme.onegov/js/livesearch.js"
-              inline="False"/>
-
-  <javascript cacheable="True" compression="safe" cookable="True" enabled="on"
-              expression="" id="++theme++plonetheme.onegov/js/slide_navigation.js"
               inline="False"/>
 
 </object>

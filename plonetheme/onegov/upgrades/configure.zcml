@@ -70,4 +70,13 @@
       directory="profiles/1115"
       />
 
+   <!-- 1115 -> 1116 -->
+  <upgrade-step:importProfile
+      title="Remove forked javascript from ftw.mobilenavigation"
+      profile="plonetheme.onegov:default"
+      source="1115"
+      destination="1116"
+      directory="profiles/1116"
+      />
+
 </configure>

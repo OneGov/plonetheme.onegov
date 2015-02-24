@@ -46,7 +46,7 @@ class TestFyloutView(TestCase):
     def test_default_markup_with_direct_link(self):
         view = self.portal.unrestrictedTraverse('load_flyout_children')
         view()
-        self.assertEqual('<ul class="flyoutChildren">{direct_to}{children}</ul>',
+        self.assertEqual('<ul aria="menu" class="flyoutChildren">{direct_to}{children}</ul>',
                          view.children_markup())
 
     def test_markup_without_direct_link_for_breadcrumbs(self):
@@ -55,7 +55,7 @@ class TestFyloutView(TestCase):
         create(Builder('folder'))
         view = self.portal.unrestrictedTraverse('load_flyout_children')
         view()
-        self.assertEqual('<ul class="children">{children}</ul>',
+        self.assertEqual('<ul aria="menu" class="children">{children}</ul>',
                          view.children_markup())
 
     def test_markup_breadcrumbs_with_no_children(self):
@@ -68,7 +68,7 @@ class TestFyloutView(TestCase):
         view = self.portal.unrestrictedTraverse('load_flyout_children')
         view()
         self.assertEqual('<li class="directLink">' \
-                         '<a href="http://nohost/plone">Direct to Plone site</a>' \
+                         '<a aria="menuitem" href="http://nohost/plone">Direct to Plone site</a>' \
                          '</li>',
                          view.direct_to_link())
 
@@ -76,11 +76,11 @@ class TestFyloutView(TestCase):
         create(Builder('folder').titled('<b>SubFolder</b>'))
         self.request.form.update({'breadcrumbs': '1'})
         self.assertEqual(
-            '<ul class="children"><li class="noChildren level1"><a href="http://nohost/plone/b-subfolder-b">&lt;b&gt;SubFolder&lt;/b&gt;</a></li></ul>',
+            '<ul aria="menu" class="children"><li class="noChildren level1"><a aria="menuitem" href="http://nohost/plone/b-subfolder-b">&lt;b&gt;SubFolder&lt;/b&gt;</a></li></ul>',
             self.portal.unrestrictedTraverse('load_flyout_children')())
 
     def test_html_chars_are_escaped_in_direct_link(self):
         folder = create(Builder('folder').titled('<b>SubFolder</b>'))
         self.assertEqual(
-            '<ul class="flyoutChildren"><li class="directLink"><a href="http://nohost/plone/b-subfolder-b">Direct to &lt;b&gt;SubFolder&lt;/b&gt;</a></li></ul>',
+            '<ul aria="menu" class="flyoutChildren"><li class="directLink"><a aria="menuitem" href="http://nohost/plone/b-subfolder-b">Direct to &lt;b&gt;SubFolder&lt;/b&gt;</a></li></ul>',
             folder.unrestrictedTraverse('load_flyout_children')())

@@ -21,7 +21,7 @@ class LoadFlyoutChildren(navigation.UpdateMobileNavigation):
         self.sub_objs = self.sub_objects(self.context, level=0)
         children = []
         for obj in self.sub_objs:
-            children.append('<li class="%s"><a href="%s">%s</a></li>' % (
+            children.append('<li class="%s"><a aria="menuitem" href="%s">%s</a></li>' % (
                 self.get_css_classes(obj),
                 self.url(obj),
                 escape_html(obj.Title())))
@@ -35,7 +35,7 @@ class LoadFlyoutChildren(navigation.UpdateMobileNavigation):
             translate('Direct to', domain="plonetheme.onegov",
                       context=self.request).encode('utf8'),
             escape_html(self.context.Title()))
-        return '<li class="directLink"><a href="{}">{}</a></li>'.format(
+        return '<li class="directLink"><a aria="menuitem" href="{}">{}</a></li>'.format(
             self.url(self.context),
             direct_title)
 
@@ -44,8 +44,8 @@ class LoadFlyoutChildren(navigation.UpdateMobileNavigation):
         if breadcrumbs:
             if not self.sub_objs:
                 return ''
-            return '<ul class="children">{children}</ul>'
-        return '<ul class="flyoutChildren">{direct_to}{children}</ul>'
+            return '<ul aria="menu" class="children">{children}</ul>'
+        return '<ul aria="menu" class="flyoutChildren">{direct_to}{children}</ul>'
 
     def url(self, obj):
         if obj.portal_type in self.view_action_types:

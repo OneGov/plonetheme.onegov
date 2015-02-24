@@ -9,12 +9,10 @@
         ><a href=""
             tal:define="title action/title;
                         id action/id;"
-            i18n:attributes="title"
             i18n:translate=""
             tal:content="title"
             tal:attributes="href action/url;
-                            target action/link_target|nothing;
-                            title title;"
+                            target action/link_target|nothing;"
             >Top action</a></li>
   </ul>
 </div>
