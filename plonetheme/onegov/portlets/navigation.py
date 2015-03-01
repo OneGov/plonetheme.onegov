@@ -1,14 +1,15 @@
+from AccessControl import getSecurityManager
 from Acquisition import aq_inner, aq_parent
-from Products.CMFCore.utils import getToolByName
-from Products.CMFPlone.interfaces.siteroot import IPloneSiteRoot
-from Products.CMFPlone.utils import base_hasattr
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from borg.localrole.interfaces import IFactoryTempFolder
 from plone.app.layout.navigation.defaultpage import getDefaultPage
 from plone.app.layout.navigation.defaultpage import isDefaultPage
 from plone.app.portlets.portlets import base
 from plone.app.portlets.portlets.navigation import getRootPath
 from plone.memoize.instance import memoize
+from Products.CMFCore.utils import getToolByName
+from Products.CMFPlone.interfaces.siteroot import IPloneSiteRoot
+from Products.CMFPlone.utils import base_hasattr
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from zope.component import getMultiAdapter
 
 
@@ -66,7 +67,12 @@ class Renderer(base.Renderer):
         context_path = '/'.join((self.context.getPhysicalPath()))
         context_reached = False
 
-        for brain in parent.getFolderContents():
+        catalog = getToolByName(self.context, 'portal_catalog')
+        query = {'path': {'query': '/'.join((parent.getPhysicalPath())),
+                          'depth': 1},
+                 'sort_on': 'getObjPositionInParent'}
+
+        for brain in catalog(query):
             if brain.getPath() == context_path:
                 context_reached = True
                 continue

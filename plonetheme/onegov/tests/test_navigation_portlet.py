@@ -1,16 +1,17 @@
-from Products.CMFCore.utils import getToolByName
 from datetime import datetime
 from ftw.builder import Builder
 from ftw.builder import create
 from ftw.testbrowser import browser
 from ftw.testbrowser import browsing
 from ftw.testing import freeze
-from plone.app.testing import TEST_USER_ID
-from plone.app.testing import TEST_USER_NAME
 from plone.app.testing import login
 from plone.app.testing import setRoles
+from plone.app.testing import TEST_USER_ID
+from plone.app.testing import TEST_USER_NAME
 from plonetheme.onegov.testing import THEME_FUNCTIONAL_TESTING
+from Products.CMFCore.utils import getToolByName
 from unittest2 import TestCase
+import transaction
 
 
 def portlet():
@@ -223,3 +224,27 @@ class TestNavigationPortlet(TestCase):
         self.assertEquals('Homepage', portlet().css('.parent').first.text)
         self.assertEquals('Other page', portlet().css('.current').first.text)
         self.assertEquals([], portlet().css('.sibling').text)
+
+    @browsing
+    def test_renders_when_parent_not_accessible(self, browser):
+        wftool = getToolByName(self.portal, 'portal_workflow')
+        wftool.setChainForPortalTypes(['Folder'], 'simple_publication_workflow')
+
+        create(Builder('navigation portlet').having(currentFolderOnly=False))
+        parent = create(Builder('folder').titled('Parent'))
+        create(Builder('folder').titled('Top Sibling')
+               .within(parent).in_state('published')).reindexObject()
+        child = create(Builder('folder').titled('Child')
+                       .within(parent).in_state('published'))
+        sibling = create(Builder('folder').titled('Bottom Sibling')
+                         .within(parent).in_state('published'))
+        sibling.reindexObject()
+        create(Builder('folder').titled('Child of sibling')
+               .within(sibling).in_state('published')).reindexObject()
+        transaction.commit()
+
+        browser.open(child)
+        self.assertEquals('Parent', portlet().css('.parent').first.text)
+        self.assertEquals('Child', portlet().css('.current').first.text)
+        self.assertEquals(['Top Sibling', 'Bottom Sibling'],
+                          portlet().css('.sibling').text)
