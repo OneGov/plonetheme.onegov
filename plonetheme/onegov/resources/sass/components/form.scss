@@ -205,7 +205,6 @@ input#title {
 div.overlay .field label .required,
 #form .field label .required,
 .formQuestion .required {
-  visibility: hidden;
   font-size: 1px;
   color: transparent;
 }
@@ -214,7 +213,6 @@ div.overlay .field label .required:after,
 #sendto_form .fieldRequired:before,
 .formQuestion .required:after {
   font-size: $font-size;
-  visibility: visible;
   content: "■";
   color: #FF0000;
 }
