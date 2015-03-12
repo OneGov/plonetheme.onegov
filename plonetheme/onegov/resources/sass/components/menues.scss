@@ -93,17 +93,17 @@ dl.actionMenu a, dl.actionMenu a:hover, #edit-bar a {
 #portal-personaltools.activated dt {
   background: $lightgray;
 }
-#portal-personaltools li.anon-personalbar {
+#portal-personaltools.anon-personalbar {
   border: none;
   padding: 0;
-  margin-top: 52px;
+  margin-top: 0.55em;
 }
 
 // Personaltools for anonymous users - displayed as list.
 #portal-personaltools {
   float: right;
   list-style-type: none;
-  margin-top: 0;
+  margin-top: 0.55em;
   li {
     float: left;
     a {

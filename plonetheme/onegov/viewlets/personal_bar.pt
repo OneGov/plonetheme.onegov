@@ -29,10 +29,11 @@
     </tal:block>
   </dl>
 
-  <ul class="actionMenu deactivated" id="portal-personaltools"
-      tal:condition="python:view.user_actions and view.anonymous">
-      <tal:actions repeat="action view/user_actions">
-        <li class="anon-personalbar">
+  <ul tal:define="actions view/user_actions"
+      class="actionMenu deactivated anon-personalbar" id="portal-personaltools"
+      tal:condition="python:actions and view.anonymous">
+      <tal:actions repeat="action actions">
+        <li>
           <a href=""
              tal:attributes="href action/url;
                              id string:personaltools-${action/id};"
