@@ -4,6 +4,9 @@ Changelog
 1.5.1 (unreleased)
 ------------------
 
+- Fix responsive personalbar behavior and margin to other elements.
+  [mathias.leimgruber]
+
 - Navigation portlet: fix error when parent object is not published / not accessible.
   [jone]
 
