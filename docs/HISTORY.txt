@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.5.1 (unreleased)
+1.5.1 (2015-03-12)
 ------------------
 
 - Fix responsive personalbar behavior and margin to other elements.
