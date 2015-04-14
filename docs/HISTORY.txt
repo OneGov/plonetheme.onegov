@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.5.2 (unreleased)
+1.5.2 (2015-04-14)
 ------------------
 
 - Fix a bug which caused the fields of PloneFormGen in quick edit mode to be
