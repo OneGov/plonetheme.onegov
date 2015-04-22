@@ -217,7 +217,8 @@ a.external-link {
   }
 }
 
-.LSBox:before {
+.LSBox:before,
+.searchBox:before {
   content: "";
   position: absolute;
   font-family: "icomoon";

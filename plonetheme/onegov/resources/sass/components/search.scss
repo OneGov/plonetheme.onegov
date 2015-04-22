@@ -14,6 +14,15 @@
   }
 }
 
+.searchBox {
+  width: 21em;
+  position: relative;
+  margin-bottom: 2em;
+  & .searchButton {
+    display: none;
+  }
+}
+
 /* @end */
 
 /* @group livesearch */
@@ -68,6 +77,87 @@ fieldset.livesearchContainer {
 
 /* @group search results */
 
+#column-content .solrSearchPage {
+  & .searchResults {
+    & cite {
+      font-style: normal;
+    },
+    & .documentLocation {
+      padding-top:0.8em;
+      display: block;
+    },
+    & dd {
+      border-bottom: 1px solid $lightgray2;
+      padding-bottom: 1em;
+    },
+    & dt {
+      font-size: 18px;
+      font-weight: normal;
+    }
+  }
+}
+
+.searchinformations {
+  background-color: #f5f5f5;
+  float: left;
+  width: 100%;
+  margin-bottom: 2em;
+  & .selected-search-information {
+    width: 80%;
+    float: left;
+  },
+  & .selected-search-information-wrapper {
+    padding:0.5em 0 0.5em 0.5em;
+  },
+  & .available-search-information-wrapper {
+    padding:1em 1em 0.5em 0;
+    text-align: right;
+  },
+  & .available-search-information{
+    width: 20%;
+    float: right;
+    position: relative;
+  }
+  & .amount {
+    font-weight: bold;
+  }
+}
+
+
+#selected-facets {
+  display: inline;
+  padding-left:0;
+  & li {
+    display: inline-block;
+    border: 1px solid $lightgray3;
+    border-radius: 5px;
+    padding: 0.25em;
+  margin-right: .25em;
+  margin-bottom: 0;
+  margin-top: 0.25em;
+  }
+}
+
+.restrict-search-label {
+  cursor: pointer;
+}
+
+#available-facets {
+  display:none;
+  text-align: left;
+  position: absolute;
+  background-color: $page-background;
+  border: 1px solid $breadcrumbs-border;
+  @include boxshadow(0 0.25em 0.5em -0.25em $darkgray);
+  padding: 1em;
+  width: 100%;
+  left: -2em;
+}
+
+.searchResults {
+  clear:both;
+}
+
 .searchResults dt {
   font-size: $font-size-18;
   line-height: $body-line-height;
@@ -80,26 +170,25 @@ fieldset.livesearchContainer {
   background-color: $search-highlight-background;
 }
 
+a.facetRemoveItem,
+a.facetRemoveItem:hover{
+  text-decoration: none;
+}
+#search-results .searchResults {
+  margin-top: 1em;
+}
+
 /* @end */
 
-/* @group solr search results */
+// /* @group solr search results */
 
-#search-results {
-  float: left;
-  width: 72%;
-  margin-left: 3%;
-}
-#portal-searchfacets {
-  float: left;
-  width: 25%;
-}
-#portal-searchfacets h4,
+// #portal-searchfacets h4,
 #available-facets dt {
   font-size: $font-size-18;
   margin-bottom: 0.5em;
 }
 
-#selected-facets,
+// #selected-facets,
 #available-facets ul {
   /* padding-left: 0; */
   @include ul($style:'plain');
@@ -107,18 +196,11 @@ fieldset.livesearchContainer {
     margin-bottom: 0;
   }
 }
-#selected-facets {
-  margin-bottom: 1em;
-}
+// #selected-facets {
+//   margin-bottom: 1em;
+// }
 .facetItemTitle {
   font-weight: bold;
-}
-a.facetRemoveItem,
-a.facetRemoveItem:hover{
-  text-decoration: none;
-}
-#search-results .searchResults {
-  margin-top: 1em;
 }
 
 /* @end */
