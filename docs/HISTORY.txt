@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.5.3 (unreleased)
+1.5.3 (2015-04-23)
 ------------------
 
 - Implement check, if load_flyout_children actually return a flyout navigation.
