@@ -4,7 +4,10 @@ Changelog
 1.5.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Implement check, if load_flyout_children actually return a flyout navigation.
+  This fixes a possible infinite loop, if load_flyout_children accidentally returns
+  the whole site.
+  [mathias.leimgruber]
 
 
 1.5.2 (2015-04-14)

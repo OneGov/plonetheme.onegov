@@ -10,6 +10,11 @@ function close_opened_breadcrumbs(element) {
   });
 }
 
+function valid_response(data) {
+  // It's possible that we do no get what we expect.
+  return $(data).is('ul.flyoutChildren');
+}
+
 jQuery(function($) {
 
   var load_flyout_children = function(indicator, open) {
@@ -27,7 +32,7 @@ jQuery(function($) {
         type : 'GET',
         url : me.attr('href') + '/load_flyout_children',
         success : function(data, textStatus, XMLHttpRequest) {
-          if (textStatus == 'success') {
+          if (textStatus == 'success' && valid_response(data)) {
             var result = $(data);
             result.hide();
             parent.removeClass('loading');
@@ -86,7 +91,7 @@ jQuery(function($) {
         url : obj.attr('href') + '/load_flyout_children',
         data: {breadcrumbs: true},
         success : function(data, textStatus, XMLHttpRequest) {
-          if (textStatus === 'success') {
+          if (textStatus === 'success' && valid_response(data)) {
             if (data.length > 0) {
               if ($(data).hasClass('children') && $(data).is('ul')) {
                 obj.after('<a href="'+obj.attr('href')+'" class="loadChildren" tabindex="-1">▼</a>');
