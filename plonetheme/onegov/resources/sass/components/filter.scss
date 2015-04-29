@@ -1,0 +1,53 @@
+#filter-form {
+    .LSBox {
+        position: relative;
+        margin-right: 60px;
+    }
+
+    > div:first-child .filter:last-child {
+        margin-bottom: 4px;
+    }
+
+    > div {
+        clear: both;
+        padding-bottom: 8px;
+        margin-bottom: 16px;
+        border-bottom: 3px solid $lightgray;
+
+        .filter {
+            display: inline-block;
+            margin-right: 30px;
+            overflow: auto;
+
+            span {
+                color: $link-color;
+                cursor: pointer;
+
+                &:after {
+                    @include base_icon("\e80c");
+                    padding-left: 10px;
+                }
+            }
+            ul {
+                @include ul('plain');
+
+                display: none;
+                position: absolute;
+                overflow: auto;
+                padding: 8px 0;
+                border: 2px solid $lightgray;
+                background-color: white;
+
+                li {
+                    margin: 0;
+
+                    a {
+                        display: inline-block;
+                        cursor: pointer;
+                        padding: 3px 20px;
+                    }
+                }
+            }
+        }
+    }
+}

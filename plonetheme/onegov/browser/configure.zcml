@@ -41,5 +41,11 @@
       permission="zope2.View"
       />
 
+  <browser:page
+      for="*"
+      name="filter_mockup"
+      template="filter_mockup.pt"
+      permission="cmf.ManagePortal"
+      />
 
 </configure>
