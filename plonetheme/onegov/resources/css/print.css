@@ -45,7 +45,21 @@ a, a:hover, a:visited, a:active {
 }
 /*Elements to hide*/
 
-#portal-topactions, #portal-languageselector-wrapper, #portal-personaltools-wrapper, #portal-globalnav, #portal-searchbox, #breadcrumbs-wrapper, #column-navigation, #column-sidebar, #footer, #banner-image, .documentEditable #edit-bar, #addResponse, .portletActionsWrapper, #dashboard-add-portlet, form {
+#portal-topactions,
+#portal-languageselector-wrapper,
+#portal-personaltools-wrapper,
+#portal-globalnav,
+#portal-searchbox,
+#breadcrumbs-wrapper,
+#column-navigation,
+#column-sidebar,
+#footer,
+#banner-image,
+.documentEditable #edit-bar,
+#addResponse,
+.portletActionsWrapper,
+#dashboard-add-portlet,
+#tabbedview-body .actionMenuContent {
     display: none !important;
 }
 .sliderText {
