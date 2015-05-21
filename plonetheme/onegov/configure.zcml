@@ -45,6 +45,7 @@
   <theme:add_scss path="resources/sass/components/icons.scss" />
   <theme:add_scss path="resources/sass/components/form.scss" />
   <theme:add_scss path="resources/sass/components/search.scss" />
+  <theme:add_scss path="resources/sass/components/filter.scss" />
   <theme:add_scss path="resources/sass/components/blog.scss" />
   <theme:add_scss path="resources/sass/components/book.scss" />
   <theme:add_scss path="resources/sass/components/overlays.scss" />
