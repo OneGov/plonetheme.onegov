@@ -4,8 +4,10 @@ Changelog
 1.5.4 (unreleased)
 ------------------
 
-- Fixed tabbedview print.css.
-  [lknoepfel]
+- Move all tabbedview styles to the ftw.tabbedview package.
+  This also includes the print styles for ftw.tabbedview.
+  ftw.tabbedview 3.3.14 is required.
+  [mathias.leimgruber]
 
 
 1.5.3 (2015-04-23)
