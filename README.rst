@@ -92,6 +92,16 @@ This behavior can be disabled in the plone.app.registry, using the setting ``plo
 
 .. image:: https://raw.github.com/OneGov/plonetheme.onegov/master/docs/screenshot_flyout_breadcrumbs.png
 
+Special filter form
+-------------------
+
+This Theme provides an alternativ search/filter mockup.
+The Implementation needs to be done by yourself. `For an example check the Solr search form of zg.ch <http://www.zg.ch/@@search>`_.
+
+.. image:: https://raw.github.com/OneGov/plonetheme.onegov/master/docs/screenshot_filter.png
+
+
+
 Print
 -----
 Known issue page-break in WebKit
