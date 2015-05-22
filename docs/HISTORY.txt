@@ -4,6 +4,9 @@ Changelog
 1.5.4 (unreleased)
 ------------------
 
+- Do not reset the plone app imaging allowed_sizes property.
+  This it not nice!
+
 - Add new filter form mockup. Check `filter.html`.
   [mathias.leimgruber]
 
