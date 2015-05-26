@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>OneGovBox</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/iefixes.css" />
+    <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+
+    <link rel="stylesheet" type="text/css" href="https://rawgithub.com/4teamwork/ftw.mobilenavigation/master/ftw/mobilenavigation/browser/resources/navigation.css" />
+
+    <link rel="stylesheet" type="text/css" href="static/static.css" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+          $('body').click(function(e){
+            if (!$(e.target).is('#filter-form .filter:not(.LSBox) > span')){
+                $('#filter-form .filter:not(.LSBox) ul').hide();
+            }
+          });
+
+          $('#column-content').on('click', '#filter-form .filter:not(.LSBox) > span', function(e){
+            var $this = $(this);
+            $this.parent().siblings(':not(.LSBox)').find('> span').next().hide();
+            $this.next().toggle();
+          });
+
+          $('#filter-form .filter:not(.LSBox)').not(':has(ul)').click(function(e){
+            $(this).parent().siblings().toggle();
+          });
+        });
+
+    </script>
+  </head>
+  <body>
+    <p id="accesskeys" class="hiddenStructure" />
+    <div id="portal-top" />
+    <div id="container">
+      <div id="portal-topactions" class="fixedWidth">Top actions | ... | ...</div>
+      <div id="page-wrapper" class="fixedWidth clearfix">
+
+        <div id="header" class="clearfix">
+          <ul class="mobileButtons">
+            <li>
+              <a href="#" id="toggle_search" title=""></a>
+            </li>
+            <li>
+              <a href="#" id="toggle_slidenavi" title=""></a>
+            </li>
+            <li>
+              <a href="#" id="toggle_subsitelangs" title="">de</a>
+            </li>
+          </ul>
+
+          <div class="row logoRow">
+            <div class="cell position-0 width-8">
+              <a id="portal-logo" href="#"><img src="images/logo_onegov.png" alt="" /></a>
+            </div>
+            <div class="cell position-8 width-8">
+              <div id="portal-languageselector-wrapper">
+                <dl id="portal-languageselector" class="actionMenu deactivated">
+                  <dt class="actionMenuHeader">
+                    <a href="#">Deutsch <span style="font-size:10px;"> ▼</span></a>
+                  </dt>
+                  <dd class="actionMenuContent">
+                    <ul>
+                      <li class="language-en">
+                        <a href="#">English</a>
+                      </li>
+                      <li class="language-fr">
+                        <a href="#">Français</a>
+                      </li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+              <div id="portal-personaltools-wrapper">
+                <dl class="actionMenu deactivated" id="portal-personaltools"><dt id="anon-personalbar">
+                  <a href="#" id="personaltools-a">Kontakt</a>
+                  <a href="#" id="personaltools-b">Login</a>
+                </dt></dl>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="cell position-0 width-12">
+              <ul id="portal-globalnav">
+                <li class="">
+                  <span class="wrapper"><a title="" href="#">Private</a></span>
+                </li>
+                <li class="">
+                  <span class="wrapper"><a title="" href="#">Unternehmen</a></span>
+                </li>
+                <li class="plain">
+                  <span class="wrapper"><a title="" href="#">Portrait</a></span>
+                </li>
+                <li class="selected">
+                  <span class="wrapper"><a title="" href="#">Beh&ouml;rden</a></span>
+                </li>
+              </ul>
+
+            </div>
+            <div class="cell position-12 width-4 searchBoxWrapper">
+              <div id="portal-searchbox">
+
+                <form action="#search" id="livesearch0" name="searchform">
+                  <div class="LSBox">
+                    <input type="text" id="searchGadget" class="searchField inputLabel" placeholder="OneGovBox durchsuchen" />
+                    <input type="submit" value="Suche" class="searchButton" />
+                  </div>
+                </form>
+
+              </div>
+            </div>
+          </div>
+          <div class="row headerDelimiterWrapper">
+            <div class="cell position-0 width-16" id="header-delimiter">&nbsp;</div>
+          </div>
+          <!-- closes #header -->
+        </div>
+
+        <div id="columns" class="clearfix">
+
+          <div class="row">
+            <div class="cell position-0 width-16" id="breadcrumbs-wrapper">
+              <div id="portal-breadcrumbs">
+                <span id="breadcrumbs-you-are-here">Sie sind hier:</span>
+                <span id="breadcrumbs-home">
+                  <a href="http://www.zg.ch">Startseite</a>
+                </span>
+              </div>
+
+              <div id="document-actions">
+                <ul><li id="document-action-print">
+                  <a href="javascript:this.print();" title="Drucken">5</a>
+                </li></ul>
+              </div>
+
+              <div class="visualClear"><!-- --></div>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="cell position-0 width-16" id="banner-image"></div>
+          </div>
+
+          <div class="row">
+
+            <div class="cell position-0 width-16" id="column-content">
+
+
+              <h1> Option 1 - filter directly</h1>
+              <div id="filter-form">
+                <div>
+                  <div class="LSBox filter">
+                        <input name="SearchableText" type="text" size="18" title="Search" class="searchField inputLabel" placeholder="Search" id="searchGadget" autocomplete="off">
+                  </div>
+                  <div class="filter">
+                    <span>Type</span>
+                    <ul>
+                      <li><a>Option 1</a></li>
+                      <li><a>Option 2</a></li>
+                      <li><a>Option 3</a></li>
+                    </ul>
+                  </div>
+                  <div class="filter">
+                    <span>Topic</span>
+                    <ul>
+                      <li><a>Option 1</a></li>
+                      <li><a>Option 2</a></li>
+                      <li><a>Option 3</a></li>
+                    </ul>
+                  </div>
+                  <div class="filter">
+                    <span>Last change</span>
+                    <ul style="display: block;">
+                      <li><a>Option 1</a></li>
+                      <li class="selected"><a>Option 2</a></li>
+                      <li><a>Option 3</a></li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+
+
+              <h1> Option 2 - collapsible filters</h1>
+              <div id="filter-form">
+                <div class="no-border">
+                  <div class="LSBox filter">
+                        <input name="SearchableText" type="text" size="18" title="Search" class="searchField inputLabel" placeholder="Search" id="searchGadget" autocomplete="off">
+                  </div>
+                  <div class="filter">
+                    <span>Filter</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="filter">
+                    <span>Type</span>
+                    <ul>
+                      <li><a>Option 1</a></li>
+                      <li><a>Option 2</a></li>
+                      <li><a>Option 3</a></li>
+                    </ul>
+                  </div>
+                  <div class="filter">
+                    <span>Topic</span>
+                    <ul>
+                      <li><a>Option 1</a></li>
+                      <li><a>Option 2</a></li>
+                      <li><a>Option 3</a></li>
+                    </ul>
+                  </div>
+                  <div class="filter">
+                    <span>Last change</span>
+                    <ul style="display: block;">
+                      <li><a>Option 1</a></li>
+                      <li><a>Option 2</a></li>
+                      <li><a>Option 3</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <p style="margin-top:10em">
+
+              The JS code to make the filter mockup work, needs to be integrated by your own. Of course the implementation of this mockup is a good starting point.
+              <i>Check head section</i>
+
+              </p>
+
+              <!-- closes column-content -->
+            </div>
+
+          </div>
+
+
+          <div class="row belowContent">
+            <div class="cell position-0 width-16">
+              <div class="to_top"><a href="#">zum Seitenanfang</a></div>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="footer" class="clearfix">
+          <div class="row">
+            <div class="cell position-0 width-4">
+              <dl class="portlet">
+                <dt class="portletHeader">
+                  <span class="portletTopLeft"></span>
+                  <span>
+                    Private
+                  </span>
+                  <span class="portletTopRight"></span>
+                </dt>
+                <dd class="portletItem odd">
+                  <ul>
+                    <li><a href="#">Bildung</a></li>
+                    <li><a href="#">Gesundheit und Soziales</a></li>
+                    <li><a href="#">Kultur, Sport und Tour</a></li>
+                    <li><a href="#">Mobilit&auml;t</a></li>
+                    <li><a href="#">Pers&ouml;nliches</a></li>
+                  </ul>
+                  <span class="portletBottomLeft"></span>
+                  <span class="portletBottomRight"></span>
+                </dd>
+              </dl>
+            </div>
+
+            <div class="cell position-4 width-4">
+              <dl class="portlet">
+                <dt class="portletHeader">
+                  <span class="portletTopLeft"></span>
+                  <span>
+                    Unternehmen
+                  </span>
+                  <span class="portletTopRight"></span>
+                </dt>
+                <dd class="portletItem odd">
+                  <ul>
+                    <li><a href="#">Bauen und Submissionen</a></li>
+                    <li><a href="#">Gründen, Umstrukturieren und Auflösen</a></li>
+                    <li><a href="#">Personal</a></li>
+                    <li><a href="#">Schutz und Sicherheit</a></li>
+                    <li><a href="#">Standort und Steuern</a></li>
+                  </ul>
+                  <span class="portletBottomLeft"></span>
+                  <span class="portletBottomRight"></span>
+                </dd>
+              </dl>
+            </div>
+
+            <div class="cell position-8 width-4">
+              <dl class="portlet">
+                <dt class="portletHeader">
+                  <span class="portletTopLeft"></span>
+                  <span>
+                    Beh&ouml;rden
+                  </span>
+                  <span class="portletTopRight"></span>
+                </dt>
+                <dd class="portletItem odd">
+                  <ul>
+                    <li><a href="#">Kantonsrat</a></li>
+                    <li><a href="#">Regierungsrat</a></li>
+                    <li><a href="#">Verwaltungsrechtspflege</a></li>
+                    <li><a href="#">Zivil- und Strafrechtspflege</a></li>
+                    <li><a href="#">Baudirektion</a></li>
+                  </ul>
+                  <span class="portletBottomLeft"></span>
+                  <span class="portletBottomRight"></span>
+                </dd>
+              </dl>
+            </div>
+
+            <div class="cell position-12 width-4">
+              <dl class="portlet">
+                <dt class="portletHeader">
+                  <span class="portletTopLeft"></span>
+                  <span>
+                    Portrait
+                  </span>
+                  <span class="portletTopRight"></span>
+                </dt>
+                <dd class="portletItem odd">
+                  <ul>
+                    <li><a href="#">Bildung</a></li>
+                    <li><a href="#">Gesundheit</a></li>
+                    <li><a href="#">Kultur</a></li>
+                    <li><a href="#">Leute</a></li>
+                    <li><a href="#">Natur und Freizeit</a></li>
+                  </ul>
+                  <span class="portletBottomLeft"></span>
+                  <span class="portletBottomRight"></span>
+                </dd>
+              </dl>
+            </div>
+
+            <!-- closes footer -->
+          </div>
+          <!-- closes #page-wrapper -->
+        </div>
+
+      </div>
+      <div id="bottom-actions" class="fixedWidth">
+        <ul id="portal-siteactions" />
+      </div>
+
+      <div class="bookReaderLastElement"></div>
+
+      <!-- closes #container -->
+    </div>
+
+  </body>
+</html>

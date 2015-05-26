@@ -462,9 +462,9 @@ a,
   /* border-bottom: 5px solid $global-navigation-border-color-active; */
   margin-bottom: -5px; }
   #portal-globalnav li.selected > .wrapper > a {
-    color: #333333; }
+    color: #333; }
     #portal-globalnav li.selected > .wrapper > a:after {
-      color: #333333; }
+      color: #333; }
 
 /* @end */
 /* @group left navigation */
@@ -490,7 +490,6 @@ a,
         text-decoration: none;
         padding-left: 1.5em; }
   #column-navigation .portletContextNavigation .current {
-    border-bottom: 1px solid #e5e5e0;
     padding: 0.5em 0.5em;
     background-color: #f6f6f5;
     background-image: -moz-linear-gradient(top, #fcfcfc, #f6f6f5);
@@ -500,6 +499,8 @@ a,
     background-image: -o-linear-gradient(top, #fcfcfc, #f6f6f5);
     background-image: linear-gradient(top, #fcfcfc, #f6f6f5);
     font-weight: bold; }
+    #column-navigation .portletContextNavigation .current + li.child {
+      border-top: 1px solid #e5e5e0; }
   #column-navigation .portletContextNavigation .parent, #column-navigation .portletContextNavigation .sibling {
     border-bottom: 1px solid #e5e5e0; }
     #column-navigation .portletContextNavigation .parent a, #column-navigation .portletContextNavigation .sibling a {
@@ -631,6 +632,9 @@ div.slideNavi .globalnav li a {
 
 /* @end */
 /* @group news portlet */
+.portlet.portletCollection.newsTemplate dd ul {
+  list-style-type: none;
+  padding: 0; }
 .portlet.portletCollection.newsTemplate .portletItemTitle {
   margin: 0.25em 0 0.25em 0;
   font-weight: bold; }
@@ -715,6 +719,18 @@ dl.teaser_portlet .portletHeader img {
 .managedPortletActions > a.delete,
 .portlet-action.delete button {
   color: #F00; }
+
+/* @end */
+/* @group post it portlet */
+#dashboard dl.portlet.postit.portletPostIt dt {
+  background-color: #DCC126;
+  color: #000; }
+  #dashboard dl.portlet.postit.portletPostIt dt .portletActionsWrapper {
+    background: #dbd08d; }
+#dashboard dl.portlet.postit.portletPostIt dd {
+  background: #f8f3d6; }
+  #dashboard dl.portlet.postit.portletPostIt dd.even {
+    background: #f5edc0; }
 
 /* @end */
 /* @group dashboard */
@@ -886,7 +902,7 @@ fieldset {
     -moz-border-radius: 3px;
     display: block;
     float: left;
-    background: #e7eff0;
+    background: #E7EFF0;
     padding: 0 0.5em;
     margin-right: 0.5em;
     margin-bottom: 0.5em; }
@@ -921,7 +937,7 @@ body.template-subsite_view h1.documentFirstHeading {
     -moz-border-radius: 3px;
     display: block;
     float: left;
-    background: #e7eff0;
+    background: #E7EFF0;
     padding: 0 0.5em;
     margin-right: 0.5em;
     margin-bottom: 0.5em; }
@@ -974,10 +990,10 @@ div.ListingBlock div.gallery .sl-img-wrapper img {
 /* @end */
 /* @group footer */
 #footer {
-  background-color: #72726a;
-  color: #f8f8f2; }
+  background-color: #72726A;
+  color: #F8F8F2; }
   #footer a {
-    color: #f8f8f2; }
+    color: #F8F8F2; }
   #footer ul {
     list-style: disc;
     padding-left: 2em;
@@ -1058,7 +1074,7 @@ dl.collapsible.expandedBlockCollapsible dd {
   width: auto;
   margin: 1px 0 1em 0; }
   .portletCalendar dt {
-    background-color: #eeeeee;
+    background-color: #EEEEEE;
     font-weight: bold;
     text-align: center;
     line-height: 1.6em;
@@ -1089,16 +1105,16 @@ dl.collapsible.expandedBlockCollapsible dd {
       width: 14%;
       text-align: center;
       padding: 2px;
-      border: 2px solid #eeeeee;
-      background-color: #eeeeee; }
+      border: 2px solid #EEEEEE;
+      background-color: #EEEEEE; }
     .portletCalendar .ploneCalendar .weekdays th {
-      background-color: #eeeeee;
+      background-color: #EEEEEE;
       text-align: center;
       padding: 2px; }
     .portletCalendar .ploneCalendar .event {
-      background-color: #eeeeee; }
+      background-color: #EEEEEE; }
     .portletCalendar .ploneCalendar .todayevent {
-      background-color: #eeeeee;
+      background-color: #EEEEEE;
       border: 2px solid #32444a; }
     .portletCalendar .ploneCalendar .todaynoevent {
       border: 2px solid #32444a; }
@@ -1496,6 +1512,28 @@ div.billboardAdDetail {
   white-space: nowrap;
   line-height: 1em; }
 
+/* seantis.dir.base and seantis.dir.contacts */
+.contenttype-seantis-dir-contacts-directory:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "F ";
+  white-space: nowrap;
+  line-height: 1em; }
+
+.contenttype-seantis-dir-contacts-item:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "_ ";
+  white-space: nowrap;
+  line-height: 1em; }
+
+.contenttype-seantis-dir-contacts-contact:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "";
+  white-space: nowrap;
+  line-height: 1em; }
+
 /* ftw.shop */
 .contenttype-supplier:before {
   font-family: "icomoon";
@@ -1607,26 +1645,6 @@ a.external-link:before {
   white-space: nowrap;
   line-height: 1em; }
 
-#slider-panes .sliderPane .prev:before {
-  font-family: "icomoon";
-  font-size: 1em;
-  content: "";
-  white-space: nowrap;
-  line-height: 1em; }
-#slider-panes .sliderPane .prev:before {
-  font-size: 1.75em;
-  vertical-align: middle; }
-
-#slider-panes .sliderPane .next:after {
-  font-family: "icomoon";
-  font-size: 1em;
-  content: "";
-  white-space: nowrap;
-  line-height: 1em; }
-#slider-panes .sliderPane .next:after {
-  font-size: 1.75em;
-  vertical-align: middle; }
-
 .portlet.portletCollection.newsTemplate a.RssLink {
   font-size: 1px;
   color: transparent;
@@ -1699,13 +1717,29 @@ a.external-link:before {
   white-space: nowrap;
   line-height: 1em; }
 
+#document-actions #document-action-kml_download a:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "Y ";
+  white-space: nowrap;
+  line-height: 1em; }
+
+#document-actions #document-action-zip_download a:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "c ";
+  white-space: nowrap;
+  line-height: 1em; }
+
 #document-actions #document-action-print a,
 #document-actions #document-action-watch a,
 #document-actions #document-action-addtofavourites a,
 #document-actions #document-action-addtofavorites a,
 #document-actions #document-action-pdf a,
 #document-actions #document-action-pdf_export a,
-#document-actions #document-action-reader a {
+#document-actions #document-action-reader a,
+#document-actions #document-action-kml_download a,
+#document-actions #document-action-zip_download a {
   font-size: 1px;
   color: transparent;
   width: 20px;
@@ -1720,7 +1754,9 @@ a.external-link:before {
   #document-actions #document-action-addtofavorites a:before,
   #document-actions #document-action-pdf a:before,
   #document-actions #document-action-pdf_export a:before,
-  #document-actions #document-action-reader a:before {
+  #document-actions #document-action-reader a:before,
+  #document-actions #document-action-kml_download a:before,
+  #document-actions #document-action-zip_download a:before {
     font-size: 20px;
     color: #005d67; }
   #document-actions #document-action-print a:hover:before,
@@ -1729,7 +1765,9 @@ a.external-link:before {
   #document-actions #document-action-addtofavorites a:hover:before,
   #document-actions #document-action-pdf a:hover:before,
   #document-actions #document-action-pdf_export a:hover:before,
-  #document-actions #document-action-reader a:hover:before {
+  #document-actions #document-action-reader a:hover:before,
+  #document-actions #document-action-kml_download a:hover:before,
+  #document-actions #document-action-zip_download a:hover:before {
     color: #00a5b8; }
 
 /* @end */
@@ -1827,7 +1865,7 @@ a.button {
   background-image: -o-linear-gradient(top, #00616c, #003339);
   background-image: linear-gradient(top, #00616c, #003339);
   font-family: Arial;
-  color: white;
+  color: #FFF;
   padding: 0.5em 1em;
   margin: 0.5em 0.5em 0 0;
   display: inline-block;
@@ -1856,7 +1894,7 @@ a.button {
     background-image: -webkit-linear-gradient(top, #003339, #000506);
     background-image: -o-linear-gradient(top, #003339, #000506);
     background-image: linear-gradient(top, #003339, #000506);
-    color: white;
+    color: #FFF;
     text-decoration: none; }
   input[type="submit"]:active,
   input[type="reset"]:active,
@@ -1867,6 +1905,7 @@ a.button {
     -webkit-box-shadow: 0 0 0.25em #5b5a54;
     -moz-box-shadow: 0 0 0.25em #5b5a54; }
 
+a.button.standalone,
 input.standalone {
   border: 1px solid #595959;
   border-radius: 3px;
@@ -1880,7 +1919,7 @@ input.standalone {
   background-image: -o-linear-gradient(top, #7f7f7f, #666666);
   background-image: linear-gradient(top, #7f7f7f, #666666);
   font-family: Arial;
-  color: white;
+  color: #FFF;
   padding: 0.5em 1em;
   margin: 0.5em 0.5em 0 0;
   display: inline-block;
@@ -1888,7 +1927,10 @@ input.standalone {
   -webkit-box-shadow: 0 0.1em 0.3em -0.1em #5b5a54;
   -moz-box-shadow: 0 0.1em 0.3em -0.1em #5b5a54;
   /* no effects if disabled */ }
-  input.standalone:hover, input.standalone:focus, input.standalone:active {
+  a.button.standalone:hover, a.button.standalone:focus, a.button.standalone:active,
+  input.standalone:hover,
+  input.standalone:focus,
+  input.standalone:active {
     border: 1px solid #595959;
     background-color: #4c4c4c;
     background-image: -moz-linear-gradient(top, #666666, #4c4c4c);
@@ -1897,13 +1939,15 @@ input.standalone {
     background-image: -webkit-linear-gradient(top, #666666, #4c4c4c);
     background-image: -o-linear-gradient(top, #666666, #4c4c4c);
     background-image: linear-gradient(top, #666666, #4c4c4c);
-    color: white;
+    color: #FFF;
     text-decoration: none; }
+  a.button.standalone:active,
   input.standalone:active {
     box-shadow: 0 0 0.25em #5b5a54;
     -webkit-box-shadow: 0 0 0.25em #5b5a54;
     -moz-box-shadow: 0 0 0.25em #5b5a54; }
 
+a.button.destructive,
 input.destructive {
   border: 1px solid #a11611;
   border-radius: 3px;
@@ -1917,7 +1961,7 @@ input.destructive {
   background-image: -o-linear-gradient(top, #e61f18, #b81913);
   background-image: linear-gradient(top, #e61f18, #b81913);
   font-family: Arial;
-  color: white;
+  color: #FFF;
   padding: 0.5em 1em;
   margin: 0.5em 0.5em 0 0;
   display: inline-block;
@@ -1925,7 +1969,10 @@ input.destructive {
   -webkit-box-shadow: 0 0.1em 0.3em -0.1em #5b5a54;
   -moz-box-shadow: 0 0.1em 0.3em -0.1em #5b5a54;
   /* no effects if disabled */ }
-  input.destructive:hover, input.destructive:focus, input.destructive:active {
+  a.button.destructive:hover, a.button.destructive:focus, a.button.destructive:active,
+  input.destructive:hover,
+  input.destructive:focus,
+  input.destructive:active {
     border: 1px solid #a11611;
     background-color: #8a130e;
     background-image: -moz-linear-gradient(top, #b81913, #8a130e);
@@ -1934,13 +1981,15 @@ input.destructive {
     background-image: -webkit-linear-gradient(top, #b81913, #8a130e);
     background-image: -o-linear-gradient(top, #b81913, #8a130e);
     background-image: linear-gradient(top, #b81913, #8a130e);
-    color: white;
+    color: #FFF;
     text-decoration: none; }
+  a.button.destructive:active,
   input.destructive:active {
     box-shadow: 0 0 0.25em #5b5a54;
     -webkit-box-shadow: 0 0 0.25em #5b5a54;
     -moz-box-shadow: 0 0 0.25em #5b5a54; }
 
+a.button.disabled,
 input[type="button"][disabled],
 input[type="submit"][disabled],
 button[disabled] {
@@ -1956,7 +2005,7 @@ button[disabled] {
   background-image: -o-linear-gradient(top, rgba(0, 97, 108, 0.3), rgba(0, 51, 57, 0.3));
   background-image: linear-gradient(top, rgba(0, 97, 108, 0.3), rgba(0, 51, 57, 0.3));
   font-family: Arial;
-  color: white;
+  color: #FFF;
   padding: 0.5em 1em;
   margin: 0.5em 0.5em 0 0;
   display: inline-block;
@@ -2014,7 +2063,6 @@ input#title {
 div.overlay .field label .required,
 #form .field label .required,
 .formQuestion .required {
-  visibility: hidden;
   font-size: 1px;
   color: transparent; }
 
@@ -2023,13 +2071,20 @@ div.overlay .field label .required:after,
 #sendto_form .fieldRequired:before,
 .formQuestion .required:after {
   font-size: 13px;
-  visibility: visible;
   content: "■";
   color: #FF0000; }
 
 #content li.formTab a.required span:after {
   content: " ■";
   color: #FF0000; }
+
+/* z3cform required implementation */
+#content li.formTab a.required span:after,
+#content-core li.formTab a.required span:after,
+div.field span.required:after {
+  content: "■";
+  color: red;
+  padding-left: 0.2em; }
 
 /* no required mark for input fields */
 div.overlay .field label input.required,
@@ -2101,6 +2156,11 @@ div.listingBar a {
 .template-notification_form #content form textarea {
   width: 98%;
   padding: 1%; }
+
+/* @end */
+/* @group plone form gen */
+.qefield .field {
+  clear: none; }
 
 /* @end */
 /* @group blog */
@@ -2212,10 +2272,10 @@ body.template-book_reader_view {
     padding: 1em 2%;
     /* padding-left: 0; */
     background: #fafafa;
-    border: 1px solid #777777;
-    box-shadow: 0 0 1em #aaaaaa;
-    -webkit-box-shadow: 0 0 1em #aaaaaa;
-    -moz-box-shadow: 0 0 1em #aaaaaa;
+    border: 1px solid #777;
+    box-shadow: 0 0 1em #aaa;
+    -webkit-box-shadow: 0 0 1em #aaa;
+    -moz-box-shadow: 0 0 1em #aaa;
     font-size: 125%;
     line-height: 1.5em;
     position: relative; }
@@ -2227,9 +2287,9 @@ body.template-book_reader_view {
   body.template-book_reader_view .book-reader-content {
     background: #fcfcfc;
     padding: 1em;
-    box-shadow: 0 0 0.25em #777777;
-    -webkit-box-shadow: 0 0 0.25em #777777;
-    -moz-box-shadow: 0 0 0.25em #777777; }
+    box-shadow: 0 0 0.25em #777;
+    -webkit-box-shadow: 0 0 0.25em #777;
+    -moz-box-shadow: 0 0 0.25em #777; }
   body.template-book_reader_view #content .book-reader-navigation a:hover {
     text-decoration: underline; }
   body.template-book_reader_view #content .book-reader-navigation a.active {
@@ -2372,7 +2432,7 @@ fieldset.livesearchContainer {
   padding: 0.5em; }
 
 .highlightedSearchTerm {
-  background-color: #e7eff0; }
+  background-color: #E7EFF0; }
 
 /* @end */
 /* @group solr search results */
@@ -2419,85 +2479,71 @@ a.facetRemoveItem:hover {
   margin-top: 1em; }
 
 /* @end */
-/* @group tabbedview */
-div.overview-left-column,
-div.overview-right-column {
-  width: 47.75374%; }
-
-#tabbedview-body {
-  margin-top: 1em;
-  overflow: hidden; }
-
-#tabbedview-searchbox {
-  padding: 0.3em;
-  position: absolute;
-  right: 0;
-  bottom: 0.25em;
-  width: 10em; }
-
-#tabbedview-header {
-  position: relative; }
-
-#tabbedview-header .tabbedview-tabs {
-  margin-right: 12em; }
-  #tabbedview-header .tabbedview-tabs ul.formTabs {
-    padding-right: 12em; }
-
-#tabbedview-header.disabledSearchBox .tabbedview-tabs {
-  margin-right: 0; }
-  #tabbedview-header.disabledSearchBox .tabbedview-tabs ul.formTabs {
-    padding-right: 0; }
-
-#tabbedview-searchbox[disabled] {
+#filter-form .searchButton {
   display: none; }
+#filter-form > div {
+  clear: both;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+  padding-top: 13px;
+  border-bottom: 1px solid #e5e5e0;
+  border-top: 1px solid #e5e5e0; }
+  #filter-form > div.no-border {
+    border-bottom: none;
+    border-top: none;
+    margin-bottom: 0; }
+  #filter-form > div:first-child .filter {
+    margin-bottom: 4px; }
+  #filter-form > div .LSBox {
+    position: relative;
+    margin-right: 60px; }
+    #filter-form > div .LSBox:first-child {
+      margin-bottom: 0; }
+  #filter-form > div .filter {
+    display: inline-block;
+    margin-right: 30px;
+    overflow: auto; }
+    #filter-form > div .filter span {
+      color: #005d67;
+      cursor: pointer; }
+      #filter-form > div .filter span:after {
+        font-family: "icomoon";
+        font-size: 1em;
+        content: "";
+        white-space: nowrap;
+        line-height: 1em;
+        padding-left: 10px; }
+    #filter-form > div .filter ul {
+      list-style: disc;
+      padding-left: 2em;
+      list-style: none;
+      padding-left: 0;
+      display: none;
+      position: absolute;
+      overflow: auto;
+      padding: 8px 0;
+      border: 1px solid #e6e6e2;
+      background-color: #fcfcfc;
+      box-shadow: 0 0.25em 0.5em -0.25em #5b5a54;
+      -webkit-box-shadow: 0 0.25em 0.5em -0.25em #5b5a54;
+      -moz-box-shadow: 0 0.25em 0.5em -0.25em #5b5a54;
+      margin-left: -16px;
+      margin-top: 10px; }
+      #filter-form > div .filter ul li {
+        display: list-item;
+        margin-bottom: 1em; }
+      #filter-form > div .filter ul li {
+        margin: 0;
+        min-width: 10em; }
+        #filter-form > div .filter ul li a {
+          display: inline-block;
+          cursor: pointer;
+          padding: 3px 20px; }
+        #filter-form > div .filter ul li.selected a {
+          color: #32444a; }
+          #filter-form > div .filter ul li.selected a:hover {
+            text-decoration: none; }
 
-#overview_overview .box ul {
-  list-style: disc;
-  padding-left: 2em;
-  list-style: none;
-  padding-left: 0; }
-  #overview_overview .box ul li {
-    display: list-item;
-    margin-bottom: 1em; }
-
-ul.tabbedview-action-list {
-  list-style: disc;
-  padding-left: 2em;
-  list-style: none;
-  padding-left: 0;
-  margin-top: 0.5em; }
-  ul.tabbedview-action-list li {
-    display: list-item;
-    margin-bottom: 1em; }
-  ul.tabbedview-action-list li {
-    float: left; }
-
-div.x-grid3-col-getContentType .spriteIcon {
-  margin-left: 0.25em; }
-
-#content #tabbedview-body h2 {
-  margin: 0.75em 0 0.25em 0; }
-#content #tabbedview-body .sublisting li {
-  margin-bottom: 0.5em; }
-
-/* @end */
-/* @group tabbedview preview */
-.previewContainer .previewTitle {
-  border-radius: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0; }
-.previewContainer .colorboxLink {
-  box-shadow: 0.25em 0.25em 0.5em #e5e5e0;
-  -webkit-box-shadow: 0.25em 0.25em 0.5em #e5e5e0;
-  -moz-box-shadow: 0.25em 0.25em 0.5em #e5e5e0; }
-  .previewContainer .colorboxLink:hover {
-    box-shadow: 0.25em 0.25em 0.5em #c6c6c0;
-    -webkit-box-shadow: 0.25em 0.25em 0.5em #c6c6c0;
-    -moz-box-shadow: 0.25em 0.25em 0.5em #c6c6c0;
-    border-color: #00a5b8;
-    color: #005d67; }
-
-/* @end */
 /* @group overlay */
 .overlay {
   display: none;
@@ -2531,9 +2577,7 @@ div.overlay div.close span {
 
 /* @end */
 /* @group Content pulldowns (edit-bar) */
-dl.actionMenu a,
-dl.actionMenu a:hover,
-#edit-bar a {
+dl.actionMenu a, dl.actionMenu a:hover, #edit-bar a {
   text-decoration: none; }
 
 #edit-bar ul {
@@ -2596,9 +2640,7 @@ dl.actionMenu a:hover,
   -moz-border-radius: 3px 3px 0 0;
   margin: 0; }
 
-#edit-bar .activated a,
-#edit-bar li.selected a,
-#edit-bar li a:hover {
+#edit-bar .activated a, #edit-bar li.selected a, #edit-bar li a:hover {
   background-color: #fcfcfc; }
 
 /* TODO: Since plone's base.css also have an !important */
@@ -2617,9 +2659,7 @@ dl.actionMenu a:hover,
   z-index: 5;
   right: -3px; }
 
-#portal-personaltools.activated dd a:hover,
-#container #contentActionMenus dl.actionMenu.activated dd a:hover,
-#container #contentActionMenus dl.actionMenu.activated dd .actionMenuSelected {
+#portal-personaltools.activated dd a:hover, #container #contentActionMenus dl.actionMenu.activated dd a:hover, #container #contentActionMenus dl.actionMenu.activated dd .actionMenuSelected {
   background-color: #f4f4f1; }
 
 #content .tabbedview-tab-menu .actionMenuContent a:hover {
@@ -2627,38 +2667,49 @@ dl.actionMenu a:hover,
   color: #00a5b8 !important;
   /* TODO remove important in tabbedview.css */ }
 
-.actionMenuContent ul,
-#portal-personaltools dd ul {
+.actionMenuContent ul, #portal-personaltools dd ul {
   list-style: disc;
   padding-left: 2em;
   list-style: none;
   padding-left: 0; }
-  .actionMenuContent ul li,
-  #portal-personaltools dd ul li {
+  .actionMenuContent ul li, #portal-personaltools dd ul li {
     display: list-item;
     margin-bottom: 1em; }
-  .actionMenuContent ul li,
-  #portal-personaltools dd ul li {
+  .actionMenuContent ul li, #portal-personaltools dd ul li {
     margin: 0; }
 
 #portal-personaltools dt {
   border: 1px solid #e5e5e0;
-  padding: 0 0.5em 0 0.25em;
-  margin-top: 0.5em; }
+  padding: 0 0.5em 0 0.25em; }
 
 #portal-personaltools.activated dt {
   background: #f4f4f1; }
 
-#portal-personaltools dt#anon-personalbar {
+#portal-personaltools.anon-personalbar {
   border: none;
   padding: 0;
   margin-top: 0.55em; }
 
 #portal-personaltools {
-  float: right; }
+  float: right;
+  list-style-type: none;
+  margin-top: 0.55em; }
+  #portal-personaltools li {
+    float: left; }
+    #portal-personaltools li a {
+      border-left: 1px solid #32444a;
+      padding: 0 5px; }
+      #portal-personaltools li a:hover {
+        text-decoration: none; }
+    #portal-personaltools li:first-child a {
+      border-left: none; }
 
-#portal-personaltools,
-#contentActionMenus dl.actionMenu {
+.userrole-authenticated #portal-personaltools li {
+  float: none; }
+  .userrole-authenticated #portal-personaltools li a {
+    border-left: none; }
+
+#portal-personaltools, #contentActionMenus dl.actionMenu {
   line-height: 2em; }
 
 #portal-personaltools dd {
@@ -2668,8 +2719,7 @@ dl.actionMenu a:hover,
 #portal-personaltools dd li a:hover {
   background-color: #f4f4f1; }
 
-#user-name,
-#personaltools-portrait {
+#user-name, #personaltools-portrait {
   float: left;
   line-height: 26px; }
 
@@ -2681,6 +2731,14 @@ dl.actionMenu a:hover,
 #user-name:after {
   content: ' ▼';
   font-size: 10px; }
+
+#toggle_subsitelangs > span.hiddenStructure {
+  text-indent: 0em;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  margin: 0 !important;
+  margin-bottom: 0.1em !important; }
 
 #portal-languageselector-wrapper {
   float: right; }
@@ -2740,13 +2798,11 @@ dl.actionMenu {
   position: relative;
   margin-left: 0.5em; }
 
-dl.actionMenu a,
-dl.actionMenu div {
+dl.actionMenu a, dl.actionMenu div {
   display: block;
   white-space: nowrap; }
 
-#column-content dl.actionMenu dt,
-dl.actionMenu dt {
+#column-content dl.actionMenu dt, dl.actionMenu dt {
   font-weight: normal; }
 
 #content dl.actionMenu ul {
@@ -2802,10 +2858,10 @@ dl.portalMessage dd {
   margin: 0; }
 
 dl.warning dt {
-  background-color: #d69b29; }
+  background-color: #D69B29; }
 
 dl.error dt {
-  background-color: #d65829; }
+  background-color: #D65829; }
 
 /* Additional specificity for when status is shown inside #content */
 #content dl.portalMessage {
@@ -2897,7 +2953,7 @@ table.grid tbody tr:first-child td {
   border-top: 0; }
 
 table.listing th {
-  color: black;
+  color: #000;
   background-color: #f2f2f2; }
 
 table.vertical th {
@@ -3144,12 +3200,14 @@ img {
   #portal-personaltools-wrapper {
     float: none; }
 
-  #portal-personaltools #anon-personalbar {
-    margin-top: 0;
-    position: absolute;
-    right: 0.5em; }
-    #portal-personaltools #anon-personalbar a {
+  #portal-personaltools.anon-personalbar {
+    margin-top: 52px;
+    direction: rtl; }
+    #portal-personaltools.anon-personalbar a {
       font-size: 100%; }
+    #portal-personaltools.anon-personalbar li {
+      float: none;
+      display: inline; }
 
   #portal-languageselector,
   #portal-personaltools {
@@ -3171,7 +3229,8 @@ img {
   #portal-languageselector dt {
     display: none; }
 
-  #portal-languageselector dd {
+  #portal-languageselector dd,
+  #portal-personaltools-wrapper dd {
     position: absolute;
     margin-top: 52px; }
 
@@ -3296,6 +3355,9 @@ div.riform,
 .person-details-right.splitscreen {
   float: right; }
 
+.person-details-bottom.splitscreen {
+  clear: both; }
+
 #content .person-wrapper {
   display: table;
   margin-top: 1em; }
@@ -3412,12 +3474,12 @@ div.riform,
 
 /* @end */
 /* @group all directory item views */
-.seantis-directory-item #directoryResultList .directoryInfoText {
+.seantis-directory-item #content #directoryResultList .directoryInfoText {
   padding-left: 0; }
-.seantis-directory-item ul {
+.seantis-directory-item #content ul {
   margin-left: 1em;
   margin-bottom: 1em; }
-.seantis-directory-item .no-bullets {
+.seantis-directory-item #content .no-bullets {
   list-style: none;
   margin-left: 0; }
 
@@ -3446,7 +3508,7 @@ div.riform,
   -moz-border-radius: 3px;
   display: block;
   float: left;
-  background: #e7eff0;
+  background: #E7EFF0;
   padding: 0 0.5em;
   margin-right: 0.5em;
   margin-bottom: 0.5em;
@@ -3515,7 +3577,7 @@ div.riform,
     -moz-border-radius: 3px;
     display: block;
     float: left;
-    background: #e7eff0;
+    background: #E7EFF0;
     padding: 0 0.5em;
     margin-right: 0.5em;
     margin-bottom: 0.5em;
@@ -3698,7 +3760,7 @@ div.riform,
   -moz-border-radius: 3px;
   display: block;
   float: left;
-  background: #e7eff0;
+  background: #E7EFF0;
   padding: 0 0.5em;
   margin-right: 0.5em;
   margin-bottom: 0.5em; }
@@ -3915,61 +3977,75 @@ div.riform,
 .multicalendar .directoryResult {
   display: none; }
 
-.singlecalendar .directoryResult {
+.singlecalendar .directoryResult,
+.reservation-search .directoryResult {
   padding: 1em;
   margin-bottom: 1.5em;
   background-color: #f4f4f1; }
-  .singlecalendar .directoryResult h2 {
+  .singlecalendar .directoryResult h2,
+  .reservation-search .directoryResult h2 {
     font-weight: normal; }
   .singlecalendar .directoryResult .directoryImage,
-  .singlecalendar .directoryResult .directoryInfo > div {
+  .singlecalendar .directoryResult .directoryInfo > div,
+  .reservation-search .directoryResult .directoryImage,
+  .reservation-search .directoryResult .directoryInfo > div {
     float: left;
     margin: 0 2em 1em 0;
     max-width: 50%; }
+.singlecalendar .formTabs,
+.reservation-search .formTabs {
+  margin-bottom: 1em; }
 
 /* @group */
 /* @end */
 /* @group seantis.reservation */
 /* @group fullcalendar */
-#content .fc-event-title {
+.pb-ajax .fc-event-title, #content .fc-event-title {
   font-size: 1.1em; }
-#content .fc-event-time {
+.pb-ajax .fc-event-time, #content .fc-event-time {
   font-size: 1.1em;
   display: block; }
-#content .fc-view-agendaWeek .fc-event {
+.pb-ajax .fc-view-agendaWeek .fc-event, #content .fc-view-agendaWeek .fc-event {
   margin-left: 2px; }
-#content .fc-event-time,
+.pb-ajax .fc-event-time,
+.pb-ajax .fc-event-title, #content .fc-event-time,
 #content .fc-event-title {
   padding: 1px 0 0 2px;
   display: block; }
-#content .event-available {
+.pb-ajax .event-available, #content .event-available {
   background-color: #339933 !important;
   border-color: #339933 !important; }
-  #content .event-available .fc-event-time {
+  .pb-ajax .event-available .fc-event-time, #content .event-available .fc-event-time {
     background-color: #339933 !important; }
-#content .event-partly-available {
+.pb-ajax .event-partly-available, #content .event-partly-available {
   background-color: #ff9933 !important;
   border-color: #ff9933 !important; }
-  #content .event-partly-available .fc-event-time {
+  .pb-ajax .event-partly-available .fc-event-time, #content .event-partly-available .fc-event-time {
     background-color: #ff9933 !important; }
-#content .event-unavailable {
+.pb-ajax .event-unavailable, #content .event-unavailable {
   background-color: #cc3333 !important;
   border-color: #cc3333 !important; }
-  #content .event-unavailable .fc-event-time {
+  .pb-ajax .event-unavailable .fc-event-time, #content .event-unavailable .fc-event-time {
     background-color: #cc3333 !important; }
-#content #seantis-overview-calendar .event-available,
+.pb-ajax #seantis-overview-calendar .event-available,
+.pb-ajax #seantis-overview-calendar .event-available .fc-event-skin,
+.pb-ajax #seantis-overview-calendar .event-available .fc-event-head, #content #seantis-overview-calendar .event-available,
 #content #seantis-overview-calendar .event-available .fc-event-skin,
 #content #seantis-overview-calendar .event-available .fc-event-head {
   background-color: #339933 !important; }
-#content #seantis-overview-calendar .event-partly-available,
+.pb-ajax #seantis-overview-calendar .event-partly-available,
+.pb-ajax #seantis-overview-calendar .event-partly-available .fc-event-skin,
+.pb-ajax #seantis-overview-calendar .event-partly-available .fc-event-head, #content #seantis-overview-calendar .event-partly-available,
 #content #seantis-overview-calendar .event-partly-available .fc-event-skin,
 #content #seantis-overview-calendar .event-partly-available .fc-event-head {
   background-color: #ff9933 !important; }
-#content #seantis-overview-calendar .event-unavailable,
+.pb-ajax #seantis-overview-calendar .event-unavailable,
+.pb-ajax #seantis-overview-calendar .event-unavailable .fc-event-skin,
+.pb-ajax #seantis-overview-calendar .event-unavailable .fc-event-head, #content #seantis-overview-calendar .event-unavailable,
 #content #seantis-overview-calendar .event-unavailable .fc-event-skin,
 #content #seantis-overview-calendar .event-unavailable .fc-event-head {
   background-color: #cc3333 !important; }
-#content #seantis-overview-calendar td.groupSelection {
+.pb-ajax #seantis-overview-calendar td.groupSelection, #content #seantis-overview-calendar td.groupSelection {
   color: white; }
 
 /* @end */
@@ -4010,7 +4086,7 @@ div.riform,
   -moz-border-radius: 3px;
   display: block;
   float: left;
-  background: #e7eff0;
+  background: #E7EFF0;
   padding: 0 0.5em;
   margin-right: 0.5em;
   margin-bottom: 0.5em;
@@ -4028,23 +4104,28 @@ div.riform,
 
 /* @end */
 /* @group your reservations */
-.your-reservations, .your-reservations-view {
+div.your-reservations, div.your-reservations-view {
   background-color: #e5e5e0;
-  padding: 1em;
-  margin-bottom: 1em; }
-  .your-reservations h1, .your-reservations h2, .your-reservations-view h1, .your-reservations-view h2 {
-    margin-top: 0;
-    margin-bottom: 0.5em;
+  padding: .75em;
+  margin: 0 0 1em 0; }
+  div.your-reservations h1, div.your-reservations h2, div.your-reservations-view h1, div.your-reservations-view h2 {
+    margin: 0;
     font-weight: normal;
     font-size: 16px; }
-  .your-reservations a, .your-reservations span, .your-reservations-view a, .your-reservations-view span {
-    display: block; }
-  .your-reservations .remove-url, .your-reservations-view .remove-url {
-    position: absolute;
-    right: 0;
-    top: 0; }
-  .your-reservations br, .your-reservations-view br {
-    display: none; }
+  div.your-reservations ul, div.your-reservations-view ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 1em;
+    margin-bottom: 0; }
+  div.your-reservations .your-reservation-title, div.your-reservations-view .your-reservation-title {
+    float: left !important;
+    margin: 0 .3em .25em 0; }
+  div.your-reservations .your-reservation-title, div.your-reservations-view .your-reservation-title {
+    font-weight: bold; }
+  div.your-reservations .your-reservation-header, div.your-reservations-view .your-reservation-header {
+    margin-top: .5em; }
+  div.your-reservations .confirm-reservations, div.your-reservations .formControls, div.your-reservations-view .confirm-reservations, div.your-reservations-view .formControls {
+    margin-top: .5em; }
 
 /* @end */
 /* @group manage reservations inline */
@@ -4281,8 +4362,123 @@ table.timetable div.timespan div.occupied {
     margin-top: -1em; }
   #broken-data .reservation-data .block-title,
   #broken-data .reservation-data .label {
-    border-bottom-color: #d65829;
-    color: #d65829; }
+    border-bottom-color: #D65829;
+    color: #D65829; }
+
+/* @end */
+/* @group timeframes trigger */
+.timeframes-trigger {
+  background: url("htmlfilter_icon.png") no-repeat 0 0;
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+  border-bottom: none !important;
+  vertical-align: middle;
+  position: relative;
+  left: -9px; }
+
+/* @end */
+/* @group search and reserve view */
+.reservation-search .searchresults-header {
+  border-bottom: 1px solid #cacabb;
+  padding-bottom: 0;
+  background-color: #f4f4f1;
+  padding: 0 0 5px 0; }
+  .reservation-search .searchresults-header .resultinfo {
+    float: left;
+    line-height: 0.5em; }
+  .reservation-search .searchresults-header .resultactions div {
+    float: right;
+    line-height: 0.5em;
+    margin: 1em 0.6em;
+    color: #5b5a54;
+    position: relative;
+    top: 1px; }
+  .reservation-search .searchresults-header .button {
+    float: right;
+    line-height: 0.5em;
+    background: white;
+    color: #5b5a54;
+    border-color: #cacabb;
+    cursor: pointer; }
+  .reservation-search .searchresults-header .button:hover {
+    color: #32444a;
+    border-color: #757575; }
+.reservation-search #formfield-form-widgets-timeframes {
+  display: none; }
+.reservation-search .searchbox {
+  float: left;
+  padding: 1em;
+  background-color: #f4f4f1; }
+.reservation-search .resultinfo {
+  color: #5b5a54;
+  margin: 1.1em 0 0 1em; }
+.reservation-search .searchhelp {
+  float: left;
+  padding: 1em 1em 1em 2em;
+  color: #5b5a54; }
+.reservation-search .searchresults {
+  float: left;
+  padding-left: 2em;
+  /* have more space in the search results than usual */ }
+  .reservation-search .searchresults .new-day td {
+    padding-top: 1.5em; }
+.reservation-search .resultbox a.button.destructive {
+  line-height: 1.2em;
+  position: relative;
+  top: 1px; }
+@media screen and (max-width: 769px) {
+  .reservation-search .searchbox,
+  .reservation-search .searchhelp,
+  .reservation-search .searchresults,
+  .reservation-search #formfield-form-widgets-start_time,
+  .reservation-search #formfield-form-widgets-end_time {
+    float: none !important;
+    clear: both !important; }
+  .reservation-search .searchresults {
+    padding-left: 0; }
+  .reservation-search .searchbox {
+    padding-top: 1px; } }
+
+.limitedList .searchresults {
+  float: none;
+  padding-left: 0; }
+
+/* @end */
+/* @group allocations table macro */
+.allocations-table {
+  margin-bottom: 1.5em; }
+  .allocations-table .result-text {
+    color: #5b5a54; }
+  .allocations-table .result-time {
+    border-radius: 2px;
+    color: white;
+    padding: 2px 8px;
+    margin-right: 0.25em; }
+  .allocations-table td {
+    padding-top: 0.5em; }
+  .allocations-table td .result-day {
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    display: block;
+    float: left;
+    background: #E7EFF0;
+    padding: 0 0.5em;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+    color: #32444a;
+    float: none;
+    min-width: 100px;
+    text-align: center;
+    line-height: 1.75em;
+    margin: 0; }
+  .allocations-table .new-day td {
+    padding-top: 1em; }
+  .allocations-table tr td:first-child {
+    padding-right: 9px; }
+  .allocations-table tr td:last-child {
+    padding-left: 5px; }
 
 /* @end */
 /* @end */
@@ -4381,9 +4577,10 @@ ul.mobileNavigation {
   -webkit-border-radius: 0 3px 3px 3px;
   -moz-border-radius: 0 3px 3px 3px;
   position: relative;
+  display: none;
   z-index: 3;
   border: 1px solid #d1d1d1;
-  padding: 1em 1em 0 1em;
+  padding: 0.25em 1em 0 1em;
   margin: 0;
   position: absolute;
   left: 0;
@@ -4401,33 +4598,12 @@ ul.mobileNavigation {
     padding: 0.5em 0;
     margin: 0; }
   #portal-globalnav ul.flyoutChildren li.directLink {
-    border-bottom: 1px solid #d1d1d1; }
+    font-weight: bold; }
+    #portal-globalnav ul.flyoutChildren li.directLink + li {
+      border-top: 1px solid #e5e5e0; }
   #portal-globalnav ul.flyoutChildren a {
     text-decoration: none;
     display: block; }
-
-/* @end */
-/* @group ftw.slider */
-#slider-navi a.active {
-  background: #00616c; }
-
-#slider-wrapper .sliderText {
-  background-color: #003339;
-  background-image: -moz-linear-gradient(top, #00616c, #003339);
-  background-image: -ms-linear-gradient(top, #00616c, #003339);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#00616c), to(#003339));
-  background-image: -webkit-linear-gradient(top, #00616c, #003339);
-  background-image: -o-linear-gradient(top, #00616c, #003339);
-  background-image: linear-gradient(top, #00616c, #003339);
-  color: white;
-  height: 100px;
-  overflow: hidden; }
-  #slider-wrapper .sliderText a {
-    color: white; }
-
-#slider-wrapper a.prev,
-#slider-wrapper a.next {
-  text-decoration: none; }
 
 /* @end */
 /* @group book */
@@ -4437,7 +4613,7 @@ ul.mobileNavigation {
 /* @end */
 /* @group tinymce */
 .mceActionPanel input, .plonebutton {
-  color: white !important; }
+  color: #FFF !important; }
 
 .mceActionPanel #cancel {
   color: #32444a !important; }
@@ -4469,6 +4645,11 @@ body #internallinkcontainer .list.item a {
 .template-izug_listing_view .CustomlistingItem {
   margin-bottom: 2em;
   border-bottom: 1px solid #f4f4f1; }
+
+/* @end */
+/* @group ftw.bridge watcher portlet */
+.portletWatcher dd {
+  margin-bottom: 0.75em; }
 
 /* @end */
 /* @group sharing table */
@@ -4534,3 +4715,5 @@ body.template-theming-controlpanel #portal-footer-wrapper {
   display: none; }
 
 /* @end */
+
+/*# sourceMappingURL=static.css.map */
