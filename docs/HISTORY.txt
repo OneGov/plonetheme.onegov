@@ -4,7 +4,9 @@ Changelog
 1.6.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Yet another bugfix for the breadcrump flyout navigation.
+  The "noChildren" class was missing on elements without children.
+  [mathias.leimgruber]
 
 
 1.6.1 (2015-05-26)
