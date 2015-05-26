@@ -4,6 +4,9 @@ Changelog
 1.5.4 (unreleased)
 ------------------
 
+- Add new filter form mockup. Check `filter.html`.
+  [mathias.leimgruber]
+
 - Move all tabbedview styles to the ftw.tabbedview package.
   This also includes the print styles for ftw.tabbedview.
   ftw.tabbedview 3.3.14 is required.
