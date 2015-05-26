@@ -12,7 +12,7 @@ function close_opened_breadcrumbs(element) {
 
 function valid_response(data) {
   // It's possible that we do no get what we expect.
-  return $(data).is('ul.flyoutChildren');
+  return $(data).is('ul.flyoutChildren') || $(data).is('ul.children');
 }
 
 jQuery(function($) {
