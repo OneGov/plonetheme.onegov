@@ -28,3 +28,21 @@ class TestFlyoutNavigationViewlet(TestCase):
         self.assertNotIn(
             'flyoutEnabled',
             browser.css('#portal-globalnav').first.classes)
+
+    @browsing
+    def test_flyout_navigation_is_enabled(self, browser):
+        browser.open()
+        self.assertNotIn(
+            'flyoutGrandchildrenEnabled',
+            browser.css('#portal-globalnav').first.classes)
+
+    @browsing
+    def test_flyout_navigation_is_disabled(self, browser):
+        registry = getUtility(IRegistry)
+        registry['plonetheme.onegov.flyout_grandchildren_navigation'] = True
+        transaction.commit()
+
+        browser.open()
+        self.assertIn(
+            'flyoutGrandchildrenEnabled',
+            browser.css('#portal-globalnav').first.classes)

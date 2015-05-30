@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<registry>
+  <record name="plonetheme.onegov.flyout_grandchildren_navigation">
+    <field type="plone.registry.field.Bool">
+      <title>Show grandchildren as flyout in global navigation.</title>
+      <value_type type="plone.registry.field.Bool" />
+    </field>
+    <value>False</value>
+  </record>
+</registry>

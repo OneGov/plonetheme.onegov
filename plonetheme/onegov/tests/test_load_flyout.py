@@ -84,3 +84,18 @@ class TestFyloutView(TestCase):
         self.assertEqual(
             '<ul aria="menu" class="flyoutChildren"><li class="directLink"><a aria="menuitem" href="http://nohost/plone/b-subfolder-b">Direct to &lt;b&gt;SubFolder&lt;/b&gt;</a></li></ul>',
             folder.unrestrictedTraverse('load_flyout_children')())
+            
+    def test_markup_grandchildren(self):
+        folder = create(Builder('folder'))
+        subfolder = create(Builder('subfolder').within(folder))
+        page = create(Builder('page').within(subfolder))
+        
+        registry = getUtility(IRegistry)
+        registry['plonetheme.onegov.flyout_grandchildren_navigation'] = True
+        transaction.commit()
+
+        self.assertEqual(
+            '<ul aria="menu" class="flyoutChildren"><li class="directLink"><a aria="menuitem" href="http://nohost/plone/b-xyz-b">Direct to &lt;b&gt;SubFolder&lt;/b&gt;</a></li></ul>',
+            subfolder.unrestrictedTraverse('load_flyout_children')())
+        
+        

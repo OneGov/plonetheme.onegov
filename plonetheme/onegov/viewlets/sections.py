@@ -10,3 +10,7 @@ class GlobalSectionsViewlet(common.GlobalSectionsViewlet):
     def flyout_enabled(self):
         registry = getUtility(IRegistry)
         return registry.get('plonetheme.onegov.flyout_navigation', False)
+
+    def flyout_grandchildren_enabled(self):
+        registry = getUtility(IRegistry)
+        return registry.get('plonetheme.onegov.flyout_grandchildren_navigation', False)
