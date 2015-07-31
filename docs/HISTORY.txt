@@ -4,7 +4,8 @@ Changelog
 1.6.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Global navigation: optional flyout of 2nd level
+  [ksuess]
 
 
 1.6.2 (2015-05-26)
