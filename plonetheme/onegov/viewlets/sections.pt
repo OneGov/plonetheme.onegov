@@ -1,6 +1,6 @@
 <tal:sections tal:define="portal_tabs view/portal_tabs" tal:condition="portal_tabs" i18n:domain="plone">
   <nav id="portal-globalnav-wrapper" role="navigation">
-    <ul id="portal-globalnav" role="menubar" tal:attributes="class python: view.flyout_enabled() and 'flyoutEnabled' or None" tal:define="selected_tab python:view.selected_portal_tab">
+    <ul id="portal-globalnav" role="menubar" tal:attributes="class python: (view.flyout_enabled() and 'flyoutEnabled' or '') + (view.flyout_grandchildren_enabled() and ' flyoutGrandchildrenEnabled' or '')" tal:define="selected_tab python:view.selected_portal_tab">
       <tal:tabs tal:repeat="tab portal_tabs">
         <li role="presentation" tal:define="tid tab/id" tal:attributes="id string:portaltab-${tid};
                             class python:selected_tab==tid and 'selected' or 'plain'">

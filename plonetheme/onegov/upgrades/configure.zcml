@@ -79,4 +79,13 @@
       directory="profiles/1116"
       />
 
+   <!-- 1116 -> 1117 -->
+   <upgrade-step:importProfile
+      title="Optional flyout of grandchildren in global navigation"
+      profile="plonetheme.onegov:default"
+      source="1116"
+      destination="1117"
+      directory="profiles/1117"
+      />
+
 </configure>
