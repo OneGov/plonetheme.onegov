@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.6.3 (unreleased)
+1.7.0 (2015-07-31)
 ------------------
 
 - Global navigation: optional flyout of 2nd level
