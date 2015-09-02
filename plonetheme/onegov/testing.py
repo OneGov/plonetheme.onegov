@@ -8,7 +8,6 @@ from plone.app.testing import IntegrationTesting
 from plone.app.testing import PLONE_FIXTURE
 from plone.app.testing import PloneSandboxLayer
 from zope.configuration import xmlconfig
-import plonetheme.onegov.tests.builders
 
 
 class MetaZCMLLayer(ComponentRegistryLayer):
