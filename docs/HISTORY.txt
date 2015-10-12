@@ -4,7 +4,9 @@ Changelog
 1.7.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Move all event styles to the seantis.dir.events package.
+  seantis.dir.events 1.6 is required.
+  [msom]
 
 
 1.7.0 (2015-07-31)
