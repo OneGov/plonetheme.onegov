@@ -55,7 +55,6 @@
   <theme:add_scss path="resources/sass/components/batching.scss" />
   <theme:add_scss path="resources/sass/components/responsive.scss" />
   <theme:add_scss path="resources/sass/components/recurrencewidget.scss" />
-  <theme:add_scss path="resources/sass/components/people.scss" />
   <theme:add_scss path="resources/sass/components/accessibility.scss" />
   <theme:add_scss path="resources/sass/components/overrides.scss" />
 
