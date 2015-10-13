@@ -12,6 +12,10 @@ Changelog
   seantis.dir.base 1.9 is required.
   [msom]
 
+- Move all facility styles to the seantis.dir.facility package.
+  seantis.dir.facility 1.8 is required.
+  [msom]
+
 
 1.7.0 (2015-07-31)
 ------------------
