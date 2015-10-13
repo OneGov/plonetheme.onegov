@@ -8,6 +8,10 @@ Changelog
   seantis.dir.events 1.6 is required.
   [msom]
 
+- Move all directory styles to the seantis.dir.base package.
+  seantis.dir.base 1.9 is required.
+  [msom]
+
 
 1.7.0 (2015-07-31)
 ------------------
