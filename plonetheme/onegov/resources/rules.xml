@@ -51,6 +51,7 @@
     <replace css:content-children="#portal-topactions" css:theme-children="#portal-topactions" />
 
     <replace css:content="ul.mobileButtons" css:theme="ul.mobileButtons" />
+    <before css:content="#globalstatusmessage" css:theme-children="#breadcrumbs-wrapper" />
 
     <replace css:content-children="#portal-breadcrumbs" css:theme-children="#portal-breadcrumbs" />
     <drop css:content="#portal-breadcrumbs" />
