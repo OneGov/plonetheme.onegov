@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.7.1 (unreleased)
+1.7.1 (2015-11-26)
 ------------------
 
 - Include global status message (ftw.globalstatusmessage).
