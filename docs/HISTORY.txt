@@ -1,8 +1,11 @@
 Changelog
 =========
 
-1.7.1 (unreleased)
+1.7.2 (unreleased)
 ------------------
+
+- Add spinner icon.
+  [mson]
 
 - Move all event styles to the seantis.dir.events package.
   seantis.dir.events 1.6 is required.
@@ -24,6 +27,11 @@ Changelog
   seantis.people 0.33 is required.
   [msom]
 
+1.7.1 (2015-11-26)
+------------------
+
+- Include global status message (ftw.globalstatusmessage).
+  [jone]
 
 1.7.0 (2015-07-31)
 ------------------
