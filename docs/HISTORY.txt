@@ -7,6 +7,25 @@ Changelog
 - Add spinner icon.
   [mson]
 
+- Move all event styles to the seantis.dir.events package.
+  seantis.dir.events 1.6 is required.
+  [msom]
+
+- Move all directory styles to the seantis.dir.base package.
+  seantis.dir.base 1.9 is required.
+  [msom]
+
+- Move all facility styles to the seantis.dir.facility package.
+  seantis.dir.facility 1.8 is required.
+  [msom]
+
+- Move all reservation styles to the seantis.reservation package.
+  seantis.reservation 1.3 is required.
+  [msom]
+
+- Move all people styles to the seantis.people package.
+  seantis.people 0.33 is required.
+  [msom]
 
 1.7.1 (2015-11-26)
 ------------------
