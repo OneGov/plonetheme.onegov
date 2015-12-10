@@ -152,7 +152,7 @@ jQuery(function($) {
     }
   });
 
-  $('#portal-breadcrumbs .flyoutBreadcrumbs a.loadChildren').live('click', function(e){
+  $('#portal-breadcrumbs').delegate('.flyoutBreadcrumbs a.loadChildren', 'click', function(e){
     e.preventDefault();
     var me = $(this);
     var parent = me.parent();
