@@ -17,7 +17,7 @@ function valid_response(data) {
 
 jQuery(function($) {
 
-   var load_flyout_grandchildren = function(indicator, open) {       
+   var load_flyout_grandchildren = function(indicator, open) {
       var me = indicator.children("a:first");
       var parent = me.parent('li');
 
@@ -49,7 +49,7 @@ jQuery(function($) {
         parent.toggleClass('flyoutActive');
       }
   };
-    
+
   var load_flyout_children = function(indicator, open) {
     var me = indicator;
     var parent = me.parent('.wrapper').parent('li');
@@ -79,7 +79,7 @@ jQuery(function($) {
                 }, function(e){
                   e.preventDefault();
                   load_flyout_grandchildren($(this), false);
-                });   
+                });
             }
           }
         }
