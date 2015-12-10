@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.7.2 (unreleased)
+1.8.0 (2015-12-10)
 ------------------
 
 - Add spinner icon.
