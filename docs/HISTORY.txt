@@ -4,7 +4,8 @@ Changelog
 1.8.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Pin ftw.subsite < 2.0.0. The DX implementation of subsite is not yet supported.
+  [mathias.leimgruber]
 
 
 1.8.0 (2015-12-10)
