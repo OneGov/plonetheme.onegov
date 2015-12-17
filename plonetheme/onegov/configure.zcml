@@ -35,6 +35,14 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:registerProfile
+      name="bumblebee"
+      title="plonetheme.onegov: bumblebee"
+      directory="profiles/bumblebee"
+      description="Installs the plonetheme.onegov package including bumblebee styles"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
   <plone:static type="theme" directory="resources" />
 
   <theme:add_scss path="resources/sass/post_variables.scss" />

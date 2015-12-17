@@ -4,6 +4,9 @@ Changelog
 1.8.1 (unreleased)
 ------------------
 
+- Add installation profile to support "ftw.bumblebee".
+  [mbaechtold]
+
 - Pin ftw.subsite < 2.0.0. The DX implementation of subsite is not yet supported.
   [mathias.leimgruber]
 
