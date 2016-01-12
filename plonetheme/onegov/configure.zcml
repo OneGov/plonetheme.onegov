@@ -50,6 +50,7 @@
   <theme:add_scss path="resources/sass/components/book.scss" />
   <theme:add_scss path="resources/sass/components/overlays.scss" />
   <theme:add_scss path="resources/sass/components/menues.scss" />
+  <theme:add_scss path="resources/sass/components/shop.scss" />
   <theme:add_scss path="resources/sass/components/messages.scss" />
   <theme:add_scss path="resources/sass/components/tables.scss" />
   <theme:add_scss path="resources/sass/components/batching.scss" />
