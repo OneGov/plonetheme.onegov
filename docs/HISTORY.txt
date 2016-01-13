@@ -4,6 +4,13 @@ Changelog
 1.8.1 (unreleased)
 ------------------
 
+- Remove unused sass-watcher stuff. The css will be generated automatically.
+  Current sass watcher is not working for building statis scss files
+  According to 82fdefd933ed96056262157da7aa91726ba6524f the scss files are generated through the server.
+  So the sass watcher script is no longer needed. btw viewing the index.html file without running a server
+  does not work anyway so the statis files are obsolete.
+  [elioschmutz]
+
 - Pin ftw.subsite < 2.0.0. The DX implementation of subsite is not yet supported.
   [mathias.leimgruber]
 
