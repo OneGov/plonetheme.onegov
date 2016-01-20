@@ -4,6 +4,9 @@ Changelog
 1.8.1 (unreleased)
 ------------------
 
+- Fix adjust styling for shopitem variation
+  [elioschmutz]
+
 - Remove unused sass-watcher stuff. The css will be generated automatically.
   Current sass watcher is not working for building statis scss files
   According to 82fdefd933ed96056262157da7aa91726ba6524f the scss files are generated through the server.
