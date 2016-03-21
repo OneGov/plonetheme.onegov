@@ -133,3 +133,32 @@ body.template-book_reader_view {
 
 
 /* @end */
+
+/* @group TinyMCE footnote plugin */
+span.footnote-info {
+  display: inline-block;
+  background-image: url(++resource++ftw.book.tinymce.footnote/img/info.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 2px;
+  width: 1em;
+  height: 1em;
+}
+
+span.footnote {
+  position: relative;
+}
+
+span.footnote:hover:after{
+  border: 1px solid #205c90;
+  padding: 3px 6px;
+  background: #ddd;
+  content: attr(data-footnote);
+  position: absolute;
+  left: 0;
+  top: 1.3em;
+  width: 200px;
+  text-align: center;
+  z-index: 2;
+}
+/* @end */
