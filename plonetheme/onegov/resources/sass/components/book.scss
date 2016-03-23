@@ -135,8 +135,9 @@ body.template-book_reader_view {
 /* @end */
 
 /* @group TinyMCE footnote plugin */
-span.footnote-info {
+span.footnote:after {
   display: inline-block;
+  content: ' ';
   background-image: url(++resource++ftw.book.tinymce.footnote/img/info.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -144,12 +145,10 @@ span.footnote-info {
   width: 1em;
   height: 1em;
 }
-
 span.footnote {
   position: relative;
 }
-
-span.footnote:hover:after{
+span.footnote:hover:before {
   border: 1px solid #205c90;
   padding: 3px 6px;
   background: #ddd;
