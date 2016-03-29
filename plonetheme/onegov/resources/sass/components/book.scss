@@ -161,3 +161,15 @@ span.footnote:hover:before {
   z-index: 2;
 }
 /* @end */
+
+/* @group TinyMCE keyword plugin */
+.ploneSkin span.mce_tinymce_keyword {
+	background: url("++resource++ftw.book.tinymce.keyword/img/keyword.png") no-repeat center center;
+}
+
+span.keyword, body.mceContentBody span.keyword {
+  border: 1px dashed green;
+  padding-left: 1px;
+  padding-right: 1px;
+}
+/* @end */

@@ -4,6 +4,8 @@ Changelog
 1.6.3 (unreleased)
 ------------------
 
+- Add styling for ftw.books TinyMCE keyword plugin. [jone]
+
 - Add styling for ftw.books TinyMCE footnote plugin. [jone]
 
 
