@@ -4,6 +4,9 @@ Changelog
 1.8.1 (unreleased)
 ------------------
 
+- Fix broken print result for simplelayout pages
+  [Kevin Bieri]
+
 - Add styling for ftw.books TinyMCE footnote plugin.
   (Ported from 1.6.3) [jone]
 
