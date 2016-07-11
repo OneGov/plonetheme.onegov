@@ -843,6 +843,16 @@ div.ListingBlock div.gallery .sl-img-wrapper img {
   margin: auto;
 }
 
+.simplelayout-block-wrapper {
+  &:before, &:after {
+   content: "";
+   display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
 /* @end */
 
 /* @group to_top link */
