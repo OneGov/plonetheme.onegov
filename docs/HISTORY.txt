@@ -4,6 +4,9 @@ Changelog
 1.8.1 (unreleased)
 ------------------
 
+- Display contenttype icons in plonebrowser
+  [Kevin Bieri]
+
 - Fix broken print result for simplelayout pages
   [Kevin Bieri]
 

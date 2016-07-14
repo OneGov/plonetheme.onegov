@@ -1,0 +1,311 @@
+.contenttype-blog:before,
+.contenttype-blogcategory:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "< ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+.contenttype-book:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "? ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+.contenttype-textblock:before,
+.contenttype-paragraph:before,
+.contenttype-graphicblock:before,
+.contenttype-htmlblock:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "I ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+.contenttype-contact:before,
+.contenttype-ftw_contact:before,
+.contenttype-member:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "\\ ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+.contenttype-poodle:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "a ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+.contenttype-document:before,
+.contenttype-contentpage:before,
+.contenttype-ftw-topics-topic:before,
+.contenttype-page:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: " ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+.contenttype-meeting-item:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "K ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+.contenttype-billboardcategory:before,
+.contenttype-newsfolder:before,
+.contenttype-eventfolder:before,
+.contenttype-homefolder:before,
+.contenttype-tabbedviewfolder:before,
+.contenttype-folder:before,
+.contenttype-ftw-topics-topictree:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "] ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+.contenttype-banner:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "X ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+.contenttype-link:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: " ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+.link-mailto a:before,
+.contenttype-ftw_mail:before,
+.contenttype-mail:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: ". ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+.contenttype-news:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "a ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+.contenttype-news-item:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "a ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+.contenttype-event:before,
+.contenttype-plone-app-event-dx-event:before,
+.contenttype-eventpage:before,
+.contenttype-meeting:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "e ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+.contenttype-ticket:before,
+.contenttype-poiissue:before,
+.contenttype-task:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "8 ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+.contenttype-workspace:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "% ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+.contenttype-remark:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "E ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+.contenttype-billboardad:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: ": ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+.contenttype-ticket-box:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "F ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+.contenttype-chapter:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "# ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+.contenttype-table:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "L ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+.contenttype-classificationitem:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: " ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+.contenttype-blogentry:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "N ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+.contenttype-formfolder:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: " ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+.contenttype-subsite:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "Y ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+.contenttype-listingblock:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "I ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+.contenttype-addressblock:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "I ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+.contenttype-refegovservice:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: " ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+.contenttype-shopitemblock:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "H ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+.contenttype-collection:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "F ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+/* seantis.dir.base and seantis.dir.contacts */
+.contenttype-seantis-dir-contacts-directory:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "F ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+.contenttype-seantis-dir-contacts-item:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "_ ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+.contenttype-seantis-dir-contacts-contact:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+/* ftw.shop */
+.contenttype-supplier:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "8 ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+.contenttype-shopcategory:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "7 ";
+  white-space: nowrap;
+  line-height: 1em;
+}
+
+.contenttype-shopitem:before {
+  font-family: "icomoon";
+  font-size: 1em;
+  content: "H ";
+  white-space: nowrap;
+  line-height: 1em;
+}
