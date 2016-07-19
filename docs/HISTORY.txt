@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.6.4 (unreleased)
+1.6.4 (2016-07-19)
 ------------------
 
 - Fix broken print result for simplelayout pages
