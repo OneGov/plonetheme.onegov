@@ -10,6 +10,9 @@ Changelog
 - Fix broken print result for simplelayout pages
   [Kevin Bieri]
 
+- Implement ftw.subsite 2.x logo viewlet.
+  [mathias.leimgruber]
+
 - Add styling for ftw.books TinyMCE footnote plugin.
   (Ported from 1.6.3) [jone]
 
