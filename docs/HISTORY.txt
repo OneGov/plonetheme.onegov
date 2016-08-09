@@ -4,6 +4,9 @@ Changelog
 1.8.1 (unreleased)
 ------------------
 
+- Remove Sl ui elements from print.css
+  [tschanzt]
+
 - Show the flyout if the object has no children (does not apply to breadcrumbs).
   [mbaechtold]
 
