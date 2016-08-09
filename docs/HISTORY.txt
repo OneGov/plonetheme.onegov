@@ -4,6 +4,10 @@ Changelog
 1.6.5 (unreleased)
 ------------------
 
+- Fix UnicodeDecode error when flyout items contain non-ASCII characters.
+  This is a backport of https://github.com/OneGov/plonetheme.onegov/pull/196.
+  [mbaechtold]
+
 - Display contenttype icons in plonebrowser (backport of #195).
   [Kevin Bieri]
 
