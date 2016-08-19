@@ -10,6 +10,9 @@ Changelog
 - Fix broken print result for simplelayout pages
   [Kevin Bieri]
 
+- Remove Solr livesearch javascript resource (requires ftw.solr >= 1.5.0)
+  [mbaechtold]
+
 - Implement ftw.subsite 2.x logo viewlet.
   [mathias.leimgruber]
 
