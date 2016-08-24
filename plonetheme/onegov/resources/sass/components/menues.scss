@@ -1,6 +1,6 @@
 /* @group Content pulldowns (edit-bar) */
 
-dl.actionMenu a, dl.actionMenu a:hover, #edit-bar a {
+.actionMenu a, .actionMenu a:hover, #edit-bar a {
   text-decoration: none;
 }
 #edit-bar ul {
@@ -38,7 +38,7 @@ dl.actionMenu a, dl.actionMenu a:hover, #edit-bar a {
 .ie6 ul#content-views {
   margin: -2px -3px 0px -3px;
 }
-#edit-bar li dd.actionMenuContent a {
+#edit-bar li .actionMenuContent a {
   display: block;
   @include borderradius(0);
 }
@@ -68,11 +68,13 @@ dl.actionMenu a, dl.actionMenu a:hover, #edit-bar a {
     padding: 0;
   }
 }
-#contentActionMenus dl.actionMenu.activated dd {
+#contentActionMenus .actionMenu.activated .actionMenuContent {
   z-index: 5;
   right: -3px;
 }
-#portal-personaltools.activated dd a:hover, #container #contentActionMenus dl.actionMenu.activated dd a:hover, #container #contentActionMenus dl.actionMenu.activated dd .actionMenuSelected {
+#portal-personaltools.activated .actionMenuContent a:hover,
+#container #contentActionMenus .actionMenu.activated .actionMenuContent a:hover,
+#container #contentActionMenus .actionMenu.activated .actionMenuContent .actionMenuSelected {
   background-color: $lightgray;
 }
 #content .tabbedview-tab-menu .actionMenuContent a:hover {
@@ -80,17 +82,17 @@ dl.actionMenu a, dl.actionMenu a:hover, #edit-bar a {
   color: $link-color-hover !important;
   /* TODO remove important in tabbedview.css */
 }
-.actionMenuContent ul, #portal-personaltools dd ul {
+.actionMenuContent ul, #portal-personaltools .actionMenuContent ul {
   @include ul($style: 'plain');
   & li {
     margin: 0;
   }
 }
-#portal-personaltools dt {
+#portal-personaltools .actionMenuHeader {
   border: 1px solid $lightgray2;
   padding: 0 0.5em 0 0.25em;
 }
-#portal-personaltools.activated dt {
+#portal-personaltools.activated .actionMenuHeader {
   background: $lightgray;
 }
 #portal-personaltools.anon-personalbar {
@@ -132,14 +134,14 @@ dl.actionMenu a, dl.actionMenu a:hover, #edit-bar a {
 }
 
 
-#portal-personaltools, #contentActionMenus dl.actionMenu {
+#portal-personaltools, #contentActionMenus .actionMenu {
   line-height: 2em;
 }
-#portal-personaltools dd {
+#portal-personaltools .actionMenuContent {
   background-color: $page-background;
   right: 0;
 }
-#portal-personaltools dd li a:hover {
+#portal-personaltools .actionMenuContent li a:hover {
   background-color: $lightgray;
 }
 #user-name, #personaltools-portrait {
@@ -170,24 +172,24 @@ dl.actionMenu a, dl.actionMenu a:hover, #edit-bar a {
 #portal-languageselector-wrapper {
   float: right;
 }
-#portal-languageselector dt {
+#portal-languageselector .actionMenuHeader {
   border: 1px solid $lightgray2;
   padding: 0.25em 0.5em;
   margin-top: 0.5em;
 }
-#portal-languageselector dt a:after {
+#portal-languageselector .actionMenuHeader a:after {
   font-size: 10px;
 }
-#portal-languageselector.activated dt {
+#portal-languageselector.activated .actionMenuHeader {
   background: $lightgray;
 }
-#portal-languageselector dd {
+#portal-languageselector .actionMenuContent {
   right: -1px;
   background: $page-background;
   border: 1px solid $page-bordercolor;
   border-top-width: 0;
 }
-#portal-languageselector dd a:hover {
+#portal-languageselector .actionMenuContent a:hover {
   background-color: $lightgray;
   color: $link-color-hover;
 }
@@ -215,35 +217,36 @@ dl.actionMenu a, dl.actionMenu a:hover, #edit-bar a {
   @include boxshadow(0.5em 0.5em 1em -1em $page-bordercolor);
   border-top-width: 1px;
 }
-dl.actionMenu {
+.actionMenu {
   float: right;
   white-space: nowrap;
   position: relative;
   margin-left: 0.5em;
 }
-dl.actionMenu a, dl.actionMenu div {
+.actionMenu a, .actionMenu div {
   display: block;
   white-space: nowrap;
 }
-#column-content dl.actionMenu dt, dl.actionMenu dt {
+#column-content .actionMenu .actionMenuHeader,
+.actionMenu .actionMenuHeader {
   font-weight: normal;
 }
-#content dl.actionMenu ul {
+#content .actionMenu ul {
   margin-bottom: 0;
 }
 span.arrowDownAlternative {
   font-size: 10px;
   line-height: 2em;
 }
-dl.actionMenu.deactivated dd {
+.actionMenu.deactivated .actionMenuContent {
   display: none;
 }
-dl.actionMenu.activated dd {
+.actionMenu.activated .actionMenuContent {
   position: absolute;
   width: auto;
   min-width: 100%;
 }
-dl.actionMenu.activated dd a {
+.actionMenu.activated .actionMenuContent a {
   padding: 0 0.5em;
 }
 #edit-bar .actionSeparator a {

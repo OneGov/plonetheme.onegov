@@ -4,6 +4,9 @@ Changelog
 1.8.1 (unreleased)
 ------------------
 
+- Remove dd/dl/dt from selectors to support valid html structures.
+  [mathias.leimgruber]
+
 - Display contenttype icons in plonebrowser
   [Kevin Bieri]
 
