@@ -4,6 +4,9 @@ Changelog
 1.8.1 (unreleased)
 ------------------
 
+- Implement a cached flyout menu.
+  [mathias.leimgruber]
+
 - Remove dd/dl/dt from selectors to support valid html structures.
   [mathias.leimgruber]
 

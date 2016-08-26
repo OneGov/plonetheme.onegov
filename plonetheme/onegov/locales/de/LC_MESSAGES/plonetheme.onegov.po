@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-08-15 12:48+0000\n"
+"POT-Creation-Date: 2016-08-25 15:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -10,14 +10,53 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: DOMAIN\n"
+
+#: ./plonetheme/onegov/upgrades/configure.zcml:53
+msgid "Add possibility to disable the flyout navigation."
+msgstr ""
+
+#: ./plonetheme/onegov/upgrades/configure.zcml:26
+msgid "Add tinymce popup css"
+msgstr ""
 
 msgid "Direct to"
 msgstr "Direkt zu"
 
+#: ./plonetheme/onegov/upgrades/configure.zcml:35
+msgid "Enable flyout breadcrumbs"
+msgstr ""
+
+#: ./plonetheme/onegov/upgrades/configure.zcml:62
+msgid "Fix skins settings"
+msgstr ""
+
+#: ./plonetheme/onegov/upgrades/configure.zcml:44
+msgid "Fix theme doctype"
+msgstr ""
+
+#: ./plonetheme/onegov/configure.zcml:35
+msgid "Installs the plonetheme.onegov package"
+msgstr ""
+
+#: ./plonetheme/onegov/upgrades/configure.zcml:71
+msgid "Make OnegovTheme default skin"
+msgstr ""
+
 #: ./plonetheme/onegov/profiles/default/actions.xml
 msgid "Manage styles"
 msgstr "Design bearbeiten"
+
+#: ./plonetheme/onegov/upgrades/configure.zcml:89
+msgid "Optional flyout of grandchildren in global navigation"
+msgstr ""
+
+#: ./plonetheme/onegov/upgrades/configure.zcml:80
+msgid "Remove forked javascript from ftw.mobilenavigation"
+msgstr ""
+
+#: ./plonetheme/onegov/upgrades/configure.zcml:17
+msgid "Update tinymce css"
+msgstr ""
 
 #. Default: "Next Page"
 #: ./plonetheme/onegov/browser/batchnavigation.pt:56
@@ -119,6 +158,10 @@ msgstr "Hover Farbe der Links"
 msgid "logo"
 msgstr "Logo"
 
+#: ./plonetheme/onegov/configure.zcml:35
+msgid "plonetheme.onegov"
+msgstr ""
+
 msgid "startup"
 msgstr "Startup Icon für's iPhone"
 
@@ -126,6 +169,11 @@ msgstr "Startup Icon für's iPhone"
 #: ./plonetheme/onegov/profiles/default/actions.xml
 msgid "subsite_current_language"
 msgstr "de"
+
+#. Default: "Direct to ${title}"
+#: ./plonetheme/onegov/browser/flyout.pt:14
+msgid "text_flyout_direct_to"
+msgstr "Direkt zu ${title}"
 
 msgid "touch_iphone"
 msgstr "Touch Icon für's iPhone"
@@ -138,3 +186,4 @@ msgstr "Touch Icon für's iPhone (152px)"
 
 msgid "touch_iphone_76"
 msgstr "Touch Icon für's iPhone (76px)"
+
