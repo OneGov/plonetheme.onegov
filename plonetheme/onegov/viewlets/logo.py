@@ -1,7 +1,9 @@
 from BTrees.OOBTree import OOBTree
+from plone import api
 from plone.app.layout.navigation.root import getNavigationRoot
 from plone.app.layout.viewlets import common
 from plonetheme.onegov.utils import replace_custom_keywords
+from Products.Archetypes.interfaces import IBaseObject
 from Products.CMFCore.interfaces._content import IContentish
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
@@ -48,25 +50,30 @@ class LogoViewlet(common.LogoViewlet):
 
     def subsite_logo_behaviour(self):
         # Copy of ftw.subsite.viewlets.subsitelogoviewlet
-        portal = self.portal_state.portal()
-        self.navigation_root_url = self.portal_state.navigation_root_url()
+        nav_root = api.portal.get_navigation_root(self.context)
+        nav_root_title = nav_root.Title()
+        self.navigation_root_url = nav_root.absolute_url()
 
-        subsite_logo = getattr(self.context, 'logo', None)
-        subsite_logo_alt_text = getattr(self.context, 'logo_alt_text', None)
+        if IBaseObject.providedBy(nav_root):
+            subsite_logo = nav_root.getLogo()
+            subsite_logo_alt_text = nav_root_title
+
+        else:
+            subsite_logo = getattr(self.context, 'logo', None)
+            subsite_logo_alt_text = getattr(self.context,
+                                            'logo_alt_text',
+                                            None)
 
         if subsite_logo and subsite_logo.data:
             # we are in a subsite
             context = self.context
             if not IContentish.providedBy(context):
                 context = context.aq_parent
-            navigation_root_path = getNavigationRoot(context)
-            scale = portal.restrictedTraverse(
-                navigation_root_path + '/@@images')
+            scale = nav_root.restrictedTraverse('@@images')
 
             self.logo_tag = scale.scale('logo', scale="logo").tag(
                 alt=subsite_logo_alt_text, title=None)
-            self.title = self.context.restrictedTraverse(
-                getNavigationRoot(self.context)).Title()
+            self.title = nav_root_title
         else:
             # onegov default
             self.onegov_logo_behaviour()
