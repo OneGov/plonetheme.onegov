@@ -43,7 +43,7 @@ class LoadFlyoutChildren(BrowserView):
         self.update()
         self.set_response_headers()
 
-        if len(self.nodes) or not self.is_breadcrumb():
+        if len(self.nodes) or not self.is_breadcrumb:
             return self.template()
         else:
             return ""
