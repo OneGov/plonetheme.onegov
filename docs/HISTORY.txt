@@ -4,6 +4,9 @@ Changelog
 1.8.1 (unreleased)
 ------------------
 
+- Show the flyout if the object has no children (does not apply to breadcrumbs).
+  [mbaechtold]
+
 - Implement a cached flyout menu.
   [mathias.leimgruber]
 

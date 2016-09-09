@@ -1,11 +1,10 @@
 <tal:nav
     tal:define="nodes view/nodes"
     tal:attributes="id string:nav_${view/context/getId}"
-    tal:condition="nodes"
     i18n:domain="plonetheme.onegov">
 
     <ul tal:attributes="class python:view.is_breadcrumb and 'children' or 'flyoutChildren'"
-        arai="menu">
+        aria="menu">
         <li tal:condition="not:view/is_breadcrumb">
             <a role="menuitem"
                class="separator directLink"

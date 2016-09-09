@@ -48,6 +48,21 @@ class TestFyloutView(TestCase):
                          browser.css('.level1 a').first.attrib['href'])
 
     @browsing
+    def test_direct_link_without_children(self, browser):
+        """
+        This test makes sure that the direct link is shown even if
+        the context has no children.
+        """
+        create(Builder('folder'))
+
+        browser.login().visit(view='load_flyout_children')
+
+        self.assertTrue(
+            browser.css('.directLink'),
+            'Direct link is not there but it should.'
+        )
+
+    @browsing
     def test_markup_without_direct_link_for_breadcrumbs(self, browser):
         # create a folder, otherwise the breadcrumbs are empty (test below)
         create(Builder('folder'))
