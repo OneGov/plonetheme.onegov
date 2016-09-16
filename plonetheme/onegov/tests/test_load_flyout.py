@@ -9,6 +9,8 @@ from plone.app.testing import login
 from plone.app.testing import setRoles
 from plonetheme.onegov.testing import THEME_INTEGRATION_TESTING
 from unittest2 import TestCase
+from plone.registry.interfaces import IRegistry
+from zope.component import getUtility
 
 
 class TestFyloutView(TestCase):
@@ -73,14 +75,26 @@ class TestFyloutView(TestCase):
                          view.direct_to_link())
 
     def test_html_chars_are_escaped(self):
-        create(Builder('folder').titled('<b>SubFolder</b>'))
+        create(Builder('folder').titled(u'<b>SubF\xf6lder</b>'))
         self.request.form.update({'breadcrumbs': '1'})
         self.assertEqual(
-            '<ul aria="menu" class="children"><li class="noChildren level1"><a aria="menuitem" href="http://nohost/plone/b-subfolder-b">&lt;b&gt;SubFolder&lt;/b&gt;</a></li></ul>',
+            u'<ul aria="menu" class="children"><li class="noChildren level1"><a aria="menuitem" href="http://nohost/plone/b-subfolder-b">&lt;b&gt;SubF\xf6lder&lt;/b&gt;</a></li></ul>',
             self.portal.unrestrictedTraverse('load_flyout_children')())
 
     def test_html_chars_are_escaped_in_direct_link(self):
-        folder = create(Builder('folder').titled('<b>SubFolder</b>'))
+        folder = create(Builder('folder').titled(u'<b>SubF\xf6lder</b>'))
         self.assertEqual(
-            '<ul aria="menu" class="flyoutChildren"><li class="directLink"><a aria="menuitem" href="http://nohost/plone/b-subfolder-b">Direct to &lt;b&gt;SubFolder&lt;/b&gt;</a></li></ul>',
+            u'<ul aria="menu" class="flyoutChildren"><li class="directLink"><a aria="menuitem" href="http://nohost/plone/b-subfolder-b">Direct to &lt;b&gt;SubF\xf6lder&lt;/b&gt;</a></li></ul>',
             folder.unrestrictedTraverse('load_flyout_children')())
+            
+    def test_markup_grandchildren(self):
+        folder = create(Builder('folder').titled('My Folder'))
+        subfolder = create(Builder('folder').titled(u'My Subf\xf6lder').within(folder))
+        create(Builder('page').titled(u'My P\xe4ge').within(subfolder))
+        
+        registry = getUtility(IRegistry)
+        registry['plonetheme.onegov.flyout_grandchildren_navigation'] = True
+        transaction.commit()
+
+        self.assertEqual(u'<ul aria="menu" class="flyoutChildren"><li class="directLink"><a aria="menuitem" href="http://nohost/plone/my-folder/my-subfolder">Direct to My Subf\xf6lder</a></li><li class="noChildren level1"><a aria="menuitem" href="http://nohost/plone/my-folder/my-subfolder/my-page">My P\xe4ge</a></li></ul>',
+            subfolder.unrestrictedTraverse('load_flyout_children')())
