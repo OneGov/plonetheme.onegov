@@ -1,6 +1,5 @@
 <tal:nav
     tal:define="nodes view/nodes"
-    tal:attributes="id string:nav_${view/context/getId}"
     i18n:domain="plonetheme.onegov">
 
     <ul tal:attributes="class python:view.is_breadcrumb and 'children' or 'flyoutChildren'"
