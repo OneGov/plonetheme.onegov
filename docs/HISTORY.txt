@@ -4,11 +4,29 @@ Changelog
 1.8.1 (unreleased)
 ------------------
 
+- Remove Sl ui elements from print.css
+  [tschanzt]
+
+- Show the flyout if the object has no children (does not apply to breadcrumbs).
+  [mbaechtold]
+
+- Implement a cached flyout menu.
+  [mathias.leimgruber]
+
+- Remove dd/dl/dt from selectors to support valid html structures.
+  [mathias.leimgruber]
+
 - Display contenttype icons in plonebrowser
   [Kevin Bieri]
 
 - Fix broken print result for simplelayout pages
   [Kevin Bieri]
+
+- Remove Solr livesearch javascript resource (requires ftw.solr >= 1.5.0)
+  [mbaechtold]
+
+- Implement ftw.subsite 2.x logo viewlet.
+  [mathias.leimgruber]
 
 - Add styling for ftw.books TinyMCE footnote plugin.
   (Ported from 1.6.3) [jone]

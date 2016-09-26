@@ -121,6 +121,7 @@ th {
 tfoot {
     display: table-footer-group;
 }
+
 .logoRow .cell {
     left: 0;
     margin-left: 0;
@@ -158,7 +159,18 @@ div.olLayerGoogleCopyright, div.olControlMousePosition, div.olControlLayerSwitch
     float: none;
 }
 /*Set page properties*/
+#sl-toolbox {
+    display: none;
+}
+.sl-column:empty {
+    height: 0px !important;
+    min-height:0px !important;
+    display: none !important;
+}
 
+.sl-layout, .sl-simplelayout {
+    min-height:0px !important;
+}
 @page {
     size: 22cm 28in portrait;
     margin: 2.5cm 2.5cm 2cm 2.5cm;

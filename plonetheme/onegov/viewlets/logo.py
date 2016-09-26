@@ -1,8 +1,10 @@
-from borg.localrole.interfaces import IFactoryTempFolder
 from BTrees.OOBTree import OOBTree
+from plone import api
 from plone.app.layout.navigation.root import getNavigationRoot
 from plone.app.layout.viewlets import common
 from plonetheme.onegov.utils import replace_custom_keywords
+from Products.Archetypes.interfaces import IBaseObject
+from Products.CMFCore.interfaces._content import IContentish
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from zope.annotation.interfaces import IAnnotations
@@ -24,7 +26,6 @@ class LogoViewlet(common.LogoViewlet):
 
     def update(self):
         super(LogoViewlet, self).update()
-
         if HAS_SUBSITE and IFtwSubsiteLayer.providedBy(self.request):
             self.subsite_logo_behaviour()
         else:
@@ -49,30 +50,30 @@ class LogoViewlet(common.LogoViewlet):
 
     def subsite_logo_behaviour(self):
         # Copy of ftw.subsite.viewlets.subsitelogoviewlet
-        self.navigation_root_url = self.portal_state.navigation_root_url()
-        portal = self.portal_state.portal()
+        nav_root = api.portal.get_navigation_root(self.context)
+        nav_root_title = nav_root.Title()
+        self.navigation_root_url = nav_root.absolute_url()
 
-        subsite_logo = getattr(self.context, 'getLogo', None)
-        in_factory = IFactoryTempFolder.providedBy(
-            self.context.aq_inner.aq_parent)
+        if IBaseObject.providedBy(nav_root):
+            subsite_logo = nav_root.getLogo()
+            subsite_logo_alt_text = nav_root_title
 
-        if subsite_logo and subsite_logo() and not in_factory:
+        else:
+            subsite_logo = getattr(self.context, 'logo', None)
+            subsite_logo_alt_text = getattr(self.context,
+                                            'logo_alt_text',
+                                            None)
+
+        if subsite_logo and subsite_logo.data:
             # we are in a subsite
-            navigation_root_path = self.portal_state.navigation_root_path()
+            context = self.context
+            if not IContentish.providedBy(context):
+                context = context.aq_parent
+            scale = nav_root.restrictedTraverse('@@images')
 
-            self.title = self.context.restrictedTraverse(
-                getNavigationRoot(self.context)).Title()
-
-            scales = portal.restrictedTraverse(
-                navigation_root_path + '/@@images')
-            # Create our own tag, because we want to prune the title attr
-            scale = scales.scale('logo', scale="logo")
-            self.logo_tag = ('<img src="{url}" width="{width}" '
-                             'height="{height}" alt="{alt}" />'.format(
-                                 **dict(url=scale.url,
-                                        width=scale.width,
-                                        height=scale.height,
-                                        alt=self.navigation_root_title)))
+            self.logo_tag = scale.scale('logo', scale="logo").tag(
+                alt=subsite_logo_alt_text, title=None)
+            self.title = nav_root_title
         else:
             # onegov default
             self.onegov_logo_behaviour()

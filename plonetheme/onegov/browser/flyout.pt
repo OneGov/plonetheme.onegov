@@ -1,0 +1,31 @@
+<tal:nav
+    tal:define="nodes view/nodes"
+    i18n:domain="plonetheme.onegov">
+
+    <ul tal:attributes="class python:view.is_breadcrumb and 'children' or 'flyoutChildren'"
+        aria="menu">
+        <li tal:condition="not:view/is_breadcrumb">
+            <a role="menuitem"
+               class="separator directLink"
+                   tal:attributes="href view/context/absolute_url;">
+                <tal:block i18n:translate="text_flyout_direct_to">
+                    Direct to <tal:title i18n:name="title" tal:content="view/context/title_or_id" />
+                </tal:block>
+            </a>
+        </li>
+        <tal:items repeat="node nodes">
+            <li tal:attributes="class python: view.get_css_class(node)"
+                tal:condition="not:node/exclude_from_nav">
+                <span tal:omit-tag="not: node/externallink"
+                      class="link-external">
+
+                    <a role="menuitem"
+                       tal:attributes="href node/url;
+                                       target python: node['externallink'] and '_blank' or '_self'"
+                       tal:content="node/title" />
+
+                   </span>
+            </li>
+        </tal:items>
+    </ul>
+</tal:nav>

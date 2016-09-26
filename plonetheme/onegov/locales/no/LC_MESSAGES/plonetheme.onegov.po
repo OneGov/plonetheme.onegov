@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plonetheme.Onegov\n"
-"POT-Creation-Date: 2014-01-03 08:12+0000\n"
+"POT-Creation-Date: 2016-08-25 15:24+0000\n"
 "PO-Revision-Date: 2014-02-17 16:55+0100\n"
 "Last-Translator: Espen Moe-Nilssen <espen@medialog.no>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -10,27 +10,64 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: DOMAIN\n"
 "X-Generator: Poedit 1.5.5\n"
 "Language: Norsk\n"
-"Language-Code: no\n"
-"Language-Name: Norsk\n"
 "X-Is-Fallback-For: nb nb-no no-bok\n"
+
+#: ./plonetheme/onegov/upgrades/configure.zcml:53
+msgid "Add possibility to disable the flyout navigation."
+msgstr ""
+
+#: ./plonetheme/onegov/upgrades/configure.zcml:26
+msgid "Add tinymce popup css"
+msgstr ""
 
 msgid "Direct to"
 msgstr "Direkte til"
 
-#: plonetheme/onegov/profiles/default/actions.xml
+#: ./plonetheme/onegov/upgrades/configure.zcml:35
+msgid "Enable flyout breadcrumbs"
+msgstr ""
+
+#: ./plonetheme/onegov/upgrades/configure.zcml:62
+msgid "Fix skins settings"
+msgstr ""
+
+#: ./plonetheme/onegov/upgrades/configure.zcml:44
+msgid "Fix theme doctype"
+msgstr ""
+
+#: ./plonetheme/onegov/configure.zcml:35
+msgid "Installs the plonetheme.onegov package"
+msgstr ""
+
+#: ./plonetheme/onegov/upgrades/configure.zcml:71
+msgid "Make OnegovTheme default skin"
+msgstr ""
+
+#: ./plonetheme/onegov/profiles/default/actions.xml
 msgid "Manage styles"
 msgstr "Rediger design"
 
+#: ./plonetheme/onegov/upgrades/configure.zcml:89
+msgid "Optional flyout of grandchildren in global navigation"
+msgstr ""
+
+#: ./plonetheme/onegov/upgrades/configure.zcml:80
+msgid "Remove forked javascript from ftw.mobilenavigation"
+msgstr ""
+
+#: ./plonetheme/onegov/upgrades/configure.zcml:17
+msgid "Update tinymce css"
+msgstr ""
+
 #. Default: "Next Page"
-#: plonetheme/onegov/browser/batchnavigation.pt:56
+#: ./plonetheme/onegov/browser/batchnavigation.pt:56
 msgid "batch_next_page"
 msgstr "Neste side"
 
 #. Default: "Previous Page"
-#: plonetheme/onegov/browser/batchnavigation.pt:11
+#: ./plonetheme/onegov/browser/batchnavigation.pt:11
 msgid "batch_previous_page"
 msgstr "Forige side"
 
@@ -39,6 +76,9 @@ msgstr "Bakgrunn"
 
 msgid "favicon"
 msgstr "Favikon"
+
+msgid "footer-background"
+msgstr ""
 
 msgid "global-navigation-border-color"
 msgstr "Strekfarge under Navigasjon"
@@ -65,7 +105,7 @@ msgid "heading-line-height"
 msgstr "Tittelens linjehøyde"
 
 #. Default: "Change the subsite's logo by editing the subsite."
-#: plonetheme/onegov/browser/customstyles_form.pt:47
+#: ./plonetheme/onegov/browser/customstyles_form.pt:48
 msgid "help_subsite_custom_logo"
 msgstr "Logoen kan tilpasses direkte i delområdet."
 
@@ -73,42 +113,42 @@ msgid "highlight-color-light"
 msgstr "Farge på \"highlighet\" tekst"
 
 #. Default: "Custom CSS"
-#: plonetheme/onegov/browser/customstyles_form.pt:20
+#: ./plonetheme/onegov/browser/customstyles_form.pt:21
 msgid "label_custom_css"
 msgstr "Tilpass design"
 
 #. Default: "Custom Images"
-#: plonetheme/onegov/browser/customstyles_form.pt:42
+#: ./plonetheme/onegov/browser/customstyles_form.pt:43
 msgid "label_custom_images"
 msgstr "Tilpass bilder"
 
 #. Default: "Custom SCSS - be careful"
-#: plonetheme/onegov/browser/customstyles_form.pt:113
+#: ./plonetheme/onegov/browser/customstyles_form.pt:114
 msgid "label_custom_scss"
 msgstr "Avansert SCSS justeringer - vær forsiktig!"
 
 #. Default: "export styles"
-#: plonetheme/onegov/browser/customstyles_form.pt:105
+#: ./plonetheme/onegov/browser/customstyles_form.pt:106
 msgid "label_export_styles"
 msgstr "Eksporter"
 
 #. Default: "import styles"
-#: plonetheme/onegov/browser/customstyles_form.pt:100
+#: ./plonetheme/onegov/browser/customstyles_form.pt:101
 msgid "label_import_styles"
 msgstr "Importer"
 
 #. Default: "Import / Export"
-#: plonetheme/onegov/browser/customstyles_form.pt:90
+#: ./plonetheme/onegov/browser/customstyles_form.pt:91
 msgid "label_importexport"
 msgstr "Eksport / import tilpasninger"
 
 #. Default: "Reset to OneGov Default"
-#: plonetheme/onegov/browser/customstyles_form.pt:124
+#: ./plonetheme/onegov/browser/customstyles_form.pt:125
 msgid "label_reset_styles"
 msgstr "Tilbakestill til standard"
 
 #. Default: "To Top"
-#: plonetheme/onegov/viewlets/totop.pt:3
+#: ./plonetheme/onegov/viewlets/totop.pt:3
 msgid "label_to_top"
 msgstr "tilbake til toppen"
 
@@ -121,13 +161,22 @@ msgstr "«Hover» fargen på linkene"
 msgid "logo"
 msgstr "Logo"
 
+#: ./plonetheme/onegov/configure.zcml:35
+msgid "plonetheme.onegov"
+msgstr ""
+
 msgid "startup"
 msgstr "OppstartIkon for iPhone"
 
 #. Default: "en"
-#: plonetheme/onegov/profiles/default/actions.xml
+#: ./plonetheme/onegov/profiles/default/actions.xml
 msgid "subsite_current_language"
 msgstr "no"
+
+#. Default: "Direct to ${title}"
+#: ./plonetheme/onegov/browser/flyout.pt:14
+msgid "text_flyout_direct_to"
+msgstr "Direkte til ${title}"
 
 msgid "touch_iphone"
 msgstr "Touchikon for iPhone"
@@ -140,3 +189,4 @@ msgstr "Touchikon for iPhone (152px)"
 
 msgid "touch_iphone_76"
 msgstr "Touchikon for iPhone (76px)"
+

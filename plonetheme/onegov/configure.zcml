@@ -18,7 +18,6 @@
 
   <include package=".browser" />
   <include package=".portlets" />
-  <include package=".upgrades" />
   <include package=".viewlets" />
   <include package=".exportimport" />
   <include zcml:condition="installed ftw.lawgiver" file="lawgiver.zcml" />
@@ -34,6 +33,12 @@
       description="Installs the plonetheme.onegov package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
+
+  <!--
+  The profile "plonetheme.onegov:default" needs to be registered
+  before registering its upgrade step directory.
+   -->
+  <include package=".upgrades" />
 
   <plone:static type="theme" directory="resources" />
 

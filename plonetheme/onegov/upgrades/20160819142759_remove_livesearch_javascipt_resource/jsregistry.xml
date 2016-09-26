@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<object name="portal_javascripts" meta_type="JavaScripts Registry">
+
+  <javascript id="++theme++plonetheme.onegov/js/livesearch.js"
+              remove="True"/>
+
+</object>

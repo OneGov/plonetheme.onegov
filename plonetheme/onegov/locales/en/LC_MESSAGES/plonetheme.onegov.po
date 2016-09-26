@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-01-03 08:12+0000\n"
+"POT-Creation-Date: 2016-08-25 15:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -10,14 +10,53 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: DOMAIN\n"
+
+#: ./plonetheme/onegov/upgrades/configure.zcml:53
+msgid "Add possibility to disable the flyout navigation."
+msgstr ""
+
+#: ./plonetheme/onegov/upgrades/configure.zcml:26
+msgid "Add tinymce popup css"
+msgstr ""
 
 msgid "Direct to"
 msgstr "Direct to"
 
+#: ./plonetheme/onegov/upgrades/configure.zcml:35
+msgid "Enable flyout breadcrumbs"
+msgstr ""
+
+#: ./plonetheme/onegov/upgrades/configure.zcml:62
+msgid "Fix skins settings"
+msgstr ""
+
+#: ./plonetheme/onegov/upgrades/configure.zcml:44
+msgid "Fix theme doctype"
+msgstr ""
+
+#: ./plonetheme/onegov/configure.zcml:35
+msgid "Installs the plonetheme.onegov package"
+msgstr ""
+
+#: ./plonetheme/onegov/upgrades/configure.zcml:71
+msgid "Make OnegovTheme default skin"
+msgstr ""
+
 #: ./plonetheme/onegov/profiles/default/actions.xml
 msgid "Manage styles"
 msgstr "Manage styles"
+
+#: ./plonetheme/onegov/upgrades/configure.zcml:89
+msgid "Optional flyout of grandchildren in global navigation"
+msgstr ""
+
+#: ./plonetheme/onegov/upgrades/configure.zcml:80
+msgid "Remove forked javascript from ftw.mobilenavigation"
+msgstr ""
+
+#: ./plonetheme/onegov/upgrades/configure.zcml:17
+msgid "Update tinymce css"
+msgstr ""
 
 #. Default: "Next Page"
 #: ./plonetheme/onegov/browser/batchnavigation.pt:56
@@ -34,6 +73,9 @@ msgstr "Background"
 
 msgid "favicon"
 msgstr "Favicon"
+
+msgid "footer-background"
+msgstr ""
 
 msgid "global-navigation-border-color"
 msgstr "Top navigation: color of the border below the navigation"
@@ -60,7 +102,7 @@ msgid "heading-line-height"
 msgstr "Heading line height"
 
 #. Default: "Change the subsite's logo by editing the subsite."
-#: ./plonetheme/onegov/browser/customstyles_form.pt:47
+#: ./plonetheme/onegov/browser/customstyles_form.pt:48
 msgid "help_subsite_custom_logo"
 msgstr "Change the subsite's logo by editing the subsite."
 
@@ -68,37 +110,37 @@ msgid "highlight-color-light"
 msgstr "Highlight color (e.g. link lists)"
 
 #. Default: "Custom CSS"
-#: ./plonetheme/onegov/browser/customstyles_form.pt:20
+#: ./plonetheme/onegov/browser/customstyles_form.pt:21
 msgid "label_custom_css"
 msgstr "Custom CSS"
 
 #. Default: "Custom Images"
-#: ./plonetheme/onegov/browser/customstyles_form.pt:42
+#: ./plonetheme/onegov/browser/customstyles_form.pt:43
 msgid "label_custom_images"
 msgstr "Custom Images"
 
 #. Default: "Custom SCSS - be careful"
-#: ./plonetheme/onegov/browser/customstyles_form.pt:113
+#: ./plonetheme/onegov/browser/customstyles_form.pt:114
 msgid "label_custom_scss"
 msgstr "Custom SCSS - be careful"
 
 #. Default: "export styles"
-#: ./plonetheme/onegov/browser/customstyles_form.pt:105
+#: ./plonetheme/onegov/browser/customstyles_form.pt:106
 msgid "label_export_styles"
 msgstr "Export styles"
 
 #. Default: "import styles"
-#: ./plonetheme/onegov/browser/customstyles_form.pt:100
+#: ./plonetheme/onegov/browser/customstyles_form.pt:101
 msgid "label_import_styles"
 msgstr "Import styles"
 
 #. Default: "Import / Export"
-#: ./plonetheme/onegov/browser/customstyles_form.pt:90
+#: ./plonetheme/onegov/browser/customstyles_form.pt:91
 msgid "label_importexport"
 msgstr "Import / Export"
 
 #. Default: "Reset to OneGov Default"
-#: ./plonetheme/onegov/browser/customstyles_form.pt:124
+#: ./plonetheme/onegov/browser/customstyles_form.pt:125
 msgid "label_reset_styles"
 msgstr "Reset to OneGov defaults"
 
@@ -116,6 +158,10 @@ msgstr "Hover link color"
 msgid "logo"
 msgstr "Logo"
 
+#: ./plonetheme/onegov/configure.zcml:35
+msgid "plonetheme.onegov"
+msgstr ""
+
 msgid "startup"
 msgstr "iPhone startup icon"
 
@@ -123,6 +169,11 @@ msgstr "iPhone startup icon"
 #: ./plonetheme/onegov/profiles/default/actions.xml
 msgid "subsite_current_language"
 msgstr "en"
+
+#. Default: "Direct to ${title}"
+#: ./plonetheme/onegov/browser/flyout.pt:14
+msgid "text_flyout_direct_to"
+msgstr ""
 
 msgid "touch_iphone"
 msgstr "iPhone touch icon"
@@ -135,3 +186,4 @@ msgstr "iPhone touch icon (152px)"
 
 msgid "touch_iphone_76"
 msgstr "iPhone touch icon (76px)"
+

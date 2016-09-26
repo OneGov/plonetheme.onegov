@@ -88,4 +88,9 @@
       directory="profiles/1117"
       />
 
+  <upgrade-step:directory
+        profile="plonetheme.onegov:default"
+        directory="."
+        />
+
 </configure>
