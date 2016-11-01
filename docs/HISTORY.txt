@@ -4,7 +4,7 @@ Changelog
 2.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix AttributeError when accessing typesUseViewActionInListings. [jone]
 
 
 2.0.0 (2016-09-26)
