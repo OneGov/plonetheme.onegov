@@ -1,10 +1,13 @@
 from AccessControl import getSecurityManager
+from Acquisition import aq_inner
+from Acquisition import aq_parent
 from ftw.mobilenavigation.browser import navigation
 from plonetheme.onegov.utils import get_hostname
 from plonetheme.onegov.utils import is_external_link
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.browser.navigation import get_view_url
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from zope.browser.interfaces import IBrowserView
 from zope.interface import implements
 from zope.publisher.browser import BrowserView
 from zope.publisher.interfaces import IPublishTraverse
@@ -32,6 +35,13 @@ class LoadFlyoutChildren(BrowserView):
     def __init__(self, *args, **kwargs):
         super(LoadFlyoutChildren, self).__init__(*args, **kwargs)
         self.cachekey = None
+
+        # When accessing a object of a typesUseViewActionInListings type,
+        # self.context may be a view and this view will break.
+        # In order to have a proper context we change the context to the
+        # parent of the view-context.
+        if IBrowserView.providedBy(self.context):
+            self.context = aq_parent(aq_inner(self.context))
 
     def publishTraverse(self, request, name):
         if self.cachekey is not None:
