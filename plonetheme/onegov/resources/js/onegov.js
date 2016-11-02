@@ -119,10 +119,10 @@ jQuery(function($) {
   // Toggle languageselector menu
   $('#toggle_subsitelangs').click(function(e){
     e.preventDefault();
-    var me = $(this)
+    var me = $(this);
     close_opened(me);
     me.toggleClass('selected');
-    $('#portal-languageselector dd.actionMenuContent').toggle();
+    $('#portal-languageselector actionMenuContent').toggle();
   });
 
   // breadcrumbs
