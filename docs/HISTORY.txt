@@ -4,7 +4,8 @@ Changelog
 2.0.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix mobile language toggle (from ftw.subsite 2.x).
+  [mathias.leimgruber]
 
 
 2.0.1 (2016-11-01)
