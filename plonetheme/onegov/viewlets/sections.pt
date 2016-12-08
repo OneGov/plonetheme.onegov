@@ -8,7 +8,7 @@
         <li role="presentation" tal:define="tid tab/id" tal:attributes="id string:portaltab-${tid};
                             class python:selected_tab==tid and 'selected' or 'plain'">
           <span class="wrapper"><a href="" role="menuitem" tal:content="tab/name" tal:attributes="href tab/url;
-                               title tab/description|nothing; id tab/name;">
+                               title tab/description|nothing; id tab/id;">
             Tab Name
             </a>
           </span>

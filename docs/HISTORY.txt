@@ -4,6 +4,9 @@ Changelog
 2.1.1 (unreleased)
 ------------------
 
+- Use tabid for id attribute on global tab links. Title may contain invalid chars.
+  [mathias.leimgruber]
+
 - Remove obsolet X-UA-Compatible meta tag.
   [mathias.leimgruber]
 
