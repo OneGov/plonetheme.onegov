@@ -56,7 +56,13 @@
     <replace css:content="#portal-globalnav-wrapper" css:theme="#portal-globalnav" />
     <replace css:content="#portal-searchbox" css:theme="#portal-searchbox" />
     <replace css:content="#portal-personaltools-wrapper" css:theme="#portal-personaltools-wrapper" />
-    <replace css:content="#portal-languageselector" css:theme="#portal-languageselector" />
+
+    <rules if-content="not(//*[@id='portal-languageselector-wrapper'])">
+        <replace css:content="#portal-languageselector" css:theme="#portal-languageselector" />
+    </rules>
+    <rules if-content="//*[@id='portal-languageselector-wrapper']">
+        <replace css:content="#portal-languageselector-wrapper" css:theme="#portal-languageselector-wrapper" />
+    </rules>
 
     <replace css:content-children="#portal-topactions" css:theme-children="#portal-topactions" />
 
