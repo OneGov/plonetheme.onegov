@@ -70,7 +70,18 @@
     <drop css:content="div.documentActions" />
 
     <!-- copy missing accesskeys -->
-    <replace css:theme-children="#accesskeys" css:content="a[accesskey='2'], a[accesskey='6']" />
+    <replace css:theme="#accesskeys" css:content="#accesskeys" />
+
+    <!-- Move hidden titles from accesskeys viewlet to place, where they belong -->
+    <drop css:content="#hidden_further_infos_title" />
+    <before css:theme="#column-sidebar">
+        <xsl:copy-of css:select="#hidden_further_infos_title"/>
+    </before>
+
+    <drop css:content="#hidden_footer_title" />
+    <before css:theme="#footer">
+        <xsl:copy-of css:select="#hidden_footer_title"/>
+    </before>
 
     <!-- banner image -->
     <replace css:content-children="#banner-image" css:theme-children="#banner-image" />

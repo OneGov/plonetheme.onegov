@@ -1,0 +1,47 @@
+<div i18n:domain="plonetheme.onegov"
+     id="accesskeys"
+     class="hiddenStructure">
+
+    <h1 i18n:translate="">
+        Navigation on <span i18n:name="title" tal:replace="view/nav_root_title" />
+    </h1>
+
+    <h1 class="hiddenStructure"
+        id="hidden_further_infos_title"
+        i18n:translate="">Further informations</h1>
+
+    <h1 class="hiddenStructure"
+        id="hidden_footer_title"
+        i18n:translate="">Footer</h1>
+
+
+    <ul tal:define="url view/current_page_url;
+                    nav_root_url view/nav_root_url">
+        <li>
+            <a accesskey="0"
+               tal:attributes="href string:${url}"
+               i18n:translate="label_skiptohomepage">Homepage</a>
+        </li>
+        <li>
+            <a accesskey="1"
+               tal:attributes="href string:${url}#portal-globalnav"
+               i18n:translate="label_skiptonavigation">Navigation</a>
+        </li>
+        <li>
+            <a accesskey="2"
+               tal:attributes="href string:${url}#content"
+               i18n:translate="label_skiptocontent">Content</a>
+        </li>
+        <li>
+            <a accesskey="3"
+               tal:attributes="href string:${nav_root_url}/contact-info"
+               i18n:translate="label_skiptocontact">Contact</a>
+        </li>
+        <li>
+            <a accesskey="4"
+               tal:attributes="href string:${nav_root_url}#searchGadget"
+               i18n:translate="label_skiptosearch">Search</a>
+        </li>
+    </ul>
+
+</div>

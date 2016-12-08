@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2016-08-25 15:24+0000\n"
+"POT-Creation-Date: 2016-12-08 10:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,6 +19,10 @@ msgstr ""
 msgid "Add tinymce popup css"
 msgstr ""
 
+#: ./plonetheme/onegov/portlets/navigation.pt:1
+msgid "Content Navigation"
+msgstr ""
+
 msgid "Direct to"
 msgstr "Lien direct"
 
@@ -34,6 +38,14 @@ msgstr ""
 msgid "Fix theme doctype"
 msgstr ""
 
+#: ./plonetheme/onegov/viewlets/accesskeys.pt:13
+msgid "Footer"
+msgstr "Pied de page"
+
+#: ./plonetheme/onegov/viewlets/accesskeys.pt:9
+msgid "Further informations"
+msgstr "Informations complémentaires"
+
 #: ./plonetheme/onegov/configure.zcml:35
 msgid "Installs the plonetheme.onegov package"
 msgstr ""
@@ -45,6 +57,10 @@ msgstr ""
 #: ./plonetheme/onegov/profiles/default/actions.xml
 msgid "Manage styles"
 msgstr ""
+
+#: ./plonetheme/onegov/viewlets/accesskeys.pt:6
+msgid "Navigation on ${title}"
+msgstr "Naviguer sur ${title}"
 
 #: ./plonetheme/onegov/upgrades/configure.zcml:89
 msgid "Optional flyout of grandchildren in global navigation"
@@ -144,6 +160,31 @@ msgstr ""
 msgid "label_reset_styles"
 msgstr ""
 
+#. Default: "Contact"
+#: ./plonetheme/onegov/viewlets/accesskeys.pt:36
+msgid "label_skiptocontact"
+msgstr "Contact"
+
+#. Default: "Content"
+#: ./plonetheme/onegov/viewlets/accesskeys.pt:31
+msgid "label_skiptocontent"
+msgstr "Contenu"
+
+#. Default: "Homepage"
+#: ./plonetheme/onegov/viewlets/accesskeys.pt:21
+msgid "label_skiptohomepage"
+msgstr "Page d'accueil"
+
+#. Default: "Navigation"
+#: ./plonetheme/onegov/viewlets/accesskeys.pt:26
+msgid "label_skiptonavigation"
+msgstr "La navigation"
+
+#. Default: "Search"
+#: ./plonetheme/onegov/viewlets/accesskeys.pt:41
+msgid "label_skiptosearch"
+msgstr "Chercher"
+
 #. Default: "To Top"
 #: ./plonetheme/onegov/viewlets/totop.pt:3
 msgid "label_to_top"
@@ -171,7 +212,7 @@ msgid "subsite_current_language"
 msgstr "fr"
 
 #. Default: "Direct to ${title}"
-#: ./plonetheme/onegov/browser/flyout.pt:14
+#: ./plonetheme/onegov/browser/flyout.pt:12
 msgid "text_flyout_direct_to"
 msgstr "Lien direct ${title}"
 

@@ -1,3 +1,6 @@
+<h2 i18n:domain="plonetheme.onegov" i18n:translate="" class="hiddenStructure">Content Navigation</h2>
+
+
 <dl class="portlet portletContextNavigation"
     i18n:domain="plonetheme.onegov"
     tal:define="children view/children;
