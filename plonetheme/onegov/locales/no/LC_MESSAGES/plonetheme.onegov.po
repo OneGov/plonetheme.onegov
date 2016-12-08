@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plonetheme.Onegov\n"
-"POT-Creation-Date: 2016-12-08 10:11+0000\n"
+"POT-Creation-Date: 2016-12-08 10:27+0000\n"
 "PO-Revision-Date: 2014-02-17 16:55+0100\n"
 "Last-Translator: Espen Moe-Nilssen <espen@medialog.no>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -67,6 +67,10 @@ msgstr ""
 
 #: ./plonetheme/onegov/upgrades/configure.zcml:89
 msgid "Optional flyout of grandchildren in global navigation"
+msgstr ""
+
+#: ./plonetheme/onegov/viewlets/personal_bar.pt:4
+msgid "Personal actions"
 msgstr ""
 
 #: ./plonetheme/onegov/upgrades/configure.zcml:80
