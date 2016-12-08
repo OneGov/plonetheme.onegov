@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2016-12-08 10:27+0000\n"
+"POT-Creation-Date: 2016-12-08 10:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -120,6 +120,11 @@ msgstr "Heading font size"
 
 msgid "heading-line-height"
 msgstr "Heading line height"
+
+#. Default: "Global Navigation"
+#: ./plonetheme/onegov/viewlets/sections.pt:2
+msgid "heading_sections"
+msgstr ""
 
 #. Default: "Change the subsite's logo by editing the subsite."
 #: ./plonetheme/onegov/browser/customstyles_form.pt:48

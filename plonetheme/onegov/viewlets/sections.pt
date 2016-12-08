@@ -1,3 +1,6 @@
+
+<h2 id="globalnav-heading" class="hiddenStructure" i18n:domain="plonetheme.onegov" i18n:translate="heading_sections">Global Navigation</h2>
+
 <tal:sections tal:define="portal_tabs view/portal_tabs" tal:condition="portal_tabs" i18n:domain="plone">
   <nav id="portal-globalnav-wrapper" role="navigation">
     <ul id="portal-globalnav" role="menubar" tal:attributes="class python: (view.flyout_enabled() and 'flyoutEnabled' or '') + (view.flyout_grandchildren_enabled() and ' flyoutGrandchildrenEnabled' or '')" tal:define="selected_tab python:view.selected_portal_tab">

@@ -54,6 +54,8 @@
 
     <replace css:content="#portal-logo" css:theme="#portal-logo" />
     <replace css:content="#portal-globalnav-wrapper" css:theme="#portal-globalnav" />
+    <before css:content="#globalnav-heading" css:theme="#portal-globalnav"/>
+
     <replace css:content="#portal-searchbox" css:theme="#portal-searchbox" />
     <replace css:content="#portal-personaltools-wrapper" css:theme="#portal-personaltools-wrapper" />
 
