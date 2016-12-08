@@ -1,0 +1,34 @@
+<div tal:condition="view/data/omit_border"
+     tal:attributes="class string:portletStaticText ${view/css_class}"
+     tal:content="structure view/transformed" />
+
+<section tal:condition="not:view/data/omit_border"
+    tal:attributes="class string:portlet portletStaticText ${view/css_class}"
+    i18n:domain="plone">
+
+    <header class="portletHeader"
+        tal:define="header view/data/header"
+        tal:attributes="class python:header and 'portletHeader' or 'portletHeader titleless'">
+           <h2>
+               <a class="tile"
+                  tal:condition="header"
+                  tal:omit-tag="not:view/has_link"
+                  tal:attributes="href view/data/more_url"
+                  tal:content="header"
+                  />
+            </h2>
+    </header>
+
+    <section class="portletContent">
+        <div tal:replace="structure view/transformed" />
+    </section>
+
+    <footer class="portletFooter" tal:condition="view/has_footer">
+           <a class="tile"
+              tal:omit-tag="not:view/has_link"
+              tal:attributes="href view/data/more_url"
+              tal:content="view/data/footer"
+              />
+    </footer>
+
+</section>
