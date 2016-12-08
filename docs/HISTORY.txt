@@ -4,6 +4,12 @@ Changelog
 2.1.1 (unreleased)
 ------------------
 
+- Remove obsolet X-UA-Compatible meta tag.
+  [mathias.leimgruber]
+
+- Implement structural heading for personal tools and global navigation.
+  [mathias.leimgruber]
+
 - Make it possible to replace the whole language-wrapper.
   This makes it easier to customize the language select thru a policy.
   [mathias.leimgruber]
