@@ -921,10 +921,10 @@ div.ListingBlock div.gallery .sl-img-wrapper img {
 #portal-siteactions {
   @include ul($style: 'inline');
   & a {
-    color: $darkgray;
+    color: $text-color;
   }
   & li {
-    border-left: 1px solid $darkgray;
+    border-left: 1px solid $text-color;
     padding-left: 0.5em;
     margin-left: 0.5em;
   }

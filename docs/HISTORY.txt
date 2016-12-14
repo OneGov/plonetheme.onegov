@@ -4,6 +4,9 @@ Changelog
 2.1.1 (unreleased)
 ------------------
 
+- Use $text-color for link color in siteactions (Fix AAA contrast Issue).
+  [mathias.leimgruber]
+
 - Use tabid for id attribute on global tab links. Title may contain invalid chars.
   [mathias.leimgruber]
 
