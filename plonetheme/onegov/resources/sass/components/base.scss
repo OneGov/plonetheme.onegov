@@ -461,17 +461,22 @@ div.slideNavi .globalnav li a {
 
 /* @group side portlets */
 
-#column-sidebar dl.portlet {
+#column-sidebar .portlet {
   background-color: $lightgray;
   padding: 1em;
   margin-bottom: 1em;
+  &.SimplelayoutPortlet {
+    float: left;
+    padding: 0;
+  }
+
   &.simplelayoutDropZonePortlet {
     padding: 0;
     background-color: transparent;
     h1,h2,h3 {
       margin-top: 0;
     }
-    dd.portletItem {
+    .portletItem {
       padding: 0;
       .BlockOverallWrapper {
         padding: 1em;
@@ -484,8 +489,11 @@ div.slideNavi .globalnav li a {
       }
     }
   }
-  & dt.portletHeader {
+  & .portletHeader {
     margin-bottom: 0.75em;
+    > h2 {
+      display: inline;
+    }
   }
 }
 
@@ -553,14 +561,14 @@ dl.portletArchiveListing {
 
 /* @group portlets */
 
-dl.portlet {
-  & dt.portletHeader {
+.portlet {
+  & .portletHeader {
     cursor: default;
     font-size: $font-size-18;
     margin-bottom: 1em;
   }
 }
-dl.teaser_portlet .portletHeader img {
+.teaser_portlet .portletHeader img {
   display: block;
   margin-bottom: 0.5em;
 }
