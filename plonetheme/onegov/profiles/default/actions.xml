@@ -42,7 +42,7 @@
       <property name="link_target"></property>
       <property name="icon_expr"></property>
       <property
-          name="available_expr">python:context.portal_type in ['Plone Site', 'Subsite']</property>
+          name="available_expr">python:context.portal_type in ['Plone Site', 'ftw.subsite.Subsite', 'Subsite']</property>
       <property name="permissions">
         <element value="plonetheme.onegov: Manage Styles"/>
       </property>
