@@ -4,7 +4,8 @@ Changelog
 2.0.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Enable action "manage_styles" on "ftw.subsite.Subsite".
+  [mbaechtold]
 
 
 2.0.2 (2016-11-02)
