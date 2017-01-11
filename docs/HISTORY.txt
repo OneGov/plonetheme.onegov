@@ -4,6 +4,17 @@ Changelog
 2.1.1 (unreleased)
 ------------------
 
+- Several more major changes to the UI for accessibility reasons:
+  - Change base font-size to 16px, instead of 13px.
+  - Change h2 to heading-font-size * 0.625 (by default 20px) instead of 16px.
+  - Same font-size for portlet headings as for h2.
+  - Change global section font-size to 22px, instead of 18px
+
+  Those changes makes the Website generally more readable. The main Issue with the prev. settings was the contrast between the background-color and
+  the font-color. With a size of 13px the contrast was not good enough. 
+  With a a font-size of 16px the contrast is fine according to AAA
+  without changing the colors.
+
 - Use $text-color for link color in siteactions (Fix AAA contrast Issue).
   [mathias.leimgruber]
 
