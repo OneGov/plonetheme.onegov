@@ -4,7 +4,8 @@ Changelog
 2.0.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Improve the content nav listing in TinyMCE.
+  [mbaechtold]
 
 
 2.0.3 (2017-01-03)
