@@ -4,6 +4,10 @@ Changelog
 2.1.1 (unreleased)
 ------------------
 
+- Replace `portletItem` with `portletContent` in selectors.
+  The new static text portlet structure, no longer has a portletItem class.
+  [mathias.leimgruber] 
+
 - Several more major changes to the UI for accessibility reasons:
   - Change base font-size to 16px, instead of 13px.
   - Change h2 to heading-font-size * 0.625 (by default 20px) instead of 16px.
