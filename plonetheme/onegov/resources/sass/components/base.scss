@@ -784,10 +784,12 @@ fieldset {
 
 /* @group linkList */
 
-.linkList,
-.subelements-listing,
-.topic_listing {
-  @include linklist();
+body:not(.mceContentBody) {
+  .linkList,
+  .subelements-listing,
+  .topic_listing {
+    @include linklist();
+  }
 }
 
 /* @end */
@@ -802,6 +804,12 @@ body.template-subsite_view h1.documentFirstHeading {
 }
 .template-subsite_view #page-wrapper #columns .column .portletStaticText .portletItem ul {
   @include linklist();
+}
+
+body.mceContentBody .subelements-listing {
+  a {
+    @include tag();
+  }
 }
 
 /* @end */
