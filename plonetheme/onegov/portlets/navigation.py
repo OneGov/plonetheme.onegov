@@ -10,6 +10,7 @@ from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.interfaces.siteroot import IPloneSiteRoot
 from Products.CMFPlone.utils import base_hasattr
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from plonetheme.onegov.utils import is_external_link
 from zope.component import getMultiAdapter
 
 
@@ -143,3 +144,6 @@ class Renderer(base.Renderer):
                 classes.append('content-expired')
 
         return ' '.join(classes)
+
+    def is_external_link(self, brain):
+        return is_external_link(brain)
