@@ -4,7 +4,9 @@ Changelog
 2.0.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Mark external links in the navigation portlet as it is already
+  being done in the flyout navigation.
+  [mbaechtold]
 
 
 2.0.4 (2017-01-24)

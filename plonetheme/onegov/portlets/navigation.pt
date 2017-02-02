@@ -38,21 +38,31 @@
           tal:attributes="class string:current ${classes}" />
 
       <tal:children repeat="child children">
-        <li tal:define="classes python:view.cssclasses(child)"
+        <li tal:define="classes python:view.cssclasses(child);
+                        is_external python: view.is_external_link(child)"
             tal:attributes="class string:child ${classes}">
-          <a tal:attributes="href python:view.url(child);
-                             title child/Title"
-             tal:content="child/Title"
-             />
-        </li>
+            <span tal:omit-tag="not: is_external"
+                  class="link-external">
+                <a tal:attributes="href python:view.url(child);
+                                   title child/Title;
+                                   target python: is_external and '_blank' or '_self'"
+                    tal:content="child/Title"
+                    />
+            </span>
+         </li>
       </tal:children>
 
       <tal:bottom_siblings tal:repeat="sibling siblings/after_context|nothing">
-          <li tal:define="classes python:view.cssclasses(sibling)"
+          <li tal:define="classes python:view.cssclasses(sibling);
+                          is_external python: view.is_external_link(sibling)"
               tal:attributes="class string:sibling afterContext ${classes}">
-              <a tal:attributes="href python:view.url(sibling);
-                                 title sibling/Title"
-                 tal:content="sibling/Title"/>
+              <span tal:omit-tag="not: is_external"
+                    class="link-external">
+                  <a tal:attributes="href python:view.url(sibling);
+                                     title sibling/Title;
+                                     target python: is_external and '_blank' or '_self'"
+                     tal:content="sibling/Title"/>
+              </span>
           </li>
       </tal:bottom_siblings>
 
