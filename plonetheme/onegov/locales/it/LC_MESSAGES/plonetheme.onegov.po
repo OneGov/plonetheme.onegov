@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2016-08-25 15:24+0000\n"
+"POT-Creation-Date: 2016-12-08 10:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,6 +19,10 @@ msgstr ""
 msgid "Add tinymce popup css"
 msgstr ""
 
+#: ./plonetheme/onegov/portlets/navigation.pt:1
+msgid "Content Navigation"
+msgstr ""
+
 msgid "Direct to"
 msgstr "Diretto"
 
@@ -34,6 +38,14 @@ msgstr ""
 msgid "Fix theme doctype"
 msgstr ""
 
+#: ./plonetheme/onegov/viewlets/accesskeys.pt:13
+msgid "Footer"
+msgstr "Piè di pagina"
+
+#: ./plonetheme/onegov/viewlets/accesskeys.pt:9
+msgid "Further informations"
+msgstr "Ulteriori informazioni"
+
 #: ./plonetheme/onegov/configure.zcml:35
 msgid "Installs the plonetheme.onegov package"
 msgstr ""
@@ -46,9 +58,17 @@ msgstr ""
 msgid "Manage styles"
 msgstr ""
 
+#: ./plonetheme/onegov/viewlets/accesskeys.pt:6
+msgid "Navigation on ${title}"
+msgstr "Navigazione ${title}"
+
 #: ./plonetheme/onegov/upgrades/configure.zcml:89
 msgid "Optional flyout of grandchildren in global navigation"
 msgstr ""
+
+#: ./plonetheme/onegov/viewlets/personal_bar.pt:4
+msgid "Personal actions"
+msgstr "Azioni personali"
 
 #: ./plonetheme/onegov/upgrades/configure.zcml:80
 msgid "Remove forked javascript from ftw.mobilenavigation"
@@ -101,6 +121,11 @@ msgstr ""
 msgid "heading-line-height"
 msgstr ""
 
+#. Default: "Global Navigation"
+#: ./plonetheme/onegov/viewlets/sections.pt:2
+msgid "heading_sections"
+msgstr "Navigazione globale"
+
 #. Default: "Change the subsite's logo by editing the subsite."
 #: ./plonetheme/onegov/browser/customstyles_form.pt:48
 msgid "help_subsite_custom_logo"
@@ -144,6 +169,31 @@ msgstr ""
 msgid "label_reset_styles"
 msgstr ""
 
+#. Default: "Contact"
+#: ./plonetheme/onegov/viewlets/accesskeys.pt:36
+msgid "label_skiptocontact"
+msgstr "Contatto"
+
+#. Default: "Content"
+#: ./plonetheme/onegov/viewlets/accesskeys.pt:31
+msgid "label_skiptocontent"
+msgstr ""
+
+#. Default: "Homepage"
+#: ./plonetheme/onegov/viewlets/accesskeys.pt:21
+msgid "label_skiptohomepage"
+msgstr "Contenuto"
+
+#. Default: "Navigation"
+#: ./plonetheme/onegov/viewlets/accesskeys.pt:26
+msgid "label_skiptonavigation"
+msgstr "Navigazione"
+
+#. Default: "Search"
+#: ./plonetheme/onegov/viewlets/accesskeys.pt:41
+msgid "label_skiptosearch"
+msgstr "Ricerca"
+
 #. Default: "To Top"
 #: ./plonetheme/onegov/viewlets/totop.pt:3
 msgid "label_to_top"
@@ -171,7 +221,7 @@ msgid "subsite_current_language"
 msgstr "it"
 
 #. Default: "Direct to ${title}"
-#: ./plonetheme/onegov/browser/flyout.pt:14
+#: ./plonetheme/onegov/browser/flyout.pt:12
 msgid "text_flyout_direct_to"
 msgstr "Diretto ${title}"
 
