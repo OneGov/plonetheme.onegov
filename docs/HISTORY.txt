@@ -4,7 +4,11 @@ Changelog
 3.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix responsive behavior of global tabs.
+  [mathias.leimgruber]
+
+- Change padding of global tabs - allow more tabs on one line.
+  [mathias.leimgruber]
 
 
 3.0.0 (2017-02-09)

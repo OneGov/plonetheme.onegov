@@ -278,7 +278,7 @@ a,
     float: left;
     & .wrapper {
       white-space: nowrap;
-      padding: 1em 1em 0.7em 1em;
+      padding: 1em .5em 0.7em .5em;
       margin: 1px;
       margin-bottom: 0;
     }
@@ -307,10 +307,6 @@ a,
   }
 }
 #portal-globalnav li.selected {
-  padding-bottom: 1em;
-  /* there should not be a border for now, let this as hint if you like to enable this. */
-  /* border-bottom: 5px solid $global-navigation-border-color-active; */
-  margin-bottom: -5px;
   & > .wrapper > a{
     color: $global-navigation-color-selected;
     &:after {
