@@ -4,7 +4,8 @@ Changelog
 3.0.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix alignment of multiline top navigation.
+  [Kevin Bieri]
 
 
 3.0.1 (2017-04-19)
@@ -22,7 +23,7 @@ Changelog
 
 - Replace `portletItem` with `portletContent` in selectors.
   The new static text portlet structure, no longer has a portletItem class.
-  [mathias.leimgruber] 
+  [mathias.leimgruber]
 
 - Several more major changes to the UI for accessibility reasons:
   - Change base font-size to 16px, instead of 13px.
@@ -31,7 +32,7 @@ Changelog
   - Change global section font-size to 22px, instead of 18px
 
   Those changes makes the Website generally more readable. The main Issue with the prev. settings was the contrast between the background-color and
-  the font-color. With a size of 13px the contrast was not good enough. 
+  the font-color. With a size of 13px the contrast was not good enough.
   With a a font-size of 16px the contrast is fine according to AAA
   without changing the colors.
 
