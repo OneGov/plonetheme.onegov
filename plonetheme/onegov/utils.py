@@ -1,5 +1,6 @@
 from plone import api
 from Products.CMFCore.utils import getToolByName
+import pkg_resources
 
 
 TIMESTAMP_ANNOTATION_KEY = 'customstyles_url_timestamp'
