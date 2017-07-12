@@ -6,12 +6,14 @@ from plone.app.layout.navigation.defaultpage import isDefaultPage
 from plone.app.portlets.portlets import base
 from plone.app.portlets.portlets.navigation import getRootPath
 from plone.memoize.instance import memoize
+from plone.registry.interfaces import IRegistry
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.interfaces.siteroot import IPloneSiteRoot
 from Products.CMFPlone.utils import base_hasattr
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plonetheme.onegov.utils import is_external_link
 from zope.component import getMultiAdapter
+from zope.component import getUtility
 
 
 class Renderer(base.Renderer):
@@ -32,10 +34,10 @@ class Renderer(base.Renderer):
         elif self.is_default_page:
             self.parent = aq_parent(aq_inner(self.parent))
 
-        properties = getToolByName(self.context, 'portal_properties')
-        self.hidden_types = properties.navtree_properties.metaTypesNotToList
-        self.view_action_types = properties.site_properties.getProperty(
-            'typesUseViewActionInListings', ())
+        registry = getUtility(IRegistry)
+        self.displayed_types = registry['plone.displayed_types']
+        # TODO: What does "registry['plone.displayed_types']" return if no displayed types are configured?
+        self.view_action_types = registry['plone.types_use_view_action_in_listings']
 
     def show_parent(self):
         """ Do not show parent if you are on navigationroot.
@@ -101,7 +103,7 @@ class Renderer(base.Renderer):
         navigation explictly.
         """
         for brain in brains:
-            if brain.portal_type in self.hidden_types:
+            if brain.portal_type not in self.displayed_types:
                 continue
 
             if getattr(brain, 'exclude_from_nav', False):
