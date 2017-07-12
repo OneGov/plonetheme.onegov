@@ -1,7 +1,6 @@
 from AccessControl import getSecurityManager
 from Acquisition import aq_inner
 from Acquisition import aq_parent
-from ftw.mobilenavigation.browser import navigation
 from plonetheme.onegov.utils import get_hostname
 from plonetheme.onegov.utils import is_external_link
 from Products.CMFCore.utils import getToolByName
@@ -14,10 +13,6 @@ from zope.publisher.interfaces import IPublishTraverse
 from zope.publisher.interfaces import NotFound
 import hashlib
 import os
-
-
-class SliderNavigation(navigation.SliderNavigation):
-    template = ViewPageTemplateFile('slider.pt')
 
 
 class LoadFlyoutChildren(BrowserView):
