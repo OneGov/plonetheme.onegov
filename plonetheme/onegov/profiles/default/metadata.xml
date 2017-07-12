@@ -3,7 +3,5 @@
   <dependencies>
     <dependency>profile-plone.app.theming:default</dependency>
     <dependency>profile-collective.mtrsetup:default</dependency>
-    <dependency>profile-ftw.mobilenavigation:slide</dependency>
-    <dependency>profile-ftw.slider:default</dependency>
   </dependencies>
 </metadata>
