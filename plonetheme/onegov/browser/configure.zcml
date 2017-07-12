@@ -6,14 +6,6 @@
 
   <browser:page
       for="*"
-      name="slider_navi"
-      class=".navigation.SliderNavigation"
-      permission="zope2.View"
-      layer="plonetheme.onegov.interfaces.IPlonethemeOneGovLayer"
-      />
-
-  <browser:page
-      for="*"
       name="load_flyout_children"
       class=".navigation.LoadFlyoutChildren"
       permission="zope2.View"
