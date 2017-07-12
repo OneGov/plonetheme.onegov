@@ -141,10 +141,6 @@ class LoadFlyoutChildren(BrowserView):
                 if brain.getPath() != '/'.join(self.context.getPhysicalPath())]
 
     def get_query(self):
-        portal_types = getToolByName(self.context, 'portal_types')
-        portal_properties = getToolByName(self.context, 'portal_properties')
-        navtree_properties = getattr(portal_properties, 'navtree_properties')
-
         registry = getUtility(IRegistry)
         include_types = registry['plone.displayed_types']
 
