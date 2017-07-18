@@ -25,7 +25,7 @@
   <!-- The global sections -->
   <browser:viewlet
       name="plone.global_sections"
-      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      manager="plone.app.layout.viewlets.interfaces.IMainNavigation"
       class=".sections.GlobalSectionsViewlet"
       permission="zope2.View"
       layer="plonetheme.onegov.interfaces.IPlonethemeOneGovLayer"
