@@ -21,4 +21,25 @@
     </field>
     <value>False</value>
   </record>
+  <records interface="Products.CMFPlone.interfaces.ITinyMCESchema"
+           prefix="plone">
+    <value key="content_css">
+      <element>customstyles_css</element>
+    </value>
+  </records>
+  <records interface="Products.CMFPlone.interfaces.controlpanel.IImagingSchema"
+           prefix="plone">
+    <value key="allowed_sizes" purge="true">
+      <element>large 768:768</element>
+      <element>preview 400:400</element>
+      <element>mini 200:200</element>
+      <element>thumb 128:128</element>
+      <element>tile 64:64</element>
+      <element>icon 32:32</element>
+      <element>listing 16:16</element>
+      <element>listingblock_gallery 130:130</element>
+      <element>bannerimage 1166:270</element>
+      <element>logo 215:56</element>
+    </value>
+  </records>
 </registry>
