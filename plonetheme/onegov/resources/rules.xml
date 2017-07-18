@@ -4,6 +4,9 @@
     xmlns:css="http://namespaces.plone.org/diazo/css"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
+    <!-- Copy over the id/class attributes on the body tag. This is important for per-section styling -->
+    <copy attributes="*" css:content="body" css:theme="body" />
+
     <rules css:if-content="body#plonebrowser">
     <replace css:content="head">
         <head>
@@ -41,8 +44,6 @@
 
     <!-- Copy html lang -->
     <copy attributes="lang" content="/html" theme="/html" />
-    <!-- Copy body attributes -->
-    <copy attributes="class id dir" content="/html/body" theme="/html/body" />
 
     <replace content="/html/head/meta[@name='viewport']">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0" />
