@@ -136,5 +136,9 @@
     <after content="//*[@id='portal-footer-wrapper']/div/script" css:theme="#container" />
     <after content="//*[@id='portal-footer-wrapper']/div/noscript" css:theme="#container" />
 
+    <!-- toolbar -->
+    <replace css:theme="#portal-toolbar" css:content-children="#edit-bar" css:if-not-content=".ajax_load" css:if-content=".userrole-authenticated" />
+    <replace css:theme="#anonymous-actions" css:content-children="#portal-personaltools-wrapper" css:if-not-content=".ajax_load" css:if-content=".userrole-anonymous" />
+
   </rules>
 </rules>
