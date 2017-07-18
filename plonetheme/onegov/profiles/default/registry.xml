@@ -42,6 +42,7 @@
       <element>logo 215:56</element>
     </value>
   </records>
+
   <records prefix="plone.resources/onegov"
            interface='Products.CMFPlone.interfaces.IResourceRegistry'>
     <value key="js">++theme++plonetheme.onegov/js/onegov.js</value>
