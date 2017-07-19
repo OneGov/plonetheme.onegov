@@ -52,47 +52,4 @@
       expression="not:request/HTTP_X_THEME_ENABLED | nothing"
       />
 
-
-  <!-- Add new stylesheets -->
-  <!-- Note: applyPrefix is not available in Plone < 4.0b3 -->
-
-
-  <stylesheet id="++theme++plonetheme.onegov/css/reset.css"
-              title="" authenticated="False" cacheable="True"
-              compression="safe" conditionalcomment="" cookable="True" enabled="True"
-              expression="request/HTTP_X_THEME_ENABLED | nothing"
-              media="" rel="stylesheet"
-              rendering="link"
-              applyPrefix="True"
-              />
-
-  <stylesheet id="++theme++plonetheme.onegov/css/fonts.css"
-              title="" authenticated="False" cacheable="True"
-              compression="safe" conditionalcomment="" cookable="True" enabled="True"
-              expression="request/HTTP_X_THEME_ENABLED | nothing"
-              media="" rel="stylesheet"
-              rendering="link"
-              applyPrefix="True"
-              />
-
-  <stylesheet id="++theme++plonetheme.onegov/css/iefixes.css"
-              title="" authenticated="False" cacheable="True"
-              compression="safe" conditionalcomment="IE" cookable="True" enabled="True"
-              expression="request/HTTP_X_THEME_ENABLED | nothing"
-              media="" rel="stylesheet"
-              rendering="link"
-              applyPrefix="True"
-              />
-
-  <stylesheet id="++theme++plonetheme.onegov/css/print.css"
-              title="" authenticated="False" cacheable="True"
-              compression="safe" conditionalcomment="" cookable="True" enabled="True"
-              expression="request/HTTP_X_THEME_ENABLED | nothing"
-              media="print" rel="stylesheet"
-              rendering="link"
-              applyPrefix="True"
-              />
-
-  <stylesheet id="++theme++plonetheme.onegov/css/tinymce_popups.css" />
-
 </object>

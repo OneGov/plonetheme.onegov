@@ -42,4 +42,24 @@
       <element>logo 215:56</element>
     </value>
   </records>
+  <records prefix="plone.resources/onegov"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++theme++plonetheme.onegov/css/reset.css</element>
+      <element>++theme++plonetheme.onegov/css/fonts.css</element>
+      <element>++theme++plonetheme.onegov/css/iefixes.css</element>
+      <element>++theme++plonetheme.onegov/css/print.css</element>
+      <element>++theme++plonetheme.onegov/css/tinymce_popups.css</element>
+    </value>
+  </records>
+  <records prefix="plone.bundles/onegov"
+           interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+    <value key="resources">
+      <element>onegov</element>
+    </value>
+    <value key="depends">plone</value>
+    <value key="csscompilation">++plone++static/onegov.css</value>
+    <value key="compile">False</value>
+    <value key="enabled">True</value>
+  </records>
 </registry>
