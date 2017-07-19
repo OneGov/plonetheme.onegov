@@ -37,7 +37,6 @@ setup(name='plonetheme.onegov',
       zip_safe=False,
       install_requires=[
         'plone.app.theming',
-        'Products.Archetypes',
         'Products.CMFCore',
         'collective.mtrsetup',
         'ftw.upgrade',
