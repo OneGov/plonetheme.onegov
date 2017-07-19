@@ -5,11 +5,9 @@ from ftw.solr.interfaces import IFtwSolrLayer
 from ftw.testbrowser import browsing
 from plone.app.testing import TEST_USER_ID
 from plone.app.testing import applyProfile
-from plone.app.testing import setRoles
 from plone.browserlayer.layer import mark_layer
-from plonetheme.onegov.testing import THEME_FUNCTIONAL_TESTING
+from plonetheme.onegov.tests import FunctionalTestCase
 from plonetheme.onegov.tests.pages import SearchBox
-from unittest2 import TestCase
 from zope.component import queryMultiAdapter
 from zope.i18n import translate
 from zope.interface import alsoProvides
@@ -18,14 +16,11 @@ from zope.viewlet.interfaces import IViewletManager
 import transaction
 
 
-class TestSeachBoxViewlet(TestCase):
-
-    layer = THEME_FUNCTIONAL_TESTING
+class TestSeachBoxViewlet(FunctionalTestCase):
 
     def setUp(self):
-        self.portal = self.layer['portal']
-        self.request = self.layer['request']
-        setRoles(self.portal, TEST_USER_ID, ['Manager'])
+        super(TestSeachBoxViewlet, self).setUp()
+        self.grant('Manager')
         mark_layer(self.portal,
                    BeforeTraverseEvent(self.portal, self.request))
 
@@ -120,15 +115,12 @@ class TestSeachBoxViewlet(TestCase):
                          'There is a has-solr AND a no-solr class!?')
 
 
-class TestSeachBoxViewletWithSolr(TestCase):
-
-    layer = THEME_FUNCTIONAL_TESTING
+class TestSeachBoxViewletWithSolr(FunctionalTestCase):
 
     def setUp(self):
-        portal = self.layer['portal']
-        request = self.layer['request']
-        applyProfile(portal, 'ftw.solr:default')
-        mark_layer(portal, BeforeTraverseEvent(portal, request))
+        super(TestSeachBoxViewletWithSolr, self).setUp()
+        applyProfile(self.portal, 'ftw.solr:default')
+        mark_layer(self.portal, BeforeTraverseEvent(self.portal, self.request))
         transaction.commit()
 
     @browsing

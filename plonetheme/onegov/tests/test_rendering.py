@@ -3,7 +3,7 @@ from plonetheme.onegov.testing import THEME_FUNCTIONAL_TESTING
 from unittest2 import TestCase
 
 
-class TestReindering(TestCase):
+class TestRendering(FunctionalTestCase):
 
     layer = THEME_FUNCTIONAL_TESTING
 
