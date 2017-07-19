@@ -62,5 +62,6 @@
   <theme:add_scss path="resources/sass/components/recurrencewidget.scss" />
   <theme:add_scss path="resources/sass/components/accessibility.scss" />
   <theme:add_scss path="resources/sass/components/overrides.scss" />
+  <theme:add_scss path="resources/sass/components/editzone.scss" />
 
 </configure>
