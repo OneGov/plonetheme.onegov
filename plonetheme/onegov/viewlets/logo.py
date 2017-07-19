@@ -3,7 +3,6 @@ from plone import api
 from plone.app.layout.navigation.root import getNavigationRoot
 from plone.app.layout.viewlets import common
 from plonetheme.onegov.utils import replace_custom_keywords
-from Products.Archetypes.interfaces import IBaseObject
 from Products.CMFCore.interfaces._content import IContentish
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
@@ -54,15 +53,10 @@ class LogoViewlet(common.LogoViewlet):
         nav_root_title = nav_root.Title()
         self.navigation_root_url = nav_root.absolute_url()
 
-        if IBaseObject.providedBy(nav_root):
-            subsite_logo = nav_root.getLogo()
-            subsite_logo_alt_text = nav_root_title
-
-        else:
-            subsite_logo = getattr(self.context, 'logo', None)
-            subsite_logo_alt_text = getattr(self.context,
-                                            'logo_alt_text',
-                                            None)
+        subsite_logo = getattr(self.context, 'logo', None)
+        subsite_logo_alt_text = getattr(self.context,
+                                        'logo_alt_text',
+                                        None)
 
         if subsite_logo and subsite_logo.data:
             # we are in a subsite
