@@ -1,25 +1,29 @@
-from ftw.testing import browser
-from ftw.testing.pages import Plone
+from ftw.testbrowser import browser as default_browser
+from plone import api
 
 
-class SearchBox(Plone):
+class SearchBox(object):
+
+    def __init__(self, browser=default_browser):
+        self.browser = browser
+        self.portal = api.portal.get()
 
     @property
     def search_field_placeholder(self):
         xpr = '#portal-searchbox input[name=SearchableText]'
-        return browser().find_by_css(xpr).first['placeholder']
+        return self.browser.css(xpr).first['placeholder']
 
     @property
     def form_action(self):
         xpr = '#portal-searchbox form'
-        return browser().find_by_css(xpr).first['action']
+        return self.browser.css(xpr).first['action']
 
     @property
     def has_solr(self):
         xpr = '#portal-searchbox form.has-solr'
-        return len(browser().find_by_css(xpr)) > 0
+        return len(self.browser.css(xpr)) > 0
 
     @property
     def no_solr(self):
         xpr = '#portal-searchbox form.no-solr'
-        return len(browser().find_by_css(xpr)) > 0
+        return len(self.browser.css(xpr)) > 0

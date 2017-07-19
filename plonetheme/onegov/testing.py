@@ -2,8 +2,8 @@ from ftw.builder.testing import BUILDER_LAYER
 from ftw.builder.testing import functional_session_factory
 from ftw.builder.testing import set_builder_session_factory
 from ftw.testing import ComponentRegistryLayer
-from ftw.testing import FunctionalSplinterTesting
 from plone.app.testing import applyProfile
+from plone.app.testing import FunctionalTesting
 from plone.app.testing import IntegrationTesting
 from plone.app.testing import PLONE_FIXTURE
 from plone.app.testing import PloneSandboxLayer
@@ -48,7 +48,7 @@ THEME_INTEGRATION_TESTING = IntegrationTesting(
     bases=(THEME_FIXTURE, ),
     name='plonetheme.onegov:integration')
 
-THEME_FUNCTIONAL_TESTING = FunctionalSplinterTesting(
+THEME_FUNCTIONAL_TESTING = FunctionalTesting(
     bases=(THEME_FIXTURE,
            set_builder_session_factory(functional_session_factory)),
     name="plonetheme.onegov:functional")
