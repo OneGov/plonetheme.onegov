@@ -176,3 +176,6 @@ $(function($) {
 });
 
 });
+
+define("/Users/lukas/projects/plonetheme.onegov/plonetheme/onegov/resources/js/onegov.js", function(){});
+
