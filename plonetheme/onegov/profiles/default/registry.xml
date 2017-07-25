@@ -44,6 +44,7 @@
   </records>
   <records prefix="plone.resources/onegov"
            interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="js">++theme++plonetheme.onegov/js/onegov.js</value>
     <value key="css">
       <element>++theme++plonetheme.onegov/css/reset.css</element>
       <element>++theme++plonetheme.onegov/css/fonts.css</element>
@@ -57,8 +58,9 @@
       <element>onegov</element>
     </value>
     <value key="depends">plone</value>
-    <value key="csscompilation">++plone++static/onegov.css</value>
-    <value key="compile">False</value>
+    <value key="csscompilation">++theme++plonetheme.onegov/css/onegov.min.css</value>
+    <value key="jscompilation">++theme++plonetheme.onegov/js/onegov.min.js</value>
+    <value key="compile">True</value>
     <value key="enabled">True</value>
   </records>
 </registry>
