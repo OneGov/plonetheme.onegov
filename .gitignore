@@ -15,3 +15,7 @@ src/
 var/
 .sass-cache
 /.ruby-version
+Gruntfile.js
+node_modules
+package.json
+temp_resources
