@@ -47,7 +47,6 @@
     <value key="css">
       <element>++theme++plonetheme.onegov/css/reset.css</element>
       <element>++theme++plonetheme.onegov/css/fonts.css</element>
-      <element>++theme++plonetheme.onegov/css/iefixes.css</element>
       <element>++theme++plonetheme.onegov/css/print.css</element>
       <element>++theme++plonetheme.onegov/css/tinymce_popups.css</element>
     </value>
