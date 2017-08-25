@@ -54,8 +54,8 @@ class TestNavigationPortlet(TestCase):
         create(Builder('navigation portlet'))
         folder = create(Builder('folder').titled(u'The Folder'))
 
-        properties = getToolByName(self.portal, 'portal_properties')
-        properties.site_properties.typesUseViewActionInListings=('Image')
+        registry = getUtility(IRegistry)
+        registry['plone.types_use_view_action_in_listings'] = [u'Image']
 
         create(Builder('image').titled(u'my-image').within(folder))
         browser.visit(folder)
@@ -67,8 +67,8 @@ class TestNavigationPortlet(TestCase):
         create(Builder('navigation portlet'))
         folder = create(Builder('folder').titled(u'The Folder'))
 
-        properties = getToolByName(self.portal, 'portal_properties')
-        properties.site_properties.typesUseViewActionInListings=()
+        registry = getUtility(IRegistry)
+        registry['plone.types_use_view_action_in_listings'] = []
 
         create(Builder('image').titled(u'my-image').within(folder))
         browser.visit(folder)
@@ -179,6 +179,7 @@ class TestNavigationPortlet(TestCase):
         self.assertIn('state-private', portlet().css('.child').first.classes)
         self.assertIn('state-pending', portlet().css('.sibling')[1].classes)
 
+    @skipIf(IS_PLONE_5, 'Plone 5 renders the navigation portlet twice.')
     @browsing
     def test_content_expired_class_for_expired_content(self, browser):
         before_expiration = datetime(2010, 1, 1)
