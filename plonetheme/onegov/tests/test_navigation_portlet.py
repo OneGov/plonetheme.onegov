@@ -8,9 +8,11 @@ from plone.app.testing import login
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
 from plone.app.testing import TEST_USER_NAME
+from plone.registry.interfaces import IRegistry
 from plonetheme.onegov.testing import THEME_FUNCTIONAL_TESTING
 from Products.CMFCore.utils import getToolByName
 from unittest2 import TestCase
+from zope.component import getUtility
 import transaction
 
 
@@ -96,9 +98,11 @@ class TestNavigationPortlet(TestCase):
 
     @browsing
     def test_does_not_list_types_excluded_from_navigation(self, browser):
-        properties = getToolByName(self.layer['portal'], 'portal_properties')
-        navtree_properties = properties.navtree_properties
-        navtree_properties.metaTypesNotToList += ('Document', )
+        # Exclude `Document` (AKA `page`) from the navigation:
+        registry = getUtility(IRegistry)
+        include_types = list(registry['plone.displayed_types'])
+        include_types.remove('Document')
+        registry['plone.displayed_types'] = tuple(include_types)
 
         create(Builder('navigation portlet'))
         folder = create(Builder('folder').titled(u'The Folder'))
@@ -141,9 +145,11 @@ class TestNavigationPortlet(TestCase):
 
     @browsing
     def test_siblings_not_shown_when_type_excluded_from_navigation(self, browser):
-        properties = getToolByName(self.layer['portal'], 'portal_properties')
-        navtree_properties = properties.navtree_properties
-        navtree_properties.metaTypesNotToList += ('Document', )
+        # Exclude `Document` (AKA `page`) from the navigation:
+        registry = getUtility(IRegistry)
+        include_types = list(registry['plone.displayed_types'])
+        include_types.remove('Document')
+        registry['plone.displayed_types'] = tuple(include_types)
 
         create(Builder('navigation portlet').having(currentFolderOnly=False))
         folder = create(Builder('folder').titled(u'The Folder'))
