@@ -7,7 +7,7 @@ tests_require = [
     'ftw.builder',
     'ftw.solr',
     'ftw.testbrowser',
-    'ftw.subsite',
+    # 'ftw.subsite',  # ftw.subsite is not ready for Plone 5.1
     'ftw.testing',
     'plone.app.testing',
     'plone.resource',
