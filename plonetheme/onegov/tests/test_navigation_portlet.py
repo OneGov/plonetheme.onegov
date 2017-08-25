@@ -57,7 +57,12 @@ class TestNavigationPortlet(TestCase):
         registry = getUtility(IRegistry)
         registry['plone.types_use_view_action_in_listings'] = [u'Image']
 
-        create(Builder('image').titled(u'my-image').within(folder))
+        image = create(Builder('image').titled(u'my-image').within(folder))
+        # Change the id because DX image get the id from the attached file,
+        # not from the title.
+        image.aq_parent.manage_renameObject(image.id, 'my-image')
+        transaction.commit()
+
         browser.visit(folder)
         self.assertEqual('http://nohost/plone/the-folder/my-image/view',
                          portlet().css('li.child > a').first.attrib.get('href'))
@@ -70,7 +75,12 @@ class TestNavigationPortlet(TestCase):
         registry = getUtility(IRegistry)
         registry['plone.types_use_view_action_in_listings'] = []
 
-        create(Builder('image').titled(u'my-image').within(folder))
+        image = create(Builder('image').titled(u'my-image').within(folder))
+        # Change the id because DX image get the id from the attached file,
+        # not from the title.
+        image.aq_parent.manage_renameObject(image.id, 'my-image')
+        transaction.commit()
+
         browser.visit(folder)
 
         self.assertEqual('http://nohost/plone/the-folder/my-image',
