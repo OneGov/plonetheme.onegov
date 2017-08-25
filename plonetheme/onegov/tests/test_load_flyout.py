@@ -83,7 +83,7 @@ class TestFyloutView(TestCase):
 
     @browsing
     def test_markup_grandchildren(self, browser):
-        folder = create(Builder('folder').titled('My Folder'))
+        folder = create(Builder('folder').titled(u'My Folder'))
         subfolder = create(Builder('folder').titled(
             u'My Subf\xf6lder').within(folder))
         create(Builder('page').titled(u'My P\xe4ge').within(subfolder))

@@ -45,7 +45,7 @@ class TestFtwSubsiteLogoBehavior(TestCase):
         request = self.portal.REQUEST
         alsoProvides(request, IFtwSubsiteLayer)
 
-        subsite = create(Builder('subsite').titled('Subsite'))
+        subsite = create(Builder('subsite').titled(u'Subsite'))
         self._set_logo(subsite)
 
         logo_viewlet = LogoViewlet(
