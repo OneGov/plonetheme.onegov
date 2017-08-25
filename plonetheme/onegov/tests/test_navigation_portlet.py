@@ -41,19 +41,19 @@ class TestNavigationPortlet(TestCase):
     @browsing
     def test_shows_current_context_title(self, browser):
         create(Builder('navigation portlet'))
-        folder = create(Builder('folder').titled('The Folder'))
+        folder = create(Builder('folder').titled(u'The Folder'))
         browser.visit(folder)
         self.assertEquals('The Folder', portlet().css('.current').first.text)
 
     @browsing
     def test_append_view_to_link_if_type_in_property(self, browser):
         create(Builder('navigation portlet'))
-        folder = create(Builder('folder').titled('The Folder'))
+        folder = create(Builder('folder').titled(u'The Folder'))
 
         properties = getToolByName(self.portal, 'portal_properties')
         properties.site_properties.typesUseViewActionInListings=('Image')
 
-        create(Builder('image').titled('my-image').within(folder))
+        create(Builder('image').titled(u'my-image').within(folder))
         browser.visit(folder)
         self.assertEqual('http://nohost/plone/the-folder/my-image/view',
                          portlet().css('li.child > a').first.attrib.get('href'))
@@ -61,12 +61,12 @@ class TestNavigationPortlet(TestCase):
     @browsing
     def test_dont_append_view_to_link_if_type_in_property(self, browser):
         create(Builder('navigation portlet'))
-        folder = create(Builder('folder').titled('The Folder'))
+        folder = create(Builder('folder').titled(u'The Folder'))
 
         properties = getToolByName(self.portal, 'portal_properties')
         properties.site_properties.typesUseViewActionInListings=()
 
-        create(Builder('image').titled('my-image').within(folder))
+        create(Builder('image').titled(u'my-image').within(folder))
         browser.visit(folder)
 
         self.assertEqual('http://nohost/plone/the-folder/my-image',
@@ -75,10 +75,10 @@ class TestNavigationPortlet(TestCase):
     @browsing
     def test_lists_children(self, browser):
         create(Builder('navigation portlet'))
-        folder = create(Builder('folder').titled('The Folder'))
-        create(Builder('page').titled('Foo').within(folder))
-        create(Builder('page').titled('bar').within(folder))
-        create(Builder('page').titled('Baz').within(folder))
+        folder = create(Builder('folder').titled(u'The Folder'))
+        create(Builder('page').titled(u'Foo').within(folder))
+        create(Builder('page').titled(u'bar').within(folder))
+        create(Builder('page').titled(u'Baz').within(folder))
 
         browser.visit(folder)
         self.assertEquals(['Foo', 'bar', 'Baz'], portlet().css('.child').text)
@@ -86,9 +86,9 @@ class TestNavigationPortlet(TestCase):
     @browsing
     def test_does_not_list_content_excluded_from_navigation(self, browser):
         create(Builder('navigation portlet'))
-        folder = create(Builder('folder').titled('The Folder'))
-        create(Builder('page').titled('Foo').within(folder))
-        create(Builder('page').titled('Bar').within(folder).having(
+        folder = create(Builder('folder').titled(u'The Folder'))
+        create(Builder('page').titled(u'Foo').within(folder))
+        create(Builder('page').titled(u'Bar').within(folder).having(
                 excludeFromNav=True))
 
         browser.visit(folder)
@@ -101,8 +101,8 @@ class TestNavigationPortlet(TestCase):
         navtree_properties.metaTypesNotToList += ('Document', )
 
         create(Builder('navigation portlet'))
-        folder = create(Builder('folder').titled('The Folder'))
-        create(Builder('page').titled('Foo').within(folder))
+        folder = create(Builder('folder').titled(u'The Folder'))
+        create(Builder('page').titled(u'Foo').within(folder))
 
         browser.visit(folder)
         self.assertEquals([], portlet().css('.child').text)
@@ -110,9 +110,9 @@ class TestNavigationPortlet(TestCase):
     @browsing
     def test_lists_siblings_when_configured(self, browser):
         create(Builder('navigation portlet').having(currentFolderOnly=False))
-        create(Builder('folder').titled('Foo'))
-        bar = create(Builder('folder').titled('Bar'))
-        create(Builder('folder').titled('Baz'))
+        create(Builder('folder').titled(u'Foo'))
+        bar = create(Builder('folder').titled(u'Bar'))
+        create(Builder('folder').titled(u'Baz'))
 
         browser.visit(bar)
         self.assertEquals(['Plone site', 'Foo', 'Bar', 'Baz'],
@@ -121,9 +121,9 @@ class TestNavigationPortlet(TestCase):
     @browsing
     def test_disable_listing_siblings_with_current_folder_only(self, browser):
         create(Builder('navigation portlet').having(currentFolderOnly=True))
-        create(Builder('folder').titled('Foo'))
-        bar = create(Builder('folder').titled('Bar'))
-        create(Builder('folder').titled('Baz'))
+        create(Builder('folder').titled(u'Foo'))
+        bar = create(Builder('folder').titled(u'Bar'))
+        create(Builder('folder').titled(u'Baz'))
 
         browser.visit(bar)
         self.assertEquals(['Plone site', 'Bar'],
@@ -132,8 +132,8 @@ class TestNavigationPortlet(TestCase):
     @browsing
     def test_siblings_not_shown_when_excluded_from_navigation(self, browser):
         create(Builder('navigation portlet').having(currentFolderOnly=False))
-        folder = create(Builder('folder').titled('The Folder'))
-        create(Builder('folder').titled('excluded').having(excludeFromNav=True))
+        folder = create(Builder('folder').titled(u'The Folder'))
+        create(Builder('folder').titled(u'excluded').having(excludeFromNav=True))
 
         browser.visit(folder)
         self.assertEquals(['Plone site', 'The Folder'],
@@ -146,8 +146,8 @@ class TestNavigationPortlet(TestCase):
         navtree_properties.metaTypesNotToList += ('Document', )
 
         create(Builder('navigation portlet').having(currentFolderOnly=False))
-        folder = create(Builder('folder').titled('The Folder'))
-        create(Builder('page').titled('excluded').having(excludeFromNav=True))
+        folder = create(Builder('folder').titled(u'The Folder'))
+        create(Builder('page').titled(u'excluded').having(excludeFromNav=True))
 
         browser.visit(folder)
         self.assertEquals(['Plone site', 'The Folder'],
@@ -160,10 +160,10 @@ class TestNavigationPortlet(TestCase):
                                       'simple_publication_workflow')
 
         create(Builder('navigation portlet'))
-        create(Builder('folder').titled('Top Sibling'))
-        folder = create(Builder('folder').titled('The Folder').in_state('published'))
-        create(Builder('page').titled('The Page').within(folder))
-        create(Builder('folder').titled('Bottom Sibling').in_state('pending'))
+        create(Builder('folder').titled(u'Top Sibling'))
+        folder = create(Builder('folder').titled(u'The Folder').in_state('published'))
+        create(Builder('page').titled(u'The Page').within(folder))
+        create(Builder('folder').titled(u'Bottom Sibling').in_state('pending'))
 
         browser.login().visit(folder)
         self.assertIn('state-private', portlet().css('.sibling')[0].classes)
@@ -178,13 +178,13 @@ class TestNavigationPortlet(TestCase):
         after_expiration = datetime(2010, 3, 3)
 
         create(Builder('navigation portlet'))
-        create(Builder('folder').titled('Top Sibling')
+        create(Builder('folder').titled(u'Top Sibling')
                .having(expirationDate=expiration_date))
-        folder = create(Builder('folder').titled('The Folder')
+        folder = create(Builder('folder').titled(u'The Folder')
                         .having(expirationDate=expiration_date))
-        create(Builder('page').titled('The Page').within(folder)
+        create(Builder('page').titled(u'The Page').within(folder)
                .having(expirationDate=expiration_date))
-        create(Builder('folder').titled('Bottom Sibling')
+        create(Builder('folder').titled(u'Bottom Sibling')
                .having(expirationDate=expiration_date))
 
         with freeze(after_expiration):
@@ -205,10 +205,10 @@ class TestNavigationPortlet(TestCase):
     @browsing
     def test_default_pages_are_not_listed(self, browser):
         create(Builder('navigation portlet'))
-        homepage = create(Builder('page').titled('Homepage'))
+        homepage = create(Builder('page').titled(u'Homepage'))
         self.portal._setProperty('default_page', homepage.getId(), 'string')
         homepage.reindexObject()
-        other = create(Builder('page').titled('Other page'))
+        other = create(Builder('page').titled(u'Other page'))
 
         browser.open(self.portal)
         self.assertFalse(portlet().css('.parent'))
@@ -231,15 +231,15 @@ class TestNavigationPortlet(TestCase):
         wftool.setChainForPortalTypes(['Folder'], 'simple_publication_workflow')
 
         create(Builder('navigation portlet').having(currentFolderOnly=False))
-        parent = create(Builder('folder').titled('Parent'))
-        create(Builder('folder').titled('Top Sibling')
+        parent = create(Builder('folder').titled(u'Parent'))
+        create(Builder('folder').titled(u'Top Sibling')
                .within(parent).in_state('published')).reindexObject()
-        child = create(Builder('folder').titled('Child')
+        child = create(Builder('folder').titled(u'Child')
                        .within(parent).in_state('published'))
-        sibling = create(Builder('folder').titled('Bottom Sibling')
+        sibling = create(Builder('folder').titled(u'Bottom Sibling')
                          .within(parent).in_state('published'))
         sibling.reindexObject()
-        create(Builder('folder').titled('Child of sibling')
+        create(Builder('folder').titled(u'Child of sibling')
                .within(sibling).in_state('published')).reindexObject()
         transaction.commit()
 
