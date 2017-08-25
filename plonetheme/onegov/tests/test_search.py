@@ -1,6 +1,5 @@
 from ftw.builder import Builder
 from ftw.builder import create
-from ftw.solr.interfaces import IFtwSolrLayer
 from ftw.testbrowser import browsing
 from plone.app.testing import applyProfile
 from plone.browserlayer.layer import mark_layer
@@ -12,6 +11,7 @@ from zope.i18n import translate
 from zope.interface import alsoProvides
 from zope.traversing.interfaces import BeforeTraverseEvent
 from zope.viewlet.interfaces import IViewletManager
+from ftw.solr.interfaces import IFtwSolrLayer
 import transaction
 
 
