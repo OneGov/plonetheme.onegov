@@ -47,6 +47,23 @@ class ThemeLayer(PloneSandboxLayer):
         applyProfile(portal, 'plonetheme.onegov:default')
 
         applyProfile(portal, 'plone.app.contenttypes:default')
+        self.remove_navigation_portlet(portal)
+
+    def remove_navigation_portlet(self, portal):
+        """
+        Removes the navigation portlet added by "plone.app.contenttypes",
+        otherwise we will end up with two portlets in some of our tests
+        where the navigation portlet is added manually.
+        """
+        from plone.portlets.interfaces import IPortletAssignmentMapping
+        from plone.portlets.interfaces import IPortletManager
+        from zope.component import getMultiAdapter
+        from zope.component import getUtility
+
+        manager = getUtility(IPortletManager, name=u'plone.leftcolumn', context=portal)
+        assignments = getMultiAdapter((portal, manager), IPortletAssignmentMapping)
+        if 'navigation' in assignments:
+            del assignments['navigation']
 
 
 THEME_FIXTURE = ThemeLayer()

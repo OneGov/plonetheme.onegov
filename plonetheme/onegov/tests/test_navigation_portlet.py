@@ -9,9 +9,11 @@ from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
 from plone.app.testing import TEST_USER_NAME
 from plone.registry.interfaces import IRegistry
+from plonetheme.onegov.testing import IS_PLONE_5
 from plonetheme.onegov.testing import THEME_FUNCTIONAL_TESTING
 from Products.CMFCore.utils import getToolByName
 from unittest2 import TestCase
+from unittest2 import skipIf
 from zope.component import getUtility
 import transaction
 
