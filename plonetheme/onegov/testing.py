@@ -1,13 +1,18 @@
+from ftw.builder.content import register_dx_content_builders
 from ftw.builder.testing import BUILDER_LAYER
 from ftw.builder.testing import functional_session_factory
 from ftw.builder.testing import set_builder_session_factory
 from ftw.testing import ComponentRegistryLayer
+from pkg_resources import get_distribution
 from plone.app.testing import applyProfile
 from plone.app.testing import FunctionalTesting
 from plone.app.testing import IntegrationTesting
 from plone.app.testing import PLONE_FIXTURE
 from plone.app.testing import PloneSandboxLayer
 from zope.configuration import xmlconfig
+
+
+IS_PLONE_5 = get_distribution('Plone').version >= '5'
 
 
 class MetaZCMLLayer(ComponentRegistryLayer):
@@ -40,6 +45,8 @@ class ThemeLayer(PloneSandboxLayer):
 
     def setUpPloneSite(self, portal):
         applyProfile(portal, 'plonetheme.onegov:default')
+
+        applyProfile(portal, 'plone.app.contenttypes:default')
 
 
 THEME_FIXTURE = ThemeLayer()
