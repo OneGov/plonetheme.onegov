@@ -91,7 +91,7 @@ class TestNavigationPortlet(TestCase):
         folder = create(Builder('folder').titled(u'The Folder'))
         create(Builder('page').titled(u'Foo').within(folder))
         create(Builder('page').titled(u'Bar').within(folder).having(
-                excludeFromNav=True))
+                exclude_from_nav=True))
 
         browser.visit(folder)
         self.assertEquals(['Foo'], portlet().css('.child').text)
@@ -137,7 +137,7 @@ class TestNavigationPortlet(TestCase):
     def test_siblings_not_shown_when_excluded_from_navigation(self, browser):
         create(Builder('navigation portlet').having(currentFolderOnly=False))
         folder = create(Builder('folder').titled(u'The Folder'))
-        create(Builder('folder').titled(u'excluded').having(excludeFromNav=True))
+        create(Builder('folder').titled(u'excluded').having(exclude_from_nav=True))
 
         browser.visit(folder)
         self.assertEquals(['Plone site', 'The Folder'],
@@ -153,7 +153,7 @@ class TestNavigationPortlet(TestCase):
 
         create(Builder('navigation portlet').having(currentFolderOnly=False))
         folder = create(Builder('folder').titled(u'The Folder'))
-        create(Builder('page').titled(u'excluded').having(excludeFromNav=True))
+        create(Builder('page').titled(u'excluded').having(exclude_from_nav=True))
 
         browser.visit(folder)
         self.assertEquals(['Plone site', 'The Folder'],
