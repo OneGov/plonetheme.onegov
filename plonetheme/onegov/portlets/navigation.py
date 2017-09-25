@@ -58,22 +58,32 @@ class Renderer(base.Renderer):
             return {'title': self.parent.Title(),
                     'url': self.parent.absolute_url()}
 
+    def get_siblings_query(self):
+        """
+        Useful for super classes wishing to customize the query
+        used to render the siblings of the current context.
+        """
+        parent = aq_parent(aq_inner(self.context))
+        return {
+            'path': {
+                'query': '/'.join(parent.getPhysicalPath()),
+                'depth': 1,
+            },
+            'sort_on': 'getObjPositionInParent'
+        }
+
     def siblings(self):
         if self.data.currentFolderOnly:
             return None
 
-        parent = aq_parent(aq_inner(self.context))
         before = []
         after = []
         context_path = '/'.join((self.context.getPhysicalPath()))
         context_reached = False
 
         catalog = getToolByName(self.context, 'portal_catalog')
-        query = {'path': {'query': '/'.join((parent.getPhysicalPath())),
-                          'depth': 1},
-                 'sort_on': 'getObjPositionInParent'}
 
-        for brain in catalog(query):
+        for brain in catalog(self.get_siblings_query()):
             if brain.getPath() == context_path:
                 context_reached = True
                 continue
@@ -88,8 +98,15 @@ class Renderer(base.Renderer):
         return {'before_context': self.filter_brains(before),
                 'after_context': self.filter_brains(after)}
 
+    def get_children_brains(self):
+        """
+        Useful for super classes wishing to customize the brains
+        used to render the children of the current context.
+        """
+        return self.context.getFolderContents()
+
     def children(self):
-        return self.filter_brains(self.context.getFolderContents())
+        return self.filter_brains(self.get_children_brains())
 
     def url(self, brain):
         if brain.portal_type in self.view_action_types:
