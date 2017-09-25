@@ -50,8 +50,7 @@ class TestCustomstylesForm(TestCase):
         portal.manage_permission('plonetheme.onegov: Manage Styles',
                                  roles=[], acquire=False)
         transaction.commit()
-
-        with self.assertRaises(Unauthorized):
+        with browser.expect_unauthorized():
             browser.login().visit(view='customstyles_form')
 
     @browsing
