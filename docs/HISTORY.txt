@@ -4,6 +4,9 @@ Changelog
 3.0.3 (unreleased)
 ------------------
 
+- Refactoring of the navigation portlet renderer making it easier to customize
+  through inheritance. [mbaechtold]
+
 - Rewrite tests using "ftw.testbrowser", drop dependency on "ftw.testing[splinter]". [mbaechtold]
 
 
