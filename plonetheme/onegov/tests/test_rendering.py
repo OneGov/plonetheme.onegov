@@ -1,5 +1,4 @@
-from ftw.testing import browser
-from ftw.testing.pages import Plone
+from ftw.testbrowser import browsing
 from plonetheme.onegov.testing import THEME_FUNCTIONAL_TESTING
 from unittest2 import TestCase
 
@@ -8,14 +7,16 @@ class TestReindering(TestCase):
 
     layer = THEME_FUNCTIONAL_TESTING
 
-    def test_theme_is_rendered_anonymous(self):
-        Plone().visit_portal()
+    @browsing
+    def test_theme_is_rendered_anonymous(self, browser):
+        browser.open()
         self.assertTrue(
-            browser().find_by_css('#page-wrapper'),
+            browser.css('#page-wrapper'),
             'Could not find #page-wrapper - was the theme rendered?')
 
-    def test_theme_is_rendered_logged_in(self):
-        Plone().login().visit_portal()
+    @browsing
+    def test_theme_is_rendered_logged_in(self, browser):
+        browser.login().open()
         self.assertTrue(
-            browser().find_by_css('#page-wrapper'),
+            browser.css('#page-wrapper'),
             'Could not find #page-wrapper - was the theme rendered?')

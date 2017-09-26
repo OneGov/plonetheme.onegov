@@ -2,7 +2,7 @@ from Products.Five.browser import BrowserView
 from ftw.builder import Builder
 from ftw.builder import create
 from ftw.solr.interfaces import IFtwSolrLayer
-from ftw.testing.pages import Plone
+from ftw.testbrowser import browsing
 from plone.app.testing import TEST_USER_ID
 from plone.app.testing import applyProfile
 from plone.app.testing import setRoles
@@ -54,8 +54,9 @@ class TestSeachBoxViewlet(TestCase):
 
         self.assertTrue(viewlet.has_solr())
 
-    def test_default_plone_placeholder_is_used_by_deafult(self):
-        Plone().visit_portal()
+    @browsing
+    def test_default_plone_placeholder_is_used_by_deafult(self, browser):
+        browser.open()
         default_placeholder = translate('title_search_site',
                                         default='Search this site',
                                         domain='plone',
@@ -63,21 +64,24 @@ class TestSeachBoxViewlet(TestCase):
         self.assertEquals(default_placeholder,
                           SearchBox().search_field_placeholder)
 
-    def test_customize_placeholder_by_setting_property(self):
+    @browsing
+    def test_customize_placeholder_by_setting_property(self, browser):
         self.portal._setProperty('search_label', 'Search example.com',
                                  'string')
         transaction.commit()
-        Plone().visit_portal()
+        browser.open()
         self.assertEquals('Search example.com',
                           SearchBox().search_field_placeholder)
 
-    def test_empty_placeholder_by_setting_property(self):
+    @browsing
+    def test_empty_placeholder_by_setting_property(self, browser):
         self.portal._setProperty('search_label', '', 'string')
         transaction.commit()
-        Plone().visit_portal()
+        browser.open()
         self.assertEquals('', SearchBox().search_field_placeholder)
 
-    def test_placeholder_property_can_be_overriden_on_any_context(self):
+    @browsing
+    def test_placeholder_property_can_be_overriden_on_any_context(self, browser):
         self.portal._setProperty('search_label', 'search portal', 'string')
         folder = create(Builder('folder'))
         folder._setProperty('search_label', 'search folder', 'string')
@@ -85,28 +89,31 @@ class TestSeachBoxViewlet(TestCase):
 
         placeholders = {}
 
-        Plone().login().visit_portal()
+        browser.login().open()
         placeholders['portal'] = SearchBox().search_field_placeholder
-        Plone().visit(folder)
+        browser.visit(folder)
         placeholders['folder'] = SearchBox().search_field_placeholder
 
         self.assertEquals({'portal': 'search portal',
                            'folder': 'search folder'},
                           placeholders)
 
-    def test_placeholder_property_is_inherited(self):
+    @browsing
+    def test_placeholder_property_is_inherited(self, browser):
         self.portal._setProperty('search_label', 'search site', 'string')
         folder = create(Builder('folder'))
-        Plone().login().visit(folder)
+        browser.login().visit(folder)
         self.assertEquals('search site', SearchBox().search_field_placeholder)
 
-    def test_form_action_is_page_template_when_solr_disabled(self):
-        Plone().login().visit_portal()
+    @browsing
+    def test_form_action_is_page_template_when_solr_disabled(self, browser):
+        browser.login().open()
         self.assertEquals('http://nohost/plone/search',
                           SearchBox().form_action)
 
-    def test_no_solr_cssclass_present_when_solr_disabled(self):
-        Plone().login().visit_portal()
+    @browsing
+    def test_no_solr_cssclass_present_when_solr_disabled(self, browser):
+        browser.login().open()
         self.assertTrue(SearchBox().no_solr,
                         'The no-solr class is missing on the search <form>')
         self.assertFalse(SearchBox().has_solr,
@@ -124,13 +131,15 @@ class TestSeachBoxViewletWithSolr(TestCase):
         mark_layer(portal, BeforeTraverseEvent(portal, request))
         transaction.commit()
 
-    def test_form_action_is_view_when_solr_enabled(self):
-        Plone().login().visit_portal()
+    @browsing
+    def test_form_action_is_view_when_solr_enabled(self, browser):
+        browser.login().open()
         self.assertEquals('http://nohost/plone/@@search',
                           SearchBox().form_action)
 
-    def test_has_solr_cssclass_present_when_solr_enabled(self):
-        Plone().login().visit_portal()
+    @browsing
+    def test_has_solr_cssclass_present_when_solr_enabled(self, browser):
+        browser.login().open()
         self.assertTrue(SearchBox().has_solr,
                         'The has-solr class is missing on the search <form>')
         self.assertFalse(SearchBox().no_solr,

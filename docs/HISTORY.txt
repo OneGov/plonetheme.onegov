@@ -4,7 +4,7 @@ Changelog
 3.0.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Rewrite tests using "ftw.testbrowser", drop dependency on "ftw.testing[splinter]". [mbaechtold]
 
 
 3.0.2 (2017-04-20)
