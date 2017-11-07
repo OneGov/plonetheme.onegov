@@ -1,0 +1,187 @@
+body[class*=-controlpanel],
+body.template-configuration_registry,
+body.template-prefs_error_log_form,
+body.template-prefs_install_products_form,
+body.section-dexterity-types,
+body.section-member-fields,
+body.viewpermission-plone-site-setup-users-and-groups {
+  #columns {
+
+    &.template-overview-controlpanel {
+      line-height: 1.4;
+    }
+
+    .plone-btn-primary,
+    .context {
+      color: white;
+    }
+
+    .portletHeader {
+      margin-bottom: 0;
+    }
+
+    button, [type="submit"] {
+      padding: 6px 12px;
+      margin: 0;
+    }
+
+    label .required::after {
+      font-size: 100%;
+      top: -2px;
+    }
+
+    .pat-autotoc.autotabs {
+      .autotoc-nav a {
+        margin-right: 0;
+      }
+    }
+
+    #column-sidebar {
+      display: none;
+    }
+
+    // hide navigation tree
+    #column-sidebar .portletNavigationTree {
+      display: none;
+    }
+
+    // overview buttons
+    .portlet {
+      border: 1px solid #e5e5e5;
+      margin-bottom: 20px;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+
+      .portletHeader {
+        background: #f2f1f1;
+        font-size: 18px;
+        padding: 13px 15px;
+        color: #696969;
+      }
+      .portletContent {
+
+        ul.configlets {
+          padding: 10px;
+          overflow: auto;
+
+          li {
+            float: left;
+            min-width: 13%;
+            margin: 5px;
+
+            .inner-configlet {
+              width: 100%;
+              padding: 7px;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+
+    // navigation tabs
+    .autotabs {
+      background: white;
+      padding: 6px 12px;
+      border: 1px solid #e5e5e5;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+
+      .autotoc-nav {
+        background: #f2f1f1;
+        border-bottom: 1px solid #e5e5e5;
+        margin: -6px -12px 6px;
+
+        li {
+          display: inline;
+        }
+
+        a {
+          display: inline-block;
+          padding: 12px;
+          margin: 6px 0 0 6px;
+          border: 1px solid #e5e5e5;
+          border-radius: 4px 4px 0 0;
+
+          &.active,
+          &.active:hover {
+            color: #696969;
+            background: white;
+            cursor: default;
+          }
+
+          &:hover {
+            color: #004665;
+            background: white;
+            text-decoration: none;
+            border-bottom: none;
+          }
+
+        }
+      }
+    }
+
+    // tabs fix for formTab user
+    .pat-resourceregistry,
+    {
+      .tab-pane {
+        overflow: auto;
+        .row {
+          overflow: auto;
+        }
+      }
+
+      .autotabs {
+        border-bottom: none;
+      }
+
+      .tab-content {
+        background: white;
+        border: 1px solid #e5e5e5;
+        border-top: none;
+
+        .row {
+          top: auto;
+        }
+        .pull-right {
+          float: right;
+        }
+      }
+    }
+
+
+    .lessvariables {
+      .form .form-group {
+        overflow: auto;
+        > div {
+          float: left;
+          margin-right: 10px;
+        }
+        input {
+          box-sizing: border-box;
+        }
+      }
+      .col-sm-4 {
+        width: 30%;
+      }
+      .col-sm-7 {
+        width: 40%;
+      }
+    }
+
+
+    // form
+    label {
+      display: inline-block;
+    }
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="password"],
+    textarea,
+    select,
+    span.option {
+      display: block;
+    }
+  }
+}
