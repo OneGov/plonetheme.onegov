@@ -63,5 +63,7 @@
   <theme:add_scss path="resources/sass/components/accessibility.scss" />
   <theme:add_scss path="resources/sass/components/overrides.scss" />
   <theme:add_scss path="resources/sass/components/editzone.scss" />
+  <theme:add_scss path="resources/sass/components/controlpanel/controlpanels.plone.scss" />
+  <theme:add_scss path="resources/sass/components/controlpanel/controlpanels.scss" />
 
 </configure>
