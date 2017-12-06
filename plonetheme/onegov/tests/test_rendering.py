@@ -1,11 +1,8 @@
 from ftw.testbrowser import browsing
-from plonetheme.onegov.testing import THEME_FUNCTIONAL_TESTING
-from unittest2 import TestCase
+from plonetheme.onegov.tests import FunctionalTestCase
 
 
 class TestRendering(FunctionalTestCase):
-
-    layer = THEME_FUNCTIONAL_TESTING
 
     @browsing
     def test_theme_is_rendered_anonymous(self, browser):
