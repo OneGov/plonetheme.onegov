@@ -1,7 +1,7 @@
 Changelog
 =========
 
-3.0.3 (unreleased)
+3.1.0 (2017-12-13)
 ------------------
 
 - Refactoring of the navigation portlet renderer making it easier to customize
