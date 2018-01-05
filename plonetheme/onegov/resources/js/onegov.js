@@ -122,7 +122,7 @@ jQuery(function($) {
     var me = $(this);
     close_opened(me);
     me.toggleClass('selected');
-    $('#portal-languageselector actionMenuContent').toggle();
+    $('#portal-languageselector .actionMenuContent').toggle();
   });
 
   // breadcrumbs

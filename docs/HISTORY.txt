@@ -4,7 +4,7 @@ Changelog
 3.1.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix mobile language toggle. [mbaechtold]
 
 
 3.1.0 (2017-12-13)
