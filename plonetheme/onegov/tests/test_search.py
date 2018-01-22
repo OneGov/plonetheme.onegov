@@ -1,19 +1,28 @@
 from Products.Five.browser import BrowserView
 from ftw.builder import Builder
 from ftw.builder import create
-from ftw.solr.interfaces import IFtwSolrLayer
 from ftw.testbrowser import browsing
 from plone.app.testing import TEST_USER_ID
 from plone.app.testing import applyProfile
 from plone.browserlayer.layer import mark_layer
 from plonetheme.onegov.tests import FunctionalTestCase
 from plonetheme.onegov.tests.pages import SearchBox
+from unittest import skipUnless
 from zope.component import queryMultiAdapter
 from zope.i18n import translate
 from zope.interface import alsoProvides
 from zope.traversing.interfaces import BeforeTraverseEvent
 from zope.viewlet.interfaces import IViewletManager
+import pkg_resources
 import transaction
+
+try:
+    pkg_resources.get_distribution('ftw.solr')
+except pkg_resources.DistributionNotFound:
+    HAS_FTW_SOLR = False
+else:
+    HAS_FTW_SOLR = True
+    from ftw.solr.interfaces import IFtwSolrLayer
 
 
 class TestSeachBoxViewlet(FunctionalTestCase):
@@ -39,10 +48,12 @@ class TestSeachBoxViewlet(FunctionalTestCase):
         name = 'plone.searchbox'
         return [v for v in manager.viewlets if v.__name__ == name][0]
 
+    @skipUnless(HAS_FTW_SOLR, 'requires ftw.solr')
     def test_has_solr_is_false_by_default(self):
         viewlet = self.get_viewlet(self.portal)
         self.assertFalse(viewlet.has_solr())
 
+    @skipUnless(HAS_FTW_SOLR, 'requires ftw.solr')
     def test_when_request_is_marked_with_requestlayer_has_solr_is_true(self):
         viewlet = self.get_viewlet(self.portal)
         alsoProvides(self.portal.REQUEST, IFtwSolrLayer)
@@ -115,6 +126,7 @@ class TestSeachBoxViewlet(FunctionalTestCase):
                          'There is a has-solr AND a no-solr class!?')
 
 
+@skipUnless(HAS_FTW_SOLR, 'requires ftw.solr')
 class TestSeachBoxViewletWithSolr(FunctionalTestCase):
 
     def setUp(self):

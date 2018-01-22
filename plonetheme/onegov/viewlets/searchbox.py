@@ -39,8 +39,9 @@ class SearchBoxViewlet(SearchBoxViewlet):
         return getattr(self.context, 'search_label', default_placeholder)
 
     def get_form_tag_css_class(self):
-        if self.has_solr():
-            return 'has-solr'
+        classes = []
+        if not self.has_solr():
+            classes.append('no-solr')
         if self.livesearch:
-            return 'pat-livesearch'
-        return ''
+            classes.append('pat-livesearch')
+        return ' '.join(classes)

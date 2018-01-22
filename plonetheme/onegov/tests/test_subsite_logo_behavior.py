@@ -1,6 +1,6 @@
+import pkg_resources
 from ftw.builder import Builder
 from ftw.builder import create
-from ftw.subsite.interfaces import IFtwSubsiteLayer
 from plone.app.testing import applyProfile
 from plone.app.testing import login
 from plone.app.testing import setRoles
@@ -12,10 +12,20 @@ from plonetheme.onegov.viewlets.logo import HAS_SUBSITE
 from plonetheme.onegov.viewlets.logo import LogoViewlet
 from StringIO import StringIO
 from unittest2 import TestCase
+from unittest2 import skipUnless
 from zope.interface import alsoProvides
-import ftw.subsite.tests.builders
+
+try:
+    pkg_resources.get_distribution('ftw.subsite')
+except pkg_resources.DistributionNotFound:
+    HAS_FTW_SUBSITE = False
+else:
+    HAS_FTW_SUBSITE = True
+    from ftw.subsite.interfaces import IFtwSubsiteLayer
+    import ftw.subsite.tests.builders
 
 
+@skipUnless(HAS_FTW_SUBSITE, 'requires ftw.subsite')
 class TestFtwSubsiteLogoBehavior(TestCase):
 
     layer = THEME_INTEGRATION_TESTING
@@ -45,7 +55,7 @@ class TestFtwSubsiteLogoBehavior(TestCase):
         request = self.portal.REQUEST
         alsoProvides(request, IFtwSubsiteLayer)
 
-        subsite = create(Builder('subsite').titled('Subsite'))
+        subsite = create(Builder('subsite').titled(u'Subsite'))
         self._set_logo(subsite)
 
         logo_viewlet = LogoViewlet(
