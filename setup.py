@@ -5,9 +5,9 @@ version = '3.0.3.dev0'
 
 tests_require = [
     'ftw.builder',
-    'ftw.solr',
+    # 'ftw.solr',  # ftw.solr and collective.solr are not ready for Plone 5.1.
     'ftw.testbrowser',
-    'ftw.subsite',
+    # 'ftw.subsite',  # ftw.subsite is not ready for Plone 5.1
     'ftw.testing',
     'plone.app.testing',
     'plone.resource',

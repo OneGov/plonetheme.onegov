@@ -1,18 +1,28 @@
 from Products.Five.browser import BrowserView
 from ftw.builder import Builder
 from ftw.builder import create
-from ftw.solr.interfaces import IFtwSolrLayer
 from ftw.testbrowser import browsing
+from plone.app.testing import TEST_USER_ID
 from plone.app.testing import applyProfile
 from plone.browserlayer.layer import mark_layer
 from plonetheme.onegov.tests import FunctionalTestCase
 from plonetheme.onegov.tests.pages import SearchBox
+from unittest import skipUnless
 from zope.component import queryMultiAdapter
 from zope.i18n import translate
 from zope.interface import alsoProvides
 from zope.traversing.interfaces import BeforeTraverseEvent
 from zope.viewlet.interfaces import IViewletManager
+import pkg_resources
 import transaction
+
+try:
+    pkg_resources.get_distribution('ftw.solr')
+except pkg_resources.DistributionNotFound:
+    HAS_FTW_SOLR = False
+else:
+    HAS_FTW_SOLR = True
+    from ftw.solr.interfaces import IFtwSolrLayer
 
 
 class TestSeachBoxViewlet(FunctionalTestCase):
@@ -38,10 +48,12 @@ class TestSeachBoxViewlet(FunctionalTestCase):
         name = 'plone.searchbox'
         return [v for v in manager.viewlets if v.__name__ == name][0]
 
+    @skipUnless(HAS_FTW_SOLR, 'requires ftw.solr')
     def test_has_solr_is_false_by_default(self):
         viewlet = self.get_viewlet(self.portal)
         self.assertFalse(viewlet.has_solr())
 
+    @skipUnless(HAS_FTW_SOLR, 'requires ftw.solr')
     def test_when_request_is_marked_with_requestlayer_has_solr_is_true(self):
         viewlet = self.get_viewlet(self.portal)
         alsoProvides(self.portal.REQUEST, IFtwSolrLayer)
@@ -50,7 +62,7 @@ class TestSeachBoxViewlet(FunctionalTestCase):
 
     @browsing
     def test_default_plone_placeholder_is_used_by_deafult(self, browser):
-        browser.visit(self.portal)
+        browser.open()
         default_placeholder = translate('title_search_site',
                                         default='Search this site',
                                         domain='plone',
@@ -63,7 +75,7 @@ class TestSeachBoxViewlet(FunctionalTestCase):
         self.portal._setProperty('search_label', 'Search example.com',
                                  'string')
         transaction.commit()
-        browser.visit(self.portal)
+        browser.open()
         self.assertEquals('Search example.com',
                           SearchBox().search_field_placeholder)
 
@@ -71,7 +83,7 @@ class TestSeachBoxViewlet(FunctionalTestCase):
     def test_empty_placeholder_by_setting_property(self, browser):
         self.portal._setProperty('search_label', '', 'string')
         transaction.commit()
-        browser.visit(self.portal)
+        browser.open()
         self.assertEquals('', SearchBox().search_field_placeholder)
 
     @browsing
@@ -83,9 +95,8 @@ class TestSeachBoxViewlet(FunctionalTestCase):
 
         placeholders = {}
 
-        browser.login().visit(self.portal)
+        browser.login().open()
         placeholders['portal'] = SearchBox().search_field_placeholder
-
         browser.visit(folder)
         placeholders['folder'] = SearchBox().search_field_placeholder
 
@@ -102,19 +113,20 @@ class TestSeachBoxViewlet(FunctionalTestCase):
 
     @browsing
     def test_form_action_is_page_template_when_solr_disabled(self, browser):
-        browser.login().visit(self.portal)
+        browser.login().open()
         self.assertEquals('http://nohost/plone/search',
                           SearchBox().form_action)
 
     @browsing
     def test_no_solr_cssclass_present_when_solr_disabled(self, browser):
-        browser.login().visit(self.portal)
+        browser.login().open()
         self.assertTrue(SearchBox().no_solr,
                         'The no-solr class is missing on the search <form>')
         self.assertFalse(SearchBox().has_solr,
                          'There is a has-solr AND a no-solr class!?')
 
 
+@skipUnless(HAS_FTW_SOLR, 'requires ftw.solr')
 class TestSeachBoxViewletWithSolr(FunctionalTestCase):
 
     def setUp(self):
@@ -125,13 +137,13 @@ class TestSeachBoxViewletWithSolr(FunctionalTestCase):
 
     @browsing
     def test_form_action_is_view_when_solr_enabled(self, browser):
-        browser.login().visit(self.portal)
+        browser.login().open()
         self.assertEquals('http://nohost/plone/@@search',
                           SearchBox().form_action)
 
     @browsing
     def test_has_solr_cssclass_present_when_solr_enabled(self, browser):
-        browser.login().visit(self.portal)
+        browser.login().open()
         self.assertTrue(SearchBox().has_solr,
                         'The has-solr class is missing on the search <form>')
         self.assertFalse(SearchBox().no_solr,

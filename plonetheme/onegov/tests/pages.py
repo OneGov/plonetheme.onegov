@@ -11,12 +11,12 @@ class SearchBox(object):
     @property
     def search_field_placeholder(self):
         xpr = '#portal-searchbox input[name=SearchableText]'
-        return self.browser.css(xpr).first['placeholder']
+        return self.browser.css(xpr).first.attrib['placeholder']
 
     @property
     def form_action(self):
         xpr = '#portal-searchbox form'
-        return self.browser.css(xpr).first['action']
+        return self.browser.css(xpr).first.attrib['action']
 
     @property
     def has_solr(self):
