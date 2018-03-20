@@ -131,7 +131,7 @@ define([
         // and no img children should be wrapped in a link-external span
         contentarea.find(
             'a[href^="http:"]:not(.link-plain):not([href^="' + url + '"]):not(:has(img))')
-            .before('<i class="glyphicon link-external"></i>');
+            .wrap('<span></span>').parent().addClass('link-external');
         // All links without an http href (without the link-plain class), not within this site,
         // and no img children should be wrapped in a link-[protocol] span
         contentarea.find(
@@ -141,8 +141,7 @@ define([
                 // wrap these in a link-[protocol] span
                 res = protocols.exec(this.href);
                 if (res) {
-                    var iconclass = 'glyphicon link-' + res[0];
-                    $(this).before('<i class="' + iconclass + '"></i>');
+                    $(this).wrap('<span></span>').parent().addClass('link-' + res[0]);
                 }
             }
         );

@@ -192,12 +192,11 @@ dl.portletNavigationTree img {
   background-image: none;
 }
 
+a[target="_blank"],
+#portal-topactions ul a[target="_blank"],
 span.link-external a,
 a.external-link {
   @include icon("j ");
-}
-i.glyphicon.link-external {
-  @include icon("j ", "after");
 }
 #portal-topactions ul a[target="_blank"]:before {
   color: $link-color;
