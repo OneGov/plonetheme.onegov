@@ -43,6 +43,11 @@
     </value>
   </records>
 
+  <records prefix="plone.resources/mockup-patterns-markspeciallinks"
+           interface="Products.CMFPlone.interfaces.IResourceRegistry">
+    <value key="js">++theme++plonetheme.onegov/js/pattern.markspeciallinks.js</value>
+  </records>
+
   <records prefix="plone.resources/onegov"
            interface='Products.CMFPlone.interfaces.IResourceRegistry'>
     <value key="js">++theme++plonetheme.onegov/js/onegov.js</value>
