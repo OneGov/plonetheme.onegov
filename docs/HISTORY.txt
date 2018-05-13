@@ -4,7 +4,8 @@ Changelog
 3.1.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Added Spanish translation.
+  [macagua]
 
 
 3.1.1 (2018-01-05)
