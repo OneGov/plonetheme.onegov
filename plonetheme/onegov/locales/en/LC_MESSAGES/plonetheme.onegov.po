@@ -113,7 +113,7 @@ msgid "global-navigation-color-selected"
 msgstr "Top navigation: active element text color"
 
 msgid "heading-font-family"
-msgstr "Heading font familiy"
+msgstr "Heading font family"
 
 msgid "heading-font-size"
 msgstr "Heading font size"
