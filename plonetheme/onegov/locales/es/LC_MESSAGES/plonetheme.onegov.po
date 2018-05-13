@@ -1,0 +1,241 @@
+# Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2018.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2016-12-08 10:34+0000\n"
+"PO-Revision-Date: 2018-05-10 22:41-0400\n"
+"Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
+"Language-Team: es\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"Preferred-Encodings: utf-8 latin1\n"
+
+#: ./plonetheme/onegov/upgrades/configure.zcml:53
+msgid "Add possibility to disable the flyout navigation."
+msgstr "Agregue la posibilidad de deshabilitar la navegación flotante."
+
+#: ./plonetheme/onegov/upgrades/configure.zcml:26
+msgid "Add tinymce popup css"
+msgstr "Añadir ventana emergente de css para tinymce"
+
+#: ./plonetheme/onegov/portlets/navigation.pt:1
+msgid "Content Navigation"
+msgstr "Navegación de contenido"
+
+msgid "Direct to"
+msgstr "Directo a"
+
+#: ./plonetheme/onegov/upgrades/configure.zcml:35
+msgid "Enable flyout breadcrumbs"
+msgstr "Habilitar las migas de pan desplegables"
+
+#: ./plonetheme/onegov/upgrades/configure.zcml:62
+msgid "Fix skins settings"
+msgstr "Reparar la configuración de skins"
+
+#: ./plonetheme/onegov/upgrades/configure.zcml:44
+msgid "Fix theme doctype"
+msgstr "Reparar doctype de tema"
+
+#: ./plonetheme/onegov/viewlets/accesskeys.pt:13
+msgid "Footer"
+msgstr "Pie de página"
+
+#: ./plonetheme/onegov/viewlets/accesskeys.pt:9
+msgid "Further informations"
+msgstr "Futura informaciones"
+
+#: ./plonetheme/onegov/configure.zcml:35
+msgid "Installs the plonetheme.onegov package"
+msgstr "Instala el paquete plonetheme.onegov"
+
+#: ./plonetheme/onegov/upgrades/configure.zcml:71
+msgid "Make OnegovTheme default skin"
+msgstr "Hacer OnegovTheme el skin por defecto"
+
+#: ./plonetheme/onegov/profiles/default/actions.xml
+msgid "Manage styles"
+msgstr "Administrar estilos"
+
+#: ./plonetheme/onegov/viewlets/accesskeys.pt:6
+msgid "Navigation on ${title}"
+msgstr "Navegación en ${title}"
+
+#: ./plonetheme/onegov/upgrades/configure.zcml:89
+msgid "Optional flyout of grandchildren in global navigation"
+msgstr "Opcional flotante de nietos en la navegación global"
+
+#: ./plonetheme/onegov/viewlets/personal_bar.pt:4
+msgid "Personal actions"
+msgstr "Acciones personales"
+
+#: ./plonetheme/onegov/upgrades/configure.zcml:80
+msgid "Remove forked javascript from ftw.mobilenavigation"
+msgstr "Elimina javascript bifurcado de ftw.mobilenavigation"
+
+#: ./plonetheme/onegov/upgrades/configure.zcml:17
+msgid "Update tinymce css"
+msgstr "Actualización de css para tinymce"
+
+#. Default: "Next Page"
+#: ./plonetheme/onegov/browser/batchnavigation.pt:56
+msgid "batch_next_page"
+msgstr "Próxima página"
+
+#. Default: "Previous Page"
+#: ./plonetheme/onegov/browser/batchnavigation.pt:11
+msgid "batch_previous_page"
+msgstr "Anterior página"
+
+msgid "body-background"
+msgstr "Fondo"
+
+msgid "favicon"
+msgstr "Favicon"
+
+msgid "footer-background"
+msgstr "Fondo de pie de página"
+
+msgid "global-navigation-border-color"
+msgstr "Navegación superior: color del borde debajo de la navegación"
+
+msgid "global-navigation-border-color-active"
+msgstr "Navegación superior: color del borde del elemento activo"
+
+msgid "global-navigation-color"
+msgstr "Navegación superior: color del texto"
+
+msgid "global-navigation-color-hover"
+msgstr "Navegación superior: color del texto al desplazar el curso sobre el"
+
+msgid "global-navigation-color-selected"
+msgstr "Navegación superior: color del texto del elemento activo"
+
+msgid "heading-font-family"
+msgstr "Familia de fuentes Título"
+
+msgid "heading-font-size"
+msgstr "Tamaño de letra del Título"
+
+msgid "heading-line-height"
+msgstr "Altura de línea de Título"
+
+#. Default: "Global Navigation"
+#: ./plonetheme/onegov/viewlets/sections.pt:2
+msgid "heading_sections"
+msgstr "Navegación Global"
+
+#. Default: "Change the subsite's logo by editing the subsite."
+#: ./plonetheme/onegov/browser/customstyles_form.pt:48
+msgid "help_subsite_custom_logo"
+msgstr "Cambie el logotipo del subsitio editando el subsitio."
+
+msgid "highlight-color-light"
+msgstr "Color resaltado (por ejemplo, listas de enlaces)"
+
+#. Default: "Custom CSS"
+#: ./plonetheme/onegov/browser/customstyles_form.pt:21
+msgid "label_custom_css"
+msgstr "Personalizar CSS"
+
+#. Default: "Custom Images"
+#: ./plonetheme/onegov/browser/customstyles_form.pt:43
+msgid "label_custom_images"
+msgstr "Personalizar Imágenes"
+
+#. Default: "Custom SCSS - be careful"
+#: ./plonetheme/onegov/browser/customstyles_form.pt:114
+msgid "label_custom_scss"
+msgstr "Personalizar SCSS - sea cuidadoso"
+
+#. Default: "export styles"
+#: ./plonetheme/onegov/browser/customstyles_form.pt:106
+msgid "label_export_styles"
+msgstr "Exportar estilos"
+
+#. Default: "import styles"
+#: ./plonetheme/onegov/browser/customstyles_form.pt:101
+msgid "label_import_styles"
+msgstr "Importar estilos"
+
+#. Default: "Import / Export"
+#: ./plonetheme/onegov/browser/customstyles_form.pt:91
+msgid "label_importexport"
+msgstr "Importar / Exportar"
+
+#. Default: "Reset to OneGov Default"
+#: ./plonetheme/onegov/browser/customstyles_form.pt:125
+msgid "label_reset_styles"
+msgstr "Reiniciar los valores predeterminados OneGov"
+
+#. Default: "Contact"
+#: ./plonetheme/onegov/viewlets/accesskeys.pt:36
+msgid "label_skiptocontact"
+msgstr "Contacto"
+
+#. Default: "Content"
+#: ./plonetheme/onegov/viewlets/accesskeys.pt:31
+msgid "label_skiptocontent"
+msgstr "Contenido"
+
+#. Default: "Homepage"
+#: ./plonetheme/onegov/viewlets/accesskeys.pt:21
+msgid "label_skiptohomepage"
+msgstr "Inicio"
+
+#. Default: "Navigation"
+#: ./plonetheme/onegov/viewlets/accesskeys.pt:26
+msgid "label_skiptonavigation"
+msgstr "Navegación"
+
+#. Default: "Search"
+#: ./plonetheme/onegov/viewlets/accesskeys.pt:41
+msgid "label_skiptosearch"
+msgstr "Buscar"
+
+#. Default: "To Top"
+#: ./plonetheme/onegov/viewlets/totop.pt:3
+msgid "label_to_top"
+msgstr "Arriba"
+
+msgid "link-color"
+msgstr "Color de Enlace"
+
+msgid "link-color-hover"
+msgstr "Color de Enlace (Hover link)"
+
+msgid "logo"
+msgstr "Logotipo"
+
+#: ./plonetheme/onegov/configure.zcml:35
+msgid "plonetheme.onegov"
+msgstr "plonetheme.onegov"
+
+msgid "startup"
+msgstr "Icono de inicio de iPhone"
+
+#. Default: "en"
+#: ./plonetheme/onegov/profiles/default/actions.xml
+msgid "subsite_current_language"
+msgstr "en"
+
+#. Default: "Direct to ${title}"
+#: ./plonetheme/onegov/browser/flyout.pt:12
+msgid "text_flyout_direct_to"
+msgstr "Directo a ${title}"
+
+msgid "touch_iphone"
+msgstr "Icono táctil de iPhone"
+
+msgid "touch_iphone_120"
+msgstr "Icono táctil de iPhone (120px)"
+
+msgid "touch_iphone_152"
+msgstr "Icono táctil de iPhone (152px)"
+
+msgid "touch_iphone_76"
+msgstr "Icono táctil de iPhone (76px)"
