@@ -4,8 +4,9 @@ Changelog
 3.1.2 (unreleased)
 ------------------
 
-- Added Spanish translation.
-  [macagua]
+- Added Spanish translation. [macagua]
+
+- Replace logo viewlet using ftw.logo. [busykoala]
 
 
 3.1.1 (2018-01-05)
