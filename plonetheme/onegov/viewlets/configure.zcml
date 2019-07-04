@@ -11,23 +11,6 @@
       layer="plonetheme.onegov.interfaces.IPlonethemeOneGovLayer"
       />
 
-  <!-- The logo -->
-  <browser:viewlet
-      name="plone.logo"
-      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-      class=".logo.LogoViewlet"
-      permission="zope2.View"
-      layer="plonetheme.onegov.interfaces.IPlonethemeOneGovLayer"
-      />
-
-  <browser:viewlet
-      name="plone.links.favicon"
-      manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
-      class=".meta.MetaViewlet"
-      permission="zope2.View"
-      layer="plonetheme.onegov.interfaces.IPlonethemeOneGovLayer"
-      />
-
   <!-- searchbox viewlet -->
   <!-- XXX: registered for IItem to overwrite ftw.solr searchbox -->
   <browser:viewlet
