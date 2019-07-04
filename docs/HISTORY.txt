@@ -1,7 +1,7 @@
 Changelog
 =========
 
-3.1.2 (unreleased)
+3.2.0 (2019-07-04)
 ------------------
 
 - Added Spanish translation. [macagua]
