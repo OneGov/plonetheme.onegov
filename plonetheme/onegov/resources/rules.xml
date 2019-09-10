@@ -17,7 +17,7 @@
   <!-- Rules applying to standard Plone pages -->
   <rules css:if-content="#visual-portal-wrapper">
 
-    <theme href="index.html" />
+    <theme href="++theme++plonetheme.onegov/index.html" />
 
     <!-- Copy standard header tags, including base (very important for
          Plone default pages to work correctly), meta, title and
