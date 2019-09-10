@@ -1,7 +1,7 @@
 Changelog
 =========
 
-3.2.1 (unreleased)
+3.3.0 (2019-09-10)
 ------------------
 
 - Make Diazo theme customizable by using theme-prefixed path to index.html. [tinagerber]
