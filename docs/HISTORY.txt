@@ -4,7 +4,7 @@ Changelog
 3.2.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Make Diazo theme customizable by using theme-prefixed path to index.html. [tinagerber]
 
 
 3.2.0 (2019-07-04)
