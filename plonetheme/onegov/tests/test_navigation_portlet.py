@@ -189,7 +189,6 @@ class TestNavigationPortlet(TestCase):
         self.assertIn('state-private', portlet().css('.child').first.classes)
         self.assertIn('state-pending', portlet().css('.sibling')[1].classes)
 
-    @skipIf(IS_PLONE_5, 'Plone 5 renders the navigation portlet twice.')
     @browsing
     def test_content_expired_class_for_expired_content(self, browser):
         before_expiration = datetime(2010, 1, 1)
@@ -198,13 +197,13 @@ class TestNavigationPortlet(TestCase):
 
         create(Builder('navigation portlet'))
         create(Builder('folder').titled(u'Top Sibling')
-               .having(expirationDate=expiration_date))
+               .having(expires=expiration_date))
         folder = create(Builder('folder').titled(u'The Folder')
-                        .having(expirationDate=expiration_date))
+                        .having(expires=expiration_date))
         create(Builder('page').titled(u'The Page').within(folder)
-               .having(expirationDate=expiration_date))
+               .having(expires=expiration_date))
         create(Builder('folder').titled(u'Bottom Sibling')
-               .having(expirationDate=expiration_date))
+               .having(expires=expiration_date))
 
         with freeze(after_expiration):
             browser.login().visit(folder)
