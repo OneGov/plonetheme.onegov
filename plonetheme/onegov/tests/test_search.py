@@ -1,7 +1,6 @@
 from ftw.builder import Builder
 from ftw.builder import create
 from ftw.testbrowser import browsing
-from plone.app.testing import applyProfile
 from plone.browserlayer.layer import mark_layer
 from plonetheme.onegov.tests import FunctionalTestCase
 from plonetheme.onegov.tests.pages import SearchBox
@@ -105,34 +104,3 @@ class TestSeachBoxViewlet(FunctionalTestCase):
         browser.login().visit(self.portal)
         self.assertEquals('http://nohost/plone/search',
                           SearchBox().form_action)
-
-    @browsing
-    def test_no_solr_cssclass_present_when_solr_disabled(self, browser):
-        browser.login().visit(self.portal)
-        self.assertTrue(SearchBox().no_solr,
-                        'The no-solr class is missing on the search <form>')
-        self.assertFalse(SearchBox().has_solr,
-                         'There is a has-solr AND a no-solr class!?')
-
-
-class TestSeachBoxViewletWithSolr(FunctionalTestCase):
-
-    def setUp(self):
-        super(TestSeachBoxViewletWithSolr, self).setUp()
-        applyProfile(self.portal, 'ftw.solr:default')
-        mark_layer(self.portal, BeforeTraverseEvent(self.portal, self.request))
-        transaction.commit()
-
-    @browsing
-    def test_form_action_is_view_when_solr_enabled(self, browser):
-        browser.login().visit(self.portal)
-        self.assertEquals('http://nohost/plone/@@search',
-                          SearchBox().form_action)
-
-    @browsing
-    def test_has_solr_cssclass_present_when_solr_enabled(self, browser):
-        browser.login().visit(self.portal)
-        self.assertTrue(SearchBox().has_solr,
-                        'The has-solr class is missing on the search <form>')
-        self.assertFalse(SearchBox().no_solr,
-                         'There is a has-solr AND a no-solr class!?')
