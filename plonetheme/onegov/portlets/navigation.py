@@ -35,9 +35,8 @@ class Renderer(base.Renderer):
             self.parent = aq_parent(aq_inner(self.parent))
 
         registry = getUtility(IRegistry)
-        self.displayed_types = registry['plone.displayed_types']
-        # TODO: What does "registry['plone.displayed_types']" return if no displayed types are configured?
-        self.view_action_types = registry['plone.types_use_view_action_in_listings']
+        self.displayed_types = registry.get('plone.displayed_types', [])
+        self.view_action_types = registry.get('plone.types_use_view_action_in_listings', [])
 
     def show_parent(self):
         """ Do not show parent if you are on navigationroot.
