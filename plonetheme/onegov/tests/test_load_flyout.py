@@ -1,17 +1,17 @@
-import transaction
-
+from Products.CMFCore.utils import getToolByName
 from ftw.builder import Builder
 from ftw.builder import create
 from ftw.testbrowser import browsing
-from plone.app.testing import login
-from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
 from plone.app.testing import TEST_USER_NAME
+from plone.app.testing import login
+from plone.app.testing import setRoles
 from plone.registry.interfaces import IRegistry
+from plonetheme.onegov import IS_PLONE_5
 from plonetheme.onegov.testing import THEME_FUNCTIONAL_TESTING
-from Products.CMFCore.utils import getToolByName
 from unittest2 import TestCase
 from zope.component import getUtility
+import transaction
 
 
 class TestFyloutView(TestCase):
@@ -28,8 +28,12 @@ class TestFyloutView(TestCase):
 
     @browsing
     def test_view_appended_to_url_if_obj_in_property(self, browser):
-        properties = getToolByName(self.portal, 'portal_properties')
-        properties.site_properties.typesUseViewActionInListings = ('Folder')
+        if not IS_PLONE_5:
+            properties = getToolByName(self.portal, 'portal_properties')
+            properties.site_properties.typesUseViewActionInListings = ('Folder')
+        else:
+            registry = getUtility(IRegistry)
+            registry['plone.types_use_view_action_in_listings'] = [u'Folder']
 
         create(Builder('folder'))
         browser.login().visit(view='load_flyout_children')
@@ -38,8 +42,12 @@ class TestFyloutView(TestCase):
 
     @browsing
     def test_view_not_appended_to_url_if_obj_not_in_property(self, browser):
-        properties = getToolByName(self.portal, 'portal_properties')
-        properties.site_properties.typesUseViewActionInListings = ('')
+        if not IS_PLONE_5:
+            properties = getToolByName(self.portal, 'portal_properties')
+            properties.site_properties.typesUseViewActionInListings = ('Folder')
+        else:
+            registry = getUtility(IRegistry)
+            registry['plone.types_use_view_action_in_listings'] = []
 
         create(Builder('folder'))
         browser.login().visit(view='load_flyout_children')
@@ -83,7 +91,7 @@ class TestFyloutView(TestCase):
 
     @browsing
     def test_markup_grandchildren(self, browser):
-        folder = create(Builder('folder').titled('My Folder'))
+        folder = create(Builder('folder').titled(u'My Folder'))
         subfolder = create(Builder('folder').titled(
             u'My Subf\xf6lder').within(folder))
         create(Builder('page').titled(u'My P\xe4ge').within(subfolder))

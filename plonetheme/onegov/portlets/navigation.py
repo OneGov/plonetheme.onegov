@@ -1,17 +1,20 @@
 from AccessControl import getSecurityManager
 from Acquisition import aq_inner, aq_parent
+from Products.CMFCore.utils import getToolByName
+from Products.CMFPlone.interfaces.siteroot import IPloneSiteRoot
+from Products.CMFPlone.utils import base_hasattr
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from borg.localrole.interfaces import IFactoryTempFolder
 from plone.app.layout.navigation.defaultpage import getDefaultPage
 from plone.app.layout.navigation.defaultpage import isDefaultPage
 from plone.app.portlets.portlets import base
 from plone.app.portlets.portlets.navigation import getRootPath
 from plone.memoize.instance import memoize
-from Products.CMFCore.utils import getToolByName
-from Products.CMFPlone.interfaces.siteroot import IPloneSiteRoot
-from Products.CMFPlone.utils import base_hasattr
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from plone.registry.interfaces import IRegistry
 from plonetheme.onegov.utils import is_external_link
 from zope.component import getMultiAdapter
+from zope.component import getUtility
+from plonetheme.onegov import IS_PLONE_5
 
 
 class Renderer(base.Renderer):
@@ -23,6 +26,8 @@ class Renderer(base.Renderer):
         self.request = request
         self.parent = aq_parent(aq_inner(context))
         self.data = data
+        self.hidden_types = []
+        self.displayed_types = []
         plone = getMultiAdapter((context, request), name="plone")
         self.is_default_page = plone.isDefaultPageInFolder()
         in_factory = IFactoryTempFolder.providedBy(
@@ -32,10 +37,16 @@ class Renderer(base.Renderer):
         elif self.is_default_page:
             self.parent = aq_parent(aq_inner(self.parent))
 
-        properties = getToolByName(self.context, 'portal_properties')
-        self.hidden_types = properties.navtree_properties.metaTypesNotToList
-        self.view_action_types = properties.site_properties.getProperty(
-            'typesUseViewActionInListings', ())
+        if not IS_PLONE_5:
+            properties = getToolByName(self.context, 'portal_properties')
+            self.hidden_types = properties.navtree_properties.metaTypesNotToList
+            self.view_action_types = properties.site_properties.getProperty(
+                'typesUseViewActionInListings', ())
+        else:
+            registry = getUtility(IRegistry)
+            self.view_action_types = registry.get(
+                    'plone.types_use_view_action_in_listings', [])
+            self.displayed_types = list(registry['plone.displayed_types'])
 
     def show_parent(self):
         """ Do not show parent if you are on navigationroot.
@@ -118,7 +129,8 @@ class Renderer(base.Renderer):
         navigation explictly.
         """
         for brain in brains:
-            if brain.portal_type in self.hidden_types:
+            if (brain.portal_type in self.hidden_types) or \
+                    (IS_PLONE_5 and brain.portal_type not in self.displayed_types):
                 continue
 
             if getattr(brain, 'exclude_from_nav', False):

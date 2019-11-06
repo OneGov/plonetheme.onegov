@@ -34,7 +34,7 @@ class TestGenericSetupImport(TestCase):
                           'Link color style should now be set.')
 
     def test_foo_customstyles_are_imported(self):
-        foo = create(Builder('folder').titled('foo'))
+        foo = create(Builder('folder').titled(u'foo'))
         alsoProvides(foo, INavigationRoot)
         transaction.commit()
 
