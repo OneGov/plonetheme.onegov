@@ -4,11 +4,12 @@ from ftw.builder.testing import functional_session_factory
 from ftw.builder.testing import set_builder_session_factory
 from ftw.testing import ComponentRegistryLayer
 from pkg_resources import get_distribution
-from plone.app.testing import applyProfile
 from plone.app.testing import FunctionalTesting
 from plone.app.testing import IntegrationTesting
 from plone.app.testing import PLONE_FIXTURE
 from plone.app.testing import PloneSandboxLayer
+from plone.app.testing import applyProfile
+from plone.testing import z2
 from zope.configuration import xmlconfig
 
 
@@ -43,10 +44,14 @@ class ThemeLayer(PloneSandboxLayer):
         xmlconfig.file('configure.zcml', plonetheme.onegov.tests,
                        context=configurationContext)
 
+        z2.installProduct(app, 'Products.DateRecurringIndex')
+
     def setUpPloneSite(self, portal):
         applyProfile(portal, 'plonetheme.onegov:default')
 
-        applyProfile(portal, 'plone.app.contenttypes:default')
+        if IS_PLONE_5:
+            applyProfile(portal, 'plone.app.contenttypes:default')
+
         self.remove_navigation_portlet(portal)
 
     def remove_navigation_portlet(self, portal):
