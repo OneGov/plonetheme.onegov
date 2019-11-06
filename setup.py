@@ -4,11 +4,14 @@ import os
 version = '3.3.1.dev0'
 
 tests_require = [
+    'Products.DateRecurringIndex',
     'ftw.builder',
     'ftw.solr',
-    'ftw.testbrowser',
     'ftw.subsite',
+    'ftw.testbrowser',
     'ftw.testing',
+    'ftw.testing',
+    'plone.app.contenttypes',
     'plone.app.testing',
     'plone.resource',
     'pyquery',
