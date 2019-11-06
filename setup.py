@@ -6,6 +6,7 @@ version = '3.3.1.dev0'
 tests_require = [
     'ftw.builder',
     'ftw.solr',
+    'ftw.testing',
     'ftw.testbrowser',
     'ftw.subsite',
     'ftw.testing',

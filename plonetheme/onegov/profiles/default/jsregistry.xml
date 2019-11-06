@@ -4,4 +4,8 @@
 
   <javascript id="livesearch.js" enabled="false" />
 
+  <javascript cacheable="True" compression="safe" cookable="True" enabled="on"
+              expression="" id="++theme++plonetheme.onegov/js/onegov.js"
+              inline="False"/>
+
 </object>

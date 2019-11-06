@@ -9,6 +9,8 @@
     xmlns:theme="http://namespaces.zope.org/plonetheme.onegov"
     i18n_domain="plonetheme.onegov">
 
+  <i18n:registerTranslations directory="locales" />
+
   <include file="permissions.zcml" />
 
   <cmf:registerDirectory name="plonetheme_onegov"/>
@@ -22,14 +24,22 @@
   <include package=".exportimport" />
   <include zcml:condition="installed ftw.lawgiver" file="lawgiver.zcml" />
 
-  <i18n:registerTranslations directory="locales" />
-
   <adapter factory=".customstyles.CustomStyles" />
 
   <genericsetup:registerProfile
+      zcml:condition="not-have plone-5"
       name="default"
       title="plonetheme.onegov"
       directory="profiles/default"
+      description="Installs the plonetheme.onegov package"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:registerProfile
+      zcml:condition="have plone-5"
+      name="default"
+      title="plonetheme.onegov"
+      directory="profiles/default_plone5"
       description="Installs the plonetheme.onegov package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />

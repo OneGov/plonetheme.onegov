@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<object name="portal_actions" meta_type="Plone Actions Tool"
+        xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+
+  <object name="top_actions" meta_type="CMF Action Category">
+    <property name="title"></property>
+    <object name="onegov" meta_type="CMF Action" i18n:domain="plone">
+      <property name="visible">True</property>
+      <property name="title">www.onegov.ch</property>
+      <property name="description">OneGov</property>
+      <property name="url_expr">string:http://onegov.ch</property>
+      <property name="link_target">_blank</property>
+      <property name="icon_expr"></property>
+      <property name="permissions">
+        <element value="View"/>
+      </property>
+    </object>
+  </object>
+
+  <object name="mobile_buttons" meta_type="CMF Action Category">
+    <object name="toggle_subsitelangs" meta_type="CMF Action"
+            i18n:domain="plonetheme.onegov">
+      <property name="title" i18n:translate="">subsite_current_language</property>
+      <property name="description" i18n:translate=""></property>
+      <property name="url_expr">string:#</property>
+      <property name="icon_expr"></property>
+      <property name="available_expr">context/subsite-languages/available|nothing</property>
+      <property name="permissions">
+        <element value="View"/>
+      </property>
+      <property name="visible">True</property>
+    </object>
+  </object>
+
+  <object name="site_actions" meta_type="CMF Action Category">
+    <object name="manage_styles" meta_type="CMF Action"
+            i18n:domain="plonetheme.onegov">
+      <property name="title" i18n:translate="">Manage styles</property>
+      <property name="description" i18n:translate=""></property>
+      <property
+          name="url_expr">string:${object/absolute_url}/customstyles_form</property>
+      <property name="link_target"></property>
+      <property name="icon_expr"></property>
+      <property
+          name="available_expr">python:context.portal_type in ['Plone Site', 'ftw.subsite.Subsite', 'Subsite']</property>
+      <property name="permissions">
+        <element value="plonetheme.onegov: Manage Styles"/>
+      </property>
+      <property name="visible">True</property>
+    </object>
+  </object>
+
+</object>
