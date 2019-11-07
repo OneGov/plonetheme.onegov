@@ -108,6 +108,18 @@ The Implementation needs to be done by yourself. `For an example check the Solr 
 
 .. image:: https://raw.github.com/OneGov/plonetheme.onegov/master/docs/screenshot_filter.png
 
+Development
+-----------
+
+In Plone 5 working on resources is a pain because they have to be recooked after every
+change. Therefore there is a Grunt setup provided watching the resources and updating them.
+
+To setup and run the watcher do:
+
+::
+
+    npm install
+    grunt watch
 
 
 Print

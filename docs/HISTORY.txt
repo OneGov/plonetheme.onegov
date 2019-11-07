@@ -6,6 +6,8 @@ Changelog
 
 - Add Plone 5.1 support and drop Plone 4.3. [mbaechtold, maethu, shylux, busykoala]
 
+- Add grunt setup for development. [busykoala]
+
 
 3.3.0 (2019-09-10)
 ------------------
