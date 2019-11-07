@@ -1,5 +1,6 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
     xmlns:browser="http://namespaces.zope.org/browser">
 
   <!-- The personal bar -->
@@ -24,8 +25,17 @@
 
   <!-- The global sections -->
   <browser:viewlet
+      zcml:condition="have plone-5"
       name="plone.global_sections"
       manager="plone.app.layout.viewlets.interfaces.IMainNavigation"
+      class=".sections.GlobalSectionsViewlet"
+      permission="zope2.View"
+      layer="plonetheme.onegov.interfaces.IPlonethemeOneGovLayer"
+      />
+  <browser:viewlet
+      zcml:condition="not-have plone-5"
+      name="plone.global_sections"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
       class=".sections.GlobalSectionsViewlet"
       permission="zope2.View"
       layer="plonetheme.onegov.interfaces.IPlonethemeOneGovLayer"
