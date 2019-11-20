@@ -82,3 +82,12 @@
         margin: 1.2em;
     }
 }
+
+body[class*=-controlpanel] #columns .portlet .portletContent ul.row.configlets {
+	padding: 0;
+  background-color: white;
+
+  li:hover {
+    background-color: transparent;
+  }
+}
