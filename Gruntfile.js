@@ -3,7 +3,15 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     watch: {
-      files: ['Gruntfile.js', 'ftw/**/*.js', 'ftw/**/*.css', 'ftw/**/*.scss'],
+      files: [
+        'Gruntfile.js',
+        'ftw/**/*.js',
+        'ftw/**/*.css',
+        'ftw/**/*.scss',
+        'plonetheme/onegov/**/*.css',
+        'plonetheme/onegov/**/*.scss',
+        'plonetheme/onegov/**/*.js'
+      ],
       tasks: ['cook_resources']
     },
     shell: {
