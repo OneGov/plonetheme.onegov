@@ -91,3 +91,10 @@ body[class*=-controlpanel] #columns .portlet .portletContent ul.row.configlets {
     background-color: transparent;
   }
 }
+
+body.template-prefs_install_products_form #columns .portlet .portletContent ul.configlets li {
+    width: 98%;
+}
+#install-products .configlets h3 {
+	margin: 0;
+}
