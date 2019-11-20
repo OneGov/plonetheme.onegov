@@ -8,6 +8,9 @@ Changelog
 
 - Add grunt setup for development. [busykoala]
 
+- Drop the slider mobile navigation (in favour of Plone 5's mobile menu - IIUC).
+  [mbaechtold, maethu, shylux, busykoala]
+
 
 3.3.0 (2019-09-10)
 ------------------

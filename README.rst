@@ -7,7 +7,9 @@ This is the default theme for all OneGov Plone modules (http://onegov.ch).
 
 **Important** this package doesn't work with python 2.6, it requires at least python 2.7
 
-**Important** for Plone 4 use the 3.x branch. With plonetheme.onegov 4.0.0 Plone 4 support is dropped.
+**Important**:
+- for Plone 4 use 3.x branch / releases
+- for Plone 5 use 4.x branch / releases
 
 
 Version 3.x introduces several major changes. Including a change of the default font-size to 16px.
