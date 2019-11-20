@@ -29,6 +29,12 @@ img {
 
 @media screen and (max-width: $screen-tablet-landscape) {
 
+  #portal-searchbox #searchGadget_form {
+    &.pat-livesearch {
+      min-width: 100%;
+    }
+  }
+
   #column-navigation {
     @include position0();
     @include width5();
@@ -126,13 +132,17 @@ img {
     background-color: $page-background;
     width: 80%;
     padding: 1.5em 5%;
-    margin: 0 auto;
-    position: absolute;
-    right: 5%;
-  }
-  .LSBox:before {
-    top: 1.8em;
-    right: 7%;
+    margin: 10px auto;
+    position: relative;
+    .LSBox {
+      #searchGadget {
+        width: 80%;
+      }
+
+      &:before {
+        right: 17%;
+      }
+    }
   }
   #LSResult {
     left: 0;
