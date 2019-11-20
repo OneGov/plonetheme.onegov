@@ -8,7 +8,7 @@ tests_require = [
     'ftw.solr',
     'ftw.testbrowser',
     'ftw.subsite',
-    'ftw.testing',
+    'ftw.testing<2a',
     'plone.app.testing',
     'plone.resource',
     'pyquery',
