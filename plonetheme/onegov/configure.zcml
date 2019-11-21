@@ -11,8 +11,6 @@
 
   <include file="permissions.zcml" />
 
-  <cmf:registerDirectory name="plonetheme_onegov"/>
-
   <include package="plone.resource" file="meta.zcml"/>
   <include file="meta.zcml" />
 
