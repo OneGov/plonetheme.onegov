@@ -2,4 +2,5 @@
 *.min.css.map binary
 *.min.js binary
 *.min.js.map binary
-*-compiled.js binary
+*-compiled.js -diff linguist-vendored
+*-compiled.css -diff linguist-vendored

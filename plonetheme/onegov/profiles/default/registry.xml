@@ -49,32 +49,15 @@
         </value>
     </records>
 
-    <records prefix="plone.resources/mockup-patterns-markspeciallinks"
-      interface="Products.CMFPlone.interfaces.IResourceRegistry">
-        <value key="js">++theme++plonetheme.onegov/js/pattern.markspeciallinks.js</value>
-    </records>
-
-    <records prefix="plone.resources/onegov"
-      interface='Products.CMFPlone.interfaces.IResourceRegistry'>
-        <value key="css">
-          <element>++theme++plonetheme.onegov/css/reset.css</element>
-          <element>++theme++plonetheme.onegov/css/fonts.css</element>
-          <element>++theme++plonetheme.onegov/css/print.css</element>
-          <element>++theme++plonetheme.onegov/css/tinymce_popups.css</element>
-        </value>
-    </records>
-
     <records prefix="plone.bundles/onegov"
-      interface='Products.CMFPlone.interfaces.IBundleRegistry'>
-        <value key="resources">
-          <element>onegov</element>
-          <element>mockup-patterns-markspeciallinks</element>
-        </value>
-        <value key="depends">plone</value>
-        <value key="csscompilation">++theme++plonetheme.onegov/css/onegov.min.css</value>
-        <value key="jscompilation">++theme++plonetheme.onegov/js/onegov.min.js</value>
-        <value key="compile">True</value>
+             interface='Products.CMFPlone.interfaces.IBundleRegistry'>
         <value key="enabled">True</value>
+        <value key="depends">plone</value>
+        <value key="stub_js_modules">jquery</value>
+        <value key="compile">False</value>
+        <value key="jscompilation">++theme++plonetheme.onegov/onegov-compiled.js</value>
+        <value key="csscompilation">++theme++plonetheme.onegov/onegov-compiled.css</value>
+        <value key="last_compilation">2019-12-09 15:25:00</value>
+        <value key="merge_with">default</value>
     </records>
-
 </registry>
