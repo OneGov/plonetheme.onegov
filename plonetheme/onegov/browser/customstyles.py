@@ -2,6 +2,7 @@ from App.Common import rfc1123_date
 from DateTime import DateTime
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from pathlib import Path
 from plone.app.layout.navigation.root import getNavigationRoot
 from plone.i18n.normalizer.interfaces import IIDNormalizer
 from plone.memoize import ram
@@ -10,11 +11,12 @@ from plone.uuid.interfaces import IUUID
 from plonetheme.onegov.interfaces import ICustomStyles
 from plonetheme.onegov.interfaces import ISCSSRegistry
 from plonetheme.onegov.utils import TIMESTAMP_ANNOTATION_KEY
+from plonetheme.onegov.utils import is_debug_mode_enabled
 from plonetheme.onegov.utils import replace_custom_keywords
-from scss import Scss
+from scss.compiler import Compiler
+from scss.source import SourceFile
 from zope.component import getUtility
 from zope.publisher.browser import BrowserView
-
 import json
 import os
 import time
@@ -152,27 +154,35 @@ class CustomStylesCSS(BrowserView):
 
         return self.generate_css()
 
+    def _get_source_file(self, file):
+        path = Path(str(file)).resolve()
+        with path.open() as f:
+            content = f.read()
+        source_file = SourceFile.from_string(content, path)
+        source_file.origin = path
+        return source_file
+
     @ram.cache(cache_key)
     def generate_css(self):
-        css = Scss()
-        scss_input = ['@option style:compressed;']
-        # add variables
-        scss_input.append(self.read_file('variables.scss'))
-
-        # add overwritten variables
-        scss_input.append(self.get_options().encode('utf8'))
-
-        # add component files
         registry = getUtility(ISCSSRegistry)
-        for path in registry.get_files(self.context, self.request):
-            with open(path, 'r') as file_:
-                scss_input.append(file_.read())
 
-        # add overwritten component files
-        # for now its not possible to add custom styles
-        styles = css.compile('\n'.join(scss_input))
-        styles = replace_custom_keywords(styles, self.context)
-        return styles
+        # Add default variables
+        paths = [Path(self.base_path) / '../resources/sass/variables.scss']
+        paths.extend(registry.get_files(self.context, self.request))
+
+        source_files = list(map(self._get_source_file, paths))
+
+        # Add overwritten variables
+        options = SourceFile.from_string(self.get_options(),
+                                         'plonetheme.onegov/options.scss')
+        source_files.insert(1, options)
+
+        compiler = Compiler(
+            output_style='expanded' if is_debug_mode_enabled() else 'compressed',
+            generate_source_map=True,
+        )
+        compiled = compiler.compile_sources(*source_files)
+        return replace_custom_keywords(compiled, self.context)
 
     def get_options(self):
         nav_root = self.context.restrictedTraverse(
@@ -186,11 +196,3 @@ class CustomStylesCSS(BrowserView):
             if value and key == 'custom_scss':
                 styles.append(value)
         return '\n'.join(styles)
-
-    def read_file(self, file_path):
-        handler = open(os.path.join(
-            self.base_path,
-            '../resources/sass/%s' % file_path), 'r')
-        file_content = handler.read()
-        handler.close()
-        return file_content
