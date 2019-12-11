@@ -76,6 +76,7 @@
 
 @mixin clearfix() {
   zoom: 1;
+  clear: both;
   &:before, &:after {
     content: "\0020";
     display: block;
