@@ -1,5 +1,7 @@
 from Products.CMFCore.utils import getToolByName
 from plone import api
+from plone.registry.interfaces import IRegistry
+from zope.component import getUtility
 
 
 TIMESTAMP_ANNOTATION_KEY = 'customstyles_url_timestamp'
@@ -46,3 +48,8 @@ def get_hostname(request):
     # Remove port
     host = host.split(":")[0].lower()
     return host
+
+
+def is_debug_mode_enabled():
+    registry = getUtility(IRegistry)
+    return registry.records['plone.resources.development'].value
