@@ -3,8 +3,22 @@
     "node": ">= 0.10.0"
   },
   "devDependencies": {
+    "chokidar-cli": "^2.1.0",
     "grunt": "~0.4.5",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-shell": "^3.0.1"
+    "grunt-shell": "^3.0.1",
+    "requirejs": "^2.3.6"
+  },
+  "name": "plonetheme.onegov",
+  "version": "3.3.1",
+  "main": "index.js",
+  "repository": "git@github.com:4teamwork/plonetheme.onegov.git",
+  "author": "4teamwork AG <info@4teamwork.ch>",
+  "license": "GPL",
+  "scripts": {
+    "build": "r.js -o build.js && r.js -o buildcss.js",
+    "build-css": "r.js -o buildcss.js",
+    "build-js": "r.js -o build.js",
+    "watch": "chokidar \"./plonetheme/onegov/resources/(*.js|js/*.js|*.css|css/*.css)\" -i \"**/*-compiled.(js|css)\" -c \"bash -c \\\"if [[ '{path}' = *.js ]]; then r.js -o build.js; else r.js -o buildcss.js; fi;\\\"\""
   }
 }

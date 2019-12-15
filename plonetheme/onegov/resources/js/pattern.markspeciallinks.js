@@ -85,8 +85,8 @@ define([
   'use strict';
 
   var MarkSpecialLinks = Base.extend({
-    name: 'markspeciallinks',
-    trigger: '.pat-markspeciallinks',
+    name: 'markspeciallinks-onegov',
+    trigger: '.pat-markspeciallinks-onegov',
     parser: 'mockup',
     defaults: {
       external_links_open_new_window: false,
