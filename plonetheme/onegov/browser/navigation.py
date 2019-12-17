@@ -9,14 +9,14 @@ from Products.CMFPlone.browser.navigation import get_view_url
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from zope.browser.interfaces import IBrowserView
 from zope.component import getUtility
-from zope.interface import implements
+from zope.interface import implementer
 from zope.publisher.browser import BrowserView
 from zope.publisher.interfaces import IPublishTraverse
 from zope.publisher.interfaces import NotFound
 import hashlib
 import os
 
-
+@implementer(IPublishTraverse)
 class LoadFlyoutChildren(BrowserView):
     """ This view will be called on all breadcrumb-elements
     by the flyoutpathbar.js on pageload.
@@ -25,7 +25,6 @@ class LoadFlyoutChildren(BrowserView):
     set it visible if you click on the related toplevel-object.
     """
 
-    implements(IPublishTraverse)
 
     template = ViewPageTemplateFile('flyout.pt')
 

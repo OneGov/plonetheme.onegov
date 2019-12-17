@@ -5,11 +5,11 @@ from plonetheme.onegov.interfaces import ICustomStyles
 from plonetheme.onegov.browser.customstyles import invalidate_cache
 from zope.annotation import IAnnotations
 from zope.component import adapts
-from zope.interface import implements
+from zope.interface import implementer
 
 
+@implementer(ICustomStyles)
 class CustomStyles(object):
-    implements(ICustomStyles)
     adapts(INavigationRoot)
 
     def __init__(self, context):

@@ -1,15 +1,14 @@
 from collections import defaultdict
 from plonetheme.onegov.interfaces import ISCSSRegistry
 from zope.interface import Interface
-from zope.interface import implements
+from zope.interface import implementer
 
-
+@implementer(ISCSSRegistry)
 class SCSSRegistry(object):
     """The registry utility holds the list of .scss files to include.
     The files are ordered.
     """
 
-    implements(ISCSSRegistry)
 
     def __init__(self):
         self._files = []
