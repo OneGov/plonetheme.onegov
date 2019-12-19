@@ -3,6 +3,15 @@
     xmlns:zcml="http://namespaces.zope.org/zcml"
     xmlns:browser="http://namespaces.zope.org/browser">
 
+  <!-- base tag -->
+  <browser:viewlet
+      name="onegov.basetag"
+      manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
+      class=".basetag.BaseTagViewlet"
+      permission="zope2.View"
+      layer="plonetheme.onegov.interfaces.IPlonethemeOneGovLayer"
+      />
+
   <!-- The personal bar -->
   <browser:viewlet
       name="plone.personal_bar"
