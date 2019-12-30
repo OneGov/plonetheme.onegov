@@ -1,0 +1,69 @@
+.upload-container {
+  .upload-queue .previews::after,
+  .controls::after {
+    clear: both;
+    content: ' ';
+    display: table;
+  }
+
+  .browse-select {
+    margin-bottom: 20px;
+
+    .col-md-9 {
+      box-sizing: border-box;
+      float: left;
+      padding: 0 15px 0 0;
+      width: 75%;
+    }
+
+    #fakeUploadFile,
+    .button {
+      height: 30px;
+    }
+  }
+
+  .controls {
+    .progress,
+    .button {
+      height: 30px;
+    }
+
+    .col-md-9 {
+      box-sizing: border-box;
+      float: left;
+      padding: 0 15px 0 0;
+      width: 75%;
+    }
+  }
+
+  .browse-select .col-md-3,
+  .controls .col-md-3 {
+    box-sizing: border-box;
+    float: left;
+    padding: 0 0 0 15px;
+    width: 25%;
+  }
+
+  .upload-queue {
+    .dz-filename {
+      display: block;
+    }
+
+    .controls {
+      margin-top: 0;
+    }
+
+    .previews .info img {
+      margin-top: -40px;
+
+      &:not([src]) {
+        display: none;
+      }
+    }
+
+    .item .action {
+      float: left;
+      margin-right: 15px;
+    }
+  }
+}
