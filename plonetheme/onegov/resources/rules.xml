@@ -4,6 +4,9 @@
     xmlns:css="http://namespaces.plone.org/diazo/css"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
+    <!-- Copy over the id/class attributes on the body tag. This is important for per-section styling -->
+    <copy attributes="*" css:content="body" css:theme="body" />
+
     <rules css:if-content="body#plonebrowser">
     <replace css:content="head">
         <head>
@@ -41,8 +44,6 @@
 
     <!-- Copy html lang -->
     <copy attributes="lang" content="/html" theme="/html" />
-    <!-- Copy body attributes -->
-    <copy attributes="class id dir" content="/html/body" theme="/html/body" />
 
     <replace content="/html/head/meta[@name='viewport']">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0" />
@@ -69,7 +70,7 @@
     <replace css:content-children="#portal-topactions" css:theme-children="#portal-topactions" />
 
     <replace css:content="ul.mobileButtons" css:theme="ul.mobileButtons" />
-    <before css:content="#globalstatusmessage" css:theme-children="#breadcrumbs-wrapper" />
+    <before css:content="#global_statusmessage" css:theme-children="#breadcrumbs-wrapper" />
 
     <replace css:content-children="#portal-breadcrumbs" css:theme-children="#portal-breadcrumbs" />
     <drop css:content="#portal-breadcrumbs" />
@@ -135,6 +136,10 @@
     <!-- Insert analytics js -->
     <after content="//*[@id='portal-footer-wrapper']/div/script" css:theme="#container" />
     <after content="//*[@id='portal-footer-wrapper']/div/noscript" css:theme="#container" />
+
+    <!-- toolbar -->
+    <replace css:theme="#portal-toolbar" css:content-children="#edit-bar" css:if-not-content=".ajax_load" css:if-content=".userrole-authenticated" />
+    <replace css:theme="#anonymous-actions" css:content-children="#portal-personaltools-wrapper" css:if-not-content=".ajax_load" css:if-content=".userrole-anonymous" />
 
   </rules>
 </rules>

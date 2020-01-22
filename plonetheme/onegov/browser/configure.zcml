@@ -6,14 +6,6 @@
 
   <browser:page
       for="*"
-      name="slider_navi"
-      class=".navigation.SliderNavigation"
-      permission="zope2.View"
-      layer="plonetheme.onegov.interfaces.IPlonethemeOneGovLayer"
-      />
-
-  <browser:page
-      for="*"
       name="load_flyout_children"
       class=".navigation.LoadFlyoutChildren"
       permission="zope2.View"
@@ -41,5 +33,13 @@
       permission="zope2.View"
       />
 
+  <browser:page
+      name="plone_layout"
+      for="*"
+      permission="zope.Public"
+      class=".layout.OnegovLayoutPolicy"
+      allowed_interface="plone.app.layout.globals.interfaces.ILayoutPolicy"
+      layer="plonetheme.onegov.interfaces.IPlonethemeOneGovLayer"
+      />
 
 </configure>

@@ -17,13 +17,3 @@ class SearchBox(object):
     def form_action(self):
         xpr = '#portal-searchbox form'
         return self.browser.css(xpr).first.attrib['action']
-
-    @property
-    def has_solr(self):
-        xpr = '#portal-searchbox form.has-solr'
-        return len(self.browser.css(xpr)) > 0
-
-    @property
-    def no_solr(self):
-        xpr = '#portal-searchbox form.no-solr'
-        return len(self.browser.css(xpr)) > 0

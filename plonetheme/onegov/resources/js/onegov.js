@@ -1,3 +1,7 @@
+requirejs([
+  'jquery'
+], function($) {
+
 var c=0;
 
 function close_opened_breadcrumbs(element) {
@@ -15,7 +19,7 @@ function valid_response(data) {
   return $(data).is('ul.flyoutChildren') || $(data).is('ul.children');
 }
 
-jQuery(function($) {
+$(function($) {
 
    var load_flyout_grandchildren = function(indicator, open) {
       var me = indicator.children("a:first");
@@ -168,5 +172,7 @@ jQuery(function($) {
     c += 1;
     if (c==10) $('#custom-scss-field').fadeIn('slow');
   });
+
+});
 
 });

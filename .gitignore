@@ -15,3 +15,5 @@ src/
 var/
 .sass-cache
 /.ruby-version
+node_modules
+temp_resources

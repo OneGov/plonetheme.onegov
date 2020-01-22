@@ -1,24 +1,63 @@
 <?xml version="1.0"?>
 <registry>
-  <record name="plonetheme.onegov.flyout_breadcrumbs">
-    <field type="plone.registry.field.Bool">
-      <title>Show children as flyout in breadcrumbs.</title>
-      <value_type type="plone.registry.field.Bool" />
-    </field>
-    <value>True</value>
-  </record>
-  <record name="plonetheme.onegov.flyout_navigation">
-    <field type="plone.registry.field.Bool">
-      <title>Show children as flyout in global navigation.</title>
-      <value_type type="plone.registry.field.Bool" />
-    </field>
-    <value>True</value>
-  </record>
-  <record name="plonetheme.onegov.flyout_grandchildren_navigation">
-    <field type="plone.registry.field.Bool">
-      <title>Show grandchildren as flyout in global navigation.</title>
-      <value_type type="plone.registry.field.Bool" />
-    </field>
-    <value>False</value>
-  </record>
+
+    <record name="plonetheme.onegov.flyout_breadcrumbs">
+        <field type="plone.registry.field.Bool">
+            <title>Show children as flyout in breadcrumbs.</title>
+            <value_type type="plone.registry.field.Bool" />
+        </field>
+        <value>True</value>
+    </record>
+
+    <record name="plonetheme.onegov.flyout_navigation">
+        <field type="plone.registry.field.Bool">
+            <title>Show children as flyout in global navigation.</title>
+            <value_type type="plone.registry.field.Bool" />
+        </field>
+        <value>True</value>
+    </record>
+
+    <record name="plonetheme.onegov.flyout_grandchildren_navigation">
+        <field type="plone.registry.field.Bool">
+            <title>Show grandchildren as flyout in global navigation.</title>
+            <value_type type="plone.registry.field.Bool" />
+        </field>
+        <value>False</value>
+    </record>
+
+    <records interface="Products.CMFPlone.interfaces.ITinyMCESchema"
+        prefix="plone">
+        <value key="content_css">
+            <element>customstyles_css</element>
+        </value>
+    </records>
+
+    <records interface="Products.CMFPlone.interfaces.controlpanel.IImagingSchema"
+        prefix="plone">
+        <value key="allowed_sizes" purge="false">
+            <element>large 768:768</element>
+            <element>preview 400:400</element>
+            <element>mini 200:200</element>
+            <element>thumb 128:128</element>
+            <element>tile 64:64</element>
+            <element>icon 32:32</element>
+            <element>listing 16:16</element>
+                <!-- above elements exist anyway -->
+            <element>listingblock_gallery 130:130</element>
+            <element>bannerimage 1166:270</element>
+            <element>logo 215:56</element>
+        </value>
+    </records>
+
+    <records prefix="plone.bundles/onegov"
+             interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+        <value key="enabled">True</value>
+        <value key="depends">plone</value>
+        <value key="stub_js_modules">jquery</value>
+        <value key="compile">False</value>
+        <value key="jscompilation">++theme++plonetheme.onegov/onegov-compiled.js</value>
+        <value key="csscompilation">++theme++plonetheme.onegov/onegov-compiled.css</value>
+        <value key="last_compilation">2019-12-09 15:25:00</value>
+        <value key="merge_with">default</value>
+    </records>
 </registry>

@@ -1,179 +1,214 @@
-/*Prevent big elements from bleeding over the edge*/
-
-img, h1, h2, h3, h4 {
-    page-break-before: avoid;
-    font-family: Arial !important;
-}
-.olLayerDiv img {
-    max-width: none;
-}
-h1 {
-    font-size: 26pt !important;
-}
-h2 {
-    font-size: 18pt !important;
-}
 /*Force the printer to render the colors as seen*/
-
 @media print and (color) {
     * {
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
     }
 }
-/*General styling*/
 
-* {
-    -webkit-box-shadow: none !important;
-    -moz-box-shadow: none !important;
-    box-shadow: none !important;
-}
-html, html body {
-    background-color: #FFFFFF !important;
-    font-size: 14pt;
-}
-#column-content {
-    left: 0;
-    margin-left: 0;
-    width: 100%;
-    text-align: justify;
-}
-a, a:hover, a:visited, a:active {
-    font-weight: bolder;
-    color: #00538c !important;
-    text-decoration: none !important;
-}
-/*Elements to hide*/
+@media print {
 
-#portal-topactions,
-#portal-languageselector-wrapper,
-#portal-personaltools-wrapper,
-#portal-globalnav,
-#portal-searchbox,
-#breadcrumbs-wrapper,
-#column-navigation,
-#column-sidebar,
-#footer,
-#banner-image,
-.documentEditable #edit-bar,
-#addResponse,
-.portletActionsWrapper,
-#dashboard-add-portlet {
-    display: none !important;
-}
-.sliderText {
-    background-color: #FFFFFF !important;
-    background-image: none !important;
-    position: static !important;
-    color: #000000 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-.slick-slide[style*="opacity: 0;"] {
-    display: none !important;
-}
-.slick-slide[style*="opacity: 1;"] {
-    left: 0 !important;
-}
-.slick-dots {
-    display: none !important;
-}
-.slick-next {
-    display: none !important;
-}
-.slick-prev {
-    display: none !important;
-}
-.to_top {
-    display: none;
-}
-#bottom-actions {
-    display: none;
-}
-.portalMessage {
-    display: none;
-}
-.sl-actions-wrapper {
-    display: none;
-}
-.formTab:not(.selected) {
-    display: none;
-}
-table {
-    background-color: #FFFFFF !important;
-    page-break-inside: auto;
-}
-tr {
-    page-break-inside: avoid;
-    page-break-after: auto;
-    background-color: #FFFFFF !important;
-}
-td {
-    background-color: #FFFFFF !important;
-}
-thead {
-    display: table-header-group;
-}
-th {
-    vertical-align: top !important;
-    background-color: #FFFFFF !important;
-}
-tfoot {
-    display: table-footer-group;
-}
+    /*Prevent big elements from bleeding over the edge*/
+    img, h1, h2, h3, h4 {
+        page-break-before: avoid;
+        font-family: Arial !important;
+    }
 
-.logoRow .cell {
-    left: 0;
-    margin-left: 0;
-}
-#header-delimiter {
-    left: 0;
-    margin-left: 0;
-}
-#page-wrapper {
-    width: 21cm;
-}
-#container #page-wrapper {
-    margin: 0;
-    border: none;
-}
-#container #page-wrapper {
-    background-color: #FFFFFF;
-}
-.row {
-    position: static !important;
-    float: none !important;
-}
-.cell {
-    position: static !important;
-    float: none !important;
-    width: 100% !important;
-    margin-left: 0 !important;
-}
-/*Map print settings*/
+    .olLayerDiv img {
+        max-width: none;
+    }
 
-div.olLayerGoogleCopyright, div.olControlMousePosition, div.olControlLayerSwitcher, div.olButton {
-    display: none;
-}
-.sl-text-wrapper .addressText, .sl-text-wrapper .addressMap {
-    float: none;
-}
-/*Set page properties*/
-#sl-toolbox {
-    display: none;
-}
-.sl-column:empty {
-    height: 0px !important;
-    min-height:0px !important;
-    display: none !important;
-}
+    h1 {
+        font-size: 26pt !important;
+    }
 
-.sl-layout, .sl-simplelayout {
-    min-height:0px !important;
-}
-@page {
-    size: 22cm 28in portrait;
-    margin: 2.5cm 2.5cm 2cm 2.5cm;
-    orphans: 8;
-    widows: 4;
+    h2 {
+        font-size: 18pt !important;
+    }
+
+    /*General styling*/
+    * {
+        -webkit-box-shadow: none !important;
+        -moz-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+
+    html, html body {
+        background-color: #FFFFFF !important;
+        font-size: 14pt;
+    }
+
+    #column-content {
+        left: 0;
+        margin-left: 0;
+        width: 100%;
+        text-align: justify;
+    }
+
+    a, a:hover, a:visited, a:active {
+        font-weight: bolder;
+        color: #00538c !important;
+        text-decoration: none !important;
+    }
+
+    /*Elements to hide*/
+    #portal-topactions,
+    #portal-languageselector-wrapper,
+    #portal-personaltools-wrapper,
+    #portal-globalnav,
+    #portal-searchbox,
+    #breadcrumbs-wrapper,
+    #column-navigation,
+    #column-sidebar,
+    #footer,
+    #banner-image,
+    .documentEditable #edit-bar,
+    #addResponse,
+    .portletActionsWrapper,
+    #dashboard-add-portlet {
+        display: none !important;
+    }
+
+    .sliderText {
+        background-color: #FFFFFF !important;
+        background-image: none !important;
+        position: static !important;
+        color: #000000 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .slick-slide[style*="opacity: 0;"] {
+        display: none !important;
+    }
+
+    .slick-slide[style*="opacity: 1;"] {
+        left: 0 !important;
+    }
+
+    .slick-dots {
+        display: none !important;
+    }
+
+    .slick-next {
+        display: none !important;
+    }
+
+    .slick-prev {
+        display: none !important;
+    }
+
+    .to_top {
+        display: none;
+    }
+
+    #bottom-actions {
+        display: none;
+    }
+
+    .portalMessage {
+        display: none;
+    }
+
+    .sl-actions-wrapper {
+        display: none;
+    }
+
+    .formTab:not(.selected) {
+        display: none;
+    }
+
+    table {
+        background-color: #FFFFFF !important;
+        page-break-inside: auto;
+    }
+
+    tr {
+        page-break-inside: avoid;
+        page-break-after: auto;
+        background-color: #FFFFFF !important;
+    }
+
+    td {
+        background-color: #FFFFFF !important;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    th {
+        vertical-align: top !important;
+        background-color: #FFFFFF !important;
+    }
+
+    tfoot {
+        display: table-footer-group;
+    }
+
+    .logoRow .cell {
+        left: 0;
+        margin-left: 0;
+    }
+
+    #header-delimiter {
+        left: 0;
+        margin-left: 0;
+    }
+
+    #page-wrapper {
+        width: 21cm;
+    }
+
+    #container #page-wrapper {
+        margin: 0;
+        border: none;
+    }
+
+    #container #page-wrapper {
+        background-color: #FFFFFF;
+    }
+
+    .row {
+        position: static !important;
+        float: none !important;
+    }
+
+    .cell {
+        position: static !important;
+        float: none !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+
+    /*Map print settings*/
+    div.olLayerGoogleCopyright, div.olControlMousePosition, div.olControlLayerSwitcher, div.olButton {
+        display: none;
+    }
+
+    .sl-text-wrapper .addressText, .sl-text-wrapper .addressMap {
+        float: none;
+    }
+
+    /*Set page properties*/
+    #sl-toolbox {
+        display: none;
+    }
+
+    .sl-column:empty {
+        height: 0px !important;
+        min-height: 0px !important;
+        display: none !important;
+    }
+
+    .sl-layout, .sl-simplelayout {
+        min-height: 0px !important;
+    }
+
+    @page {
+        size: 22cm 28in portrait;
+        margin: 2.5cm 2.5cm 2cm 2.5cm;
+        orphans: 8;
+        widows: 4;
+    }
 }

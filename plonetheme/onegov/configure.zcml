@@ -11,8 +11,6 @@
 
   <include file="permissions.zcml" />
 
-  <cmf:registerDirectory name="plonetheme_onegov"/>
-
   <include package="plone.resource" file="meta.zcml"/>
   <include file="meta.zcml" />
 
@@ -62,5 +60,9 @@
   <theme:add_scss path="resources/sass/components/recurrencewidget.scss" />
   <theme:add_scss path="resources/sass/components/accessibility.scss" />
   <theme:add_scss path="resources/sass/components/overrides.scss" />
+  <theme:add_scss path="resources/sass/components/editzone.scss" />
+  <theme:add_scss path="resources/sass/components/upload.scss" />
+  <theme:add_scss path="resources/sass/components/controlpanel/controlpanels.plone.scss" />
+  <theme:add_scss path="resources/sass/components/controlpanel/controlpanels.scss" />
 
 </configure>

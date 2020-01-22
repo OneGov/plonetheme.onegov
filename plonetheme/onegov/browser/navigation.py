@@ -1,23 +1,20 @@
 from AccessControl import getSecurityManager
 from Acquisition import aq_inner
 from Acquisition import aq_parent
-from ftw.mobilenavigation.browser import navigation
+from plone.registry.interfaces import IRegistry
 from plonetheme.onegov.utils import get_hostname
 from plonetheme.onegov.utils import is_external_link
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.browser.navigation import get_view_url
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from zope.browser.interfaces import IBrowserView
+from zope.component import getUtility
 from zope.interface import implements
 from zope.publisher.browser import BrowserView
 from zope.publisher.interfaces import IPublishTraverse
 from zope.publisher.interfaces import NotFound
 import hashlib
 import os
-
-
-class SliderNavigation(navigation.SliderNavigation):
-    template = ViewPageTemplateFile('slider.pt')
 
 
 class LoadFlyoutChildren(BrowserView):
@@ -130,7 +127,8 @@ class LoadFlyoutChildren(BrowserView):
     def set_response_headers(self):
         response = self.request.response
         response.setHeader('X-Theme-Disabled', 'True')
-        response.enableHTTPCompression(REQUEST=self.request)
+        # TODO: Check why the compression failes and if it can be fixed.
+        # response.enableHTTPCompression(REQUEST=self.request)
 
         if self.cachekey:
             # Do not set cache headers when no cachekey provided.
@@ -144,12 +142,8 @@ class LoadFlyoutChildren(BrowserView):
                 if brain.getPath() != '/'.join(self.context.getPhysicalPath())]
 
     def get_query(self):
-        portal_types = getToolByName(self.context, 'portal_types')
-        portal_properties = getToolByName(self.context, 'portal_properties')
-        navtree_properties = getattr(portal_properties, 'navtree_properties')
-
-        exclude_types = getattr(navtree_properties, 'metaTypesNotToList', None)
-        include_types = list(set(portal_types.keys()) - set(exclude_types))
+        registry = getUtility(IRegistry)
+        include_types = registry['plone.displayed_types']
 
         query = {'path': {'query': '/'.join(self.context.getPhysicalPath()),
                           'depth': 2},

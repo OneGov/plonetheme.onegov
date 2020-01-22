@@ -13,6 +13,7 @@ tests_require = [
     'plone.resource',
     'pyquery',
     'unittest2',
+    'plone.app.contenttypes',
     ]
 
 setup(name='plonetheme.onegov',
@@ -37,11 +38,8 @@ setup(name='plonetheme.onegov',
       zip_safe=False,
       install_requires=[
         'plone.app.theming',
-        'Products.Archetypes',
         'Products.CMFCore',
         'collective.mtrsetup',
-        'ftw.mobilenavigation>=1.2.3',
-        'ftw.slider >= 2.1.1',
         'ftw.upgrade',
         'setuptools',
         'plone.batching',

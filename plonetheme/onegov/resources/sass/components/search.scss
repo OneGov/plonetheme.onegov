@@ -9,6 +9,13 @@
       @include boxshadow(0 0 0.5em desaturate(lighten($global-navigation-color, 60%), 80%) inset);
     }
   }
+
+  #searchGadget_form {
+    &.pat-livesearch {
+      min-width: 100%;
+    }
+  }
+
   & input.searchButton {
     display: none;
   }

@@ -1,6 +1,16 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
     xmlns:browser="http://namespaces.zope.org/browser">
+
+  <!-- base tag -->
+  <browser:viewlet
+      name="onegov.basetag"
+      manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
+      class=".basetag.BaseTagViewlet"
+      permission="zope2.View"
+      layer="plonetheme.onegov.interfaces.IPlonethemeOneGovLayer"
+      />
 
   <!-- The personal bar -->
   <browser:viewlet
@@ -25,7 +35,7 @@
   <!-- The global sections -->
   <browser:viewlet
       name="plone.global_sections"
-      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      manager="plone.app.layout.viewlets.interfaces.IMainNavigation"
       class=".sections.GlobalSectionsViewlet"
       permission="zope2.View"
       layer="plonetheme.onegov.interfaces.IPlonethemeOneGovLayer"
@@ -67,14 +77,13 @@
       layer="plonetheme.onegov.interfaces.IPlonethemeOneGovLayer"
       />
 
-<!-- The skip links for accessibility -->
-    <browser:viewlet
-        name="plone.skip_links"
-        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-        class=".accesskeys.OneGovSkipLinksViewlet"
-        permission="zope2.View"
-        layer="plonetheme.onegov.interfaces.IPlonethemeOneGovLayer"
-        />
-
+  <!-- Accessibility (access keys) -->
+  <browser:viewlet
+      name="onegov.accesskeys"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      class=".accesskeys.OneGovAccessKeysViewlet"
+      permission="zope2.View"
+      layer="plonetheme.onegov.interfaces.IPlonethemeOneGovLayer"
+      />
 
 </configure>

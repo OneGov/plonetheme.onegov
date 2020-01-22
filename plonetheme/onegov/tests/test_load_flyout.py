@@ -28,8 +28,8 @@ class TestFyloutView(TestCase):
 
     @browsing
     def test_view_appended_to_url_if_obj_in_property(self, browser):
-        properties = getToolByName(self.portal, 'portal_properties')
-        properties.site_properties.typesUseViewActionInListings = ('Folder')
+        registry = getUtility(IRegistry)
+        registry['plone.types_use_view_action_in_listings'] = [u'Folder']
 
         create(Builder('folder'))
         browser.login().visit(view='load_flyout_children')
@@ -38,8 +38,8 @@ class TestFyloutView(TestCase):
 
     @browsing
     def test_view_not_appended_to_url_if_obj_not_in_property(self, browser):
-        properties = getToolByName(self.portal, 'portal_properties')
-        properties.site_properties.typesUseViewActionInListings = ('')
+        registry = getUtility(IRegistry)
+        registry['plone.types_use_view_action_in_listings'] = []
 
         create(Builder('folder'))
         browser.login().visit(view='load_flyout_children')
@@ -83,7 +83,7 @@ class TestFyloutView(TestCase):
 
     @browsing
     def test_markup_grandchildren(self, browser):
-        folder = create(Builder('folder').titled('My Folder'))
+        folder = create(Builder('folder').titled(u'My Folder'))
         subfolder = create(Builder('folder').titled(
             u'My Subf\xf6lder').within(folder))
         create(Builder('page').titled(u'My P\xe4ge').within(subfolder))

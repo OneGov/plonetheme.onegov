@@ -7,6 +7,10 @@ This is the default theme for all OneGov Plone modules (http://onegov.ch).
 
 **Important** this package doesn't work with python 2.6, it requires at least python 2.7
 
+**Important**:
+- for Plone 4 use 3.x branch / releases
+- for Plone 5 use 4.x branch / releases
+
 
 Version 3.x introduces several major changes. Including a change of the default font-size to 16px.
 If you're going to upgrade the package from Version 2.1.x to 3.x, please do it first on a
@@ -106,6 +110,18 @@ The Implementation needs to be done by yourself. `For an example check the Solr 
 
 .. image:: https://raw.github.com/OneGov/plonetheme.onegov/master/docs/screenshot_filter.png
 
+Development
+-----------
+
+In Plone 5 working on resources is a pain because they have to be recooked after every
+change. Therefore there is a Grunt setup provided watching the resources and updating them.
+
+To setup and run the watcher do:
+
+::
+
+    npm install
+    grunt watch
 
 
 Print
