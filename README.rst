@@ -105,10 +105,12 @@ This behavior can be disabled in the plone.app.registry, using the setting ``plo
 Special filter form
 -------------------
 
-This Theme provides an alternativ search/filter mockup.
-The Implementation needs to be done by yourself. `For an example check the Solr search form of zg.ch <http://www.zg.ch/@@search>`_.
+This theme provides an alternative search/filter mockup.
+The full implementation needs to be done by yourself.
+For an example check the `Solr search form of zg.ch <http://www.zg.ch/@@search>`_.
 
 .. image:: https://raw.github.com/OneGov/plonetheme.onegov/master/docs/screenshot_filter.png
+    :width: 900px
 
 Development
 -----------
