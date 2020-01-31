@@ -4,7 +4,8 @@ Changelog
 4.0.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix xpath to analytics script. Plone 5 no longe wraps it in a div. [mathias.leimgruber]
+
 
 
 4.0.1 (2020-01-31)
