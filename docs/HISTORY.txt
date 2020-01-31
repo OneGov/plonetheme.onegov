@@ -4,7 +4,8 @@ Changelog
 4.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Re-add main-container id so that JS triggers work (in particular for 'switch portlet manager').
+  [djowett-ftw]
 
 
 4.0.0 (2020-01-22)
