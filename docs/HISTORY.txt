@@ -4,7 +4,7 @@ Changelog
 4.0.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Respect registry entries to control the markspeciallinks pattern [Nachtalb]
 
 
 4.0.2 (2020-01-31)
