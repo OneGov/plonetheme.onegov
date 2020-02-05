@@ -110,3 +110,21 @@ body[class*=-controlpanel] #columns .standalone {
     background-color: #ccc;
   }
 }
+
+// This page duplicates #container in the DOM when a different portlet manager
+// is selected (a plone issue). So we need to hide visual clutter with CSS.
+body.template-topbar-manage-portlets #container #container {
+  #page-wrapper {
+    margin: 0;
+    width: 100%;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    border: none;
+    background-color: transparent;
+  }
+
+  #header, #banner-image, #breadcrumbs-wrapper, #portal-topactions {
+    display: none;
+  }
+}
