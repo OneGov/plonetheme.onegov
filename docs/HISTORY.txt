@@ -4,11 +4,13 @@ Changelog
 4.0.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix error in the patterns settings adapter registration [Nachtalb, djowett-ftw]
 
 
 4.0.3 (2020-02-05)
 ------------------
+
+! 4.0.3 adapter registration interferse with the ++add++ namespace factory, please use 4.0.4 instead !
 
 - Fix main navigation behind folder_contents menu bar [Nachtalb]
 - Respect registry entries to control the markspeciallinks pattern [Nachtalb]
