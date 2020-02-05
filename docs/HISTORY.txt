@@ -4,6 +4,7 @@ Changelog
 4.0.3 (unreleased)
 ------------------
 
+- Fix main navigation behind folder_contents menu bar [Nachtalb]
 - Respect registry entries to control the markspeciallinks pattern [Nachtalb]
 
 
