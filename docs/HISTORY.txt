@@ -6,7 +6,9 @@ Changelog
 
 - Fix main navigation behind folder_contents menu bar [Nachtalb]
 - Respect registry entries to control the markspeciallinks pattern [Nachtalb]
-
+- Hide visual clutter on manage-portlets page
+  Workaround for https://github.com/plone/Products.CMFPlone/issues/3034
+  [djowett-ftw]
 
 4.0.2 (2020-01-31)
 ------------------
