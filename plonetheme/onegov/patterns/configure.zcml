@@ -2,6 +2,7 @@
 
   <adapter
       for="* * *"
+      name="plonetheme_onegov_pattern_settings"
       factory=".settings.OneGovPatternSettingsAdapter"
       provides="Products.CMFPlone.interfaces.IPatternsSettings"
       />
