@@ -4,7 +4,7 @@ Changelog
 4.0.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Remove plone toolbar from print view [Nachtalb]
 
 
 4.0.4 (2020-02-06)

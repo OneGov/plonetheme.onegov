@@ -36,6 +36,7 @@
     html, html body {
         background-color: #FFFFFF !important;
         font-size: 14pt;
+        padding: 0 !important;
     }
 
     #column-content {
