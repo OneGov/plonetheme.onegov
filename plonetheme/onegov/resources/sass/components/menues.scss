@@ -257,3 +257,24 @@ span.arrowDownAlternative {
 .pat-structure .navbar {
   z-index: 2;
 }
+
+body.template-folder_contents {
+  .pat-structure .navbar a.btn,
+  #btngroup-mainbuttons {
+    margin-bottom: 0;
+  }
+
+  .pat-structure .navbar > * {
+    margin-top: .5em;
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+  .pat-structure .navbar > a.btn,
+  #btngroup-mainbuttons > a,
+  .navbar-search .search-query,
+  .navbar-search .input-group-btn a {
+    height: 30px;
+    box-sizing: border-box;
+  }
+}
