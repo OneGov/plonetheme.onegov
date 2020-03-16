@@ -277,4 +277,10 @@ body.template-folder_contents {
     height: 30px;
     box-sizing: border-box;
   }
+
+  .pat-structure .navbar:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
 }
