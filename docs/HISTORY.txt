@@ -5,6 +5,7 @@ Changelog
 ------------------
 
 - Remove plone toolbar from print view [Nachtalb]
+- Unify height and gaps of folder_contents navbar items [nachtalb]
 
 
 4.0.4 (2020-02-06)
