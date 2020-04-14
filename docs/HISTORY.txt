@@ -4,7 +4,8 @@ Changelog
 4.0.6 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Reorder HEAD elements so that CSS comes before JavaScript - which is correct and proper 
+  [djowett-ftw]
 
 
 4.0.5 (2020-03-16)
