@@ -4,7 +4,7 @@ Changelog
 1.6.7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix missing quotes in issue in books.scss. [mathias.leimgruber]
 
 
 1.6.6 (2021-01-26)
