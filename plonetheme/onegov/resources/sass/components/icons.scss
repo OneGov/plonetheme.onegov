@@ -272,6 +272,9 @@ a.external-link {
 #document-actions #document-action-zip_download a {
   @include icon($char: 'c ');
 }
+#document-actions #document-action-vcard_download a {
+  @include icon($char: 'c ');
+}
 
 #document-actions #document-action-print a,
 #document-actions #document-action-watch a,
@@ -281,7 +284,8 @@ a.external-link {
 #document-actions #document-action-pdf_export a,
 #document-actions #document-action-reader a,
 #document-actions #document-action-kml_download a,
-#document-actions #document-action-zip_download a {
+#document-actions #document-action-zip_download a,
+#document-actions #document-action-vcard_download a {
   @include invisible_text($icon-size: 20px);
 }
 
