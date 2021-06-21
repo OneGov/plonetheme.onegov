@@ -38,9 +38,14 @@
     <after content="/html/head/title" theme-children="/html/head" />
 
     <after
-        content="/html/head/base | /html/head/style | /html/head/script | /html/head/link | /html/head/comment()"
+        content="/html/head/base | /html/head/style | /html/head/link | /html/head/comment()"
         theme-children="/html/head"
         />
+    <after theme-children="/html/head" css:content="#portal-top style"/>
+    <after theme-children="/html/head" css:content="#portal-top link"/>
+
+    <after theme-children="/html/head" content="/html/head/script"/>
+    <after theme-children="/html/head" css:content="#portal-top script"/>
 
     <!-- Copy html lang -->
     <copy attributes="lang" content="/html" theme="/html" />
@@ -49,9 +54,6 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0" />
     </replace>
 
-    <after theme-children="/html/head" css:content="#portal-top script"/>
-    <after theme-children="/html/head" css:content="#portal-top style"/>
-    <after theme-children="/html/head" css:content="#portal-top link"/>
 
     <replace css:content="#portal-logo" css:theme="#portal-logo" />
     <replace css:content="#portal-globalnav-wrapper" css:theme="#portal-globalnav" />
