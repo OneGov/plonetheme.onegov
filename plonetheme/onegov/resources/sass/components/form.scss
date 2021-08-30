@@ -279,26 +279,25 @@ input[type="radio"] {
 
 /* @group listing bar */
 
-div.listingBar .next {
-  display: inline-block;
-  float: right;
-}
-div.listingBar .previous {
-  display: inline-block;
-}
-div.listingBar .current {
-  vertical-align: middle;
-}
+.listingBar, .pagination,
+#content .listingBar, #content .pagination {
+  ul {
+    @include ul('inline');
+  }
 
-#content div.listingBar a,
-#content div.listingBar span.current,
-div.listingBar a {
-  padding: 0.5em 0.75em;
-  vertical-align: middle;
-}
-#content div.listingBar span.current {
-  @include borderradius();
-  background-color: #e7eff0;
+  .next,
+  .previous {
+    display: none;
+  }
+
+  a, span.current, .current, .active {
+    padding: 0.5em 0.75em;
+    vertical-align: middle;
+  }
+  span.current {
+    @include borderradius();
+    background-color: #e7eff0;
+  }
 }
 
 /* @end */

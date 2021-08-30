@@ -4,7 +4,7 @@ Changelog
 4.0.7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Style plone 5 pagination css klass. [mathias.leimgruber]
 
 
 4.0.6 (2021-06-04)
